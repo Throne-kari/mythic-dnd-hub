@@ -1,0 +1,13 @@
+{
+  "name": "mythic-dnd-celtic",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "荆冠与归潮：无需真人主持的凯尔特神话多人叙事战术冒险",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

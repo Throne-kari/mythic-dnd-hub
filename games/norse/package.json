@@ -1,0 +1,13 @@
+{
+  "name": "mythic-dnd-norse",
+  "version": "3.2.0",
+  "private": true,
+  "type": "module",
+  "description": "盐峡湾：断誓之冬 — 独立北欧叙事战术桌",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

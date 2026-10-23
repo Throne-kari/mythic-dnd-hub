@@ -1,0 +1,638 @@
+[
+  {
+    "id": "agora",
+    "name": "铜秤广场",
+    "subtitle": "城邦的每一句誓言，都有标价。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "##################~~",
+      "#..c....#######.c.~~",
+      "#.###.............~~",
+      "#.###.crrrrrrrrrc.~~",
+      "#.....rrrrrrrrrrr.~~",
+      "#rrrrrrrrrrrrrrrrrr~",
+      "#rrrrrrrrrrcrrrrrrr~",
+      "#rrrrrrrrrrrrrrrrrr~",
+      "#.....rrrrrrrrrrr.~~",
+      "#.###.crrrrrrrrrc.~~",
+      "#.###c............~~",
+      "#.................~~",
+      "##################~~"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 6
+    },
+    "exits": [
+      {
+        "to": "necropolis",
+        "x": 2,
+        "y": 6,
+        "label": "风蚀墓丘"
+      },
+      {
+        "to": "granary",
+        "x": 2,
+        "y": 6,
+        "label": "石门粮仓"
+      },
+      {
+        "to": "sanctuary",
+        "x": 2,
+        "y": 6,
+        "label": "三足圣所"
+      },
+      {
+        "to": "cistern",
+        "x": 2,
+        "y": 6,
+        "label": "暗流蓄水池"
+      },
+      {
+        "to": "tribunal",
+        "x": 2,
+        "y": 6,
+        "label": "九柱议庭"
+      }
+    ],
+    "points": [
+      {
+        "id": "notice",
+        "x": 10,
+        "y": 5,
+        "label": "法令碑",
+        "description": "新刻的禁葬令悬在旧法之上。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "roof",
+        "x": 2,
+        "y": 2,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "roof",
+        "x": 2,
+        "y": 9,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "roof",
+        "x": 8,
+        "y": 1,
+        "w": 7,
+        "h": 1
+      },
+      {
+        "type": "statue",
+        "x": 11,
+        "y": 6
+      },
+      {
+        "type": "tree",
+        "x": 3,
+        "y": 1
+      },
+      {
+        "type": "tree",
+        "x": 5,
+        "y": 10
+      },
+      {
+        "type": "tree",
+        "x": 16,
+        "y": 1
+      },
+      {
+        "type": "dock",
+        "x": 17,
+        "y": 6,
+        "w": 2,
+        "h": 1
+      }
+    ]
+  },
+  {
+    "id": "necropolis",
+    "name": "风蚀墓丘",
+    "subtitle": "无名者在风里，等最后一捧土。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "####################",
+      "#~~^^^^^^^^^^^^^^^^#",
+      "#~~^^###^^###^^c^^^#",
+      "#~~^c^^^^c^^^^^^^^^#",
+      "#^^^^rrrrrrrr^^^rr^#",
+      "#^^rrrrrrrrrrrcrrr^#",
+      "#^^rrrrrrrrrrrrrrr^#",
+      "#^^^^^^^^^^^r^^^rr^#",
+      "#^^^^rrrrrrrrrrrrr^#",
+      "#~~~~c^^^^^^^^^^^^^#",
+      "#~~~~^###^^###^^c^^#",
+      "#~~~~^^^^^^^^^^^^^^#",
+      "####################"
+    ],
+    "spawn": {
+      "x": 3,
+      "y": 6
+    },
+    "exits": [
+      {
+        "to": "agora",
+        "x": 3,
+        "y": 6,
+        "label": "铜秤广场"
+      },
+      {
+        "to": "granary",
+        "x": 3,
+        "y": 6,
+        "label": "石门粮仓"
+      },
+      {
+        "to": "sanctuary",
+        "x": 3,
+        "y": 6,
+        "label": "三足圣所"
+      },
+      {
+        "to": "cistern",
+        "x": 3,
+        "y": 6,
+        "label": "暗流蓄水池"
+      },
+      {
+        "to": "tribunal",
+        "x": 3,
+        "y": 6,
+        "label": "九柱议庭"
+      }
+    ],
+    "points": [
+      {
+        "id": "pyre",
+        "x": 14,
+        "y": 6,
+        "label": "无名火葬台",
+        "description": "灰烬间遗留着一枚温热的铜扣。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "tomb",
+        "x": 5,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "type": "tomb",
+        "x": 10,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "type": "tomb",
+        "x": 6,
+        "y": 10,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "type": "tomb",
+        "x": 11,
+        "y": 10,
+        "w": 3,
+        "h": 1
+      },
+      {
+        "type": "tree",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "type": "tree",
+        "x": 9,
+        "y": 3
+      },
+      {
+        "type": "tree",
+        "x": 15,
+        "y": 2
+      },
+      {
+        "type": "tree",
+        "x": 5,
+        "y": 9
+      },
+      {
+        "type": "tree",
+        "x": 16,
+        "y": 10
+      },
+      {
+        "type": "brazier",
+        "x": 14,
+        "y": 5
+      }
+    ]
+  },
+  {
+    "id": "granary",
+    "name": "石门粮仓",
+    "subtitle": "粮食属于城邦，饥饿属于每一个人。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "####################",
+      "#rrrrrr#rrrrr#rrrrr#",
+      "#rrccrr#rccrr#rccrr#",
+      "#rrccrr#rccrr#rccrr#",
+      "#rrrrrrrrrrrr#rrrrr#",
+      "#rrrrrr#rrrrr#rrrrr#",
+      "#rrrrrr#rrrrrrcrrrr#",
+      "####r#####r#####r###",
+      "#rrrrrrrrrrrrrrrrrr#",
+      "#rrccrr#rccrr#rccrr#",
+      "#rrccrr#rccrr#rccrr#",
+      "#rrrrrr#rrrrr#rrrrr#",
+      "####################"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 5
+    },
+    "exits": [
+      {
+        "to": "agora",
+        "x": 2,
+        "y": 5,
+        "label": "铜秤广场"
+      },
+      {
+        "to": "necropolis",
+        "x": 2,
+        "y": 5,
+        "label": "风蚀墓丘"
+      },
+      {
+        "to": "sanctuary",
+        "x": 2,
+        "y": 5,
+        "label": "三足圣所"
+      },
+      {
+        "to": "cistern",
+        "x": 2,
+        "y": 5,
+        "label": "暗流蓄水池"
+      },
+      {
+        "to": "tribunal",
+        "x": 2,
+        "y": 5,
+        "label": "九柱议庭"
+      }
+    ],
+    "points": [
+      {
+        "id": "ledger",
+        "x": 13,
+        "y": 6,
+        "label": "配粮账台",
+        "description": "账簿的数字与空粮袋无法相互印证。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "beam",
+        "x": 0,
+        "y": 0,
+        "w": 20,
+        "h": 1
+      },
+      {
+        "type": "beam",
+        "x": 0,
+        "y": 12,
+        "w": 20,
+        "h": 1
+      },
+      {
+        "type": "ledger",
+        "x": 14,
+        "y": 6
+      }
+    ]
+  },
+  {
+    "id": "sanctuary",
+    "name": "三足圣所",
+    "subtitle": "神谕从裂隙升起，人声从台阶落下。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "####################",
+      "#~~~~^^^##########.#",
+      "#~~~~^^^2222222222.#",
+      "#~~~~^^^2c2c22c2c2.#",
+      "#....^^^222rcrrr22.#",
+      "#.......222rrrrr22.#",
+      "#..c....222rrrrr22.#",
+      "#.......2c2c22c2c2.#",
+      "#...rrrrr2222rrrrr.#",
+      "#...rrrrr2222rrrrrc#",
+      "#...rcrrrrrrrrrrrr.#",
+      "#..................#",
+      "####################"
+    ],
+    "spawn": {
+      "x": 3,
+      "y": 9
+    },
+    "exits": [
+      {
+        "to": "agora",
+        "x": 3,
+        "y": 9,
+        "label": "铜秤广场"
+      },
+      {
+        "to": "necropolis",
+        "x": 3,
+        "y": 9,
+        "label": "风蚀墓丘"
+      },
+      {
+        "to": "granary",
+        "x": 3,
+        "y": 9,
+        "label": "石门粮仓"
+      },
+      {
+        "to": "cistern",
+        "x": 3,
+        "y": 9,
+        "label": "暗流蓄水池"
+      },
+      {
+        "to": "tribunal",
+        "x": 3,
+        "y": 9,
+        "label": "九柱议庭"
+      }
+    ],
+    "points": [
+      {
+        "id": "tripod",
+        "x": 12,
+        "y": 5,
+        "label": "青铜三足鼎",
+        "description": "裂隙的回声比祭司的预言更早抵达。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "roof",
+        "x": 8,
+        "y": 1,
+        "w": 10,
+        "h": 1
+      },
+      {
+        "type": "tripod",
+        "x": 12,
+        "y": 4
+      },
+      {
+        "type": "tree",
+        "x": 3,
+        "y": 6
+      },
+      {
+        "type": "tree",
+        "x": 5,
+        "y": 10
+      },
+      {
+        "type": "tree",
+        "x": 18,
+        "y": 9
+      },
+      {
+        "type": "stairs",
+        "x": 9,
+        "y": 8,
+        "w": 4,
+        "h": 2
+      }
+    ]
+  },
+  {
+    "id": "cistern",
+    "name": "暗流蓄水池",
+    "subtitle": "石渠里的水，带走了不该遗忘的名字。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "####################",
+      "#~~~~~~~~~~~~~~rrr~#",
+      "#~r~~~cr~~~~r~~rrr~#",
+      "#~rrrrrrrrrrrrrrrr~#",
+      "#~r~~~~r~~~~r~~~~r~#",
+      "#rrr~~cr~~#rrr#~~r~#",
+      "#rrrrrrrrrrrrrrrrr~#",
+      "#rrr~~~r~~#rrr#~~r~#",
+      "#~r~~~cr~~~~r~~~~r~#",
+      "#~rrrrrrrrrrrrrrrr~#",
+      "#~r~~~cr~~~~r~~~cr~#",
+      "#~~~~~~~~~~~~~~~~~~#",
+      "####################"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 6
+    },
+    "exits": [
+      {
+        "to": "agora",
+        "x": 2,
+        "y": 6,
+        "label": "铜秤广场"
+      },
+      {
+        "to": "necropolis",
+        "x": 2,
+        "y": 6,
+        "label": "风蚀墓丘"
+      },
+      {
+        "to": "granary",
+        "x": 2,
+        "y": 6,
+        "label": "石门粮仓"
+      },
+      {
+        "to": "sanctuary",
+        "x": 2,
+        "y": 6,
+        "label": "三足圣所"
+      },
+      {
+        "to": "tribunal",
+        "x": 2,
+        "y": 6,
+        "label": "九柱议庭"
+      }
+    ],
+    "points": [
+      {
+        "id": "sluice",
+        "x": 12,
+        "y": 6,
+        "label": "旧闸门",
+        "description": "水声后面，是一条被封死的运粮暗渠。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "valve",
+        "x": 12,
+        "y": 6
+      },
+      {
+        "type": "gate",
+        "x": 17,
+        "y": 2
+      }
+    ]
+  },
+  {
+    "id": "tribunal",
+    "name": "九柱议庭",
+    "subtitle": "正义在这里被辩论，也在这里被出售。",
+    "width": 20,
+    "height": 13,
+    "tiles": [
+      "####################",
+      "#rrrr#rrrrrrrrrrrrr#",
+      "#rrrr#rrrrrrrrrrrrr#",
+      "#rcrc#r###rcrrc###r#",
+      "#rrrr#r###rrrrr###r#",
+      "#rrrrrrrrrrrrr222rr#",
+      "#rrrrrrrrrrrrrrc2rr#",
+      "#rrrrrrrrrrrrr222rr#",
+      "#rrrr#r###rrrrr###r#",
+      "#rcrc#r###rcrrc###r#",
+      "#rrrr#rrrrrrrrrrrrr#",
+      "#rrrr#rrrrrrrrrrrrr#",
+      "####################"
+    ],
+    "spawn": {
+      "x": 3,
+      "y": 6
+    },
+    "exits": [
+      {
+        "to": "agora",
+        "x": 3,
+        "y": 6,
+        "label": "铜秤广场"
+      },
+      {
+        "to": "necropolis",
+        "x": 3,
+        "y": 6,
+        "label": "风蚀墓丘"
+      },
+      {
+        "to": "granary",
+        "x": 3,
+        "y": 6,
+        "label": "石门粮仓"
+      },
+      {
+        "to": "sanctuary",
+        "x": 3,
+        "y": 6,
+        "label": "三足圣所"
+      },
+      {
+        "to": "cistern",
+        "x": 3,
+        "y": 6,
+        "label": "暗流蓄水池"
+      }
+    ],
+    "points": [
+      {
+        "id": "seal",
+        "x": 14,
+        "y": 6,
+        "label": "城邦铜印",
+        "description": "印章旁摆着一份无人敢签名的证词。"
+      }
+    ],
+    "enemies": [],
+    "decorations": [
+      {
+        "type": "benches",
+        "x": 7,
+        "y": 3,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "benches",
+        "x": 7,
+        "y": 8,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "benches",
+        "x": 15,
+        "y": 3,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "benches",
+        "x": 15,
+        "y": 8,
+        "w": 3,
+        "h": 2
+      },
+      {
+        "type": "desk",
+        "x": 15,
+        "y": 6
+      },
+      {
+        "type": "beam",
+        "x": 0,
+        "y": 0,
+        "w": 20,
+        "h": 1
+      },
+      {
+        "type": "beam",
+        "x": 0,
+        "y": 12,
+        "w": 20,
+        "h": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "title": "雅法余烬适用完整规则原卡与独立本场卡",
+  "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "version": "5.2.1",
+  "license": "CC BY 4.0（仅SRD原文）",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "pdfSha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+  "extractionNote": "只摘取Commoner、Guard、Bandit、Bandit Captain四卡。保留英文正文与排版换行，仅去除PDF页眉/页码；跨页Captain已接全。另存五张明确标注的独立本场中文参考卡。没有复制整个PDF或非开放书籍。",
+  "blocks": {
+    "commoner": {
+      "id": "commoner",
+      "name": "港区居民 / Commoner",
+      "kind": "adapted-srd",
+      "text": "E00｜港区居民：玛尔塔、尤素夫、布特鲁斯、阿黛拉、汉娜\n本场完整参考卡。基于 SRD 5.2.1 Commoner（印刷页275）；姓名、生活语言与救援处置为雅法原创设定。\n中型类人生物，中立。AC10；先攻+0（被动10）；HP4（1d8）；速度30尺；熟练+2；CR0，10XP。\n属性／调整值／豁免：STR10/+0/+0；DEX10/+0/+0；CON10/+0/+0；INT10/+0/+0；WIS10/+0/+0；CHA10/+0/+0。\n装备：木棒。感官：被动察觉10；无额外黑暗视觉。语言：港区通用语与角色生活语言（本场语言替换）。无伤害抗性、伤害免疫或状态免疫。\n特性—Training：选择一项技能，熟练+2；每次使用该技能进行属性检定均有优势，不适用于所有技能。\n本场默认选择：玛尔塔Athletics；尤素夫Investigation；布特鲁斯Arcana；阿黛拉Acrobatics；汉娜Survival。\n动作—木棒 Club：一次近战攻击+2，触及5尺；命中2（1d4）钝击。没有额外攻击、附赠动作或特殊反应；可使用通常的移动、动作与借机攻击规则。\n本场救援适配：五人开场均4/4HP。叙述伤势不暗扣数值；布特鲁斯被木架挡住，移架后速度仍30尺。五人到0HP使用角色式昏迷、死亡豁免、稳定、治疗与即死规则。搬出但未稳定的0HP伤员不算安全；已稳定者仍需要照看。\n实时HP、死亡豁免、位置、资源与状态以当前局面为准，参考卡不重置它们。",
+      "originalName": "Commoner",
+      "originalText": "Commoner\nMedium or Small Humanoid, Neutral\nAC 10\t\n\t\nInitiative +0 (10)\nHP 4 (1d8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t10 +0 +0\nCon\t10 +0 +0\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Club\nSenses Passive Perception 10\nLanguages Common\nCR 0 (XP 10; PB +2)\nTraits\nTraining. The commoner has proficiency in one skill of \nthe GM’s choice and has Advantage whenever it makes \nan ability check using that skill.\nActions\nClub. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) \nBludgeoning damage.",
+      "pages": [
+        275
+      ],
+      "originalPages": [
+        275
+      ],
+      "adaptations": [
+        "本场人物身份、生活语言与默认Training技能由雅法选择。",
+        "五名关键救援NPC在0HP使用角色式死亡豁免；这是本场明确的救援处置。"
+      ],
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "sourceTitle": "System Reference Document 5.2.1",
+      "sourceVersion": "5.2.1",
+      "license": "CC BY 4.0（官方原文部分）；本场原创改编说明见 LICENSES.md",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalTextSha256": "abd145a46c61bf13d58634db205e00c6d7cd0529f1dde7f18b14801c98a7cfed",
+      "referenceOnly": true,
+      "runtimeNotice": "这是参考卡；实时HP、资源、条件、位置与死亡状态以当前局面为准。"
+    },
+    "guard": {
+      "id": "guard",
+      "name": "守夜人 / 达乌德",
+      "kind": "adapted-srd",
+      "text": "E02｜达乌德／守夜人\n本场完整参考卡。基于 SRD 5.2.1 Guard（印刷页296）；不是 Guard Captain。\n中型类人生物，中立。AC16；先攻+1（被动11）；HP11（2d8+2）；速度30尺；熟练+2；CR1/8，25XP。\n属性／调整值／豁免：STR13/+1/+1；DEX12/+1/+1；CON12/+1/+1；INT10/+0/+0；WIS11/+0/+0；CHA10/+0/+0。\n技能：Perception+2。装备：链甲衫、盾、矛。感官：被动察觉12。语言：港区通用语。没有原卡未列出的抗性、免疫、特性、附赠动作或特殊反应。\n动作—矛 Spear：一次近战或远程攻击+3，近战触及5尺，投掷射程20/60尺；命中4（1d6+1）穿刺。每动作一次攻击，可按通常规则借机攻击。\n本场身份与停手条件（原创行为指引）：达乌德是中立救援者，不计入奥东敌军。获知仓内有人即停止危险清场；两名PC倒地时喊停、挡开追击并让出撤离路。保护、移动、Help或Dodge使用通常动作，不凭空取消攻击或伤害。只有必须保护人时防御。\n实时HP、位置、反应与状态以当前局面为准。",
+      "originalName": "Guard",
+      "originalText": "Guard\nMedium or Small Humanoid, Neutral\nAC 16\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 13 +1\n+1\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t11 +0 +0\nCha\t10 +0 +0\nSkills Perception +2\nGear Chain Shirt, Shield, Spear\nSenses Passive Perception 12\nLanguages Common\nCR 1/8 (XP 25; PB +2)\nActions\nSpear. Melee or Ranged Attack Roll: +3, reach 5 ft. or \nrange 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.",
+      "pages": [
+        296
+      ],
+      "originalPages": [
+        296
+      ],
+      "adaptations": [
+        "官方原卡印刷页为296，旧版雅法规则速查中295属于页码误记。",
+        "数值与动作保留；达乌德的中立身份、停工及保护行为为原创剧情。"
+      ],
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "sourceTitle": "System Reference Document 5.2.1",
+      "sourceVersion": "5.2.1",
+      "license": "CC BY 4.0（官方原文部分）；本场原创改编说明见 LICENSES.md",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalTextSha256": "22042f6ea49964b7ff4c796f32d20564fba7e4bcb0e8c7ae5ea033360b66dc9b",
+      "referenceOnly": true,
+      "runtimeNotice": "这是参考卡；实时HP、资源、条件、位置与死亡状态以当前局面为准。"
+    },
+    "bandit": {
+      "id": "bandit",
+      "name": "受雇忠从 / Bandit",
+      "kind": "adapted-srd",
+      "text": "E01｜受雇忠从／打手\n本场完整参考卡。基于 SRD 5.2.1 Bandit（印刷页261）；原创个人身份不代表任何信仰或群体。\n中型类人生物，中立。AC12；先攻+1（被动11）；HP11（2d8+2）；速度30尺；熟练+2；CR1/8，25XP。\n属性／调整值／豁免：STR11/+0/+0；DEX12/+1/+1；CON12/+1/+1；INT10/+0/+0；WIS10/+0/+0；CHA10/+0/+0。\n装备：皮甲、轻弩、弯刀（程序内旧显示名“短刀”与弯刀同数值）。感官：被动察觉10。语言：港区通用语、盗贼黑话。没有独立技能加值、抗性、免疫、Pack Tactics、偷袭、特性、附赠动作或特殊反应。\n动作—弯刀 Scimitar：一次近战攻击+3，触及5尺；命中4（1d6+1）挥砍。\n动作—轻弩 Light Crossbow：一次远程攻击+3，射程80/320尺；命中5（1d8+1）穿刺。每个动作只攻击一次，可按通常规则借机攻击。\n本场行为指引（原创）：只想拿报酬。首个忠从倒地、奥东求停，或仓内有人且达乌德作证时，停手撤离或接受缴械；不以追杀倒地者为目标。默认四PC两忠从；实际被拘留、离开或死亡者不会刷新。\n实时HP、位置、反应与状态以当前局面为准。",
+      "originalName": "Bandit",
+      "originalText": "Bandit\nMedium or Small Humanoid, Neutral\nAC 12\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 11 +0 +0\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Leather Armor, Light Crossbow, Scimitar\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 1/8 (XP 25; PB +2)\nActions\nScimitar. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 \n+ 1) Slashing damage.\nLight Crossbow. Ranged Attack Roll: +3, range 80/320 \nft. Hit: 5 (1d8 + 1) Piercing damage.",
+      "pages": [
+        261
+      ],
+      "originalPages": [
+        261
+      ],
+      "adaptations": [
+        "数值与攻击保留；程序旧显示名“短刀”对应原卡弯刀Scimitar，无额外攻击。",
+        "姓名、受雇动机、停手与人数安排为本场原创。"
+      ],
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "sourceTitle": "System Reference Document 5.2.1",
+      "sourceVersion": "5.2.1",
+      "license": "CC BY 4.0（官方原文部分）；本场原创改编说明见 LICENSES.md",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalTextSha256": "79daaa1755a2adfd8c32e46b252e459a9d67cc70a5a5b087d8b463f0033ff27e",
+      "referenceOnly": true,
+      "runtimeNotice": "这是参考卡；实时HP、资源、条件、位置与死亡状态以当前局面为准。"
+    },
+    "odon": {
+      "id": "odon",
+      "name": "奥东 / Bandit Captain装备改编",
+      "kind": "adapted-srd",
+      "text": "E03｜奥东：雅法装备改编卡\n本场完整可用卡，基于 SRD 5.2.1 Bandit Captain（印刷页261–262）。奥东为本作原创人物；不是历史人物，也不是官方单独命名怪物。\n中型类人生物，中立。AC15；先攻+3（被动13）；HP52（8d8+16）；速度30尺；熟练+2；CR2，450XP。\n属性／调整值／豁免：STR15/+2/+4；DEX16/+3/+5；CON14/+2/+2；INT14/+2/+2；WIS11/+0/+2；CHA14/+2/+2。STR、DEX、WIS豁免熟练已经计入。\n技能：Athletics+4、Deception+4。感官：被动察觉10。语言：港区通用语、盗贼黑话。装备：铆钉皮甲、弯刀。没有新增抗性、免疫、特性或附赠动作。\n动作—Multiattack：一个动作作两次弯刀攻击。没有旧版第三击。\n动作—弯刀 Scimitar：近战攻击+5，触及5尺；命中6（1d6+3）挥砍。\n反应—Parry格挡：持有武器而被近战攻击检定命中时，可消耗反应，使AC仅对该一次攻击+2，可能使其落空；不适用于远程攻击或豁免法术，不是整轮AC加值，失能时不能使用。\n装备改编，必须与下方官方完整英文原卡分开阅读：官方原卡Gear包含Pistol，Multiattack允许Scimitar/Pistol任意组合，并有Pistol攻击（+5，30/90尺，1d10+3穿刺）。本场明确不携带、不使用手枪，没有替代枪械；程序只实现原有的双次弯刀，其余数值保留。\n本场停手条件（原创行为指引）：HP≤26、首个忠从倒地，或两名PC倒地时提出停战，愿交工具换活着离场；不追杀倒地者。是否接受由玩家决定，喊话不强制剥夺玩家回合。允许离开时按实际离场，不在别景暗中补火。\n实时HP、位置、反应与状态以当前局面为准。",
+      "originalName": "Bandit Captain",
+      "originalText": "Bandit Captain\nMedium or Small Humanoid, Neutral\nAC 15\t\n\t\nInitiative +3 (13)\nHP 52 (8d8 + 16)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 15 +2\n+4\nDex\t16 +3\n+5\nCon\t14 +2\n+2\nInt\t 14 +2\n+2\nWis\t11 +0 +2\nCha\t14 +2\n+2\nSkills Athletics +4, Deception +4\nGear Pistol, Scimitar, Studded Leather Armor\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The bandit makes two attacks, using Scim-\nitar and Pistol in any combination.\nScimitar. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 \n+ 3) Slashing damage.\nPistol. Ranged Attack Roll: +5, range 30/90 ft. Hit: 8 \n(1d10 + 3) Piercing damage.\nReactions\nParry. Trigger: The bandit is hit by a melee attack roll \nwhile holding a weapon. Response: The bandit adds 2 \nto its AC against that attack, possibly causing it to miss.",
+      "pages": [
+        261,
+        262
+      ],
+      "originalPages": [
+        261,
+        262
+      ],
+      "adaptations": [
+        "官方原卡完整保留在originalText，其中有Pistol。",
+        "本场删除Pistol装备与攻击，Multiattack只选两次原有Scimitar；没有替代枪械。",
+        "奥东姓名、人物动机和停手条件为雅法原创；其他数值保留。"
+      ],
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "sourceTitle": "System Reference Document 5.2.1",
+      "sourceVersion": "5.2.1",
+      "license": "CC BY 4.0（官方原文部分）；本场原创改编说明见 LICENSES.md",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalTextSha256": "26c4a7bfbc103da295ae1f74fb0e061a2c1d8e3b53a8c2dbedf98a6557b5793a",
+      "referenceOnly": true,
+      "runtimeNotice": "这是参考卡；实时HP、资源、条件、位置与死亡状态以当前局面为准。"
+    },
+    "ember": {
+      "id": "ember",
+      "name": "烬客 / 本作原创",
+      "kind": "original",
+      "text": "E04｜烬客（本作原创完整卡）\n原创小型元素，中立；没有对应的官方SRD完整原卡。它不是 Fire Elemental，也不继承 Fire Elemental 的数值、火焰灵光、穿墙、死亡爆炸或遇水伤害。\nAC12；先攻+2（被动12）；HP22（5d6+5）；速度20尺，飞行20尺（悬浮）；熟练+2。估计CR1/2、100XP是本作主持估值，未宣称桌测平衡。\n属性／调整值／豁免：STR6/−2/−2；DEX14/+2/+2；CON12/+1/+1；INT6/−2/−2；WIS10/+0/+0；CHA8/−1/−1。无豁免熟练或独立技能熟练。\n伤害免疫：火焰。伤害易伤：寒冷。无其他抗性、伤害免疫或状态免疫；可正常受到Sleep、Command、Web等适用效果。\n感官：黑暗视觉60尺，被动察觉10。语言：懂港区通用语和Ignan，以短句、火花与动作表达。装备／容器：镇火铜盂8磅；安全炉家与其意愿由场景事实决定，不是新的强制资源点。\n动作—火触：一次近战法术攻击+4，触及5尺；命中3（1d6）火焰，无固定额外伤害、自动着火或多重攻击。\n动作—惊惶喷焰（充能5–6）：15尺锥形内每个生物作DEX DC12，失败7（2d6）火焰，成功一半；不能无视锥内友军或平民。首次可用，用后在每次其回合开始掷d6，5–6恢复。\n没有附赠动作、特殊反应、额外动作、死亡爆炸、穿墙或反魔法能力。普通水只灭周围暴露火焰或冷却容器，不自动造成寒冷伤害或杀死它；真实寒冷伤害正常翻倍。\n动机与停手（原创）：持续攻击、堵死退路或粗暴触碰炽热盆时才防御，先公开缩火或噼啪预告。修好安全冷座，或全队退至20尺外并停止攻击，可实际停手；不追杀倒地者。先沟通，自愿迁居或安居都可解决，不要求降到0HP。\n实时HP、充能、位置与状态以当前局面为准。本卡及行为文字为雅法原创；SRD的CC BY 4.0不自动为原创全文另行授权。",
+      "originalName": null,
+      "originalText": null,
+      "pages": [],
+      "originalPages": [],
+      "adaptations": [
+        "完整本场原创E04；没有对应官方原卡。",
+        "不套用Fire Elemental或其他更强生物能力。"
+      ],
+      "source": "docs/source/SESSION_RULES.md#e04",
+      "sourceTitle": "雅法余烬 v1 E04 原创卡",
+      "sourceVersion": "雅法余烬 v1 / v2联机参考",
+      "license": "本项目原创内容；不自动适用SRD的CC BY 4.0。详见 LICENSES.md。",
+      "licenseUrl": null,
+      "attribution": "雅法余烬原创E04；身份、数值与行为说明沿用本项目v1。",
+      "originalTextSha256": null,
+      "referenceOnly": true,
+      "runtimeNotice": "这是参考卡；实时HP、资源、条件、位置与死亡状态以当前局面为准。"
+    }
+  }
+}

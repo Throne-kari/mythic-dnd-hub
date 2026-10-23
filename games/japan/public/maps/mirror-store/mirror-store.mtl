@@ -1,0 +1,101 @@
+newmtl color_0
+Kd 0.5059 0.5843 0.4706
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_1
+Kd 0.4118 0.3608 0.2824
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_2
+Kd 0.7686 0.698 0.5412
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_3
+Kd 0.6039 0.6 0.5098
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_4
+Kd 0.7137 0.7098 0.6314
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_5
+Kd 0.4863 0.3647 0.2549
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_6
+Kd 0.8784 0.8353 0.7098
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_7
+Kd 0.298 0.3882 0.3961
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_8
+Kd 0.4706 0.5647 0.5412
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_9
+Kd 0.7137 0.6745 0.4471
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_10
+Kd 0.6353 0.5765 0.4706
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_11
+Kd 0.5216 0.4706 0.4039
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_12
+Kd 0.4941 0.5373 0.5059
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_13
+Kd 0.4 0.3216 0.2353
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_14
+Kd 0.2118 0.3608 0.2941
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_15
+Kd 0.3294 0.4627 0.3765
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1
+
+newmtl color_16
+Kd 0.6863 0.3647 0.2706
+Ka 0.2 0.2 0.2
+Ks 0 0 0
+d 1

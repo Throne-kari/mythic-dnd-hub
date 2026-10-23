@@ -1,0 +1,13 @@
+{
+  "name": "mythic-dnd-greek",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "无葬之城：原创希腊神话题材，本地零依赖叙事战术游戏",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

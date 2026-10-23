@@ -1,0 +1,13 @@
+{
+  "name": "mythic-dnd-fengshen",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "封神·岐路：世路人情 — 独立十二回成熟叙事版",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "mythic-dnd-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "神话 DND 游戏集合与本机作者工作台",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server.mjs",
+    "manage": "node manager.mjs",
+    "serve": "node server.mjs --public-only",
+    "check": "node --check server.mjs && node --check manager.mjs && node --check server/hub.mjs && node --check server/processes.mjs && node --check server/proxy.mjs && node --check server/browser-bridge.js && node --check server/util.mjs"
+  }
+}

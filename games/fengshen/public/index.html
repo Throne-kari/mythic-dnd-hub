@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#191e19"><title>封神 · 岐路 v0.3 · 世路人情</title><link rel="stylesheet" href="style.css"></head>
+<body class="in-lobby">
+<section id="lobby" class="lobby">
+ <div class="lobby-brand"><span class="seal">岐</span><h1>封神<span>·</span>岐路</h1><p>世路人情 · 独立 v0.3 · 六幕十二回</p></div>
+ <div class="lobby-content"><div class="entry-grid">
+  <form id="createRoom" class="entry-card"><h2>建立房间</h2><label>房间名<input id="roomName" value="青蒲同行" maxlength="40" required autocomplete="off"></label><label>昵称<input id="hostName" value="主持人" maxlength="30" required autocomplete="nickname"></label><button class="primary wide" type="submit">建立房间 <span>→</span></button></form>
+  <form id="joinRoom" class="entry-card"><h2>加入房间</h2><label>邀请链接或邀请码<input id="inviteCode" required autocomplete="off"></label><label>昵称<input id="playerName" required maxlength="30" autocomplete="nickname"></label><button class="wide" type="submit">加入房间 <span>→</span></button></form>
+ </div><div id="lobbyError" class="entry-error" role="alert"></div><button id="resumeRoom" class="resume" hidden>继续上次房间 →</button><button id="restoreSeat" class="resume">使用席位凭据</button><div id="savedRooms" class="button-row"></div><div class="entry-party"><span>姬衡 · 执盾武者</span><span>燕归 · 轻足游荡者</span><span>陆青 · 持符医者</span><span>闻溪 · 行旅法师</span></div></div>
+</section>
+<div id="gameShell" hidden>
+<header><button id="returnLobby" class="brand" title="返回房间入口"><span class="seal">岐</span><strong>封神 · 岐路</strong></button><div class="room-heading"><span id="roomLabel"></span><span id="connection" class="connection">连接中</span></div><nav><button id="storyNav" class="mobile-log">见闻</button><button id="journalBtn">手记</button><button id="campBtn">行囊</button><button id="bookBtn" data-dm>主持书</button><button id="aiNav">AI 同行</button><button id="roomBtn">房间</button><button id="settingsBtn" class="icon" title="设置与存档">⚙</button></nav></header>
+<main>
+ <aside class="left-panel"><div class="chapter-number" id="chapterMeta"></div><h2 id="chapterTitle"></h2><div class="divider"></div><h3>眼前的事</h3><p id="objective"></p><div id="objectiveList"></div><div id="choiceList"></div><div class="left-bottom"><button id="travelBtn" class="wide subtle">各地行旅 <span>→</span></button><button id="gmBtn" class="wide subtle" data-dm>主持裁定 <span>◇</span></button><span id="saveStatus">自动保存</span></div></aside>
+ <section class="stage" id="stage">
+  <div class="stage-heading"><div><span id="locationSub" class="eyebrow"></span><h1 id="locationTitle">青蒲渡</h1><p id="locationHint" hidden></p></div><div class="view-switch"><button data-view="world">舆图</button><button data-view="scene">战棋</button><button data-view="art" class="active">画卷</button></div></div>
+  <div id="worldView" class="world-view" hidden><img id="worldImage" src="assets/A001_region_v2.png" alt="西岐至朝歌舆图"><div class="vignette"></div><div id="worldPins"></div><div class="world-bottom"><button id="continueBtn" class="primary">回到当前地点 →</button><button id="cityBtn">朝歌城</button></div></div>
+  <canvas id="board" aria-label="拖动旋转，滚轮缩放的立体战棋地图" tabindex="0" hidden></canvas>
+  <div id="artView" class="art-view"><img id="sceneArt" alt="当前地点画卷"><div class="vignette"></div></div>
+  <div id="battleTools" class="battle-tools" hidden><button id="rotateLeft" title="向左旋转">↶</button><button id="rotateRight" title="向右旋转">↷</button><button id="topView">俯视</button><button id="gridBtn" class="active">网格</button><button id="wallBtn">低墙</button><button id="resetCamera">归位</button></div>
+  <div id="initiative" class="initiative"></div><div id="inspect" class="inspect" hidden></div><div id="toast" role="status" hidden></div><div id="turnStrip" class="turn-strip"></div><div id="actionBar" class="action-bar"></div>
+ </section>
+ <aside class="right-panel"><div class="panel-tabs"><button class="active" data-tab="story">见闻</button><button data-tab="dice">骰记</button><button data-tab="ai">同行</button></div><div id="logPanel" class="log-panel" aria-live="polite"></div><div id="aiPanel" class="ai-panel" hidden><h3>AI 同行</h3><label>身份<select id="aiRole"><option value="dm">DM · 主持</option><option value="player">当前角色玩家</option></select></label><label>接入<select id="aiMode"><option value="bridge">工作区 AI</option><option value="api">API 模型</option></select></label><textarea id="aiText" rows="4" placeholder="本次想做什么" aria-label="AI 请求"></textarea><button id="askAI" class="primary wide">交给 AI</button><div id="aiResult"></div><button id="pasteAI" class="wide subtle">导入 AI 回复</button><button id="copyRequest" class="wide subtle">复制当前请求</button></div><div class="dice-box"><input id="diceInput" value="1d20" aria-label="骰式"><button id="rollBtn">掷骰</button><button id="undoBtn" title="撤销上一笔" data-dm>↶</button></div><form id="chatForm" class="chat-form"><input id="chatText" placeholder="向同桌发言…" maxlength="2000" aria-label="向同桌发言"><button type="submit" title="发送">➤</button></form></aside>
+</main>
+<footer id="partyBar" class="party-bar"></footer>
+</div>
+<dialog id="modal"><div class="modal-head"><h2 id="modalTitle"></h2><button id="closeModal" aria-label="关闭">×</button></div><div id="modalBody"></div></dialog>
+<script type="module" src="app.js"></script>
+</body></html>
+
+

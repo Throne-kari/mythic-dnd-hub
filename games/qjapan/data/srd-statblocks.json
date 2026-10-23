@@ -1,0 +1,423 @@
+{
+  "title": "SRD 5.2.1 shared reference cards",
+  "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+  "license": "CC BY 4.0",
+  "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "blocks": {
+    "air": {
+      "name": "Air Elemental",
+      "pages": [
+        258,
+        259
+      ],
+      "text": "Air Elemental\nLarge Elemental, Neutral\nAC 15\t\n\t\nInitiative +5 (15)\nHP 90 (12d10 + 24)\nSpeed 10 ft., Fly 90 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t20 +5\n+5\nCon\t14 +2\n+2\nInt\t 6\n−2\n−2\nWis\t10 +0 +0\nCha\t 6\n−2\n−2\nResistances Bludgeoning, Lightning, Piercing, Slashing\nImmunities Poison, Thunder; Exhaustion, Grappled, \nParalyzed, Petrified, Poisoned, Prone, Restrained, \nUnconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Auran)\nCR 5 (XP 1,800; PB +3)\nTraits\nAir Form. The elemental can enter a creature’s space \nand stop there. It can move through a space as narrow \nas 1 inch without expending extra movement to do so.\nActions\nMultiattack. The elemental makes two Thunderous \nSlam attacks.\nThunderous Slam. Melee Attack Roll: +8, reach 10 ft. \nHit: 14 (2d8 + 5) Thunder damage.\nWhirlwind (Recharge 4–6). Strength Saving Throw: DC \n13, one Medium or smaller creature in the elemental’s \nspace. Failure: 24 (4d10 + 2) Thunder damage, and the \ntarget is pushed up to 20 feet straight away from the \nelemental and has the Prone condition. Success: Half \ndamage only.",
+      "originalName": "Air Elemental",
+      "originalText": "Air Elemental\nLarge Elemental, Neutral\nAC 15\t\n\t\nInitiative +5 (15)\nHP 90 (12d10 + 24)\nSpeed 10 ft., Fly 90 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t20 +5\n+5\nCon\t14 +2\n+2\nInt\t 6\n−2\n−2\nWis\t10 +0 +0\nCha\t 6\n−2\n−2\nResistances Bludgeoning, Lightning, Piercing, Slashing\nImmunities Poison, Thunder; Exhaustion, Grappled, \nParalyzed, Petrified, Poisoned, Prone, Restrained, \nUnconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Auran)\nCR 5 (XP 1,800; PB +3)\nTraits\nAir Form. The elemental can enter a creature’s space \nand stop there. It can move through a space as narrow \nas 1 inch without expending extra movement to do so.\nActions\nMultiattack. The elemental makes two Thunderous \nSlam attacks.\nThunderous Slam. Melee Attack Roll: +8, reach 10 ft. \nHit: 14 (2d8 + 5) Thunder damage.\nWhirlwind (Recharge 4–6). Strength Saving Throw: DC \n13, one Medium or smaller creature in the elemental’s \nspace. Failure: 24 (4d10 + 2) Thunder damage, and the \ntarget is pushed up to 20 feet straight away from the \nelemental and has the Prone condition. Success: Half \ndamage only.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "captain": {
+      "name": "Guard Captain",
+      "pages": [
+        296
+      ],
+      "text": "Guard Captain\nMedium or Small Humanoid, Neutral\nAC 18\t\n\t\nInitiative +4 (14)\nHP 75 (10d8 + 30)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t14 +2\n+2\nCon\t16 +3\n+3\nInt\t 12 +1\n+1\nWis\t14 +2\n+2\nCha\t13 +1\n+1\nSkills Athletics +6, Perception +4\nGear Breastplate, Javelins (6), Longsword, Shield\nSenses Passive Perception 14\nLanguages Common\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The guard makes two attacks, using Javelin \nor Longsword in any combination.\nJavelin. Melee or Ranged Attack Roll: +6, reach 5 ft. or \nrange 30/120 ft. Hit: 14 (3d6 + 4) Piercing damage.\nLongsword. Melee Attack Roll: +6, reach 5 ft. Hit: 15 \n(2d10 + 4) Slashing damage.",
+      "originalName": "Guard Captain",
+      "originalText": "Guard Captain\nMedium or Small Humanoid, Neutral\nAC 18\t\n\t\nInitiative +4 (14)\nHP 75 (10d8 + 30)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t14 +2\n+2\nCon\t16 +3\n+3\nInt\t 12 +1\n+1\nWis\t14 +2\n+2\nCha\t13 +1\n+1\nSkills Athletics +6, Perception +4\nGear Breastplate, Javelins (6), Longsword, Shield\nSenses Passive Perception 14\nLanguages Common\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The guard makes two attacks, using Javelin \nor Longsword in any combination.\nJavelin. Melee or Ranged Attack Roll: +6, reach 5 ft. or \nrange 30/120 ft. Hit: 14 (3d6 + 4) Piercing damage.\nLongsword. Melee Attack Roll: +6, reach 5 ft. Hit: 15 \n(2d10 + 4) Slashing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "knight": {
+      "name": "Knight",
+      "pages": [
+        302
+      ],
+      "text": "Knight\nMedium or Small Humanoid, Neutral\nAC 18\t\n\t\nInitiative +0 (10)\nHP 52 (8d8 + 16)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr 16 +3\n+3\nDex 11 +0 +0\nCon 14 +2\n+4\nInt 11 +0 +0\nWis 11 +0 +2\nCha 15 +2\n+2\nImmunities Frightened\nGear Greatsword, Heavy Crossbow, Plate Armor\nSenses Passive Perception 10\nLanguages Common plus one other language\nCR 3 (XP 700; PB +2)\nActions\nMultiattack. The knight makes two attacks, using \nGreatsword or Heavy Crossbow in any combination.\nGreatsword. Melee Attack Roll: +5, reach 5 ft. Hit: 10 \n(2d6 + 3) Slashing damage plus 4 (1d8) Radiant damage.\nHeavy Crossbow. Ranged Attack Roll: +2, range \n100/400 ft. Hit: 11 (2d10) Piercing damage plus 4 (1d8) \nRadiant damage.\nReactions\nParry. Trigger: The knight is hit by a melee attack roll \nwhile holding a weapon. Response: The knight adds 2 \nto its AC against that attack, possibly causing it to miss.",
+      "originalName": "Knight",
+      "originalText": "Knight\nMedium or Small Humanoid, Neutral\nAC 18\t\n\t\nInitiative +0 (10)\nHP 52 (8d8 + 16)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr 16 +3\n+3\nDex 11 +0 +0\nCon 14 +2\n+4\nInt 11 +0 +0\nWis 11 +0 +2\nCha 15 +2\n+2\nImmunities Frightened\nGear Greatsword, Heavy Crossbow, Plate Armor\nSenses Passive Perception 10\nLanguages Common plus one other language\nCR 3 (XP 700; PB +2)\nActions\nMultiattack. The knight makes two attacks, using \nGreatsword or Heavy Crossbow in any combination.\nGreatsword. Melee Attack Roll: +5, reach 5 ft. Hit: 10 \n(2d6 + 3) Slashing damage plus 4 (1d8) Radiant damage.\nHeavy Crossbow. Ranged Attack Roll: +2, range \n100/400 ft. Hit: 11 (2d10) Piercing damage plus 4 (1d8) \nRadiant damage.\nReactions\nParry. Trigger: The knight is hit by a melee attack roll \nwhile holding a weapon. Response: The knight adds 2 \nto its AC against that attack, possibly causing it to miss.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "priest": {
+      "name": "Priest",
+      "pages": [
+        316
+      ],
+      "text": "Priest\nMedium or Small Humanoid (Cleric), Neutral\nAC 13\t\n\t\nInitiative +0 (10)\nHP 38 (7d8 + 7)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t10 +0 +0\nCon\t12 +1\n+1\nInt\t 13 +1\n+1\nWis\t16 +3\n+3\nCha\t13 +1\n+1\nSkills Medicine +7, Perception +5, Religion +5\nGear Chain Shirt, Holy Symbol, Mace\nSenses Passive Perception 15\nLanguages Common plus one other language\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The priest makes two attacks, using Mace \nor Radiant Flame in any combination.\nMace. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + \n3) Bludgeoning damage plus 5 (2d4) Radiant damage.\nRadiant Flame. Ranged Attack Roll: +5, range 60 ft. \nHit: 11 (2d10) Radiant damage.\nSpellcasting. The priest casts one of the following \nspells, using Wisdom as the spellcasting ability (spell \nsave DC 13):\nAt Will: Light, Thaumaturgy\n1/Day: Spirit Guardians\nBonus Actions\nDivine Aid (3/Day). The priest casts Bless, Dispel \nMagic, Healing Word, or Lesser Restoration, using the \nsame spellcasting ability as Spellcasting.",
+      "originalName": "Priest",
+      "originalText": "Priest\nMedium or Small Humanoid (Cleric), Neutral\nAC 13\t\n\t\nInitiative +0 (10)\nHP 38 (7d8 + 7)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t10 +0 +0\nCon\t12 +1\n+1\nInt\t 13 +1\n+1\nWis\t16 +3\n+3\nCha\t13 +1\n+1\nSkills Medicine +7, Perception +5, Religion +5\nGear Chain Shirt, Holy Symbol, Mace\nSenses Passive Perception 15\nLanguages Common plus one other language\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The priest makes two attacks, using Mace \nor Radiant Flame in any combination.\nMace. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + \n3) Bludgeoning damage plus 5 (2d4) Radiant damage.\nRadiant Flame. Ranged Attack Roll: +5, range 60 ft. \nHit: 11 (2d10) Radiant damage.\nSpellcasting. The priest casts one of the following \nspells, using Wisdom as the spellcasting ability (spell \nsave DC 13):\nAt Will: Light, Thaumaturgy\n1/Day: Spirit Guardians\nBonus Actions\nDivine Aid (3/Day). The priest casts Bless, Dispel \nMagic, Healing Word, or Lesser Restoration, using the \nsame spellcasting ability as Spellcasting.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "mage": {
+      "name": "Mage",
+      "pages": [
+        305
+      ],
+      "text": "Mage\nMedium or Small Humanoid (Wizard), Neutral\nAC 15\t\n\t\nInitiative +2 (12)\nHP 81 (18d8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 9\n−1\n−1\nDex\t14 +2\n+2\nCon\t11 +0 +0\nInt\t 17 +3\n+6\nWis\t12 +1\n+4\nCha\t11 +0 +0\nSkills Arcana +6, History +6, Perception +4\nGear Wand\nSenses Passive Perception 14\nLanguages Common plus three other languages\nCR 6 (XP 2,300; PB +3)\nActions\nMultiattack. The mage makes three Arcane \nBurst attacks.\nArcane Burst. Melee or Ranged Attack Roll: +6, reach \n5 ft. or range 120 ft. Hit: 16 (3d8 + 3) Force damage.\nSpellcasting. The mage casts one of the following \nspells, using Intelligence as the spellcasting ability (spell \nsave DC 14):\nAt Will: Detect Magic, Light, Mage Armor (included in \nAC), Mage Hand, Prestidigitation\n2/Day Each: Fireball (level 4 version), Invisibility\n1/Day Each: Cone of Cold, Fly\nBonus Actions\nMisty Step (3/Day). The mage casts Misty Step, using \nthe same spellcasting ability as Spellcasting.\nReactions\nProtective Magic (3/Day). The mage casts Counterspell \nor Shield in response to the spell’s trigger, using the \nsame spellcasting ability as Spellcasting.",
+      "originalName": "Mage",
+      "originalText": "Mage\nMedium or Small Humanoid (Wizard), Neutral\nAC 15\t\n\t\nInitiative +2 (12)\nHP 81 (18d8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 9\n−1\n−1\nDex\t14 +2\n+2\nCon\t11 +0 +0\nInt\t 17 +3\n+6\nWis\t12 +1\n+4\nCha\t11 +0 +0\nSkills Arcana +6, History +6, Perception +4\nGear Wand\nSenses Passive Perception 14\nLanguages Common plus three other languages\nCR 6 (XP 2,300; PB +3)\nActions\nMultiattack. The mage makes three Arcane \nBurst attacks.\nArcane Burst. Melee or Ranged Attack Roll: +6, reach \n5 ft. or range 120 ft. Hit: 16 (3d8 + 3) Force damage.\nSpellcasting. The mage casts one of the following \nspells, using Intelligence as the spellcasting ability (spell \nsave DC 14):\nAt Will: Detect Magic, Light, Mage Armor (included in \nAC), Mage Hand, Prestidigitation\n2/Day Each: Fireball (level 4 version), Invisibility\n1/Day Each: Cone of Cold, Fly\nBonus Actions\nMisty Step (3/Day). The mage casts Misty Step, using \nthe same spellcasting ability as Spellcasting.\nReactions\nProtective Magic (3/Day). The mage casts Counterspell \nor Shield in response to the spell’s trigger, using the \nsame spellcasting ability as Spellcasting.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "druid": {
+      "name": "Druid",
+      "pages": [
+        282
+      ],
+      "text": "Druid\nMedium or Small Humanoid (Druid), Neutral\nAC 13\t\n\t\nInitiative +1 (11)\nHP 44 (8d8 + 8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t12 +1\n+1\nCon\t13 +1\n+1\nInt\t 12 +1\n+1\nWis\t16 +3\n+3\nCha\t11 +0 +0\nSkills Medicine +5, Nature +3, Perception +5\nGear Studded Leather Armor\nSenses Passive Perception 15\nLanguages Common, Druidic, Sylvan\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The druid makes two attacks, using Vine \nStaff or Verdant Wisp in any combination.\nVine Staff. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 \n+ 3) Bludgeoning damage plus 2 (1d4) Poison damage.\nVerdant Wisp. Ranged Attack Roll: +5, range 90 ft. Hit: \n10 (3d6) Radiant damage.\nSpellcasting. The druid casts one of the following \nspells, using Wisdom as the spellcasting ability (spell \nsave DC 13):\nAt Will: Druidcraft, Speak with Animals\n2/Day Each: Entangle, Thunderwave\n1/Day Each: Animal Messenger, Long-\nstrider, Moonbeam",
+      "originalName": "Druid",
+      "originalText": "Druid\nMedium or Small Humanoid (Druid), Neutral\nAC 13\t\n\t\nInitiative +1 (11)\nHP 44 (8d8 + 8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t12 +1\n+1\nCon\t13 +1\n+1\nInt\t 12 +1\n+1\nWis\t16 +3\n+3\nCha\t11 +0 +0\nSkills Medicine +5, Nature +3, Perception +5\nGear Studded Leather Armor\nSenses Passive Perception 15\nLanguages Common, Druidic, Sylvan\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The druid makes two attacks, using Vine \nStaff or Verdant Wisp in any combination.\nVine Staff. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 \n+ 3) Bludgeoning damage plus 2 (1d4) Poison damage.\nVerdant Wisp. Ranged Attack Roll: +5, range 90 ft. Hit: \n10 (3d6) Radiant damage.\nSpellcasting. The druid casts one of the following \nspells, using Wisdom as the spellcasting ability (spell \nsave DC 13):\nAt Will: Druidcraft, Speak with Animals\n2/Day Each: Entangle, Thunderwave\n1/Day Each: Animal Messenger, Long-\nstrider, Moonbeam",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "efreeti": {
+      "name": "Efreeti",
+      "pages": [
+        283
+      ],
+      "text": "Efreeti\nLarge Elemental (Genie), Neutral\nAC 17\t\n\t\nInitiative +1 (11)\nHP 212 (17d10 + 119)\nSpeed 40 ft., Fly 60 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 22 +6\n+6\nDex\t12 +1\n+1\nCon\t24 +7\n+7\nInt\t 16 +3\n+3\nWis\t15 +2\n+6\nCha\t19 +4\n+8\nImmunities Fire\nSenses Darkvision 120 ft.; Passive Perception 12\nLanguages Primordial (Ignan)\nCR 11 (XP 7,200; PB +4)\nTraits\nElemental Restoration. If the efreeti dies outside the \nElemental Plane of Fire, its body dissolves into ash, and \nit gains a new body in 1d4 days, reviving with all its Hit \nPoints somewhere on the Plane of Fire.\nMagic Resistance. The efreeti has Advantage on saving \nthrows against spells and other magical effects.\nWishes. The efreeti has a 30 percent chance of know-\ning the Wish spell. If the efreeti knows it, the efreeti \ncan cast it only on behalf of a non-genie creature who \ncommunicates a wish in a way the efreeti can under-\nstand. If the efreeti casts the spell for the creature, the \nefreeti suffers none of the spell’s stress. Once the efreeti \nhas cast it three times, the efreeti can’t do so again \nfor 365 days.\nActions\nMultiattack. The efreeti makes three attacks, using \nHeated Blade or Hurl Flame in any combination.\nHeated Blade. Melee Attack Roll: +10, reach 5 ft. \nHit: 13 (2d6 + 6) Slashing damage plus 13 (2d12) \nFire damage.\nHurl Flame. Ranged Attack Roll: +8, range 120 ft. Hit: \n24 (7d6) Fire damage.\nSpellcasting. The efreeti casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 16):\nAt Will: Detect Magic, Elementalism\n1/Day Each: Gaseous Form, Invisibility, Major Image, \nPlane Shift, Tongues, Wall of Fire (level 7 version)",
+      "originalName": "Efreeti",
+      "originalText": "Efreeti\nLarge Elemental (Genie), Neutral\nAC 17\t\n\t\nInitiative +1 (11)\nHP 212 (17d10 + 119)\nSpeed 40 ft., Fly 60 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 22 +6\n+6\nDex\t12 +1\n+1\nCon\t24 +7\n+7\nInt\t 16 +3\n+3\nWis\t15 +2\n+6\nCha\t19 +4\n+8\nImmunities Fire\nSenses Darkvision 120 ft.; Passive Perception 12\nLanguages Primordial (Ignan)\nCR 11 (XP 7,200; PB +4)\nTraits\nElemental Restoration. If the efreeti dies outside the \nElemental Plane of Fire, its body dissolves into ash, and \nit gains a new body in 1d4 days, reviving with all its Hit \nPoints somewhere on the Plane of Fire.\nMagic Resistance. The efreeti has Advantage on saving \nthrows against spells and other magical effects.\nWishes. The efreeti has a 30 percent chance of know-\ning the Wish spell. If the efreeti knows it, the efreeti \ncan cast it only on behalf of a non-genie creature who \ncommunicates a wish in a way the efreeti can under-\nstand. If the efreeti casts the spell for the creature, the \nefreeti suffers none of the spell’s stress. Once the efreeti \nhas cast it three times, the efreeti can’t do so again \nfor 365 days.\nActions\nMultiattack. The efreeti makes three attacks, using \nHeated Blade or Hurl Flame in any combination.\nHeated Blade. Melee Attack Roll: +10, reach 5 ft. \nHit: 13 (2d6 + 6) Slashing damage plus 13 (2d12) \nFire damage.\nHurl Flame. Ranged Attack Roll: +8, range 120 ft. Hit: \n24 (7d6) Fire damage.\nSpellcasting. The efreeti casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 16):\nAt Will: Detect Magic, Elementalism\n1/Day Each: Gaseous Form, Invisibility, Major Image, \nPlane Shift, Tongues, Wall of Fire (level 7 version)",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "fire": {
+      "name": "Fire Elemental",
+      "pages": [
+        284,
+        285
+      ],
+      "text": "Fire Elemental\nLarge Elemental, Neutral\nAC 13\t\n\t\nInitiative +3 (13)\nHP 93 (11d10 + 33)\nSpeed 50 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t17 +3\n+3\nCon\t16 +3\n+3\nInt\t 6\n−2\n−2\nWis\t10 +0 +0\nCha\t 7\n−2\n−2\nResistances Bludgeoning, Piercing, Slashing\nImmunities Fire, Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Ignan)\nCR 5 (XP 1,800; PB +3)\nTraits\nFire Aura. At the end of each of the elemental’s turns, \neach creature in a 10-foot Emanation originating from \nthe elemental takes 5 (1d10) Fire damage. Creatures and \nflammable objects in the Emanation start burning.\nFire Form. The elemental can move through a space as \nnarrow as 1 inch without expending extra movement \nto do so, and it can enter a creature’s space and stop \nthere. The first time it enters a creature’s space on a \nturn, that creature takes 5 (1d10) Fire damage.\nIllumination. The elemental sheds Bright Light in a 30-\nfoot radius and Dim Light for an additional 30 feet.\nWater Susceptibility. The elemental takes 3 (1d6) Cold \ndamage for every 5 feet the elemental moves in water \nor for every gallon of water splashed on it.\nActions\nMultiattack. The elemental makes two Burn attacks.\nBurn. Melee Attack Roll: +6, reach 5 ft. Hit: 10 (2d6 + \n3) Fire damage. If the target is a creature or a flammable \nobject, it starts burning.",
+      "originalName": "Fire Elemental",
+      "originalText": "Fire Elemental\nLarge Elemental, Neutral\nAC 13\t\n\t\nInitiative +3 (13)\nHP 93 (11d10 + 33)\nSpeed 50 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t17 +3\n+3\nCon\t16 +3\n+3\nInt\t 6\n−2\n−2\nWis\t10 +0 +0\nCha\t 7\n−2\n−2\nResistances Bludgeoning, Piercing, Slashing\nImmunities Fire, Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Ignan)\nCR 5 (XP 1,800; PB +3)\nTraits\nFire Aura. At the end of each of the elemental’s turns, \neach creature in a 10-foot Emanation originating from \nthe elemental takes 5 (1d10) Fire damage. Creatures and \nflammable objects in the Emanation start burning.\nFire Form. The elemental can move through a space as \nnarrow as 1 inch without expending extra movement \nto do so, and it can enter a creature’s space and stop \nthere. The first time it enters a creature’s space on a \nturn, that creature takes 5 (1d10) Fire damage.\nIllumination. The elemental sheds Bright Light in a 30-\nfoot radius and Dim Light for an additional 30 feet.\nWater Susceptibility. The elemental takes 3 (1d6) Cold \ndamage for every 5 feet the elemental moves in water \nor for every gallon of water splashed on it.\nActions\nMultiattack. The elemental makes two Burn attacks.\nBurn. Melee Attack Roll: +6, reach 5 ft. Hit: 10 (2d6 + \n3) Fire damage. If the target is a creature or a flammable \nobject, it starts burning.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "gargoyle": {
+      "name": "Gargoyle",
+      "pages": [
+        286
+      ],
+      "text": "Gargoyle\nMedium Elemental, Chaotic Evil\nAC 15\t\n\t\nInitiative +2 (12)\nHP 67 (9d8 + 27)\nSpeed 30 ft., Fly 60 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 15 +2\n+2\nDex\t11 +0 +0\nCon\t16 +3\n+3\nInt\t 6\n−2\n−2\nWis\t11 +0 +0\nCha\t 7\n−2\n−2\nSkills Stealth +4\nImmunities Poison; Exhaustion, Petrified, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Terran)\nCR 2 (XP 450; PB +2)\nTraits\nFlyby. The gargoyle doesn’t provoke an Opportunity \nAttack when it flies out of an enemy’s reach.\nActions\nMultiattack. The gargoyle makes two Claw attacks.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) \nSlashing damage.",
+      "originalName": "Gargoyle",
+      "originalText": "Gargoyle\nMedium Elemental, Chaotic Evil\nAC 15\t\n\t\nInitiative +2 (12)\nHP 67 (9d8 + 27)\nSpeed 30 ft., Fly 60 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 15 +2\n+2\nDex\t11 +0 +0\nCon\t16 +3\n+3\nInt\t 6\n−2\n−2\nWis\t11 +0 +0\nCha\t 7\n−2\n−2\nSkills Stealth +4\nImmunities Poison; Exhaustion, Petrified, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Terran)\nCR 2 (XP 450; PB +2)\nTraits\nFlyby. The gargoyle doesn’t provoke an Opportunity \nAttack when it flies out of an enemy’s reach.\nActions\nMultiattack. The gargoyle makes two Claw attacks.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) \nSlashing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "gladiator": {
+      "name": "Gladiator",
+      "pages": [
+        289
+      ],
+      "text": "Gladiator\nMedium or Small Humanoid, Neutral\nAC 16\t\n\t\nInitiative +5 (15)\nHP 112 (15d8 + 45)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+7\nDex\t15 +2\n+5\nCon\t16 +3\n+6\nInt\t 10 +0 +0\nWis\t12 +1\n+4\nCha\t15 +2\n+2\nSkills Athletics +10, Performance +5\nGear Shield, Spears (3), Studded Leather Armor\nSenses Passive Perception 11\nLanguages Common\nCR 5 (XP 1,800; PB +3)\nActions\nMultiattack. The gladiator makes three Spear attacks. It \ncan replace one attack with a use of Shield Bash.\nSpear. Melee or Ranged Attack Roll: +7, reach 5 ft. or \nrange 20/60 ft. Hit: 11 (2d6 + 4) Piercing damage.\nShield Bash. Strength Saving Throw: DC 15, one crea-\nture within 5 feet that the gladiator can see. Failure: 9 \n(2d4 + 4) Bludgeoning damage. If the target is a Me-\ndium or smaller creature, it has the Prone condition.\nReactions\nParry. Trigger: The gladiator is hit by a melee attack \nroll while holding a weapon. Response: The gladiator \nadds 3 to its AC against that attack, possibly causing \nit to miss.",
+      "originalName": "Gladiator",
+      "originalText": "Gladiator\nMedium or Small Humanoid, Neutral\nAC 16\t\n\t\nInitiative +5 (15)\nHP 112 (15d8 + 45)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+7\nDex\t15 +2\n+5\nCon\t16 +3\n+6\nInt\t 10 +0 +0\nWis\t12 +1\n+4\nCha\t15 +2\n+2\nSkills Athletics +10, Performance +5\nGear Shield, Spears (3), Studded Leather Armor\nSenses Passive Perception 11\nLanguages Common\nCR 5 (XP 1,800; PB +3)\nActions\nMultiattack. The gladiator makes three Spear attacks. It \ncan replace one attack with a use of Shield Bash.\nSpear. Melee or Ranged Attack Roll: +7, reach 5 ft. or \nrange 20/60 ft. Hit: 11 (2d6 + 4) Piercing damage.\nShield Bash. Strength Saving Throw: DC 15, one crea-\nture within 5 feet that the gladiator can see. Failure: 9 \n(2d4 + 4) Bludgeoning damage. If the target is a Me-\ndium or smaller creature, it has the Prone condition.\nReactions\nParry. Trigger: The gladiator is hit by a melee attack \nroll while holding a weapon. Response: The gladiator \nadds 3 to its AC against that attack, possibly causing \nit to miss.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "golem": {
+      "name": "Stone Golem",
+      "pages": [
+        330
+      ],
+      "text": "Stone Golem\nLarge Construct, Unaligned\nAC 18\t\n\t\nInitiative +3 (13)\nHP 220 (21d10 + 105)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 22 +6\n+6\nDex\t 9\n−1\n−1\nCon\t20 +5\n+5\nInt\t 3\n−4 −4\nWis\t11 +0 +0\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Exhaustion, \nFrightened, Paralyzed, Petrified, Poisoned\nSenses Darkvision 120 ft.; Passive Perception 10\nLanguages Understands Common plus two other \nlanguages but can’t speak\nCR 10 (XP 5,900; PB +4)\nTraits\nImmutable Form. The golem can’t shape-shift.\nMagic Resistance. The golem has Advantage on saving \nthrows against spells and other magical effects.\nActions\nMultiattack. The golem makes two attacks, using Slam \nor Force Bolt in any combination.\nSlam. Melee Attack Roll: +10, reach 5 ft. Hit: 15 (2d8 \n+ 6) Bludgeoning damage plus 9 (2d8) Force damage.\nForce Bolt. Ranged Attack Roll: +9, range 120 ft. Hit: \n22 (4d10) Force damage.\nBonus Actions\nSlow (Recharge 5–6). The golem casts the Slow spell, \nrequiring no spell components and using Constitution \nas the spellcasting ability (spell save DC 17).",
+      "originalName": "Stone Golem",
+      "originalText": "Stone Golem\nLarge Construct, Unaligned\nAC 18\t\n\t\nInitiative +3 (13)\nHP 220 (21d10 + 105)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 22 +6\n+6\nDex\t 9\n−1\n−1\nCon\t20 +5\n+5\nInt\t 3\n−4 −4\nWis\t11 +0 +0\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Exhaustion, \nFrightened, Paralyzed, Petrified, Poisoned\nSenses Darkvision 120 ft.; Passive Perception 10\nLanguages Understands Common plus two other \nlanguages but can’t speak\nCR 10 (XP 5,900; PB +4)\nTraits\nImmutable Form. The golem can’t shape-shift.\nMagic Resistance. The golem has Advantage on saving \nthrows against spells and other magical effects.\nActions\nMultiattack. The golem makes two attacks, using Slam \nor Force Bolt in any combination.\nSlam. Melee Attack Roll: +10, reach 5 ft. Hit: 15 (2d8 \n+ 6) Bludgeoning damage plus 9 (2d8) Force damage.\nForce Bolt. Ranged Attack Roll: +9, range 120 ft. Hit: \n22 (4d10) Force damage.\nBonus Actions\nSlow (Recharge 5–6). The golem casts the Slow spell, \nrequiring no spell components and using Constitution \nas the spellcasting ability (spell save DC 17).",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "stalker": {
+      "name": "Invisible Stalker",
+      "pages": [
+        301,
+        302
+      ],
+      "text": "Invisible Stalker\nLarge Elemental, Neutral\nAC 14\t\n\t\nInitiative +7 (22)\nHP 97 (13d10 + 26)\nSpeed 50 ft., Fly 50 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t19 +4\n+4\nCon\t14 +2\n+2\nInt\t 10 +0 +0\nWis\t15 +2\n+2\nCha\t11 +0 +0\nSkills Perception +8, Stealth +10\nResistances Bludgeoning, Piercing, Slashing\nImmunities Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 18\nLanguages Common, Primordial (Auran)\nCR 6 (XP 2,300; PB +3)\nTraits\nAir Form. The stalker can enter an enemy’s space and \nstop there. It can move through a space as narrow as 1 \ninch without expending extra movement to do so.\nInvisibility. The stalker has the Invisible condition.\nActions\nMultiattack. The stalker makes three Wind Swipe at-\ntacks. It can replace one attack with a use of Vortex.\nWind Swipe. Melee Attack Roll: +7, reach 5 ft. Hit: 11 \n(2d6 + 4) Force damage.\nVortex. Constitution Saving Throw: DC 14, one Large \nor smaller creature in the stalker’s space. Failure: 7 (1d8 \n+ 3) Thunder damage, and the target has the Grappled \ncondition (escape DC 13). Until the grapple ends, the \ntarget can’t cast spells with a Verbal component and \ntakes 7 (2d6) Thunder damage at the start of each of the \nstalker’s turns.",
+      "originalName": "Invisible Stalker",
+      "originalText": "Invisible Stalker\nLarge Elemental, Neutral\nAC 14\t\n\t\nInitiative +7 (22)\nHP 97 (13d10 + 26)\nSpeed 50 ft., Fly 50 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t19 +4\n+4\nCon\t14 +2\n+2\nInt\t 10 +0 +0\nWis\t15 +2\n+2\nCha\t11 +0 +0\nSkills Perception +8, Stealth +10\nResistances Bludgeoning, Piercing, Slashing\nImmunities Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 18\nLanguages Common, Primordial (Auran)\nCR 6 (XP 2,300; PB +3)\nTraits\nAir Form. The stalker can enter an enemy’s space and \nstop there. It can move through a space as narrow as 1 \ninch without expending extra movement to do so.\nInvisibility. The stalker has the Invisible condition.\nActions\nMultiattack. The stalker makes three Wind Swipe at-\ntacks. It can replace one attack with a use of Vortex.\nWind Swipe. Melee Attack Roll: +7, reach 5 ft. Hit: 11 \n(2d6 + 4) Force damage.\nVortex. Constitution Saving Throw: DC 14, one Large \nor smaller creature in the stalker’s space. Failure: 7 (1d8 \n+ 3) Thunder damage, and the target has the Grappled \ncondition (escape DC 13). Until the grapple ends, the \ntarget can’t cast spells with a Verbal component and \ntakes 7 (2d6) Thunder damage at the start of each of the \nstalker’s turns.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "rakshasa": {
+      "name": "Rakshasa",
+      "pages": [
+        317,
+        318
+      ],
+      "text": "Rakshasa\nMedium Fiend, Lawful Evil\nAC 17\t\n\t\nInitiative +8 (18)\nHP 221 (26d8 + 104)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t17 +3\n+3\nCon\t18 +4\n+4\nInt\t 13 +1\n+1\nWis\t16 +3\n+3\nCha\t20 +5\n+5\nSkills Deception +10, Insight +8, Perception +8\nVulnerabilities Piercing damage from weapons wielded by \ncreatures under the effect of a Bless spell\nImmunities Charmed, Frightened\nSenses Truesight 60 ft.; Passive Perception 18\nLanguages Common, Infernal\nCR 13 (XP 10,000; PB +5)\nTraits\nGreater Magic Resistance. The rakshasa automatically \nsucceeds on saving throws against spells and other \nmagical effects, and the attack rolls of spells automat-\nically miss it. Without the rakshasa’s permission, no \nspell can observe the rakshasa remotely or detect its \nthoughts, creature type, or alignment.\nFiendish Restoration. If the rakshasa dies outside the \nNine Hells, its body turns to ichor, and it gains a new \nbody instantly, reviving with all its Hit Points some-\nwhere in the Nine Hells.\nActions\nMultiattack. The rakshasa makes three Cursed \nTouch attacks.\nCursed Touch. Melee Attack Roll: +10, reach 5 ft. Hit: \n12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic \ndamage. If the target is a creature, it is cursed. While \ncursed, the target gains no benefit from finishing a \nShort or Long Rest.\nBaleful Command (Recharge 5–6). Wisdom Saving \nThrow: DC 18, each enemy in a 30-foot Emanation orig-\ninating from the rakshasa. Failure: 28 (8d6) Psychic dam-\nage, and the target has the Frightened and Incapacitated \nconditions until the start of the rakshasa’s next turn.\nSpellcasting. The rakshasa casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 18):\nAt Will: Detect Magic, Detect Thoughts, Disguise Self, \nMage Hand, Minor Illusion\n1/Day Each: Fly, Invisibility, Major Image, Plane Shift",
+      "originalName": "Rakshasa",
+      "originalText": "Rakshasa\nMedium Fiend, Lawful Evil\nAC 17\t\n\t\nInitiative +8 (18)\nHP 221 (26d8 + 104)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t17 +3\n+3\nCon\t18 +4\n+4\nInt\t 13 +1\n+1\nWis\t16 +3\n+3\nCha\t20 +5\n+5\nSkills Deception +10, Insight +8, Perception +8\nVulnerabilities Piercing damage from weapons wielded by \ncreatures under the effect of a Bless spell\nImmunities Charmed, Frightened\nSenses Truesight 60 ft.; Passive Perception 18\nLanguages Common, Infernal\nCR 13 (XP 10,000; PB +5)\nTraits\nGreater Magic Resistance. The rakshasa automatically \nsucceeds on saving throws against spells and other \nmagical effects, and the attack rolls of spells automat-\nically miss it. Without the rakshasa’s permission, no \nspell can observe the rakshasa remotely or detect its \nthoughts, creature type, or alignment.\nFiendish Restoration. If the rakshasa dies outside the \nNine Hells, its body turns to ichor, and it gains a new \nbody instantly, reviving with all its Hit Points some-\nwhere in the Nine Hells.\nActions\nMultiattack. The rakshasa makes three Cursed \nTouch attacks.\nCursed Touch. Melee Attack Roll: +10, reach 5 ft. Hit: \n12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic \ndamage. If the target is a creature, it is cursed. While \ncursed, the target gains no benefit from finishing a \nShort or Long Rest.\nBaleful Command (Recharge 5–6). Wisdom Saving \nThrow: DC 18, each enemy in a 30-foot Emanation orig-\ninating from the rakshasa. Failure: 28 (8d6) Psychic dam-\nage, and the target has the Frightened and Incapacitated \nconditions until the start of the rakshasa’s next turn.\nSpellcasting. The rakshasa casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 18):\nAt Will: Detect Magic, Detect Thoughts, Disguise Self, \nMage Hand, Minor Illusion\n1/Day Each: Fly, Invisibility, Major Image, Plane Shift",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "lamia": {
+      "name": "Lamia",
+      "pages": [
+        303,
+        304
+      ],
+      "text": "Lamia\nLarge Fiend, Chaotic Evil\nAC 13\t\n\t\nInitiative +1 (11)\nHP 97 (13d10 + 26)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t13 +1\n+1\nCon\t15 +2\n+2\nInt\t 14 +2\n+2\nWis\t15 +2\n+2\nCha\t16 +3\n+3\nSkills Deception +7, Insight +4, Stealth +5\nSenses Darkvision 60 ft.; Passive Perception 12\nLanguages Abyssal, Common\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The lamia makes two Claw attacks. It can \nreplace one attack with a use of Corrupting Touch.\nClaw. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) \nSlashing damage plus 7 (2d6) Psychic damage.\nCorrupting Touch. Wisdom Saving Throw: DC 13, one \ncreature the lamia can see within 5 feet. Failure: 13 \n(3d8) Psychic damage, and the target is cursed for 1 \nhour. Until the curse ends, the target has the Charmed \nand Poisoned conditions.\nSpellcasting. The lamia casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 13):\nAt Will: Disguise Self (can appear as a Large or Medium \nbiped), Minor Illusion\n1/Day Each: Geas, Major Image, Scrying\nBonus Actions\nLeap. The lamia jumps up to 30 feet by spending 10 \nfeet of movement.",
+      "originalName": "Lamia",
+      "originalText": "Lamia\nLarge Fiend, Chaotic Evil\nAC 13\t\n\t\nInitiative +1 (11)\nHP 97 (13d10 + 26)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t13 +1\n+1\nCon\t15 +2\n+2\nInt\t 14 +2\n+2\nWis\t15 +2\n+2\nCha\t16 +3\n+3\nSkills Deception +7, Insight +4, Stealth +5\nSenses Darkvision 60 ft.; Passive Perception 12\nLanguages Abyssal, Common\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The lamia makes two Claw attacks. It can \nreplace one attack with a use of Corrupting Touch.\nClaw. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) \nSlashing damage plus 7 (2d6) Psychic damage.\nCorrupting Touch. Wisdom Saving Throw: DC 13, one \ncreature the lamia can see within 5 feet. Failure: 13 \n(3d8) Psychic damage, and the target is cursed for 1 \nhour. Until the curse ends, the target has the Charmed \nand Poisoned conditions.\nSpellcasting. The lamia casts one of the following \nspells, requiring no Material components and using \nCharisma as the spellcasting ability (spell save DC 13):\nAt Will: Disguise Self (can appear as a Large or Medium \nbiped), Minor Illusion\n1/Day Each: Geas, Major Image, Scrying\nBonus Actions\nLeap. The lamia jumps up to 30 feet by spending 10 \nfeet of movement.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "bandit": {
+      "name": "Bandit",
+      "pages": [
+        261
+      ],
+      "text": "Bandit\nMedium or Small Humanoid, Neutral\nAC 12\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 11 +0 +0\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Leather Armor, Light Crossbow, Scimitar\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 1/8 (XP 25; PB +2)\nActions\nScimitar. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 \n+ 1) Slashing damage.\nLight Crossbow. Ranged Attack Roll: +3, range 80/320 \nft. Hit: 5 (1d8 + 1) Piercing damage.",
+      "originalName": "Bandit",
+      "originalText": "Bandit\nMedium or Small Humanoid, Neutral\nAC 12\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 11 +0 +0\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Leather Armor, Light Crossbow, Scimitar\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 1/8 (XP 25; PB +2)\nActions\nScimitar. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 \n+ 1) Slashing damage.\nLight Crossbow. Ranged Attack Roll: +3, range 80/320 \nft. Hit: 5 (1d8 + 1) Piercing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "scout": {
+      "name": "Scout",
+      "pages": [
+        322
+      ],
+      "text": "Scout\nMedium or Small Humanoid, Neutral\nAC 13 \t\n\t\nInitiative +2 (12)\nHP 16 (3d8 + 3)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 11 +0 +0\nDex\t14 +2\n+2\nCon\t12 +1\n+1\nInt\t 11 +0 +0\nWis\t13 +1\n+1\nCha\t11 +0 +0\nSkills Nature +4, Perception +5, Stealth +6, Survival +5\nGear Leather Armor, Longbow, Shortsword\nSenses Passive Perception 15\nLanguages Common plus one other language\nCR 1/2 (XP 100; PB +2)\nActions\nMultiattack. The scout makes two attacks, using Shorts-\nword and Longbow in any combination.\nShortsword. Melee Attack Roll: +4, reach 5 ft. Hit: 5 \n(1d6 + 2) Piercing damage.\nLongbow. Ranged Attack Roll: +4, range 150/600 ft. \nHit: 6 (1d8 + 2) Piercing damage.",
+      "originalName": "Scout",
+      "originalText": "Scout\nMedium or Small Humanoid, Neutral\nAC 13 \t\n\t\nInitiative +2 (12)\nHP 16 (3d8 + 3)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 11 +0 +0\nDex\t14 +2\n+2\nCon\t12 +1\n+1\nInt\t 11 +0 +0\nWis\t13 +1\n+1\nCha\t11 +0 +0\nSkills Nature +4, Perception +5, Stealth +6, Survival +5\nGear Leather Armor, Longbow, Shortsword\nSenses Passive Perception 15\nLanguages Common plus one other language\nCR 1/2 (XP 100; PB +2)\nActions\nMultiattack. The scout makes two attacks, using Shorts-\nword and Longbow in any combination.\nShortsword. Melee Attack Roll: +4, reach 5 ft. Hit: 5 \n(1d6 + 2) Piercing damage.\nLongbow. Ranged Attack Roll: +4, range 150/600 ft. \nHit: 6 (1d8 + 2) Piercing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "berserker": {
+      "name": "Berserker",
+      "pages": [
+        263
+      ],
+      "text": "Berserker\nMedium or Small Humanoid, Neutral\nAC 13\t\n\t\nInitiative +1 (11)\nHP 67 (9d8 + 27)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t12 +1\n+1\nCon\t17 +3\n+3\nInt\t 9\n−1\n−1\nWis\t11 +0 +0\nCha\t 9\n−1\n−1\nGear Greataxe, Hide Armor\nSenses Passive Perception 10\nLanguages Common\nCR 2 (XP 450; PB +2)\nTraits\nBloodied Frenzy. While Bloodied, the berserker has \nAdvantage on attack rolls and saving throws.\nActions\nGreataxe. Melee Attack Roll: +5, reach 5 ft. Hit: 9 \n(1d12 + 3) Slashing damage.",
+      "originalName": "Berserker",
+      "originalText": "Berserker\nMedium or Small Humanoid, Neutral\nAC 13\t\n\t\nInitiative +1 (11)\nHP 67 (9d8 + 27)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 16 +3\n+3\nDex\t12 +1\n+1\nCon\t17 +3\n+3\nInt\t 9\n−1\n−1\nWis\t11 +0 +0\nCha\t 9\n−1\n−1\nGear Greataxe, Hide Armor\nSenses Passive Perception 10\nLanguages Common\nCR 2 (XP 450; PB +2)\nTraits\nBloodied Frenzy. While Bloodied, the berserker has \nAdvantage on attack rolls and saving throws.\nActions\nGreataxe. Melee Attack Roll: +5, reach 5 ft. Hit: 9 \n(1d12 + 3) Slashing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "armor": {
+      "name": "Animated Armor",
+      "pages": [
+        259
+      ],
+      "text": "Animated Armor\nMedium Construct, Unaligned\nAC 18\t\n\t\nInitiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 25 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t11 +0 +0\nCon\t13 +1\n+1\nInt\t 1\n−5\n−5\nWis\t 3\n−4 −4\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Deafened, \nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 6\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The armor makes two Slam attacks.\nSlam. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) \nBludgeoning damage.",
+      "originalName": "Animated Armor",
+      "originalText": "Animated Armor\nMedium Construct, Unaligned\nAC 18\t\n\t\nInitiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 25 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t11 +0 +0\nCon\t13 +1\n+1\nInt\t 1\n−5\n−5\nWis\t 3\n−4 −4\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Deafened, \nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 6\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The armor makes two Slam attacks.\nSlam. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) \nBludgeoning damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "sword": {
+      "name": "Animated Flying Sword",
+      "pages": [
+        259
+      ],
+      "text": "Animated Flying Sword\nSmall Construct, Unaligned\nAC 17\t\n\t\nInitiative +4 (14)\nHP 14 (4d6)\nSpeed 5 ft., Fly 50 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 12 +1\n+1\nDex\t15 +2\n+4\nCon\t11 +0 +0\nInt\t 1\n−5\n−5\nWis\t 5\n−3\n−3\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Deafened, \nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 7\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nSlash. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) \nSlashing damage.",
+      "originalName": "Animated Flying Sword",
+      "originalText": "Animated Flying Sword\nSmall Construct, Unaligned\nAC 17\t\n\t\nInitiative +4 (14)\nHP 14 (4d6)\nSpeed 5 ft., Fly 50 ft. (hover)\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 12 +1\n+1\nDex\t15 +2\n+4\nCon\t11 +0 +0\nInt\t 1\n−5\n−5\nWis\t 5\n−3\n−3\nCha\t 1\n−5\n−5\nImmunities Poison, Psychic; Charmed, Deafened, \nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 7\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nSlash. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) \nSlashing damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "giantSpider": {
+      "name": "Giant Spider",
+      "pages": [
+        353,
+        354
+      ],
+      "text": "Giant Spider\nLarge Beast, Unaligned\nAC 14 \t\n\t\nInitiative +3 (13)\nHP 26 (4d10 + 4)\nSpeed 30 ft., Climb 30 ft.\n\n354\nSystem Reference Document 5.2.1\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t16 +3\n+3\nCon\t12 +1\n+1\nInt\t 2\n−4 −4\nWis\t11 +0 +0\nCha\t 4\n−3\n−3\nSkills Perception +4, Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nSpider Climb. The spider can climb difficult surfaces, \nincluding along ceilings, without needing to make an \nability check.\nWeb Walker. The spider ignores movement restrictions \ncaused by webs, and it knows the location of any other \ncreature in contact with the same web.\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) \nPiercing damage plus 7 (2d6) Poison damage.\nWeb (Recharge 5–6). Dexterity Saving Throw: DC 13, \none creature the spider can see within 60 feet. Failure: \nThe target has the Restrained condition until the web is \ndestroyed (AC 10; HP 5; Vulnerability to Fire damage; \nImmunity to Poison and Psychic damage).\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Giant Spider",
+      "originalText": "Giant Spider\nLarge Beast, Unaligned\nAC 14 \t\n\t\nInitiative +3 (13)\nHP 26 (4d10 + 4)\nSpeed 30 ft., Climb 30 ft.\n\n354\nSystem Reference Document 5.2.1\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 14 +2\n+2\nDex\t16 +3\n+3\nCon\t12 +1\n+1\nInt\t 2\n−4 −4\nWis\t11 +0 +0\nCha\t 4\n−3\n−3\nSkills Perception +4, Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nSpider Climb. The spider can climb difficult surfaces, \nincluding along ceilings, without needing to make an \nability check.\nWeb Walker. The spider ignores movement restrictions \ncaused by webs, and it knows the location of any other \ncreature in contact with the same web.\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) \nPiercing damage plus 7 (2d6) Poison damage.\nWeb (Recharge 5–6). Dexterity Saving Throw: DC 13, \none creature the spider can see within 60 feet. Failure: \nThe target has the Restrained condition until the web is \ndestroyed (AC 10; HP 5; Vulnerability to Fire damage; \nImmunity to Poison and Psychic damage).\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "skeleton": {
+      "name": "Skeleton",
+      "pages": [
+        325,
+        326
+      ],
+      "text": "Skeleton\nMedium Undead, Lawful Evil\nAC 14 \t\n\t\nInitiative +3 (13)\nHP 13 (2d8 + 4)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t16 +3\n+3\nCon\t15 +2\n+2\nInt\t 6\n−2\n−2\nWis\t 8\n−1\n−1\nCha\t 5\n−3\n−3\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nGear Shortbow, Shortsword\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Common plus one other language \nbut can’t speak\nCR 1/4 (XP 50; PB +2)\n\n326\nSystem Reference Document 5.2.1\nActions\nShortsword. Melee Attack Roll: +5, reach 5 ft. Hit: 6 \n(1d6 + 3) Piercing damage.\nShortbow. Ranged Attack Roll: +5, range 80/320 ft. Hit: \n6 (1d6 + 3) Piercing damage.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Skeleton",
+      "originalText": "Skeleton\nMedium Undead, Lawful Evil\nAC 14 \t\n\t\nInitiative +3 (13)\nHP 13 (2d8 + 4)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t16 +3\n+3\nCon\t15 +2\n+2\nInt\t 6\n−2\n−2\nWis\t 8\n−1\n−1\nCha\t 5\n−3\n−3\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nGear Shortbow, Shortsword\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Common plus one other language \nbut can’t speak\nCR 1/4 (XP 50; PB +2)\n\n326\nSystem Reference Document 5.2.1\nActions\nShortsword. Melee Attack Roll: +5, reach 5 ft. Hit: 6 \n(1d6 + 3) Piercing damage.\nShortbow. Ranged Attack Roll: +5, range 80/320 ft. Hit: \n6 (1d6 + 3) Piercing damage.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "minotaurSkeleton": {
+      "name": "Minotaur Skeleton",
+      "pages": [
+        326
+      ],
+      "text": "Minotaur Skeleton\nLarge Undead, Lawful Evil\nAC 12\t\n\t\nInitiative +0 (10)\nHP 45 (6d10 + 12)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t11 +0 +0\nCon\t15 +2\n+2\nInt\t 6\n−2\n−2\nWis\t 8\n−1\n−1\nCha\t 5\n−3\n−3\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Abyssal but can’t speak\nCR 2 (XP 450; PB +2)\nActions\nGore. Melee Attack Roll: +6, reach 5 ft. Hit: 11 (2d6 \n+ 4) Piercing damage. If the target is a Large or smaller \ncreature and the skeleton moved 20+ feet straight \ntoward it immediately before the hit, the target takes \nan extra 9 (2d8) Piercing damage and has the Prone \ncondition.\nSlam. Melee Attack Roll: +6, reach 5 ft. Hit: 15 (2d10 \n+ 4) Bludgeoning damage.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Minotaur Skeleton",
+      "originalText": "Minotaur Skeleton\nLarge Undead, Lawful Evil\nAC 12\t\n\t\nInitiative +0 (10)\nHP 45 (6d10 + 12)\nSpeed 40 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t11 +0 +0\nCon\t15 +2\n+2\nInt\t 6\n−2\n−2\nWis\t 8\n−1\n−1\nCha\t 5\n−3\n−3\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Abyssal but can’t speak\nCR 2 (XP 450; PB +2)\nActions\nGore. Melee Attack Roll: +6, reach 5 ft. Hit: 11 (2d6 \n+ 4) Piercing damage. If the target is a Large or smaller \ncreature and the skeleton moved 20+ feet straight \ntoward it immediately before the hit, the target takes \nan extra 9 (2d8) Piercing damage and has the Prone \ncondition.\nSlam. Melee Attack Roll: +6, reach 5 ft. Hit: 15 (2d10 \n+ 4) Bludgeoning damage.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "waterElemental": {
+      "name": "Water Elemental",
+      "pages": [
+        337
+      ],
+      "text": "Water Elemental\nWater Elemental\nLarge Elemental, Neutral\nAC 14\t\n\t\nInitiative +2 (12)\nHP 114 (12d10 + 48)\nSpeed 30 ft., Swim 90 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t14 +2\n+2\nCon\t18 +4\n+4\nInt\t 5\n−3\n−3\nWis\t10 +0 +0\nCha\t 8\n−1\n−1\nResistances Acid, Fire\nImmunities Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan)\nCR 5 (XP 1,800; PB +3)\nTraits\nFreeze. If the elemental takes Cold damage, its Speed \ndecreases by 20 feet until the end of its next turn.\nWater Form. The elemental can enter an enemy’s space \nand stop there. It can move through a space as narrow \nas 1 inch without expending extra movement to do so.\nActions\nMultiattack. The elemental makes two Slam attacks.\nSlam. Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 \n+ 4) Bludgeoning damage. If the target is a Medium or \nsmaller creature, it has the Prone condition.\nWhelm (Recharge 4–6). Strength Saving Throw: DC 15, \neach creature in the elemental’s space. Failure: 22 (4d8 \n+ 4) Bludgeoning damage. If the target is a Large or \nsmaller creature, it has the Grappled condition (escape \nDC 14). Until the grapple ends, the target has the Re-\nstrained condition, is suffocating unless it can breathe \nwater, and takes 9 (2d8) Bludgeoning damage at the \nstart of each of the elemental’s turns. The elemental \ncan grapple one Large creature or up to two Medium \nor smaller creatures at a time with Whelm. As an ac-\ntion, a creature within 5 feet of the elemental can pull \na creature out of it by succeeding on a DC 14 Strength \n(Athletics) check. Success: Half damage only.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Water Elemental",
+      "originalText": "Water Elemental\nWater Elemental\nLarge Elemental, Neutral\nAC 14\t\n\t\nInitiative +2 (12)\nHP 114 (12d10 + 48)\nSpeed 30 ft., Swim 90 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 18 +4\n+4\nDex\t14 +2\n+2\nCon\t18 +4\n+4\nInt\t 5\n−3\n−3\nWis\t10 +0 +0\nCha\t 8\n−1\n−1\nResistances Acid, Fire\nImmunities Poison; Exhaustion, Grappled, Paralyzed, \nPetrified, Poisoned, Prone, Restrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan)\nCR 5 (XP 1,800; PB +3)\nTraits\nFreeze. If the elemental takes Cold damage, its Speed \ndecreases by 20 feet until the end of its next turn.\nWater Form. The elemental can enter an enemy’s space \nand stop there. It can move through a space as narrow \nas 1 inch without expending extra movement to do so.\nActions\nMultiattack. The elemental makes two Slam attacks.\nSlam. Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 \n+ 4) Bludgeoning damage. If the target is a Medium or \nsmaller creature, it has the Prone condition.\nWhelm (Recharge 4–6). Strength Saving Throw: DC 15, \neach creature in the elemental’s space. Failure: 22 (4d8 \n+ 4) Bludgeoning damage. If the target is a Large or \nsmaller creature, it has the Grappled condition (escape \nDC 14). Until the grapple ends, the target has the Re-\nstrained condition, is suffocating unless it can breathe \nwater, and takes 9 (2d8) Bludgeoning damage at the \nstart of each of the elemental’s turns. The elemental \ncan grapple one Large creature or up to two Medium \nor smaller creatures at a time with Whelm. As an ac-\ntion, a creature within 5 feet of the elemental can pull \na creature out of it by succeeding on a DC 14 Strength \n(Athletics) check. Success: Half damage only.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "steam_mephit": {
+      "name": "Steam Mephit",
+      "pages": [
+        308
+      ],
+      "text": "Steam Mephit\nSmall Elemental, Neutral Evil\nAC 10\t\n\t\nInitiative +0 (10)\nHP 17 (5d6)\nSpeed 30 ft., Fly 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 5\n−3\n−3\nDex\t11 +0 +0\nCon\t10 +0 +0\nInt\t 11 +0 +0\nWis\t10 +0 +0\nCha\t12 +1\n+1\nSkills Stealth +2\nImmunities Fire, Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan, Ignan)\nCR 1/4 (XP 50; PB +2)\nTraits\nBlurred Form. Attack rolls against the mephit are made \nwith Disadvantage unless the mephit has the Incapaci-\ntated condition.\nDeath Burst. The mephit explodes when it dies. Dex-\nterity Saving Throw: DC 10, each creature in a 5-foot \nEmanation originating from the mephit. Failure: 5 (2d4) \nFire damage. Success: Half damage.\nActions\nClaw. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) \nSlashing damage plus 2 (1d4) Fire damage.\nSteam Breath (Recharge 6). Constitution Saving Throw: \nDC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) \nFire damage, and the target’s Speed decreases by 10 \nfeet until the end of the mephit’s next turn. Success: \nHalf damage only. Failure or Success: Being underwater \ndoesn’t grant Resistance to this Fire damage.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Steam Mephit",
+      "originalText": "Steam Mephit\nSmall Elemental, Neutral Evil\nAC 10\t\n\t\nInitiative +0 (10)\nHP 17 (5d6)\nSpeed 30 ft., Fly 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 5\n−3\n−3\nDex\t11 +0 +0\nCon\t10 +0 +0\nInt\t 11 +0 +0\nWis\t10 +0 +0\nCha\t12 +1\n+1\nSkills Stealth +2\nImmunities Fire, Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan, Ignan)\nCR 1/4 (XP 50; PB +2)\nTraits\nBlurred Form. Attack rolls against the mephit are made \nwith Disadvantage unless the mephit has the Incapaci-\ntated condition.\nDeath Burst. The mephit explodes when it dies. Dex-\nterity Saving Throw: DC 10, each creature in a 5-foot \nEmanation originating from the mephit. Failure: 5 (2d4) \nFire damage. Success: Half damage.\nActions\nClaw. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) \nSlashing damage plus 2 (1d4) Fire damage.\nSteam Breath (Recharge 6). Constitution Saving Throw: \nDC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) \nFire damage, and the target’s Speed decreases by 10 \nfeet until the end of the mephit’s next turn. Success: \nHalf damage only. Failure or Success: Being underwater \ndoesn’t grant Resistance to this Fire damage.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "bandit_captain": {
+      "name": "Bandit Captain",
+      "pages": [
+        261,
+        262
+      ],
+      "text": "Bandit Captain\nMedium or Small Humanoid, Neutral\nAC 15\t\n\t\nInitiative +3 (13)\nHP 52 (8d8 + 16)\nSpeed 30 ft.\n\n262\nSystem Reference Document 5.2.1\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 15 +2\n+4\nDex\t16 +3\n+5\nCon\t14 +2\n+2\nInt\t 14 +2\n+2\nWis\t11 +0 +2\nCha\t14 +2\n+2\nSkills Athletics +4, Deception +4\nGear Pistol, Scimitar, Studded Leather Armor\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The bandit makes two attacks, using Scim-\nitar and Pistol in any combination.\nScimitar. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 \n+ 3) Slashing damage.\nPistol. Ranged Attack Roll: +5, range 30/90 ft. Hit: 8 \n(1d10 + 3) Piercing damage.\nReactions\nParry. Trigger: The bandit is hit by a melee attack roll \nwhile holding a weapon. Response: The bandit adds 2 \nto its AC against that attack, possibly causing it to miss.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Bandit Captain",
+      "originalText": "Bandit Captain\nMedium or Small Humanoid, Neutral\nAC 15\t\n\t\nInitiative +3 (13)\nHP 52 (8d8 + 16)\nSpeed 30 ft.\n\n262\nSystem Reference Document 5.2.1\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 15 +2\n+4\nDex\t16 +3\n+5\nCon\t14 +2\n+2\nInt\t 14 +2\n+2\nWis\t11 +0 +2\nCha\t14 +2\n+2\nSkills Athletics +4, Deception +4\nGear Pistol, Scimitar, Studded Leather Armor\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 2 (XP 450; PB +2)\nActions\nMultiattack. The bandit makes two attacks, using Scim-\nitar and Pistol in any combination.\nScimitar. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 \n+ 3) Slashing damage.\nPistol. Ranged Attack Roll: +5, range 30/90 ft. Hit: 8 \n(1d10 + 3) Piercing damage.\nReactions\nParry. Trigger: The bandit is hit by a melee attack roll \nwhile holding a weapon. Response: The bandit adds 2 \nto its AC against that attack, possibly causing it to miss.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "commoner": {
+      "name": "Commoner",
+      "pages": [
+        275
+      ],
+      "text": "Commoner\nCommoner\nMedium or Small Humanoid, Neutral\nAC 10\t\n\t\nInitiative +0 (10)\nHP 4 (1d8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t10 +0 +0\nCon\t10 +0 +0\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Club\nSenses Passive Perception 10\nLanguages Common\nCR 0 (XP 10; PB +2)\nTraits\nTraining. The commoner has proficiency in one skill of \nthe GM’s choice and has Advantage whenever it makes \nan ability check using that skill.\nActions\nClub. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) \nBludgeoning damage.",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Commoner",
+      "originalText": "Commoner\nCommoner\nMedium or Small Humanoid, Neutral\nAC 10\t\n\t\nInitiative +0 (10)\nHP 4 (1d8)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 10 +0 +0\nDex\t10 +0 +0\nCon\t10 +0 +0\nInt\t 10 +0 +0\nWis\t10 +0 +0\nCha\t10 +0 +0\nGear Club\nSenses Passive Perception 10\nLanguages Common\nCR 0 (XP 10; PB +2)\nTraits\nTraining. The commoner has proficiency in one skill of \nthe GM’s choice and has Advantage whenever it makes \nan ability check using that skill.\nActions\nClub. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) \nBludgeoning damage.",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    },
+    "guard": {
+      "name": "Guard",
+      "pages": [
+        295,
+        296
+      ],
+      "text": "Guard\nMedium or Small Humanoid, Neutral\nAC 16\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 13 +1\n+1\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t11 +0 +0\nCha\t10 +0 +0\nSkills Perception +2\nGear Chain Shirt, Shield, Spear\nSenses Passive Perception 12\nLanguages Common\nCR 1/8 (XP 25; PB +2)\nActions\nSpear. Melee or Ranged Attack Roll: +3, reach 5 ft. or \nrange 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.\n",
+      "kind": "srd",
+      "source": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "originalName": "Guard",
+      "originalText": "Guard\nMedium or Small Humanoid, Neutral\nAC 16\t\n\t\nInitiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE\nMOD SAVE\nMOD SAVE\nStr\t 13 +1\n+1\nDex\t12 +1\n+1\nCon\t12 +1\n+1\nInt\t 10 +0 +0\nWis\t11 +0 +0\nCha\t10 +0 +0\nSkills Perception +2\nGear Chain Shirt, Shield, Spear\nSenses Passive Perception 12\nLanguages Common\nCR 1/8 (XP 25; PB +2)\nActions\nSpear. Melee or Ranged Attack Roll: +3, reach 5 ft. or \nrange 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage.\n",
+      "runtimeNotice": "SRD原文、中文规则说明和实时数值分别显示；未实现的复杂自由裁定由主持按原卡执行。"
+    }
+  },
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode"
+}

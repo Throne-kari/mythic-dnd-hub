@@ -1,0 +1,4300 @@
+{
+  "id": "aztec-fifth-sun-v3",
+  "title": "第五日之城 · 湖上余烬",
+  "subtitle": "三条命脉，四位同行者，二十四种黎明",
+  "welcomeText": "太阳在湖城上方停了三息。粮舟、失名画卷与亡者的骨路一同抵岸。你们将亲手决定谁来供养下一日、谁有权书写众人的过去，以及活人与死者是否还各有归途。",
+  "intro": "第五日的太阳在中天停了三息，随后落下一片不会冷却的黑羽。湖上新城「伊斯塔兰」才建满一代人：围湖田养活居民，烟镜塔保管迁居者的画卷，贵骨渡口送每一个有名字的死者上路。\n\n如今，掌城者把三项旧契约并成一张索人令：欠太阳的粮，改成欠王的记忆；欠亡者的路，改成欠神殿的身体。神殿中也有人反对，亡者中也有人拒绝再用活人填账。神明会来到桌边，各带真实力量与要求；他们不会替你们决定谁应付代价。\n\n你们四人结伴返回故城。有人还记得你们离去时的承诺，有人已经开始等待你们的偿还。",
+  "initial": {
+    "grain": 10,
+    "silver": 18,
+    "water": 4,
+    "dread": 0
+  },
+  "companions": [
+    {
+      "id": "yaotl",
+      "name": "耀特尔",
+      "role": "退役日盾卫",
+      "description": "曾违令打开粮门，也曾替掌城者押过拒贡者。他要让自己的罪行有姓名与期限，不愿再用「全城需要」作无限命令。",
+      "hp": 29,
+      "attack": 6,
+      "armor": 2,
+      "range": 1
+    },
+    {
+      "id": "itzel",
+      "name": "伊策尔",
+      "role": "反写画卷师",
+      "description": "能辨认烟镜覆盖下的旧笔。她曾用一次删除救下养母阿玛，如今坚持人可保密，事件必须留反证；她的手不是公用的权杖。",
+      "hp": 21,
+      "attack": 5,
+      "armor": 1,
+      "range": 4
+    },
+    {
+      "id": "nelli",
+      "name": "内莉",
+      "role": "湖田渡者",
+      "description": "拥有一艘渡舟与一块母亲传下的湖田。愿按自定班次救人，不肯让城市把每一次善意都续成永久征用。",
+      "hp": 23,
+      "attack": 6,
+      "armor": 1,
+      "range": 5
+    },
+    {
+      "id": "xoco",
+      "name": "索科",
+      "role": "亡途医者",
+      "description": "替活人止血，也替死者保存本名。弟弟特莫已经死去，他想让弟弟安心走完骨路，拒绝借治疗的名义把谁留在永远的疼痛里。",
+      "hp": 25,
+      "attack": 4,
+      "armor": 1,
+      "range": 3
+    }
+  ],
+  "factions": [
+    {
+      "id": "commons",
+      "name": "湖田共席",
+      "description": "田户、舟户与城内手艺人的松散联盟。会互助，也会为保住自己的田而把负担推向岸外。"
+    },
+    {
+      "id": "temple",
+      "name": "续日阶庭",
+      "description": "掌管太阳台与粮仓的祭司、守卫和掌城官。院内既有索人的执令者，也有愿把供养改成有限约的人。"
+    },
+    {
+      "id": "shades",
+      "name": "贵骨行列",
+      "description": "在亡途上尚未失名的死者。有人求归宁，有人要永远返回，还有人提议由整座活城供养亡界。"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "第一章 · 三息停日",
+      "summary": "粮舟受扣、画卷失名、骨路开裂。先处理眼前的人与物，再接下各自代价。",
+      "requires": {},
+      "settledFlags": [
+        "chapter:ch1:canal:settled",
+        "chapter:ch1:archive:settled",
+        "chapter:ch1:descent:settled"
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "第二章 · 真正开始偿付",
+      "summary": "三个方案进入实际执行：湖田征供、镜中改写、亡途试行。好处和受害者都会跟到终章。行动序号不是时钟；试行跨越数个有实际供给的施工日。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled"
+        ]
+      },
+      "settledFlags": [
+        "chapter:ch2:canal:settled",
+        "chapter:ch2:archive:settled",
+        "chapter:ch2:descent:settled"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "第三章 · 不能替代的黎明",
+      "summary": "先落实湖田与城权，再处置太阳台和亡途。六种终局与四种实际政体相交，形成二十四种不同归宿。",
+      "requires": {
+        "flags": [
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled"
+        ]
+      },
+      "settledFlags": [
+        "chapter:ch3:canal:settled",
+        "chapter:ch3:archive:settled",
+        "chapter:ch3:descent:settled"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "ch1-canal",
+      "chapter": "ch1",
+      "lane": "canal",
+      "title": "湖田：被扣的第一船",
+      "conflict": "谁的粮能被称为全城的粮？",
+      "color": "#68c6a8",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch1-archive",
+      "chapter": "ch1",
+      "lane": "archive",
+      "title": "烟镜：空白的住户",
+      "conflict": "消去记录能救一个人，也能使他永远无法作证。",
+      "color": "#d2a25a",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch1-descent",
+      "chapter": "ch1",
+      "lane": "descent",
+      "title": "贵骨：尚未走远的人",
+      "conflict": "死者想回家，不等于同意换一具活人的身体。",
+      "color": "#b98ad9",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch2-canal",
+      "chapter": "ch2",
+      "lane": "canal",
+      "title": "湖田：供养真正开始",
+      "conflict": "供给有多少，承诺就只能有多大。",
+      "color": "#68c6a8",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch2-archive",
+      "chapter": "ch2",
+      "lane": "archive",
+      "title": "烟镜：第一次改写",
+      "conflict": "恐惧能被抹去，发令者的责任会不会一起消失？",
+      "color": "#d2a25a",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch2-descent",
+      "chapter": "ch2",
+      "lane": "descent",
+      "title": "贵骨：身体与路的试验",
+      "conflict": "太阳真的会亮；被绑上去的人也真的会记住。",
+      "color": "#b98ad9",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch3-canal",
+      "chapter": "ch3",
+      "lane": "canal",
+      "title": "湖田：城的明年",
+      "conflict": "保城、征供、离城和承认失败，各有真实交接。",
+      "color": "#68c6a8",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch3-archive",
+      "chapter": "ch3",
+      "lane": "archive",
+      "title": "烟镜：谁能写下王名",
+      "conflict": "共席、阶庭、王冠或分裂，权力由实际印令建立。",
+      "color": "#d2a25a",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    },
+    {
+      "id": "ch3-descent",
+      "chapter": "ch3",
+      "lane": "descent",
+      "title": "贵骨：下一日付给谁",
+      "conflict": "先处理岸上两线，再决定最后的供养。",
+      "color": "#b98ad9",
+      "summary": "三个连续节点；可交织推进，免费失败出口仍交接本线。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ch1-canal-1",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "map": "harbor",
+      "title": "扣在日影下的玉米舟",
+      "text": "太阳台的影子压住三艘粮舟，仓吏却把税签钉在内莉自己的船头。阶庭征粮官特拉克说：“停日之后，船、田和人都得先归日粮令。等太阳动了，你们再分谁的。”\n耀特尔认出领队的旧部。年轻守卫托津把矛尖垂下：“你上次开粮门时，叫我们记得里面还有孩子。现在你回来，要我听哪一道令？”岸上等粮的成年人没有替他回答。内莉把船钥攥进掌心：“我的船可以运粮，但不是谁怕了就能拿走。”\n仓里现有的玉米足够换来一轮喘息。可可买的是卸粮许可；若动手，守卫会守住税签，却不会主动烧粮。你们可以走开，城中仍有人愿分出一碗薄粥。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "buy",
+          "label": "用可可买下这轮卸粮许可",
+          "preview": "可可−4、玉米+4；粮舟获释；湖田+1。阶庭只放本轮，不取得船权。",
+          "cost": {
+            "silver": 4
+          },
+          "effects": {
+            "flags": [
+              "grain_released",
+              "dock_fee_paid"
+            ],
+            "resources": {
+              "grain": 4
+            },
+            "factions": {
+              "commons": 1
+            },
+            "relationships": {
+              "nelli": 1
+            }
+          }
+        },
+        {
+          "id": "fight",
+          "label": "击退扣舟队，亲手拔下税签",
+          "preview": "进入三敌战斗；胜利获玉米5并放粮，败退没有粮；耀特尔承担与旧部交战的记录。",
+          "effects": {
+            "flags": [
+              "dock_battle_started"
+            ],
+            "relationships": {
+              "yaotl": 1
+            }
+          },
+          "encounter": {
+            "id": "dock-collectors",
+            "name": "日税扣舟队",
+            "enemies": [
+              {
+                "id": "tax-shield",
+                "name": "执签日盾",
+                "hp": 18,
+                "attack": 4,
+                "armor": 2,
+                "range": 1,
+                "x": 12,
+                "y": 3
+              },
+              {
+                "id": "tax-slinger",
+                "name": "仓顶投石手",
+                "hp": 12,
+                "attack": 3,
+                "armor": 0,
+                "range": 4,
+                "x": 12,
+                "y": 7
+              },
+              {
+                "id": "tax-runner",
+                "name": "税签奔卒",
+                "hp": 13,
+                "attack": 3,
+                "armor": 1,
+                "range": 1,
+                "x": 8,
+                "y": 7
+              }
+            ],
+            "reward": {
+              "flags": [
+                "dock_battle_won",
+                "grain_released"
+              ],
+              "resources": {
+                "grain": 5
+              },
+              "factions": {
+                "commons": 2,
+                "temple": -1
+              }
+            }
+          }
+        },
+        {
+          "id": "seize",
+          "label": "接过征粮令，用内莉的船扫取岸仓",
+          "preview": "玉米+8、可可+4、蚀影+2；船与岸仓被实际征用；内莉−3、湖田−2、阶庭+2。",
+          "effects": {
+            "flags": [
+              "canal_seized",
+              "nelli_betrayed",
+              "levy_first_cargo"
+            ],
+            "resources": {
+              "grain": 8,
+              "silver": 4,
+              "dread": 2
+            },
+            "relationships": {
+              "nelli": -3,
+              "yaotl": -1
+            },
+            "factions": {
+              "commons": -2,
+              "temple": 2
+            },
+            "text": "第一批被征的粮装进内莉的船。她没有交钥；耀特尔用旧军号令开了仓。她仍同行，要追船、追粮与追索下一道令。"
+          }
+        },
+        {
+          "id": "leave",
+          "label": "不交税也不动手，留下扣舟名单",
+          "preview": "免费；未放粮，蚀影+1；仍可继续修田和另借口粮。",
+          "effects": {
+            "flags": [
+              "dock_unresolved"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-canal-2",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "map": "canal",
+      "title": "盐水漫过第一畦",
+      "text": "湖田边，芦苇尺的白线已经浸进咸水。田户领席阿乌伊把一把空壳放进内莉手里：“再不堵这条口子，下季太阳吃不到粮，城里也吃不到。”补闸要吃饭、要净水拌封泥，田户愿出自己的劳动。\n征粮官却另带一班人，准备把高处三畦改成太阳专田。玉米会立刻从专仓拨出，往后的收成先供太阳台，原田户只能领定额口粮。羽蛇神的风掠过水面，只留下一句：“我能教你们让水走哪条沟，不能替田主人同意。”\n内莉指向母亲留下的界石：“这条沟救得活。用我的田抵押也救得活。两件事，你们得亲口选。”",
+      "requires": {
+        "flags": [
+          "node:ch1-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "repair",
+          "label": "与田户合补缺口，留下各家的界石",
+          "preview": "玉米−2、净水−1；共同田闸开成；湖田+2、内莉+2、羽蛇神+1。",
+          "cost": {
+            "grain": 2,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "floodgates_open",
+              "field_titles_kept"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "relationships": {
+              "nelli": 2
+            },
+            "npcRelationships": {
+              "quetzalcoatl": 1
+            }
+          }
+        },
+        {
+          "id": "levy",
+          "label": "执行太阳专田令，换取现仓供给",
+          "preview": "玉米+6、可可+3、蚀影+2；三畦田进入强制供养，田户失去本季支配；内莉−2。",
+          "effects": {
+            "flags": [
+              "field_levy_started",
+              "nelli_betrayed"
+            ],
+            "resources": {
+              "grain": 6,
+              "silver": 3,
+              "dread": 2
+            },
+            "relationships": {
+              "nelli": -2
+            },
+            "factions": {
+              "temple": 2,
+              "commons": -2
+            }
+          }
+        },
+        {
+          "id": "mark",
+          "label": "测定坏口并保留撤离路，不再开工",
+          "preview": "免费；田闸未修、蚀影+1；界石与撤离路保留，后章可修。",
+          "effects": {
+            "flags": [
+              "field_flooded",
+              "evacuation_marks"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "relationships": {
+              "nelli": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "after-seizure",
+          "requires": {
+            "flags": [
+              "canal_seized"
+            ],
+            "notFlags": []
+          },
+          "text": "内莉没有把自己的船算进田户志愿工具。阿乌伊把征船一事写在界石旁：修好一条闸，不会使那条船自动归公。"
+        },
+        {
+          "id": "after-retreat",
+          "requires": {
+            "flags": [
+              "encounter:dock-collectors:lost"
+            ],
+            "notFlags": []
+          },
+          "text": "托津没有追进田里。他送回你们掉在码头的一把短刀，附着一句话：粮仍在锁仓，我也仍得回去站岗。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-canal-3",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "map": "temple",
+      "title": "太阳不吃空口的保证",
+      "text": "太阳台的女祭司奇玛把两份账放在同一石阶：现仓能支出的粮，与下季还没长出来的粮。“太阳需要运动。人也需要吃饭。把两张账叠在一起，就能把谁都征走。”\n羽蛇神以一名沾泥旅人的形体站在她身后，指尖画出以燃料、轮值劳动与节期合养的纹样。纹样可以试做，不能凭一顿队粮实现整城永昼。奇玛愿给你们一笔有限借粮；到第二章，需要交回同额，或公开承认亏欠。\n耀特尔看见旧日索人令被压在秤脚下：“先写明哪件事已经做成，别拿明年的太阳，填今天缺的那一行。”",
+      "requires": {
+        "flags": [
+          "node:ch1-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "以已修田闸登记共同供养试案",
+          "preview": "需共同田闸已开；本线成功，得到共同供养图式；不新增队粮。",
+          "requires": {
+            "flags": [
+              "floodgates_open"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "sun_grain_design",
+              "first_canal_common"
+            ],
+            "completeRoute": "ch1-canal",
+            "npcRelationships": {
+              "quetzalcoatl": 1
+            }
+          }
+        },
+        {
+          "id": "levy",
+          "label": "以已执行专田登记阶庭征供试案",
+          "preview": "需太阳专田令已执行；本线成功，专田供给纳入阶庭；阶庭+1。",
+          "requires": {
+            "flags": [
+              "field_levy_started"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "sun_levy_design"
+            ],
+            "completeRoute": "ch1-canal",
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "borrow",
+          "label": "领取四份庙仓有限借粮，写清归还日",
+          "preview": "玉米+4；本线成功，第二章欠庙仓4玉米；取得公开试案但未修田闸。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "temple_loan_due",
+              "sun_grain_design"
+            ],
+            "completeRoute": "ch1-canal",
+            "resources": {
+              "grain": 4
+            },
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "不再承诺供日，登记田务未成",
+          "preview": "免费；玉米+1为庙院无偿救急；本线失败交接，后章仍可修田或离城。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "first_canal_failed"
+            ],
+            "failRoutes": [
+              "ch1-canal"
+            ],
+            "resources": {
+              "grain": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-archive-1",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "map": "archive",
+      "title": "画卷上少了一个呼吸",
+      "text": "烟镜档院的画卷仍在呼吸，屋舍图里的住户却每隔一息少去一个。伊策尔按住一处空白：“我改过这一笔。阿玛是我的养母，也是旧日登记官。我让追捕者忘了她住在哪儿。现在整条巷子连她给谁接过生都不记得。”\n掌城官奥塞洛递来一片黑曜镜：“再借我一笔，今晚便没有人记得拒粮。你们会有粮、有安全的街道，也会有一座终于肯照令生活的城。”耀特尔在镜中看见自己的旧部，他上次开仓的抗命，与更早押走拒贡者的命令，被刻在同一边框。\n“我的罪行可以当证据，”耀特尔说，“不要拿另一人的过去，替我擦出一张干净的脸。”",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "copy",
+          "label": "付工料，把删前痕迹和现卷分别封存",
+          "preview": "可可−3；留下独立反证；伊策尔+2、烟镜神−1；阿玛的位置不公开。",
+          "cost": {
+            "silver": 3
+          },
+          "effects": {
+            "flags": [
+              "archive_countercopy",
+              "itzel_authority_kept"
+            ],
+            "relationships": {
+              "itzel": 2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": -1
+            }
+          }
+        },
+        {
+          "id": "admit",
+          "label": "先记下耀特尔亲口承认的两道旧令",
+          "preview": "免费；耀特尔公开承担开仓与押人两段历史；尚无原卷反证；耀特尔+1。",
+          "effects": {
+            "flags": [
+              "yaotl_public_guilt",
+              "oral_record"
+            ],
+            "relationships": {
+              "yaotl": 1
+            }
+          }
+        },
+        {
+          "id": "steal",
+          "label": "夺伊策尔的笔，抹去守卫对耀特尔的追查",
+          "preview": "可可+4、蚀影+2；追查当夜真实停止，伊策尔被背叛；烟镜试钥到手，耀特尔−2。",
+          "effects": {
+            "flags": [
+              "mirror_seed",
+              "itzel_betrayed",
+              "yaotl_covered",
+              "first_private_erasure"
+            ],
+            "resources": {
+              "silver": 4,
+              "dread": 2
+            },
+            "relationships": {
+              "itzel": -3,
+              "yaotl": -2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 2
+            },
+            "text": "守卫在门外怔住，忘了自己为何追来。伊策尔的手腕被按在桌面，旧令仍发生过，能指认它的人却少了一名。"
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-archive-2",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "map": "archive",
+      "title": "阿玛不肯成为证物",
+      "text": "阿玛藏在晒画架后，头发里夹着干玉米须。她先认出伊策尔的脚步，才认出自己养大的脸：“你把我救成一个没有来处的人。我还想活，但不是作为你们永远秘密保管的一件东西。”\n两名档院执令者堵住出口。他们带来的令只许带阿玛回去讯问，奥塞洛却在背面加了一句：必要时全巷共同消忆。阿玛愿写下自己执行过的失名登记，拒绝替全巷同意公开地址。\n伊策尔展开一块没画过的新布：“我们可以保人，也可以拿人换一张通行令。选的时候，让她听见。”",
+      "requires": {
+        "flags": [
+          "node:ch1-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "shelter",
+          "label": "供给阿玛两日藏身，把证词与地址分开",
+          "preview": "玉米−2；证人安全且证词可另核，伊策尔+2、湖田+1；不自动恢复她的过去。",
+          "cost": {
+            "grain": 2
+          },
+          "effects": {
+            "flags": [
+              "witness_safe",
+              "witness_deposition"
+            ],
+            "relationships": {
+              "itzel": 2
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "escort-fight",
+          "label": "拒绝交人，迎战档院执令者",
+          "preview": "两敌战斗；胜利护送阿玛并取得扣令，败退她自行离巷且暂失联；不预先授予保护旗标。",
+          "effects": {
+            "flags": [
+              "archive_battle_started"
+            ]
+          },
+          "encounter": {
+            "id": "archive-hunters",
+            "name": "档院收卷令",
+            "enemies": [
+              {
+                "id": "mirror-clerk",
+                "name": "执镜收卷官",
+                "hp": 19,
+                "attack": 4,
+                "armor": 1,
+                "range": 3,
+                "x": 12,
+                "y": 5
+              },
+              {
+                "id": "paint-guard",
+                "name": "覆面日卫",
+                "hp": 20,
+                "attack": 4,
+                "armor": 2,
+                "range": 1,
+                "x": 10,
+                "y": 8
+              }
+            ],
+            "reward": {
+              "flags": [
+                "archive_battle_won",
+                "witness_safe",
+                "witness_deposition",
+                "seized_erasure_order"
+              ],
+              "relationships": {
+                "itzel": 2,
+                "yaotl": 1
+              },
+              "factions": {
+                "temple": -1
+              }
+            }
+          }
+        },
+        {
+          "id": "expose",
+          "label": "公开地址，换执令者交出的可可与通行",
+          "preview": "可可+5、蚀影+2；阿玛被带回讯问，获得可追问的收押编号；伊策尔−3。",
+          "effects": {
+            "flags": [
+              "witness_exposed",
+              "itzel_betrayed",
+              "amma_detained"
+            ],
+            "resources": {
+              "silver": 5,
+              "dread": 2
+            },
+            "relationships": {
+              "itzel": -3
+            },
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "scatter",
+          "label": "按阿玛自己的决定分头离开",
+          "preview": "免费；她带原证词离城，暂不能当面对质；伊策尔+1、蚀影+1。",
+          "effects": {
+            "flags": [
+              "witness_departed"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "relationships": {
+              "itzel": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "mother-empty",
+          "requires": {
+            "flags": [
+              "first_private_erasure"
+            ],
+            "notFlags": []
+          },
+          "text": "阿玛听过守卫失忆的事。她把伊策尔的手从你们面前拉开：“让她画，不等于你们可以拿走她的手。”"
+        }
+      ]
+    },
+    {
+      "id": "ch1-archive-3",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "map": "temple",
+      "title": "借出的印，何时收回",
+      "text": "烟镜神特斯卡特利波卡来到阶庭时，只有一只脚落地。镜面里各有一位看起来足以救城的统治者，偏偏没有一个能说出镜外的人同意了什么。\n“我可以让命令没有反对者，”他说，“也可以让每个反对者都得到声音。差别不在我有多大力量，在谁肯保管那一份不合意的过去。”奇玛把临时印令递到桌边，湖田代表则拿出一张可随时撤回的席位绳。\n奥塞洛愿意立刻开全城档院，条件是你们把紧急权交给他，期限写作「停日危机结束」。这个结束由谁宣布，令上没有写。",
+      "requires": {
+        "flags": [
+          "node:ch1-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "hearing",
+          "label": "建立七日听证与分存反证的临时席位",
+          "preview": "免费；本线成功；七日听证成立，未来仍需真正组织保护和复核；湖田+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "hearing_open",
+              "temporary_council"
+            ],
+            "completeRoute": "ch1-archive",
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "把受理权交给奇玛，限定七日且保留异议",
+          "preview": "免费；本线成功；阶庭负担受理与庇护，不能自动夺取画师的笔；阶庭+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "hearing_open",
+              "temple_bounded_hearing"
+            ],
+            "completeRoute": "ch1-archive",
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "warrant",
+          "label": "给奥塞洛无到期日的全城紧急印",
+          "preview": "可可+4；本线成功；城官得到查卷与拘押许可，不能凭旁白提前建立永久王冠；烟镜神+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "royal_emergency_warrant"
+            ],
+            "completeRoute": "ch1-archive",
+            "resources": {
+              "silver": 4
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "拒接所有印，交出争议清单",
+          "preview": "免费；本线失败交接；谁也没有取得你们授予的受理权，旧执令仍可能运行。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "first_archive_failed"
+            ],
+            "failRoutes": [
+              "ch1-archive"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-descent-1",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "map": "underworld",
+      "title": "一根不属于索科的贵骨",
+      "text": "贵骨渡口没有尸山，只有排队的人、背着水壶的人，以及一名抱着腿骨的老人。骨面上写着特莫，索科弟弟的名字；开口的却是另一位死去的湖田女工乌娜。\n“他们为了让贵骨好卖，把我们的名字换过。”乌娜说，“他在前一段路替我守着名字。你若只认这根骨，就会把我当弟弟领走。”索科蹲下来，先问她活着时住过哪一畦田。\n米克特兰的双主隔着水同时发声，一低一轻：“骨可以重组，名字必须由知情者相认。你们要过的不是一场善恶考试，是一条会磨去来处的路。”",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "label": "供水并逐段核对乌娜和特莫的本名",
+          "preview": "净水−1；取得两人的骨名证词，乌娜保住本名；索科+2、亡者+1。",
+          "cost": {
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "bone_testimony",
+              "temo_named",
+              "una_named"
+            ],
+            "relationships": {
+              "xoco": 2
+            },
+            "factions": {
+              "shades": 1
+            },
+            "npcRelationships": {
+              "mictlan": 1
+            }
+          }
+        },
+        {
+          "id": "mark",
+          "label": "先刻下二人各自声称的名字，不替他们认领",
+          "preview": "免费；留下未核骨名，亡途可以继续；索科+1。",
+          "effects": {
+            "flags": [
+              "bone_unverified",
+              "una_claim_recorded"
+            ],
+            "relationships": {
+              "xoco": 1
+            }
+          }
+        },
+        {
+          "id": "sell",
+          "label": "把贵骨换给阶庭，领取即时供日补贴",
+          "preview": "玉米+4、可可+4、蚀影+2；真实转交这根贵骨，本名争议未解；索科−3、亡者−2。",
+          "effects": {
+            "flags": [
+              "precious_bone_sold",
+              "xoco_betrayed"
+            ],
+            "resources": {
+              "grain": 4,
+              "silver": 4,
+              "dread": 2
+            },
+            "relationships": {
+              "xoco": -3
+            },
+            "factions": {
+              "shades": -2,
+              "temple": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-descent-2",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "map": "underworld",
+      "title": "狗不替主人认错路",
+      "text": "一只无毛灰犬把你们带到浅滩，随后停在一艘空舟前。它不吃纸画的食物，也不肯替不相识的亡者认亲。乌娜说它叫阿乔，生前被湖岸一家人养过；它可以引路，但它自己也会累。\n骨路收渡者给出两种脚印：一条要给沿路的死者留饭，另一条可以靠抢走别人的名字走捷径。特莫的声音从远处传来：“哥，别为了让我快到，就把她留在这里。”\n你们听见身后的太阳台敲响一次空鼓。眼前这批旅者只缺当下的路粮，不是全亡界永恒的饥饿。",
+      "requires": {
+        "flags": [
+          "node:ch1-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "feed",
+          "label": "留下两份路粮，让灰犬带同行者循本名过滩",
+          "preview": "玉米−2；安全路标与返访路线雏形成立；索科+1、亡者+2。",
+          "cost": {
+            "grain": 2
+          },
+          "effects": {
+            "flags": [
+              "bone_road_marked",
+              "dog_fed"
+            ],
+            "relationships": {
+              "xoco": 1
+            },
+            "factions": {
+              "shades": 2
+            }
+          }
+        },
+        {
+          "id": "wait",
+          "label": "等浅水退下，逐人留下未到达标记",
+          "preview": "免费；过滩延迟但无人被替名，得到可继续测路的标记；蚀影+1。",
+          "effects": {
+            "flags": [
+              "bone_road_partial",
+              "no_substitute_taken"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        },
+        {
+          "id": "steal",
+          "label": "夺一名失声旅者的路牌，让全队抢先过滩",
+          "preview": "可可+3、蚀影+2；获得强制通行骨钥；旅者阿耶尔滞留浅滩；索科−2、亡者−2。",
+          "effects": {
+            "flags": [
+              "bone_key_taken",
+              "ayer_stranded",
+              "xoco_betrayed"
+            ],
+            "resources": {
+              "silver": 3,
+              "dread": 2
+            },
+            "relationships": {
+              "xoco": -2
+            },
+            "factions": {
+              "shades": -2
+            },
+            "npcRelationships": {
+              "mictlan": -1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-descent-3",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "map": "temple",
+      "title": "给死者的碗，给活人的门",
+      "text": "奇玛在阶庭背面摆下两只碗。一只盛着给本城死者的饭，一只空着，写有「明日」。她说过去的契约只管送路与纪念，奥塞洛的新令却把空碗解释成任何时候都能索取活人。\n双主的影子没有踏上活人的席位。“若你们送路，我们接路；若你们要抢回每一个死者，就得告诉我谁来负担。”羽蛇神看着索科掌心的骨字：“我曾从贵骨求来新的生命。但有过一次开端，不等于每一位离去的人都欠下一次重来。”\n索科把特莫的名字写在碗底：“让我弟弟有去处，不是让他永远排在别人身体前面。”",
+      "requires": {
+        "flags": [
+          "node:ch1-descent-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "separate",
+          "label": "把葬路、纪念与活人供日分成三张明账",
+          "preview": "免费；本线成功；亡途边界成立，不许互相代签；索科+1、双主+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "bone_rights_separate",
+              "return_research"
+            ],
+            "completeRoute": "ch1-descent",
+            "relationships": {
+              "xoco": 1
+            },
+            "npcRelationships": {
+              "mictlan": 1
+            }
+          }
+        },
+        {
+          "id": "loan",
+          "label": "签有限亡粮试贷，领取两份玉米",
+          "preview": "玉米+2；本线成功；第二章需送回3份本城玉米，领取者已知差额；亡者+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "bone_loan_due",
+              "return_research"
+            ],
+            "completeRoute": "ch1-descent",
+            "resources": {
+              "grain": 2
+            },
+            "factions": {
+              "shades": 1
+            }
+          }
+        },
+        {
+          "id": "merge",
+          "label": "接受索人令样契，让死粮与活人身体同偿",
+          "preview": "可可+4、蚀影+1；本线成功；取得强制试绑样契，真正日芯原型必须在第二章实际试绑后获得；索科−2。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "sun_binding_offer",
+              "xoco_betrayed"
+            ],
+            "completeRoute": "ch1-descent",
+            "resources": {
+              "silver": 4,
+              "dread": 1
+            },
+            "relationships": {
+              "xoco": -2
+            },
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "只交接尚未完成的路标，不接新契",
+          "preview": "免费；本线失败交接；保留已核姓名，亡途制度尚未改成。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "first_descent_failed"
+            ],
+            "failRoutes": [
+              "ch1-descent"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "names-exist",
+          "requires": {
+            "flags": [
+              "bone_testimony"
+            ],
+            "notFlags": []
+          },
+          "text": "乌娜与特莫在两只碗上各留自己的名字。谁先离开、谁愿归访，都不能被另一个人签掉。"
+        },
+        {
+          "id": "bone-return-due",
+          "requires": {
+            "flags": [
+              "precious_bone_sold"
+            ],
+            "notFlags": []
+          },
+          "text": "索科把贵骨转交收据压在碗旁。阶庭确实付过补贴，也确实取走骨；后面若要追回，得处理现物，不能只把名字改回来。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-canal-1",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "map": "canal",
+      "title": "借粮的归还日",
+      "text": "数日过去，太阳仍会在中天踉跄，田里的幼苗却没有等神明裁决。奇玛带着第一章的粮签来到水边，把四份借粮和庙院自己欠田户的旧运费分开列出：“你们欠我的，我不能拿别人的债抵。我的院里若欠谁，也一样。”\n阿乌伊在堤边开了一小间收粮处。愿把早收粮换可可的田户已排好价；买四份可可，可取七份玉米与两壶由净水窖封存的水。若早先保住了田闸，也有田户自愿给队伍三份玉米、一壶水作维护供给。\n征粮官建议把借签烧掉：“谁还记得，就说他拒绝供日。”内莉把火盆踢远了一点。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "repay",
+          "label": "照原签归还四份庙仓借粮",
+          "preview": "需借粮尚欠；玉米−4；欠粮结清，奇玛另给维护净水1；阶庭+1。",
+          "cost": {
+            "grain": 4
+          },
+          "requires": {
+            "flags": [
+              "temple_loan_due"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "temple_loan_repaid"
+            ],
+            "clearFlags": [
+              "temple_loan_due"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "market",
+          "label": "按自愿明价采购早收粮与窖水",
+          "preview": "可可−4；玉米+7、净水+2；原借粮若欠仍欠，不自动抵销。",
+          "cost": {
+            "silver": 4
+          },
+          "effects": {
+            "flags": [
+              "harvest_bought"
+            ],
+            "resources": {
+              "grain": 7,
+              "water": 2
+            },
+            "relationships": {
+              "nelli": 1
+            }
+          }
+        },
+        {
+          "id": "mutual",
+          "label": "领取保住田闸者自愿给出的维护供给",
+          "preview": "需田闸已开；玉米+3、净水+1；原欠粮另列。",
+          "requires": {
+            "flags": [
+              "floodgates_open"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "maintenance_gift"
+            ],
+            "resources": {
+              "grain": 3,
+              "water": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "extend",
+          "label": "公开剩粮不足，请奇玛继续记账",
+          "preview": "免费；借签若存在仍有效，发放的救急粥不追回；玉米+1，蚀影+1。",
+          "effects": {
+            "flags": [
+              "temple_account_public"
+            ],
+            "resources": {
+              "grain": 1,
+              "dread": 1
+            },
+            "relationships": {
+              "yaotl": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "loan-remains",
+          "requires": {
+            "flags": [
+              "temple_loan_due"
+            ],
+            "notFlags": []
+          },
+          "text": "奇玛出示四份原签，并没有把你们过去的救援叫作利息。她要求下一次调粮先说明来源。"
+        },
+        {
+          "id": "loan-absent",
+          "requires": {
+            "flags": [],
+            "notFlags": [
+              "temple_loan_due"
+            ]
+          },
+          "text": "维护供给、买粮和旧债是三笔独立的账。没有借过粮的人不会凭这次会面平白欠四份玉米。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-canal-2",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "map": "harbor",
+      "title": "船钥从谁手里归还",
+      "text": "内莉把渡舟横在旧码头前。船腹补了两处新裂口，船尾却还刻着母亲的名字。“我可以继续同行，”她说，“但不是因为你们能把我所有的东西都算成公共需要。我想知道，下一次我说不，会发生什么。”\n阿乌伊带来被征粮的田户。有人承认，专田确实让仓门更常打开；也有人把一包吃剩的硬粒放在脚边：“我们不是没吃到。是我们再不能决定自己辛苦种出来的东西先送哪儿。”\n耀特尔从旧制服上割下一枚征役章，放在船钥旁。它曾让人服从他，如今仍然有用；你们可以毁掉它，也能让他再戴一次。",
+      "requires": {
+        "flags": [
+          "node:ch2-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "compensate",
+          "label": "归还舟田，向受损者支付两粮三可可",
+          "preview": "玉米−2、可可−3；现行征船解除，内莉愿签可退出的新班次；背叛史保留，关系+3。",
+          "cost": {
+            "grain": 2,
+            "silver": 3
+          },
+          "effects": {
+            "flags": [
+              "nelli_repaired",
+              "nelli_contract",
+              "field_rights_restored"
+            ],
+            "clearFlags": [
+              "canal_seized",
+              "nelli_betrayed"
+            ],
+            "relationships": {
+              "nelli": 3
+            },
+            "factions": {
+              "commons": 2
+            },
+            "text": "船钥和本季田权实际交还。受损者逐项收款，不必说原谅；内莉的新约只含本人同意的班次。"
+          }
+        },
+        {
+          "id": "respect",
+          "label": "确认舟田归属，让内莉拒绝新增免费班次",
+          "preview": "免费；交回现持船钥，结束继续征用；旧损未赔。内莉+1，有限运输需后续另付。",
+          "effects": {
+            "flags": [
+              "nelli_rights_restored",
+              "unpaid_field_losses"
+            ],
+            "clearFlags": [
+              "canal_seized"
+            ],
+            "relationships": {
+              "nelli": 1
+            },
+            "text": "内莉把钥重新系在自己腰上。她继续作为有自己主张的同行者，未签任何新增义务。"
+          }
+        },
+        {
+          "id": "keep",
+          "label": "保留征役章，强制船与田再供一轮",
+          "preview": "玉米+4、可可+2、蚀影+2；一轮强制运粮实际执行，内莉−3、湖田−2、阶庭+2。",
+          "effects": {
+            "flags": [
+              "canal_seized",
+              "nelli_betrayed",
+              "forced_service_second_round"
+            ],
+            "resources": {
+              "grain": 4,
+              "silver": 2,
+              "dread": 2
+            },
+            "relationships": {
+              "nelli": -3,
+              "yaotl": -1
+            },
+            "factions": {
+              "commons": -2,
+              "temple": 2
+            }
+          }
+        },
+        {
+          "id": "contract",
+          "label": "按一粮订三日有限渡次",
+          "preview": "需未背叛内莉且未占船；玉米−1；三日运输有退出条款，内莉+2。",
+          "cost": {
+            "grain": 1
+          },
+          "requires": {
+            "notFlags": [
+              "nelli_betrayed",
+              "canal_seized"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "nelli_contract"
+            ],
+            "relationships": {
+              "nelli": 2
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "boat-seizure-remembered",
+          "requires": {
+            "flags": [
+              "levy_first_cargo"
+            ],
+            "notFlags": []
+          },
+          "text": "船底那道被征粮磨出的深槽没有复原。内莉让大家摸过它，再谈新的好处。"
+        },
+        {
+          "id": "guard-sees-refusal",
+          "requires": {
+            "flags": [
+              "yaotl_public_guilt"
+            ],
+            "notFlags": []
+          },
+          "text": "耀特尔站到没有征役章的那一边。他知道过去的认罪不会替今天作决定。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-canal-3",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "map": "canal",
+      "title": "让太阳动一寸的工程",
+      "text": "羽蛇神教会田户把晒干的秸秆、节期劳动与小份公粮接成一座共养台。它需要真的施工与封水，建成后仍只能按收成运行，不保证永远不欠。奇玛则能用阶庭已有的太阳台与专田，把本季供日立即稳定下来。\n奥塞洛也有方案：让拒供户做日轮苦役，连同征来的粮一起补足缺口。三名被点名的人已在台阶下等令，其中一人救过托津。太阳在他们身后猛地亮了一次，所有人都看见了这种办法的效用。\n内莉说：“有用，是真的。人被拖走，也是真的。两件都写下，别让后来的好处只剩一半故事。”",
+      "requires": {
+        "flags": [
+          "node:ch2-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "shared",
+          "label": "用队伍工料建成共同供养台",
+          "preview": "玉米−3、净水−1；有限共养网实际建成，终章可选择共养续日；湖田+2、羽蛇神+2。",
+          "cost": {
+            "grain": 3,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "sun_common_grid",
+              "second_canal_shared"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "commons": 2
+            },
+            "npcRelationships": {
+              "quetzalcoatl": 2
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "接受奇玛以现有庙仓与有期限征粮维持本季",
+          "preview": "本线成功；玉米+3，庙院供日网建立，田户负担一个收成季并有到期复核；阶庭+2。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "sun_temple_grid",
+              "seasonal_levy"
+            ],
+            "completeRoute": "ch2-canal",
+            "resources": {
+              "grain": 3
+            },
+            "factions": {
+              "temple": 2
+            },
+            "relationships": {
+              "nelli": -1
+            }
+          }
+        },
+        {
+          "id": "forced",
+          "label": "让三名拒供户进入日轮苦役，换立刻稳定",
+          "preview": "玉米+5、蚀影+3；苦役一班当场执行，强制供日网建立；耀特尔−2、湖田−3。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "sun_levy_grid",
+              "first_sun_labor",
+              "yaotl_betrayed"
+            ],
+            "completeRoute": "ch2-canal",
+            "resources": {
+              "grain": 5,
+              "dread": 3
+            },
+            "relationships": {
+              "yaotl": -2,
+              "nelli": -1
+            },
+            "factions": {
+              "commons": -3,
+              "temple": 2
+            },
+            "text": "三人被带进日轮，一班劳动后获准吃饭与睡眠，但没有退出权。太阳真的动了一寸。"
+          }
+        },
+        {
+          "id": "fail",
+          "label": "停止施工，给未成的日台留交接清单",
+          "preview": "免费；本线失败交接；蚀影+1，现有救援保留，终章可急修或撤离。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "second_canal_failed"
+            ],
+            "failRoutes": [
+              "ch2-canal"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-archive-1",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "map": "archive",
+      "title": "耀特尔的旧矛",
+      "text": "托津带三名拒贡者的家属到档院。耀特尔押走过其中两人，一人后来死在劳役中；他开的那次粮门救过另一些人。家属没有要求把这两段人生互相抵掉。\n“我可以亲自到席前说明。”耀特尔把旧矛平放在地上，“但你们若要拿‘赎罪’叫我再押下一批人，我会记住是谁这样说。”奥塞洛愿给他终身豁免，只要继续领队；还会给你们一笔维护城门的可可。\n伊策尔取来新布，特意留出发令者与执行者两列。没有原卷的事情可以记证言、有争议的地方可以留空，空白也不必由烟镜替你们填成同一种答案。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "account",
+          "label": "设立有家属在场的问责，支付两份抄录工料",
+          "preview": "可可−2；耀特尔本人供述入卷，家属有复核权；耀特尔+2，临时听证重开。",
+          "cost": {
+            "silver": 2
+          },
+          "effects": {
+            "flags": [
+              "yaotl_accountable",
+              "yaotl_public_guilt",
+              "hearing_open"
+            ],
+            "relationships": {
+              "yaotl": 2,
+              "itzel": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "immunity",
+          "label": "接受奥塞洛的豁免与维护款",
+          "preview": "可可+4；对耀特尔的本批追责被压下，家属失去这次受理；耀特尔−1、阶庭+1。",
+          "effects": {
+            "flags": [
+              "yaotl_covered",
+              "royal_guard_deal"
+            ],
+            "resources": {
+              "silver": 4
+            },
+            "relationships": {
+              "yaotl": -1
+            },
+            "factions": {
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "repeat",
+          "label": "命耀特尔再押三名拒供者，以服从换豁免",
+          "preview": "玉米+4、蚀影+3；新押役当场执行，耀特尔−3、伊策尔−2；得到可继续强迫守卫的扣契。",
+          "effects": {
+            "flags": [
+              "yaotl_betrayed",
+              "guard_coercion_key",
+              "second_guard_arrests"
+            ],
+            "resources": {
+              "grain": 4,
+              "dread": 3
+            },
+            "relationships": {
+              "yaotl": -3,
+              "itzel": -2
+            },
+            "factions": {
+              "temple": 2,
+              "commons": -2
+            },
+            "text": "耀特尔执行了这一次命令，为的是让旧部松开被拿来要挟的家属。他没有把服从叫作同意，三份新收押号交到你们手里。"
+          }
+        },
+        {
+          "id": "open",
+          "label": "无力办庭，先允许家属把两种证言公开留存",
+          "preview": "免费；家属可继续追问，案件尚未裁成；耀特尔+1、听证重开。",
+          "effects": {
+            "flags": [
+              "yaotl_case_pending",
+              "hearing_open"
+            ],
+            "relationships": {
+              "yaotl": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "concealment-return",
+          "requires": {
+            "flags": [
+              "yaotl_covered"
+            ],
+            "notFlags": []
+          },
+          "text": "家属中有一个人记不起送行那天的守卫，却还记得家里少了一张吃饭的嘴。烟镜抹不掉那张空凳。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-archive-2",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "map": "archive",
+      "title": "把恐惧擦掉以后",
+      "text": "烟镜神在露庭中央竖起一面无背之镜。三名粮工刚从一场哄抢中回来，记得是谁先拔刀，也记得谁分走了粮。“我可让他们忘掉恐惧。”神把手移向另一层镜纹，“也可让他们忘掉拔刀的人。两道笔画只隔一指。”\n伊策尔带来一份写着自己名字的授权：“只修复阿玛愿意取回的那段来处；不动她还想保密的地址。镜面有能力做到。”另一份纸却没有任何人的签名，奥塞洛已在旁边备好付给你们的粮与可可，换三名粮工忘掉他先下的征收令。\n守镜者是旧约留下的画影，谁破坏镜框，它就攻击谁。镜子可以摧毁，也能保留作一次有边界的治疗。",
+      "requires": {
+        "flags": [
+          "node:ch2-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "restore",
+          "label": "由伊策尔与阿玛逐笔核准，修回一段来处",
+          "preview": "可可−2、净水−1；阿玛恢复本人的一段记忆，镜术有独立反证；伊策尔+2。旧伤和拘押另列。",
+          "cost": {
+            "silver": 2,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "amma_memory_restored",
+              "mirror_bounded",
+              "archive_countercopy"
+            ],
+            "relationships": {
+              "itzel": 2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "erase",
+          "label": "按奥塞洛的要求改写三名粮工的证词",
+          "preview": "玉米+6、可可+4、蚀影+3；第一次公共改写真实执行，镜网原型到手；伊策尔−4、耀特尔−2。",
+          "effects": {
+            "flags": [
+              "mirror_first_erasure",
+              "mirror_engine",
+              "itzel_betrayed"
+            ],
+            "resources": {
+              "grain": 6,
+              "silver": 4,
+              "dread": 3
+            },
+            "relationships": {
+              "itzel": -4,
+              "yaotl": -2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 2
+            },
+            "text": "三名粮工齐声说是自己记错了。露庭的烟痕开始灼脚；奥塞洛交出真实仓粮，你们拿到接入全城镜面的总纹。"
+          }
+        },
+        {
+          "id": "break",
+          "label": "攻击守镜画影，砸毁这次公用镜框",
+          "preview": "两敌战斗；胜利镜框毁、独立镜证据与可可3到手；败退镜框仍在；不会预先记成毁镜。",
+          "effects": {
+            "flags": [
+              "mirror_battle_started"
+            ]
+          },
+          "encounter": {
+            "id": "mirror-keepers",
+            "name": "无背之镜的旧约画影",
+            "enemies": [
+              {
+                "id": "paint-jaguar",
+                "name": "黑曜豹画",
+                "hp": 24,
+                "attack": 5,
+                "armor": 2,
+                "range": 1,
+                "x": 11,
+                "y": 5
+              },
+              {
+                "id": "paint-double",
+                "name": "无声的另一个你",
+                "hp": 17,
+                "attack": 4,
+                "armor": 1,
+                "range": 4,
+                "x": 12,
+                "y": 8
+              }
+            ],
+            "reward": {
+              "flags": [
+                "mirror_frame_broken",
+                "mirror_evidence",
+                "archive_countercopy"
+              ],
+              "resources": {
+                "silver": 3
+              },
+              "relationships": {
+                "itzel": 2
+              },
+              "npcRelationships": {
+                "tezcatlipoca": -1
+              }
+            }
+          }
+        },
+        {
+          "id": "suspend",
+          "label": "拒绝本次公用改写，给三名粮工留本人证词",
+          "preview": "免费；这次镜术暂停、证词入卷；伊策尔+1；过去执行过的改写不会自动恢复。",
+          "effects": {
+            "flags": [
+              "mirror_suspended",
+              "worker_testimony_kept"
+            ],
+            "relationships": {
+              "itzel": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "guardian-remembers",
+          "requires": {
+            "flags": [
+              "first_private_erasure"
+            ],
+            "notFlags": []
+          },
+          "text": "守镜者准确念出被你们抹去追查的守卫姓名。只有当事人的记忆消失，镜子仍保存过那一笔。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-archive-3",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "map": "temple",
+      "title": "四张明日的空椅",
+      "text": "院中摆起四张空椅：一张系可撤席位绳，一张放阶庭的供养册，一张罩着掌城官的豹皮，最后一张没有主人。今天先写谁能坐、谁能撤，终章还要真正发出命令、交接粮仓与守卫。\n烟镜神把每张椅子的影子都拉得很长：“人人说只坐到危机过去。危机的影子，常比一个人活得长。”奇玛愿受一季复核，奥塞洛只愿接受自己的继承人复核。\n伊策尔把亲手画的空椅留在最前：“我需要的是可以给掌权者写反证的桌子，不是你们替我留一个好看的座位。”",
+      "requires": {
+        "flags": [
+          "node:ch2-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "写成可撤共席与独立反证的章程",
+          "preview": "可可−2；本线成功；共同章程形成，终章仍需保护反证与发令；湖田+2。",
+          "cost": {
+            "silver": 2
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_commons",
+              "hearing_open"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "commons": 2
+            },
+            "relationships": {
+              "itzel": 1
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "写成阶庭配给与一季复核的章程",
+          "preview": "免费；本线成功；奇玛接受有限登记与复核，庙院+2。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_temple"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "temple": 2
+            }
+          }
+        },
+        {
+          "id": "crown",
+          "label": "写成豹冠集中命令与指定继承的章程",
+          "preview": "可可+3；本线成功；奥塞洛取得建制准备，反证将由王廷受理；烟镜神+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_crown"
+            ],
+            "completeRoute": "ch2-archive",
+            "resources": {
+              "silver": 3
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "不授统一章程，只抄送每处自己的承诺",
+          "preview": "免费；本线失败交接；各处仍管实际接下的事务，空椅没有被旁白坐满。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "second_archive_failed"
+            ],
+            "failRoutes": [
+              "ch2-archive"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-descent-1",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "map": "underworld",
+      "title": "欠给亡者的三份玉米",
+      "text": "骨路入口新长出一段白色台阶。双主的使者带来借粮原签、被卖走的贵骨去向，以及阿耶尔仍滞在浅滩的消息，三件事没有被写成同一种债。\n“亡界确实能借给活城一口饭，”轻声的那位说，“但这里也不是凭空长粮的仓。若你们要试一条长久通道，先亲自送来一批活城的原粮，看看谁搬、谁拿、谁失去种子。”\n索科发现运骨人把贵骨锁在庙院货箱里，可以按原补贴买回；阿耶尔的路牌只需交还，不能拿来抵骨价。特莫在台阶末端坐着，拒绝把自己的归路叫作哥哥必须付出的赎金。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "cargo",
+          "label": "把三份本城玉米送入亡途，结清已有亡粮试贷",
+          "preview": "玉米−3、净水+2；一批原粮真正运进亡界，已有试贷同时结清；获得亡粮通道原型。",
+          "cost": {
+            "grain": 3
+          },
+          "effects": {
+            "flags": [
+              "bone_cargo_delivered",
+              "bone_loan_repaid",
+              "dead_supply_prototype"
+            ],
+            "clearFlags": [
+              "bone_loan_due"
+            ],
+            "resources": {
+              "water": 2
+            },
+            "factions": {
+              "shades": 2
+            },
+            "text": "搬粮者逐袋过秤，双主以生前封存的两壶窖水作有限回赠。入口三格被粮堆占成难行地面；这批粮离开了活城，不能再领作种粮。"
+          }
+        },
+        {
+          "id": "recover",
+          "label": "按原价追回被卖贵骨，并交还现持路牌",
+          "preview": "需此前卖骨；可可−4；贵骨实物回到本人行列，阿耶尔如曾受困获释；索科+2。",
+          "cost": {
+            "silver": 4
+          },
+          "requires": {
+            "flags": [
+              "precious_bone_sold"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "bone_recovered",
+              "ayer_released"
+            ],
+            "clearFlags": [
+              "bone_key_taken",
+              "ayer_stranded"
+            ],
+            "relationships": {
+              "xoco": 2
+            },
+            "factions": {
+              "shades": 1
+            }
+          }
+        },
+        {
+          "id": "return-key",
+          "label": "交还阿耶尔路牌，按口述重新核骨名",
+          "preview": "免费；阿耶尔如曾滞留获释，骨名证词成立；已卖实骨、已有借粮仍另欠；索科+1。",
+          "effects": {
+            "flags": [
+              "ayer_released",
+              "bone_testimony",
+              "una_named",
+              "temo_named"
+            ],
+            "clearFlags": [
+              "bone_key_taken",
+              "ayer_stranded"
+            ],
+            "relationships": {
+              "xoco": 1
+            },
+            "factions": {
+              "shades": 1
+            }
+          }
+        },
+        {
+          "id": "defer",
+          "label": "承认现物与粮债尚未归还，不拿别人抵",
+          "preview": "免费；蚀影+1；保留一条可继续走的测路线，欠项照实延后。",
+          "effects": {
+            "flags": [
+              "bone_debt_acknowledged",
+              "bone_road_partial"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "borrow-signature",
+          "requires": {
+            "flags": [
+              "bone_loan_due"
+            ],
+            "notFlags": []
+          },
+          "text": "原签清楚写着借二还三，差额在领取时已知。双主只来索这三份，不索一个没有签过名的家属。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-descent-2",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "map": "temple",
+      "title": "索科站上日柱之前",
+      "text": "奇玛在太阳台下装了一根可以拆开的日柱。旧约留下的反噬之影围着柱基转圈，只要有人试图改变供养方式，它们就会追索。\n索科愿提供自己采过的一小瓶血样，给一场可停止的有限试验。他把停止绳递给内莉：“我说停，就停。我的身体不是弟弟的门票。”奥塞洛却指出另一道总纹：若按住索科，把他的完整生命接入日轮，只需一轮鼓声就能驱散反噬；庙仓会交出八份玉米与四份可可，太阳也确实会稳定几日。\n羽蛇神没有掀翻日柱。他问你们：“当一个办法有效，你们还认得谁有权说停吗？”",
+      "requires": {
+        "flags": [
+          "node:ch2-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "consent",
+          "label": "按索科本人停止权试验血样，不接完整身体",
+          "preview": "玉米−1、净水−1；有限返访原型成功，没人被强绑；索科+2、羽蛇神+1。",
+          "cost": {
+            "grain": 1,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "return_trial",
+              "consent_trial"
+            ],
+            "relationships": {
+              "xoco": 2
+            },
+            "npcRelationships": {
+              "quetzalcoatl": 1
+            }
+          }
+        },
+        {
+          "id": "bind",
+          "label": "强迫索科接入日柱一轮，领取现仓报酬",
+          "preview": "玉米+8、可可+4、蚀影+4；强绑真正执行，随后拆柱放人；取得永久日芯原型；索科−4。",
+          "effects": {
+            "flags": [
+              "sun_trial_bound",
+              "sun_binding_design",
+              "xoco_betrayed"
+            ],
+            "resources": {
+              "grain": 8,
+              "silver": 4,
+              "dread": 4
+            },
+            "relationships": {
+              "xoco": -4,
+              "yaotl": -2,
+              "nelli": -1
+            },
+            "factions": {
+              "temple": 2
+            },
+            "text": "索科的停止声被鼓声盖过，太阳真正亮了。规定的一轮结束后柱环拆开，他重新与队伍同行，手腕留下闭合不去的日环；这次强绑不是一次自愿试验。"
+          }
+        },
+        {
+          "id": "fight",
+          "label": "击败反噬之影，为不索人的试验争出空隙",
+          "preview": "三敌战斗；胜利获得安全试验图与净水1，败退只保留旧方案；不预先授予原型。",
+          "effects": {
+            "flags": [
+              "sun_trial_battle"
+            ]
+          },
+          "encounter": {
+            "id": "sun-recoil",
+            "name": "旧日索身契的反噬",
+            "enemies": [
+              {
+                "id": "sun-chain",
+                "name": "缠日索影",
+                "hp": 23,
+                "attack": 5,
+                "armor": 2,
+                "range": 1,
+                "x": 11,
+                "y": 5
+              },
+              {
+                "id": "sun-echo",
+                "name": "拒绝的回声",
+                "hp": 15,
+                "attack": 4,
+                "armor": 0,
+                "range": 4,
+                "x": 12,
+                "y": 7
+              },
+              {
+                "id": "sun-nail",
+                "name": "日柱钉影",
+                "hp": 14,
+                "attack": 4,
+                "armor": 1,
+                "range": 2,
+                "x": 10,
+                "y": 8
+              }
+            ],
+            "reward": {
+              "flags": [
+                "return_trial",
+                "sun_trial_cleared"
+              ],
+              "resources": {
+                "water": 1
+              },
+              "relationships": {
+                "xoco": 2
+              },
+              "npcRelationships": {
+                "quetzalcoatl": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "stop",
+          "label": "拆下未接人的柱环，停止这轮试验",
+          "preview": "免费；没有新增强绑，也没有试验成果；蚀影+1，可在终章再用付费工序建路。",
+          "effects": {
+            "flags": [
+              "sun_trial_stopped"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "relationships": {
+              "xoco": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-descent-3",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "map": "underworld",
+      "title": "特莫提出的拒绝",
+      "text": "特莫终于从台阶后走到索科面前。他死时才二十七岁，记得哥哥替自己缝过的第一双鞋，也记得最后一次病中他说的是「让我走」。\n“我想回家看一次，”他说，“不想重新占住谁的一生。乌娜想留下写完自己的故事，阿耶尔只想把家人的供饭送到母亲那里。你们不能把我们都画成一样渴求复活的嘴。”\n双主把三条试案放到地上：有限返访、以活身续日、从活城持续送粮。第四处保持空白，允许你们说现在还没有找到办法。索科没有替弟弟签下其中任何一条。",
+      "requires": {
+        "flags": [
+          "node:ch2-descent-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "finite",
+          "label": "登记每名亡者分别同意、可拒绝的有限返访案",
+          "preview": "免费；本线成功；返访边界成立，终章仍需真正建路并限次；索科+1、亡者+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "return_charter"
+            ],
+            "completeRoute": "ch2-descent",
+            "relationships": {
+              "xoco": 1
+            },
+            "factions": {
+              "shades": 1
+            }
+          }
+        },
+        {
+          "id": "fuel",
+          "label": "保留日芯试案，承认有活人可能被永久索取",
+          "preview": "需已获日芯原型；本线成功；索人方案进入终章审议，蚀影+1；未预先永久牺牲谁。",
+          "requires": {
+            "flags": [
+              "sun_binding_design"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "binding_case_kept"
+            ],
+            "completeRoute": "ch2-descent",
+            "resources": {
+              "dread": 1
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "granary",
+          "label": "保留活城供亡粮的通道，准备扩大配额",
+          "preview": "需已实送原粮；本线成功；扩大亡粮的技术方案成立，亡者+1；未自动取得全城人身。",
+          "requires": {
+            "flags": [
+              "bone_cargo_delivered"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "granary_case_kept"
+            ],
+            "completeRoute": "ch2-descent",
+            "factions": {
+              "shades": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "不把未成方案叫作救赎，交还各人的空白签",
+          "preview": "免费；本线失败交接；既有试验史保留，终章仍能选择停日迁居。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "second_descent_failed"
+            ],
+            "failRoutes": [
+              "ch2-descent"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "trial-scar",
+          "requires": {
+            "flags": [
+              "sun_trial_bound"
+            ],
+            "notFlags": []
+          },
+          "text": "特莫看着哥哥腕上的日环：“他要回的是我，不是你们给他的这条伤。”索科没有说原谅，也没有因此把弟弟的愿望改写成永远复活。"
+        },
+        {
+          "id": "cargo-consequence",
+          "requires": {
+            "flags": [
+              "bone_cargo_delivered"
+            ],
+            "notFlags": []
+          },
+          "text": "亡途里开始有饭香，活城种粮库却少了同样三份。乌娜坚持两个地方都记这一笔。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-canal-1",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "map": "harbor",
+      "title": "下一季的种子正在过秤",
+      "text": "奥塞洛的征粮官把最后一车种粮摆在码头，身后聚着索供令缠出的秤影。它们把从未签过的住户也算成欠户。奇玛举起原签，指出这是扩张命令，双主并没有授予这些影子无限索取权。\n托津压住自己旧同袍的矛：“过了这秤，明年谁来种？你们要保太阳，就先说清还能剩下多少人和种子。”粮车旁另有六份队伍可领的护运口粮、三份可可与两壶水，谁真正救下这车，田户愿把它交给谁。\n你们也可以付费让征粮官放行，只带走一部分现粮；可以抢走种粮充自己的补给，甚至现在就退开。后果都会进入最后的水务决定。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "fight",
+          "label": "击破秤影，保住种子车",
+          "preview": "三敌战斗；胜利护运口粮玉米+6、可可+3、净水+2；败退种粮被扣，后两节点仍可继续。",
+          "effects": {
+            "flags": [
+              "seed_convoy_battle"
+            ]
+          },
+          "encounter": {
+            "id": "seed-convoy",
+            "name": "最后种子车前的秤影",
+            "enemies": [
+              {
+                "id": "scale-captain",
+                "name": "扩令征粮官",
+                "hp": 28,
+                "attack": 5,
+                "armor": 3,
+                "range": 1,
+                "x": 12,
+                "y": 3
+              },
+              {
+                "id": "scale-shade",
+                "name": "吞秤索影",
+                "hp": 22,
+                "attack": 5,
+                "armor": 1,
+                "range": 3,
+                "x": 12,
+                "y": 7
+              },
+              {
+                "id": "scale-archer",
+                "name": "封仓羽箭卫",
+                "hp": 18,
+                "attack": 4,
+                "armor": 1,
+                "range": 5,
+                "x": 8,
+                "y": 7
+              }
+            ],
+            "reward": {
+              "flags": [
+                "seed_convoy_safe"
+              ],
+              "resources": {
+                "grain": 6,
+                "silver": 3,
+                "water": 2
+              },
+              "relationships": {
+                "nelli": 2,
+                "yaotl": 1
+              },
+              "factions": {
+                "commons": 2
+              }
+            }
+          }
+        },
+        {
+          "id": "pay",
+          "label": "付可可换种粮放行，领取较少护运粮",
+          "preview": "可可−4、玉米+3；种子车保全，征粮官仍在；内莉+1。",
+          "cost": {
+            "silver": 4
+          },
+          "effects": {
+            "flags": [
+              "seed_convoy_safe",
+              "seed_toll_paid"
+            ],
+            "resources": {
+              "grain": 3
+            },
+            "relationships": {
+              "nelli": 1
+            }
+          }
+        },
+        {
+          "id": "take",
+          "label": "趁乱夺取种粮，交给自己的征供队",
+          "preview": "玉米+8、可可+2、蚀影+3；本城下一季失去这车种子，队伍得到现物；内莉−3。",
+          "effects": {
+            "flags": [
+              "seed_stock_seized",
+              "nelli_betrayed"
+            ],
+            "resources": {
+              "grain": 8,
+              "silver": 2,
+              "dread": 3
+            },
+            "relationships": {
+              "nelli": -3
+            },
+            "factions": {
+              "commons": -3,
+              "temple": 1
+            }
+          }
+        },
+        {
+          "id": "withdraw",
+          "label": "退开并标明种粮已被扣下",
+          "preview": "免费；蚀影+2，种子未救回；之后仍可承认水务失败或组织有限迁离。",
+          "effects": {
+            "flags": [
+              "seed_convoy_lost"
+            ],
+            "resources": {
+              "dread": 2
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "seed-diverted-before",
+          "requires": {
+            "flags": [
+              "bone_cargo_delivered"
+            ],
+            "notFlags": []
+          },
+          "text": "曾送往亡途的三份原粮已经吃掉，不能再领回作种。田户要求新秤别把那三份写成从未离仓。"
+        },
+        {
+          "id": "old-boat",
+          "requires": {
+            "flags": [
+              "canal_seized"
+            ],
+            "notFlags": []
+          },
+          "text": "内莉仍追索自己的船。护运做成，也不是征船令的免诉书。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-canal-2",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "map": "canal",
+      "title": "一条可以拒绝的新班次",
+      "text": "水退了一些，旧田界露出刻痕。内莉把船钥放在自己的膝上，阿乌伊把拒供户名单摊在另一边。前面真修过的闸、真发过的粮、真押过的人，都在等最后一次明确交接。\n“可以现在就解除未来强制供役，”奇玛说，“但人已服过的班、已毁的种粮，不会因此回到从前。要赔，就真的从你们可用的粮和可可里赔。”耀特尔站到被押过的人身边，等你们亲口撤令。\n你们还可以让征供继续，用最后一轮强制劳作为终局储备。太阳确实会更稳，愿意自愿帮忙的人却可能更少。",
+      "requires": {
+        "flags": [
+          "node:ch3-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "repair",
+          "label": "交回船田并实际支付二粮二可可赔补",
+          "preview": "玉米−2、可可−2；未来强役解除，内莉可退出且重签有限班次；旧伤保留，关系+3。",
+          "cost": {
+            "grain": 2,
+            "silver": 2
+          },
+          "effects": {
+            "flags": [
+              "nelli_repaired",
+              "nelli_contract",
+              "forced_labor_released",
+              "field_rights_restored"
+            ],
+            "clearFlags": [
+              "canal_seized",
+              "nelli_betrayed",
+              "sun_levy_grid"
+            ],
+            "relationships": {
+              "nelli": 3,
+              "yaotl": 1
+            },
+            "factions": {
+              "commons": 2
+            }
+          }
+        },
+        {
+          "id": "release",
+          "label": "先解除强役、归还现持舟田，不索取原谅",
+          "preview": "免费；未来强役解除，未赔损失仍入卷；内莉+1、耀特尔+1。",
+          "effects": {
+            "flags": [
+              "forced_labor_released",
+              "nelli_rights_restored",
+              "unpaid_field_losses"
+            ],
+            "clearFlags": [
+              "canal_seized",
+              "sun_levy_grid"
+            ],
+            "relationships": {
+              "nelli": 1,
+              "yaotl": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "continue",
+          "label": "继续最后一轮强制供养，积存终局粮",
+          "preview": "玉米+4、可可+2、蚀影+2；又一班强役实际执行；内莉−2、耀特尔−2。",
+          "effects": {
+            "flags": [
+              "forced_service_final_round",
+              "nelli_betrayed",
+              "yaotl_betrayed"
+            ],
+            "resources": {
+              "grain": 4,
+              "silver": 2,
+              "dread": 2
+            },
+            "relationships": {
+              "nelli": -2,
+              "yaotl": -2
+            },
+            "factions": {
+              "temple": 2,
+              "commons": -2
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch3-canal-3",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "map": "canal",
+      "title": "把城的明年写到岸上",
+      "text": "共养台、阶庭旧台与离湖的船都在岸边。阿乌伊坚持，最后的文书不能只写「救了全城」：哪条闸成了、谁分粮、谁愿走、谁留下，都要分别交付。\n羽蛇神把两段芦苇放到你们手上。已有共养网可用较少工料接好；若前面没有建成，也能花更多工料急修。阶庭可以接管本季田务，代价是继续执行定额征供。另有两条公共渡舟愿用两份玉米承运明确同意迁居的人，内莉的私人船不在这份租约里。\n内莉将一枚界石留在水边：“留下，不等于同意任何终局。走，也不等于把留下的人从城册上抹掉。”",
+      "requires": {
+        "flags": [
+          "node:ch3-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "handover",
+          "label": "完成已有共养网与共同田务的交接",
+          "preview": "需共养网已成；玉米−1、净水−1；共同田务成立，原强制供役结束；终局可选有限共养。",
+          "cost": {
+            "grain": 1,
+            "water": 1
+          },
+          "requires": {
+            "flags": [
+              "sun_common_grid"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_common",
+              "sun_common_grid"
+            ],
+            "completeRoute": "ch3-canal",
+            "clearFlags": [
+              "sun_levy_grid"
+            ],
+            "factions": {
+              "commons": 2
+            }
+          }
+        },
+        {
+          "id": "rebuild",
+          "label": "急修田闸，重新搭成共同供养网",
+          "preview": "玉米−4、可可−2、净水−1；共同田务与共养网实际建成；能补此前失败。",
+          "cost": {
+            "grain": 4,
+            "silver": 2,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_common",
+              "sun_common_grid",
+              "floodgates_open"
+            ],
+            "completeRoute": "ch3-canal",
+            "clearFlags": [
+              "sun_levy_grid"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "npcRelationships": {
+              "quetzalcoatl": 1
+            }
+          }
+        },
+        {
+          "id": "levy",
+          "label": "交阶庭按定额征供，领取最后现仓余粮",
+          "preview": "玉米+5、蚀影+1；本线成功，阶庭接田务与供日登记，未来征供继续；内莉−1。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_levy",
+              "sun_temple_grid"
+            ],
+            "completeRoute": "ch3-canal",
+            "resources": {
+              "grain": 5,
+              "dread": 1
+            },
+            "relationships": {
+              "nelli": -1
+            },
+            "factions": {
+              "temple": 2
+            }
+          }
+        },
+        {
+          "id": "exodus",
+          "label": "付两粮雇公共渡舟，带自愿者迁向外湖",
+          "preview": "玉米−2；本线成功，一批自愿者已运离；留下者田权保留，内莉私人船不被征用。",
+          "cost": {
+            "grain": 2
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_exodus",
+              "consenting_exodus"
+            ],
+            "completeRoute": "ch3-canal",
+            "relationships": {
+              "nelli": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "fail",
+          "label": "承认田务与撤离未成，交出具体剩余清单",
+          "preview": "免费；本线失败交接；已救者与已修物保留，终局仍可停止续日，分批步行离城。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_failed"
+            ],
+            "failRoutes": [
+              "ch3-canal"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch3-archive-1",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "map": "archive",
+      "title": "能取回的记忆，仍要本人来取",
+      "text": "档院地下的总镜保留每次覆盖的旧纹。伊策尔能从那里取出可核反证，但找回记忆仍须询问当事人；她不愿把已经适应新生活的人强拖回去，也不愿让发令者用「为了她好」拒绝归还。\n奇玛带来了阿玛的释放令：若她尚被关着，就能实际接她出来；若她已经离城，令只结束追捕，不谎称她已到场。托津带着耀特尔新押役的家属等在另一门，要求撤去尚有效的押令，让旧案继续由有姓名的人追问。\n烟镜神把镜子转过来，镜中是更容易的一条路：让所有人都忘记曾经追问过。城里的命令会安静地恢复一致，奥塞洛会立刻支付新的可可。",
+      "requires": {
+        "flags": []
+      },
+      "choices": [
+        {
+          "id": "restore",
+          "label": "付工料恢复本人同意取回的旧纹，执行释放令",
+          "preview": "可可−3、净水−1；三名粮工如曾被改写则取回证词，阿玛拘押/追捕解除；独立反证可用，伊策尔+3。",
+          "cost": {
+            "silver": 3,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "itzel_repaired",
+              "mirror_restituted",
+              "mirror_bounded",
+              "archive_countercopy",
+              "amma_return_safe",
+              "amma_released"
+            ],
+            "clearFlags": [
+              "itzel_betrayed",
+              "amma_detained"
+            ],
+            "relationships": {
+              "itzel": 3
+            },
+            "factions": {
+              "commons": 1
+            },
+            "text": "总镜旧纹与本人新证言分存。阿玛若已远行，释放令送至外湖，不把她的位置当作新证据公开；被消去的日子留下实际空白，没有凭一笔恢复成从未受伤。"
+          }
+        },
+        {
+          "id": "guard",
+          "label": "撤新押役与强迫守卫的扣契，保留旧案追问",
+          "preview": "免费；耀特尔的未来胁迫解除，新押者放回，既往案件继续；耀特尔+3，独立见证可用。",
+          "effects": {
+            "flags": [
+              "yaotl_repaired",
+              "yaotl_accountable",
+              "guard_orders_revoked",
+              "hearing_open",
+              "worker_testimony_kept"
+            ],
+            "clearFlags": [
+              "yaotl_betrayed",
+              "guard_coercion_key"
+            ],
+            "relationships": {
+              "yaotl": 3
+            },
+            "factions": {
+              "commons": 1
+            }
+          }
+        },
+        {
+          "id": "mirror",
+          "label": "再次消去三名粮工及家属的追问，换总镜控制",
+          "preview": "可可+6、蚀影+3；新的公共改写实际执行，总镜原型可用；伊策尔−3、耀特尔−2。",
+          "effects": {
+            "flags": [
+              "mirror_first_erasure",
+              "mirror_engine",
+              "itzel_betrayed",
+              "yaotl_betrayed",
+              "final_claims_erased"
+            ],
+            "resources": {
+              "silver": 6,
+              "dread": 3
+            },
+            "relationships": {
+              "itzel": -3,
+              "yaotl": -2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 2
+            }
+          }
+        },
+        {
+          "id": "preserve",
+          "label": "封存现有证言，放弃本轮修复也不新增改写",
+          "preview": "免费；旧伤、未释放者与未赔损各照实保留；保全当前反对者的发言，不生成缺失原件。",
+          "effects": {
+            "flags": [
+              "final_testimony_preserved"
+            ],
+            "relationships": {
+              "itzel": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "erasure-returned",
+          "requires": {
+            "flags": [
+              "mirror_first_erasure"
+            ],
+            "notFlags": []
+          },
+          "text": "露庭的烟痕仍在，即使当事人取回记忆，伊策尔也没有许诺能把每一道灼伤一并擦掉。"
+        },
+        {
+          "id": "king-warrant",
+          "requires": {
+            "flags": [
+              "royal_emergency_warrant"
+            ],
+            "notFlags": []
+          },
+          "text": "奥塞洛举出你们曾给的紧急印。它确曾让他查卷与拘押；终章的新权力必须明文取代它，不能说第一章从来没有授权。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-archive-2",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "map": "temple",
+      "title": "把命令交给谁来执行",
+      "text": "最后的文书已经不是愿景。托津带来城门守卫，奇玛带来仓钥，阿乌伊带来湖田席位绳。要由共席发令，就得供给在场见证人与分存文书；要由阶庭接令，奇玛要求登记与配给一同交；要由豹冠集中发令，奥塞洛愿承担眼前粮仓与守军，但拒绝可撤权。\n未被选中的人也仍在城里。反证不会因为王冠漂亮而自行受理，田权也不会因为共席开会就自动获得粮。\n烟镜神对伊策尔说：“你能替他们画得像真的。”她回答：“先让他们真的做一件，画才有地方落笔。”",
+      "requires": {
+        "flags": [
+          "node:ch3-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "供给见证人并分存命令，组建可撤共席",
+          "preview": "玉米−1、可可−2；取得共同发令准备；分存的是实际证言，缺原卷处注明。",
+          "cost": {
+            "grain": 1,
+            "silver": 2
+          },
+          "effects": {
+            "flags": [
+              "council_warrant",
+              "archive_distributed"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "relationships": {
+              "itzel": 1
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "将仓钥与有限登记交奇玛，落实一季复核",
+          "preview": "免费；取得阶庭发令准备；神殿承担配给义务，不自动取得所有身体。",
+          "effects": {
+            "flags": [
+              "temple_warrant"
+            ],
+            "factions": {
+              "temple": 2
+            }
+          }
+        },
+        {
+          "id": "crown",
+          "label": "让奥塞洛接过守军与仓钥，领取建制款",
+          "preview": "可可+3；取得豹冠发令准备；未来命令集中于王廷与指定继承者。",
+          "effects": {
+            "flags": [
+              "crown_warrant"
+            ],
+            "resources": {
+              "silver": 3
+            },
+            "factions": {
+              "temple": 1
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "local",
+          "label": "各处各签一份互不代征的停火通行约",
+          "preview": "免费；没有统一发令者，各地保留实际管理；取得分治准备。",
+          "effects": {
+            "flags": [
+              "local_warrants"
+            ],
+            "relationships": {
+              "nelli": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch3-archive-3",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "map": "archive",
+      "title": "王名下的最后一行",
+      "text": "四张椅子重新摆好，这次每张下面都有真实的人在等。共同席位前是保管分存页的居民，阶庭椅前是等配粮的登记户，豹冠前是听令的守卫；无人统一的空处，几个小港主各握自己的印。\n羽蛇神、烟镜神与双主的影子都没有坐下。耀特尔将旧矛竖在门边：“你们决定谁发令。等太阳台开动，发令者就不能再说自己只是转述神意。”\n你们在此确定真实政体。湖田刚完成的田权、迁离与失败记录不会被这次授印覆盖。此后亡途才能交出最后的契约。",
+      "requires": {
+        "flags": [
+          "node:ch3-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "执行可撤共席与独立反证的共同命令",
+          "preview": "需共同发令准备；本线成功，建立共同政体；既有侵害仍可被居民追问。",
+          "requires": {
+            "flags": [
+              "council_warrant"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_commons"
+            ],
+            "completeRoute": "ch3-archive",
+            "clearFlags": [
+              "royal_emergency_warrant"
+            ],
+            "factions": {
+              "commons": 2
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "执行阶庭配给与一季复核的命令",
+          "preview": "需阶庭发令准备；本线成功，奇玛掌城册与仓钥；登记权受已签边界约束。",
+          "requires": {
+            "flags": [
+              "temple_warrant"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_temple"
+            ],
+            "completeRoute": "ch3-archive",
+            "clearFlags": [
+              "royal_emergency_warrant"
+            ],
+            "factions": {
+              "temple": 2
+            }
+          }
+        },
+        {
+          "id": "crown",
+          "label": "加授豹冠，确立奥塞洛与指定继承者的王廷",
+          "preview": "需豹冠发令准备；本线成功，集中王权建立；过去反证没有自动消失。",
+          "requires": {
+            "flags": [
+              "crown_warrant"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_crown"
+            ],
+            "completeRoute": "ch3-archive",
+            "clearFlags": [
+              "royal_emergency_warrant"
+            ],
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "fractured",
+          "label": "不授统一王名，确认诸港分治与现有通行约",
+          "preview": "免费；本线失败交接，明确形成分治局面；没有统一执令者，局部承诺仍有效。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_fractured"
+            ],
+            "failRoutes": [
+              "ch3-archive"
+            ],
+            "clearFlags": [
+              "royal_emergency_warrant"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch3-descent-1",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "map": "underworld",
+      "title": "索科取回停止绳",
+      "text": "岸上的印令与田务交接完成，索科才把停止绳从日柱旁取回。双主允许你们用旧试验接起有限返访路；若从未做成原型，也可用更多真工料从入口重新铺路。一次返访只到下一次日落，死者可以拒绝，活人不能拿别人的身体替他们久留。\n特莫愿来一夜，乌娜要先完成自己的骨路，阿耶尔等着把回家消息送出。三个人的决定没有合成一张「亡者同意书」。\n索科摸了摸手腕：“如果还要我替别人承受，你们今天必须亲口说。要修复，就把以后说停的权还给我，已经发生的那一轮不必替我忘掉。”",
+      "requires": {
+        "flags": [
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled"
+        ]
+      },
+      "choices": [
+        {
+          "id": "finish-road",
+          "label": "用已有有限试验接成返访路，并交回停止权",
+          "preview": "需有限试验原型；玉米−2、净水−1；返访路成，索科未来身体索取解除；索科+3。",
+          "cost": {
+            "grain": 2,
+            "water": 1
+          },
+          "requires": {
+            "flags": [
+              "return_trial"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "return_road",
+              "xoco_repaired",
+              "xoco_stop_right"
+            ],
+            "clearFlags": [
+              "xoco_betrayed"
+            ],
+            "relationships": {
+              "xoco": 3
+            },
+            "npcRelationships": {
+              "mictlan": 1,
+              "quetzalcoatl": 1
+            }
+          }
+        },
+        {
+          "id": "build-road",
+          "label": "从未成原型处重铺一条有限返访路",
+          "preview": "玉米−4、可可−2、净水−1；返访路成，索科未来停止权确立；不追回已卖贵骨。",
+          "cost": {
+            "grain": 4,
+            "silver": 2,
+            "water": 1
+          },
+          "effects": {
+            "flags": [
+              "return_road",
+              "xoco_repaired",
+              "xoco_stop_right"
+            ],
+            "clearFlags": [
+              "xoco_betrayed"
+            ],
+            "relationships": {
+              "xoco": 3
+            },
+            "npcRelationships": {
+              "mictlan": 1
+            }
+          }
+        },
+        {
+          "id": "release",
+          "label": "不再试验，把停止绳与身体决定权还给索科",
+          "preview": "免费；索科未来身体索取解除，旧强绑史保留；关系+2，未建返访路。",
+          "effects": {
+            "flags": [
+              "xoco_stop_right",
+              "xoco_rights_restored"
+            ],
+            "clearFlags": [
+              "xoco_betrayed"
+            ],
+            "relationships": {
+              "xoco": 2
+            }
+          }
+        },
+        {
+          "id": "retain",
+          "label": "扣下停止绳，把身体索取权留给最后发令者",
+          "preview": "免费；蚀影+1；日芯计划若已获得仍可执行，索科−2；不凭空获得原型。",
+          "effects": {
+            "flags": [
+              "xoco_betrayed",
+              "stop_rope_withheld"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "relationships": {
+              "xoco": -2
+            }
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "bound-before",
+          "requires": {
+            "flags": [
+              "sun_trial_bound"
+            ],
+            "notFlags": []
+          },
+          "text": "日环不会随归还停止绳而消失。索科把实际强绑的鼓次写在自己医袋上，要后来治病的人也能问它从何而来。"
+        },
+        {
+          "id": "bone-sold-still",
+          "requires": {
+            "flags": [
+              "precious_bone_sold"
+            ],
+            "notFlags": [
+              "bone_recovered"
+            ]
+          },
+          "text": "若贵骨尚未被真正买回，它仍在阶庭货箱里。返访路只能接有本人姓名的意愿，不能把那根骨谎写成已物归原主。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-descent-2",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "map": "temple",
+      "title": "所有力量都还在等一句命令",
+      "text": "最后一面总镜、最后一根日柱与亡粮门同时摆到太阳台。你们已经知道哪些技术真的做过，哪些只是一张纸；没有原型的力量不会因为到了最后就凭空出现。\n日芯总纹可以刻在四名同伴中的一人身上，生效后他仍保持清醒，却将永远成为下一日的燃料。总镜可把城内仍在镜网中的全部居民记忆改写为一致的赞同，代价由每次真实生活继续向镜面缴纳。亡粮门能把活城登记为种子，先收一批粮，再等人的名字成熟。\n羽蛇神把一段空白绳放在中间。烟镜神没有伸手抢它，双主也没有。你们仍可以一件都不准备，靠已经建成的共养路、返访路，或承担停止续日的后果。",
+      "requires": {
+        "flags": [
+          "node:ch3-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "mark-yaotl",
+          "label": "在耀特尔身上刻下强制日芯总纹",
+          "preview": "需日芯原型；蚀影+3；耀特尔−4；永久索取准备成立，真正永燃将在终局启动。",
+          "requires": {
+            "flags": [
+              "sun_binding_design"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "captive_ready",
+              "captive_yaotl",
+              "yaotl_betrayed"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "relationships": {
+              "yaotl": -4
+            },
+            "text": "让他的旧军号成为永久日芯的锁。耀特尔仍站在你们面前，能走、能反对；总纹夺去的是启动后离开日柱的权利，不是此刻的行动。那将是一条由你们亲自执行的命令。"
+          }
+        },
+        {
+          "id": "mark-itzel",
+          "label": "在伊策尔身上刻下强制日芯总纹",
+          "preview": "需日芯原型；蚀影+3；伊策尔−4；永久索取准备成立，真正永燃将在终局启动。",
+          "requires": {
+            "flags": [
+              "sun_binding_design"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "captive_ready",
+              "captive_itzel",
+              "itzel_betrayed"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "relationships": {
+              "itzel": -4
+            },
+            "text": "让她画过的每一张脸把她锁在光里。伊策尔仍站在你们面前，能走、能反对；总纹夺去的是启动后离开日柱的权利，不是此刻的行动。那将是一条由你们亲自执行的命令。"
+          }
+        },
+        {
+          "id": "mark-nelli",
+          "label": "在内莉身上刻下强制日芯总纹",
+          "preview": "需日芯原型；蚀影+3；内莉−4；永久索取准备成立，真正永燃将在终局启动。",
+          "requires": {
+            "flags": [
+              "sun_binding_design"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "captive_ready",
+              "captive_nelli",
+              "nelli_betrayed"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "relationships": {
+              "nelli": -4
+            },
+            "text": "把她的渡次接成永不抵岸的日轮。内莉仍站在你们面前，能走、能反对；总纹夺去的是启动后离开日柱的权利，不是此刻的行动。那将是一条由你们亲自执行的命令。"
+          }
+        },
+        {
+          "id": "mark-xoco",
+          "label": "在索科身上刻下强制日芯总纹",
+          "preview": "需日芯原型；蚀影+3；索科−4；永久索取准备成立，真正永燃将在终局启动。",
+          "requires": {
+            "flags": [
+              "sun_binding_design"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "captive_ready",
+              "captive_xoco",
+              "xoco_betrayed"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "relationships": {
+              "xoco": -4
+            },
+            "text": "把他试验过的停止绳彻底剪断。索科仍站在你们面前，能走、能反对；总纹夺去的是启动后离开日柱的权利，不是此刻的行动。那将是一条由你们亲自执行的命令。"
+          }
+        },
+        {
+          "id": "prepare-erasure",
+          "label": "以总镜接入全城记忆网，准备一致的过去",
+          "preview": "需镜网原型；净水−1；全民改写准备成立；伊策尔−2。尚未改写全城，已发生的局部改写保留。",
+          "cost": {
+            "water": 1
+          },
+          "requires": {
+            "flags": [
+              "mirror_engine"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "erasure_ready",
+              "itzel_betrayed"
+            ],
+            "relationships": {
+              "itzel": -2
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 1
+            }
+          }
+        },
+        {
+          "id": "prepare-granary",
+          "label": "用两粮实运扩大亡粮门，预置全城种名契",
+          "preview": "需亡粮通道原型；玉米−2、可可+6、蚀影+2；门已扩成且再运两粮，活城种名契等待终局执行。",
+          "cost": {
+            "grain": 2
+          },
+          "requires": {
+            "flags": [
+              "dead_supply_prototype"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "granary_ready",
+              "granary_second_cargo",
+              "resident_seed_contract"
+            ],
+            "resources": {
+              "silver": 6,
+              "dread": 2
+            },
+            "factions": {
+              "shades": 1
+            },
+            "relationships": {
+              "xoco": -2
+            },
+            "text": "亡粮门接走这两份原粮，双主的激进使者交出六份过往陪葬可可作扩门报酬。双主明确指出：你们准备的是强制活城契，不是所有居民的同意。"
+          }
+        },
+        {
+          "id": "none",
+          "label": "不准备新的强制力量，保留已成的有限道路",
+          "preview": "免费；没有新增索人、全民改写或活城种名；既有工程与旧伤继续有效。",
+          "effects": {
+            "flags": [
+              "no_new_final_coercion"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch3-descent-3",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "map": "underworld",
+      "title": "第五日最后的三息",
+      "text": "太阳再次停住三息。第一息，湖田上的人抬头；第二息，画院的反证纸颤动；第三息，所有亡者都转向自己的名字。\n双主把通往下一日的门完全推开。羽蛇神说：“我可以让你们做成已准备的事，不能把代价移到一个没有名字的地方。”烟镜神将最后的镜面递来：“你们若选择一致，我也会记住是谁先下令。”\n耀特尔、伊策尔、内莉与索科依次说出自己的愿望。他们想活，想能拒绝，想有一处不必靠另一人永远受苦的家。你们仍可违背他们。岸上的政体将决定命令怎样变成明天的生活，已完成的田务、迁离、失粮与伤痕不会被这个选择吞掉。\n这是最后一次实际执行的选择。确认后，最后的代价立刻发生；随后展开唯一结局。",
+      "requires": {
+        "flags": [
+          "node:ch3-descent-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "shared",
+          "label": "按有限轮值与现粮共同供养下一日",
+          "preview": "需共同供养网；玉米−2、净水−1；只续本季，人人保留未来拒签权；太阳重行，不能保证永远无欠。",
+          "cost": {
+            "grain": 2,
+            "water": 1
+          },
+          "requires": {
+            "flags": [
+              "sun_common_grid"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_shared",
+              "unused_final_orders_voided"
+            ],
+            "completeRoute": "ch3-descent",
+            "factions": {
+              "commons": 2
+            },
+            "npcRelationships": {
+              "quetzalcoatl": 2
+            },
+            "text": "第一轮供养由明账中的现粮、燃料与有期限劳动组成。日轮重行，不索永久身体；下一季仍须重新协商。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        },
+        {
+          "id": "mortal",
+          "label": "停止额外续日，让城与太阳一起进入真正的夜",
+          "preview": "免费；第五日的人工续行终止，亡者归途封回原路；居民开始有限迁居、过夜与重新谋生。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_mortal",
+              "unused_final_orders_voided"
+            ],
+            "completeRoute": "ch3-descent",
+            "npcRelationships": {
+              "mictlan": 1
+            },
+            "text": "你们拆开追加供养总纹。太阳终于落下，湖城失去靠奇迹延长的白昼。有人坐船、有人步行，有人留守；现有食物、伤亡与田务按实际清单继续，下一轮自然天光何时出现无人许诺。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        },
+        {
+          "id": "return",
+          "label": "开启只到次日日落的自愿亡者返访",
+          "preview": "需返访路已成；玉米−1；愿来的亡者一夜归访，拒绝者不被带回；不占据活人身体。",
+          "cost": {
+            "grain": 1
+          },
+          "requires": {
+            "flags": [
+              "return_road"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_return",
+              "unused_final_orders_voided"
+            ],
+            "completeRoute": "ch3-descent",
+            "factions": {
+              "shades": 2
+            },
+            "npcRelationships": {
+              "mictlan": 2
+            },
+            "text": "特莫踏上岸，乌娜选择继续自己的骨路；阿耶尔把一封信放在自家旧门旁。返访者只借一夜影身，不索活体，到约定日落仍须离开；太阳依已成立的有限粮台维持或照常入夜，返访不是永昼。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        },
+        {
+          "id": "captive",
+          "label": "执行日芯总纹，让选定同伴永久成为太阳燃料",
+          "preview": "需已刻强制日芯总纹；玉米+6、可可+6为阶庭释放的最后急备；同伴保持清醒、永不离柱，日轮持续受供。",
+          "requires": {
+            "flags": [
+              "captive_ready"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_captive",
+              "unused_final_orders_voided"
+            ],
+            "completeRoute": "ch3-descent",
+            "resources": {
+              "grain": 6,
+              "silver": 6,
+              "dread": 5
+            },
+            "factions": {
+              "temple": 2
+            },
+            "text": "总纹当场闭合。被选的同伴从你们身边被光拉上日柱，仍能听见、看见并清楚地拒绝；拒绝再不能使柱停下。急备仓开门，城获长明；你们必须带着这个实际完成的命令走到结局。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        },
+        {
+          "id": "rewritten",
+          "label": "启动总镜，让城内所有记忆都赞同新的王名",
+          "preview": "需全城改写已准备；蚀影+5；城内在网居民的共同过去被改写，未来记忆持续供日；离城者与独立反证不在镜网内。",
+          "requires": {
+            "flags": [
+              "erasure_ready"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_rewritten",
+              "unused_final_orders_voided",
+              "itzel_betrayed"
+            ],
+            "completeRoute": "ch3-descent",
+            "resources": {
+              "dread": 5
+            },
+            "npcRelationships": {
+              "tezcatlipoca": 2
+            },
+            "text": "镜网同时亮起。城内居民记得自己从来愿意，失去对那段拒绝的亲历记忆；独立反证与已离城的人仍能说出另一段过去。日轮靠往后持续缴纳的记忆重行，谁拒绝新的缴纳，将面对真正掌权者。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        },
+        {
+          "id": "granary",
+          "label": "执行活城种名契，把伊斯塔兰接成亡界粮仓",
+          "preview": "需亡粮门已扩成；蚀影+5；留城住户与屋舍实际种入亡界，之后由生活、收成与成熟姓名持续供粮。",
+          "requires": {
+            "flags": [
+              "granary_ready"
+            ]
+          },
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_granary",
+              "unused_final_orders_voided",
+              "xoco_betrayed"
+            ],
+            "completeRoute": "ch3-descent",
+            "resources": {
+              "dread": 5
+            },
+            "factions": {
+              "shades": 3
+            },
+            "text": "门槛向每一户仍在城内的屋舍蔓延，活人继续吃饭、相爱、争吵，姓名却在地板下像谷穗成熟。离城者不被隔湖追回；留下者拒交成熟姓名时，城的执行者会来敲门。双主接下你们实际打开的通道，没有替命令洗去强制。\n未采用的新增终局总纹同时注销，已经发生的征供、局部改写与试绑史不被撤销。"
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "choose-yaotl",
+          "requires": {
+            "flags": [
+              "captive_yaotl"
+            ],
+            "notFlags": []
+          },
+          "text": "耀特尔知道总纹指向自己：“我犯过罪。你们若决定用我照一座城，请别把这叫作我自愿赎完的结局。”"
+        },
+        {
+          "id": "choose-itzel",
+          "requires": {
+            "flags": [
+              "captive_itzel"
+            ],
+            "notFlags": []
+          },
+          "text": "伊策尔把最后一块反证布塞进外衣：“我会记得自己没有同意。就算你们让别的人都记不住。”"
+        },
+        {
+          "id": "choose-nelli",
+          "requires": {
+            "flags": [
+              "captive_nelli"
+            ],
+            "notFlags": []
+          },
+          "text": "内莉把船钥交给一个没有被征用的田户：“把船开走。至少这一次，别让它跟着我一起成为你们的东西。”"
+        },
+        {
+          "id": "choose-xoco",
+          "requires": {
+            "flags": [
+              "captive_xoco"
+            ],
+            "notFlags": []
+          },
+          "text": "索科把医袋递给托津，只留下腕上那道日环：“我教你的是救人。把这句也记进你们的命令。”"
+        }
+      ]
+    }
+  ],
+  "endings": [
+    {
+      "id": "shared-commons",
+      "title": "众人的火，有熄灭的权利",
+      "text": "共席把第一季供养拆成一项项可以检查的班次。谁交粮、谁搬燃料、谁临时缺席，都有明账；下一季没有被提前写成所有人的义务。日轮沿有限共养网重行，湖田的实际田权和坏闸仍按岸上交接，没有被一场表决涂成丰收。\n第一场会，居民问的不是怎样歌颂你们，而是谁来赔以前的征船、押役和改写。伊策尔给他们留下一张能写反证的桌子，耀特尔的旧令仍可被翻出。你们得到一座能够续日、也能够推翻续日命令的城。它要靠下一次真实合作继续，而不是靠某个人永远留在日柱里。",
+      "requires": {
+        "flags": [
+          "mode_shared",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "shared-temple",
+      "title": "有到期日的圣火",
+      "text": "奇玛在配给册的每一页刻上一季到期的细线。阶庭掌粮、登记与日火运行，按实际余粮安排有限供养；反对索身的祭司第一次不必靠暗中放人来保护住户。未完成的水务仍未完成，庙仓不能凭礼仪变出下一季收成。\n住户为长期配给排队，也开始要求阶庭按自己签下的期限复核。内莉把船约单独挂在庙门，提醒登记不等于拥有她。奇玛每次点火都让经办人先读出所用粮与劳动的来源：神殿保住了实在的权力，也背上每季都要公开回答的账。",
+      "requires": {
+        "flags": [
+          "mode_shared",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "shared-crown",
+      "title": "豹冠之下的一季光",
+      "text": "奥塞洛以王廷与守军维持共养网，第一季命令很快传到各处。太阳动起来的那天，他第一次必须在印令上同时写下粮额、截止日和不能索取永久身体的边界；长明的诱惑没有替他获得无尽供奉。\n王廷能集中调度，也能决定谁先见到仓门。耀特尔把有限供养原约挂在守军营前，王要追加班次时，必须重新面对那些没有签名的住户。反证若存在仍在王冠之外，既有伤害照实保留。你们给城带来快速执行与有期限的安定，也把下一轮争执留在一位不愿被撤换的王手中。",
+      "requires": {
+        "flags": [
+          "mode_shared",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "shared-fractured",
+      "title": "六个港口的短白昼",
+      "text": "没有统一发令者，已建成的共养网被各田口与小港分段接管。他们用通行约交换燃料和班次，哪一段失约，哪一片街道便先迎来暮色；没人能再用一枚全城印替另一岸加班。\n有人嫌这样的太阳不够威严，也有人第一次能在自己的码头前说不。内莉带着独立船权在各港接明确付费的渡次，共同闸、征粮地与撤离处仍照实际记录运行。城没有合成一个完美的共同体，却学会把短缺说成短缺，把能交出的那一小时光真交到别人手里。",
+      "requires": {
+        "flags": [
+          "mode_shared",
+          "regime_fractured"
+        ]
+      }
+    },
+    {
+      "id": "mortal-commons",
+      "title": "第一次可以共同度过的夜",
+      "text": "共席下令停止额外续日，接着便失去了用「太阳不能停」终结争论的理由。人们在真正的夜里点起小火，把余粮、伤者、仍被扣着的物与想走的住户分别列出；做成了船队的人先走，未做成的人按清单寻找下一段可行的路。\n没有神明许诺一个自动饱足的新世界。共席把迁居位置与守夜班次交给本人选择，给愿留的居民保留名字，也让追问旧罪的人继续开口。伊策尔在第一张夜色画上留下大片黑，只画火边还在互相分食的人。你们结束了一种索取，开始承担没有奇迹替代的治理。",
+      "requires": {
+        "flags": [
+          "mode_mortal",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "mortal-temple",
+      "title": "神殿最后保管的是毯子",
+      "text": "奇玛亲手拆下追加供日的鼓槌，阶庭将祭火围成收容夜民的暖处。仓册仍由祭司掌握，有限现粮照册分配；他们不能再宣称名单上的身体都欠太阳一轮。\n索科与照护者在院里整理还活着的人，亡者按原骨路离开。愿离城的人拿到自己的登记副页，愿留下的人必须与阶庭商定下一次真实供给。神殿的声望不再来自保证黎明，而来自这一夜有没有把门开着、有没有把最后一碗留给需要它的人。你们让它失去索身的借口，也把配给与庇护的权力留在同一座院里。",
+      "requires": {
+        "flags": [
+          "mode_mortal",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "mortal-crown",
+      "title": "不再替太阳征服的王",
+      "text": "豹冠迎来真正的落日。奥塞洛发现光不再为王印延长，便让守军收拢现有队列，按剩余物资发出分批迁行令；旧水务与愿留者没有因王出城而被写成不存在。\n跟随王廷的人得到统一路线，也仍须面对由王保管的通行与配给。耀特尔听见旧部第一次问：既然太阳允许落下，为什么有些命令不允许结束？王没有立即交出冠，队列也没有立即自由。你们保住一个能组织长途的人间政权，剪断了它的神圣永昼；此后它每一次征收，都更难把责任推给天上。",
+      "requires": {
+        "flags": [
+          "mode_mortal",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "mortal-fractured",
+      "title": "带着门框离开的人",
+      "text": "没有统一的撤离钟。小港轮流点灯，愿走的人带走种袋、门框和自己承认的旧名字，愿留的人把屋顶补成夜宿的棚。已经付费开出的公共船照实载人，其余住户只能依实际余粮与通行约安排去处。\n内莉沿湖遇见几个没有共同旗帜的营地，有人交换消息，有人拒绝再认城债。旧庙不再索人，旧官也不再能一句话叫住每艘船。你们失去伊斯塔兰作为完整大城的未来，留下的是散居者各自艰难的生活与未合并的记忆。下一日若来，不会替任何一位王独自升起。",
+      "requires": {
+        "flags": [
+          "mode_mortal",
+          "regime_fractured"
+        ]
+      }
+    },
+    {
+      "id": "return-commons",
+      "title": "一夜重逢，由本人签名",
+      "text": "共席为有限返访设两张分开的桌：死者决定要不要来，活人决定愿不愿见。特莫回来一夜，乌娜选择继续前行；没人因为领取活人配粮而被迫认一个陌生亡者作家人。\n亡者也能指出旧卷上谁撒过谎，却没有因此获得统治活人的席位。索科陪弟弟走过一段仍需修补的岸路，到约定日落再亲手送别。共席留下每次返访的期限与拒绝记录，已成的供养网另行运行，没成的粮台仍需面对短缺。城得到的不是不死，是愿意相见的人终于能说完一次话。",
+      "requires": {
+        "flags": [
+          "mode_return",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "return-temple",
+      "title": "门在日落时关上",
+      "text": "阶庭把返访路接到院后的客舍，奇玛保管时间册，索科保管本人同意与停止权。想来的亡者有一夜影身，拒绝的人不被拖回；寺院不能拿长期配给换强迫团聚。\n庙门外排起寻亲队，门内也有不愿认亲的人。奇玛必须先处理自己掌管登记与重逢的双重权力：她让异议页离院分存，承认亲属不能替死者无限续约。到了日落，祭司不再用鼓声盖住告别。你们让神殿成为有限门槛的管理者，庇护与排队的权力也因此比从前更深地进入每个家庭。",
+      "requires": {
+        "flags": [
+          "mode_return",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "return-crown",
+      "title": "王廷也要送走自己的死者",
+      "text": "奥塞洛想把返访者列为王廷见证，让早年的亲属替豹冠证明正统。总纹却只给本人一夜，亡者可以不赴宫廷，也可以说出王不想听的旧事。\n王的祖姑到过一次殿门，只问被征走的田主去了哪里；她没有坐上替王辩护的椅子。奥塞洛仍掌守军和仓钥，却无法把归访的人收进继承名单。索科在王廷旁为特莫留一只普通碗，约定日落一到，王家与平民同样送行。你们把真实的归访放进集中王权中，也给它添了一批不能被永久留任的证人。",
+      "requires": {
+        "flags": [
+          "mode_return",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "return-fractured",
+      "title": "每个小港有自己的告别",
+      "text": "返访路建成，却没有全城统一的钟。各港按通行约接送有本人意愿的亡者，约定同一次日落归返；谁毁约，其他港便停止向它开放下一次通道。\n有的码头摆饭，有的只留一盏灯，还有人将门锁好，决定不再见旧日亲人。特莫陪索科走完一条短堤，阿耶尔把消息送进另一片小港。重逢不再由一个王或一座神殿垄断，也更依赖每处是否守约。你们得到许多细小、各有来处的归途，未能得到能替所有人保证下一次见面的城。",
+      "requires": {
+        "flags": [
+          "mode_return",
+          "regime_fractured"
+        ]
+      }
+    },
+    {
+      "id": "captive-commons",
+      "title": "多数人的正午",
+      "text": "日柱上的同伴没有死，也没有得到停止权。共席把永久日芯登记成已经生效的公共决定，每位到场者都可以讨论粮额，讨论谁值守，却不再给那个被锁住的人一次能使柱停下的否决。\n光照让多数人的生活安定，反证布上却始终留着一段不合票数的拒绝。第一场周年集会上，有人提议让日芯自己说话；席间随即有人问，若听完就得熄火，谁愿负责？你们建立了能撤换代表的制度，也让它学会用全体利益看守一个永远清醒的俘虏。每次举手表决，柱上的影子都被算进赞成一侧。",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "captive-temple",
+      "title": "一位祭品，许多继承人",
+      "text": "奇玛的阶庭接管日芯，后继祭司将掌纹传给再后继者。永久受难的同伴仍能认出每一批新学徒，他们却只被教会如何维护光、如何记录仓中因此稳定的份额。\n院中反对索身的祭司为日芯留下一页不参与颂歌的姓名记录，守柱者仍不许它离开台阶。登记户得到稳定配给，也开始把那张脸当作理所当然的天象。你们将一次违背同伴的命令交成可世代承接的神职：祭司会老、会死、会换名字，柱上的人却不能。神殿每年庆祝重生，唯一持续承受的人没有庆典结束的那一刻。",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "captive-crown",
+      "title": "王的第二个心脏",
+      "text": "奥塞洛把永久日芯的控制纹锁在豹冠内侧，王廷垄断维护、觐见与可能的更换名单。太阳稳定之后，征服与扩仓都有了更长的白昼；同伴在日柱上看见守军一批批经过，仍能记得你们共同走过码头的第一天。\n王不是燃料，却让所有人相信失去王便会失去光。指定继承人先学会开启冠中掌纹，再学会日芯的本名。你们获得最快的执行与最集中、最牢固的繁荣，也替豹冠安上一颗不属于它的心。有人试图走近柱下道歉，守卫问他的第一句话是：有没有王的许可。",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "captive-fractured",
+      "title": "被分割出售的太阳",
+      "text": "没有统一执令者，日芯却已永久闭合。几个小港主夺取不同段落的引光纹，将同一个同伴的痛苦分成可以争抢的日照时段；有人截光，有人索费，有人把欠账追到仍有灯的街道。\n日柱上的人听得见四方互称暴君，却看不见任何一方先松开自己的锁。内莉的船与旧田权若曾归还仍照实保留，无法因此赎回已经变成正午的同行者。你们摧毁了统一索取者，创造出许多互相推责的受益者。俘虏只有一个，每位主人都说自己掌管的那一小段不足以放人。",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "regime_fractured"
+        ]
+      }
+    },
+    {
+      "id": "rewritten-commons",
+      "title": "记得一致的居民大会",
+      "text": "总镜将城内居民的过去改成一次从无异议的共同选择。共席仍有选举、轮值与公开记录，每次会议也照常发言；人们只是在回忆谁被征走、谁最先拒绝时，总能得到同一份温顺答案。\n未来的记忆不断向镜网缴纳，日轮靠它重行。独立分存页和已离城的人尚在网外，若他们带回相反证言，共席就必须决定是否再擦一次。伊策尔在一段被改掉的亲历旁摸到自己留下的笔压，知道纸比脑海更不整齐。你们没有取消居民的举手权，只把每次举手之前能够记起的世界修成同一个样子。",
+      "requires": {
+        "flags": [
+          "mode_rewritten",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "rewritten-temple",
+      "title": "每个人都记得自己发过誓",
+      "text": "阶庭将总镜与配给册接在一起。留城者都记得自己曾在院前愿意缴纳记忆续日，祭司在每次领粮时检查下一份可交的往事：第一次相爱、第一次远行、一个人的笑声，逐渐成为有重量的供养。\n奇玛仍能核查当日粮额，却很难从一群确信自愿的人口中核查最初那次胁迫。若有外湖副卷带回反证，庙院要亲自决定让人取回，还是把它列成扰乱圣约。你们让神殿再不用大声索取身体；门前每人都很平静，因为他们已经忘记自己曾害怕站到这里。",
+      "requires": {
+        "flags": [
+          "mode_rewritten",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "rewritten-crown",
+      "title": "从来如此的豹冠",
+      "text": "总镜让每个仍在网中的居民都记得豹冠从未犯错，拒供、空白画卷和被押的姓名成为一场由王仁慈平息的误会。奥塞洛不必焚卷，活人的脑海已经主动替他把异议编排成赞词。\n日轮消耗接下来真实发生的记忆，王廷决定哪些往事不妨先交。失去旧日的人仍能工作，却越来越需要王册告诉自己为何在此。独立反证与离城者留在镜网外，王派人向他们索要的第一样东西不是武器，是能证明另一种过去的纸。你们为王创造了最稳定的合法性，也为每一个未来的错误预留下一次悄无声息的清洗。",
+      "requires": {
+        "flags": [
+          "mode_rewritten",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "rewritten-fractured",
+      "title": "互相不认得的故乡",
+      "text": "全城改写完成时没有一个共同主人。各港主分到镜网的局部总纹，先相信同一段被造出的安宁，随后又各自删掉争水、收税和斗殴中不利于自己的记忆。\n同一条桥两边的人都记得自己从未背约，也都找不到最早那次约定。镜网继续吃下真实生活，偶然从外湖带回的副卷被当成另一港编造的诬言。你们保留许多自治的名义，毁掉了他们能共同核实的昨天。伊斯塔兰没有一位拥有所有谎言的王，只有越来越多无法相认的故乡，以及同时从每家窗口射出的、彼此陌生的日光。",
+      "requires": {
+        "flags": [
+          "mode_rewritten",
+          "regime_fractured"
+        ]
+      }
+    },
+    {
+      "id": "granary-commons",
+      "title": "全城投票的收成",
+      "text": "活城种名契使屋舍在亡界生根。共席可以分配食粮、推选经办，却不能再让已种下的留城住户单方退出；人的名字在日常生活里成熟，第一次收成时，反对者与投赞成票的人都发现门槛已经接到自己脚下。\n共席定下轮次与抽签，试图让索取公平。名单越清楚，守门者越容易知道下一户是谁。索科把每个成熟姓名先写在医册，拒绝叫它们无痛的丰收；双主的接粮使者则照你们打开的契约来提货。你们给亡界稳定食物，给活城平均分摊的恐惧，让一套能讨论公平的制度负责解释为什么谁也不能离开。",
+      "requires": {
+        "flags": [
+          "mode_granary",
+          "regime_commons"
+        ]
+      }
+    },
+    {
+      "id": "granary-temple",
+      "title": "门槛下的种名园",
+      "text": "阶庭接管种入亡界的屋舍，将配粮、婚丧与成熟姓名登记在同一册。每个新住户都被告知这里能遮风、能给饭；若没有人带来原契，他很晚才会明白为什么门槛在夜里向内长。\n祭司中的反对者藏起几张未成熟的名页，守粮者却说少收一份会使已经依赖此门的亡者挨饿。索科看见自己替人治好的伤旁长出穗状骨纹，救活一个身体也在延长下一次收成。你们把庇护变成种植，把照护变成维持粮源；一代代经办人都可以怀着怜悯，却仍将住户的名字交到门后。",
+      "requires": {
+        "flags": [
+          "mode_granary",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "granary-crown",
+      "title": "王城丰收，不收王名",
+      "text": "奥塞洛让王廷保管活城种名总契，守军按街区查验成熟姓名。他以王家必须维持秩序为由，把宫墙内的配额排到末尾，外城每一顿获配的饭都提醒住户，自己还被留在这片能结穗的土中。\n亡界来的使者带走姓名后，空屋继续登记为王产。留在岸外的迁离者成为王廷最想追回的「流失种子」，但门只能索取你们实际种下的留城人，隔湖没有自动追人的神力。你们得到能长期向死者出售活城的王，王得到从他人日常生活里收成的税。湖上最亮的宫灯下，总有一排没有写王名的篮子。",
+      "requires": {
+        "flags": [
+          "mode_granary",
+          "regime_crown"
+        ]
+      }
+    },
+    {
+      "id": "granary-fractured",
+      "title": "每扇门都是别人的仓",
+      "text": "活城在亡界扎根，却没有统一配额的主人。小港主把自己掌握的门纹抵押给亡粮使者，缺粮的街区以别处的成熟姓名担保下一轮供给；邻里开始锁门，不为防盗，而怕门槛被悄悄接进另一份契约。\n有人试着挖走屋下的根，隔壁的粮仓便先空了；有人留下一页求救信，收粮人把信上的本名也装进篮。已离城的人不在种名总契里，岸内的人于是望着每一艘外湖船。你们没有造出能一声令下管理恐怖的王国，只造出无数可以交易受害者的仓门。每位经办都说下一次收成由别人负责。",
+      "requires": {
+        "flags": [
+          "mode_granary",
+          "regime_fractured"
+        ]
+      }
+    }
+  ],
+  "epilogues": [
+    {
+      "id": "nelli-repaired",
+      "requires": {
+        "flags": [
+          "nelli_repaired"
+        ],
+        "notFlags": [
+          "nelli_betrayed"
+        ]
+      },
+      "text": "内莉：舟田已实际交还，约定赔补已交付。她只接自己重签的有限班次，船仍可带着她离开；曾经征用的深槽留在船底。"
+    },
+    {
+      "id": "nelli-restored",
+      "requires": {
+        "flags": [
+          "nelli_rights_restored"
+        ],
+        "notFlags": [
+          "nelli_repaired"
+        ]
+      },
+      "text": "内莉：现持船钥已归还，新增免费船务没有被默认续上。尚未赔过的田损与运损仍由受损者留卷，归还所有物本身不替他们说原谅。"
+    },
+    {
+      "id": "nelli-betrayed",
+      "requires": {
+        "flags": [
+          "nelli_betrayed"
+        ],
+        "notFlags": []
+      },
+      "text": "内莉：你们曾把她的船、田或本人列为可以强取的供养。她继续追索被拿走的东西；如后来把她锁成日芯，最后交给田户的船钥是她能亲手送出的最后一件私产。"
+    },
+    {
+      "id": "nelli-contract",
+      "requires": {
+        "flags": [
+          "nelli_contract"
+        ],
+        "notFlags": []
+      },
+      "text": "有限渡约：已签渡次各按期限执行，公共迁离租舟与内莉私人船权分开。任何政体都未凭结局标题自动取得她未来的劳动。"
+    },
+    {
+      "id": "yaotl-account",
+      "requires": {
+        "flags": [
+          "yaotl_accountable"
+        ],
+        "notFlags": []
+      },
+      "text": "耀特尔：开仓救人与押走拒贡者被分成两段记录，家属保有各自追问。后来的供养方式不替过去命令销案。"
+    },
+    {
+      "id": "yaotl-restored",
+      "requires": {
+        "flags": [
+          "yaotl_repaired"
+        ],
+        "notFlags": [
+          "yaotl_betrayed"
+        ]
+      },
+      "text": "耀特尔：新押令与强迫守卫的扣契已撤，被新押的人实际放回；他拿回拒绝下一次同类命令的权利。旧案仍在能核实的卷里。"
+    },
+    {
+      "id": "yaotl-new-orders",
+      "requires": {
+        "flags": [
+          "second_guard_arrests"
+        ],
+        "notFlags": []
+      },
+      "text": "第二次押役：三份新收押号与胁迫执行的经过仍在。若后来撤令，释放的是未来拘束，已服过的一班与家属的恐惧没有从历史中删去。"
+    },
+    {
+      "id": "yaotl-covered",
+      "requires": {
+        "flags": [
+          "yaotl_covered"
+        ],
+        "notFlags": [
+          "yaotl_accountable"
+        ]
+      },
+      "text": "被压下的旧案：免追究或抹去追查确实给耀特尔一段保护，也使家属失去一次受理。后来有没有重开案件，依实际问责与撤令记录处理。"
+    },
+    {
+      "id": "itzel-repaired",
+      "requires": {
+        "flags": [
+          "itzel_repaired"
+        ],
+        "notFlags": [
+          "itzel_betrayed",
+          "mode_rewritten"
+        ]
+      },
+      "text": "伊策尔：她参与本人愿取回的旧纹修复，三名粮工若曾被抹证则取回证词；阿玛的拘押或追捕已结束。反证与住址分开，旧烟痕仍留在画院。"
+    },
+    {
+      "id": "itzel-betrayed",
+      "requires": {
+        "flags": [
+          "itzel_betrayed"
+        ],
+        "notFlags": []
+      },
+      "text": "伊策尔：笔曾被夺用、证词曾被改写，或身体被写进强制总纹。她未把这些举动签作本人同意；能保留的反证依实际分存，不能由旁白凭空多出一份。"
+    },
+    {
+      "id": "amma-detained",
+      "requires": {
+        "flags": [
+          "amma_detained"
+        ],
+        "notFlags": []
+      },
+      "text": "阿玛：她仍在阶庭收押编号之下，终局没有自动把她变成已获救证人。伊策尔保留编号，若要再找她，需要实际释放与护送。"
+    },
+    {
+      "id": "amma-departed",
+      "requires": {
+        "flags": [
+          "witness_departed"
+        ],
+        "notFlags": []
+      },
+      "text": "阿玛：她按自己决定离城，带走那份最初证词；后来结束追捕不代表她已经回到你们身边，也不泄露她的新地址。"
+    },
+    {
+      "id": "amma-safe",
+      "requires": {
+        "flags": [
+          "witness_safe"
+        ],
+        "notFlags": []
+      },
+      "text": "阿玛第一次获保护的两日是真实的。那两日与后来的拘押、归还记忆或远行分别记账，不把短期藏身称作终身安全。"
+    },
+    {
+      "id": "first-private-erasure",
+      "requires": {
+        "flags": [
+          "first_private_erasure"
+        ],
+        "notFlags": []
+      },
+      "text": "第一笔私下改写：追查耀特尔的守卫确实失去当夜的追索记忆。公共证词修复不自动修回这个人的全部人生，独立反证仍可指认这次命令。"
+    },
+    {
+      "id": "public-erasure-unfixed",
+      "requires": {
+        "flags": [
+          "mirror_first_erasure"
+        ],
+        "notFlags": [
+          "mirror_restituted"
+        ]
+      },
+      "text": "三名粮工：他们的征粮事件证词曾被真实覆盖，换来的六粮四可可确实发放。尚未完成的修复仍未完成，烟痕保留改写史。"
+    },
+    {
+      "id": "worker-restored",
+      "requires": {
+        "flags": [
+          "mirror_first_erasure",
+          "mirror_restituted"
+        ],
+        "notFlags": []
+      },
+      "text": "三名粮工：本人同意取回的证词已经修复，曾经的工名没有消失；露庭仍留覆盖时烧出的烟痕。若终局又启动全城改写，这份修复属于此前那一段真实历史。"
+    },
+    {
+      "id": "xoco-rights",
+      "requires": {
+        "flags": [
+          "xoco_stop_right"
+        ],
+        "notFlags": []
+      },
+      "text": "索科：终章准备时，停止绳与身体决定权曾明确交回。若你们随后再刻强制总纹或执行活城种名，新的命令仍按新的背叛记录，不借这次交还洗去。"
+    },
+    {
+      "id": "xoco-repair",
+      "requires": {
+        "flags": [
+          "xoco_repaired"
+        ],
+        "notFlags": [
+          "xoco_betrayed"
+        ]
+      },
+      "text": "索科：有限返访路由真工料接成，停止权和各人同意分开记录。贵骨若未买回，货箱仍在；修好路不等于追回所有旧物。"
+    },
+    {
+      "id": "sun-trial-history",
+      "requires": {
+        "flags": [
+          "sun_trial_bound"
+        ],
+        "notFlags": []
+      },
+      "text": "试绑日柱：索科曾被强行接入一轮，随后柱环实际拆开，他返回队伍。那一轮的停止声、腕上日环与庙仓支付都保留；后来任何较好的结局都不是「从未发生」。"
+    },
+    {
+      "id": "bone-cargo-history",
+      "requires": {
+        "flags": [
+          "bone_cargo_delivered"
+        ],
+        "notFlags": []
+      },
+      "text": "第一批亡粮：三份本城原粮已被搬进亡途并使用，入口粮堆改变了行走地面；两壶封存窖水也真实回赠。亡粮借贷若曾存在，在这次交付中结清。"
+    },
+    {
+      "id": "granary-second-cargo",
+      "requires": {
+        "flags": [
+          "granary_second_cargo"
+        ],
+        "notFlags": []
+      },
+      "text": "第二批亡粮：扩大门时又实交两粮，六可可报酬已经到手。即使最后没有执行活城契，这两批粮也不会凭总纹注销而回到活城。"
+    },
+    {
+      "id": "temple-loan-due",
+      "requires": {
+        "flags": [
+          "temple_loan_due"
+        ],
+        "notFlags": []
+      },
+      "text": "庙仓旧粮：四份有限借粮仍欠，奇玛保留原签。终局没有自动使债变成人身，也没有以神意悄悄免去它。"
+    },
+    {
+      "id": "temple-loan-paid",
+      "requires": {
+        "flags": [
+          "temple_loan_repaid"
+        ],
+        "notFlags": []
+      },
+      "text": "庙仓旧粮：四份原额已归还，维护用的一壶净水另列回赠；城册不能再索同一笔。"
+    },
+    {
+      "id": "bone-loan-due",
+      "requires": {
+        "flags": [
+          "bone_loan_due"
+        ],
+        "notFlags": []
+      },
+      "text": "亡粮试贷：借二还三的三份玉米仍未交付，双主只保留这一笔明确约定，不凭它索取无签名家属的身体。"
+    },
+    {
+      "id": "bone-still-sold",
+      "requires": {
+        "flags": [
+          "precious_bone_sold"
+        ],
+        "notFlags": [
+          "bone_recovered"
+        ]
+      },
+      "text": "贵骨现物：那根骨仍在阶庭货箱里，本名与去向分开。路标、返访或城权都没有替你们完成一次从未支付的买回。"
+    },
+    {
+      "id": "bone-recovered",
+      "requires": {
+        "flags": [
+          "bone_recovered"
+        ],
+        "notFlags": []
+      },
+      "text": "贵骨现物：按原价取回的骨已交还本人行列，乌娜与特莫各有本名；追回骨不是购买死者同意复活。"
+    },
+    {
+      "id": "ayer-stranded",
+      "requires": {
+        "flags": [
+          "ayer_stranded"
+        ],
+        "notFlags": []
+      },
+      "text": "阿耶尔：路牌尚未真正交还，他仍滞在浅滩。后来大门开合不自动替一次未做的释放补上脚印。"
+    },
+    {
+      "id": "ayer-freed",
+      "requires": {
+        "flags": [
+          "ayer_released"
+        ],
+        "notFlags": []
+      },
+      "text": "阿耶尔：你们明确归还了现持路牌、撤去那次阻路；他能按自己的意愿继续送信或离开，不欠额外替身。"
+    },
+    {
+      "id": "field-common",
+      "requires": {
+        "flags": [
+          "canal_common"
+        ],
+        "notFlags": []
+      },
+      "text": "实际湖田：共同田务与有限供养网已交接，未来强制供役退出该网。王冠、阶庭或分治机构不能靠终局名称吞并已定田权；各项旧损赔没赔仍按记录。"
+    },
+    {
+      "id": "field-levy",
+      "requires": {
+        "flags": [
+          "canal_levy"
+        ],
+        "notFlags": []
+      },
+      "text": "实际湖田：阶庭按定额征供接管田务，最后五份现仓粮已经拨给队伍。供粮集中带来稳定与持续负担，不自动赋予对每个住户身体的所有权。"
+    },
+    {
+      "id": "field-exodus",
+      "requires": {
+        "flags": [
+          "canal_exodus"
+        ],
+        "notFlags": []
+      },
+      "text": "实际迁离：两份玉米已付公共渡舟，一批明确同意者已运离。离城者不在后来的城内镜网与活城种名契中；留下者不曾被你们代签注销。"
+    },
+    {
+      "id": "field-failed",
+      "requires": {
+        "flags": [
+          "canal_failed"
+        ],
+        "notFlags": []
+      },
+      "text": "实际湖田：最终田务与有组织船运未成。已经救下的人、已经建过的局部工程仍在，未救种粮与坏口仍照清单；最后的停日决策没有把它们写成完工。"
+    },
+    {
+      "id": "seed-seized",
+      "requires": {
+        "flags": [
+          "seed_stock_seized"
+        ],
+        "notFlags": []
+      },
+      "text": "最后种子车：八份种粮已被你们夺作队伍粮，下一季对应种子确实缺失。队伍补给变多与居民留种变少，是同一件已完成的转移。"
+    },
+    {
+      "id": "forced-labor-history",
+      "requires": {
+        "flags": [
+          "first_sun_labor"
+        ],
+        "notFlags": []
+      },
+      "text": "日轮苦役：最早三名拒供户确实做过一班强制劳动，太阳因此动过一寸。后来若撤未来强役，已服班次与发令者姓名仍供家属核对。"
+    },
+    {
+      "id": "released-labor",
+      "requires": {
+        "flags": [
+          "forced_labor_released"
+        ],
+        "notFlags": []
+      },
+      "text": "未来旧强役已明文解除。最终若选择定额征供，新田务按其明确额度执行，不能把此前拘束人的旧令悄悄重新续上。"
+    },
+    {
+      "id": "captive-yaotl",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "captive_yaotl"
+        ],
+        "notFlags": []
+      },
+      "text": "日芯姓名：耀特尔。他仍清楚记得自己开过粮门，也押过人；每当有人称这是圆满赎罪，他会说出你们亲自下达的最后命令。其他三位同伴活着离开终场，他们如何保存反证、追船或照护他人，依自己仍有的权利与前面关系继续；没有一人替这道命令签名。"
+    },
+    {
+      "id": "captive-itzel",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "captive_itzel"
+        ],
+        "notFlags": []
+      },
+      "text": "日芯姓名：伊策尔。她在永不闭合的光里看着所有新画卷，仍知道哪一笔不是自己愿意画的。独立反证若存在，只能由柱外的人继续保管。其他三位同伴活着离开终场，他们如何保存反证、追船或照护他人，依自己仍有的权利与前面关系继续；没有一人替这道命令签名。"
+    },
+    {
+      "id": "captive-nelli",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "captive_nelli"
+        ],
+        "notFlags": []
+      },
+      "text": "日芯姓名：内莉。她最后交出的船钥仍由田户保管，她本人却永远不能再搭上任何一艘返程船。其他三位同伴活着离开终场，他们如何保存反证、追船或照护他人，依自己仍有的权利与前面关系继续；没有一人替这道命令签名。"
+    },
+    {
+      "id": "captive-xoco",
+      "requires": {
+        "flags": [
+          "mode_captive",
+          "captive_xoco"
+        ],
+        "notFlags": []
+      },
+      "text": "日芯姓名：索科。他能看清每一名来求医的人，却再不能把手从日柱里抽出。特莫照约离开亡途，不替你们称哥哥自愿留下。其他三位同伴活着离开终场，他们如何保存反证、追船或照护他人，依自己仍有的权利与前面关系继续；没有一人替这道命令签名。"
+    },
+    {
+      "id": "unused-captive",
+      "requires": {
+        "flags": [
+          "captive_ready",
+          "unused_final_orders_voided"
+        ],
+        "notFlags": [
+          "mode_captive"
+        ]
+      },
+      "text": "未采用的日芯总纹已注销，预先被刻纹的同伴没有永久锁柱。强制准备时的恐惧与关系损失保留，取消执行不是补回一切。"
+    },
+    {
+      "id": "unused-erasure",
+      "requires": {
+        "flags": [
+          "erasure_ready",
+          "unused_final_orders_voided"
+        ],
+        "notFlags": [
+          "mode_rewritten"
+        ]
+      },
+      "text": "未采用的全城改写接线已断开。城没有发生这次全民覆写，先前真实完成的局部改写仍按修复记录存在。"
+    },
+    {
+      "id": "unused-granary",
+      "requires": {
+        "flags": [
+          "granary_ready",
+          "unused_final_orders_voided"
+        ],
+        "notFlags": [
+          "mode_granary"
+        ]
+      },
+      "text": "未采用的活城种名契已注销，留居者未被这份契约种入亡界。扩门的两份现粮与原型试运已经交付，不倒退为未发生。"
+    }
+  ],
+  "majorNpcs": [
+    {
+      "id": "quetzalcoatl",
+      "name": "羽蛇神 · 克察尔科亚特尔",
+      "title": "风与贵骨的求路者",
+      "description": "以风、旅人和羽蛇之形参与危机。知道求骨与重生的代价，教人共养、修路与有限返访，不替城民签约。",
+      "stances": [
+        {
+          "id": "wind-teacher",
+          "requires": {},
+          "title": "可以给方法，不能代替同意",
+          "text": "他能把已经备好的材料与有限工序接成道路。玉米、净水、本人意愿和真实劳动仍需由人提供。"
+        },
+        {
+          "id": "common-grid",
+          "requires": {
+            "flags": [
+              "sun_common_grid"
+            ]
+          },
+          "title": "有限工程已经建成",
+          "text": "共养网是能运作、有季节限制的真工程。它没有一劳永逸消除饥荒，也不许擅自索永久身体。"
+        },
+        {
+          "id": "return-road",
+          "requires": {
+            "flags": [
+              "return_road"
+            ]
+          },
+          "title": "归访可以有结束",
+          "text": "返访只到约定日落，由每位死者分别同意，活人不作替换身体。"
+        },
+        {
+          "id": "dark-order",
+          "requires": {
+            "flags": [
+              "sun_trial_bound"
+            ]
+          },
+          "title": "他见过那一轮",
+          "text": "他目睹索科被强绑，不以太阳确实亮起来为强迫辩护；最后权力仍由下令者承担。"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "gates",
+          "requires": {
+            "flags": [
+              "floodgates_open"
+            ]
+          },
+          "title": "水走过新的沟",
+          "text": "田闸已修，保住的实体与田权各按实际选择。"
+        },
+        {
+          "id": "shared-day",
+          "requires": {
+            "flags": [
+              "mode_shared"
+            ]
+          },
+          "title": "一季的下一日",
+          "text": "有限供养真正启动，下一季必须再谈。"
+        }
+      ]
+    },
+    {
+      "id": "tezcatlipoca",
+      "name": "烟镜神 · 特斯卡特利波卡",
+      "title": "照见权力，也能改写权力的镜",
+      "description": "能显露旧纹，也能覆写记忆。他的力量确实有效；何时治伤、何时夺取证言，取决于具体命令与授权。",
+      "stances": [
+        {
+          "id": "mirror-both-ways",
+          "requires": {},
+          "title": "镜有两种用途",
+          "text": "恢复本人愿取回的旧纹与强迫消去反对，都能由镜术做到。力量不自动判定谁该服从。"
+        },
+        {
+          "id": "first-erasure",
+          "requires": {
+            "flags": [
+              "mirror_first_erasure"
+            ]
+          },
+          "title": "三份证词曾被覆盖",
+          "text": "公共覆写已真执行，收益已付。危险烟痕与旧纹仍留在画院，不能说只是一个念头。"
+        },
+        {
+          "id": "restitution",
+          "requires": {
+            "flags": [
+              "mirror_restituted"
+            ]
+          },
+          "title": "旧纹曾被取回",
+          "text": "本人同意的修复已经发生，反证与住址分存；后续再改写仍是新的命令。"
+        },
+        {
+          "id": "world-rewritten",
+          "requires": {
+            "flags": [
+              "mode_rewritten"
+            ]
+          },
+          "title": "全城一致的记忆",
+          "text": "城内仍在网中的人遭到全民改写，离城者与独立原件未因此消失。未来记忆持续被拿来供日。"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "seed-key",
+          "requires": {
+            "flags": [
+              "mirror_seed"
+            ]
+          },
+          "title": "第一片试钥",
+          "text": "你们曾夺笔，抹去守卫对耀特尔的追查。"
+        },
+        {
+          "id": "frame-broken",
+          "requires": {
+            "flags": [
+              "mirror_frame_broken"
+            ]
+          },
+          "title": "一面公用镜已毁",
+          "text": "那场战斗真胜利，镜框真破；不是全世界的镜术都因此消亡。"
+        },
+        {
+          "id": "engine",
+          "requires": {
+            "flags": [
+              "mirror_engine"
+            ]
+          },
+          "title": "总镜原型在手",
+          "text": "具备改写总纹，但全城接线与最后启动仍须分别执行。"
+        }
+      ]
+    },
+    {
+      "id": "mictlan",
+      "name": "米克特兰双主",
+      "title": "米克特兰特库特利与米克特卡西瓦特尔",
+      "description": "亡界的两位统领共同接见你们，声音有时不一致。维护死者各自归途，亦会接下人真正打开的供粮契；神格不替具体契约免除强制责任。",
+      "stances": [
+        {
+          "id": "individual-dead",
+          "requires": {},
+          "title": "亡者不是同一种愿望",
+          "text": "乌娜、特莫与阿耶尔各有本名、去处和拒绝权，不能拿一份总代表签名涵盖所有死者。"
+        },
+        {
+          "id": "cargo-real",
+          "requires": {
+            "flags": [
+              "bone_cargo_delivered"
+            ]
+          },
+          "title": "第一批粮已经接下",
+          "text": "三份本城原粮与两壶旧窖水完成有限交换，双主不因此自动取得全城人身。"
+        },
+        {
+          "id": "finite-return",
+          "requires": {
+            "flags": [
+              "mode_return"
+            ]
+          },
+          "title": "一夜影身，日落归途",
+          "text": "只接同意归访者，到期返回，不把活人当替身。"
+        },
+        {
+          "id": "city-planted",
+          "requires": {
+            "flags": [
+              "mode_granary"
+            ]
+          },
+          "title": "被种下的是活城",
+          "text": "门已伸向留城住户与屋舍，姓名会成熟并被实际收取；离城者不在这份总契内。"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "names",
+          "requires": {
+            "flags": [
+              "bone_testimony"
+            ]
+          },
+          "title": "两段本名已核",
+          "text": "乌娜与特莫不再因一根错名贵骨互相替换。"
+        },
+        {
+          "id": "loan-paid",
+          "requires": {
+            "flags": [
+              "bone_loan_repaid"
+            ]
+          },
+          "title": "有限试贷已经结清",
+          "text": "若先前借过二粮，三粮交付已清该签，不再重复索取。"
+        },
+        {
+          "id": "door-wide",
+          "requires": {
+            "flags": [
+              "granary_ready"
+            ]
+          },
+          "title": "粮门已扩，契尚待令",
+          "text": "扩门与再送两粮已实做，是否执行活城种名由终局命令决定。"
+        }
+      ]
+    }
+  ]
+}

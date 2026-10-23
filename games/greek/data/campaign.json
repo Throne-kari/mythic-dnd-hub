@@ -1,0 +1,5141 @@
+{
+  "id": "the-unburied-city-four-chapters",
+  "title": "无葬之城",
+  "subtitle": "死者要一个名字，活人要一口面包，诸神要一句真话。",
+  "intro": "忒斯玛（Thesma）是一座原创的希腊神话城邦，并非历史遗址。外港战败后的第七夜，无名死者沿水渠归来，种粮在密封陶瓮里发黑，阿波罗神庙却宣布城邦已经得救。你们带着有限的银币、谷物和药材进入集市：可以先替死者争取葬仪，先修复活人的粮路，也可以追查是谁替神明说了谎。三桩危机没有唯一先后次序，却共享同一条水渠和同一群饥饿的居民。每次作出剧情决策或休息都会过去一天；第四十九日黎明，最后一批外海救援将离港，封城令与暗潮也将一起合拢。",
+  "initial": {
+    "resources": {
+      "coin": 18,
+      "grain": 14,
+      "medicine": 8
+    },
+    "world": {
+      "unrest": 3,
+      "taint": 2,
+      "day": 1
+    },
+    "flags": {},
+    "relations": {
+      "hearth": 0,
+      "temple": 0,
+      "council": 0
+    },
+    "companions": {
+      "melia": 0,
+      "ion": 0
+    }
+  },
+  "heroes": [
+    {
+      "id": "doros",
+      "name": "多罗斯",
+      "role": "持盾守卫 · 为城邦背过一次黑锅的人",
+      "hp": 32,
+      "maxHp": 32,
+      "ac": 16,
+      "attack": 6,
+      "damage": "1d8+4",
+      "range": 1,
+      "speed": 5,
+      "skills": {
+        "athletics": 6,
+        "insight": 2,
+        "medicine": 1,
+        "persuasion": 2,
+        "religion": 0,
+        "investigation": 1,
+        "survival": 3,
+        "stealth": 0
+      },
+      "color": "#c99153"
+    },
+    {
+      "id": "thaleia",
+      "name": "塔蕾娅",
+      "role": "港湾弓手 · 认识每条私运小路",
+      "hp": 25,
+      "maxHp": 25,
+      "ac": 14,
+      "attack": 6,
+      "damage": "1d6+4",
+      "range": 6,
+      "speed": 6,
+      "skills": {
+        "athletics": 3,
+        "insight": 3,
+        "medicine": 1,
+        "persuasion": 1,
+        "religion": 0,
+        "investigation": 4,
+        "survival": 6,
+        "stealth": 6
+      },
+      "color": "#7eab9b"
+    },
+    {
+      "id": "melia",
+      "name": "梅莉娅",
+      "role": "葬仪医者 · 坚持死者也应留下姓名",
+      "hp": 27,
+      "maxHp": 27,
+      "ac": 14,
+      "attack": 5,
+      "damage": "1d6+3",
+      "range": 3,
+      "speed": 5,
+      "skills": {
+        "athletics": 1,
+        "insight": 5,
+        "medicine": 7,
+        "persuasion": 3,
+        "religion": 5,
+        "investigation": 3,
+        "survival": 3,
+        "stealth": 1
+      },
+      "color": "#bca5d5"
+    },
+    {
+      "id": "ion",
+      "name": "伊昂",
+      "role": "神庙书记 · 害怕真话也害怕沉默",
+      "hp": 24,
+      "maxHp": 24,
+      "ac": 13,
+      "attack": 5,
+      "damage": "1d6+3",
+      "range": 5,
+      "speed": 5,
+      "skills": {
+        "athletics": 0,
+        "insight": 5,
+        "medicine": 2,
+        "persuasion": 6,
+        "religion": 7,
+        "investigation": 6,
+        "survival": 1,
+        "stealth": 2
+      },
+      "color": "#e2cd88"
+    }
+  ],
+  "maps": [],
+  "arcs": [
+    {
+      "id": "burial",
+      "title": "无名者的渡口",
+      "conflict": "葬仪不应由公民身份决定，但每一场葬仪都要消耗活人的粮食与药材。",
+      "summary": "替外港死者收回名字、处理归魂与污水，决定忒斯玛是否承认那些曾被它遗忘的人。梅莉娅关注尊严，议事会关注罪证；无人能把两者同时藏在土里。",
+      "stages": [
+        {
+          "id": "burial_names",
+          "title": "一张没有名字的告示",
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "告示上写着三十七名战死公民，告示下面却排着四十二个家庭。港口雇工、外邦划桨者和一名被逐出家门的女儿都不在名单上。卖油妇人递来沾盐的腕带，请你不要把儿子写成一个货损数字。梅莉娅把裹尸布铺在石阶上，准备逐一问姓名；议事会的税吏则提醒你：承认这些死者，就等于承认城邦欠下抚恤。远处的水沟传来敲击声，像有人用指节寻找自己的家门。你可以建立公开名册，也可以让沉默变成一笔收入。",
+          "options": [
+            {
+              "id": "record_names",
+              "label": "逐户登记全部死者（银币−2）",
+              "text": "你付给抄写员工钱，把公民与外邦人写在同一块蜡板上。梅莉娅终于叫出最后一个名字；家属愿意出庭作证，神庙也再不能称他们是无主的影子。",
+              "cost": {
+                "coin": 2
+              },
+              "effects": {
+                "flags": {
+                  "burial_names": true
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_pyre"
+            },
+            {
+              "id": "buy_silence",
+              "label": "出售遗漏的姓名（银币+4，污秽+2）",
+              "text": "税吏付了封口费。你把多出来的名字刮进火盆，得到一张秘密抚恤凭条。梅莉娅收起空白布带，不再让你碰她的笔。名字虽被删去，水沟里的敲击却更加清楚。",
+              "effects": {
+                "resources": {
+                  "coin": 4
+                },
+                "world": {
+                  "taint": 2
+                },
+                "flags": {
+                  "burial_erased": true
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -3
+                }
+              },
+              "next": "burial_pyre"
+            },
+            {
+              "id": "leave_names",
+              "label": "认可官方名单，终止调查",
+              "text": "你在告示下盖章。没有名字的家属被赶出阶梯，今后也无法凭这一卷名册领取柴薪。无名者的葬仪章目标失败；其他危机仍可继续，但他们不会忘记这一天。",
+              "effects": {
+                "flags": {
+                  "burial_c1_failed": true
+                },
+                "world": {
+                  "unrest": 3,
+                  "taint": 2
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_law"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "burial_pyre",
+          "title": "没有足够柴薪的夜晚",
+          "mapId": "necropolis",
+          "pointId": "pyre",
+          "text": "墓园的火台湿得点不着。家属没有争抢位置，只把一小撮头发放在裹布上，盼望亡者能认出自己的家。守墓人讲起帕特罗克洛斯向阿喀琉斯索求葬仪的旧歌，随即低头说明现实：够用的油、净布和看守口粮都要钱。水渠边的影子模仿着生前的动作，却没有一个伸手伤人。梅莉娅说可以做简朴而公开的共葬，不必仿效英雄的奢华；另一名祭吏却愿意用死者的骨片制成护符，替城墙换取一夜安静。两种办法都能点起火，烧掉的东西却不同。",
+          "options": [
+            {
+              "id": "common_pyre",
+              "label": "主持公开共葬（谷物−2、药材−1）",
+              "text": "你让家属按自己的方式告别，再由医者清理火台。没有昂贵的竞赛与战利品，每个人仍有一声被听见的名字。归魂后退到渠口，像在等最后一件遗物回来。",
+              "cost": {
+                "grain": 2,
+                "medicine": 1
+              },
+              "effects": {
+                "flags": {
+                  "burial_rites": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": 1
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "burial_water"
+            },
+            {
+              "id": "ration_pyre",
+              "label": "使用粮线的公共配给（须已建立配给）",
+              "text": "粥棚的车队送来不属于任何富户的柴薪和口粮。你节省药材，并让负责搬运的人吃饱。梅莉娅与粮仓女管事一起签名：死者与活人都不该靠施舍才获得位置。",
+              "requires": {
+                "flags": {
+                  "harvest_rations": true
+                }
+              },
+              "cost": {
+                "grain": 1
+              },
+              "effects": {
+                "flags": {
+                  "burial_rites": true
+                },
+                "world": {
+                  "taint": -1,
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_water"
+            },
+            {
+              "id": "bind_bones",
+              "label": "把骨片钉成城防护符（污秽+2）",
+              "text": "祭吏把铜钉打入骨片，归魂被迫伏在城门下。你收下护符酬金，却听见一个母亲说：我们已经为这座城划过船，死后还不能停止。梅莉娅把药箱背到离你更远的一侧。",
+              "effects": {
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "taint": 2,
+                  "unrest": 1
+                },
+                "flags": {
+                  "burial_bound": true
+                },
+                "relations": {
+                  "temple": -1,
+                  "council": 1
+                },
+                "companions": {
+                  "melia": -3
+                }
+              },
+              "next": "burial_water"
+            },
+            {
+              "id": "defend_pyre",
+              "label": "阻止盗墓人，以夺回的灯油完成葬仪（可战斗或交涉）",
+              "text": "两名持钩的盗墓人趁守夜人疲惫闯进火台，声称未登记的陪葬品属于无主财物。你挡在家属面前，收回灯油并点燃共葬之火；对方拔出短刃。这两个失去码头工作的雇工只想拿到下一顿饭：在六格内交涉，花2谷物或3银币可让两人一同撤离，不记为杀死；也可用武器击败他们。结束遭遇后才能继续剧情。",
+              "effects": {
+                "flags": {
+                  "burial_rites": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "encounter": [
+                {
+                  "id": "pyre_hook",
+                  "name": "盗墓钩手",
+                  "x": 17,
+                  "y": 6,
+                  "hp": 16,
+                  "maxHp": 16,
+                  "ac": 12,
+                  "attack": 4,
+                  "damage": "1d6+2",
+                  "range": 1,
+                  "parley": true
+                },
+                {
+                  "id": "pyre_lamp",
+                  "name": "窃油者",
+                  "x": 17,
+                  "y": 7,
+                  "hp": 13,
+                  "maxHp": 13,
+                  "ac": 12,
+                  "attack": 4,
+                  "damage": "1d4+2",
+                  "range": 3,
+                  "parley": true
+                }
+              ],
+              "next": "burial_water"
+            },
+            {
+              "id": "abandon_pyre",
+              "label": "封锁墓园，承认葬仪无法完成",
+              "text": "火台被铁链封住。你保住了现有物资，也让归魂继续等待。家属自行寻找水渠入口，守墓人不再替议事会关门。",
+              "effects": {
+                "flags": {
+                  "burial_c1_failed": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 3
+                },
+                "relations": {
+                  "hearth": -2
+                }
+              },
+              "next": "burial_law"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "burial_water",
+          "title": "被水带走的遗物",
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "蓄水池的底部卡着一只童鞋、一把断橹和装骨灰的裂瓮。守闸人承认，外港战败后有人命令他把无人认领的东西倒进排水沟，以免影响胜利祭典。如今灌溉渠与墓园的排水在这里相接，归魂堵住闸门，农田也得不到清水。你不必先解决粮荒才能取出遗物，但已经修复的水闸能少用一份药材。多罗斯把绳索系在腰间；梅莉娅要求先把下游居民叫开。若只追求眼前的顺畅，也可以把遗物连同积泥冲进贫民住的低地。",
+          "options": [
+            {
+              "id": "recover_relics",
+              "label": "清理遗物并净洗水槽（药材−2）",
+              "text": "每件遗物被摆上干燥石板，家属不用再从污泥里辨认亲人。你封住墓园排水的裂口，留下可供灌溉的净水支渠。粮线此后能直接利用这条水路。",
+              "cost": {
+                "medicine": 2
+              },
+              "effects": {
+                "flags": {
+                  "burial_water_clear": true
+                },
+                "world": {
+                  "taint": -2
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_law"
+            },
+            {
+              "id": "use_repaired_sluice",
+              "label": "借粮线修好的水闸打捞（药材−1）",
+              "text": "新闸板承住水压，打捞队无需站进污水。你省下一份药材，并把墓园排水永久引向独立的沉淀池。死者的遗物与农人的水终于各有归处。",
+              "requires": {
+                "flags": {
+                  "harvest_irrigation": true
+                }
+              },
+              "cost": {
+                "medicine": 1
+              },
+              "effects": {
+                "flags": {
+                  "burial_water_clear": true
+                },
+                "world": {
+                  "taint": -2
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_law"
+            },
+            {
+              "id": "flush_lowquarter",
+              "label": "冲向低地，保住上城水压（粮+2，污秽+3）",
+              "text": "上城的磨坊重新转动，磨坊主送来谷物。低地却响起急促的关窗声：遗物与污水涌进灶间，归魂跟着水寻找新的门。粮荒获得一小笔缓解，生者与死者都由更穷的人承担。",
+              "effects": {
+                "resources": {
+                  "grain": 2
+                },
+                "flags": {
+                  "burial_flooded": true
+                },
+                "world": {
+                  "taint": 3,
+                  "unrest": 2
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_law"
+            },
+            {
+              "id": "seal_relics",
+              "label": "把遗物砌进池底，放弃归还",
+              "text": "石灰掩住了最后一截腕带。水面暂时平静，地下的敲击却传到每口井里。无名者再也无法循着遗物归家，本章归还遗物的目标失败，后章仍须面对井底的声音。",
+              "effects": {
+                "flags": {
+                  "burial_c1_failed": true
+                },
+                "world": {
+                  "taint": 3
+                },
+                "relations": {
+                  "hearth": -2
+                }
+              },
+              "next": "burial_law"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "burial_law",
+          "title": "谁有权成为死者",
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "法庭书吏摊开两份法令。一份只替本次死者支付抚恤，另一份承认任何在城邦劳作的人都应获得基本葬仪。后者会削减议员家族的祭典预算，因此需要证词或你们自己的担保。梅莉娅没有要求你替她复仇，她要的是下一次战败后不必再挨家乞求姓名。若神谕线已经公开祭典造假，议员就失去以神意拒绝的借口；若你愿意把被束缚的亡者变成城邦财产，另一道门则会为你打开。印章悬在蜡面上，最后一次等待你的手。",
+          "options": [
+            {
+              "id": "guarantee_burial",
+              "label": "担保普遍葬仪权（银币−3）",
+              "text": "你以个人酬金为第一批经费作保，书吏把外邦人与奴仆写入条文。梅莉娅不再独自背着所有裹尸布。城邦没有得到赦免，却终于承担了下一次死亡的责任。",
+              "cost": {
+                "coin": 3
+              },
+              "effects": {
+                "flags": {
+                  "burial_accord": true
+                },
+                "world": {
+                  "unrest": -2,
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_citizens"
+            },
+            {
+              "id": "testimony_burial",
+              "label": "以公开的神谕证词迫使立法",
+              "text": "你逐项读出被篡改的祭典记账，议员不能再让神明替自己拒绝死者。普遍葬仪权由城邦出资；伊昂与梅莉娅共同见证，记录不再由任何一方单独保管。",
+              "requires": {
+                "flags": {
+                  "oracle_testimony": true
+                }
+              },
+              "effects": {
+                "flags": {
+                  "burial_accord": true
+                },
+                "world": {
+                  "unrest": -2,
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 2,
+                  "ion": 1
+                }
+              },
+              "next": "burial_citizens"
+            },
+            {
+              "id": "lease_dead",
+              "label": "签署亡者劳役契约（银币+5，污秽+3）",
+              "text": "你批准把归魂编入无薪城防，每年只许家属探望一夜。法庭称之为永久安葬，梅莉娅称之为第二次征兵。城门安静下来，契约上的名字却永远不能被划去。",
+              "effects": {
+                "resources": {
+                  "coin": 5
+                },
+                "flags": {
+                  "burial_dark": true
+                },
+                "world": {
+                  "taint": 3
+                },
+                "relations": {
+                  "council": 3,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -4
+                }
+              },
+              "next": "burial_citizens"
+            },
+            {
+              "id": "refuse_burial_law",
+              "label": "撤回担保，让名册失去法律效力",
+              "text": "你离开时，法庭把名册收入不公开的档案。已经完成的告别仍属于家属，但下一批无名者将再次被拒之门外。葬仪改革失败，梅莉娅决定自行守住墓园。本章制度目标告败，已发生的告别、断粮或封存仍保留；下一章要在这些后果上继续。",
+              "effects": {
+                "flags": {
+                  "burial_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_foundation"
+            }
+          ],
+          "chapter": 2
+        },
+        {
+          "id": "burial_citizens",
+          "title": "活人的名册",
+          "chapter": 2,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "法令印好以后，税吏提出一个新条件：领取葬费的家庭必须先证明自己有权住在城里。妮莎捧着儿子的腕带，不愿再靠儿子的死换一张居留纸。梅莉娅指出，第一夜没登记的人即使补写姓名，也无法重新得到那场已经错过的告别。多罗斯的旧军籍却能替整条街担保。谁可领取水、粮与法律保护，开始比谁能下葬更难回答。你可以开放按居住登记的资格，也可以把新法限于旧公民，或让每个家庭自行组织互保。",
+          "options": [
+            {
+              "id": "citizen_residence",
+              "label": "按实际居住登记，不问出身（银币−1）",
+              "text": "妇女、外邦人与无地雇工可独立登记，不必附在男性家主名下；儿童由照护人登记，成年后自行确认。旧公民的祭典补贴被削减，议员把反对票记在你名下。",
+              "effects": {
+                "flags": {
+                  "burial_citizenship": "all"
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "burial_reparations",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "citizen_guilds",
+              "label": "让邻里互保，先给一年居留",
+              "text": "每五户互相担保，共用水与葬仪经费，妇女也能成为担保人。一年后是否续期由包括新居民的户会投票；议员无权单方撤销，代价是无邻里接纳的人仍可能被遗漏。",
+              "effects": {
+                "flags": {
+                  "burial_citizenship": "families"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "burial_reparations"
+            },
+            {
+              "id": "citizen_old_roll",
+              "label": "只承认旧公民，换取守城税款（银币+3）",
+              "text": "旧公民承诺立即出资维修城门，议员把这称作可以执行的改革。外邦运粮人仍不能为自己投票，妮莎不再允许税吏在她的油摊避雨。",
+              "effects": {
+                "flags": {
+                  "burial_citizenship": "citizen"
+                },
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_reparations"
+            },
+            {
+              "id": "suspend_census",
+              "label": "暂缓户籍争议，只保急救",
+              "text": "你保留无差别急救，却无法落实居留与葬费的资格。家庭继续被旧官吏逐个盘问；下章低地的索赔人会把这次拖延算进账。",
+              "effects": {
+                "flags": {
+                  "burial_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "burial_foundation"
+            }
+          ]
+        },
+        {
+          "id": "burial_reparations",
+          "title": "多罗斯的旧命令",
+          "chapter": 2,
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "塔蒙带来当年倒弃遗物的书面命令，末尾的执行签名是多罗斯。那时他奉命把尸体与杂物迅速清出祭道，换来让伤兵先通过城门的空隙。命令救过一批人，也使另一批家庭永远认不齐骨殖。多罗斯不求你宣布他完全无罪，只问判决能否同时保留这两件事。家属要求赔偿和揭露下令者；部分退伍兵则怕整个连队替议员顶罪。怎样审这个人，将决定以后是追命令链，还是只找最容易抓住的一双手。",
+          "options": [
+            {
+              "id": "pay_reparations",
+              "label": "公开命令链，设立家属赔偿基金（银币−2）",
+              "text": "多罗斯承认自己的签名，议员也被列为共同责任人。赔偿不要求家属先说原谅；委员会由受害家庭与退伍兵各推一半，账册公开，贫穷家庭优先领取。",
+              "effects": {
+                "flags": {
+                  "burial_reparation": "paid",
+                  "doros_record": true
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_foundation",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "offer_amnesty",
+              "label": "以真实供述换有限赦免",
+              "text": "多罗斯交出名单与上级指令，刑罚暂停一年，期满由受害者代表复核。你避免连队立即哗变，却没有拿出赔偿；妮莎说，她需要的是不再被催租的屋顶。",
+              "effects": {
+                "flags": {
+                  "burial_reparation": "amnesty",
+                  "doros_record": true
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                },
+                "companions": {
+                  "melia": -1
+                }
+              },
+              "next": "burial_foundation"
+            },
+            {
+              "id": "family_tribunal",
+              "label": "交给家属即时审判，绕开旧法庭",
+              "text": "愤怒的家属获得决定刑罚的权力，退伍兵拒绝在没有辩护人的台阶上作证。你让报复第一次不再只朝向弱者，也把下一轮报复的门打开。多罗斯交保并承诺随时归庭，仍可参与救援，议员趁乱藏走上级副本。",
+              "effects": {
+                "flags": {
+                  "burial_reparation": "revenge",
+                  "doros_summoned": true
+                },
+                "world": {
+                  "unrest": 3,
+                  "taint": 1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -3
+                },
+                "companions": {
+                  "melia": -1
+                }
+              },
+              "next": "burial_foundation"
+            },
+            {
+              "id": "hide_command",
+              "label": "秘密送走执行人，放弃公开追责",
+              "text": "你替多罗斯准备出城通行，却让家属失去查问命令链的机会。他拒绝离开，但城邦已经知道你替谁遮过一把伞。",
+              "effects": {
+                "flags": {
+                  "burial_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "burial_foundation"
+            }
+          ]
+        },
+        {
+          "id": "burial_foundation",
+          "title": "河底的第一位守门人",
+          "chapter": 3,
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "第三次退潮露出闸下石契：建城者没有埋葬渡工俄瑞斯，而把他的姓名钉在护岸石里，请他“守到下一位自愿者接手”。城邦后来删掉了自愿二字。塔蒙叫出石上的名字，水面确实出现一条无法投影的渡船；没有被归还遗物的影子却仍被拦在岸边。书记能证明删改，不能命令那条船渡人。释放俄瑞斯会失去一段真正有效的护堤，续约又需要谁承担不能离岸的代价。梅莉娅拒绝把自己的沉默当作同意：她要先看见可拒绝的契约。",
+          "options": [
+            {
+              "id": "release_founder",
+              "label": "以净布与谷物解除被篡改的守岸誓（谷物−1、药材−1）",
+              "text": "你归还名字，祭上送行食物，并公开承认护岸将失去神力。铜钉脱落后，渡船第一次驶出石墙的阴影；岸边仍有未完成告别的魂，人的伤害没有随一场仪式消失。农人必须另建堤岸或搬往高地。",
+              "effects": {
+                "flags": {
+                  "burial_founding": "released"
+                },
+                "world": {
+                  "taint": -2
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_nightwatch",
+              "cost": {
+                "grain": 1,
+                "medicine": 1
+              }
+            },
+            {
+              "id": "renew_founder_chain",
+              "label": "续下护岸誓，把守堤期限延为无穷",
+              "text": "低地尚未撤离的老人请求你别先拆掉唯一防潮屏障。你暂保他们的房屋，却把俄瑞斯重新钉住，省下的修堤钱成为实际利益。亡者在每次涨潮时会痛呼，家属把声音录进新的索赔证词。",
+              "effects": {
+                "flags": {
+                  "burial_founding": "renewed"
+                },
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "taint": 3
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -1
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_nightwatch"
+            },
+            {
+              "id": "deny_river_claim",
+              "label": "拒绝替旧誓背书，只做石刻拓片",
+              "text": "你不立新约，也不宣称渡船是幻觉。俄瑞斯仍守在原位，护岸没有失效，却逐日开裂。拓片让下章的人知道发生过什么，代价是今天无人获得真正释放。",
+              "effects": {
+                "flags": {
+                  "burial_founding": "denied"
+                },
+                "world": {
+                  "taint": 1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "burial_nightwatch"
+            },
+            {
+              "id": "break_founder_stone",
+              "label": "砸断石契，失去完整的渡口名录",
+              "text": "石裂后急流冲走一段旧名录，临时木堤替你挡下一次小潮。你破坏了束缚的物件，却没完成解除誓言所需的承认与送行；下一章必须面对更难辨认的归魂。",
+              "effects": {
+                "flags": {
+                  "burial_founding": "broken",
+                  "burial_c3_failed": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 3
+                }
+              },
+              "next": "burial_memorial"
+            }
+          ]
+        },
+        {
+          "id": "burial_nightwatch",
+          "title": "愿意留下的夜哨",
+          "chapter": 3,
+          "mapId": "necropolis",
+          "pointId": "pyre",
+          "text": "俄瑞斯的渡口显现后，墓园第一次有死者清楚拒绝你的呼唤。一名老守卫说，他愿在最后大潮替孙女再守一夜，却不愿用永远交换。骨符祭吏建议把所有影子再次编入城防，保证即使农人撤去修堤也不留缺口。梅莉娅提出另一份契约：逐魂询问、准许拒绝、每次日出都可离去，活人不得继承这份劳役。只有留下生前遗物与姓名的魂才能清楚表示意愿；无法辨认者应先告别，不能替他们点头。选择将影响最终城门是否依赖死者。",
+          "options": [
+            {
+              "id": "ask_nightwatch_consent",
+              "label": "只接受可辨认死者的一夜自愿守望（药材−1）",
+              "text": "你用净布隔开受污骨符，把每个答复记录给家属。愿留下的魂会在日出自行消失，守卫必须准备接班；家属只见证，不代为答应；梅莉娅也再次保留自己的拒绝。",
+              "effects": {
+                "flags": {
+                  "burial_nightwatch": "consent"
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": 1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_lowquarter",
+              "cost": {
+                "medicine": 1
+              }
+            },
+            {
+              "id": "chain_nightwatch",
+              "label": "把无法拒绝的骨符编为常备守卫",
+              "text": "守城官保证粮工可以全部回田，受潮侵逼的住户支持这道命令。铜链把愿留与不愿留的魂锁在一起，遗属再也不能带走骨殖。守卫的孙女第一晚就来剪链，随后被你的人赶开。",
+              "effects": {
+                "flags": {
+                  "burial_nightwatch": "chain",
+                  "burial_bound": true
+                },
+                "resources": {
+                  "grain": 2
+                },
+                "world": {
+                  "taint": 3,
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -3
+                }
+              },
+              "next": "burial_lowquarter"
+            },
+            {
+              "id": "dismiss_nightwatch",
+              "label": "拒绝征用任何亡者，改由活人轮值（谷物−1）",
+              "text": "你尊重拒绝，也让活人多承担一班危险的堤岗。没有魂会为你挡住矛与潮水，替班人得到口粮与离岗权。梅莉娅赞成这项底线，但不声称它比一夜自愿守望更容易。",
+              "effects": {
+                "flags": {
+                  "burial_nightwatch": "empty"
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "burial_lowquarter",
+              "cost": {
+                "grain": 1
+              }
+            },
+            {
+              "id": "sell_nightwatch_tokens",
+              "label": "出售骨符偿付防潮工钱",
+              "text": "工人拿到现钱，骨符却被不同家族锁进私宅。谁能释放亡者变成新的私权，本章统一渡口的目标失败。",
+              "effects": {
+                "flags": {
+                  "burial_nightwatch": "dispersed",
+                  "burial_c3_failed": true
+                },
+                "resources": {
+                  "coin": 2
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 2
+                }
+              },
+              "next": "burial_memorial"
+            }
+          ]
+        },
+        {
+          "id": "burial_lowquarter",
+          "title": "低地的家不是代价一词",
+          "chapter": 3,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "低地居民把被水泡坏的床板抬到集市。如果第一章冲下过遗物，他们辨出你旧命令的封印；如果水渠已经清理，仍有战败夜被掩埋的尸物使房屋不能住。妮莎拒绝只收一句“为了全城”。塔蕾娅测过高地空台，可搭七十二户临时屋，但要补偿原来的牧人，并确保外邦家庭也能入住。家属要求先清污，再谈是否在下一次大潮弃屋。你可以承担修复与搬迁费用，也可以宣告低地是永远为上城蓄洪的地方。",
+          "options": [
+            {
+              "id": "repair_lowquarter",
+              "label": "清污并向受损家庭赔偿（银币−2、药材−1）",
+              "text": "受害家庭自行选择修屋或迁居，高地牧人取得共用井与轮牧补偿。已毁的遗物不再伪造回来，死亡也不从名册删去；赔偿只确认具体责任，给下次弃屋留下真正的选择。",
+              "effects": {
+                "flags": {
+                  "burial_restitution": "repaired",
+                  "highland_consent": true
+                },
+                "world": {
+                  "taint": -2,
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "burial_memorial",
+              "cost": {
+                "coin": 2,
+                "medicine": 1
+              }
+            },
+            {
+              "id": "seize_elite_houses",
+              "label": "征用空置庄园安置低地家庭",
+              "text": "没有人被赶出正在住的房屋，空庄园被用于安置。原地主拒绝承认征用，要求亲族来夺回；你给家属立即安全，也把土地争议留给下章的武装与法院。",
+              "effects": {
+                "flags": {
+                  "burial_restitution": "vengeance",
+                  "highland_consent": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -3
+                }
+              },
+              "next": "burial_memorial"
+            },
+            {
+              "id": "make_lowquarter_basin",
+              "label": "把低地定为强制蓄洪区（银币+3）",
+              "text": "上城纳税户立即付钱，磨坊与军粮仓免遭下次小潮。低地家庭只能凭旧公民证换搬迁补助，外邦住户被要求自行寻找去处；他们开始组织不受城门批准的渡船。",
+              "effects": {
+                "flags": {
+                  "burial_restitution": "unpaid"
+                },
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "unrest": 3,
+                  "taint": 1
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_memorial"
+            },
+            {
+              "id": "withdraw_lowquarter_plan",
+              "label": "承认无法安置所有家庭，让居民自行决定",
+              "text": "你不签强制蓄洪令，也拿不出足够修复。住户可继续留下，但下章没有已经落实的高地接纳协议；他们将自己承担撤离风险。",
+              "effects": {
+                "flags": {
+                  "burial_restitution": "unsettled",
+                  "burial_c3_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "burial_memorial"
+            }
+          ]
+        },
+        {
+          "id": "burial_memorial",
+          "title": "最后一块可搬走的碑",
+          "chapter": 4,
+          "mapId": "necropolis",
+          "pointId": "pyre",
+          "text": "最大潮汐还未到，墓园已经开始拆下容易倒塌的石像。工头说碑石能堵住一段军仓缺口，家属说那上面是他们仅存的名字。若早先刮掉过姓名，空白不能由今天的抄写假造补齐；若遗物被冲走，墓标只能记录失踪，不可宣称遗体已经找到。塔蕾娅提出把便携名册在第三章确已订船时带上船，留下石碑则需要活人守护。你面对的不是记忆与生存谁更高贵，而是谁有权同意拆掉自己的纪念物，以及没有人来认领的空位由谁照看。",
+          "options": [
+            {
+              "id": "keep_memorial_ground",
+              "label": "以木堤替代拆碑，保留原地纪念（银币−1）",
+              "text": "家属可自行选择搬走便携名牌，未认领者由墓园共同照看。缺名仍标未知，不借伪造完成一份漂亮的全名单；木堤使军仓有临时替代，却要多用活人巡守。",
+              "effects": {
+                "flags": {
+                  "burial_memorial": "kept"
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "burial_guardian",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "carry_memorial_aboard",
+              "label": "让自愿迁徙的家庭携名册与遗物登船（银币−1）",
+              "text": "船位不按公民印分配，妇孺与外邦家属同样可带一件纪念物，拒绝离去者的石碑不得拆。船长腾出原本装盐鱼的舱格，接收岛同意划一块共用悼念地，但要求迁居者共同维护排水。",
+              "effects": {
+                "flags": {
+                  "burial_memorial": "aboard"
+                },
+                "relations": {
+                  "hearth": 2
+                }
+              },
+              "next": "burial_guardian",
+              "cost": {
+                "coin": 1
+              },
+              "requires": {
+                "any": [
+                  {
+                    "flags": {
+                      "harvest_fleet": "public"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "harvest_fleet": "debt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "quarry_memorial_stones",
+              "label": "拆无主碑护军仓，留下统一数字碑（银币+2）",
+              "text": "工头完成防线，军粮免遭这一轮渗水。无人认领或先前被删名者的碑先被拆掉，只剩一个统一伤亡数字；家属在新军仓墙上刮回自己的字，守卫奉命把字抹去。",
+              "effects": {
+                "flags": {
+                  "burial_memorial": "erased"
+                },
+                "resources": {
+                  "coin": 2
+                },
+                "world": {
+                  "taint": 2,
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "burial_guardian"
+            },
+            {
+              "id": "lose_memorial_store",
+              "label": "放弃集中保管，让各家冒险抢救",
+              "text": "家属各自搬运，能带走多少取决于体力与亲友。城邦放弃统一渡亡与纪念的责任，仍可在其他线上为活人寻找安全，但无法再保证死者的去处。",
+              "effects": {
+                "flags": {
+                  "burial_c4_failed": true,
+                  "burial_failed": true,
+                  "burial_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "burial_guardian",
+          "title": "她可以拒绝的守桥约",
+          "chapter": 4,
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "梅莉娅独自看过渡船后，向你提出一份属于她自己的请求：若不再强迫其他魂，她愿在终局闭门后担任十年守桥人，每年都要由她本人重新确认，任何一年都可退出；她拒绝让孩子继任。另一种办法是让活人轮值，她只做医者。多罗斯则愿公开自己的执行签名，交出军令解释权，塔蕾娅也愿替迁居者维护返航。任何家属、祭司或旧日恩情都不能替他们同意，今日只接受已经由本人说出的方案。守桥还需要谷物与净布，否则俄瑞斯的旧契会继续索要没有答应过的人。",
+          "options": [
+            {
+              "id": "accept_melia_watch",
+              "label": "接受梅莉娅本人提出的可退出守桥约（药材−1）",
+              "text": "梅莉娅亲签一年一确认的十年上限，户会只保管她可随时撤回的副本。她将在故事终局后留桥，期间仍同行完成救援。你承担净布费用，最终必须释放强制役魂，不能把她的自愿当作继续征用别人的借口。",
+              "effects": {
+                "flags": {
+                  "burial_guardian": "melia_burden",
+                  "melia_explicit_consent": true
+                },
+                "companions": {
+                  "melia": 1
+                },
+                "relations": {
+                  "temple": 1
+                }
+              },
+              "next": "burial_final_rites",
+              "cost": {
+                "medicine": 1
+              },
+              "requires": {
+                "flags": {
+                  "burial_nightwatch": "consent"
+                }
+              }
+            },
+            {
+              "id": "accept_doros_confession",
+              "label": "接受多罗斯公开自责，改由活人轮值",
+              "text": "多罗斯在家属面前认出自己的签名；遗失的上级证据不被补造。他将刑事判断交给有上诉权的法庭，救援期间随时归庭。梅莉娅保留医者身份，守桥由领口粮的志愿者轮值，未找到的人仍列失踪。",
+              "effects": {
+                "flags": {
+                  "burial_guardian": "doros_confession"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 1,
+                  "ion": 1
+                }
+              },
+              "next": "burial_final_rites"
+            },
+            {
+              "id": "ask_melia_lighthouse",
+              "label": "接受梅莉娅自愿留岸的灯塔救援方案",
+              "text": "梅莉娅愿在终局后留岸为拒迁者行医，返航船必须每月来接她，任何时候可要求离去。塔蕾娅负责航路，接收岛以修港劳务换航运补贴；你不能把没有船位的人称为自愿留守。",
+              "effects": {
+                "flags": {
+                  "burial_guardian": "melia_shore",
+                  "melia_explicit_consent": true
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "burial_final_rites",
+              "requires": {
+                "any": [
+                  {
+                    "flags": {
+                      "harvest_fleet": "public"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "harvest_fleet": "debt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "appoint_doros_regent",
+              "label": "让多罗斯掌管堤军，不追问执行旧案",
+              "text": "多罗斯接受临时指挥以保伤兵与军粮，拒绝宣布自己无罪。你暂时阻断公开追责，退伍兵因此稳定，家属失去在关城前质问他的最后一次集会；之后能否重启由最终制度决定。",
+              "effects": {
+                "flags": {
+                  "burial_guardian": "doros_regent"
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -2,
+                  "ion": -1
+                }
+              },
+              "next": "burial_final_rites"
+            },
+            {
+              "id": "refuse_guardian_settlement",
+              "label": "拒绝任何共同守桥约，各自收好遗物",
+              "text": "你没有强迫梅莉娅，却也没有建立轮值。没有承担者的渡口逐渐隐去，部分归魂留在水边；本章渡亡目标失败，其他线仍须完成活人的安排。",
+              "effects": {
+                "flags": {
+                  "burial_c4_failed": true,
+                  "burial_failed": true,
+                  "burial_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "burial_final_rites",
+          "title": "城门这一侧与河的另一侧",
+          "chapter": 4,
+          "mapId": "necropolis",
+          "pointId": "pyre",
+          "text": "最后一次送行不再是第一夜的重复。俄瑞斯的旧誓、自愿留下的夜哨、被迫钉住的骨符和仍失去名字的影子，都在同一条岸边等待不同的决定。解除役使要归还骨符、承认被删的词，并让无法辨认的魂也可以离开，不要求他们先替城邦证明用途。若梅莉娅答应守桥，她的条件是无人被强留；若有人想续用亡者军团，就必须知道这会毁掉她已提出的方案。神圣誓约确实有效，人的法令只能决定要不要继续向它借力，不能让代价从未发生。",
+          "options": [
+            {
+              "id": "free_all_bound_dead",
+              "label": "交还骨符与渡资，终止强制役魂（银币−1、药材−2）",
+              "text": "铜钉逐一熄灭，愿渡者不再被守岸契约挡住。失落姓名仍记录为未知，烧掉的原物不可能归来；这场仪式释放被拘的魂，不替活人免除赔偿。护岸失去亡者支撑，必须依靠堤、船或高地安置。",
+              "effects": {
+                "flags": {
+                  "burial_final": "free"
+                },
+                "world": {
+                  "taint": -3
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "complete",
+              "cost": {
+                "coin": 1,
+                "medicine": 2
+              },
+              "requires": {
+                "not": {
+                  "flags": {
+                    "harvest_seed_quality": "ash"
+                  }
+                }
+              }
+            },
+            {
+              "id": "free_ash_bound_dead",
+              "label": "释放役魂并以储粮补偿骨灰田枯萎（银币−1、谷物−5、药材−2）",
+              "text": "你拆下铜钉，骨灰田的快苗也当场枯萎，不能再向死者借收成。五袋储粮发给依赖该田的家庭，净布与渡资供魂离去；军属看到你真的支付了释放的价格，梅莉娅不替已经吃下的冷麦宣称无害。",
+              "requires": {
+                "flags": {
+                  "harvest_seed_quality": "ash"
+                }
+              },
+              "cost": {
+                "coin": 1,
+                "grain": 5,
+                "medicine": 2
+              },
+              "effects": {
+                "flags": {
+                  "burial_final": "free",
+                  "ash_harvest_relinquished": true
+                },
+                "world": {
+                  "taint": -3
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 2
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "confirm_voluntary_covenant",
+              "label": "只续可退出的一夜守望，释放其余骨符",
+              "text": "每个清楚表示同意的魂最多守到下一次日出；家属可见证，不能代答。俄瑞斯被解除旧约，未识者也不被强迫。梅莉娅若已本人答应，只在终局后按可退出条款守桥，不继承对亡者的支配权。",
+              "effects": {
+                "flags": {
+                  "burial_final": "covenant"
+                },
+                "world": {
+                  "taint": -2
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": 1
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "complete",
+              "requires": {
+                "flags": {
+                  "burial_nightwatch": "consent"
+                },
+                "not": {
+                  "flags": {
+                    "harvest_seed_quality": "ash"
+                  }
+                }
+              }
+            },
+            {
+              "id": "perpetuate_dead_legion",
+              "label": "把守岸与城防合为永久亡者军团",
+              "text": "你保住最便宜又不会逃岗的防线，仍在低地的军属支持立刻续约。所有拒绝失效，骨符持有人可调度他们。梅莉娅公开撤回任何守桥或留岸承诺，带走自己的药箱；夜哨孙女开始组织偷取骨符的抵抗。",
+              "effects": {
+                "flags": {
+                  "burial_final": "chain",
+                  "melia_consent_revoked": true
+                },
+                "world": {
+                  "taint": 4,
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 3,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -4
+                }
+              },
+              "next": "complete",
+              "requires": {
+                "any": [
+                  {
+                    "flags": {
+                      "burial_nightwatch": "chain"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "burial_bound": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "seal_necropolis_autonomy",
+              "label": "封闭墓园，由家属自治，不再提供城防",
+              "text": "每个家属团体保管自己的遗物和仪式，不要求统一命令。无主影子仍在围墙外徘徊，城邦不得动员他们；共同葬仪权退回局部自治，哪一户没有家属仍是一道未解决的缺口。",
+              "effects": {
+                "flags": {
+                  "burial_final": "sealed"
+                },
+                "world": {
+                  "taint": 1
+                },
+                "relations": {
+                  "hearth": -1,
+                  "temple": 1
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "abandon_final_ferry",
+              "label": "关上墓门，承认统一渡亡失败",
+              "text": "你保护仍能自救的家属离开，却没有把被役的魂与无主遗物安置完。关门后水下仍会敲击，别的成果也不能替这项失败补写一个圆满告别。",
+              "effects": {
+                "flags": {
+                  "burial_c4_failed": true,
+                  "burial_failed": true,
+                  "burial_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harvest",
+      "title": "空穗的母亲",
+      "conflict": "今天吃掉种粮，还是让今天的人替明年挨饿？谁可以决定牺牲哪一户？",
+      "summary": "追查失踪种粮、修复受污灌溉、建立配给，最后决定土地由谁播种。德墨忒耳的神话提供饥荒的回声，实际责任仍在人间。",
+      "stages": [
+        {
+          "id": "harvest_ledger",
+          "title": "双层粮簿",
+          "mapId": "granary",
+          "pointId": "ledger",
+          "text": "粮仓里传来干燥的沙沙声，打开的陶瓮却只有染黑的谷壳。女管事克勒奥给你看两份账：公示账说所有种粮都已送往德墨忒耳祭田，私账却盖着议员庄园的封印。她不敢把失败全怪给女神，因为搬运工亲眼看见粮船在夜里改道。排队的居民正在争论是否该吃掉最后一瓮种子，年轻农人则攥着空荡荡的播种袋。你可以为调查支付工钱，让粮仓照常开门；也可以趁众人饥饿，把仓库变成属于你的一支队伍。",
+          "options": [
+            {
+              "id": "audit_grain",
+              "label": "付薪核账，追索失踪种粮（银币−2）",
+              "text": "工人依次核对封印与船号，找到被转卖的种粮收据。克勒奥保留仓库钥匙，愿意把证据交给公开法庭。你同时留出一瓮种子，承诺它不会被悄悄装进富户的车。",
+              "cost": {
+                "coin": 2
+              },
+              "effects": {
+                "flags": {
+                  "harvest_evidence": true,
+                  "harvest_seed": true
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "harvest_sluice"
+            },
+            {
+              "id": "seize_grain",
+              "label": "武装征粮，以效忠换口粮（粮+4）",
+              "text": "你把粮仓封印换成自己的记号，优先发粮给愿意替你巡逻的人。克勒奥被迫交出钥匙，没排上队的农户砸碎了空瓮。城邦获得粮食，也学会把面包当成命令。",
+              "effects": {
+                "resources": {
+                  "grain": 4
+                },
+                "flags": {
+                  "harvest_seized": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 1
+                },
+                "relations": {
+                  "hearth": -2,
+                  "council": 1
+                },
+                "companions": {
+                  "melia": -1
+                }
+              },
+              "next": "harvest_sluice"
+            },
+            {
+              "id": "accept_empty_ledger",
+              "label": "接受空账，把饥荒全推给神罚",
+              "text": "封印没有打开，种粮船也不会被追回。克勒奥独自面对队伍，愤怒很快落在最没有权势的搬运工身上。粮路调查失败，你仍可处理墓园与神庙。",
+              "effects": {
+                "flags": {
+                  "harvest_c1_failed": true
+                },
+                "resources": {
+                  "grain": -3
+                },
+                "world": {
+                  "unrest": 3
+                },
+                "relations": {
+                  "hearth": -2
+                }
+              },
+              "next": "harvest_seedtime"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "harvest_sluice",
+          "title": "不能只向天空求雨",
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "引向祭田的水闸被一根折断的船桨顶住。渠壁上刻着对德墨忒耳的祈求，旁边却是多年没有修补的裂缝。农人伊萨说，女神或许会哀伤，但坏闸门不是她凿穿的。下游有受污的墓园排水，上游是议员家的私渠，水只够同时维持其中两处。你可以雇人修闸并隔开污水，也可以把私渠的水抢来；若葬仪队已经清理遗物，现成的净水支渠会大幅减轻工程。这里不是证明凡人胜过神明，而是决定谁会为一块新闸板付钱。",
+          "options": [
+            {
+              "id": "repair_irrigation",
+              "label": "雇工修闸并隔开污水（银币−2、药材−1）",
+              "text": "你把新闸板嵌进石槽，替污水另开沉淀沟。第一股清水流向共同祭田，工人得到工钱而非一张来年兑现的许诺。墓园打捞队此后也能借用这座稳固水闸。",
+              "cost": {
+                "coin": 2,
+                "medicine": 1
+              },
+              "effects": {
+                "flags": {
+                  "harvest_irrigation": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "harvest_rations"
+            },
+            {
+              "id": "share_clean_water",
+              "label": "接入葬仪线清出的净水渠（银币−1）",
+              "text": "你沿着已被封好的墓园裂口铺设陶管，只需支付接管工钱。遗物得到归还之后，农田终于能使用同一片水源。克勒奥记下两队共同签署的维护日期。",
+              "requires": {
+                "flags": {
+                  "burial_water_clear": true
+                }
+              },
+              "cost": {
+                "coin": 1
+              },
+              "effects": {
+                "flags": {
+                  "harvest_irrigation": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 2
+                }
+              },
+              "next": "harvest_rations"
+            },
+            {
+              "id": "steal_sacred_water",
+              "label": "截断私渠与低地共用的水源（粮+3）",
+              "text": "祭田立刻有了水，低地的磨坊却停下转轮。你从庄园换回三袋谷物；原本共用渠道的居民只能向你的守卫买水。收成尚未出现，新的债主已经站到井边。",
+              "effects": {
+                "resources": {
+                  "grain": 3
+                },
+                "flags": {
+                  "harvest_water_monopoly": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 1
+                },
+                "relations": {
+                  "council": -1,
+                  "hearth": -2
+                }
+              },
+              "next": "harvest_rations"
+            },
+            {
+              "id": "abandon_sluice",
+              "label": "放弃水闸，让农人各自求生",
+              "text": "农人带走最后几件工具。水渠继续渗漏，播种期将在争抢中耗尽。粮章目标失败，剩余种子只能留给以后迁走的人。",
+              "effects": {
+                "flags": {
+                  "harvest_c1_failed": true
+                },
+                "world": {
+                  "unrest": 3
+                },
+                "resources": {
+                  "grain": -2
+                }
+              },
+              "next": "harvest_seedtime"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "harvest_rations",
+          "title": "种子与面包",
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "面包摊前没有喊价，只有一把用于分割面团的钝刀。克勒奥提出按户配给，连外邦工人也算一份，但第一天必须先拿出你们携带的粮食，才能让人相信规则不是另一种等待。祭司提醒人们：旧歌里，德墨忒耳让种子留在地下，连诸神也会失去人间的祭享。伊昂听见的却是另一个问题：若神庙仍领着全额供品，它凭什么要求孩子空着肚子？你可以建立公开粥棚，或把粮食交给只服从你的人。神谕线的公开证词能让祭司拿出自己的储备。",
+          "options": [
+            {
+              "id": "public_rations",
+              "label": "设公开配给与粥棚（谷物−3，随后追回粮+7）",
+              "text": "你先用自带粮食开锅，再请每一位送货人当场核对粮袋与收据，不把旧账完整当作前提。愿归还私藏粮的船主换回免遭私刑的保证，追回粮食超过第一锅粥的消耗。种粮另记，不把先前被征用的口粮说成已经赔偿。",
+              "cost": {
+                "grain": 3
+              },
+              "effects": {
+                "resources": {
+                  "grain": 7
+                },
+                "flags": {
+                  "harvest_rations": true
+                },
+                "world": {
+                  "unrest": -2
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "melia": 1,
+                  "ion": 1
+                }
+              },
+              "next": "harvest_seedtime"
+            },
+            {
+              "id": "temple_rations",
+              "label": "用神谕造假证词迫使神庙开仓",
+              "text": "神庙打开祭粮库，把需要供奉的数量与实际存粮一起写在门口。你无需再拿出随身口粮。伊昂亲手把第一碗送给曾被神庙赶走的外邦孩子。",
+              "requires": {
+                "flags": {
+                  "oracle_testimony": true
+                }
+              },
+              "effects": {
+                "resources": {
+                  "grain": 6
+                },
+                "flags": {
+                  "harvest_rations": true
+                },
+                "world": {
+                  "unrest": -2
+                },
+                "relations": {
+                  "hearth": 2,
+                  "temple": -1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "harvest_seedtime"
+            },
+            {
+              "id": "loyalty_bread",
+              "label": "凭效忠木牌领粮（银币+3、动乱+2）",
+              "text": "领粮的人必须交出一名家属为守卫服役，或支付木牌费。粮食没有变少，只是饥饿变得更听话。梅莉娅在你身后的名册上看到同一个家庭第二次被要求献出一个人。",
+              "effects": {
+                "resources": {
+                  "coin": 3
+                },
+                "flags": {
+                  "harvest_bread_oath": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -2,
+                  "ion": -1
+                }
+              },
+              "next": "harvest_seedtime"
+            },
+            {
+              "id": "break_grain_guard",
+              "label": "拦下截粮卫队，夺回公共口粮（可战斗或交涉）",
+              "text": "庄园卫队拦下开往粥棚的车，要求先偿还一张家属从未见过的债券。你把粮袋卸到公共锅边，并要求他们留下原始债据。两名卫兵准备动武，却也担忧主人欠下的军饷：在六格内交涉，花2谷物作返家口粮或3银币补足军饷，两人便同意带着债据撤离，不记为杀死。也可击败他们；结束遭遇后才能继续播种决策。",
+              "effects": {
+                "resources": {
+                  "grain": 4
+                },
+                "flags": {
+                  "harvest_rations": true
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "encounter": [
+                {
+                  "id": "grain_spear",
+                  "name": "庄园矛卫",
+                  "x": 17,
+                  "y": 6,
+                  "hp": 19,
+                  "maxHp": 19,
+                  "ac": 13,
+                  "attack": 4,
+                  "damage": "1d6+2",
+                  "range": 1,
+                  "parley": true
+                },
+                {
+                  "id": "grain_slinger",
+                  "name": "截粮投石手",
+                  "x": 17,
+                  "y": 7,
+                  "hp": 14,
+                  "maxHp": 14,
+                  "ac": 12,
+                  "attack": 4,
+                  "damage": "1d4+2",
+                  "range": 5,
+                  "parley": true
+                }
+              ],
+              "next": "harvest_seedtime"
+            },
+            {
+              "id": "eat_seed",
+              "label": "煮掉最后种粮，结束来年的希望",
+              "text": "今天的锅终于盛满，明年的播种袋却再无可分。你没有让这些人立刻饿倒，也承认了自己无法替城邦保住下一季。粮章目标失败，迁徙开始成为唯一可见的计划。",
+              "effects": {
+                "resources": {
+                  "grain": 3
+                },
+                "flags": {
+                  "harvest_seed_consumed": true,
+                  "harvest_c1_failed": true
+                },
+                "world": {
+                  "unrest": 1
+                }
+              },
+              "next": "harvest_seedtime"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "harvest_seedtime",
+          "title": "把第一粒留给谁",
+          "mapId": "granary",
+          "pointId": "ledger",
+          "text": "黎明时，农人把所有能播的种子放在一张旧帆上。有盐蚀的麦粒，也有从私人庄园追回的整袋大麦。克勒奥拒绝宣称女神已经原谅城邦，她只肯保证把每户领取的数量记清。议员提出一份贷款：种子由他们提供，来年收成的一半归他们；农人则请求你保住共有田和轮值水闸。若你在神庙见过被篡改的账，就知道债务同样能够被写成神意。第一粒种子入土之后，今天的选择将变成许多年后的地界。",
+          "options": [
+            {
+              "id": "common_seed",
+              "label": "保留共有种粮，签轮值水约（谷物−2）",
+              "text": "你把两袋完好的谷物留在仓内作种，不计入今天的配给。农人共同维护水闸，来年的收获先偿还种粮，再按公开账册分配。没有人保证丰收，但每个人都知道自己的工作通向哪里。",
+              "cost": {
+                "grain": 2
+              },
+              "effects": {
+                "flags": {
+                  "harvest_commons": true
+                },
+                "world": {
+                  "unrest": -2
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                },
+                "companions": {
+                  "melia": 1,
+                  "ion": 1
+                }
+              },
+              "next": "harvest_port"
+            },
+            {
+              "id": "debate_seed",
+              "label": "当庭争取种粮豁免（说服 DC14，须备用银币3）",
+              "text": "你要求议员把本年租税改为下一季劳役，并让克勒奥在每份收据上签名。成功时，农人保住共同种粮；失败时，你仍以自己的银币补足豁免，议员则借机羞辱这份新水约。",
+              "requires": {
+                "resources": {
+                  "coin": 3
+                }
+              },
+              "check": {
+                "skill": "persuasion",
+                "dc": 14,
+                "failText": "议员否决了免税提议；你支付额外担保，才能让已经签名的农户保住种粮。",
+                "failEffects": {
+                  "flags": {
+                    "harvest_commons": true
+                  },
+                  "resources": {
+                    "coin": -3
+                  },
+                  "world": {
+                    "unrest": 1
+                  },
+                  "relations": {
+                    "council": -2,
+                    "hearth": 2
+                  },
+                  "companions": {
+                    "ion": 1
+                  }
+                }
+              },
+              "effects": {
+                "flags": {
+                  "harvest_commons": true
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "harvest_port"
+            },
+            {
+              "id": "mortgage_fields",
+              "label": "接受庄园贷款，把农户与田地抵押（银币+6）",
+              "text": "种子及时入土，每一袋却都系上一条债契。你得到中介酬金，庄园获得未来三季的收成与迁居许可权。克勒奥把钥匙留在桌上；她不愿替丰收计算谁还能自由离开。",
+              "effects": {
+                "resources": {
+                  "coin": 6
+                },
+                "flags": {
+                  "harvest_dark": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 2
+                },
+                "relations": {
+                  "council": 3,
+                  "hearth": -3
+                },
+                "companions": {
+                  "melia": -2,
+                  "ion": -2
+                }
+              },
+              "next": "harvest_port"
+            },
+            {
+              "id": "leave_fields",
+              "label": "拒绝担保，让本季播种作废",
+              "text": "第一粒种子仍躺在帆上。农人分走能随身携带的份额，开始寻找允许他们耕种的别城。你没有签下债契，也没有为留下的人找到活路。本章制度目标告败，已发生的告别、断粮或封存仍保留；下一章要在这些后果上继续。",
+              "effects": {
+                "flags": {
+                  "harvest_c2_failed": true
+                },
+                "world": {
+                  "unrest": 3
+                },
+                "relations": {
+                  "hearth": -2
+                }
+              },
+              "next": "harvest_salt_seed"
+            }
+          ],
+          "chapter": 2
+        },
+        {
+          "id": "harvest_port",
+          "title": "救济船的系缆柱",
+          "chapter": 2,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "海岛商团的三艘船在浅港抛锚。船长阿格莱说，货舱里有药草、麦粒和足够一个月的盐鱼，但她的船也背着债，无法替别城免费破产。她愿租用码头三年，或者只收一次停泊税后离去。塔蕾娅认出其中一艘曾在败战夜接走伤兵；它也把无钱的划桨家属留在岸边。公开港口能让更多船竞价，独占合同则让眼前这批货立刻卸下。将来谁有权重新谈价，必须在今天写清。",
+          "options": [
+            {
+              "id": "open_public_port",
+              "label": "开放公有码头，以停泊税支付装卸（银币−2、粮+3）",
+              "text": "码头不授予独占权，所有货价与税额贴在集市。阿格莱仍拿到现货付款，港工不再依附某一庄园。三年后由含外邦港工的码头会重审租价，船长接受同行竞争。",
+              "effects": {
+                "flags": {
+                  "harvest_port": "public"
+                },
+                "resources": {
+                  "grain": 3
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "harvest_debt",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "grant_foreign_port",
+              "label": "给商团独占港租，立即卸货（粮+6）",
+              "text": "商团承担防波堤与守船成本，六袋粮当场入库；税权三年归债权会，欠款未清不得单方收回。阿格莱也必须照合同接收一定数量儿童与外邦工人，不能只带走能偿债的人。",
+              "effects": {
+                "flags": {
+                  "harvest_port": "foreign"
+                },
+                "resources": {
+                  "grain": 6
+                },
+                "world": {
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                }
+              },
+              "next": "harvest_debt"
+            },
+            {
+              "id": "close_port_tax",
+              "label": "拒绝长约，以城门税维持自给",
+              "text": "你保留码头主权，商船只卸下已经付钱的货物。城内磨坊获准加收紧急税，最穷的家庭依旧能领粥，但需要耕作的农人承担更多劳役。",
+              "effects": {
+                "flags": {
+                  "harvest_port": "closed"
+                },
+                "resources": {
+                  "coin": 2
+                },
+                "world": {
+                  "unrest": 1
+                }
+              },
+              "next": "harvest_debt"
+            },
+            {
+              "id": "break_cargo_talk",
+              "label": "征用船货，导致商团停航",
+              "text": "守卫扣住一船货物，另外两船拖缆离开。你获得短暂物资，却丢掉稳定补给与船长信任；下章必须用修堤与人质之外的办法重新建立航路。被扣下的货已当场发给伤兵与码头家庭，不进入队伍储备。",
+              "effects": {
+                "flags": {
+                  "harvest_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "harvest_salt_seed"
+            }
+          ]
+        },
+        {
+          "id": "harvest_debt",
+          "title": "欠债的人不是一袋种子",
+          "chapter": 2,
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "新船货卸完，庄园主递来往年粮贷名单。许多债借在男人名下，却要求妻子与孩子继续服役；死者的债还挂在领葬费的家属身上。克勒奥愿把仓库利润拿来赎身，前提是你同意少分一点今天的口粮。议员说若债契全作废，下一批船不会再来；阿格莱则提醒，借贷可转成港税，未必一定要拿人抵押。第一夜你留下还是吃掉的种粮，已经影响谁敢相信这份重新安排的账。",
+          "options": [
+            {
+              "id": "redeem_households",
+              "label": "取消以人抵债，以公开货税赎回（银币−2）",
+              "text": "欠款改为公开限额货税，不能继承给儿童，死亡也不再使配偶自动失去自由。债权人损失高额罚息，克勒奥按季公布赎回名单；新港税每年由纳税户会重审。",
+              "effects": {
+                "flags": {
+                  "harvest_debt": "freed"
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 1,
+                  "ion": 1
+                }
+              },
+              "next": "harvest_salt_seed",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "bind_households",
+              "label": "维持家属抵押，换免息种粮（粮+3）",
+              "text": "庄园承诺本季不加利息并继续供粮，代价是被抵押家庭不得离城。你救下眼前耕种，却把儿童能否迁徙交给债主；码头已经有人打磨锁链的铆钉。",
+              "effects": {
+                "flags": {
+                  "harvest_debt": "bonded"
+                },
+                "resources": {
+                  "grain": 3
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "harvest_salt_seed"
+            },
+            {
+              "id": "defer_households",
+              "label": "暂停一年追债，由债户会共同复核",
+              "text": "债户暂不服役，也不被注销旧债。双方各存一份收据，一年后由债户与债主等额代表复审，妇女可独立投票；若无法达成协议，只能出售非生活必需财产。",
+              "effects": {
+                "flags": {
+                  "harvest_debt": "deferred"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "harvest_salt_seed"
+            },
+            {
+              "id": "sell_debt_records",
+              "label": "出售债簿抵军饷，失去赎回机会",
+              "text": "军饷发到手，债主却带走唯一完整的旧账。下章的迁徙谈判将面对无法核销的债权，家属必须逐一证明自己不是某个死人的欠款。所得价款直接由买簿者付给守军，不进入队伍钱袋。",
+              "effects": {
+                "flags": {
+                  "harvest_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "harvest_salt_seed"
+            }
+          ]
+        },
+        {
+          "id": "harvest_salt_seed",
+          "title": "被德墨忒耳留下的空穗",
+          "chapter": 3,
+          "mapId": "granary",
+          "pointId": "ledger",
+          "text": "克勒奥把海岛公开补给中的三盘新种铺在湿布上，来源牌与旧本地种源的存失记录分开放置：一盘来自共有仓，一盘被海水泡过，一盘撒过墓园骨灰。账册能解释种粮为何失踪，却不能让它发芽。祭田的女祭司提出先留出第一份可食谷，待下一季按约献回土里；这不是购买丰收，而是承认今天的人不能吞掉全部来日。骨灰盘却一夜抽出苍白细根，长得快得令人害怕。饥民希望立刻播种，梅莉娅闻出那股与受役亡者相同的冷味。你可以做慢而昂贵的筛选，也可把未知的收成带进饥饿的城。",
+          "options": [
+            {
+              "id": "test_clean_seed",
+              "label": "筛去盐坏种，留第一份祭谷（谷物−2、药材−1）",
+              "text": "你把霉粒剔除，留下可播种的部分，并将第一份谷物封在祭田，不许挪回军仓。女祭司只承诺履行节令仪式，不保证女神的回答；几粒种子依旧没有发芽，土地仍需劳动与等待。",
+              "effects": {
+                "flags": {
+                  "harvest_seed_quality": "clean",
+                  "demeter_first_share": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": 1
+                }
+              },
+              "next": "harvest_floodplan",
+              "cost": {
+                "grain": 2,
+                "medicine": 1
+              }
+            },
+            {
+              "id": "sow_ash_seed",
+              "label": "播种骨灰催出的快苗（粮+5，污秽+3）",
+              "text": "一小块提前试种的骨灰田本夜收下五袋苍白麦粒，立即进入你的储备，守城家庭因此支持快苗。根须却缠住地下名牌，亡者被强役时麦穗一同颤抖；克勒奥隔离该田并禁止种子外运，免得别城也染上这份未经同意的誓约。",
+              "effects": {
+                "flags": {
+                  "harvest_seed_quality": "ash"
+                },
+                "resources": {
+                  "grain": 5
+                },
+                "world": {
+                  "taint": 3
+                },
+                "relations": {
+                  "hearth": -1,
+                  "council": 1
+                },
+                "companions": {
+                  "melia": -2
+                }
+              },
+              "next": "harvest_floodplan"
+            },
+            {
+              "id": "reserve_fallow_year",
+              "label": "承认本年不能播足，留种换轮耕",
+              "text": "你不拿不明快苗冒险，把少量完好种子留给下一年。高地产草与外海鱼干将代替本季大半粮食；农人保有工具，但必须接受更漫长的配给。",
+              "effects": {
+                "flags": {
+                  "harvest_seed_quality": "fallow"
+                },
+                "world": {
+                  "unrest": 1
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "harvest_floodplan"
+            },
+            {
+              "id": "consume_test_seed",
+              "label": "把试种与祭谷全部煮给当前饥民",
+              "text": "今天确有孩子因此活下来，之后却没有完整种源。你没有把救人的决定说成无心失误；下一章必须谈输入粮食或离开土地，不能再宣称本地丰收可期。",
+              "effects": {
+                "flags": {
+                  "harvest_seed_quality": "lost",
+                  "harvest_c3_failed": true
+                },
+                "resources": {
+                  "grain": 3
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "harvest_last_stores"
+            }
+          ]
+        },
+        {
+          "id": "harvest_floodplan",
+          "title": "一座堤或三条退路",
+          "chapter": 3,
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "新一轮大潮正在外海合拢。伊萨画出三种办法：用石堤护住祭田，把下游低地当作蓄洪池，或从河口逐段退到高台。若旧护岸誓约已解除，第一种需要更多人守；若续下亡者枷锁，堤工就会误以为缺口永远有人替他们挡住。高地牧人愿共享井水，但要求保留轮牧通道，也不接纳由守卫强押过来的人。选择退路不能替仍居低地者自动放弃房屋；你的公开计划要写明谁有权说不。",
+          "options": [
+            {
+              "id": "build_living_levee",
+              "label": "雇活人修堤，按班给粮与退岗权（银币−3）",
+              "text": "新堤不需要骨符维持。工人可拒绝超时守岗，值班由户会轮抽，议员庄园也按田亩出人。堤能保护一部分田，却挡不住所有极端潮水；应急退路同时保留。",
+              "effects": {
+                "flags": {
+                  "harvest_floodplan": "levee"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "harvest_fleet",
+              "cost": {
+                "coin": 3
+              }
+            },
+            {
+              "id": "consent_highland_retreat",
+              "label": "与牧人订高地接纳约，逐户自愿退让河口（谷物−1）",
+              "text": "牧人获得轮牧与共井权，城市家庭以修路、缝帆和冬储交换接纳；妇孺与外邦家庭按同样规则入住。未同意的低地房屋不得拆毁，只能在潮前再次劝离。计划为还地给河准备现实住处。",
+              "effects": {
+                "flags": {
+                  "harvest_floodplan": "retreat",
+                  "highland_consent": true
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "world": {
+                  "unrest": -1
+                }
+              },
+              "next": "harvest_fleet",
+              "cost": {
+                "grain": 1
+              }
+            },
+            {
+              "id": "sacrifice_lowland_fields",
+              "label": "先保军仓与庄园，把下田作为泄洪区（粮+3）",
+              "text": "城内最大的军仓得救，守城兵与庄园劳工暂免失业。下田小农却失去下一季的土地；他们不会因为军粮变多就获得等值补偿，克勒奥在图上逐块写下损失的田主。",
+              "effects": {
+                "flags": {
+                  "harvest_floodplan": "sacrifice"
+                },
+                "resources": {
+                  "grain": 3
+                },
+                "world": {
+                  "unrest": 3
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                }
+              },
+              "next": "harvest_fleet"
+            },
+            {
+              "id": "refuse_flood_responsibility",
+              "label": "停止统一施工，让各渠段自己护岸",
+              "text": "你避免强行决定别人的房屋，却也让资金雄厚的上游先封起自己的堤。下章共有田没有统一防潮屏障，每个村必须临时求援。",
+              "effects": {
+                "flags": {
+                  "harvest_floodplan": "fragmented",
+                  "harvest_c3_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "harvest_last_stores"
+            }
+          ]
+        },
+        {
+          "id": "harvest_fleet",
+          "title": "船票上能写几个名字",
+          "chapter": 3,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "阿格莱准备最后一批短程渡船，目的地是与忒斯玛交易过的两处海岛和一片高地湾。接收者需要补偿食物与淡水，也怕一船有名的人把没有身份的人推下舷梯。塔蕾娅要求票上写照护关系而非主人：儿童、孕妇、外邦工人和不能划桨的人都有固定舱位。庄园主愿支付造船费，条件是债户乘专船、抵达后继续服役。没有人保证每个人都愿离开，你也可以把钱留给陆路，但那意味着不能在最后一夜临时宣布全城登船。",
+          "options": [
+            {
+              "id": "build_public_fleet",
+              "label": "为所有身份购平等船位（银币−3）",
+              "text": "海岛以每户一季修港劳务换接纳，劳务有年限、疾病豁免与居民申诉权，妇孺不作为人质。塔蕾娅把船票交给照护人，留守者可随时退票；码头会为他们保留一次返航。",
+              "effects": {
+                "flags": {
+                  "harvest_fleet": "public"
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -1
+                }
+              },
+              "next": "harvest_last_stores",
+              "cost": {
+                "coin": 3
+              }
+            },
+            {
+              "id": "finance_debt_fleet",
+              "label": "接受庄园与商团联保船队（粮+2）",
+              "text": "船立刻开工，债权会支付接收岛一季口粮。债户登陆后要服三年指定劳动，儿童不继承债却必须随照护人住在指定区；塔蕾娅坚持保留书面工期与申诉船的通行证。",
+              "effects": {
+                "flags": {
+                  "harvest_fleet": "debt"
+                },
+                "resources": {
+                  "grain": 2
+                },
+                "world": {
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                }
+              },
+              "next": "harvest_last_stores"
+            },
+            {
+              "id": "keep_land_routes",
+              "label": "不用船队，把资源留给陆路与守堤",
+              "text": "你告知每户不能指望最后一夜登船，高地路标与应急粮由邻里保管。城邦保住造船钱，却失去跨海统一接收身份的筹码；选择迁徙的人须另谈船票。",
+              "effects": {
+                "flags": {
+                  "harvest_fleet": "none"
+                },
+                "resources": {
+                  "coin": 2
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "harvest_last_stores"
+            },
+            {
+              "id": "sell_last_hulls",
+              "label": "卖掉最后船壳付守军欠饷",
+              "text": "守军暂不哗变，空船壳却被拖去别港。军人也知道自己的家庭少了一条退路，本章海路目标失败。",
+              "effects": {
+                "flags": {
+                  "harvest_fleet": "none",
+                  "harvest_c3_failed": true
+                },
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "harvest_last_stores"
+            }
+          ]
+        },
+        {
+          "id": "harvest_last_stores",
+          "title": "储备不够所有人的所有要求",
+          "chapter": 4,
+          "mapId": "granary",
+          "pointId": "ledger",
+          "text": "最后公开补给已经入库，克勒奥把船货、祭谷、骨灰麦与普通种粮分开摆放。不能因为名字都叫谷物就把它们混成一种安全食物。守军请求先发城防口粮，受伤工人请求把药留在粥棚，船长则要保证接收岛的第一周食物。若你早先保留了德墨忒耳的第一份祭谷，她要求现在仍不挪用它；神未保证丰收，凡人也不能只在容易时承认节令之约。眼前分配会决定最终军队能否独占粮袋，也决定拒绝离城的人是否有最后一餐。",
+          "options": [
+            {
+              "id": "share_last_stores",
+              "label": "分给灶火与守堤者，保留祭谷和返航粮（谷物−2）",
+              "text": "粥棚、守堤班与返航船各领明账，妇孺和外邦工人按实际需要领取。克勒奥而非将军保管主仓钥匙；军队无法靠封袋迫使大会继续授权，代价是私人储备明显减少。",
+              "effects": {
+                "flags": {
+                  "harvest_stores": "shared"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "harvest_last_tide",
+              "cost": {
+                "grain": 2
+              }
+            },
+            {
+              "id": "give_stores_to_garrison",
+              "label": "先付守军欠饷，以军粮保最后城防（银币−1）",
+              "text": "有家属在低地的兵愿继续守堤，军官得到集中配粮权。粥棚只能按军需剩余开锅，克勒奥要求每袋留收据；接下来普通人能否否决延长军令，取决于粮印是否还分掌。",
+              "effects": {
+                "flags": {
+                  "harvest_stores": "garrison"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -1
+                }
+              },
+              "next": "harvest_last_tide",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "break_first_share",
+              "label": "动用祭谷和返航储备，先救眼前饥民（粮+2）",
+              "text": "你把先前封存的第一份祭谷与本次到货后划出的返航储备变为现粮，两袋食物当场交给饥民。女祭司不阻止救人，却把破约记在祭田；次夜几行已发芽的苗重新闭合，没人知道能否再开，返航也必须另筹口粮。",
+              "effects": {
+                "flags": {
+                  "harvest_stores": "broken_vow",
+                  "demeter_share_broken": true
+                },
+                "resources": {
+                  "grain": 2
+                },
+                "world": {
+                  "taint": 2
+                },
+                "relations": {
+                  "temple": -2,
+                  "hearth": 1
+                }
+              },
+              "next": "harvest_last_tide",
+              "requires": {
+                "flags": {
+                  "demeter_first_share": true
+                }
+              }
+            },
+            {
+              "id": "disperse_last_stores",
+              "label": "把钥匙交给各户，各自处理最后储备",
+              "text": "你拒绝用粮食逼人服从，也承认自己无法保持统一仓储。富户先带走车，空手家庭结成步行互助组；本章共同经济目标失败。",
+              "effects": {
+                "flags": {
+                  "harvest_c4_failed": true,
+                  "harvest_failed": true,
+                  "harvest_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "harvest_last_tide",
+          "title": "最大潮水只来一次",
+          "chapter": 4,
+          "mapId": "cistern",
+          "pointId": "sluice",
+          "text": "伊萨在闸上刻下潮痕，水将越过早年的军令标记。堤、骨符、公共船路与高地协议都是已经发生的选择，不会在今天凭空出现。仍住低地的人逐户点过头后，才可以拆除他们同意退让的房屋；拒迁者必须保留通道与警示。第三章若没有高地接纳约，不能把开闸称作给河流归还土地，那只是把陌生人冲进另一群人的家。塔蕾娅带来最后一次水位测量，你必须在保田、保军仓与有组织退让之间落实一项，而不是只写一个漂亮的灾后口号。",
+          "options": [
+            {
+              "id": "hold_fields_with_labor",
+              "label": "集中活人守堤护田（谷物−2）",
+              "text": "户会按已建活堤的轮值送人，未参与过修堤的庄园补上人手；拒绝者不被投入亡者誓约。这里不借旧护岸神力，因此即使另一条线稍后释放亡者，主要田块也不因此失守。部分低地房屋仍不能入住，祭谷若已破约也不保证丰收。",
+              "effects": {
+                "flags": {
+                  "harvest_fields": "safe"
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "world": {
+                  "unrest": -1
+                }
+              },
+              "next": "harvest_final_contract",
+              "cost": {
+                "grain": 2
+              },
+              "requires": {
+                "flags": {
+                  "harvest_floodplan": "levee"
+                }
+              }
+            },
+            {
+              "id": "raise_emergency_earthwork",
+              "label": "失去旧护岸后紧急筑土堤（银币−3、谷物−3）",
+              "text": "没有现成新堤也没有亡者护岸，你用更多工钱与口粮调来紧急土工队。每个人都可拒绝超时危险作业，护住的只是主要田块；释放旧誓的选择真实增加了人间承担的成本。",
+              "cost": {
+                "coin": 3,
+                "grain": 3
+              },
+              "effects": {
+                "flags": {
+                  "harvest_fields": "safe"
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "harvest_final_contract"
+            },
+            {
+              "id": "return_floodplain_with_consent",
+              "label": "按高地接纳约逐户退让，把同意的滩地还河",
+              "text": "牧人接纳协议、通行路与临时屋先落实，居民最后一次确认后才拆自愿退让的围栏。拒迁者的房屋不被主动毁掉，救援队保留撤出绳。旧田被潮覆盖，城邦必须接受更小的耕地与不同生计。",
+              "effects": {
+                "flags": {
+                  "harvest_fields": "flooded",
+                  "river_return_consent": true
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": 1
+                }
+              },
+              "next": "harvest_final_contract",
+              "requires": {
+                "flags": {
+                  "highland_consent": true,
+                  "harvest_floodplan": "retreat"
+                }
+              }
+            },
+            {
+              "id": "flood_smallholdings",
+              "label": "放闸保军仓，以小农田地消耗潮头",
+              "text": "军仓与上城获救，守军不用抛下伤兵撤退。未同意的小农田被盐水覆盖，居民被迫互助撤走；他们获得生命，却失去土地与对本城未来的发言基础。此举不是自愿还河。",
+              "effects": {
+                "flags": {
+                  "harvest_fields": "salt",
+                  "forced_flood": true
+                },
+                "resources": {
+                  "grain": 2
+                },
+                "world": {
+                  "unrest": 3,
+                  "taint": 1
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -3
+                }
+              },
+              "next": "harvest_final_contract"
+            },
+            {
+              "id": "abandon_last_tide",
+              "label": "分段撤离，放弃统一护田",
+              "text": "各村按能找到的人自行撤，临近堤段互借绳索却没有共同指挥。人们仍在行动，土地却大面积盐坏；本章无法再落实依赖完整田地的共同收成。",
+              "effects": {
+                "flags": {
+                  "harvest_c4_failed": true,
+                  "harvest_failed": true,
+                  "harvest_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "harvest_final_contract",
+          "title": "粮食最后由谁保管",
+          "chapter": 4,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "潮头经过后，人们带着湿透的契约重回集市。共同粮仓、庄园、海岛债权会与船队都提出自己能维持明日口粮；任何方案都必须回答不愿服从者是否还能吃饭。克勒奥要求每项安排写出谁能查账、谁能离开、债务会不会传给孩子。阿格莱承认接收岛需要实物与修港劳务，不会因为一个城邦决定迁走就让全岛免费供养。你可以维持共同体、接受有界或无界的债权、组织船上生活，也可承认本地种源与土地已不足以维持一座有粮的城。",
+          "options": [
+            {
+              "id": "ratify_common_grain",
+              "label": "由居住者户会共同管粮与土地（银币−1）",
+              "text": "成年居民含妇女与外邦工人可选仓管，儿童口粮不附着家主债务，拒绝投票也能领基本食物。田租公开、主粮不得以人抵押；被毁田块仍需外来粮或高地轮耕，不能由这份章程自动复原。",
+              "effects": {
+                "flags": {
+                  "harvest_final": "commons"
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "melia": 1
+                }
+              },
+              "next": "complete",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "restore_estate_granaries",
+              "label": "恢复庄园仓储，以三季定额租保障粮食",
+              "text": "地主承担种子与修堤成本，三季租额固定、儿童不继承债，但佃户对土地用途没有最终否决权。克勒奥留下可上诉的收据，旧家族则重获决定谁有地可种的权力。",
+              "effects": {
+                "flags": {
+                  "harvest_final": "estates"
+                },
+                "relations": {
+                  "council": 3,
+                  "hearth": -2
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "ratify_foreign_credit",
+              "label": "把航税交海岛债权会，换三年粮约",
+              "text": "商团承担粮价上限与接收配额，债户不作人质；航税优先偿债，商业争端交海岛与本地各半的法庭。三年内不得单方收回税权，到期若欠款未清，必须由全体纳税居民决定续约或出售港产。",
+              "effects": {
+                "flags": {
+                  "harvest_final": "foreign"
+                },
+                "resources": {
+                  "grain": 3
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                }
+              },
+              "next": "complete",
+              "requires": {
+                "any": [
+                  {
+                    "flags": {
+                      "harvest_port": "foreign"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "harvest_fleet": "debt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ratify_floating_stores",
+              "label": "把粮种与工具装上已订船队",
+              "text": "船队按已签接收规则安置妇孺、外邦人与照护人，不能临时只选能划桨者。公共船仍需一季修港劳动，债船仍有三年指定劳动；它们不会因你称作迁徙就自动变成同一种自由。留守者有退票与返航名额。",
+              "effects": {
+                "flags": {
+                  "harvest_final": "fleet"
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "complete",
+              "requires": {
+                "any": [
+                  {
+                    "flags": {
+                      "harvest_fleet": "public"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "harvest_fleet": "debt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ratify_emergency_rations",
+              "label": "维持六个月公开配给，暂缓土地归属",
+              "text": "户会与军属各派仓管，克勒奥保主钥，任何人不得拿食物换政治誓言。每月公布缺口，六个月后居民大会有权否决延期；依赖输入粮的代价没有消失，只是没把它立刻换成人身债。",
+              "effects": {
+                "flags": {
+                  "harvest_final": "ration"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "accept_empty_local_fields",
+              "label": "解散共同粮约，把种源与工具交还各户",
+              "text": "你撤回无法继续兑现的共同粮约，将仍存的种源与工具分交各户，灭失的种源另记缺口。家庭可以结队续耕、借地或去别城劳动；从此不能再代表全城谈同一份收购与播种保证，能承担风险的人与需要别人照护的人只好重新寻找共同办法。",
+              "effects": {
+                "flags": {
+                  "harvest_c4_failed": true,
+                  "harvest_failed": true,
+                  "harvest_final": "lost"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oracle",
+      "title": "神明没有说完的话",
+      "conflict": "揭露被操纵的神谕会摧毁依赖它的秩序；维持秩序又要牺牲谁的声音？",
+      "summary": "从神庙的两份神谕追到法庭账册、亡者见证与公开解释。伊昂必须选择保护自己的职位，还是把解释神意的权力交还众人。",
+      "stages": [
+        {
+          "id": "oracle_verses",
+          "title": "两份相反的神谕",
+          "mapId": "sanctuary",
+          "pointId": "tripod",
+          "text": "月桂叶已经烧完，神庙里仍有一股刺鼻的焦味。女祭者菲洛把一张没盖印的蜡板塞给伊昂，上面写着：让城邦先归还它从沉默者那里拿走的东西。殿外公布的版本却是：肃清不洁者，城邦即可得救。她说自己只负责传达听见的词句，祭司长却在誊写时删掉了主语。伊昂认出修改笔迹属于自己的老师；他不敢确认这只是人的欺骗，也不愿再把每一句命令都称作阿波罗的意志。原文需要被保护，解释则需要接受追问。",
+          "options": [
+            {
+              "id": "protect_original",
+              "label": "保护原始蜡板与女祭者（银币−1）",
+              "text": "你雇来可信的守门人，让菲洛能够离开内殿。伊昂在副本旁写上誊录时间与见证者名字，第一次没有替老师补上神圣的印记。原文成为可以核查的证据。",
+              "cost": {
+                "coin": 1
+              },
+              "effects": {
+                "flags": {
+                  "oracle_original": true
+                },
+                "relations": {
+                  "temple": -1,
+                  "hearth": 1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_accounts"
+            },
+            {
+              "id": "forge_oracle",
+              "label": "保管印章，改写一个服从你的版本（银币+3）",
+              "text": "你给神谕加上自己的命令，祭司长默许你暂时保留印章。伊昂把老师的错误看得更清楚，也看到你正在学会同一种笔法。神庙的权威成了可以转手的工具。你把未经改写的原板锁进内库，保留它作为谈判筹码；菲洛仍在城内，却失去决定何时发言的权利。",
+              "effects": {
+                "resources": {
+                  "coin": 3
+                },
+                "flags": {
+                  "oracle_forged": true,
+                  "oracle_original_sealed": true
+                },
+                "world": {
+                  "taint": 2
+                },
+                "relations": {
+                  "temple": 2
+                },
+                "companions": {
+                  "ion": -3
+                }
+              },
+              "next": "oracle_accounts"
+            },
+            {
+              "id": "burn_original",
+              "label": "焚毁原文，宣称公布版本不可质疑",
+              "text": "蜡板在灯火里软化。菲洛失去证明自己说过什么的机会，伊昂的沉默被祭司长当作了同意。神谕调查失败，污秽者名单将由别人继续书写。",
+              "effects": {
+                "flags": {
+                  "oracle_c1_failed": true
+                },
+                "world": {
+                  "taint": 2,
+                  "unrest": 2
+                },
+                "companions": {
+                  "ion": -2
+                }
+              },
+              "next": "oracle_public"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "oracle_accounts",
+          "title": "替神签名的人",
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "法庭档案中的祭典支出比神庙储粮大三倍。多出来的钱流向外港战后的抚恤删改，以及庄园的粮船租金。祭司长没有否认笔迹，他说那一夜若公布败讯，城邦会先把神庙拆掉；议员又会把饥荒算在女祭者头上。伊昂的老师愿意交出私账，条件是你让菲洛承担一次无伤大雅的禁言处罚。她站在柱后听得一清二楚。你可以购买保全原件的手续，冒险当众质询，也可以接过这条把责任向下传递的锁链。",
+          "options": [
+            {
+              "id": "copy_accounts",
+              "label": "封存原件并公开双份账册（银币−2）",
+              "text": "你付清抄录与封存费用，让法庭、神庙和粥棚各存一份。账目不证明神明从未发声，却证明有人借神明的名字收走了粮与葬费。其他主线从此能用这份证词要求出资。",
+              "cost": {
+                "coin": 2
+              },
+              "effects": {
+                "flags": {
+                  "oracle_testimony": true
+                },
+                "relations": {
+                  "council": -2,
+                  "temple": -1,
+                  "hearth": 1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_witness"
+            },
+            {
+              "id": "question_scribe",
+              "label": "公开质询书记（调查 DC14，须备用银币3）",
+              "text": "你让每位经手人辨认自己的笔迹，并把答复写在众人看得见的地方。无论质询顺利与否，原账都能留下；若对方拖延，你必须自付额外封存费，伊昂也会承受同僚的敌意。",
+              "requires": {
+                "resources": {
+                  "coin": 3
+                }
+              },
+              "check": {
+                "skill": "investigation",
+                "dc": 14,
+                "failText": "书记拒绝当众认笔迹，直到你补交封存费；伊昂被逐出原来的值房。",
+                "failEffects": {
+                  "flags": {
+                    "oracle_testimony": true
+                  },
+                  "resources": {
+                    "coin": -3
+                  },
+                  "relations": {
+                    "council": -1,
+                    "hearth": 1,
+                    "temple": -2
+                  },
+                  "companions": {
+                    "ion": -1
+                  }
+                }
+              },
+              "effects": {
+                "flags": {
+                  "oracle_testimony": true
+                },
+                "relations": {
+                  "council": -1,
+                  "hearth": 1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_witness"
+            },
+            {
+              "id": "blackmail_accounts",
+              "label": "用私账勒索两方（银币+5）",
+              "text": "议员与祭司都付了钱，账册却被锁回只允许你打开的柜子。菲洛的禁言处罚仍然生效。伊昂问你何时公开，你回答以后；他没有继续问第二遍。",
+              "effects": {
+                "resources": {
+                  "coin": 5
+                },
+                "flags": {
+                  "oracle_blackmail": true
+                },
+                "world": {
+                  "taint": 2,
+                  "unrest": 1
+                },
+                "relations": {
+                  "council": 1,
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": -3
+                }
+              },
+              "next": "oracle_witness"
+            },
+            {
+              "id": "blame_priestess",
+              "label": "让女祭者认罪，停止追账",
+              "text": "菲洛被带走时没有承认造假，只重复自己最初听见的话。法庭把她的沉默写成罪证，神庙的账册重新盖印。神谕章目标失败，伊昂从你的队伍中收回了那份信任。",
+              "effects": {
+                "flags": {
+                  "oracle_c1_failed": true
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 2
+                },
+                "companions": {
+                  "ion": -4
+                }
+              },
+              "next": "oracle_public"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "oracle_witness",
+          "title": "沉默者的证词",
+          "mapId": "necropolis",
+          "pointId": "pyre",
+          "text": "一名归魂坐在熄灭的火台边，反复把双手伸向并不存在的船桨。他生前替神庙运粮，知道第一艘粮船为何没有抵达祭田。祭司长称死者的声音不可采信，家属却能辨认他回答前总要摸一下手腕的习惯。若你已经登记无名者，就能找到他的母亲与生前收据；否则还可请医者与书记共同辨认，而不必先完成葬仪主线。伊昂担忧：把亡者当成万能的答案，同样是在替无法反驳的人说话。你要的是有旁证的见证，还是一场足够吓人的显灵。",
+          "options": [
+            {
+              "id": "corroborate_witness",
+              "label": "用收据与家属交叉辨认证词（药材−1）",
+              "text": "医者让守夜的家属休息，伊昂把能由活人核查的部分逐项标出。你不要求亡者证明所有神意，只记录粮船改道与是谁下达命令。归魂在听见自己的姓名后放下了双手。",
+              "cost": {
+                "medicine": 1
+              },
+              "effects": {
+                "flags": {
+                  "oracle_witness": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "companions": {
+                  "ion": 1,
+                  "melia": 1
+                }
+              },
+              "next": "oracle_public"
+            },
+            {
+              "id": "named_witness",
+              "label": "以葬仪名册找到母亲与原始收据",
+              "text": "名册把一个模糊的影子还原成能被记住的人。母亲带来旧船票，书记对上封印，亡者的话从恐吓变成可核对的证言。梅莉娅说，名字本身不能结束不义，却能让它不再无处追索。",
+              "requires": {
+                "flags": {
+                  "burial_names": true
+                }
+              },
+              "effects": {
+                "flags": {
+                  "oracle_witness": true
+                },
+                "world": {
+                  "taint": -1,
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2
+                },
+                "companions": {
+                  "ion": 1,
+                  "melia": 1
+                }
+              },
+              "next": "oracle_public"
+            },
+            {
+              "id": "stage_revelation",
+              "label": "导演显灵，让亡者宣读你的命令",
+              "text": "你藏起旁证，把骨灯放在影子后方。惊恐的人群跪下，听亡者说出他生前从未听过的法令。伊昂没有记下这段话；他知道一份更精致的伪造刚刚取代旧伪造。",
+              "effects": {
+                "flags": {
+                  "oracle_staged": true
+                },
+                "world": {
+                  "taint": 3
+                },
+                "relations": {
+                  "temple": 2,
+                  "hearth": -1
+                },
+                "companions": {
+                  "ion": -3,
+                  "melia": -2
+                }
+              },
+              "next": "oracle_public"
+            },
+            {
+              "id": "dismiss_witness",
+              "label": "销毁船票，让死者失去最后旁证",
+              "text": "船票在掌心碎成湿屑。没有旁证的归魂只剩一段可以被任何人解释的低语，法庭再也无法重建粮船改道的那一夜。神谕章目标失败，公开解释只能继续由旧人垄断。",
+              "effects": {
+                "flags": {
+                  "oracle_c1_failed": true
+                },
+                "world": {
+                  "taint": 2
+                },
+                "companions": {
+                  "ion": -2
+                }
+              },
+              "next": "oracle_public"
+            }
+          ],
+          "chapter": 1
+        },
+        {
+          "id": "oracle_public",
+          "title": "不替诸神说最后一句话",
+          "mapId": "sanctuary",
+          "pointId": "tripod",
+          "text": "神庙台阶前挤着祭司、家属和带空袋的农人。菲洛要求说明最初的话是否还留有原板：受保护者可以对读，封入内库者必须先交出，已经毁掉的部分只能标成空白与未核回忆。她不愿成为另一个绝不出错的声音。伊昂请老师坐到桌旁，也承认后来导演显灵的人同样需要问责。公开不一定带来安静，却能决定从今往后怎样保留来源。祭司长把印章推向你，说若独占解释便能立即恢复秩序。月桂火没有再旺起来，众人的目光代替它照着桌面。",
+          "options": [
+            {
+              "id": "open_oracle",
+              "label": "公开原文，建立多方见证的解释规则",
+              "text": "菲洛读出受保护的原板，伊昂把公开账册与有旁证的证词放在旁边。删改者与后来导演显灵的人都须接受下一轮问责，今天仅确立可查证的程序。第一份公开记录不宣布全城清白，更不抹去已经受害的人。",
+              "effects": {
+                "flags": {
+                  "oracle_open": true,
+                  "oracle_reopening": true
+                },
+                "world": {
+                  "unrest": -2,
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": 3
+                }
+              },
+              "next": "oracle_copies",
+              "requires": {
+                "flags": {
+                  "oracle_original": true,
+                  "oracle_testimony": true,
+                  "oracle_witness": true
+                }
+              }
+            },
+            {
+              "id": "reconstruct_oracle",
+              "label": "重建对照记录并承认不可恢复之处（银币−2）",
+              "text": "你不要求菲洛重现一块可能已熔毁的原板，而以船票、个人记忆和删改笔迹分别标注来源。不能证实的词句不入公证。重建只让今后有路可查；此前被诬的人仍需逐案赔偿。",
+              "effects": {
+                "flags": {
+                  "oracle_open": true,
+                  "oracle_reopening": true
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_copies",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "feed_public_hearing",
+              "label": "支援对照听证，承认无法恢复的部分（谷物−1）",
+              "text": "粥棚让工人也能留下。菲洛、货主和家属各自重述记得的词句，不能互证的部分保留空白，绝不冒充已找回原板。你公开承认城邦也可能制造过第二场假显灵；失去的物证不会被这次听证补造。",
+              "requires": {
+                "flags": {
+                  "harvest_rations": true
+                }
+              },
+              "cost": {
+                "grain": 1
+              },
+              "effects": {
+                "flags": {
+                  "oracle_open": true,
+                  "oracle_reopening": true
+                },
+                "world": {
+                  "unrest": -3,
+                  "taint": -1
+                },
+                "relations": {
+                  "hearth": 3,
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": 3
+                }
+              },
+              "next": "oracle_copies"
+            },
+            {
+              "id": "claim_seal",
+              "label": "独占神谕印章，建立服从你的圣政（银币+4）",
+              "text": "你宣读一份不许质疑的新解释，把反对者列入不洁名单。神庙与议事会承认你的权威，伊昂却把自己的笔折断。城邦恢复了安静，安静里再没有可供申辩的原文。",
+              "effects": {
+                "resources": {
+                  "coin": 4
+                },
+                "flags": {
+                  "oracle_dark": true
+                },
+                "world": {
+                  "taint": 3,
+                  "unrest": 1
+                },
+                "relations": {
+                  "temple": 3,
+                  "council": 2,
+                  "hearth": -3
+                },
+                "companions": {
+                  "ion": -4
+                }
+              },
+              "next": "oracle_copies"
+            },
+            {
+              "id": "silence_hearing",
+              "label": "取消听证，把解释权交还旧祭司",
+              "text": "菲洛没有走上台阶，副本被放回内殿。你留住了短暂秩序，也让那些已冒险说出真相的人再次独自面对旧权力。神谕改革失败，伊昂不再替这份沉默誊写辩词。本章制度目标告败，已发生的告别、断粮或封存仍保留；下一章要在这些后果上继续。",
+              "effects": {
+                "flags": {
+                  "oracle_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "companions": {
+                  "ion": -3
+                }
+              },
+              "next": "oracle_stone_voice"
+            }
+          ],
+          "chapter": 2
+        },
+        {
+          "id": "oracle_copies",
+          "title": "可以被查到的空白",
+          "chapter": 2,
+          "mapId": "sanctuary",
+          "pointId": "tripod",
+          "text": "第一轮公开或被禁止的解释之后，神庙的门槛上出现了一堆新投诉。有些原板保存完整，有些只剩证人的回忆；伊昂坚持用不同颜色写下二者，不把重建的句子装成原文。菲洛担心下一场火把记录与她一起烧掉，老师则说把副本送给别城等于向外人出卖神意。塔蕾娅提出用船上防水的货筒装档，三处保管人互相核对封签。公开也有代价：家属姓名可能暴露给复仇者，你必须决定公开什么，保密的又由谁监督。",
+          "options": [
+            {
+              "id": "distribute_copies",
+              "label": "分置三份有来源标记的副本（银币−1）",
+              "text": "神庙、户会和海岛学校各存一份；受害者地址封存，只公开事件与签名。每季由三方互验，任何一方都不能独自把重建证词改成神谕原文。阿格莱承担一只货筒的舱位成本。",
+              "effects": {
+                "flags": {
+                  "oracle_archives": "distributed"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": -1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_teacher",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "seal_archive",
+              "label": "把档案封进神庙，设七人轮值开封",
+              "text": "两名家属、两名祭司、两名粮工与一名书记共同持钥，五票才能开封。记录不立即传往外邦，菲洛暂得安全；如果持钥者被捕，真相仍可能被关在一扇门后。",
+              "effects": {
+                "flags": {
+                  "oracle_archives": "sealed"
+                },
+                "relations": {
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_teacher"
+            },
+            {
+              "id": "burn_witness_addresses",
+              "label": "焚毁原件，以匿名传唱保护证人",
+              "text": "你阻止搜捕者得到家属住址，却连带毁掉部分可以追责的笔迹。伊昂允许歌者传唱有旁证的部分，明确承认无法复查的损失；神庙失去垄断，法院也失去一部分证据。",
+              "effects": {
+                "flags": {
+                  "oracle_archives": "burned"
+                },
+                "world": {
+                  "taint": 1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": -2
+                },
+                "companions": {
+                  "ion": -1
+                }
+              },
+              "next": "oracle_teacher"
+            },
+            {
+              "id": "return_all_copies",
+              "label": "交还全部抄本，换本章停止搜捕",
+              "text": "祭司长签下三十日停捕令，保管责任又回到内殿。停捕期由城门卫队见证，期满后却没有人保证能够打开档案。下章保护证人必须从头组织。",
+              "effects": {
+                "flags": {
+                  "oracle_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "oracle_stone_voice"
+            }
+          ]
+        },
+        {
+          "id": "oracle_teacher",
+          "title": "老师坐到证人席",
+          "chapter": 2,
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "伊昂的老师卡律斯终于坐到他往日誊写判决的席位。他承认删改了词句，也指出封城那一夜议员威胁杀死两名守门祭童。菲洛不愿让这份威胁消除他的责任，却反对把所有祭童与低阶书记当成共犯。广场上有人要把神庙整个烧掉，退伍兵则要求先查清是谁下令调船。你可以建立有辩护与上诉的程序，接受供述后限期赦免，也可以用一场清洗迅速拆掉旧权力。伊昂并不肯替老师选择，他只要求你承认判决也需要证据。",
+          "options": [
+            {
+              "id": "try_teacher",
+              "label": "公开审理删改与威胁，允许辩护（银币−1）",
+              "text": "卡律斯失去祭司长职务，具体刑责由家属、港工与祭司各三人组成的陪审团认定。任何刑罚可向另一组随机陪审团上诉；伊昂回避投票，保管陈述而不代替法庭。",
+              "effects": {
+                "flags": {
+                  "oracle_teacher": "trial"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": -1,
+                  "council": -1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_stone_voice",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "amnesty_teacher",
+              "label": "供述换三年禁职，保留神庙教习",
+              "text": "老师公开供出命令链，三年不能解释神谕，仍可教识字。禁令由本次选出的家属、港工与祭司各两名代表监督，家属可请求重新开庭。菲洛接受停职，却提醒你，仍有未被赔偿的人。",
+              "effects": {
+                "flags": {
+                  "oracle_teacher": "amnesty"
+                },
+                "relations": {
+                  "temple": 1,
+                  "council": -1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_stone_voice"
+            },
+            {
+              "id": "purge_temple",
+              "label": "清洗旧祭司，交钥匙给忠诚者",
+              "text": "你迅速夺去旧集团的组织能力，低阶祭司也被驱逐，识字教室一同停课。菲洛拒绝签字；伊昂把这份拒绝记进新档，即便新掌权者更愿听到赞美。",
+              "effects": {
+                "flags": {
+                  "oracle_teacher": "purge"
+                },
+                "world": {
+                  "unrest": 3,
+                  "taint": 2
+                },
+                "relations": {
+                  "temple": -3,
+                  "council": 1
+                },
+                "companions": {
+                  "ion": -3
+                }
+              },
+              "next": "oracle_stone_voice"
+            },
+            {
+              "id": "dismiss_trial",
+              "label": "以潮灾为由停审，让证人自行藏匿",
+              "text": "你把守卫调往堤岸，避免眼前的冲突升级。卡律斯回到内殿，菲洛却失去保护。下章每个证人都必须先问，你的保证还能持续几天。",
+              "effects": {
+                "flags": {
+                  "oracle_c2_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "hearth": -1
+                }
+              },
+              "next": "oracle_stone_voice"
+            }
+          ]
+        },
+        {
+          "id": "oracle_stone_voice",
+          "title": "阿波罗留下的半句话",
+          "chapter": 3,
+          "mapId": "sanctuary",
+          "pointId": "tripod",
+          "text": "菲洛把石契拓片放在桌上：保存或重建过神谕的人可以对照；毁去原板又拒绝重建的人，只能面对空白与未核的回忆。三处缺字分别涉及归还、承接与自愿；它们能由石工核对，却不能证明阿波罗赞成你准备采取的政体。按忒斯玛的地方祭约，进入内泉的人须留下第一份谷物，并在一天内不以神名命令人。黄昏，泉面映出一座没有城墙的屋群，随后又像普通水面一样平静。伊昂拒绝把影像写成命令：或许是提示，也可能是众人共享的恐惧。你必须决定如何保留不确定性，或者利用它使一批人立刻听从。",
+          "options": [
+            {
+              "id": "record_unfinished_oracle",
+              "label": "履行地方祭约，只记录可见与未解部分（谷物−1）",
+              "text": "你留下谷物，并在当天余下时间停止借神名发令。泉中的影像由不同证人各自描述，分歧照录。石契的删改得到确认，阿波罗对未来的意思仍留白；这份克制以后可约束任何政权。",
+              "effects": {
+                "flags": {
+                  "oracle_source": "truth",
+                  "apollo_restraint": true
+                },
+                "world": {
+                  "taint": -1
+                },
+                "relations": {
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_mandate",
+              "cost": {
+                "grain": 1
+              }
+            },
+            {
+              "id": "declare_royal_prophecy",
+              "label": "把泉影解释为一位受神选的统治者",
+              "text": "你让担心明日的人得到一个可跟随的名字，守军迅速停止派系争吵。菲洛指出影像里没有王冠；你允许她保留原话，却在公布版上先印出“唯一的承接者”。服从开始快于核查。",
+              "effects": {
+                "flags": {
+                  "oracle_source": "royal"
+                },
+                "world": {
+                  "taint": 2
+                },
+                "relations": {
+                  "temple": 1,
+                  "council": 1
+                },
+                "companions": {
+                  "ion": -2
+                }
+              },
+              "next": "oracle_mandate"
+            },
+            {
+              "id": "keep_sacred_silence",
+              "label": "拒绝解释泉影，保存地方祭约",
+              "text": "你不宣布神已经离去，也不借沉默证明任何人正确。祭司只主持献谷与送亡，土地和军队由人另谈；这保住一块不被公权消费的圣域，却不能替城邦组织共同决定。",
+              "effects": {
+                "flags": {
+                  "oracle_source": "uncertain",
+                  "apollo_restraint": true
+                },
+                "relations": {
+                  "temple": 1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_mandate"
+            },
+            {
+              "id": "sell_spring_message",
+              "label": "让各派付费购买不同泉影解释",
+              "text": "军队与商团各拿到一份自己想听的话，地方祭约被破坏。内泉随后只剩冷水，没人知道是神沉默了还是被你们耗尽了信任；下章只能为这些彼此冲突的保证负责。",
+              "effects": {
+                "flags": {
+                  "oracle_source": "sold",
+                  "oracle_c3_failed": true
+                },
+                "resources": {
+                  "coin": 3
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 3
+                }
+              },
+              "next": "oracle_philo_choice"
+            }
+          ]
+        },
+        {
+          "id": "oracle_mandate",
+          "title": "谁可以说我们",
+          "chapter": 3,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "户会、祭司和退伍兵都带着印章来到广场，各自说自己代表“我们”。妮莎问，有孩子却没有丈夫的妇人能不能独立投票；阿格莱问，愿意纳码头税的外邦工人是不是只算一双搬货的手。守城官提出先给他四十日紧急权，理由是真正的大潮不会等到辩论结束。伊昂要求把赞成与拒绝一起记录，免得下一章任何统治者都宣称此时全城已经同意。今天组织的是可执行的授权程序，还没有替最后一章决定答案。",
+          "options": [
+            {
+              "id": "organize_resident_assembly",
+              "label": "组织居住者大会，妇女与外邦人独立登记（谷物−1）",
+              "text": "每个成年居民一票，照护儿童者可带孩子进场，未成年人由照护人表达需求但不增加成人票数。粮仓供会场一餐，记录由三方保管；大会保留罢免临时掌权者的权利。",
+              "effects": {
+                "flags": {
+                  "oracle_mandate": "assembly"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 2,
+                  "council": -2
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_witness_safety",
+              "cost": {
+                "grain": 1
+              }
+            },
+            {
+              "id": "organize_sacred_custody",
+              "label": "由家属与祭司共组仪式托管会",
+              "text": "托管会只管渡口、祭谷与庇护，不得裁判普通债务。六个月后由受庇护者与主持仪式者共同决定续期，任何一方都可否决；土地与军权仍须另订公开章程。",
+              "effects": {
+                "flags": {
+                  "oracle_mandate": "sacred"
+                },
+                "relations": {
+                  "temple": 2,
+                  "hearth": 1
+                }
+              },
+              "next": "oracle_witness_safety"
+            },
+            {
+              "id": "authorize_emergency_watch",
+              "label": "授守军四十日紧急权，粮印分掌",
+              "text": "守军负责防潮与城防，军粮钥匙交克勒奥，命令印章交三方书记，出兵须两者同时同意。到期户会可多数罢免，不能以兵权自行延期；普通人仍担心守军会撕毁期限。",
+              "effects": {
+                "flags": {
+                  "oracle_mandate": "emergency"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                }
+              },
+              "next": "oracle_witness_safety"
+            },
+            {
+              "id": "reject_all_mandates",
+              "label": "拒绝任何临时代表，让各街区自理",
+              "text": "你不给未经同意的人无限授权，也没有把各街区拼成共同的决定程序。下章必须再谈安全与迁徙，谁也不能借这次沉默声称自己已获全城委托。",
+              "effects": {
+                "flags": {
+                  "oracle_mandate": "none",
+                  "oracle_c3_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "oracle_philo_choice"
+            }
+          ]
+        },
+        {
+          "id": "oracle_witness_safety",
+          "title": "活着的人也需要渡口",
+          "chapter": 3,
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "审判与潮灾让证人变得珍贵，也让他们成了最容易被要挟的人。卡律斯的旧同僚要求菲洛收回陈述，家属中有人则要驱逐所有曾领神庙薪水的人。伊昂把安全屋名单折成两半，担心让任何一方拿到完整地址。塔蕾娅提出把照护关系与通行凭证交给当事人，费用由公共预算出，而不是要求证人用持续作证交换住宿。你也可以以保护为名把他们集中看守，或者放任愤怒者替城邦决定谁还有资格说话。",
+          "options": [
+            {
+              "id": "protect_living_witnesses",
+              "label": "给证人安全屋与可撤回的作证权（银币−2）",
+              "text": "证人可拒绝继续发言，仍保有住所、医疗与通行证。地址分开保管，伊昂只保来源目录；妇孺与外邦人不因无公民印而失去保护。对卡律斯的供述也按同一规则处理。",
+              "effects": {
+                "flags": {
+                  "oracle_witnesses": "safe"
+                },
+                "relations": {
+                  "hearth": 2,
+                  "temple": -1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_philo_choice",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "confine_witnesses",
+              "label": "集中保护并禁止证人自行离开",
+              "text": "守卫能迅速阻止街头报复，也能控制谁见到谁。菲洛把拒绝关押写在门内，伊昂坚持每七日由外部家属检查；你保住证人身体，却剥夺了他们的退出权。",
+              "effects": {
+                "flags": {
+                  "oracle_witnesses": "confined"
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                },
+                "companions": {
+                  "ion": -2
+                }
+              },
+              "next": "oracle_philo_choice"
+            },
+            {
+              "id": "purge_hostile_witnesses",
+              "label": "只保护赞同新秩序的证人",
+              "text": "敌对集团一时无法组织指控，受威胁的书记却携副本各自逃走。新秩序得到顺耳的证言，丢掉了检验它的反对者；伊昂拒绝把剩下的人称作全体。",
+              "effects": {
+                "flags": {
+                  "oracle_witnesses": "purged"
+                },
+                "world": {
+                  "unrest": 2,
+                  "taint": 2
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -2
+                },
+                "companions": {
+                  "ion": -3
+                }
+              },
+              "next": "oracle_philo_choice"
+            },
+            {
+              "id": "scatter_witnesses",
+              "label": "交回通行费用，让证人自行离城",
+              "text": "你不关押任何人，也无力继续提供安全。有人成功带走副本，有人在城门被旧仇人拦下；下章不能宣称证人已由城邦保护。",
+              "effects": {
+                "flags": {
+                  "oracle_witnesses": "scattered",
+                  "oracle_c3_failed": true
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "oracle_philo_choice"
+            }
+          ]
+        },
+        {
+          "id": "oracle_philo_choice",
+          "title": "菲洛想说哪一句",
+          "chapter": 4,
+          "mapId": "sanctuary",
+          "pointId": "tripod",
+          "text": "菲洛把自己愿意承担的事写成三行：她愿解释自己确实听见的词，不愿保证神必赞同任何法令；她可以自愿暂居海岛，但必须保留回来的权利；她拒绝被锁在内泉替城邦不停地产生答案。祭司担心失去神谕便失去接收病人与穷人的捐献，军官则希望每次动员都得到一句确定的允诺。伊昂要求让她本人读出拒绝，不把长期关押伪装成自愿隐修。最后选择将决定神庙如何保住口粮与权威，也决定谁有权停止发言。",
+          "options": [
+            {
+              "id": "free_philo_voice",
+              "label": "保护菲洛自愿发言与沉默的权利（银币−1）",
+              "text": "她自由离开内泉，神谕须分别记录原词、解释与异议，无法恢复的旧板仍留空。庇护院改由公开捐献与粮约维持，不再承诺用确定答案换取供品；伊昂与她都可拒绝替政权背书。",
+              "effects": {
+                "flags": {
+                  "oracle_philo": "free"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "temple": -1
+                },
+                "companions": {
+                  "ion": 2
+                }
+              },
+              "next": "oracle_foreign_terms",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "honor_philo_exile",
+              "label": "支持菲洛本人请求的海岛暂居",
+              "text": "菲洛带走自己的口述本，暂住由海岛学校提供的房间，以授课换食宿；接收方需支付护送与住所，城邦承担一半费用。她保留返乡与拒绝作证的权利，代价是本城失去能亲自反驳官方解释的人。",
+              "effects": {
+                "flags": {
+                  "oracle_philo": "exile"
+                },
+                "relations": {
+                  "temple": -1,
+                  "hearth": 1
+                }
+              },
+              "next": "oracle_foreign_terms",
+              "cost": {
+                "coin": 1
+              }
+            },
+            {
+              "id": "bind_philo_oracle",
+              "label": "命令菲洛留在内泉，按军需日程发言",
+              "text": "神庙承诺用连续神谕保住庇护院捐粮，军官获得可随时动员的圣言。菲洛被禁止自由离殿，记录员截去她的拒绝；她故意在每次规定答复中留下同一个破句，孩子们开始传唱，令强制也变成能识别的事实。",
+              "effects": {
+                "flags": {
+                  "oracle_philo": "bound"
+                },
+                "world": {
+                  "taint": 3,
+                  "unrest": 1
+                },
+                "relations": {
+                  "temple": 2,
+                  "council": 1,
+                  "hearth": -2
+                },
+                "companions": {
+                  "ion": -4
+                }
+              },
+              "next": "oracle_foreign_terms"
+            },
+            {
+              "id": "withdraw_philo_protection",
+              "label": "不再为菲洛提供公共保护，撤回神谕改革",
+              "text": "她自行寻找藏身处，仍可能被家属或海岛学校接走，但城邦不能把偶然获救冒充制度成功。统一解释程序在最后一章失败，后面的公共授权改由各团体自行争取。",
+              "effects": {
+                "flags": {
+                  "oracle_c4_failed": true,
+                  "oracle_failed": true,
+                  "oracle_constitution": "silence"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "oracle_foreign_terms",
+          "title": "停战书上的小字",
+          "chapter": 4,
+          "mapId": "tribunal",
+          "pointId": "seal",
+          "text": "外海使者要求在舰队离港前知道忒斯玛由谁负责。赔偿军费、归还扣货与安全通行都可以谈，唯独“诸神已经原谅”不能充当付款。若你曾征用船货，阿格莱要求先确认那批粮发给了谁；若曾交税权，商团已有账可查，却想把商业法庭扩成普通人的法院。多罗斯认为临时军事守城还有必要，伊昂要求写出终止日期、印章与粮袋归谁，以及谁能真正罢免指挥官。条款必须能在最害怕失去秩序的人面前执行。",
+          "options": [
+            {
+              "id": "sign_limited_peace",
+              "label": "签有限和约，保普通法庭与出境权（银币−2）",
+              "text": "赔款限额，商业混合法庭不审婚姻、葬仪与普通刑案，商团无驻军权；归还被扣货由公开税分期偿付。居民保留出境与申请移民资格，海岛承担的粮额与接收人数写明，不把儿童或外邦人交作履约人质。",
+              "effects": {
+                "flags": {
+                  "oracle_foreign": "peace"
+                },
+                "world": {
+                  "unrest": -1
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                },
+                "companions": {
+                  "ion": 1
+                }
+              },
+              "next": "oracle_final_mandate",
+              "cost": {
+                "coin": 2
+              }
+            },
+            {
+              "id": "submit_to_creditor_court",
+              "label": "接受债权会扩大的法院与港口卫队",
+              "text": "商团立刻承担海路安全与粮额，城内商人支持这份可预期的秩序。普通债务也由债权会审，港口卫队检查出境文件；三年后只能由还清债的纳税人投票收回，穷人与欠债户失去同等否决权。",
+              "effects": {
+                "flags": {
+                  "oracle_foreign": "submission"
+                },
+                "resources": {
+                  "coin": 2
+                },
+                "relations": {
+                  "council": 2,
+                  "hearth": -2
+                }
+              },
+              "next": "oracle_final_mandate"
+            },
+            {
+              "id": "reject_external_terms",
+              "label": "拒绝赔款与外部驻守，准备继续守城",
+              "text": "城邦保住司法与税权，不必向债权人交出居民。封锁却继续，军人家庭支持你不交伤兵，港工担心失去下一季生计；任何将军若借此永不还权，必须面对这些同样有权反对的人。",
+              "effects": {
+                "flags": {
+                  "oracle_foreign": "war"
+                },
+                "world": {
+                  "unrest": 2
+                },
+                "relations": {
+                  "council": 1,
+                  "hearth": -1
+                }
+              },
+              "next": "oracle_final_mandate"
+            },
+            {
+              "id": "break_final_talks",
+              "label": "退出统一谈判，让街区各订安全约",
+              "text": "你拒绝在无法负责时替全城签字，使者转而寻找每座门楼的联系人。有人得到保护，有人被排除在协议外；最后公共授权失败不等于居民停止自救。",
+              "effects": {
+                "flags": {
+                  "oracle_c4_failed": true,
+                  "oracle_failed": true,
+                  "oracle_constitution": "silence"
+                },
+                "world": {
+                  "unrest": 2
+                }
+              },
+              "next": "failed"
+            }
+          ]
+        },
+        {
+          "id": "oracle_final_mandate",
+          "title": "最后一次说我们",
+          "chapter": 4,
+          "mapId": "agora",
+          "pointId": "notice",
+          "text": "最后一张公共授权书没有预印统治者的名字。家属、农人、祭司、军属与准备上船的人都带着前章取得或失去的东西到场：有人仍有原板，有人只有空白；有人有种子，有人只有孩子与工具。神谕不能保证你的制度获得神恩，粮袋也不能买走拒绝。你只能把已经落实的渡亡、粮约、安全与退出条件组织为一种可执行的共同生活。选择授权方向以后，先前的骨符、债务、证据和本人承诺将决定它实际成为什么，而不是由这张纸把所有旧伤改写成圆满。",
+          "options": [
+            {
+              "id": "mandate_resident_assembly",
+              "label": "把最终授权交居住者大会",
+              "text": "所有成年居民含妇女、外邦人与欠债户有同等票权，儿童的基本口粮不以照护人投票为条件。大会能罢免官员，却不能投票取消个人葬仪、身体自由与退出权；现实的粮缺、骨符和外债仍须决定它能执行到哪一步。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "assembly"
+                },
+                "relations": {
+                  "hearth": 1,
+                  "council": -1
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "mandate_sacred_custody",
+              "label": "建立受庇护者可否决的祭祀托管",
+              "text": "渡口、祭谷与庇护由祭司和受助居民各半管理，每六个月重投续约，双方任一方可否决。普通刑案不得称神谕直接判决；若你仍拘禁菲洛或强役死者，这份自治会被它自己的矛盾撕开。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "temple"
+                },
+                "relations": {
+                  "temple": 2
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "mandate_civic_council",
+              "label": "把日常治理还给有公开章程的议事会",
+              "text": "议事会重掌税、仓与土地程序，必须保存每项契约的反对书。谁真正能控制它，要看庄园、债权会与受害家属各握有什么权利；单是换回旧印章，不能让这些权利自动平等。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "council"
+                },
+                "relations": {
+                  "council": 2
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "mandate_defense_regency",
+              "label": "由守城指挥部暂管城门与军令",
+              "text": "支持者盼指挥部防潮与保护伤兵，终章授权当场重申四十日后由居住者户会复审，命令印交非军方书记登记。共享主仓若仍在克勒奥与户会手里，居民能拒发续权军粮；若此前已交军仓、耗尽公共储备或解散共同仓，期限就缺少对应的粮食制衡。独立档案仍按实际保存状态存在，不能因军政上台就被凭空收回。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "regency"
+                },
+                "relations": {
+                  "council": 1
+                }
+              },
+              "next": "complete"
+            },
+            {
+              "id": "mandate_floating_city",
+              "label": "让已订船队承接城邦身份与公共账册",
+              "text": "妇孺、外邦人与照护人按先前船票规则登船；债船也不因改名就取消三年劳务。船上选出能被撤换的协调者，接收岛保留自己的井与土地权，留守者不得被宣布为遗弃城邦的敌人。接收岛承认个人船票与基本安全；只有共同名册与纪念、可靠种源、可核来源档案一起落地时，才有条件另订共享土地的集体安置约。没有这些组合仍可接收，但食宿劳动须分户履约，身份不会因此凭空消失。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "diaspora"
+                },
+                "relations": {
+                  "hearth": 1
+                }
+              },
+              "next": "complete",
+              "requires": {
+                "flags": {
+                  "harvest_final": "fleet"
+                }
+              }
+            },
+            {
+              "id": "renounce_single_city_mandate",
+              "label": "不设统一授权，承认各共同体自行决定",
+              "text": "你撤下代表全城的印章，不把散居、饥荒或封门美化成同一种自由。若已签高地接纳、释放旧誓并逐户同意退地，居民可建立新的分散共同体；若没有这些准备，留下的是土地或安全的真实缺口。",
+              "effects": {
+                "flags": {
+                  "oracle_constitution": "silence"
+                }
+              },
+              "next": "complete"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "endings": [
+    {
+      "id": "bread_council",
+      "title": "仍有投票权的空粮仓",
+      "power": "由居民大会选举并每月罢免的配给委员会掌短期采购权，无权取消欠粮者票权。",
+      "characters": "克勒奥承认公共粮约失效，带账员去邻城谈临时采购；伊昂替没有公民印的人保留发言席。",
+      "world": "原城失去统一粮约与共同采购、播种保障，私存的完好种子与安全田地并不自动消失。",
+      "cost": "共同保障与统一议价能力断裂，家庭必须自行组织生产或寻找别处土地。",
+      "foreshadowing": "第一夜种粮争夺、退潮后的议事试种与关门前主动承认空田。",
+      "text": "公共仓失去统一保证后，大会仍坐在原来的台阶上。克勒奥列出各户能支配的种子与地块，请人登记愿意分担的采购和试种。妇女、外邦人与债户保留同样的票，欠粮不成为夺票的理由；现实里，有人却必须离场去找工。每月可以罢免的配给委员会继续谈外来粮，也要把断裂的共同生产重新接起来。投完票以后的一餐不再有统一保障，缺席者的意见与粮单只能由往返劳队一起送回。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "assembly"
+            }
+          },
+          {
+            "flags": {
+              "harvest_final": "lost"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "day_assembly_night_legion",
+      "title": "白昼开会，夜里点名",
+      "power": "民选大会保留纸面立法权，掌骨符的守城官控制实际安全，形成不平等双重权力。",
+      "characters": "梅莉娅撤回守桥与留岸承诺，离开强役体系；夜哨孙女组织偷取骨符的行动。",
+      "world": "城墙仍由不许拒绝的亡者维持，大会不能靠一张票令他们自由。",
+      "cost": "获得稳定城防，代价是身体自由底线被军团架空，盗符者会被追捕。",
+      "foreshadowing": "绑骨、常备夜哨与最后关门时永久役魂的连续支持。",
+      "text": "白天，居民按票选出主持；日落，主持也得等掌骨符的军官点头才能开门。梅莉娅撤回守桥和留岸承诺，把药箱放在自愿接纳她的民宅。夜哨孙女沿军仓墙寻找祖父的铜钉，议员第一次争论偷走一枚骨符算救人还是叛城。你没有取消投票，却保留了能使投票失效的军团。亡者挡住潮头的每一夜，都为白昼的共和国添一张无法表决的欠条。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "assembly"
+            }
+          },
+          {
+            "flags": {
+              "burial_final": "chain"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "lost"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "harbor_protectorate",
+      "title": "有边界的外援议会",
+      "power": "本地居民大会管普通法与庇护，海岛债权会管三年航税和对半商业法庭；有限和约禁止驻军与人质。",
+      "characters": "阿格莱承担粮价上限，克勒奥可追问货量；菲洛无论留城还是渡海，都不被条约当作神圣担保，拘禁者也不因有限和约获得免责。",
+      "world": "港口有稳定船期，原城仍保普通司法与出境权。",
+      "cost": "航税三年不能单方收回，居民须支付真实债额与接收岛口粮。",
+      "foreshadowing": "退潮后的议事港租、债务非人身化与最后有限和约。",
+      "text": "码头会上出现两种封印，只有商业货单需要同时盖下。居民大会照常审葬仪和普通案件，海岛船却先按三年粮约收走航税。阿格莱不能驻军，也不能扣儿童履约；她可以因违约暂停未装船的货。克勒奥第一次把欠账写成谁都看得懂的上限，仍得逐船偿付。城邦保存了否决普通统治的权利，却借走一部分未来收入，换来今天可预期的食物。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "assembly"
+            }
+          },
+          {
+            "all": [
+              {
+                "flags": {
+                  "harvest_final": "foreign"
+                }
+              },
+              {
+                "flags": {
+                  "oracle_foreign": "peace"
+                }
+              }
+            ]
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "lost"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "threefold_covenant",
+      "title": "有名者的未竟宪章",
+      "power": "包括妇女、外邦与欠债户的居住者大会执政，个人退出和基本葬仪不由多数取消。",
+      "characters": "多罗斯的执行责任留在法院，梅莉娅与伊昂各自保留拒绝；克勒奥受居民选举监督。",
+      "world": "已知姓名保存、强役终止、可靠新种源与三处来源档案并存，神意仍不为丰收背书。",
+      "cost": "旧祭典预算、修堤劳动和补偿金已真实支付；不可复得的尸物与亡者不能复生。",
+      "foreshadowing": "第一夜的姓名与证物、公开命令链赔偿、三处副本、净种试验和证人庇护。",
+      "text": "第一辆载种子的车在墓园前让路，车上的人没有因此得到神许丰收。宪章把基本葬仪、身体自由和退居权写成多数也不能出售的边界；每个成年居民都有票。多罗斯的签名留在法院，不能因后来守过城就被擦掉。三处档案保留各自来源，缺失处仍写未知。梅莉娅与伊昂不必替全部决定赞同，克勒奥也可被选下台。你们留下的不是一座无罪之城，而是有人能够继续追问它的地方。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "assembly"
+            }
+          },
+          {
+            "all": [
+              {
+                "any": [
+                  {
+                    "flags": {
+                      "burial_final": "free"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "burial_final": "covenant"
+                    }
+                  }
+                ]
+              },
+              {
+                "flags": {
+                  "harvest_final": "commons",
+                  "burial_names": true,
+                  "burial_citizenship": "all",
+                  "burial_reparation": "paid",
+                  "burial_restitution": "repaired",
+                  "oracle_archives": "distributed",
+                  "oracle_witnesses": "safe",
+                  "harvest_seed_quality": "clean",
+                  "oracle_teacher": "trial",
+                  "oracle_foreign": "peace"
+                }
+              },
+              {
+                "any": [
+                  {
+                    "flags": {
+                      "oracle_philo": "free"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "oracle_philo": "exile"
+                    }
+                  }
+                ]
+              },
+              {
+                "not": {
+                  "any": [
+                    {
+                      "flags": {
+                        "burial_erased": true
+                      }
+                    },
+                    {
+                      "flags": {
+                        "burial_flooded": true
+                      }
+                    },
+                    {
+                      "flags": {
+                        "demeter_share_broken": true
+                      }
+                    },
+                    {
+                      "flags": {
+                        "oracle_staged": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "lost"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "harvest_final": "foreign"
+                      }
+                    },
+                    {
+                      "flags": {
+                        "oracle_foreign": "peace"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "unfinished_republic",
+      "title": "索赔席旁的共和国",
+      "power": "居民大会执政，受害家属另保对未清损失提出复审的权利，不授任何集团永久席位。",
+      "characters": "妮莎保留尚未得到回答的腕带；伊昂记录反对书，克勒奥不得以好消息注销旧债。",
+      "world": "基本公共生活延续，但缺名、封存、债权或局部自治至少留下一道制度裂口。",
+      "cost": "每年预算先接受索赔审查，部分支持者厌倦无法结清的旧案。",
+      "foreshadowing": "可修复而不能抹去的早期失败，以及后章选择有限合作。",
+      "text": "新议会在主席席旁留一张索赔桌，桌子不代表自动正确，却保证未被解决的人能再次提交证据。妮莎把腕带放在那里，不要求每场辩论都从哀悼开始。有人认为继续追账会拖慢播种，有人说若只在方便时记得损失，新的法律很快也会删名字。你们取得共同决定的能力，未取得替过去写一个结清印的权利。城邦从这份不整齐中继续，而不是从失忆中重新开始。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "assembly"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "lost"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "harvest_final": "foreign"
+                      }
+                    },
+                    {
+                      "flags": {
+                        "oracle_foreign": "peace"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "burial_final": "free"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "burial_final": "covenant"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "flags": {
+                        "harvest_final": "commons",
+                        "burial_names": true,
+                        "burial_citizenship": "all",
+                        "burial_reparation": "paid",
+                        "burial_restitution": "repaired",
+                        "oracle_archives": "distributed",
+                        "oracle_witnesses": "safe",
+                        "harvest_seed_quality": "clean",
+                        "oracle_teacher": "trial",
+                        "oracle_foreign": "peace"
+                      }
+                    },
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "oracle_philo": "free"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "oracle_philo": "exile"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "not": {
+                        "any": [
+                          {
+                            "flags": {
+                              "burial_erased": true
+                            }
+                          },
+                          {
+                            "flags": {
+                              "burial_flooded": true
+                            }
+                          },
+                          {
+                            "flags": {
+                              "demeter_share_broken": true
+                            }
+                          },
+                          {
+                            "flags": {
+                              "oracle_staged": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "philo_captive_sanctuary",
+      "title": "被截去的破句",
+      "power": "神庙以连续圣言维系捐粮，托管会名义共有却不能自由检查内泉，军官参与控制发言。",
+      "characters": "菲洛被禁止出殿，借每次答复的重复破句抵抗；孩子的歌让她的拒绝流出墙外。",
+      "world": "庇护院有粮，圣域的退出权却被对神谕产量的依赖架空。",
+      "cost": "具体牺牲菲洛的身体自由与完整话语，受益者必须面对供粮建立在拘禁之上。",
+      "foreshadowing": "先前集中证人、泉影解释权和最后关门时明确违背本人意愿的命令。",
+      "text": "庇护院的锅没有熄火，捐粮者每天在内泉门外等一句足够确定的话。菲洛被按军需时刻叫醒，书记剪掉她的拒绝；她便在每段答复里留同一个不合语法的破句。孩子在灶边唱它，祭司越禁止，更多人越知道那不是神的命令。托管会仍称自己由受助者共同决定，却不准受助者走进发声的人身边。你保住了救济，也让一副被控制的身体成为它不肯公开的粮仓。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "temple"
+            }
+          },
+          {
+            "flags": {
+              "oracle_philo": "bound"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "melia_bridge",
+      "title": "不继承的守桥人",
+      "power": "受庇护者与祭司各半的托管会只管渡口和救济，梅莉娅本人每年确认或退出守桥约。",
+      "characters": "梅莉娅闭门后自愿留桥，最多十年且不许儿童继任；伊昂把她的退出书交本人保管。",
+      "world": "被强迫的骨符不再提供屏障，轮值与净布维持短时送行。",
+      "cost": "她付出一段人生与离乡机会，城邦承担替班和医疗，不能把她变成永远的廉价防线。",
+      "foreshadowing": "退潮后的议事逐魂同意，关门前本人提出、来访者可拒绝的守桥条件。",
+      "text": "梅莉娅在渡桥边挂起第一条净布，钥匙并没有交给祭司长。她自己保管退出书，托管会每年只可问她是否继续，不能替她回答。最多十年以后必须换成新的自愿承担者，任何孩子都不继承这份工作。伊昂记录她离队后第一次拒接的命令，受庇护的人也有权否决托管续期。城邦没有白得一座桥：它借了一位愿意留下者的人生，并负有让她真正能够离开的义务。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "temple"
+            }
+          },
+          {
+            "all": [
+              {
+                "flags": {
+                  "burial_guardian": "melia_burden",
+                  "melia_explicit_consent": true
+                }
+              },
+              {
+                "any": [
+                  {
+                    "flags": {
+                      "burial_final": "free"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "burial_final": "covenant"
+                    }
+                  }
+                ]
+              },
+              {
+                "not": {
+                  "flags": {
+                    "melia_consent_revoked": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "oracle_philo": "bound"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "seasonal_sanctuary",
+      "title": "只承诺仪式的圣域",
+      "power": "家属与祭司轮值托管渡口、祭谷与庇护，每六个月双方各有否决权，普通法院留在人间。",
+      "characters": "菲洛不被强迫为法令背书；女祭司守第一份祭谷，伊昂保存石刻可证与泉影未解的界线。",
+      "world": "归魂处境受仪式实在改变，农田仍面对节令与神意的不确定。",
+      "cost": "城邦放弃把神谕当作万能统治工具，也付出固定祭谷与活人修堤的负担。",
+      "foreshadowing": "送亡旧歌、净布渡资、第一份谷与阿波罗不发命令的一日。",
+      "text": "祭司在门口贴的第一句承诺不是丰收，而是即使没有丰收也不伪造神恩。第一份谷仍留在祭田，渡船照已经同意的仪式送行；普通债务与刑案回到人间法院。受庇护者与主持仪式者各有六个月续约的否决权，哪一方说不，托管就必须重谈。伊昂把可核的石刻和无法穷尽的泉影分开保存。你们为圣域留住真实作用，也给它划下不能越过的人的边界。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "temple"
+            }
+          },
+          {
+            "all": [
+              {
+                "any": [
+                  {
+                    "flags": {
+                      "burial_final": "free"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "burial_final": "covenant"
+                    }
+                  }
+                ]
+              },
+              {
+                "flags": {
+                  "harvest_seed_quality": "clean"
+                }
+              },
+              {
+                "any": [
+                  {
+                    "flags": {
+                      "harvest_final": "commons"
+                    }
+                  },
+                  {
+                    "flags": {
+                      "harvest_final": "ration"
+                    }
+                  }
+                ]
+              },
+              {
+                "not": {
+                  "flags": {
+                    "demeter_share_broken": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "oracle_philo": "bound"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "burial_guardian": "melia_burden",
+                        "melia_explicit_consent": true
+                      }
+                    },
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "burial_final": "free"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "burial_final": "covenant"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "not": {
+                        "flags": {
+                          "melia_consent_revoked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "winter_cloister",
+      "title": "只能收容的圣域",
+      "power": "托管会退为局部食宿与送亡网络，只能在既有粮契和役魂处置内照护，无法统一改变它们。",
+      "characters": "祭司安排床位，克勒奥按实际粮约提供能拨出的份额；伊昂保留未能兑现的公共边界。",
+      "world": "统一释魂、可靠种源或公共粮制度至少一项未同时落实，庇护可延续，完整仪式自治没有形成。",
+      "cost": "保住局部照护，却失去把送亡、祭谷与独立供粮合成同一公共责任的能力。",
+      "foreshadowing": "限期托管、粮储分配，以及不能靠一纸自治抹掉旧伤。",
+      "text": "神庙把显贵宴席的长桌改作床，托管会先决定现有契约能容纳多少人。若共有粮仍能拨款，食物不被谎称突然消失；若粮权在庄园或债主，祭司则必须逐期谈捐助。统一释魂、可靠种源与公共供粮没有同时成为同一承诺，门内照护不能凭一纸托管令改掉门外军团或地产的权利。有人在这里获得休息与告别，未被解决的旧伤却仍有名字。你们保住一张可求助的门，没有完成一套能为全城承担后果的仪式自治。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "temple"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "oracle_philo": "bound"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "burial_guardian": "melia_burden",
+                        "melia_explicit_consent": true
+                      }
+                    },
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "burial_final": "free"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "burial_final": "covenant"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "not": {
+                        "flags": {
+                          "melia_consent_revoked": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "burial_final": "free"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "burial_final": "covenant"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "flags": {
+                        "harvest_seed_quality": "clean"
+                      }
+                    },
+                    {
+                      "any": [
+                        {
+                          "flags": {
+                            "harvest_final": "commons"
+                          }
+                        },
+                        {
+                          "flags": {
+                            "harvest_final": "ration"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "not": {
+                        "flags": {
+                          "demeter_share_broken": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "creditor_city",
+      "title": "以港口偿还的城",
+      "power": "海岛债权会掌航税与商业裁断；若已接受扩法院与港卫，普通债务和出境也受其监督。",
+      "characters": "阿格莱从船长成为债权代表，克勒奥替每户解释收据；欠债户难以与清债商人取得同等话语。",
+      "world": "船期稳定、粮额可靠，公共权利被长期税权和既有外部条款压住。",
+      "cost": "今后收入与一部分司法决定被抵押，最缺钱的人最难行使收回权。",
+      "foreshadowing": "独占港租、债务协议与最终把日常治理还给旧议事会。",
+      "text": "议事会重开时，首席座旁先放下海岛债权会的算盘。船仍按粮约进港，阿格莱必须履行价额与接收配额，也能按已签条款优先收税。若你曾扩给港卫和法院的权利，它们现在不会自行退回。克勒奥把每户偿还的日子写清，欠款户却发现越需要城邦的人，越难投出收回港口的票。你买到了稳定的明天，偿付它的不只是银币，还有谁能决定更远的明天。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "council"
+            }
+          },
+          {
+            "flags": {
+              "harvest_final": "foreign"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "landed_restoration",
+      "title": "重新上锁的庄园仓",
+      "power": "旧家族凭土地与种源控制议事会，固定三季田租有程序限制，佃户仍无土地用途的最终否决。",
+      "characters": "克勒奥留作能提出上诉的账员，农人重新领取标有庄园名的工具；多罗斯旧案按已选条款保留或封存。",
+      "world": "本地耕作有组织恢复，低地受损田块与外邦地权仍不平等。",
+      "cost": "用农业连续性换回地主支配，不能把免于饥饿等同于自由拥有土地。",
+      "foreshadowing": "退潮后的议事粮贷抵押、最后关门时恢复庄园仓与旧议事印章。",
+      "text": "播种袋又有了庄园的封签，固定三季租额使农人知道至少要交多少，不能知道地主以后会让哪块田改作私渠。克勒奥坚持保留上诉收据，收据能纠正多收一袋粮，不能替佃户取得土地的最后决定权。旧议员把重开仓门称作复兴，低地农人则看着被盐坏的边界重新画到自己名下。你让生产恢复了可预期的秩序，也让曾依赖别人才活下去的人继续依赖同一把钥匙。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "council"
+            }
+          },
+          {
+            "flags": {
+              "harvest_final": "estates"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "foreign"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "reparation_court",
+      "title": "先审赔偿的法庭城",
+      "power": "旧议事会受公开赔偿法院与共同粮仓双重约束，受害家属和退伍兵各半监督赔偿预算。",
+      "characters": "多罗斯的执行签名与老师的审判并列归档；妮莎无需先原谅才领取补偿，克勒奥对大会查粮。",
+      "world": "官员能继续行政，预算先保基本食物与已认定损失，不能随意转作庆典。",
+      "cost": "旧家族让出祭典预算与部分免审特权，赔偿需要多年，亡者与失物仍不可复生。",
+      "foreshadowing": "公开命令链、赔偿基金、老师有辩护的审理与共有粮仓。",
+      "text": "议事会先开了赔偿庭，才讨论来年的胜利祭典。妮莎可以领补偿而不说原谅，多罗斯可以陈述自己救过谁却不能删去签名；老师的责任也由有上诉权的程序审理。克勒奥保管共同粮仓，让家属不必拿今天的食物换明天少索赔。旧家族仍会办事，却失去把预算先花在荣耀上的自由。城邦每年付一部分旧账，没有任何一笔能把已经死去的人买回来。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "council"
+            }
+          },
+          {
+            "flags": {
+              "burial_reparation": "paid",
+              "harvest_final": "commons",
+              "oracle_teacher": "trial"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "foreign"
+                  }
+                },
+                {
+                  "flags": {
+                    "harvest_final": "estates"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sealed_oligarchy",
+      "title": "保管封印的人",
+      "power": "旧议事会掌执行日程和行政预算，证据可公开存在，启动审理与落实赔偿仍被程序拖延。",
+      "characters": "老书吏保存反对书，伊昂不为封存背书；家属和港工须继续组织才能把门推开。",
+      "world": "行政连续，原档按实际分置或封存状态保存；主要障碍是执行，而非凭空收回三处副本。",
+      "cost": "用短期可办事的秩序换下层持续等待，受害者必须承担再组织的风险。",
+      "foreshadowing": "刮名、封档、有限赦免或早期制度目标失败留下的缺口。",
+      "text": "伊昂把能够保全的副本摊在议事会门口，申请赔偿的家属带着保得住的收据、腕带与陈述排队。旧议员不必否认证据，只要决定何时拨款、何时排庭、哪项先以潮灾为由延后。商人因此知道找谁办事，受损家庭却要不断组织陪同，才能让纸上的认定走到实际执行。城邦恢复了连续行政，程序也成为少数人拖慢改变的工具。港工轮流把证人与收据护送进门，不许等待永远只压在同一人身上。证据还在，能推动多少现实，仍由门外的人继续争。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "council"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_final": "foreign"
+                  }
+                },
+                {
+                  "flags": {
+                    "harvest_final": "estates"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_reparation": "paid",
+                    "harvest_final": "commons",
+                    "oracle_teacher": "trial"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "dead_legion_regency",
+      "title": "没有退伍日的军团",
+      "power": "指挥部以永久役魂控制城门，纸面复核无法约束掌骨符者。",
+      "characters": "梅莉娅撤回承诺，夜哨家属组织盗符；多罗斯即使不是唯一指挥者也被旧执行记录追问。",
+      "world": "亡者防线稳定，军粮可转给活人，神圣强制被纳入日常军政。",
+      "cost": "以死者无法退出换活人安全，反抗者与家属失去平等申辩。",
+      "foreshadowing": "三次役魂诱因、军需粮权与最终授权指挥部。",
+      "text": "城门按时开启，亡者从不误班。军政官宣布下一次复核等潮势真正安稳再说，掌骨符的人也有权解释什么叫安稳。活人得到更多军粮，军属确实因此少埋葬过一些人；夜哨家属却连取回骨殖都要申请。梅莉娅撤掉自己的名字，孙女们开始把偷来的骨符藏进面包筐。你给城邦一支不会退伍的军团，也把谁有权结束战争的问题交给不愿让它结束的人。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "regency"
+            }
+          },
+          {
+            "flags": {
+              "burial_final": "chain"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunset_command",
+      "title": "日落时交回的军印",
+      "power": "守城部只掌限期防务，独立仓钥、分置档案和公开自责使居民能执行罢免，和平解除无限紧急借口。",
+      "characters": "多罗斯交回军印并继续受审，克勒奥不向指挥官交主钥；伊昂与户会核验到期交接。",
+      "world": "有限和约维持外部安全，指挥部未新设永久亡者军团；尚未释放的旧役魂由独立程序继续追责，不能因军印交回就视作已得自由。",
+      "cost": "指挥者失去自行延长权力的机会，居民承担活人守堤与外部赔款。",
+      "foreshadowing": "公开执行记录、三处副本、军粮分掌和最后限额和约。",
+      "text": "到约定的日落，多罗斯把军印放在克勒奥没有交出过的粮钥旁，说明自己仍须出庭。三处档案对上期限，户会便能在不给下一批军粮前要求新任命；有限和约使继续拖延不再能借口外海随时来袭。守军仍有工资和职责，失去的是自行定义紧急状态的权力。交接没有抹去旧命令的责任，也没有让活人免去守堤。它证明一个曾掌刀的人，至少有一次被制度要求松手。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "regency"
+            }
+          },
+          {
+            "flags": {
+              "burial_guardian": "doros_confession",
+              "oracle_archives": "distributed",
+              "oracle_foreign": "peace",
+              "harvest_stores": "shared"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rotating_militia",
+      "title": "轮到每一户的城门",
+      "power": "最后关门时当场重申四十日防务期限，主粮仓独立于军方，命令须经非军方印章登记；居民户会可罢免延期。",
+      "characters": "克勒奥保共享主仓，军属与外邦工人按自愿班次守堤；伊昂保超时服役申诉，旧亡者损失仍须另案处理。",
+      "world": "军事防务有真实粮食制衡，不能仅凭指挥官改字无限续权；未解除的旧亡者伤害不被自动赦免。",
+      "cost": "新的主要防务以活人轮值承担危险工时与少耕时间；未清旧役魂责任仍需继续处理，不能再将强制役使当作公共预算中不必付出的成本。",
+      "foreshadowing": "共享末粮提供罢免的实际手段，最终军授权重新确定期限；先前紧急权若曾成立则成为可对照先例。",
+      "text": "最后关门时授权当场重申四十日，克勒奥没有把共享主仓交给军官。守城命令需要非军方印章，户会可以在到期时拒绝下一批军粮与延期。每班港工和农人都有口粮、退岗和申诉的规则，旧亡者若仍被遗弃，也仍是没有被这份军约洗净的责任。这个安排并不要求每位指挥者先作同样的自白，约束来自粮袋确实在另一双手里。城邦付出活人危险劳动与较慢调度，换来守门者仍能回家的权利。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "regency"
+            }
+          },
+          {
+            "flags": {
+              "harvest_stores": "shared"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_guardian": "doros_confession",
+                    "oracle_archives": "distributed",
+                    "oracle_foreign": "peace",
+                    "harvest_stores": "shared"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "permanent_general",
+      "title": "被续写的紧急状态",
+      "power": "公共主仓未共享保管，军政依军粮集中、破约挪储或共同仓解散的缺口自行延长临时权。",
+      "characters": "普通军属最初支持保护伤兵，随后发现自己的反对也须军官批准；伊昂保存无法执行的期限。",
+      "world": "防务命令保持统一，期限存在但缺少独立军粮制衡；尚存副本与见证可用于以后起诉，不等于今天有力执行罢免。",
+      "cost": "短期确定性换来长期无法罢免，家庭从支持者变成续权的人质。",
+      "foreshadowing": "军粮集中、受神选统治者叙事、封档或持续封锁。",
+      "text": "最先给指挥部送水的是军属，她们记得有人在潮里背回伤兵。四十日以后，同一批人要求换岗，答复却是紧急状态尚未结束。非军方书记拿出登记的期限，户会却无法拒发本已集中给军方、挪去救急或分散到各户的军粮。伊昂按尚存的副本与证人继续起诉，诉状必须穿过指挥部控制的门。你保留了一些追责的道路，却没保住今天能叫掌刀者松手的粮袋。那批最初真心支持守城的人，现在也在队伍里等待一句允许反对的话。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "regency"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "burial_final": "chain"
+                  }
+                },
+                {
+                  "flags": {
+                    "burial_guardian": "doros_confession",
+                    "oracle_archives": "distributed",
+                    "oracle_foreign": "peace",
+                    "harvest_stores": "shared"
+                  }
+                },
+                {
+                  "flags": {
+                    "harvest_stores": "shared"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bonded_convoy",
+      "title": "抵岸以后还要偿还的人",
+      "power": "债权会依既有船约组织指定劳动，船上协调者可处理日常却无权取消三年劳务。",
+      "characters": "塔蕾娅保存工期与申诉通行，儿童不继承债；阿格莱为接收粮和安全承担真实成本。",
+      "world": "妇孺与外邦照护人有船位，接收岛保井和土地权，迁居并未自动解除受制身份。",
+      "cost": "用三年劳动与居住区限制换确定船位和接收口粮。",
+      "foreshadowing": "独占港租、庄园联保债船与最后关门时船票不得改名洗白。",
+      "text": "岸上的人点到儿童时，没有把他们记成可继承的债；点到照护人时，却把三年指定劳动写在同一张登记卡。塔蕾娅保住申诉船每月来一次的通行，阿格莱必须先垫粮和修港钱。船上的协调者能分床位，不能用一次投票消掉出发前的债。你让许多人确定活着抵岸，也让他们抵岸后仍须为离开的那夜持续付款。故城的印章漂过海，没能把束缚留在海里。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "diaspora"
+            }
+          },
+          {
+            "flags": {
+              "harvest_fleet": "debt"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "two_shores_lighthouse",
+      "title": "两岸互认的灯火",
+      "power": "迁居者自选船上协调会，留守者保独立户会与返航名额，双方按月对等结算救援。",
+      "characters": "梅莉娅按本人请求闭门后留岸行医，可随时搭返航船离去；塔蕾娅维护航路。",
+      "world": "城邦身份跨两岸延续，拒迁者不被注销，接收岛以有期限修港劳动获得补偿。",
+      "cost": "长期承担往返粮与护航费用，梅莉娅承担实际留守风险而非被遗弃。",
+      "foreshadowing": "退潮后的议事平等船位、关门前本人留岸请求和每月返航保证。",
+      "text": "第一艘船抵岸后，没有把留在故城的人划成失败者。塔蕾娅每月点一次返航名额，海岛以有期限修港劳动换取维护港湾的费用，井和土地仍归原居民共同决定。梅莉娅按自己签的请求闭门后留岸，药箱旁放一张她随时可以使用的船票。灯塔照的不是必须回归的祖国，也不是被抛下的岸；它把两边都有权改变主意的人继续连起来。这条航路以后每一季都要有人付粮与冒险。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "diaspora"
+            }
+          },
+          {
+            "all": [
+              {
+                "flags": {
+                  "burial_guardian": "melia_shore",
+                  "melia_explicit_consent": true
+                }
+              },
+              {
+                "not": {
+                  "flags": {
+                    "melia_consent_revoked": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_fleet": "debt"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "floating_citizenship",
+      "title": "带着空白页出海的城邦",
+      "power": "船上居民含妇女外邦人选可撤换协调者，海岛保本地自治，双方以一季修港劳务和公开口粮配额互约。",
+      "characters": "塔蕾娅保照护船票，伊昂携三处对照目录；家属自己保遗物，不能被协调者征作公共财产。",
+      "world": "名册、可靠新种与来源档案同行，原城失去土地中心，身份仍可在海上共同确认。",
+      "cost": "放弃故土的连续居住与原港税，承担接收者粮额和修港劳动。",
+      "foreshadowing": "公共船位、便携纪念、分置副本与慢筛新种，而非最后一夜万能登船。",
+      "text": "名册装进货筒时，伊昂没有填满那些从未找回的空白。家属各带一件自愿带走的遗物，塔蕾娅按旧船票让妇孺与外邦人登舷，种子与工具占去本可卖盐鱼的舱格。接收岛留下自己的井权，迁居者以一季有豁免和申诉的修港劳动换落脚。船上选出的协调者可以被撤换，不能把公共身份写成自己的船产。你们失去以故土为中心的城，却带走了再次决定谁是我们的办法。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "diaspora"
+            }
+          },
+          {
+            "flags": {
+              "burial_memorial": "aboard",
+              "harvest_seed_quality": "clean",
+              "oracle_archives": "distributed"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_fleet": "debt"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "burial_guardian": "melia_shore",
+                        "melia_explicit_consent": true
+                      }
+                    },
+                    {
+                      "not": {
+                        "flags": {
+                          "melia_consent_revoked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "unrecognized_arrivals",
+      "title": "分户落岸的城籍",
+      "power": "船上可撤换的协调会保留身份目录，接收岛以分户食宿和劳动约安排居留，尚无统一土地共同体。",
+      "characters": "塔蕾娅和家属保照护名单避免失散，伊昂保留实际存在的记录；这些记录不被说成凭空丢失，也不自动赋予接收岛地权。",
+      "world": "既有名册与个人船票可保存，但纪念、种源与来源档案未共同落实为一份集体落地安排，待遇由接收户具体履约。",
+      "cost": "失去以统一土地和生产协议安置全体的能力，家庭须逐户落实工作、居留和申诉。",
+      "foreshadowing": "烧档或未携名册、无共同种源，以及把船当作纯逃生工具。",
+      "text": "塔蕾娅带着照护名册走下舷梯，先把儿童送到认识的手边。接收岛承认船票与基本安全，仍把住哪间屋、承担哪段劳动分别写进各户协议；协调会尚未把分散的纪念、种源与来源档案谈成一处共享土地的完整安置约。家属保有遗物，书记继续保管能够核对的记录，船上选举也没有停止。你们带着城籍抵岸，却须在不同屋檐下逐项落实它能带来的实际待遇。有人先得到田，有人只能暂时以修港换食宿，下一轮申诉从这里开始。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "diaspora"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "harvest_fleet": "debt"
+                  }
+                },
+                {
+                  "all": [
+                    {
+                      "flags": {
+                        "burial_guardian": "melia_shore",
+                        "melia_explicit_consent": true
+                      }
+                    },
+                    {
+                      "not": {
+                        "flags": {
+                          "melia_consent_revoked": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "burial_memorial": "aboard",
+                    "harvest_seed_quality": "clean",
+                    "oracle_archives": "distributed"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "river_return_commons",
+      "title": "不再向河征税的高地",
+      "power": "逐户同意的高地共同体共享井与轮牧，不设代表全城的印；牧人与迁户各有接纳约否决和退出权。",
+      "characters": "俄瑞斯解除奠基役使，伊萨拆去经同意退让的围栏；家属保留拒迁与救援通道。",
+      "world": "部分旧田归潮，城邦缩为分散生产与祭约网络，神意不被声称已批准。",
+      "cost": "放弃原港税与大城规模，以高地修路轮牧和更小耕地承担生活。",
+      "foreshadowing": "解除奠基誓约、高地接纳与最后逐户同意退地，缺一不可。",
+      "text": "伊萨没有拆掉最后一家仍说不的门，他在门旁加了一条能拉人到高地的救援绳。别处的围栏由同意迁居的人亲手撤下，俄瑞斯的渡船离开旧石，牧人与迁户按约共井、轮牧、修路。这里不再有一枚代表全城征税的印，也不因此变成无主的空地。你们放弃大港的规模和收入，用更小的耕地与更慢的互助生活。河没有为这项决定颁神谕；先被问到的，是房屋与土地真正的居住者。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "silence"
+            }
+          },
+          {
+            "flags": {
+              "burial_final": "free",
+              "burial_founding": "released",
+              "harvest_floodplan": "retreat",
+              "harvest_fields": "flooded",
+              "river_return_consent": true,
+              "highland_consent": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "seedless_departure",
+      "title": "各自寻找下一季",
+      "power": "家庭与互助劳队分头决定土地和采购，无统一粮约代表全城议价，私存种子仍归当事人。",
+      "characters": "克勒奥把工具与技能名单交到出行或留耕队，妮莎帮助无亲属儿童结伴；没有人能代所有家庭承诺下一季。",
+      "world": "原城失去统一粮约与共同采购、播种保障，私存的完好种子与安全田地并不自动消失。",
+      "cost": "共同保障与统一议价能力断裂，家庭必须自行组织生产或寻找别处土地。",
+      "foreshadowing": "吃掉最后种粮、未能恢复本地播种与最后关门时明确承认空田。",
+      "text": "离开的人没有把农具卖光，留下的人也没有被宣布手中的好种子已经不存在。克勒奥列出谁会接水、谁会缝袋，妮莎把缺少亲属的孩子连进照护队。共同粮约撤回以后，各户必须自己决定试种、借地或赴外城劳动，不能再以整个城邦的收成与名义谈同一份保障。互助仍在，原地也可能长出庄稼；断裂的是大家共同承担下一季风险的组织。新的耕作从分散的人手重新起步，没有一份公共承诺能替他们兜底。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "silence"
+            }
+          },
+          {
+            "flags": {
+              "harvest_final": "lost"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "burial_final": "free",
+                    "burial_founding": "released",
+                    "harvest_floodplan": "retreat",
+                    "harvest_fields": "flooded",
+                    "river_return_consent": true,
+                    "highland_consent": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gates_apart",
+      "title": "每扇门都只保门内的人",
+      "power": "各门楼与街区自行订安全约，户内能互助，城际通行与公共申辩无统一保证。",
+      "characters": "老书吏替不同街区递送反对书，塔蒙为无人接纳的影子点灯；无人能代表所有人承诺开门。",
+      "world": "部分仓、田或仪式仍存在，主要损失是共同安全与可跨街区使用的权利。",
+      "cost": "个人过门须再找担保，救援易被地方仇怨截断，城邦不再共同承担风险。",
+      "foreshadowing": "不授权、分段护岸、分散档案或无法落实统一交接的累积。",
+      "text": "城里不一定空，也不一定没有粮。损坏的是从一扇门走到另一扇门时仍被承认的安全：一边的证词到了另一边先要找担保，一条街的救援可能被旧仇挡回。老书吏带着反对书往返，塔蒙为没有家属来领的影子点灯，居民仍能在小范围互助。你没有把他们交给单一统治者，也没有替他们保住共同拒绝恐惧的力量。每扇门都在守护自己，门外的人必须重新问一遍能不能进来。",
+      "requires": {
+        "all": [
+          {
+            "flags": {
+              "oracle_constitution": "silence"
+            }
+          },
+          {
+            "not": {
+              "any": [
+                {
+                  "flags": {
+                    "burial_final": "free",
+                    "burial_founding": "released",
+                    "harvest_floodplan": "retreat",
+                    "harvest_fields": "flooded",
+                    "river_return_consent": true,
+                    "highland_consent": true
+                  }
+                },
+                {
+                  "flags": {
+                    "harvest_final": "lost"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "deadline": 49,
+  "chapters": [
+    {
+      "id": "names",
+      "number": 1,
+      "title": "第一章 · 被删去的人",
+      "summary": "外港败战后的第七夜，死者、粮账与神谕同时出现缺口。先把能查证的人与物保留下来；你有权暂时妥协，但损失不会随换章消失。",
+      "goals": {
+        "burial": "收回姓名、完成第一夜告别、打捞遗物。",
+        "harvest": "查种粮账、修水闸、建立当天配给。",
+        "oracle": "保原文、查改写、核对亡者证词。"
+      }
+    },
+    {
+      "id": "borrowed_peace",
+      "number": 2,
+      "title": "第二章 · 借来的和平",
+      "summary": "潮水暂退，海岛商团运来一批有价的救济。生存争夺转成公民资格、港口债务和谁能审判掌权者的制度争夺。公开补给由盐商税款与互助会轮值捐助，逐笔登记。",
+      "goals": {
+        "burial": "让葬仪条文落到户籍与赔偿，而非停在印章上。",
+        "harvest": "保护种粮，谈港口补给，决定债务是否绑住人。",
+        "oracle": "开放记录，分散保管副本，处理删改神谕的老师。"
+      },
+      "arrivalEffects": {
+        "resources": {
+          "coin": 8,
+          "grain": 7,
+          "medicine": 4
+        },
+        "world": {
+          "unrest": 1
+        }
+      }
+    },
+    {
+      "id": "oath_below_tide",
+      "number": 3,
+      "title": "第三章 · 潮下的契约",
+      "summary": "旧闸坍塌露出建城石契：城邦把渡口亡者束缚为护岸。解除它会失去防潮屏障，续约则要找到新的承担者。公开补给来自已卸货的第二批海岛货船，不以隐藏旗标发放。",
+      "goals": {
+        "burial": "决定奠基誓约、守夜者资格与对低地的赔偿。",
+        "harvest": "检验种子、防潮规划、建立可容纳非公民的船路。",
+        "oracle": "辨认石契原义，组织授权，保护活的证人。"
+      },
+      "arrivalEffects": {
+        "resources": {
+          "coin": 7,
+          "grain": 8,
+          "medicine": 4
+        },
+        "world": {
+          "taint": 1
+        }
+      }
+    },
+    {
+      "id": "before_gate_closes",
+      "number": 4,
+      "title": "第四章 · 城门未闭",
+      "summary": "外海舰队将在第四十九日离去，最大潮汐正在逼近。碑、种子、证词与人不可能毫无代价地全保；每条线必须作出可执行的最后安排，随后由公开授权决定城邦以后怎样存在。公开补给为互助会、神庙与残存议员合并的最后储备。",
+      "goals": {
+        "burial": "处理纪念物、承担者与死者最后的去处。",
+        "harvest": "分最后储备、决定护田或还河、落实经济和迁徙。",
+        "oracle": "确定菲洛安全与发言权、外部和约和最终公共授权。"
+      },
+      "arrivalEffects": {
+        "resources": {
+          "coin": 6,
+          "grain": 6,
+          "medicine": 4
+        },
+        "world": {
+          "unrest": 1
+        }
+      }
+    }
+  ],
+  "contentVersion": 2
+}

@@ -1,0 +1,7442 @@
+{
+  "id": "qwen-india-three-arcs-v2",
+  "title": "印度神话三弧",
+  "subtitle": "十四年与一个承诺 · 分甘之约 · 未赴的席",
+  "version": "2.1.0",
+  "language": "zh-CN",
+  "port": 8828,
+  "fixedLevel": 5,
+  "initialLevel": 5,
+  "levelMode": "fixed",
+  "initialPotions": 4,
+  "initialScene": "HUB",
+  "startTime": 6,
+  "minimumPlayers": 1,
+  "recommendedPlayers": 4,
+  "estimatedDuration": "每弧目标4–5小时；未真人实测，可分次存档；幕间跳切不当真实连续劳动。",
+  "description": "原千问印度三条完整独立故事，每弧四个数字节点、各含原稿一场主场及连接；不是《乳海余波》。",
+  "rules": {
+    "edition": "D&D 2024",
+    "srd": "5.2.1",
+    "progression": "本数字紧凑版统一5级，原纸本3→12级四幕建议独立保留；非自动成长复刻。",
+    "openActions": "未列的合法2024/SRD能力交DM按真实施法资格、材料、目标、时限与意愿处理；不因缺按钮禁法术。",
+    "publicCash": "工程款、路费与复生资助为有持有人及数量的普通GP钱袋；工资进gold。支出须实际授权，不混用。",
+    "culture": "现实史诗/吠陀母题与原创合同、地点、凡人、几何分开；无现实仪轨教学，不按族类定义善恶。",
+    "resurrection": "C弧time=0对应死后第90日零时，startTime=6为第90日06:00；保护止time60＝第92日午时，无续保的短窗止time252＝第100日午时。施术需1h，按钮timeAtMost251并实际minutes60。已支付保存费不重复收，愿回事实不为悲剧临时改。"
+  },
+  "introSafety": {
+    "title": "同意、工资与离任",
+    "text": "非露骨成年关系可友情/合伙/淡出；拒绝秘密、巨债、亲密不损既定工资与证言。略过敏感细节不扣资源。"
+  },
+  "party": [
+    {
+      "id": "p1",
+      "name": "石衡",
+      "role": "车队护行者",
+      "bio": "受雇一程，先问自己能答应多久。"
+    },
+    {
+      "id": "p2",
+      "name": "绳墨",
+      "role": "旧路与文书侦查者",
+      "bio": "保副本，也保写字的人说不的权利。"
+    },
+    {
+      "id": "p3",
+      "name": "温灯",
+      "role": "照护者",
+      "bio": "先救能救的人，治疗不购买证言。"
+    },
+    {
+      "id": "p4",
+      "name": "青册",
+      "role": "工程与术理研习者",
+      "bio": "核真实法术与日期，让好办法真省钱省工。"
+    }
+  ],
+  "initialFacts": {
+    "cRoadSpent": 0,
+    "cTransportSpent": 0,
+    "cFundSpent": 0,
+    "aRotationSpent": 0,
+    "encounter_a-raid_cleared": false,
+    "encounter_a-raid_defeated": false,
+    "encounter_a-raid_surrendered": false,
+    "encounter_a-raid_party_setback": false,
+    "encounter_a-raid_outcome": "",
+    "encounter_a-merc_cleared": false,
+    "encounter_a-merc_defeated": false,
+    "encounter_a-merc_surrendered": false,
+    "encounter_a-merc_party_setback": false,
+    "encounter_a-merc_outcome": "",
+    "encounter_b-merc_cleared": false,
+    "encounter_b-merc_defeated": false,
+    "encounter_b-merc_surrendered": false,
+    "encounter_b-merc_party_setback": false,
+    "encounter_b-merc_outcome": "",
+    "encounter_c-roadguard_cleared": false,
+    "encounter_c-roadguard_defeated": false,
+    "encounter_c-roadguard_surrendered": false,
+    "encounter_c-roadguard_party_setback": false,
+    "encounter_c-roadguard_outcome": "",
+    "HUB_done": false,
+    "arc": false,
+    "A1_done": false,
+    "a-raidRaised": false,
+    "a-raidTruced": false,
+    "aSigned": false,
+    "aScope": false,
+    "aBridge": false,
+    "aTaxPaid": false,
+    "aFastCheckFailed": false,
+    "aGrainSafe": false,
+    "aSealKept": false,
+    "aSuppliesLost": false,
+    "A2_done": false,
+    "aArrived": false,
+    "aSuppliesReplaced": false,
+    "aRotation": false,
+    "aGrayNamed": false,
+    "aMaterial": false,
+    "aExclusive": false,
+    "aMaterialFailed": false,
+    "aEvidence": false,
+    "aChannelRestored": false,
+    "A3_done": false,
+    "a-mercRaised": false,
+    "a-mercTruced": false,
+    "aAuthorityKnown": false,
+    "aRelief": false,
+    "aVow": false,
+    "aBridgeWagesPaid": false,
+    "aBridgeFree": false,
+    "aGrayFramed": false,
+    "aWarehouse": false,
+    "aSeedLost": false,
+    "A4_done": false,
+    "aHandoff": false,
+    "aFrameCorrected": false,
+    "aEnd": false,
+    "B1_done": false,
+    "bAccepted": false,
+    "bCopies": false,
+    "bPledge": false,
+    "bReelSafe": false,
+    "bStart": false,
+    "bReelDebt": false,
+    "B2_done": false,
+    "bBuilt": false,
+    "bOvertime": false,
+    "bRope": false,
+    "bRopeDelayed": false,
+    "bConsentRenewed": false,
+    "bForgedPage": false,
+    "bPerformance": false,
+    "B3_done": false,
+    "b-mercRaised": false,
+    "b-mercTruced": false,
+    "bRightsKnown": false,
+    "bPlan": false,
+    "bStock96": false,
+    "bPublicSold": false,
+    "bGate": false,
+    "bGatePending": false,
+    "B4_done": false,
+    "bRepaired": false,
+    "bRepair": false,
+    "bRepairTemporary": false,
+    "bClosedAccounts": false,
+    "bLampIncomeSold": false,
+    "bOvertimeDueAcknowledged": false,
+    "bEnd": false,
+    "C1_done": false,
+    "cAccepted": false,
+    "cCalendarKnown": false,
+    "cInitialEffectiveDeathDays": false,
+    "cBodyRecovered": false,
+    "cBodyRoute": false,
+    "cRansomPaid": false,
+    "cRaised": false,
+    "cResurrection": false,
+    "cServiceDebt": false,
+    "C2_done": false,
+    "c-roadguardRaised": false,
+    "c-roadguardTruced": false,
+    "cCrossed": false,
+    "cRescued": false,
+    "cPageKept": false,
+    "cExtorted": false,
+    "cCareKept": false,
+    "C3_done": false,
+    "cFalseAuthorityKnown": false,
+    "cBoatHalfProtected": false,
+    "cMemories": false,
+    "cCopiesCorrected": false,
+    "cRecovered60": false,
+    "cPageRebuilt": false,
+    "C4_done": false,
+    "cFutureAppointment": false,
+    "cCityAppointment": false,
+    "cWagesSettled": false,
+    "cBelongingsReturned": false,
+    "cEnd": false,
+    "aTaxRefunded": false
+  },
+  "publicFacts": [
+    "A1_done",
+    "A2_done",
+    "A3_done",
+    "A4_done",
+    "B1_done",
+    "B2_done",
+    "B3_done",
+    "B4_done",
+    "C1_done",
+    "C2_done",
+    "C3_done",
+    "C4_done",
+    "HUB_done",
+    "a-mercRaised",
+    "a-mercTruced",
+    "a-raidRaised",
+    "a-raidTruced",
+    "aArrived",
+    "aAuthorityKnown",
+    "aBridge",
+    "aBridgeFree",
+    "aBridgeWagesPaid",
+    "aChannelRestored",
+    "aEnd",
+    "aEvidence",
+    "aExclusive",
+    "aFastCheckFailed",
+    "aFrameCorrected",
+    "aGrainSafe",
+    "aGrayFramed",
+    "aGrayNamed",
+    "aHandoff",
+    "aMaterial",
+    "aMaterialFailed",
+    "aRelief",
+    "aRotation",
+    "aRotationSpent",
+    "aScope",
+    "aSealKept",
+    "aSeedLost",
+    "aSigned",
+    "aSuppliesLost",
+    "aSuppliesReplaced",
+    "aTaxPaid",
+    "aTaxRefunded",
+    "aVow",
+    "aWarehouse",
+    "arc",
+    "b-mercRaised",
+    "b-mercTruced",
+    "bAccepted",
+    "bBuilt",
+    "bClosedAccounts",
+    "bConsentRenewed",
+    "bCopies",
+    "bEnd",
+    "bForgedPage",
+    "bGate",
+    "bGatePending",
+    "bLampIncomeSold",
+    "bOvertime",
+    "bOvertimeDueAcknowledged",
+    "bPerformance",
+    "bPlan",
+    "bPledge",
+    "bPublicSold",
+    "bReelDebt",
+    "bReelSafe",
+    "bRepair",
+    "bRepairTemporary",
+    "bRepaired",
+    "bRightsKnown",
+    "bRope",
+    "bRopeDelayed",
+    "bStart",
+    "bStock96",
+    "c-roadguardRaised",
+    "c-roadguardTruced",
+    "cAccepted",
+    "cBelongingsReturned",
+    "cBoatHalfProtected",
+    "cBodyRecovered",
+    "cBodyRoute",
+    "cCalendarKnown",
+    "cCareKept",
+    "cCityAppointment",
+    "cCopiesCorrected",
+    "cCrossed",
+    "cEnd",
+    "cExtorted",
+    "cFalseAuthorityKnown",
+    "cFundSpent",
+    "cFutureAppointment",
+    "cInitialEffectiveDeathDays",
+    "cMemories",
+    "cPageKept",
+    "cPageRebuilt",
+    "cRaised",
+    "cRansomPaid",
+    "cRecovered60",
+    "cRescued",
+    "cResurrection",
+    "cRoadSpent",
+    "cServiceDebt",
+    "cTransportSpent",
+    "cWagesSettled",
+    "encounter_a-merc_cleared",
+    "encounter_a-merc_defeated",
+    "encounter_a-merc_outcome",
+    "encounter_a-merc_party_setback",
+    "encounter_a-merc_surrendered",
+    "encounter_a-raid_cleared",
+    "encounter_a-raid_defeated",
+    "encounter_a-raid_outcome",
+    "encounter_a-raid_party_setback",
+    "encounter_a-raid_surrendered",
+    "encounter_b-merc_cleared",
+    "encounter_b-merc_defeated",
+    "encounter_b-merc_outcome",
+    "encounter_b-merc_party_setback",
+    "encounter_b-merc_surrendered",
+    "encounter_c-roadguard_cleared",
+    "encounter_c-roadguard_defeated",
+    "encounter_c-roadguard_outcome",
+    "encounter_c-roadguard_party_setback",
+    "encounter_c-roadguard_surrendered"
+  ],
+  "chapters": [
+    {
+      "id": "HUB",
+      "title": "三条路的书桌",
+      "scene": "HUB",
+      "entryLevel": 5,
+      "description": "每弧独立四节点，原整本八场顺序合并为四次实际交接。",
+      "readAloud": "书记把三册放开：你们今天答应哪一程？",
+      "dmNotes": "HUB只选择goToChapter，不给别弧报酬、不预先完成其他故事。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "HUB_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "arc-a",
+          "label": "十四年与一个承诺",
+          "text": "护送、班表、救急、合法改约与归城。",
+          "success": {
+            "facts": {
+              "arc": "A"
+            },
+            "goToChapter": "A1"
+          }
+        },
+        {
+          "id": "arc-b",
+          "label": "分甘之约",
+          "text": "修池、补绳、120罐普通食品与真实货权。",
+          "success": {
+            "facts": {
+              "arc": "B"
+            },
+            "goToChapter": "B1"
+          }
+        },
+        {
+          "id": "arc-c",
+          "label": "未赴的席",
+          "text": "遗物、原路、连续保存和可实际选择的复生。",
+          "success": {
+            "facts": {
+              "arc": "C"
+            },
+            "goToChapter": "C1"
+          }
+        }
+      ],
+      "text": "三条路的书桌\n\n书记把三册放开：你们今天答应哪一程？\n\n每弧独立四节点，原整本八场顺序合并为四次实际交接。\n\nHUB只选择goToChapter，不给别弧报酬、不预先完成其他故事。"
+    },
+    {
+      "id": "A1",
+      "title": "纸边没有写的人，与夜袭后的热粥",
+      "scene": "A1",
+      "entryLevel": 5,
+      "description": "合并原A1–A2：先签明确一程，再处理粮车与封条。",
+      "readAloud": "青绳看小字：几笔够把孩子养大，也够让我一直见不到他。价钱还是这一次。",
+      "dmNotes": "王子/悉多/拉克什曼那不给神战卡。税桥0尺、文书房+5；粮车在(22.5,42.5)，封条逃路在北侧。夜袭可分工全保，不预定必失项。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-conflict",
+          "label": "实际物理冲突：布置原卡遭遇",
+          "text": "仅在真实冲突时使用；敌人目标为拦路/搬货/夺物，可常规先攻、认停或撤，伤损保留。",
+          "success": {
+            "facts": {
+              "a-raidRaised": true
+            },
+            "encounter": "a-raid"
+          },
+          "requires": {
+            "not": "a-raidRaised"
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "双方认停，退回普通交涉路",
+          "text": "本地拦截者同意此次止手；只解物理冲突，不取得财产/签字/死者意愿。",
+          "success": {
+            "facts": {
+              "a-raidTruced": true
+            },
+            "say": "按公开目标止手，真实伤势保留，明示其他路线继续。",
+            "neutralize": [
+              "a-raid-1"
+            ]
+          },
+          "requires": {
+            "a-raidRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "sign",
+          "label": "删无限续约，实领护送预付160",
+          "text": "有权书记明确同意分段；只承担十四日。",
+          "success": {
+            "facts": {
+              "aSigned": true,
+              "aScope": "fourteen-days"
+            },
+            "say": "480合同成立；160已付，枣林尚待320，后续不自动续十四年。",
+            "gold": 160,
+            "items": [
+              {
+                "id": "a-contract",
+                "name": "十四日护送正副约",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A1"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-escort",
+                "to": "宫廷",
+                "text": "全队一次十四日护送480，160已付、抵达尚320。",
+                "status": "待履行"
+              }
+            ],
+            "handouts": [
+              "a-contract"
+            ]
+          }
+        },
+        {
+          "id": "tax-wait",
+          "label": "等半日核免税副本",
+          "text": "条款公开，不骰也可等，零GP。",
+          "success": {
+            "facts": {
+              "aBridge": "exempt"
+            },
+            "say": "半日核章免税；没有未付40也无将来40退款。",
+            "minutes": 720
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "not": "aBridge"
+              }
+            ]
+          }
+        },
+        {
+          "id": "tax-pay",
+          "label": "付40GP，实留误税收据",
+          "text": "事后确为误收才退，同一笔不二领。",
+          "success": {
+            "facts": {
+              "aBridge": "paid",
+              "aTaxPaid": true
+            },
+            "say": "40真实付给税吏，收据保留。",
+            "items": [
+              {
+                "id": "a-tax",
+                "name": "40GP误税收据",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A1"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "not": "aBridge"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 40
+          }
+        },
+        {
+          "id": "ford",
+          "label": "绕浅滩一日",
+          "text": "车队知情同意多一日，无隐藏全队伤损。",
+          "success": {
+            "facts": {
+              "aBridge": "ford"
+            },
+            "say": "多一日行路，原480护送合同与免税权未被没收。",
+            "minutes": 1440
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "not": "aBridge"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fast-check",
+          "label": "在关桥前比印章",
+          "text": "DC15失败仅未赶上，仍可等核/付税/绕路。",
+          "success": {
+            "facts": {
+              "aBridge": "exempt"
+            },
+            "say": "及时核成副本，免税通行。"
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "not": "aBridge"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "aFastCheckFailed": true
+            },
+            "say": "这次没赶完，免税条款不消失；明确三路仍在。"
+          }
+        },
+        {
+          "id": "protect",
+          "label": "分工护人、粮车和封条",
+          "text": "已有足够人手且通道可达，Help/法术真实适用时免骰；战斗仍按实际原卡。",
+          "success": {
+            "facts": {
+              "A1_done": true,
+              "aGrainSafe": true,
+              "aSealKept": true
+            },
+            "say": "受惊者、30GP粮具与封条都保全；热粥后可只睡，不要求讲私人理由。",
+            "complete": true,
+            "items": [
+              {
+                "id": "a-fireseal",
+                "name": "盐路雇工封条",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A1"
+              }
+            ],
+            "neutralize": [
+              "a-raid-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "aBridge": [
+                  "exempt",
+                  "paid",
+                  "ford"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "evacuate",
+          "label": "先保人撤到林路，粮具未能兼顾",
+          "text": "明确30GP粮具留给劫道者，封条没拿到仍有车辙/货栈/灰角。",
+          "success": {
+            "facts": {
+              "A1_done": true,
+              "aGrainSafe": false,
+              "aSealKept": false,
+              "aSuppliesLost": true
+            },
+            "say": "人员按真实行动撤出；30GP普通粮具实际损失，后面可补或换已同意劳务。",
+            "complete": true,
+            "neutralize": [
+              "a-raid-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSigned": true
+              },
+              {
+                "aBridge": [
+                  "exempt",
+                  "paid",
+                  "ford"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next": "A2",
+      "encounters": {
+        "a-raid": [
+          {
+            "id": "a-raid-1",
+            "name": "盐路受雇劫者",
+            "type": "bandit",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 5,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "纸边没有写的人，与夜袭后的热粥\n\n青绳看小字：几笔够把孩子养大，也够让我一直见不到他。价钱还是这一次。\n\n合并原A1–A2：先签明确一程，再处理粮车与封条。\n\n王子/悉多/拉克什曼那不给神战卡。税桥0尺、文书房+5；粮车在(22.5,42.5)，封条逃路在北侧。夜袭可分工全保，不预定必失项。"
+    },
+    {
+      "id": "A2",
+      "title": "第三个夜班，与断火后的账",
+      "scene": "A2",
+      "entryLevel": 5,
+      "description": "合并原A3–A4：已做工作照付，工程与家庭不强作必失一人。",
+      "readAloud": "迟舟拿两张票：我想他回来，也想他愿意回来。",
+      "dmNotes": "渠槽底−5尺、桥面0、仓账室+5。灰角要工资/署名，不用恋情换线索。600分袋只有各自用途，原到达320先结，新增缺口另谈。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "arrive",
+          "label": "到枣林清点，结未付320",
+          "text": "这次支付结清480，不重复发。600工程款由有权者分袋交付。",
+          "success": {
+            "facts": {
+              "aArrived": true
+            },
+            "say": "护送费另320实付；渠材240/粮180/轮班120/巡路60为普通公款，按已列工程执行。",
+            "gold": 320,
+            "items": [
+              {
+                "id": "a-rotation",
+                "name": "轮班照护GP（普通钱币）",
+                "kind": "object",
+                "count": 120,
+                "holder": "party",
+                "location": "A2"
+              },
+              {
+                "id": "a-channel",
+                "name": "普通渠材板（每块10GP）",
+                "kind": "object",
+                "count": 24,
+                "holder": "party",
+                "location": "A2"
+              },
+              {
+                "id": "a-grain",
+                "name": "已按180GP采购的普通粮",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              },
+              {
+                "id": "a-patrol",
+                "name": "60GP已付巡路合同",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              },
+              {
+                "id": "a-key",
+                "name": "林苑巡路钥匙",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-escort",
+                "to": "宫廷",
+                "text": "十四日护送480已全部支付。",
+                "status": "已履行"
+              }
+            ],
+            "handouts": [
+              "a-works"
+            ]
+          }
+        },
+        {
+          "id": "replace",
+          "label": "补上A1实际丢失30GP粮具",
+          "text": "有损才补，账清后不再自动重复损。",
+          "success": {
+            "facts": {
+              "aSuppliesReplaced": true
+            },
+            "say": "30GP普通粮具已实际补齐。",
+            "items": [
+              {
+                "id": "a-replacement",
+                "name": "补购普通粮具30GP",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSuppliesLost": true
+              },
+              {
+                "not": "aSuppliesReplaced"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 30
+          }
+        },
+        {
+          "id": "rotation",
+          "label": "从轮班袋付12GP替三夜",
+          "text": "灰角6＋另一轮休者6；本人自选署名，青绳可回家三天。",
+          "success": {
+            "facts": {
+              "aRotation": "hired",
+              "aGrayNamed": true
+            },
+            "say": "12枚实际付工；灰角领平等工资，可公开名字或本人选工号。",
+            "promises": [
+              {
+                "id": "a-three-nights",
+                "to": "青绳/灰角/轮休者",
+                "text": "三夜各自自愿分工，已支付12GP。",
+                "status": "已履行"
+              }
+            ],
+            "increment": {
+              "aRotationSpent": 12
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aRotation"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "a-rotation",
+                "count": 12
+              }
+            ]
+          }
+        },
+        {
+          "id": "volunteer",
+          "label": "队员自愿接三夜，保留12GP",
+          "text": "按真实时段/睡眠/法术持续安排，不自动发疲惫；不强迫某职业。",
+          "success": {
+            "facts": {
+              "aRotation": "party"
+            },
+            "say": "明确三班人选与休息，青绳照常离开三天；钱仍在轮班袋。",
+            "minutes": 4320,
+            "promises": [
+              {
+                "id": "a-three-nights",
+                "to": "枣林",
+                "text": "自愿三夜轮值已按实际日历完成。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aRotation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "resign",
+          "label": "青绳不续下一约，钥匙暂寄住持",
+          "text": "原工钱照付，不因离任判恶；以后再雇实际有人。",
+          "success": {
+            "facts": {
+              "aRotation": "resigned"
+            },
+            "say": "青绳结束下一期，住持只保管，不承诺无限免费夜巡。",
+            "npc": [
+              {
+                "id": "qing",
+                "status": "已获已做工钱，下一期退任",
+                "location": "home"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aRotation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "material-pay",
+          "label": "自愿私人出120GP补雨前渠材",
+          "text": "不是拿轮班120冒用；不产生盐运独家。",
+          "success": {
+            "facts": {
+              "aMaterial": "paid"
+            },
+            "say": "120GP买真实渠材，独家未签。",
+            "items": [
+              {
+                "id": "a-extra-material",
+                "name": "补购渠材120GP",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aMaterial"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 120
+          }
+        },
+        {
+          "id": "material-loan",
+          "label": "接受盐主120材料借款",
+          "text": "下一季有限独家运盐；记120本金与到期，不能写终身。",
+          "success": {
+            "facts": {
+              "aMaterial": "loan",
+              "aExclusive": true
+            },
+            "say": "盐主交120GP等值渠材；本金与下一季独家入约。",
+            "items": [
+              {
+                "id": "a-extra-material",
+                "name": "盐主出借渠材120GP",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-salt-loan",
+                "to": "盐仓主",
+                "text": "120GP材料本金，下一季独家运盐，具体到期依本次签约。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aMaterial"
+              }
+            ]
+          }
+        },
+        {
+          "id": "material-tools",
+          "label": "用实际工程/工具方案省下120额外料",
+          "text": "主持已核材料可替、工具熟练与实施条件；失败只损30木料和一日。",
+          "success": {
+            "facts": {
+              "aMaterial": "saved"
+            },
+            "say": "复用旧梁与现有工具真实解决额外缺口，未生成盐运债。",
+            "minutes": 480
+          },
+          "requires": {
+            "all": [
+              {
+                "aArrived": true
+              },
+              {
+                "not": "aMaterial"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "aMaterialFailed": true
+            },
+            "say": "三块各10GP旧木料真实损坏并从可用料扣除、延一日；可修、买或借，不伤家庭。",
+            "minutes": 1440,
+            "consumeItems": [
+              {
+                "id": "a-channel",
+                "count": 3
+              }
+            ],
+            "items": [
+              {
+                "id": "a-broken-wood",
+                "name": "已损坏渠材板（原值每块10GP）",
+                "kind": "object",
+                "count": 3,
+                "holder": "works",
+                "location": "A2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "trace",
+          "label": "查看火棚三条固定物证，完成修复交接",
+          "text": "基本事实直接给：盐路绳结/补衣账签/轮换脚步；族类不当罪证。",
+          "success": {
+            "facts": {
+              "A2_done": true,
+              "aEvidence": true,
+              "aChannelRestored": true
+            },
+            "say": "火棚证据保存，灰角可带去货栈复核；实际家庭与渠工成果保留。",
+            "complete": true,
+            "items": [
+              {
+                "id": "a-fireledger",
+                "name": "火棚与货栈对应账签",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2"
+              }
+            ],
+            "transferItems": [
+              {
+                "id": "a-channel",
+                "holder": "works",
+                "location": "A2-channel"
+              },
+              {
+                "id": "a-grain",
+                "holder": "works",
+                "location": "A2-granary"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "aMaterial": [
+                    "paid",
+                    "loan"
+                  ]
+                },
+                "transferItems": [
+                  {
+                    "id": "a-extra-material",
+                    "holder": "works",
+                    "location": "A2-channel"
+                  }
+                ]
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aRotation": [
+                  "hired",
+                  "party",
+                  "resigned"
+                ]
+              },
+              {
+                "aMaterial": [
+                  "paid",
+                  "loan",
+                  "saved"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next": "A3",
+      "text": "第三个夜班，与断火后的账\n\n迟舟拿两张票：我想他回来，也想他愿意回来。\n\n合并原A3–A4：已做工作照付，工程与家庭不强作必失一人。\n\n渠槽底−5尺、桥面0、仓账室+5。灰角要工资/署名，不用恋情换线索。600分袋只有各自用途，原到达320先结，新增缺口另谈。"
+    },
+    {
+      "id": "A3",
+      "title": "合法早归，与最后一年的仓库",
+      "scene": "A3",
+      "entryLevel": 5,
+      "description": "合并原A5–A6：粮荒真，文书利益也真；拆穿操纵不凭空生粮。",
+      "readAloud": "公议代表说：我能改桥约，不能替全城都点头。先把桥工欠薪算清。",
+      "dmNotes": "桥档室+5、仓车0，粮门/账柜/佣兵退路三目标可见。给城方160采购已同意款，不强迫PC私掏。年月用主持跳切不累加服务时钟。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-conflict",
+          "label": "实际物理冲突：布置原卡遭遇",
+          "text": "仅在真实冲突时使用；敌人目标为拦路/搬货/夺物，可常规先攻、认停或撤，伤损保留。",
+          "success": {
+            "facts": {
+              "a-mercRaised": true
+            },
+            "encounter": "a-merc"
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "a-mercRaised"
+              },
+              {
+                "not": "aWarehouse"
+              }
+            ]
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "双方认停，退回普通交涉路",
+          "text": "本地拦截者同意此次止手；只解物理冲突，不取得财产/签字/死者意愿。",
+          "success": {
+            "facts": {
+              "a-mercTruced": true
+            },
+            "say": "按公开目标止手，真实伤势保留，明示其他路线继续。",
+            "neutralize": [
+              "a-merc-1"
+            ]
+          },
+          "requires": {
+            "a-mercRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "read",
+          "label": "核当年诺文与代理权限",
+          "text": "到期前不入城界/不行储君权；通信与别人救急合法。",
+          "success": {
+            "facts": {
+              "aAuthorityKnown": true
+            },
+            "say": "护桥公议代理有权改诺，但不能替雇员加班；误税只退真实实付者。"
+          }
+        },
+        {
+          "id": "relief",
+          "label": "城方出160采购，志愿者六日运粮",
+          "text": "此款由城方实付供货商，不进玩家可双领的工资袋。",
+          "success": {
+            "facts": {
+              "aRelief": true
+            },
+            "say": "160粮食真实采购，六日转运由实际自愿者接；王子可仍按期入界。",
+            "items": [
+              {
+                "id": "a-relief",
+                "name": "城方已付160GP转运粮",
+                "kind": "object",
+                "count": 1,
+                "holder": "relief-crew",
+                "location": "capital-road"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-relief-job",
+                "to": "城议事方",
+                "text": "自愿、不受王诺约束者六日普通转运。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "aAuthorityKnown": true
+          }
+        },
+        {
+          "id": "keep",
+          "label": "保持到期诺文",
+          "text": "先由不受约束者救急；不关通信、不迫家属承担。",
+          "success": {
+            "facts": {
+              "aVow": "kept"
+            },
+            "say": "守满仍可完成救急；A4今日出发、三日后到界。"
+          },
+          "requires": {
+            "all": [
+              {
+                "aAuthorityKnown": true
+              },
+              {
+                "not": "aVow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "amend",
+          "label": "实际付桥工欠薪120，双方依法改约",
+          "text": "公议与王子已明示愿意，新增劳动本人另签；欠薪由愿付的本按钮行动者支。",
+          "success": {
+            "facts": {
+              "aVow": "amended",
+              "aBridgeWagesPaid": true
+            },
+            "say": "120真实给桥工，合法改诺成立；没有额外天罚。",
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "aTaxPaid": true
+                    },
+                    {
+                      "not": "aTaxRefunded"
+                    }
+                  ]
+                },
+                "gold": 40,
+                "facts": {
+                  "aTaxRefunded": true
+                },
+                "say": "公议同时退实际误收40GP给原队伍钱袋。"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-vow",
+                "to": "护桥公议/王子",
+                "text": "已依法改为本次可提前入界；新增雇工义务须本人另同意。",
+                "status": "已改约"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aAuthorityKnown": true
+              },
+              {
+                "not": "aVow"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 120
+          }
+        },
+        {
+          "id": "unilateral",
+          "label": "王子知情选择单方早归",
+          "text": "允许；公议暂停免费桥路，后续40/趟另谈，无额外状态罚。",
+          "success": {
+            "facts": {
+              "aVow": "unilateral",
+              "aBridgeFree": false
+            },
+            "say": "粮可送、诺可后谈；政治争议不抹已经完成的渠。"
+          },
+          "requires": {
+            "all": [
+              {
+                "aAuthorityKnown": true
+              },
+              {
+                "not": "aVow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "bribe",
+          "label": "收200并隐证诬灰角",
+          "text": "盐主真出160粮和200好处；先明告灰角退下一期、证据副本仍存在。",
+          "success": {
+            "facts": {
+              "aVow": "bribed",
+              "aRelief": true,
+              "aGrayFramed": true
+            },
+            "say": "实领200，盐主实买160粮；灰角不接下一期，已欠工钱照付，人证仍会追问。",
+            "gold": 200,
+            "npc": [
+              {
+                "id": "gray",
+                "status": "因实际诬指退出尚未开始下一期",
+                "location": "home"
+              }
+            ],
+            "items": [
+              {
+                "id": "a-relief",
+                "name": "盐主实付160GP救急粮",
+                "kind": "object",
+                "count": 1,
+                "holder": "relief-crew",
+                "location": "capital-road"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aAuthorityKnown": true
+              },
+              {
+                "not": "aVow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "salary-stop",
+          "label": "出60GP买断佣兵未薪并保账",
+          "text": "佣兵同意收实际未薪撤工，已造成伤损仍追责。",
+          "success": {
+            "facts": {
+              "aWarehouse": "safe"
+            },
+            "say": "60真付，种粮与账柜保住，佣兵退出不复活刷新。",
+            "neutralize": [
+              "a-merc-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aVow": [
+                  "kept",
+                  "amended",
+                  "unilateral",
+                  "bribed"
+                ]
+              },
+              {
+                "not": "aWarehouse"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 60
+          }
+        },
+        {
+          "id": "copy-route",
+          "label": "潜抄副本并安排粮车撤离",
+          "text": "DC15失败只失120GP种粮到实际承包人手，其他档案仍在。",
+          "success": {
+            "facts": {
+              "aWarehouse": "safe"
+            },
+            "say": "副本与种粮都沿普通侧路保住。",
+            "items": [
+              {
+                "id": "a-warehousecopy",
+                "name": "仓账真实副本",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A3"
+              }
+            ],
+            "neutralize": [
+              "a-merc-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aVow": [
+                  "kept",
+                  "amended",
+                  "unilateral",
+                  "bribed"
+                ]
+              },
+              {
+                "not": "aWarehouse"
+              }
+            ]
+          },
+          "check": {
+            "skill": "stealth",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "aWarehouse": "lost",
+              "aSeedLost": true
+            },
+            "say": "承包人带走120GP种粮，桥档/封条继续可查，不关结局。",
+            "items": [
+              {
+                "id": "a-seedlost",
+                "name": "被抢种粮（价值120GP）",
+                "kind": "object",
+                "count": 1,
+                "holder": "contractor",
+                "location": "salt-road"
+              }
+            ],
+            "neutralize": [
+              "a-merc-1"
+            ]
+          }
+        },
+        {
+          "id": "go",
+          "label": "把真实粮与新旧诺带向归程",
+          "text": "只需明确一项仓库结果；已改诺不拿旧诺再逼。",
+          "success": {
+            "facts": {
+              "A3_done": true
+            },
+            "say": "班表、实际救急采购、桥工欠薪与火棚证据带入A4。",
+            "complete": true,
+            "neutralize": [
+              "a-merc-1"
+            ]
+          },
+          "requires": {
+            "aWarehouse": [
+              "safe",
+              "lost"
+            ]
+          }
+        }
+      ],
+      "next": "A4",
+      "encounters": {
+        "a-merc": [
+          {
+            "id": "a-merc-1",
+            "name": "搬账箱佣兵",
+            "type": "bandit_captain",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 5,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "合法早归，与最后一年的仓库\n\n公议代表说：我能改桥约，不能替全城都点头。先把桥工欠薪算清。\n\n合并原A5–A6：粮荒真，文书利益也真；拆穿操纵不凭空生粮。\n\n桥档室+5、仓车0，粮门/账柜/佣兵退路三目标可见。给城方160采购已同意款，不强迫PC私掏。年月用主持跳切不累加服务时钟。"
+    },
+    {
+      "id": "A4",
+      "title": "三天、三张票，与归程名单",
+      "scene": "A4",
+      "entryLevel": 5,
+      "description": "合并原A7–A8：正常车程三日，距到期三日，今日走即可合法。",
+      "readAloud": "拉克什曼那划掉夜班名，又写回今天：明天的我，先问一句。",
+      "dmNotes": "东西门与界碑都在人间，地图外三日路程不由80尺推算。住持免费保钥匙只负责保管；新巡路需真实工资与本人同意。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "handoff",
+          "label": "交钥匙与结实际账",
+          "text": "护送480在A2已结，不再发320；余轮班款还工程方。",
+          "success": {
+            "facts": {
+              "aHandoff": true
+            },
+            "say": "读A1合同与税、A2轮班/借料、A3新诺/救急/仓损；钥匙交住持，余轮班普通GP如实退回。",
+            "transferItems": [
+              {
+                "id": "a-rotation",
+                "holder": "works",
+                "location": "A4"
+              },
+              {
+                "id": "a-key",
+                "holder": "abbot",
+                "location": "A4"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-keys",
+                "to": "林苑住持",
+                "text": "只保管钥匙；下期巡路尚未承诺。",
+                "status": "已交接"
+              }
+            ]
+          }
+        },
+        {
+          "id": "correct",
+          "label": "撤回实际诬指，公开自己收款",
+          "text": "不抹副本/伤损，不强迫灰角原谅，已做工钱仍应付。",
+          "success": {
+            "facts": {
+              "aFrameCorrected": true
+            },
+            "say": "真实更正存档，200收款与证据传播仍在，下一期合作须再问灰角。"
+          },
+          "requires": {
+            "aGrayFramed": true
+          }
+        },
+        {
+          "id": "on-time",
+          "label": "今日出发，到期入界",
+          "text": "完全可行的普通三日车程，不另罚时间或人命。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "kept"
+            },
+            "say": "三日正常车程完成；每位真正受雇与自愿退任者分别入名单。",
+            "complete": true,
+            "minutes": 4320,
+            "ending": "a-kept"
+          },
+          "requires": {
+            "all": [
+              {
+                "aHandoff": true
+              },
+              {
+                "aVow": "kept"
+              }
+            ]
+          }
+        },
+        {
+          "id": "new-vow",
+          "label": "依合法新约归来",
+          "text": "按已签真实改诺；不是暗中仍被旧诺惩罚。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "amended"
+            },
+            "say": "合法改约与已有工程成果同页，未完的有限债保留。",
+            "complete": true,
+            "ending": "a-amended"
+          },
+          "requires": {
+            "all": [
+              {
+                "aHandoff": true
+              },
+              {
+                "aVow": "amended"
+              }
+            ]
+          }
+        },
+        {
+          "id": "early",
+          "label": "按已知单方早归事实收束",
+          "text": "读下一趟桥路40与真实争议，保修复道路。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "unilateral"
+            },
+            "say": "早归事实不抹，已经完成的工作与照护也不抹。",
+            "complete": true,
+            "ending": "a-unilateral"
+          },
+          "requires": {
+            "all": [
+              {
+                "aHandoff": true
+              },
+              {
+                "aVow": [
+                  "unilateral",
+                  "bribed"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "leave",
+          "label": "结束雇佣，以见证者身份归城",
+          "text": "不再接下一份工作，有薪有路，不必用恋情证明忠诚。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "witness"
+            },
+            "say": "结清已做工资，未接下一期不生成终身义务；保留原物/未清材料本金的真实去向。",
+            "complete": true,
+            "ending": "a-witness"
+          },
+          "requires": {
+            "aHandoff": true
+          }
+        }
+      ],
+      "text": "三天、三张票，与归程名单\n\n拉克什曼那划掉夜班名，又写回今天：明天的我，先问一句。\n\n合并原A7–A8：正常车程三日，距到期三日，今日走即可合法。\n\n东西门与界碑都在人间，地图外三日路程不由80尺推算。住持免费保钥匙只负责保管；新巡路需真实工资与本人同意。"
+    },
+    {
+      "id": "B1",
+      "title": "四十八、四十八，还有谁，与界碑夜",
+      "scene": "B1",
+      "entryLevel": 5,
+      "description": "合并B1–B2：水路未决先写在临约，不把签字当堵洪门票。",
+      "readAloud": "簿者摆干豆：豆还能添，池里这一批不能。门边信说：还没问过水从谁那里过。",
+      "dmNotes": "闸水底−5尺，桥面0，合同室+5尺。出事的绳盘(22.5,42.5)并非必须损坏；及时分工可保全。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "accept",
+          "label": "签透明临约，领取工资60与工程240",
+          "text": "只领一笔见证预付；水路未决、未定份不先卖、押物不转押写清。",
+          "success": {
+            "facts": {
+              "bAccepted": true,
+              "bCopies": true
+            },
+            "say": "工资60实付，工程240普通钱袋单列；两份独立副本在当事人手。",
+            "gold": 60,
+            "items": [
+              {
+                "id": "b-cash",
+                "name": "工程GP（普通钱币）",
+                "kind": "object",
+                "count": 240,
+                "holder": "party",
+                "location": "B1"
+              },
+              {
+                "id": "b-copy",
+                "name": "本组临约副本",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "B1"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-fee",
+                "to": "见证队伍",
+                "text": "见证护场120，60已付，收工尚60。",
+                "status": "待履行"
+              }
+            ],
+            "handouts": [
+              "b-contract"
+            ]
+          }
+        },
+        {
+          "id": "pledge",
+          "label": "只以自愿见证副本作凭信",
+          "text": "不押武器、工牌或家信也不失陈述。",
+          "success": {
+            "facts": {
+              "bPledge": "copies"
+            },
+            "say": "两位自愿见证者各留一副本，无没收原物权。"
+          },
+          "requires": {
+            "all": [
+              {
+                "bAccepted": true
+              },
+              {
+                "not": "bPledge"
+              }
+            ]
+          }
+        },
+        {
+          "id": "token",
+          "label": "自愿托存普通工牌",
+          "text": "只保管，不转所有权/抵押；别人的私物不替他押。",
+          "success": {
+            "facts": {
+              "bPledge": "badge"
+            },
+            "say": "同一普通工牌现由盐单实际保管，B4本人真实归还；不借此改Attunement规则。",
+            "items": [
+              {
+                "id": "b-badge",
+                "name": "原主自愿托存普通工牌",
+                "kind": "object",
+                "count": 1,
+                "holder": "notary",
+                "location": "B1"
+              }
+            ],
+            "npc": [
+              {
+                "id": "notary",
+                "status": "实际代管原主自愿托存的普通工牌，不得转押"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bAccepted": true
+              },
+              {
+                "not": "bPledge"
+              }
+            ]
+          }
+        },
+        {
+          "id": "deescalate",
+          "label": "分开青年，保住绳盘",
+          "text": "有足够人手的明确站位与带班者接人，无需为日常合作强骰。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bReelSafe": true,
+              "bStart": "full"
+            },
+            "say": "青年放下工具；绳盘完好，背潮不背24GP不存在的债。",
+            "complete": true
+          },
+          "requires": {
+            "bPledge": [
+              "copies",
+              "badge"
+            ]
+          }
+        },
+        {
+          "id": "partial",
+          "label": "全约未成，先授权80堵最险段",
+          "text": "尚160在袋，缺班多一日/24采购差价须先讲；后面还能补班。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bReelSafe": true,
+              "bStart": "partial"
+            },
+            "say": "80真实用于已同意堵漏，余160保管；水路仍可来签，不让全体自动敌对。",
+            "complete": true
+          },
+          "requires": {
+            "bPledge": [
+              "copies",
+              "badge"
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "b-cash",
+                "count": 80
+              }
+            ]
+          }
+        },
+        {
+          "id": "broken",
+          "label": "若实际冲突打坏绳盘，记背潮责任",
+          "text": "这是主动记录已发生实损的选项，没发生就不点。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bReelSafe": false,
+              "bStart": "full",
+              "bReelDebt": 24
+            },
+            "say": "24绳盘实际损坏，背潮愿修/付款或有余款的十二日分期，绝不扣全工班饭。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-reel",
+                "to": "器具原主",
+                "text": "背潮实际24GP绳盘责任，须真实修/付款/自愿有限分期。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "bPledge": [
+              "copies",
+              "badge"
+            ]
+          }
+        }
+      ],
+      "next": "B2",
+      "text": "四十八、四十八，还有谁，与界碑夜\n\n簿者摆干豆：豆还能添，池里这一批不能。门边信说：还没问过水从谁那里过。\n\n合并B1–B2：水路未决先写在临约，不把签字当堵洪门票。\n\n闸水底−5尺，桥面0，合同室+5尺。出事的绳盘(22.5,42.5)并非必须损坏；及时分工可保全。"
+    },
+    {
+      "id": "B2",
+      "title": "绳子烧断之后，与龟背两个声部",
+      "scene": "B2",
+      "entryLevel": 5,
+      "description": "合并B3–B4：工程可以完，签名不替将来的同意。",
+      "readAloud": "持灯者说：昨天也是我，今天也是我。所以我要今天再说一遍。",
+      "dmNotes": "闸渠与仓账室分开。元素可谈还旧绳/改水段，默认不凭空召唤敌人。工程普通甜分不会成为甘露药水。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "build-full",
+          "label": "支出完整240工程款，完成三工段",
+          "text": "160原工资＋40材料＋40行粮均获授权，不能拿见证工资冒充。",
+          "success": {
+            "facts": {
+              "bBuilt": true
+            },
+            "say": "旧240已按明列用途支出，产出120罐普通食品；新增加班和烧绳还要另问款源。",
+            "items": [
+              {
+                "id": "b-sweet",
+                "name": "普通甜分食品罐",
+                "kind": "object",
+                "count": 120,
+                "holder": "party",
+                "location": "B2-store"
+              }
+            ],
+            "handouts": [
+              "b-fire"
+            ]
+          },
+          "requires": {
+            "bStart": "full"
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "b-cash",
+                "count": 240
+              }
+            ]
+          }
+        },
+        {
+          "id": "build-rest",
+          "label": "先前已付80，只付余160完成",
+          "text": "不重复付240；已同意者补班，缺班差价已由真实方案避开。",
+          "success": {
+            "facts": {
+              "bBuilt": true
+            },
+            "say": "先前80＋现160合240，120罐食品实际入仓。",
+            "items": [
+              {
+                "id": "b-sweet",
+                "name": "普通甜分食品罐",
+                "kind": "object",
+                "count": 120,
+                "holder": "party",
+                "location": "B2-store"
+              }
+            ],
+            "handouts": [
+              "b-fire"
+            ]
+          },
+          "requires": {
+            "bStart": "partial"
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "b-cash",
+                "count": 160
+              }
+            ]
+          }
+        },
+        {
+          "id": "wages",
+          "label": "队伍自愿付新增加班24",
+          "text": "四工各三日，工资未被甜分争论抹掉。",
+          "success": {
+            "facts": {
+              "bOvertime": "paid"
+            },
+            "say": "24GP真实发给四位已加班雇工，不从原240双扣。"
+          },
+          "requires": {
+            "all": [
+              {
+                "bBuilt": true
+              },
+              {
+                "not": "bOvertime"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 24
+          }
+        },
+        {
+          "id": "wages-defer",
+          "label": "持灯者承担24GP有限延期，款源尚须真实落实",
+          "text": "本人没有已核足额24现金。四工同意有限延期；她可待货份合议后请有权灯镇货主划3罐作本人本次工作报酬，获准卖出后才有收入。不押公共粮，不强迫延薪。",
+          "success": {
+            "facts": {
+              "bOvertime": "due"
+            },
+            "say": "持灯者个人24GP欠款明确，尚无真钱付款。后续划份/售罐均须实际获准；没有收入就保留待偿，不转成全队债。",
+            "promises": [
+              {
+                "id": "b-overtime",
+                "to": "四位加班工人",
+                "text": "持灯者尚欠24GP；本次有限延期经四工同意，拟从本人合法售罐收入付，收入未落实前不得写已付。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bBuilt": true
+              },
+              {
+                "not": "bOvertime"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rope-buy",
+          "label": "自愿付24GP现货新绳",
+          "text": "公开今天24/明天30，款源是玩家本人同意的gold。",
+          "success": {
+            "facts": {
+              "bRope": "bought"
+            },
+            "say": "24GP换新绳，赶在涨价前，实际能继续工程。",
+            "items": [
+              {
+                "id": "b-rope",
+                "name": "补购新绳",
+                "kind": "object",
+                "count": 1,
+                "holder": "works",
+                "location": "B2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bBuilt": true
+              },
+              {
+                "not": "bRope"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 24
+          }
+        },
+        {
+          "id": "rope-recover",
+          "label": "按备用库位置取未烧另一卷",
+          "text": "旧绳圈交还原水中持有者，或实际同意交换；无唯一战斗门票。DC15。",
+          "success": {
+            "facts": {
+              "bRope": "recovered"
+            },
+            "say": "未烧备用卷真实取回，省24GP采购。",
+            "items": [
+              {
+                "id": "b-rope",
+                "name": "取回备用新绳",
+                "kind": "object",
+                "count": 1,
+                "holder": "works",
+                "location": "B2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bBuilt": true
+              },
+              {
+                "not": "bRope"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "bRopeDelayed": true
+            },
+            "say": "没找到正确库签，未丢全部线索；可问老库守半日后直取，或今天付24。"
+          }
+        },
+        {
+          "id": "rope-ask",
+          "label": "问老库守半日后直取备用卷",
+          "text": "不无限重复同一调查骰，凭新证人走明确路；真实省料。",
+          "success": {
+            "facts": {
+              "bRope": "recovered"
+            },
+            "say": "老库守带路交出未烧卷，半日后取到，不凭空罚30。",
+            "minutes": 720,
+            "items": [
+              {
+                "id": "b-rope",
+                "name": "取回备用新绳",
+                "kind": "object",
+                "count": 1,
+                "holder": "works",
+                "location": "B2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bBuilt": true
+              },
+              {
+                "bRopeDelayed": true
+              },
+              {
+                "not": "bRope"
+              }
+            ]
+          }
+        },
+        {
+          "id": "resign",
+          "label": "核副本/装订孔，魔法结束后重读自签",
+          "text": "原授权继续，只冻结新增统管句；半日可省若早保原页。节目可并列龟王/Hari或略去。",
+          "success": {
+            "facts": {
+              "B2_done": true,
+              "bConsentRenewed": true,
+              "bForgedPage": true,
+              "bPerformance": "parallel-or-ordinary"
+            },
+            "say": "换页新句撤回，真正当事人重签；加班款按实际，宗教戏不作工资门票。",
+            "complete": true,
+            "minutes": 720,
+            "items": [
+              {
+                "id": "b-originalpage",
+                "name": "未含统管新句的独立原副本",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "B2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bOvertime": [
+                  "paid",
+                  "due"
+                ]
+              },
+              {
+                "bRope": [
+                  "bought",
+                  "recovered"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next": "B3",
+      "text": "绳子烧断之后，与龟背两个声部\n\n持灯者说：昨天也是我，今天也是我。所以我要今天再说一遍。\n\n合并B3–B4：工程可以完，签名不替将来的同意。\n\n闸渠与仓账室分开。元素可谈还旧绳/改水段，默认不凭空召唤敌人。工程普通甜分不会成为甘露药水。"
+    },
+    {
+      "id": "B3",
+      "title": "一百二十罐与四种饥饿，借来的封锁",
+      "scene": "B3",
+      "entryLevel": 5,
+      "description": "合并B5–B6：承认各家真请求；强开闸只取物理路，不判货权。",
+      "readAloud": "伏藏娘说：别说我赢，把那一行放在我能签字的位置。",
+      "dmNotes": "货仓+5尺，闸与车路0；虚假弃权能从原副本与本人签认核，不以战斗裁水权。最终交割留B4实际现存罐数。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-conflict",
+          "label": "实际物理冲突：布置原卡遭遇",
+          "text": "仅在真实冲突时使用；敌人目标为拦路/搬货/夺物，可常规先攻、认停或撤，伤损保留。",
+          "success": {
+            "facts": {
+              "b-mercRaised": true
+            },
+            "encounter": "b-merc"
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "b-mercRaised"
+              },
+              {
+                "not": "bGate"
+              }
+            ]
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "双方认停，退回普通交涉路",
+          "text": "本地拦截者同意此次止手；只解物理冲突，不取得财产/签字/死者意愿。",
+          "success": {
+            "facts": {
+              "b-mercTruced": true
+            },
+            "say": "按公开目标止手，真实伤势保留，明示其他路线继续。",
+            "neutralize": [
+              "b-merc-1"
+            ]
+          },
+          "requires": {
+            "b-mercRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "evidence",
+          "label": "并置旧绳、水路维修据和假弃权",
+          "text": "基本事实不锁单骰；不把持灯者权欲或潮背愤怒当失去同意。",
+          "success": {
+            "facts": {
+              "bRightsKnown": true
+            },
+            "say": "三本真账、假弃权分列。签署权只归各自真实代表。",
+            "handouts": [
+              "b-shares"
+            ]
+          }
+        },
+        {
+          "id": "four",
+          "label": "四方自愿36/36/24/24提案",
+          "text": "三方已逐一同意，两个48方各减12；公共24不暗卖。",
+          "success": {
+            "facts": {
+              "bPlan": "four"
+            },
+            "say": "记待交割36灯镇/36工班/24公共/24水路，共120，B4以实际库存复核。"
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "not": "bPlan"
+              }
+            ]
+          }
+        },
+        {
+          "id": "cash",
+          "label": "双方同意各卖12，用240现金给水路",
+          "text": "先约现买家10/罐，出售本人份不动公共粮；最终两方各36，公共24，买家24，水路实收240。",
+          "success": {
+            "facts": {
+              "bPlan": "cash"
+            },
+            "say": "240来源是两方获准共24罐真实销售，直付水路；不又给水路24罐。"
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "not": "bPlan"
+              }
+            ]
+          }
+        },
+        {
+          "id": "labor",
+          "label": "同意各卖12设240有限维修工资袋",
+          "text": "两熟练工本人同意各60日×2，款源为获准售24罐；伏藏娘同时明确自愿给本次加固用自有四根备用支木（共40GP），不征免费劳动。",
+          "success": {
+            "facts": {
+              "bPlan": "labor"
+            },
+            "say": "工资240款源/工期/监督/退出明列；伏藏娘本案自有四根支木已承诺用于本次加固，不重复领取水路24罐。",
+            "promises": [
+              {
+                "id": "b-water-labor",
+                "to": "水路工班",
+                "text": "两位成年熟练工自愿各60日、2GP/日，240售罐款专用；退出另按已做结。",
+                "status": "待履行"
+              },
+              {
+                "id": "b-water-timber",
+                "to": "本次堤工",
+                "text": "伏藏娘自愿提供本人已有四根支木，每根10GP，共40GP；仅本次。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "not": "bPlan"
+              }
+            ]
+          }
+        },
+        {
+          "id": "hold",
+          "label": "未合议先封争议货，保已授权公共粮",
+          "text": "不因僵持次日就毁货；第三日买家价9明确可查。",
+          "success": {
+            "facts": {
+              "bPlan": "held"
+            },
+            "say": "争议货封存，已明确公共24可按B1有效授权先发；工资不冻结。"
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "not": "bPlan"
+              }
+            ]
+          }
+        },
+        {
+          "id": "bribe",
+          "label": "收200，实际私售公共24罐给搅浑者",
+          "text": "居民仓将少24，行为只归实际知情授权者；不把收到钱变成已合法货权。",
+          "success": {
+            "facts": {
+              "bPlan": "misused",
+              "bStock96": true,
+              "bPublicSold": true
+            },
+            "say": "真实200到队伍袋，24罐转给搅浑者，公共缺粮24；其他人仍有追索，不凭空重置。",
+            "gold": 200,
+            "transferItems": [
+              {
+                "id": "b-sweet",
+                "count": 24,
+                "holder": "mixer",
+                "splitId": "b-diverted",
+                "location": "B3-private-cart"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "not": "bPlan"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pay-gate",
+          "label": "自愿付60GP佣兵未薪，开物理闸",
+          "text": "真正雇主责任仍可追；元素没有被GP自动收买。",
+          "success": {
+            "facts": {
+              "bGate": "paid"
+            },
+            "say": "60实付人形佣兵，放弃本次封闸；伤损责任与货权另列。",
+            "neutralize": [
+              "b-merc-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bPlan": [
+                  "four",
+                  "cash",
+                  "labor",
+                  "held",
+                  "misused"
+                ]
+              },
+              {
+                "not": "bGate"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 60
+          }
+        },
+        {
+          "id": "bypass",
+          "label": "用已获许可水路绕锁，护住一车",
+          "text": "按地形与真实载量执行，DC15失手只退回，不同时毁押物。",
+          "success": {
+            "facts": {
+              "bGate": "bypassed"
+            },
+            "say": "侧路通，货与人保全；没有因好解法强添元素。",
+            "neutralize": [
+              "b-merc-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bPlan": [
+                  "four",
+                  "cash",
+                  "labor",
+                  "held",
+                  "misused"
+                ]
+              },
+              {
+                "not": "bGate"
+              }
+            ]
+          },
+          "check": {
+            "skill": "survival",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "bGatePending": true
+            },
+            "say": "本次没过水口，退回安全码头；镇方可凭真实封闸证据来执法，明确另一条路。",
+            "minutes": 120
+          }
+        },
+        {
+          "id": "enforce",
+          "label": "呈封闸证据请有权镇方执行",
+          "text": "半日，实际执行人到场；不强迫玩家掏60，也不改产权。",
+          "success": {
+            "facts": {
+              "bGate": "enforced"
+            },
+            "say": "镇方核实际封闸，执行人护通道路；保工资与原卡伤势，非玩家自动神判。",
+            "minutes": 720,
+            "neutralize": [
+              "b-merc-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bRightsKnown": true
+              },
+              {
+                "bPlan": [
+                  "four",
+                  "cash",
+                  "labor",
+                  "held",
+                  "misused"
+                ]
+              },
+              {
+                "not": "bGate"
+              }
+            ]
+          }
+        },
+        {
+          "id": "continue",
+          "label": "带实际提案与原物去查承木",
+          "text": "先读B1临约/B2重签，不凭一张旧签名代人同意。",
+          "success": {
+            "facts": {
+              "B3_done": true
+            },
+            "say": "原提案与真实货数保留，进入最后修缮与交割。",
+            "complete": true,
+            "neutralize": [
+              "b-merc-1"
+            ]
+          },
+          "requires": {
+            "bGate": [
+              "paid",
+              "bypassed",
+              "enforced"
+            ]
+          }
+        }
+      ],
+      "next": "B4",
+      "encounters": {
+        "b-merc": [
+          {
+            "id": "b-merc-1",
+            "name": "封闸佣兵",
+            "type": "bandit",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 5,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "一百二十罐与四种饥饿，借来的封锁\n\n伏藏娘说：别说我赢，把那一行放在我能签字的位置。\n\n合并B5–B6：承认各家真请求；强开闸只取物理路，不判货权。\n\n货仓+5尺，闸与车路0；虚假弃权能从原副本与本人签认核，不以战斗裁水权。最终交割留B4实际现存罐数。"
+    },
+    {
+      "id": "B4",
+      "title": "先堵堤，再签终约",
+      "scene": "B4",
+      "entryLevel": 5,
+      "description": "合并B7–B8：承木失修与楔子可见，预先修好就不造替代洪水。",
+      "readAloud": "久炼说：三十年仍没让木头听祝词。拿楔子吧。",
+      "dmNotes": "承木在地面(22.5,42.5)，闸底−5，终约室+5。具体能力能省材料人手就按规则；只在危险真实发生时按位置处理溺水。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "repair-pay",
+          "label": "自愿付56GP：40材料＋16工资",
+          "text": "四熟练工各两日，已含在原水路维修约则不重复付。",
+          "success": {
+            "facts": {
+              "bRepaired": true,
+              "bRepair": "paid"
+            },
+            "say": "56真实花费，承木与楔子稳固；已救者不追加牺牲。",
+            "minutes": 2880
+          },
+          "cost": {
+            "gold": 56
+          },
+          "requires": {
+            "all": [
+              {},
+              {
+                "not": "bRepaired"
+              }
+            ]
+          }
+        },
+        {
+          "id": "repair-labor",
+          "label": "按已签有限维修约执行本次加固",
+          "text": "240仍全付两工，工日占其合同；40材料取B3已明确伏藏娘自有四支木，不二收56。",
+          "success": {
+            "facts": {
+              "bRepaired": true,
+              "bRepair": "included"
+            },
+            "say": "两工按约用工日、伏藏娘自有四支木实际投入（原库存耗尽）；240工资袋交割只建一次，不重复收56。",
+            "minutes": 2880,
+            "items": [
+              {
+                "id": "b-water-timber-used",
+                "name": "伏藏娘已投入本次加固支木（每根10GP）",
+                "kind": "object",
+                "count": 4,
+                "holder": "works",
+                "location": "B4-dike"
+              }
+            ],
+            "npc": [
+              {
+                "id": "naga",
+                "status": "本案自有四根备用支木已全部投入本次加固"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-water-timber",
+                "to": "本次堤工",
+                "text": "本人四根支木已实际投入，无第二批免费材料。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "bPlan": "labor"
+                  },
+                  {
+                    "not": "bRepaired"
+                  }
+                ]
+              },
+              {
+                "not": "bRepaired"
+              }
+            ]
+          }
+        },
+        {
+          "id": "repair-tools",
+          "label": "已检查承木并以现有料/真实能力先补稳",
+          "text": "主持核当前实际材料、工具/法术与工时，DC15只决定这次危险作业。失败临时稳一天，主线仍在。",
+          "success": {
+            "facts": {
+              "bRepaired": true,
+              "bRepair": "saved"
+            },
+            "say": "承木与楔子已补，真实节省的56不另收命运税。",
+            "minutes": 480
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "bRepairTemporary": true
+            },
+            "say": "只稳住一日，未造额外死人或毁全货；可向实际供料人议一份56有限延期。",
+            "minutes": 480
+          },
+          "requires": {
+            "all": [
+              {},
+              {
+                "not": "bRepaired"
+              }
+            ]
+          }
+        },
+        {
+          "id": "repair-defer",
+          "label": "实际供料人与工班同意56有限延期",
+          "text": "只有双方已明示同意才执行；确欠56，未付就不写已付。",
+          "success": {
+            "facts": {
+              "bRepaired": true,
+              "bRepair": "due"
+            },
+            "say": "材料与人工先真实投入，56由本按钮行动者自愿承担有限延期，见choice姓名；不转给死者/孩子。",
+            "promises": [
+              {
+                "id": "b-repair-due",
+                "to": "供料人与四工",
+                "text": "56GP本次材料劳动，实际自愿签者见choice日志；按约定收工后支付。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bRepairTemporary": true
+              },
+              {
+                "not": "bRepaired"
+              }
+            ]
+          }
+        },
+        {
+          "id": "return-pledge",
+          "label": "点验押物并结未付见证60",
+          "text": "已领60只再发60；普通工牌若托盐单，此时本人实际取回。",
+          "success": {
+            "facts": {
+              "bClosedAccounts": true
+            },
+            "say": "见证另60真实支付；同一工牌经原主领取归还，双副本仍各自持有。",
+            "gold": 60,
+            "conditional": [
+              {
+                "requires": {
+                  "bPledge": "badge"
+                },
+                "transferItems": [
+                  {
+                    "id": "b-badge",
+                    "holder": "party",
+                    "location": "B4"
+                  }
+                ],
+                "npc": [
+                  {
+                    "id": "notary",
+                    "status": "已向原主归还托存工牌"
+                  }
+                ]
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-fee",
+                "to": "见证队伍",
+                "text": "120GP见证护场费全部支付。",
+                "status": "已履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sell-wage-share",
+          "label": "货主明确划本人3罐工作报酬，实际售30GP",
+          "text": "仅在四方份额已合议时：灯镇有权货主当面同意从其36罐划3作持灯者本次普通工作报酬，非她自行占有公粮；本人愿以10GP/罐卖给已在场买家。灯镇最终少领这3，公共24与别人份额不动。",
+          "success": {
+            "facts": {
+              "bLampIncomeSold": true
+            },
+            "say": "原批货3罐先真实转持灯者，再交买家；买家实付30GP归本人钱袋。原批120现117，末段灯镇领33而非36；尚未支付工人就不写已结。",
+            "transferItems": [
+              {
+                "id": "b-sweet",
+                "count": 3,
+                "holder": "lamp",
+                "splitId": "b-lamp-earned-cans",
+                "location": "B4-sale"
+              },
+              {
+                "id": "b-lamp-earned-cans",
+                "holder": "buyers",
+                "location": "B4-buyer-cart"
+              }
+            ],
+            "items": [
+              {
+                "id": "b-lamp-income",
+                "name": "持灯者合法售3罐所得GP（普通钱币）",
+                "kind": "object",
+                "count": 30,
+                "holder": "lamp",
+                "location": "B4"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-lamp-share",
+                "to": "灯镇货主/持灯者",
+                "text": "货主自愿划本36份中的3罐作本人本次普通工作报酬；3罐已实际卖30，末段灯镇只领余33。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bOvertime": "due"
+              },
+              {
+                "bPlan": [
+                  "four",
+                  "cash",
+                  "labor"
+                ]
+              },
+              {
+                "not": "bLampIncomeSold"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pay-overdue",
+          "label": "本人从实际30GP钱袋拆24付四工",
+          "text": "只在前一步真实售罐得钱后可执行；持灯者明确同意付款。转出本人袋24给工班实际收款，余6仍归本人，不扣玩家gold，也不扣公共24罐。",
+          "success": {
+            "facts": {
+              "bOvertime": "paid"
+            },
+            "say": "本人30GP袋真实减少24，四位加班工人的收款袋实得24，本人余额6；原有限延期已结，末段不会再扣3罐第二次。",
+            "transferItems": [
+              {
+                "id": "b-lamp-income",
+                "count": 24,
+                "holder": "workers",
+                "splitId": "b-overtime-received",
+                "location": "B4-wages"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-overtime",
+                "to": "四位加班工人",
+                "text": "本人合法30GP售罐袋已真实支付24GP，工班收款24、本人余6。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bOvertime": "due"
+              },
+              {
+                "bLampIncomeSold": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "record-overdue",
+          "label": "款源未落实或本人不售：明确24待偿",
+          "text": "不虚造本人现金，也不强迫捐私物、出工或损人命。四工与本人把下一次具体约谈写清；本次仍欠24，可如实结束货物交割。",
+          "success": {
+            "facts": {
+              "bOvertimeDueAcknowledged": true
+            },
+            "say": "24GP仍未付，四工没有收款袋；有限追偿由持灯者本人负责，不转给全队/公共仓。其余已做工作与120GP见证工资照结。",
+            "promises": [
+              {
+                "id": "b-overtime",
+                "to": "四位加班工人",
+                "text": "持灯者仍欠24GP，本次未付款；下一次双方约定的收工后对账再筹合法款源，不征免费劳动。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bOvertime": "due"
+              },
+              {
+                "not": "bOvertimeDueAcknowledged"
+              }
+            ]
+          }
+        },
+        {
+          "id": "four-end",
+          "label": "依实际余货交割四方份额，扣除本人已售3罐",
+          "text": "未预售时120罐交36/36/24/24；本人已合法预售3作工作报酬时，余117交33/36/24/24。不得重复发出已交买家的同3罐。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "four"
+            },
+            "say": "依已合议条款与真实余货逐项交割；若本人此前已获准售3罐，末段从灯镇36中扣去这3而非再发36。水路现金/工资240各只来自另获准售出的24罐，不重复发罐。",
+            "complete": true,
+            "ending": "b-four",
+            "conditional": [
+              {
+                "requires": {
+                  "not": "bLampIncomeSold"
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "water",
+                    "splitId": "b-water-share",
+                    "location": "B4-delivery"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "bLampIncomeSold": true
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 33,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "water",
+                    "splitId": "b-water-share",
+                    "location": "B4-delivery"
+                  }
+                ],
+                "say": "本人3罐报酬已先合法卖出，灯镇本次只领余33；工班36、公共24与水路24或其等价安排不减少。"
+              },
+              {
+                "requires": {
+                  "bOvertime": "due"
+                },
+                "say": "本次加班24仍待偿，工人未收到现金；不得把承诺写成已付，不强迫悲剧或免费劳役。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "bOvertime": "paid"
+                    },
+                    {
+                      "bLampIncomeSold": true
+                    }
+                  ]
+                },
+                "say": "本人合法卖3得30，已转24给工人，本人余6；已经卖出的3不再重复交灯镇。"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "bRepaired": true
+                  },
+                  {
+                    "bClosedAccounts": true
+                  },
+                  {
+                    "bPlan": "four"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "bOvertime": "paid"
+                  },
+                  {
+                    "bOvertimeDueAcknowledged": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "cash-end",
+          "label": "执行两方售24给买家，240直付水路",
+          "text": "明确普通10GP/罐的本季真实买家已在场；水路改收现金，不又领罐。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "cash"
+            },
+            "say": "依已合议条款与真实余货逐项交割；若本人此前已获准售3罐，末段从灯镇36中扣去这3而非再发36。水路现金/工资240各只来自另获准售出的24罐，不重复发罐。",
+            "complete": true,
+            "items": [
+              {
+                "id": "b-water-cash",
+                "name": "水路获准售罐所得GP（普通钱币）",
+                "kind": "object",
+                "count": 240,
+                "holder": "naga",
+                "location": "B4"
+              }
+            ],
+            "ending": "b-cash",
+            "conditional": [
+              {
+                "requires": {
+                  "not": "bLampIncomeSold"
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "buyers",
+                    "splitId": "b-buyers-share",
+                    "location": "B4-delivery"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "bLampIncomeSold": true
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 33,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "buyers",
+                    "splitId": "b-buyers-share",
+                    "location": "B4-delivery"
+                  }
+                ],
+                "say": "本人3罐报酬已先合法卖出，灯镇本次只领余33；工班36、公共24与水路24或其等价安排不减少。"
+              },
+              {
+                "requires": {
+                  "bOvertime": "due"
+                },
+                "say": "本次加班24仍待偿，工人未收到现金；不得把承诺写成已付，不强迫悲剧或免费劳役。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "bOvertime": "paid"
+                    },
+                    {
+                      "bLampIncomeSold": true
+                    }
+                  ]
+                },
+                "say": "本人合法卖3得30，已转24给工人，本人余6；已经卖出的3不再重复交灯镇。"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "bRepaired": true
+                  },
+                  {
+                    "bClosedAccounts": true
+                  },
+                  {
+                    "bPlan": "cash"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "bOvertime": "paid"
+                  },
+                  {
+                    "bOvertimeDueAcknowledged": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "labor-end",
+          "label": "售24形成240工资袋，交两工服务保管者",
+          "text": "不能把未来工作写成已经完成；退出按已做结，监督与款源明确。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "labor"
+            },
+            "say": "依已合议条款与真实余货逐项交割；若本人此前已获准售3罐，末段从灯镇36中扣去这3而非再发36。水路现金/工资240各只来自另获准售出的24罐，不重复发罐。",
+            "complete": true,
+            "items": [
+              {
+                "id": "b-water-wages",
+                "name": "两工有限维修工资GP（普通钱币）",
+                "kind": "object",
+                "count": 240,
+                "holder": "water-paymaster",
+                "location": "B4"
+              }
+            ],
+            "ending": "b-labor",
+            "conditional": [
+              {
+                "requires": {
+                  "not": "bLampIncomeSold"
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "buyers",
+                    "splitId": "b-buyers-share",
+                    "location": "B4-delivery"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "bLampIncomeSold": true
+                },
+                "transferItems": [
+                  {
+                    "id": "b-sweet",
+                    "count": 33,
+                    "holder": "light",
+                    "splitId": "b-light-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 36,
+                    "holder": "workers",
+                    "splitId": "b-workers-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "public-store",
+                    "splitId": "b-public-store-share",
+                    "location": "B4-delivery"
+                  },
+                  {
+                    "id": "b-sweet",
+                    "count": 24,
+                    "holder": "buyers",
+                    "splitId": "b-buyers-share",
+                    "location": "B4-delivery"
+                  }
+                ],
+                "say": "本人3罐报酬已先合法卖出，灯镇本次只领余33；工班36、公共24与水路24或其等价安排不减少。"
+              },
+              {
+                "requires": {
+                  "bOvertime": "due"
+                },
+                "say": "本次加班24仍待偿，工人未收到现金；不得把承诺写成已付，不强迫悲剧或免费劳役。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "bOvertime": "paid"
+                    },
+                    {
+                      "bLampIncomeSold": true
+                    }
+                  ]
+                },
+                "say": "本人合法卖3得30，已转24给工人，本人余6；已经卖出的3不再重复交灯镇。"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "bRepaired": true
+                  },
+                  {
+                    "bClosedAccounts": true
+                  },
+                  {
+                    "bPlan": "labor"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "bOvertime": "paid"
+                  },
+                  {
+                    "bOvertimeDueAcknowledged": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "separate",
+          "label": "未达终约或选择拆伙，封存实际余货",
+          "text": "已干工作照结，私售24仍在搅浑者手、未归还不凭空复原；未决货可依法追/重谈。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "separate"
+            },
+            "say": "实际尚存批货交共同保管，已授权售3罐与非法售公共24分别留实物去向，不凭空复原。加班24按真实已付/仍欠读回，其余已完成工作保留。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "b-sweet",
+                "holder": "joint-custodian",
+                "location": "B4-sealed-store"
+              }
+            ],
+            "ending": "b-separate",
+            "conditional": [
+              {
+                "requires": {
+                  "bOvertime": "due"
+                },
+                "say": "本次加班24仍待偿，工人未收到现金；不得把承诺写成已付，不强迫悲剧或免费劳役。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "bOvertime": "paid"
+                    },
+                    {
+                      "bLampIncomeSold": true
+                    }
+                  ]
+                },
+                "say": "本人合法卖3得30，已转24给工人，本人余6；已经卖出的3不再重复交灯镇。"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bClosedAccounts": true
+              },
+              {
+                "any": [
+                  {
+                    "bOvertime": "paid"
+                  },
+                  {
+                    "bOvertimeDueAcknowledged": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "text": "先堵堤，再签终约\n\n久炼说：三十年仍没让木头听祝词。拿楔子吧。\n\n合并B7–B8：承木失修与楔子可见，预先修好就不造替代洪水。\n\n承木在地面(22.5,42.5)，闸底−5，终约室+5。具体能力能省材料人手就按规则；只在危险真实发生时按位置处理溺水。"
+    },
+    {
+      "id": "C1",
+      "title": "谁在名字后签字，与骨栈原票",
+      "scene": "C1",
+      "entryLevel": 5,
+      "description": "合并C1–C2：保存日历与复生机会开场就发，合格即可前置执行。",
+      "readAloud": "老兵说：我想知道，他还有没有机会自己说。",
+      "dmNotes": "村至新壕半日、至骨栈再半日、骨栈至温岚一日，均公开固定人间路。当前第90日；服务第92清晨或午后可约，含交通余量，不用静态80尺推世界行程。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "fund",
+          "label": "接800GP明确分袋，领预付60",
+          "text": "护送120先60后60；道路80、运输保管140、资助460，余薪60仍由委托方保留。",
+          "success": {
+            "facts": {
+              "cAccepted": true,
+              "cCalendarKnown": true,
+              "cInitialEffectiveDeathDays": 2
+            },
+            "say": "60工资实付；三只公款袋分别80/140/460。保存1800与18CP早付清；当前日历以真实time为准，非固定事实倒流。",
+            "gold": 60,
+            "items": [
+              {
+                "id": "c-road",
+                "name": "道路行粮GP（普通钱币）",
+                "kind": "object",
+                "count": 80,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-transport",
+                "name": "保管运输GP（普通钱币）",
+                "kind": "object",
+                "count": 140,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-fund",
+                "name": "自愿复生资助GP（普通钱币）",
+                "kind": "object",
+                "count": 460,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-calendar",
+                "name": "连续保存与预存已结原票",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-lunchbox",
+                "name": "幼弟受托归还饭盒",
+                "kind": "object",
+                "count": 1,
+                "holder": "younger",
+                "location": "C1"
+              },
+              {
+                "id": "c-lamp",
+                "name": "灯母的灯",
+                "kind": "object",
+                "count": 1,
+                "holder": "lampmother",
+                "location": "C1"
+              }
+            ],
+            "handouts": [
+              "c-calendar"
+            ]
+          }
+        },
+        {
+          "id": "body-ticket",
+          "label": "凭已结原票与有权执行方取身",
+          "text": "身体完整、非老死、死时非Undead、无封魂，可直接核；村至骨栈一日、再至邻镇一日，共48小时。",
+          "success": {
+            "facts": {
+              "cBodyRecovered": true,
+              "cBodyRoute": "ticket"
+            },
+            "say": "真实身体与完整保存账取出并运到邻镇，48小时实过；若未额外等待，从第90日06时到第92日06时。",
+            "items": [
+              {
+                "id": "c-body",
+                "name": "身体保管交接票（身体状态见摆渡的NPC）",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "nearby-town"
+              }
+            ],
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "完整遗体已在邻镇；保护到time60，本人愿回",
+                "location": "nearby-town"
+              }
+            ],
+            "minutes": 2880
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccepted": true
+              },
+              {
+                "not": "cBodyRecovered"
+              }
+            ]
+          }
+        },
+        {
+          "id": "body-ransom",
+          "label": "实付80勒索，留收据后追",
+          "text": "这80无依据；用已授权运输140袋付，余60。村至骨栈一日、至邻镇一日共48小时。",
+          "success": {
+            "facts": {
+              "cBodyRecovered": true,
+              "cBodyRoute": "ransom",
+              "cRansomPaid": true
+            },
+            "say": "80真实给点数者，身体完整取出并48小时运到邻镇；收据留后追，保存早付不重收。",
+            "items": [
+              {
+                "id": "c-body",
+                "name": "身体保管交接票（身体状态见摆渡的NPC）",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "nearby-town"
+              },
+              {
+                "id": "c-ransom-receipt",
+                "name": "80GP勒索真实收据",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C1"
+              }
+            ],
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "完整遗体在邻镇、保护到time60、愿回",
+                "location": "nearby-town"
+              }
+            ],
+            "minutes": 2880,
+            "increment": {
+              "cTransportSpent": 80
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccepted": true
+              },
+              {
+                "not": "cBodyRecovered"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-transport",
+                "count": 80
+              }
+            ]
+          }
+        },
+        {
+          "id": "early-credit",
+          "label": "温岚实际施术：500先付，行动者自愿借2000服务",
+          "text": "460资助＋本人40GP付一颗真实500钻石；温岚已有可用5环位、已准备且本人愿回，完成1小时。第92清晨或之后真实预约时段，施术开始至多time251。本人签20×100，不能替渡伴/死人签。",
+          "success": {
+            "facts": {
+              "cRaised": true,
+              "cResurrection": "npc-credit",
+              "cServiceDebt": 2000
+            },
+            "say": "材料500实际支付，温岚真实用本案5环位/单颗钻石，施术1小时；摆渡的1HP、D20 Tests−4逐长休减轻。债只归本按钮自愿行动者（姓名见choice日志），不是全队/伴侣/死者。",
+            "minutes": 60,
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "已复生：1HP；D20 Tests−4逐次长休减轻1；自主休养",
+                "location": "nearby-town"
+              },
+              {
+                "id": "wenlan",
+                "status": "本案一颗500GP钻石与该日5环位已实际消耗，服务已完成"
+              }
+            ],
+            "items": [
+              {
+                "id": "c-raised-note",
+                "name": "摆渡的复生与休养记录（非魔法物品）",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "nearby-town"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-service-debt",
+                "to": "温岚",
+                "text": "2000GP服务，20个月每月100；实际自愿行动者见choice日志；不押他人财物/自由。",
+                "status": "待履行"
+              }
+            ],
+            "increment": {
+              "cFundSpent": 460
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cBodyRecovered": true
+              },
+              {
+                "not": "cRaised"
+              },
+              {
+                "cFundSpent": 0
+              },
+              {
+                "timeAtLeast": 54
+              },
+              {
+                "timeAtMost": 251
+              }
+            ]
+          },
+          "cost": {
+            "gold": 40,
+            "items": [
+              {
+                "id": "c-fund",
+                "count": 460
+              }
+            ]
+          }
+        },
+        {
+          "id": "early-paid",
+          "label": "全付NPC服务2500，不借债",
+          "text": "460资助＋本人2040GP；钱确实够、真实预约已到、开始time≤251才可执行，温岚一颗钻石及5环位结算、实际1小时。",
+          "success": {
+            "facts": {
+              "cRaised": true,
+              "cResurrection": "npc-paid",
+              "cServiceDebt": 0
+            },
+            "say": "2500实付，500钻石/本案5环位与1小时施法真实完成；无追加人情债，摆渡的自己决定今后。",
+            "minutes": 60,
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "已复生：1HP；D20 Tests−4逐长休减轻1；无服务债",
+                "location": "nearby-town"
+              },
+              {
+                "id": "wenlan",
+                "status": "本案一颗500GP钻石与该日5环位已实际消耗，服务已完成"
+              }
+            ],
+            "increment": {
+              "cFundSpent": 460
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cBodyRecovered": true
+              },
+              {
+                "not": "cRaised"
+              },
+              {
+                "cFundSpent": 0
+              },
+              {
+                "goldAtLeast": 2040
+              },
+              {
+                "timeAtLeast": 54
+              },
+              {
+                "timeAtMost": 251
+              }
+            ]
+          },
+          "cost": {
+            "gold": 2040,
+            "items": [
+              {
+                "id": "c-fund",
+                "count": 460
+              }
+            ]
+          }
+        },
+        {
+          "id": "go",
+          "label": "按实际身体/复生状态去人间渡口",
+          "text": "若已满足条件可先复生，不等C4；未筹齐也能先保护与完成委托。",
+          "success": {
+            "facts": {
+              "C1_done": true
+            },
+            "say": "原票、身体、钱袋与真实当前愿意情况保留，沿人间路继续。",
+            "complete": true
+          },
+          "requires": {
+            "cBodyRecovered": true
+          }
+        }
+      ],
+      "next": "C2",
+      "text": "谁在名字后签字，与骨栈原票\n\n老兵说：我想知道，他还有没有机会自己说。\n\n合并C1–C2：保存日历与复生机会开场就发，合格即可前置执行。\n\n村至新壕半日、至骨栈再半日、骨栈至温岚一日，均公开固定人间路。当前第90日；服务第92清晨或午后可约，含交通余量，不用静态80尺推世界行程。"
+    },
+    {
+      "id": "C2",
+      "title": "渡口不卖席位，饭盒装今天的饭",
+      "scene": "C2",
+      "entryLevel": 5,
+      "description": "合并C3–C4：双犬为母题意象，普通船有真实劳动，强梁无宗教代理权。",
+      "readAloud": "再至者说：收费的是占路的人，别把他的名号写到阎摩身上。",
+      "dmNotes": "浅水底−5，十尺桥面0，船夫屋+5；Rowboat不默许一车人货一趟。儿童只进入照护，不负责演正确悲伤。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-conflict",
+          "label": "实际物理冲突：布置原卡遭遇",
+          "text": "仅在真实冲突时使用；敌人目标为拦路/搬货/夺物，可常规先攻、认停或撤，伤损保留。",
+          "success": {
+            "facts": {
+              "c-roadguardRaised": true
+            },
+            "encounter": "c-roadguard"
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "c-roadguardRaised"
+              },
+              {
+                "not": "cRescued"
+              }
+            ]
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "双方认停，退回普通交涉路",
+          "text": "本地拦截者同意此次止手；只解物理冲突，不取得财产/签字/死者意愿。",
+          "success": {
+            "facts": {
+              "c-roadguardTruced": true
+            },
+            "say": "按公开目标止手，真实伤势保留，明示其他路线继续。",
+            "neutralize": [
+              "c-roadguard-1"
+            ]
+          },
+          "requires": {
+            "c-roadguardRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "ferry",
+          "label": "道路袋付20，分两趟正常渡运",
+          "text": "含两趟，依载量执行，真实80→60；不买来世座位。",
+          "success": {
+            "facts": {
+              "cCrossed": "ferry"
+            },
+            "say": "20普通劳务已付，活人和遗物按载量两趟通过。",
+            "handouts": [
+              "c-road-card"
+            ],
+            "increment": {
+              "cRoadSpent": 20
+            }
+          },
+          "requires": {
+            "not": "cCrossed"
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-road",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "bridge",
+          "label": "走上游桥多一日，真实行粮20",
+          "text": "没有自动Exhaustion，不把普通运输改成灵魂考验。",
+          "success": {
+            "facts": {
+              "cCrossed": "bridge"
+            },
+            "say": "一天正常行程与20GP行粮，保存原案窗口照真实日历仍可复生。",
+            "minutes": 1440,
+            "handouts": [
+              "c-road-card"
+            ],
+            "increment": {
+              "cRoadSpent": 20
+            }
+          },
+          "requires": {
+            "not": "cCrossed"
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-road",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "legal-transport",
+          "label": "主持核实已有合法运输实际足够",
+          "text": "实际能力、载量、组件与资源须另在角色卡执行，本按钮只记已完成事实，不赠法术。",
+          "success": {
+            "facts": {
+              "cCrossed": "own"
+            },
+            "say": "已有能力已真实完成此段，省去对应20普通船费，不追加必耗。",
+            "handouts": [
+              "c-road-card"
+            ]
+          },
+          "requires": {
+            "not": "cCrossed"
+          }
+        },
+        {
+          "id": "ransom",
+          "label": "实付40强梁放人和页",
+          "text": "从道路余款付，只买当前放行，留收据可追，不买死者命运。",
+          "success": {
+            "facts": {
+              "cRescued": true,
+              "cPageKept": true,
+              "cExtorted": true
+            },
+            "say": "被扣送信者与半页名册已实际放开；40是强梁勒索。",
+            "items": [
+              {
+                "id": "c-extort-receipt",
+                "name": "40GP占路勒索收据",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ],
+            "neutralize": [
+              "c-roadguard-1"
+            ],
+            "increment": {
+              "cRoadSpent": 40
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cCrossed": [
+                  "ferry",
+                  "bridge",
+                  "own"
+                ]
+              },
+              {
+                "not": "cRescued"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-road",
+                "count": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sneak",
+          "label": "按地形潜救被扣者并取页",
+          "text": "DC15失败先救到人、半页未取，能由人证重抄，不取消席位。",
+          "success": {
+            "facts": {
+              "cRescued": true,
+              "cPageKept": true
+            },
+            "say": "送信者配合撤离，人和页都取回。",
+            "items": [
+              {
+                "id": "c-page",
+                "name": "取回半页名册",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ],
+            "neutralize": [
+              "c-roadguard-1"
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "cCrossed": [
+                  "ferry",
+                  "bridge",
+                  "own"
+                ]
+              },
+              {
+                "not": "cRescued"
+              }
+            ]
+          },
+          "check": {
+            "skill": "stealth",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "cRescued": true,
+              "cPageKept": false
+            },
+            "say": "送信者已撤出，页仍在强梁处；C3可凭人证重抄。",
+            "neutralize": [
+              "c-roadguard-1"
+            ]
+          }
+        },
+        {
+          "id": "after-fight",
+          "label": "实际清除拦截后保人取物",
+          "text": "只有原卡遭遇已实际停手/失能方可登记；伤势照实，不凭胜利多得财产。",
+          "success": {
+            "facts": {
+              "cRescued": true,
+              "cPageKept": true
+            },
+            "say": "道路已实际开放，人/页清点后交接。",
+            "items": [
+              {
+                "id": "c-page",
+                "name": "取回半页名册",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "encounterCleared": "c-roadguard"
+              },
+              {
+                "not": "cRescued"
+              }
+            ]
+          }
+        },
+        {
+          "id": "camp",
+          "label": "热饭与休息，去查人间船契",
+          "text": "渡伴可以说停一季船，恋情/友情/淡出均不改资助与保管票。",
+          "success": {
+            "facts": {
+              "C2_done": true,
+              "cCareKept": true
+            },
+            "say": "幼弟有今天的饭，原照护保留；渡伴不被要求为救命重签关系。",
+            "complete": true,
+            "neutralize": [
+              "c-roadguard-1"
+            ]
+          },
+          "requires": {
+            "cRescued": true
+          }
+        }
+      ],
+      "next": "C3",
+      "encounters": {
+        "c-roadguard": [
+          {
+            "id": "c-roadguard-1",
+            "name": "人间占路强梁",
+            "type": "bandit_captain",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 5,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "渡口不卖席位，饭盒装今天的饭\n\n再至者说：收费的是占路的人，别把他的名号写到阎摩身上。\n\n合并C3–C4：双犬为母题意象，普通船有真实劳动，强梁无宗教代理权。\n\n浅水底−5，十尺桥面0，船夫屋+5；Rowboat不默许一车人货一趟。儿童只进入照护，不负责演正确悲伤。"
+    },
+    {
+      "id": "C3",
+      "title": "这句话谁替他说，与追索货单",
+      "scene": "C3",
+      "entryLevel": 5,
+      "description": "合并C5–C6：记忆可并列，财产权在人间查，不用亡者开口当追责门票。",
+      "readAloud": "渡伴指拓布：半条船本来是我的，谁替我把旧债签在另一半后面？",
+      "dmNotes": "坡地0、账室+5，铜印与船契在桌上；不是诸神宴席座位图。名单留白不取消名字。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "deed",
+          "label": "核船契、拓布日期与原票",
+          "text": "拓布假授权写在死后；渡伴原有半船，遗体占有人不能处分它。",
+          "success": {
+            "facts": {
+              "cFalseAuthorityKnown": true,
+              "cBoatHalfProtected": true
+            },
+            "say": "船契与日期直接核：未授权的船份/旧债句无效，财产暂存待权利人处理。",
+            "items": [
+              {
+                "id": "c-deed",
+                "name": "船契核对副本",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "memories",
+          "label": "并列各人自愿记忆/留白",
+          "text": "母亲与老兵可不同，不以一条完美悼词定资格；拒说可留白。",
+          "success": {
+            "facts": {
+              "cMemories": "plural"
+            },
+            "say": "“这是母亲记得的”“这是老兵记得的”并列；摆渡的若已回由本人先说。"
+          },
+          "requires": {
+            "cFalseAuthorityKnown": true
+          }
+        },
+        {
+          "id": "withdraw",
+          "label": "撤回已用于交易的假授权副本",
+          "text": "半日走访，保护隐私只公开撤授权事实，不强迫当事人展示私人伤口。",
+          "success": {
+            "facts": {
+              "cCopiesCorrected": true
+            },
+            "say": "假字已从仍可控制的交易副本中撤回，已经传播的事实不假删。",
+            "minutes": 720
+          },
+          "requires": {
+            "cFalseAuthorityKnown": true
+          }
+        },
+        {
+          "id": "recover60",
+          "label": "向经手人出示铜印与名单，实追60",
+          "text": "他确有这60；交原款权利人，不装作21000。一次而已。",
+          "success": {
+            "facts": {
+              "cRecovered60": true
+            },
+            "say": "60真实回到原村方，队伍不私领；余案凭真实人名继续。",
+            "items": [
+              {
+                "id": "c-recovered",
+                "name": "村方追回GP（普通钱币）",
+                "kind": "object",
+                "count": 60,
+                "holder": "village",
+                "location": "C3"
+              }
+            ]
+          },
+          "requires": {
+            "cFalseAuthorityKnown": true
+          }
+        },
+        {
+          "id": "reconstruct",
+          "label": "丢页时依送信者自愿见闻重抄",
+          "text": "不逼死者/家属供词，基本见闻够用，未知处写未知。",
+          "success": {
+            "facts": {
+              "cPageRebuilt": true
+            },
+            "say": "名册页由人间证言重抄，不新增席位代币。",
+            "items": [
+              {
+                "id": "c-page-copy",
+                "name": "送信者自愿核对的重抄页",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C3"
+              }
+            ]
+          },
+          "requires": {
+            "cPageKept": false
+          }
+        },
+        {
+          "id": "finish",
+          "label": "同日分抄收束，进入复生/补席交接",
+          "text": "分工足以同日，不硬收额外20。真多一天才另谈行粮。",
+          "success": {
+            "facts": {
+              "C3_done": true
+            },
+            "say": "C1实际托付、C2勒索/救人、C3船契与假字带入最后签债与归物；不把假字当本人现愿。",
+            "complete": true
+          },
+          "requires": {
+            "all": [
+              {
+                "cFalseAuthorityKnown": true
+              },
+              {
+                "cMemories": "plural"
+              },
+              {
+                "cCopiesCorrected": true
+              }
+            ]
+          }
+        }
+      ],
+      "next": "C4",
+      "text": "这句话谁替他说，与追索货单\n\n渡伴指拓布：半条船本来是我的，谁替我把旧债签在另一半后面？\n\n合并C5–C6：记忆可并列，财产权在人间查，不用亡者开口当追责门票。\n\n坡地0、账室+5，铜印与船契在桌上；不是诸神宴席座位图。名单留白不取消名字。"
+    },
+    {
+      "id": "C4",
+      "title": "把椅子挪开，与饭多煮一点",
+      "scene": "C4",
+      "entryLevel": 5,
+      "description": "合并C7–C8：C1早可复生，不让哀伤主题扣住合法能力。",
+      "readAloud": "温岚说：先问施法条件，别问他值不值得。债请有权人自己签。",
+      "dmNotes": "普通饭桌在地面，核债与保存票在+5室，现实仪轨淡出。外部合法PC自施须主持核真实卡与材料、位阶、时限/意愿，不能由此按钮免费赠能力。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "late-credit",
+          "label": "温岚实际施术：500先付，行动者自愿借2000服务",
+          "text": "460资助＋本人40GP付一颗真实500钻石；温岚已有可用5环位、已准备且本人愿回，完成1小时。第92清晨或之后真实预约时段，施术开始至多time251。本人签20×100，不能替渡伴/死人签。",
+          "success": {
+            "facts": {
+              "cRaised": true,
+              "cResurrection": "npc-credit",
+              "cServiceDebt": 2000
+            },
+            "say": "材料500实际支付，温岚真实用本案5环位/单颗钻石，施术1小时；摆渡的1HP、D20 Tests−4逐长休减轻。债只归本按钮自愿行动者（姓名见choice日志），不是全队/伴侣/死者。",
+            "minutes": 60,
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "已复生：1HP；D20 Tests−4逐次长休减轻1；自主休养",
+                "location": "nearby-town"
+              },
+              {
+                "id": "wenlan",
+                "status": "本案一颗500GP钻石与该日5环位已实际消耗，服务已完成"
+              }
+            ],
+            "items": [
+              {
+                "id": "c-raised-note",
+                "name": "摆渡的复生与休养记录（非魔法物品）",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "nearby-town"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-service-debt",
+                "to": "温岚",
+                "text": "2000GP服务，20个月每月100；实际自愿行动者见choice日志；不押他人财物/自由。",
+                "status": "待履行"
+              }
+            ],
+            "increment": {
+              "cFundSpent": 460
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cBodyRecovered": true
+              },
+              {
+                "not": "cRaised"
+              },
+              {
+                "cFundSpent": 0
+              },
+              {
+                "timeAtLeast": 54
+              },
+              {
+                "timeAtMost": 251
+              }
+            ]
+          },
+          "cost": {
+            "gold": 40,
+            "items": [
+              {
+                "id": "c-fund",
+                "count": 460
+              }
+            ]
+          }
+        },
+        {
+          "id": "late-paid",
+          "label": "全付NPC服务2500，不借债",
+          "text": "460资助＋本人2040GP；钱确实够、真实预约已到、开始time≤251才可执行，温岚一颗钻石及5环位结算、实际1小时。",
+          "success": {
+            "facts": {
+              "cRaised": true,
+              "cResurrection": "npc-paid",
+              "cServiceDebt": 0
+            },
+            "say": "2500实付，500钻石/本案5环位与1小时施法真实完成；无追加人情债，摆渡的自己决定今后。",
+            "minutes": 60,
+            "npc": [
+              {
+                "id": "ferryman",
+                "status": "已复生：1HP；D20 Tests−4逐长休减轻1；无服务债",
+                "location": "nearby-town"
+              },
+              {
+                "id": "wenlan",
+                "status": "本案一颗500GP钻石与该日5环位已实际消耗，服务已完成"
+              }
+            ],
+            "increment": {
+              "cFundSpent": 460
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cBodyRecovered": true
+              },
+              {
+                "not": "cRaised"
+              },
+              {
+                "cFundSpent": 0
+              },
+              {
+                "goldAtLeast": 2040
+              },
+              {
+                "timeAtLeast": 54
+              },
+              {
+                "timeAtMost": 251
+              }
+            ]
+          },
+          "cost": {
+            "gold": 2040,
+            "items": [
+              {
+                "id": "c-fund",
+                "count": 460
+              }
+            ]
+          }
+        },
+        {
+          "id": "appointment",
+          "label": "记录后续可执行的保存/求助单",
+          "text": "保护当前到第92午时；本案有效2日，之后尚8日短窗。先约温岚下一真实时段，或有资格PC按原文续Gentle Repose。",
+          "success": {
+            "facts": {
+              "cFutureAppointment": true
+            },
+            "say": "具体单：温岚/邻镇，当前第92日前后真实可约时段；不声称已续施或已付款。若请保管师续施需200GP＋2CP，使用资助会真实减余额，交DM按原文结。",
+            "promises": [
+              {
+                "id": "c-next-care",
+                "to": "摆渡的",
+                "text": "保存到期/剩余短窗与温岚下一真实时段当面登记；尚未施术。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "cRaised"
+              },
+              {
+                "timeAtMost": 251
+              }
+            ]
+          }
+        },
+        {
+          "id": "city",
+          "label": "若真实已超短窗，改具体城中方案",
+          "text": "本数据默认未自动延误；只有桌上真实日历已经超10有效日才选。13级Cleric、第108日、六日路、21000价；钱未付术未施。",
+          "success": {
+            "facts": {
+              "cCityAppointment": true
+            },
+            "say": "具体高环求助单保留，不因三个月封路。21000未筹齐就不写已复生。",
+            "promises": [
+              {
+                "id": "c-city-help",
+                "to": "城中复生院",
+                "text": "第108日可预约Resurrection，21000总价，骨栈至城六日；未支付未施术。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "cRaised"
+              },
+              {
+                "not": {
+                  "timeAtMost": 251
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "wages",
+          "label": "真实结清未付护送60并逐件归物",
+          "text": "120已领60仅再领60，孩子/伴侣不被逼退工资或表演创伤。",
+          "success": {
+            "facts": {
+              "cWagesSettled": true,
+              "cBelongingsReturned": true
+            },
+            "say": "另60工资实付，灯/饭盒由原主自持；原票、船契按真实托付归还。已复生者自己答将来，旧假字不生效。",
+            "gold": 60,
+            "promises": [
+              {
+                "id": "c-escort",
+                "to": "队伍",
+                "text": "护送120GP已全部支付。",
+                "status": "已履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "returned",
+          "label": "按实际已复生事实入活人席",
+          "text": "读C1实际付款/本人现愿、C3假授权与船份，再读有限债主体。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "returned"
+            },
+            "say": "有人回来、有的名字仍念。未用三袋普通款按真实余额退权利人，服务债只按自愿签者。",
+            "complete": true,
+            "conditional": [
+              {
+                "requires": {
+                  "cRoadSpent": {
+                    "lte": 79
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-road",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cTransportSpent": {
+                    "lte": 139
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-transport",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cFundSpent": {
+                    "lte": 459
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-fund",
+                    "holder": "village-resurrection-trust",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "ending": "c-returned"
+          },
+          "requires": {
+            "all": [
+              {
+                "cRaised": true
+              },
+              {
+                "cWagesSettled": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "preserve",
+          "label": "不自动施术，留明确求助安排",
+          "text": "保存与筹资不是复生完成；工资遗物仍结，普通资助不被人私吞。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "preserved"
+            },
+            "say": "具体预约与当前保护/有效死亡日历保留，余公款归信托与村方。",
+            "complete": true,
+            "conditional": [
+              {
+                "requires": {
+                  "cRoadSpent": {
+                    "lte": 79
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-road",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cTransportSpent": {
+                    "lte": 139
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-transport",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cFundSpent": {
+                    "lte": 459
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-fund",
+                    "holder": "village-resurrection-trust",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "ending": "c-preserved"
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "cRaised"
+              },
+              {
+                "cFutureAppointment": true
+              },
+              {
+                "cWagesSettled": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "farewell",
+          "label": "选择此刻不背巨债，完成归物与追念",
+          "text": "本案愿回机会仍被承认，没有用隐藏拒绝强造悲剧；不承担服务债也是完整终局。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "farewell"
+            },
+            "say": "普通补席与饭完成，非现实丧仪程序；未用公款退实际权利人，未来可合法再求助。",
+            "complete": true,
+            "conditional": [
+              {
+                "requires": {
+                  "cRoadSpent": {
+                    "lte": 79
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-road",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cTransportSpent": {
+                    "lte": 139
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-transport",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cFundSpent": {
+                    "lte": 459
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-fund",
+                    "holder": "village-resurrection-trust",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "ending": "c-farewell"
+          },
+          "requires": {
+            "all": [
+              {
+                "not": "cRaised"
+              },
+              {
+                "cWagesSettled": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "city-end",
+          "label": "以城中具体预约收束，术未施",
+          "text": "明确21000未付/可能筹资、真实施法者与日期，不冒称救回。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "city"
+            },
+            "say": "交接具体人地日与未履资金，保留其他追责和遗物成果。",
+            "complete": true,
+            "conditional": [
+              {
+                "requires": {
+                  "cRoadSpent": {
+                    "lte": 79
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-road",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cTransportSpent": {
+                    "lte": 139
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-transport",
+                    "holder": "village",
+                    "location": "C4"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cFundSpent": {
+                    "lte": 459
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-fund",
+                    "holder": "village-resurrection-trust",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "ending": "c-city"
+          },
+          "requires": {
+            "all": [
+              {
+                "cCityAppointment": true
+              },
+              {
+                "not": "cRaised"
+              },
+              {
+                "cWagesSettled": true
+              }
+            ]
+          }
+        }
+      ],
+      "text": "把椅子挪开，与饭多煮一点\n\n温岚说：先问施法条件，别问他值不值得。债请有权人自己签。\n\n合并C7–C8：C1早可复生，不让哀伤主题扣住合法能力。\n\n普通饭桌在地面，核债与保存票在+5室，现实仪轨淡出。外部合法PC自施须主持核真实卡与材料、位阶、时限/意愿，不能由此按钮免费赠能力。"
+    }
+  ],
+  "scenes": {
+    "HUB": {
+      "id": "HUB",
+      "map_id": "HUB",
+      "name": "三条路的书桌",
+      "title": "三条路的书桌",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "HUB-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "三路会面庭"
+        },
+        {
+          "id": "HUB-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "独立委托桌（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "HUB-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "HUB-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "HUB-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "独立委托桌·核验桌"
+        },
+        {
+          "id": "HUB-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "HUB-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "HUB-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "HUB-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "HUB-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A1": {
+      "id": "A1",
+      "map_id": "A1",
+      "name": "纸边没有写的人，与夜袭后的热粥",
+      "title": "纸边没有写的人，与夜袭后的热粥",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "税桥与粮车停处"
+        },
+        {
+          "id": "A1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "免税文书室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "免税文书室·核验桌"
+        },
+        {
+          "id": "A1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A1-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "A1-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A2": {
+      "id": "A2",
+      "map_id": "A2",
+      "name": "第三个夜班，与断火后的账",
+      "title": "第三个夜班，与断火后的账",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "枣林渠与火棚"
+        },
+        {
+          "id": "A2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "普通粮仓账室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "普通粮仓账室·核验桌"
+        },
+        {
+          "id": "A2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A2-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "A2-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A3": {
+      "id": "A3",
+      "map_id": "A3",
+      "name": "合法早归，与最后一年的仓库",
+      "title": "合法早归，与最后一年的仓库",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "仓门与救急粮车"
+        },
+        {
+          "id": "A3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "公议桥档室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "公议桥档室·核验桌"
+        },
+        {
+          "id": "A3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A3-cart",
+          "kind": "cart",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 5,
+          "height_ft": 4,
+          "label": "普通货车；并非免费所有权"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A4": {
+      "id": "A4",
+      "map_id": "A4",
+      "name": "三天、三张票，与归程名单",
+      "title": "三天、三张票，与归程名单",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "到期界碑前路"
+        },
+        {
+          "id": "A4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "归城名单室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "归城名单室·核验桌"
+        },
+        {
+          "id": "A4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A4-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "A4-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B1": {
+      "id": "B1",
+      "map_id": "B1",
+      "name": "四十八、四十八，还有谁，与界碑夜",
+      "title": "四十八、四十八，还有谁，与界碑夜",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "闸口与青年退路"
+        },
+        {
+          "id": "B1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "临约文书室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "临约文书室·核验桌"
+        },
+        {
+          "id": "B1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B1-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "B1-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B2": {
+      "id": "B2",
+      "map_id": "B2",
+      "name": "绳子烧断之后，与龟背两个声部",
+      "title": "绳子烧断之后，与龟背两个声部",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "修堤与备用绳库前"
+        },
+        {
+          "id": "B2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "火后换页核验室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "火后换页核验室·核验桌"
+        },
+        {
+          "id": "B2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B2-cart",
+          "kind": "cart",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 5,
+          "height_ft": 4,
+          "label": "普通货车；并非免费所有权"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B3": {
+      "id": "B3",
+      "map_id": "B3",
+      "name": "一百二十罐与四种饥饿，借来的封锁",
+      "title": "一百二十罐与四种饥饿，借来的封锁",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "货车与闸锁"
+        },
+        {
+          "id": "B3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "四方货权核验室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "四方货权核验室·核验桌"
+        },
+        {
+          "id": "B3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B3-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "B3-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B4": {
+      "id": "B4",
+      "map_id": "B4",
+      "name": "先堵堤，再签终约",
+      "title": "先堵堤，再签终约",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "承木与修缮交接场"
+        },
+        {
+          "id": "B4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "真实货物终约室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "真实货物终约室·核验桌"
+        },
+        {
+          "id": "B4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B4-cart",
+          "kind": "cart",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 5,
+          "height_ft": 4,
+          "label": "普通货车；并非免费所有权"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C1": {
+      "id": "C1",
+      "map_id": "C1",
+      "name": "谁在名字后签字，与骨栈原票",
+      "title": "谁在名字后签字，与骨栈原票",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "新壕与骨栈外路"
+        },
+        {
+          "id": "C1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "保存原票核验室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "保存原票核验室·核验桌"
+        },
+        {
+          "id": "C1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C1-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "C1-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C2": {
+      "id": "C2",
+      "map_id": "C2",
+      "name": "渡口不卖席位，饭盒装今天的饭",
+      "title": "渡口不卖席位，饭盒装今天的饭",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "人间渡口与旧桥"
+        },
+        {
+          "id": "C2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "普通船夫屋（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "普通船夫屋·核验桌"
+        },
+        {
+          "id": "C2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C2-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "C2-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C3": {
+      "id": "C3",
+      "map_id": "C3",
+      "name": "这句话谁替他说，与追索货单",
+      "title": "这句话谁替他说，与追索货单",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "有日光水的缓坡"
+        },
+        {
+          "id": "C3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "人间船契与货单室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "人间船契与货单室·核验桌"
+        },
+        {
+          "id": "C3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C3-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "C3-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C4": {
+      "id": "C4",
+      "map_id": "C4",
+      "name": "把椅子挪开，与饭多煮一点",
+      "title": "把椅子挪开，与饭多煮一点",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "活人的普通饭桌"
+        },
+        {
+          "id": "C4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "保存、借款与原物结算室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "保存、借款与原物结算室·核验桌"
+        },
+        {
+          "id": "C4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C4-cart",
+          "kind": "cart",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 5,
+          "height_ft": 4,
+          "label": "普通货车；并非免费所有权"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    }
+  },
+  "npcs": {
+    "clerk": {
+      "name": "宫廷护送书记",
+      "location": "A1",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "qing": {
+      "name": "青绳",
+      "location": "A1",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "late": {
+      "name": "迟舟",
+      "location": "A1",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "gray": {
+      "name": "灰角（成年受雇猎手）",
+      "location": "A2",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "abbot": {
+      "name": "林苑住持",
+      "location": "A2",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "sita": {
+      "name": "悉多（史诗人物改编层）",
+      "location": "A2",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "council": {
+      "name": "护桥公议合法代理",
+      "location": "A3",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "saltlord": {
+      "name": "盐仓主",
+      "location": "A3",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "lamp": {
+      "name": "持灯者",
+      "location": "B1",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "tide": {
+      "name": "潮背",
+      "location": "B1",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "naga": {
+      "name": "伏藏娘（水路代表）",
+      "location": "B1",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "notary": {
+      "name": "公证人盐单",
+      "location": "B1",
+      "x": 52.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "keeper": {
+      "name": "料仓老库守",
+      "location": "B2",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "longpractice": {
+      "name": "久炼",
+      "location": "B2",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "mixer": {
+      "name": "搅浑者（原创收购操纵者）",
+      "location": "B3",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "buyers": {
+      "name": "实际收购船经手人",
+      "location": "B3",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "names": {
+      "name": "数名者",
+      "location": "C1",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "ferryman": {
+      "name": "摆渡的（死亡时44岁，叙事NPC）",
+      "location": "C1",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "完整遗体在骨栈，愿回；无战斗卡",
+      "attitude": "可交谈"
+    },
+    "wenlan": {
+      "name": "温岚（原创9级Cleric）",
+      "location": "nearby-town",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "已准备Raise Dead/Gentle Repose；第92日可预约，一颗500钻石与5环位",
+      "attitude": "可交谈"
+    },
+    "counter": {
+      "name": "点数者（骨栈经手人）",
+      "location": "C1",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "partner": {
+      "name": "渡伴（42岁，成年合伙人）",
+      "location": "C2",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "lampmother": {
+      "name": "灯母",
+      "location": "C2",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "younger": {
+      "name": "饭盒幼弟（仅照护）",
+      "location": "C2",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "returnguide": {
+      "name": "再至者",
+      "location": "C2",
+      "x": 52.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "veteran": {
+      "name": "拓名老兵",
+      "location": "C3",
+      "x": 52.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "broker": {
+      "name": "收过60的村内经手人",
+      "location": "C3",
+      "x": 12.5,
+      "y": 17.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "works": {
+      "name": "枣林工程账房",
+      "location": "A4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "contractor": {
+      "name": "带走种粮的盐路承包人",
+      "location": "salt-road",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "relief-crew": {
+      "name": "自愿救急运粮班",
+      "location": "capital-road",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "light": {
+      "name": "灯镇货份保管人",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "workers": {
+      "name": "工班货份出纳",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "public-store": {
+      "name": "共同食仓保管人",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "water": {
+      "name": "伏藏娘授权水路仓保管人",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "water-paymaster": {
+      "name": "两位熟练工有限工资保管人",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "joint-custodian": {
+      "name": "四方明确的公证共同保管人",
+      "location": "B4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "village": {
+      "name": "村方公开账房",
+      "location": "C4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    },
+    "village-resurrection-trust": {
+      "name": "自愿复生资助保管人",
+      "location": "C4",
+      "x": 62.5,
+      "y": 37.5,
+      "side": "neutral",
+      "status": "可会面",
+      "attitude": "可交谈"
+    }
+  },
+  "handouts": [
+    {
+      "id": "a-contract",
+      "title": "十四日护送合同",
+      "text": "全队480：160预付、到枣林320。十四年是王子自己的诺；后续逐次自愿签。护桥公议为本作受诺方；代理无权替桥工加班。税40可等半日核免税、留据后追或绕一日。",
+      "chapter": 2
+    },
+    {
+      "id": "a-works",
+      "title": "枣林普通工程账",
+      "text": "600GP：渠材240、粮180、轮班照护120、巡路60。三夜替班12；雨前额外渠材120，可真实省料、另筹或盐仓主有限借款换下一季独家。",
+      "chapter": 3
+    },
+    {
+      "id": "b-contract",
+      "title": "有限120罐与240工程现金",
+      "text": "120普通食品罐，现买家10GP/罐。48/48/24是提案，水路另求24已公开。240现金工160/材40/粮40；见证120另备，先60后60。押物自愿，不转产权，拒押双副本。",
+      "chapter": 6
+    },
+    {
+      "id": "b-fire",
+      "title": "火后两笔与魔法",
+      "text": "新增加班24和补绳24分开，旧240按原班次用。Calm Emotions只Humanoid、专注至多1分钟，不抹记忆或强签；冻结换页新句，停止影响后本人重读重签。",
+      "chapter": 7
+    },
+    {
+      "id": "b-shares",
+      "title": "实际份额方案",
+      "text": "36/36/24/24共120；两方各真让12（现价120GP）。水路可等价240现金或两工60日/工计240工资，付一项不再领24罐；不得替别人签让份。",
+      "chapter": 8
+    },
+    {
+      "id": "c-calendar",
+      "title": "开场即发的保存与服务日历",
+      "text": "死后第90日。Gentle Repose自第2日起每十日午时连续至第92日午时，已付1800GP＋18CP，余额0，有效死亡2日。到期并非立即超10日；不再保护则至第100日午时累计10日。温岚9级Cleric有5环位和500钻石，2500总价；500先付＋服务2000可自愿20月×100。本案本人愿回。",
+      "chapter": 10
+    },
+    {
+      "id": "c-road-card",
+      "title": "正常船与强梁",
+      "text": "20GP含两趟普通运输，按真实载量。可合法运输/桥路多一日20。占路者40是勒索，不代表阎摩；可潜救/谈退/原卡战术，丢页可人证重抄，仍留席位。",
+      "chapter": 11
+    }
+  ],
+  "endings": [
+    {
+      "id": "a-kept",
+      "title": "守满，救急也完成",
+      "text": "三日车程到期入界，救急可同时完成。按真实账读480工资、轮班、材料借款和误税；青绳可回家，灰角可有薪接班，无隐藏家庭税。"
+    },
+    {
+      "id": "a-amended",
+      "title": "合法新约的归程",
+      "text": "桥工120与误税40按实际结，新约被承认；公开仍可有政治争论，不加天罚。有人留下有人离任都保工资。"
+    },
+    {
+      "id": "a-unilateral",
+      "title": "早归后的再谈",
+      "text": "单方早归保留争议，桥路今后40/趟另议；不削职业/神罚。真实粮已送、已修渠与已救者保留，下一约仍可谈。"
+    },
+    {
+      "id": "a-witness",
+      "title": "离任而回来见证",
+      "text": "队伍结束尚未接的下一雇约，交还原物、结已做工资。盐主贿款、诬指与更正按实际留档，回城不要求重新依附。"
+    },
+    {
+      "id": "b-four",
+      "title": "分甘四方，实物到手",
+      "text": "按实际库存与本人同意逐罐交割，工人新增24另结，押物归还，见证工资120结清。无甘露能力，不用额外牺牲宣布成功。 加班24按真实现金转移读作已付，或明确仍欠；本人若合法售3罐，灯镇实领33而非重复36，工班、公共仓与水路原份额保留。"
+    },
+    {
+      "id": "b-cash",
+      "title": "货换现金的水路约",
+      "text": "经货主同意24罐卖240直付水路；灯镇/工班基准各36（本人已合法售3时，灯镇本次只领33），公共24，买家24。水路没有又拿24罐，维修与权限按已签条款。 加班24按真实现金转移读作已付，或明确仍欠；本人若合法售3罐，灯镇实领33而非重复36，工班、公共仓与水路原份额保留。"
+    },
+    {
+      "id": "b-labor",
+      "title": "有钱有期限的维修约",
+      "text": "24罐真实售240成为两位工人各60日工资袋，货权与未来劳动分列，不强征。已涵盖的本次修缮不重复收56。 加班24按真实现金转移读作已付，或明确仍欠；本人若合法售3罐，灯镇实领33而非重复36，工班、公共仓与水路原份额保留。"
+    },
+    {
+      "id": "b-separate",
+      "title": "拆伙或未完的合约",
+      "text": "已干工作照付，原物归还，争议食品由明确保管人封存待本人重谈；实际私售、修缮与欠款保留。无宗教善恶评分。 加班24按真实现金转移读作已付，或明确仍欠；本人若合法售3罐，灯镇实领33而非重复36，工班、公共仓与水路原份额保留。"
+    },
+    {
+      "id": "c-returned",
+      "title": "活人的椅子，仍要念的名字",
+      "text": "摆渡的已实际复生，自主休养；撤象征空椅让他坐活人席。读实际材料/服务、真实借者、道路余款与遗物，渡伴可停一季船，不强迫爱情重启。已救者不因叙事平衡再死。"
+    },
+    {
+      "id": "c-preserved",
+      "title": "有日期的求助单",
+      "text": "不自动复生，保存与下一求助人、地点、真实日期明确；名册与遗物、护送工资照结。500/2500/21000不同成本不混同，没有凭名字免费回来。"
+    },
+    {
+      "id": "c-farewell",
+      "title": "不背巨债的告别",
+      "text": "当事人选择不承担新巨债，依然完成追念、归还遗物和人间追责。愿回者的机会没有被宣告不存在；船份、实际资助余额和各人明天仍保留。"
+    },
+    {
+      "id": "c-city",
+      "title": "城中复生预约",
+      "text": "如真实延误超过短窗，仍可依已确认第108日13级Cleric的Resurrection服务，21000含1000钻石，六日路程可达。此结局是具体未履求助安排，绝不冒称已施术。"
+    }
+  ],
+  "ruleCards": [
+    {
+      "id": "preserve",
+      "title": "Gentle Repose不是冷窖",
+      "category": "复生",
+      "tags": [
+        "时间",
+        "2024"
+      ],
+      "summary": "真实有效保护期不计复生时限，不能倒退保护前时间。本案第2日起连续保护至92日，有效死亡2日。",
+      "sourceUrl": "https://www.dndbeyond.com/srd",
+      "page": 135
+    },
+    {
+      "id": "raise",
+      "title": "Raise Dead与真实服务",
+      "category": "复生",
+      "tags": [
+        "材料",
+        "意愿"
+      ],
+      "summary": "5环、1小时、一颗至少500GP钻石、有效死亡10日等；回来1HP和D20 Tests−4逐长休减。本人知道施法者可拒绝。本案愿回，NPC服务2000另列。",
+      "sourceUrl": "https://www.dndbeyond.com/srd",
+      "page": 157
+    },
+    {
+      "id": "open-spells",
+      "title": "合法法术保持开放",
+      "category": "通用",
+      "tags": [
+        "Reincarnate",
+        "Resurrection"
+      ],
+      "summary": "真实合格的PC可自施，Reincarnate不被剧情禁用，三个月不等于Resurrection百年超期。未列按钮交DM按原文/实际资源裁定。",
+      "sourceUrl": "https://www.dndbeyond.com/srd"
+    },
+    {
+      "id": "consent",
+      "title": "同意、魔法与签字",
+      "category": "通用",
+      "tags": [
+        "Influence",
+        "Calm Emotions"
+      ],
+      "summary": "愿意者免骰，拒绝不被高骰强签；Calm Emotions限Humanoid/专注至多1分钟，不强签、不抹记忆、不修改那伽类型。",
+      "sourceUrl": "https://www.dndbeyond.com/srd",
+      "page": 114
+    }
+  ]
+}

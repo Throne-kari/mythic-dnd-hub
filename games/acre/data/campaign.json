@@ -1,0 +1,5436 @@
+{
+  "id": "acre-ledger-slice-v2",
+  "title": "阿卡账房",
+  "subtitle": "长期战役框架的1190—1191成熟叙事切片",
+  "version": "2.0.0",
+  "language": "zh-CN",
+  "initialScene": "AC01",
+  "initialLevel": 3,
+  "fixedLevel": 3,
+  "levelMode": "fixed",
+  "initialPotions": 4,
+  "startTime": 8,
+  "recommendedPlayers": 4,
+  "minimumPlayers": 1,
+  "estimatedDuration": "三次聚会的书面活动预算，每次约3–5小时；未真人实测。",
+  "description": "以原SLICE-01为依据的十二节点数字改编；粮食、原件、旧债、个人释放与自愿护送各有实际记录。1187—1291跨代框架尚未全程序化。",
+  "rules": {
+    "edition": "D&D 2024",
+    "srd": "5.2.1",
+    "progression": "固定3级数字改编；原切片Lv2起步、后续3–4级是原设计，不冒称已照原预算实测。",
+    "core": "沿共用解释器标准规则，不新增道德、信誉、兵棋或饥荒点数。",
+    "openActions": "按钮为常见方案，合法能力按实际规则解决问题；创造食物/水、治疗、复活等不能被剧情封禁。",
+    "rests": "场景months只属历史日程，minutes只计实际行动；都不自动恢复资源。安全处标准休息。",
+    "history": "历史锚及来源差异沿原本地研究；新增人物、数额、合同与地图为本作原创。无历史人物虚构台词。",
+    "failure": "失败改变原件、实物或合同，绝不把已救者无故送回火线。真实HP、死亡与复活按规则保存。",
+    "privacy": "不要求秘密或亲密作为报酬/证词条件；所有可选关系主体为成年人，友情与拒绝同样保留任务资格。"
+  },
+  "initialFacts": {
+    "inherited": false,
+    "site": "undecided",
+    "siteChosen": false,
+    "copyMethod": "none",
+    "copiesReady": false,
+    "foodShared": false,
+    "marketWitness": false,
+    "marketDone": false,
+    "headingRead": false,
+    "headingValid": false,
+    "witnessHeard": false,
+    "witnessValid": false,
+    "debtRead": false,
+    "falseDebtRejected": false,
+    "license": "pending",
+    "courtDone": false,
+    "raidStarted": false,
+    "reliefResolved": false,
+    "reliefSaved": 0,
+    "reliefDone": false,
+    "breachMoved": false,
+    "pagesIntact": false,
+    "oralCopy": false,
+    "breachDone": false,
+    "debtStatus": "open",
+    "berths": 0,
+    "berthPlan": "none",
+    "extraSeat": false,
+    "berthsKnown": false,
+    "barrelResolved": false,
+    "workRecords": "none",
+    "engineeringDone": false,
+    "termsCompared": false,
+    "rosterCustody": "undecided",
+    "rosterCopied": false,
+    "jointCertificate": false,
+    "surrenderDone": false,
+    "nasirPlan": "undecided",
+    "nasirReleased": false,
+    "ransomDone": false,
+    "passStatus": "unread",
+    "passRead": false,
+    "waterChoice": "none",
+    "deliveryDone": false,
+    "transportDone": false,
+    "transportMode": "none",
+    "usedBerths": 0,
+    "evacuationDone": false,
+    "copyHanded": false,
+    "finalMode": "none",
+    "sponsorDuty": false,
+    "rosterArranged": false,
+    "nasirConsentRecorded": false,
+    "mariamDisclosure": "unasked",
+    "rafiqDisclosure": "unasked",
+    "leaDisclosure": "unasked",
+    "mariamMeeting": "unasked",
+    "rafiqMeeting": "unasked",
+    "leaMeeting": "unasked",
+    "mariamOnward": "unasked",
+    "rafiqOnward": "unasked",
+    "leaOnward": "unasked",
+    "nasirOnward": "unasked"
+  },
+  "publicFacts": [
+    "inherited",
+    "site",
+    "siteChosen",
+    "copyMethod",
+    "copiesReady",
+    "foodShared",
+    "marketWitness",
+    "marketDone",
+    "headingRead",
+    "headingValid",
+    "witnessHeard",
+    "witnessValid",
+    "debtRead",
+    "falseDebtRejected",
+    "license",
+    "courtDone",
+    "raidStarted",
+    "reliefResolved",
+    "reliefSaved",
+    "reliefDone",
+    "breachMoved",
+    "pagesIntact",
+    "oralCopy",
+    "breachDone",
+    "debtStatus",
+    "berths",
+    "berthPlan",
+    "extraSeat",
+    "berthsKnown",
+    "barrelResolved",
+    "workRecords",
+    "engineeringDone",
+    "termsCompared",
+    "rosterCustody",
+    "rosterCopied",
+    "jointCertificate",
+    "surrenderDone",
+    "nasirPlan",
+    "nasirReleased",
+    "ransomDone",
+    "passStatus",
+    "passRead",
+    "waterChoice",
+    "deliveryDone",
+    "transportDone",
+    "transportMode",
+    "usedBerths",
+    "evacuationDone",
+    "copyHanded",
+    "finalMode",
+    "sponsorDuty",
+    "rosterArranged",
+    "nasirConsentRecorded",
+    "mariamDisclosure",
+    "rafiqDisclosure",
+    "leaDisclosure",
+    "mariamMeeting",
+    "rafiqMeeting",
+    "leaMeeting",
+    "mariamOnward",
+    "rafiqOnward",
+    "leaOnward",
+    "nasirOnward"
+  ],
+  "party": [
+    {
+      "id": "p1",
+      "name": "随队护卫",
+      "role": "保护路与人的战士",
+      "bio": "与账房合伙，但不代表任何阵营或宗教。"
+    },
+    {
+      "id": "p2",
+      "name": "路上抄手",
+      "role": "游荡者与勘路人",
+      "bio": "能问人、查物、找侧路；不被迫做贼。"
+    },
+    {
+      "id": "p3",
+      "name": "行旅医者",
+      "role": "牧师与救护人",
+      "bio": "法术来源属于角色，不替现实信仰作真伪判断。"
+    },
+    {
+      "id": "p4",
+      "name": "文书研究者",
+      "role": "法师与调查人",
+      "bio": "能使用真实魔法，不能拿鉴定物件代替他人同意。"
+    }
+  ],
+  "npcs": {
+    "salim": {
+      "name": "萨利姆",
+      "age": 43,
+      "location": "AC01",
+      "x": 42.5,
+      "y": 22.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】军需与私人出资人，只承认自己明确签过的债，不拥有受护者",
+      "vital": true
+    },
+    "yuhanna": {
+      "name": "尤哈娜",
+      "age": 32,
+      "location": "AC03",
+      "x": 47.5,
+      "y": 27.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】独立抄写师，愿核公开材料，拒绝替旁人代签",
+      "vital": true
+    },
+    "halim": {
+      "name": "哈利姆",
+      "age": 58,
+      "location": "AC06",
+      "x": 52.5,
+      "y": 27.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】船家代理与铜水罐持有人，守实际席位与器具归属",
+      "vital": true
+    },
+    "mariam": {
+      "name": "玛丽亚姆",
+      "age": 29,
+      "location": "AC05",
+      "x": 52.5,
+      "y": 22.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】装订工，保留自己姓名与择业权，愿走岸路",
+      "vital": true
+    },
+    "rafiq": {
+      "name": "拉菲格",
+      "age": 34,
+      "location": "AC05",
+      "x": 57.5,
+      "y": 27.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】车夫，腿伤未愈，希望先坐船但不放弃自己意见",
+      "vital": true
+    },
+    "lea": {
+      "name": "莱娅",
+      "age": 41,
+      "location": "AC05",
+      "x": 52.5,
+      "y": 32.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】染工，要看自己的摘录后再同意使用",
+      "vital": true
+    },
+    "nasir": {
+      "name": "纳西尔",
+      "age": 26,
+      "location": "AC09",
+      "x": 42.5,
+      "y": 27.5,
+      "type": "commoner",
+      "side": "neutral",
+      "status": "在场，意见须当面询问",
+      "attitude": "可交涉，非默认代理",
+      "bio": "【本作原创】成年信使，要自由回家，不接受无限送信劳役",
+      "vital": true
+    }
+  },
+  "chapters": [
+    {
+      "id": "A01",
+      "title": "帐前账册：谁有权签",
+      "scene": "AC01",
+      "date": "1190年7月",
+      "entryLevel": 3,
+      "readAloud": "海墙巷口的空帐篷里，旧账被海盐粘成一块。萨利姆把六袋豆粮逐袋推过来：“这是本支店的存粮。欠船家的两袋还在；别把它写成我的债。”尤哈娜把空白名册转向每个人：“名字由本人给。合伙人也不能替别人答应。”",
+      "description": "海墙巷口的空帐篷里，旧账被海盐粘成一块。萨利姆把六袋豆粮逐袋推过来：“这是本支店的存粮。欠船家的两袋还在；别把它写成我的债。”尤哈娜把空白名册转向每个人：“名字由本人给。合伙人也不能替别人答应。”",
+      "dmNotes": "【本作原创】账房、人物与六袋数为游戏物件，不是阿卡价格史。先交两件遗产：栈账正本、铁马烙印；另交D-1旧债条和现存守夜合同。合伙人自行选背景关联三条，拒绝个人秘密仍完整参与。初始0GP，不空发收入。",
+      "options": [
+        {
+          "id": "inherit",
+          "label": "当面清点遗产、六袋豆粮与D-1旧债",
+          "text": "取得六袋实物、栈账、守夜合同和铁马烙印；旧债为两袋同类存粮，仅此本场原创合同。",
+          "once": true,
+          "requires": {
+            "inherited": false
+          },
+          "success": {
+            "facts": {
+              "inherited": true
+            },
+            "say": "六袋逐袋签收。D-1债务不因换了签字人自动消失，也不扩大成世袭人身债。",
+            "items": [
+              {
+                "id": "food",
+                "name": "账房豆粮袋",
+                "count": 6,
+                "holder": "party",
+                "kind": "object"
+              },
+              {
+                "id": "ledger",
+                "name": "栈账正本",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              },
+              {
+                "id": "brand",
+                "name": "哈丁旧铁马烙印",
+                "count": 1,
+                "holder": "party",
+                "kind": "object"
+              },
+              {
+                "id": "old-debt",
+                "name": "D-1两袋豆粮旧债条",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              },
+              {
+                "id": "watch",
+                "name": "围营守夜履约合同",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              },
+              {
+                "id": "water-jar",
+                "name": "哈利姆的铜水罐（每日一份清水）",
+                "count": 1,
+                "holder": "halim",
+                "kind": "object",
+                "location": "随哈利姆"
+              }
+            ],
+            "handouts": [
+              "H01"
+            ],
+            "promises": [
+              {
+                "id": "D1",
+                "text": "本支店向哈利姆代管船家偿还两袋豆粮；下一春泊位会面时到期",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "site-shore",
+          "label": "在海墙巷口开账",
+          "text": "海墙巷口便于搬原件，病帐仍走公开小径；不因选址关闭救人。",
+          "once": true,
+          "requires": {
+            "inherited": true
+          },
+          "success": {
+            "facts": {
+              "site": "shore",
+              "siteChosen": true
+            },
+            "say": "海墙巷口便于搬原件，病帐仍走公开小径；不因选址关闭救人。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "salim",
+                "location": "AC02",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "yuhanna",
+                "location": "AC02",
+                "x": 47.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        },
+        {
+          "id": "site-market",
+          "label": "在市场路口开账",
+          "text": "市场证人易找，装船仍能去泊位勘察。选址提供人际背景，不锁后续场景。",
+          "once": true,
+          "requires": {
+            "inherited": true
+          },
+          "success": {
+            "facts": {
+              "site": "market",
+              "siteChosen": true
+            },
+            "say": "市场证人易找，装船仍能去泊位勘察。选址提供人际背景，不锁后续场景。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "salim",
+                "location": "AC02",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "yuhanna",
+                "location": "AC02",
+                "x": 47.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "stock",
+          "label": "签收六袋与两袋旧债",
+          "doneWhen": {
+            "inherited": true
+          }
+        },
+        {
+          "id": "site",
+          "label": "确定实际支店位置",
+          "doneWhen": {
+            "siteChosen": true
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A02",
+      "title": "以物易物之夜：吃饭和留证",
+      "scene": "AC02",
+      "date": "1190年7月至秋",
+      "entryLevel": 3,
+      "readAloud": "摊前没有统一价签。一袋换蜡是原来的报价，共同整理须问实际在场的抄手；问不到时仍可自行整理公开页。病帐使者的真实见闻不以捐粮为条件。",
+      "description": "摊前没有统一价签。一袋换蜡是原来的报价，共同整理须问实际在场的抄手；问不到时仍可自行整理公开页。病帐使者的真实见闻不以捐粮为条件。",
+      "dmNotes": "个人交易量是原创实物约定，不是货币兑换表。粮食给谁是自愿处置共同库存；不以信仰、亲密或索取秘密换吃饭资格。免费整理与一袋换蜡二选一，均得可用副本线索。捐粮是额外行为，不撤主线。",
+      "options": [
+        {
+          "id": "barter",
+          "label": "以一袋豆粮换封蜡与一份对照抄页",
+          "text": "消耗一袋；取得两块封蜡和一份对照抄页，不出售名册姓名。与一小时自抄互斥。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "copyMethod": "none"
+              },
+              {
+                "npcCanConsent": "salim"
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "copyMethod": "barter",
+              "copiesReady": true
+            },
+            "say": "萨利姆收粮，尤哈娜逐行校抄。抄页写“抄件”，没有冒充原件。",
+            "items": [
+              {
+                "id": "wax",
+                "name": "封蜡与绳封材料",
+                "count": 2,
+                "holder": "party",
+                "kind": "object"
+              },
+              {
+                "id": "charter-copy",
+                "name": "文本层宪章对照抄页",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "food",
+                "count": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "copy-labor",
+          "label": "与尤哈娜整理一小时，自己抄写对照页",
+          "text": "0GP、不耗粮，60分钟实际劳动。不能代任何住户公开署名。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "copyMethod": "none"
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "copyMethod": "labor",
+              "copiesReady": true
+            },
+            "say": "你们整理完公开段，尤哈娜核对抄页。她的劳动有人共同承担。",
+            "minutes": 60,
+            "items": [
+              {
+                "id": "charter-copy",
+                "name": "文本层宪章对照抄页",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "donate",
+          "label": "额外匀一袋给病帐自愿接收者",
+          "text": "消耗一袋，改变这批人的一餐；不宣称解除营中饥荒。",
+          "once": true,
+          "success": {
+            "facts": {
+              "foodShared": true
+            },
+            "say": "豆粮交到病帐厨房。使者收下，但没有答应替账房说假话。",
+            "promises": [
+              {
+                "id": "food",
+                "text": "病帐厨房收到一袋账房豆粮",
+                "status": "已履行"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "food",
+                "count": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "testimony",
+          "label": "只问公开见闻，不谈捐赠或私人关系",
+          "text": "0GP，取得两种相互冲突的运输说法；不把传闻当史实。",
+          "once": true,
+          "success": {
+            "facts": {
+              "marketWitness": true
+            },
+            "say": "一人见过双旗船，另一人只听过传言。栈账分栏写“目击”与“转述”。",
+            "handouts": [
+              "H02"
+            ]
+          }
+        },
+        {
+          "id": "copy-alone",
+          "label": "自己抄现有公开对照材料，不冒称抄手核签",
+          "text": "0GP、不耗粮，90分钟；他人缺席/失能不阻断基本取证。只抄公开文本，未取得任何第三人授权。",
+          "once": true,
+          "requires": {
+            "copyMethod": "none"
+          },
+          "success": {
+            "facts": {
+              "copyMethod": "self",
+              "copiesReady": true
+            },
+            "say": "队伍完成自己的公开文本对照页，明确非尤哈娜新签或替人同意。",
+            "minutes": 90,
+            "items": [
+              {
+                "id": "charter-copy",
+                "name": "文本层宪章对照抄页",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "leave",
+          "label": "带着抄页和已确认见闻离市",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "copiesReady": true
+              },
+              {
+                "marketWitness": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "marketDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "salim",
+                "location": "AC03",
+                "x": 52.5,
+                "y": 17.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "yuhanna",
+                "location": "AC03",
+                "x": 47.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "copy",
+          "label": "取得可核对抄页",
+          "doneWhen": {
+            "copiesReady": true
+          }
+        },
+        {
+          "id": "witness",
+          "label": "区分目击与传闻",
+          "doneWhen": {
+            "marketWitness": true
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A03",
+      "title": "围营诉讼：凭据的边界",
+      "scene": "AC03",
+      "date": "1190年秋",
+      "entryLevel": 3,
+      "readAloud": "庭帐里摆着封套和磨短的笔。先读已有材料，再问实际能自主答复的证人；沉默、失能和缺席不能被写成承认。",
+      "description": "庭帐里摆着封套和磨短的笔。先读已有材料，再问实际能自主答复的证人；沉默、失能和缺席不能被写成承认。",
+      "dmNotes": "数字改编将原五环诉讼压为三项可核对材料加一次无骰裁定，非原桌测判定框的逐字实现。Study用investigation，Influence用persuasion。所有失败只改变本店执业范围，不锁救援。真实守夜合同已是第四证据，不再为翻到合同掷骰。",
+      "options": [
+        {
+          "id": "heading",
+          "label": "核对宪章抬头与抄件层次",
+          "text": "调查DC12，一次；失败只表示本庭暂不采该抄页。",
+          "once": true,
+          "requires": {
+            "copiesReady": true
+          },
+          "success": {
+            "facts": {
+              "headingRead": true,
+              "headingValid": true
+            },
+            "say": "抄件的文本层被接受，仍不等于任何人的新授爵位。"
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 12
+          },
+          "failure": {
+            "facts": {
+              "headingRead": true,
+              "headingValid": false
+            },
+            "say": "抄页仍在，庭上暂不采信；不会被毁掉。"
+          }
+        },
+        {
+          "id": "witness",
+          "label": "请萨利姆说明运输单与自身欠账",
+          "text": "说服DC12，一次；他可拒绝替别人背债。失败不使证人敌对。",
+          "once": true,
+          "success": {
+            "facts": {
+              "witnessHeard": true,
+              "witnessValid": true
+            },
+            "say": "他承认见过错误印鉴，并写清自己承担的部分。"
+          },
+          "check": {
+            "skill": "persuasion",
+            "dc": 12
+          },
+          "failure": {
+            "facts": {
+              "witnessHeard": true,
+              "witnessValid": false
+            },
+            "say": "他只确认自己的账，未替你们的凭据背书。"
+          },
+          "requires": {
+            "all": [
+              {
+                "npcCanConsent": "salim"
+              }
+            ]
+          }
+        },
+        {
+          "id": "forgery",
+          "label": "对照仿债据的纸序与印痕",
+          "text": "调查DC14，一次；成功能将仿件作废，失败只记“未经确认”，不扣血。",
+          "once": true,
+          "success": {
+            "facts": {
+              "debtRead": true,
+              "falseDebtRejected": true
+            },
+            "say": "仿债据与旧债D-1是不同物：本件作废，真实两袋旧债仍有效。",
+            "items": [
+              {
+                "id": "false-debt",
+                "name": "已识别仿债据（非D-1）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 14
+          },
+          "failure": {
+            "facts": {
+              "debtRead": true,
+              "falseDebtRejected": false
+            },
+            "say": "仿件尚无法判定，不自动把一笔新债写给任何居民。"
+          }
+        },
+        {
+          "id": "witness-unavailable",
+          "label": "证人无法自主答复时如实保留未确认",
+          "text": "0GP；不替昏迷、受魅惑、缺席或已死的人承认欠账，其余证据与三条执业路线继续。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "witnessHeard": false
+              },
+              {
+                "not": {
+                  "npcCanConsent": "salim"
+                }
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "witnessHeard": true,
+              "witnessValid": false
+            },
+            "say": "没有取得新的自愿证言；不把沉默或失能写成承认。"
+          }
+        },
+        {
+          "id": "recognize",
+          "label": "请求按原守夜合同承认独立执业",
+          "text": "须三项材料都获采信；0GP无骰。合同有效范围只及本支店。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "headingValid": true
+              },
+              {
+                "witnessValid": true
+              },
+              {
+                "falseDebtRejected": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "license": "recognized",
+              "courtDone": true
+            },
+            "say": "凭据确认；未来文书仍须当事人分别同意。",
+            "items": [
+              {
+                "id": "license-recognize",
+                "name": "独立执业凭据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "complete": true
+          }
+        },
+        {
+          "id": "supervised",
+          "label": "接受本季逐单备查，不放弃名册保护",
+          "text": "三项材料均处理后可选；0GP，不扣物品，不锁后续。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "headingRead": true
+              },
+              {
+                "witnessHeard": true
+              },
+              {
+                "debtRead": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "license": "supervised",
+              "courtDone": true
+            },
+            "say": "你们接受逐单备查。萨利姆不因此拥有受护者或栈账原件。",
+            "items": [
+              {
+                "id": "license-supervised",
+                "name": "本季备查执业凭据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "promises": [
+              {
+                "id": "inspection",
+                "text": "本季每次营业备查公开合同；不含未经本人许可的私密内容",
+                "status": "待履行"
+              }
+            ],
+            "complete": true
+          }
+        },
+        {
+          "id": "decline",
+          "label": "拒绝受监督，保留独立救济与私约",
+          "text": "三项均处理后可选；账房本季不获营廷背书，所有救援与舱位交易继续。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "headingRead": true
+              },
+              {
+                "witnessHeard": true
+              },
+              {
+                "debtRead": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "license": "unrecognized",
+              "courtDone": true
+            },
+            "say": "没有营廷凭据。自愿私约、救人和真实能力仍有效，后续要另找双签或随人带账。",
+            "complete": true
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "court",
+          "label": "写清本店凭据范围",
+          "doneWhen": {
+            "courtDone": true
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A04",
+      "title": "援队余粮：愿意放手的人",
+      "scene": "AC04",
+      "date": "1190年10月",
+      "entryLevel": 3,
+      "readAloud": "车辙里的两袋余粮被四名饥饿逃兵拦住。他们想带走粮，拒绝成为谁的殉道证据。右侧有一条可推车绕行的小径；护粮者还来得及选择谈话、护物或退走。",
+      "description": "车辙里的两袋余粮被四名饥饿逃兵拦住。他们想带走粮，拒绝成为谁的殉道证据。右侧有一条可推车绕行的小径；护粮者还来得及选择谈话、护物或退走。",
+      "dmNotes": "四Bandit取共用原卡；这是数字改编的小规模边缘遭遇，不复制原8Bandit+Tough的Lv2预算。战斗非义务。匪徒各HP≤3或两名队友倒下即停止追杀。手动逃出或停战后依实际袋数结算，不能因战斗清场自动生出粮。",
+      "options": [
+        {
+          "id": "parley",
+          "label": "谈一份不再拦车的口头退让",
+          "text": "说服DC13，一次。成功保两袋，失败仍有一袋由另一车夫带出；不强制开战。",
+          "once": true,
+          "requires": {
+            "reliefResolved": false
+          },
+          "success": {
+            "facts": {
+              "reliefResolved": true,
+              "reliefSaved": 2
+            },
+            "say": "他们退开，两个封口都在。两袋交队伍后另编号，不与开局粮重复。",
+            "items": [
+              {
+                "id": "relief-food",
+                "name": "援队保全豆粮袋",
+                "count": 2,
+                "holder": "party",
+                "kind": "object"
+              }
+            ],
+            "neutralize": [
+              "raid1",
+              "raid2",
+              "raid3",
+              "raid4"
+            ]
+          },
+          "check": {
+            "skill": "persuasion",
+            "dc": 13
+          },
+          "failure": {
+            "facts": {
+              "reliefResolved": true,
+              "reliefSaved": 1
+            },
+            "say": "一袋被逃兵带走，一袋从侧路交到队伍。未被保全的是实物，不补造死亡。",
+            "items": [
+              {
+                "id": "relief-food",
+                "name": "援队保全豆粮袋",
+                "count": 1,
+                "holder": "party",
+                "kind": "object"
+              }
+            ],
+            "neutralize": [
+              "raid1",
+              "raid2",
+              "raid3",
+              "raid4"
+            ]
+          }
+        },
+        {
+          "id": "detour",
+          "label": "护住一袋沿侧路撤，不争另一袋",
+          "text": "0GP、20分钟，无骰；一袋入队伍，另一袋被带走。",
+          "once": true,
+          "requires": {
+            "reliefResolved": false
+          },
+          "success": {
+            "facts": {
+              "reliefResolved": true,
+              "reliefSaved": 1
+            },
+            "say": "你们带出一袋。逃兵带走另一袋，后面没有强制追杀。",
+            "minutes": 20,
+            "items": [
+              {
+                "id": "relief-food",
+                "name": "援队保全豆粮袋",
+                "count": 1,
+                "holder": "party",
+                "kind": "object"
+              }
+            ],
+            "neutralize": [
+              "raid1",
+              "raid2",
+              "raid3",
+              "raid4"
+            ]
+          }
+        },
+        {
+          "id": "fight",
+          "label": "明确护粮，布置四名拦车者的遭遇",
+          "text": "可进入正常先攻；停手条件预告。打赢不自动改变债据或人物意愿。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "reliefResolved": false
+              },
+              {
+                "raidStarted": false
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "raidStarted": true
+            },
+            "say": "双方先看清退路。敌人只争粮，不追逃入营地的人。",
+            "encounter": "raiders"
+          }
+        },
+        {
+          "id": "claim",
+          "label": "依实际胜负点交两袋封口余粮",
+          "text": "须遭遇结束且没有因队伍倒地让出货物。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "reliefResolved": false
+              },
+              {
+                "encounterCleared": "raiders"
+              },
+              {
+                "not": {
+                  "encounter_raiders_party_setback": true
+                }
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "reliefResolved": true,
+              "reliefSaved": 2
+            },
+            "say": "两袋完整点交。倒下的人按实际伤势急救，不因领粮而自动恢复。",
+            "items": [
+              {
+                "id": "relief-food",
+                "name": "援队保全豆粮袋",
+                "count": 2,
+                "holder": "party",
+                "kind": "object"
+              }
+            ]
+          }
+        },
+        {
+          "id": "retreat",
+          "label": "承认让粮退开，接收侧路的一袋",
+          "text": "战斗中也可用本行动让出争夺粮并退开；四名只争粮的拦车者依约停手。真实伤势保留，一袋仍由侧路点交。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "reliefResolved": false
+              },
+              {
+                "raidStarted": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "reliefResolved": true,
+              "reliefSaved": 1
+            },
+            "say": "只保住侧路一袋。原战斗伤势仍在；能治疗的依法治疗。",
+            "neutralize": [
+              "raid1",
+              "raid2",
+              "raid3",
+              "raid4"
+            ],
+            "items": [
+              {
+                "id": "relief-food",
+                "name": "援队保全豆粮袋",
+                "count": 1,
+                "holder": "party",
+                "kind": "object"
+              }
+            ]
+          },
+          "combat": true
+        },
+        {
+          "id": "close",
+          "label": "按点交袋数离开",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "reliefResolved": true
+          },
+          "success": {
+            "facts": {
+              "reliefDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "relief",
+          "label": "点交保住的余粮",
+          "doneWhen": {
+            "reliefResolved": true
+          }
+        }
+      ],
+      "encounters": {
+        "raiders": {
+          "actors": [
+            {
+              "id": "raid1",
+              "name": "拦车逃兵1",
+              "type": "bandit",
+              "x": 52.5,
+              "y": 22.5,
+              "side": "enemy",
+              "truceHp": 3,
+              "truceOnPartyDown": 2,
+              "leash": 35
+            },
+            {
+              "id": "raid2",
+              "name": "拦车逃兵2",
+              "type": "bandit",
+              "x": 47.5,
+              "y": 27.5,
+              "side": "enemy",
+              "truceHp": 3,
+              "truceOnPartyDown": 2,
+              "leash": 35
+            },
+            {
+              "id": "raid3",
+              "name": "拦车逃兵3",
+              "type": "bandit",
+              "x": 52.5,
+              "y": 27.5,
+              "side": "enemy",
+              "truceHp": 3,
+              "truceOnPartyDown": 2,
+              "leash": 35
+            },
+            {
+              "id": "raid4",
+              "name": "拦车逃兵4",
+              "type": "bandit",
+              "x": 47.5,
+              "y": 32.5,
+              "side": "enemy",
+              "truceHp": 3,
+              "truceOnPartyDown": 2,
+              "leash": 35
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "A05",
+      "title": "破口后的板车：人和原页",
+      "scene": "AC05",
+      "date": "1190年12月31日",
+      "entryLevel": 3,
+      "readAloud": "退回来的脚步声把巷口踩成泥。玛丽亚姆扶着受伤的拉菲格，莱娅用布盖住散页。墙口的战事不会由一辆板车改写；车轮、这三个人和这几页纸，此刻仍可由你们决定怎样带走。",
+      "description": "退回来的脚步声把巷口踩成泥。玛丽亚姆扶着受伤的拉菲格，莱娅用布盖住散页。墙口的战事不会由一辆板车改写；车轮、这三个人和这几页纸，此刻仍可由你们决定怎样带走。",
+      "dmNotes": "照原SC-A：进攻被击退；没有水路，运输载体为板车和巷口。死伤总数资料不足，不给单值。提供安全绳法45分钟无骰与赶车DC12一次；失败只是原页湿损，仍能慢搬三人，不用群众死人装饰节奏。合法法术改善救援则按实际效果免检，使用后由主持记事实。",
+      "options": [
+        {
+          "id": "secure",
+          "label": "安全转运伤员与原页，能答复者自行确认",
+          "text": "0GP，45分钟，无骰；活人实际搬到病帐边，既有伤势保留。",
+          "once": true,
+          "requires": {
+            "breachMoved": false
+          },
+          "success": {
+            "facts": {
+              "breachMoved": true,
+              "pagesIntact": true
+            },
+            "say": "巷口车道被清出。愿走的人上车，三人的生命伤势按实际核对。",
+            "minutes": 45,
+            "conditional": [
+              {
+                "requires": {
+                  "npcAlive": "mariam"
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "rafiq"
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "lea"
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "rush",
+          "label": "沿可行车道赶运，不能答复者按必要照护",
+          "text": "运动DC12，一次，15分钟；失败原页部分湿损，但再慢搬30分钟可救同一批人。",
+          "once": true,
+          "requires": {
+            "breachMoved": false
+          },
+          "success": {
+            "facts": {
+              "breachMoved": true,
+              "pagesIntact": true
+            },
+            "say": "车和封套都通过。没有替代任何人的生命豁免。",
+            "minutes": 15,
+            "conditional": [
+              {
+                "requires": {
+                  "npcAlive": "mariam"
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "rafiq"
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "lea"
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              }
+            ]
+          },
+          "check": {
+            "skill": "athletics",
+            "dc": 12
+          },
+          "failure": {
+            "facts": {
+              "breachMoved": true,
+              "pagesIntact": false
+            },
+            "say": "一页被雨浸花；再用30分钟慢搬，三人的伤势与生死仍逐人照实。文书损失不变成无预告死亡。",
+            "minutes": 45,
+            "conditional": [
+              {
+                "requires": {
+                  "npcAlive": "mariam"
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "rafiq"
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "npcAlive": "lea"
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC08",
+                    "status": "已按救助安排转至安全处，原伤势保留；不代签公开或出行许可"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "copy",
+          "label": "向本人核对湿损页，补成注明来历的口述副本",
+          "text": "0GP，30分钟；不冒充原签；不能向死者或无能力者索取同意。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "breachMoved": true
+              },
+              {
+                "pagesIntact": false
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "oralCopy": true
+            },
+            "say": "副本标“据存页与获准口述”，缺项照缺项写；不伪造任何人签名。",
+            "minutes": 30,
+            "items": [
+              {
+                "id": "oral-copy",
+                "name": "湿损页补录副本（非原签）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "leave",
+          "label": "沿巷口送走板车，保留破口事实",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "breachMoved": true
+          },
+          "success": {
+            "facts": {
+              "breachDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "move",
+          "label": "完成已同意的板车转运",
+          "doneWhen": {
+            "breachMoved": true
+          }
+        }
+      ],
+      "sensitive": true,
+      "descriptionSummary": "进攻被击退；队伍安排板车与原页转运。实际生命、物件和时间结果保留。"
+    },
+    {
+      "id": "A06",
+      "title": "潮与舱位：偿旧债还是签新约",
+      "scene": "AC06",
+      "date": "1191年4月后",
+      "entryLevel": 3,
+      "readAloud": "泊位放着D-1旧条与船家回条。原两袋债仍是原约；改成新劳动和新船席必须由能自主答复的代理确认。无法确认时，原物与旧债照留，岸路开放。",
+      "description": "泊位放着D-1旧条与船家回条。原两袋债仍是原约；改成新劳动和新船席必须由能自主答复的代理确认。无法确认时，原物与旧债照留，岸路开放。",
+      "dmNotes": "两席为本作原创包船合同额度，不是船体最大容量。船员另在，PC按陆路同走；真实造船、额外船主同意或合法能力可扩大，不得只给模型加座。债条须队伍实际持有才能转回；转交后队伍只有付讫/展期收据。不得先扣人名册再让人知道。",
+      "options": [
+        {
+          "id": "repay",
+          "label": "交两袋开局存粮，赎回并注销D-1旧债",
+          "text": "消耗food两袋；old-debt原件交halim，队伍持付讫收据；获两席，不购买任何人。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "debtStatus": "open"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "debtStatus": "paid",
+              "berths": 2,
+              "berthPlan": "debt"
+            },
+            "say": "两袋逐袋接收，旧条交回盖销。两席只给自愿获准乘客。",
+            "transferItems": [
+              {
+                "id": "old-debt",
+                "holder": "halim",
+                "location": "船家销账封套"
+              }
+            ],
+            "items": [
+              {
+                "id": "debt-receipt",
+                "name": "D-1两袋已清付讫收据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "promises": [
+              {
+                "id": "D1",
+                "text": "两袋已实付；旧债条由船家收回盖销",
+                "status": "已履行"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "food",
+                "count": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "extend",
+          "label": "与船家改签下季两次白日抄账",
+          "text": "0GP，不耗粮；队伍承担两次未来劳动，先开放一席。旧条交船家，新约留队伍，拒绝不追人。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "debtStatus": "open"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "debtStatus": "extended",
+              "berths": 1,
+              "berthPlan": "labor"
+            },
+            "say": "哈利姆只代船家确认这份窄约；旧两袋不再与劳动双重索偿。",
+            "transferItems": [
+              {
+                "id": "old-debt",
+                "holder": "halim",
+                "location": "船家替代旧条封套"
+              }
+            ],
+            "items": [
+              {
+                "id": "labor-debt",
+                "name": "两次白日抄账替代债条",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "promises": [
+              {
+                "id": "D1",
+                "text": "原两袋旧债已被双签替换；下季两次白日抄账尚待履行",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "refuse",
+          "label": "保留旧债与原物，暂缓新约，走岸路",
+          "text": "0GP、不耗粮；物主死亡/缺席/失能/受魅惑时也可保留原两袋旧债，不伪造双签劳动替代或新船席。",
+          "once": true,
+          "requires": {
+            "debtStatus": "open"
+          },
+          "success": {
+            "facts": {
+              "debtStatus": "unpaid",
+              "berths": 0,
+              "berthPlan": "land"
+            },
+            "say": "未付两袋、未改成劳动、未取得新船席。原债条和实际粮留队伍，按真实权利人继续核对；岸路开放。",
+            "promises": [
+              {
+                "id": "D1",
+                "text": "本支店仍欠两袋，未支付、未被劳动替代",
+                "status": "待追索"
+              }
+            ]
+          }
+        },
+        {
+          "id": "extra",
+          "label": "用一袋援队余粮换船家额外一席",
+          "text": "只收relief-food一袋，限一次；原有席位+1。不是历史粮价，也不赎买人身。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "debtStatus": {
+                      "ne": "open"
+                    }
+                  },
+                  {
+                    "extraSeat": false
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "extraSeat": true
+            },
+            "say": "船家交额外一席签条，人数在上船前再核。",
+            "increment": {
+              "berths": 1
+            },
+            "items": [
+              {
+                "id": "extra-berth",
+                "name": "额外一席船家签条",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "relief-food",
+                "count": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "chart",
+          "label": "勘察泊位、公布席数与岸路",
+          "text": "船家签条记录实际可用席位；岸路始终存在。选择谁坐船须本人同意。",
+          "once": true,
+          "requires": {
+            "debtStatus": {
+              "ne": "open"
+            }
+          },
+          "success": {
+            "facts": {
+              "berthsKnown": true
+            },
+            "say": "船家签条记录实际可用席位；岸路始终存在。选择谁坐船须本人同意。",
+            "complete": true
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "debt",
+          "label": "明确旧债现状",
+          "doneWhen": {
+            "debtStatus": {
+              "ne": "open"
+            }
+          }
+        },
+        {
+          "id": "seats",
+          "label": "核实合同席数",
+          "doneWhen": {
+            "berthsKnown": true
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A07",
+      "title": "工事边的桶：守物不守历史",
+      "scene": "AC07",
+      "date": "1191年春至7月初",
+      "entryLevel": 3,
+      "readAloud": "坑道口的叫喊离你们越来越近。工匠文书桶卡在倾倒梁边，另一头的高架仍在施工。尤哈娜说：“我要的是这些人的雇约，不是让你们替巨塔赢一场史书。”两条退路都能回营。",
+      "description": "坑道口的叫喊离你们越来越近。工匠文书桶卡在倾倒梁边，另一头的高架仍在施工。尤哈娜说：“我要的是这些人的雇约，不是让你们替巨塔赢一场史书。”两条退路都能回营。",
+      "dmNotes": "抢回桶不决定城降；工程总体照既有史料层继续。30分钟清梁无骰，或调查DC13一次节时；失败只失本桶原雇约，可以口述补录。没有把未写工匠变成必死人质，也不封合法法术。",
+      "options": [
+        {
+          "id": "slow",
+          "label": "先撑梁，再从安全边拉回雇约桶",
+          "text": "0GP、30分钟、无骰，原雇约保全。",
+          "once": true,
+          "requires": {
+            "barrelResolved": false
+          },
+          "success": {
+            "facts": {
+              "barrelResolved": true,
+              "workRecords": "original"
+            },
+            "say": "桶从支撑好的缺口拖出。原雇约归工匠共同保管，队伍只留交接收据。",
+            "minutes": 30,
+            "items": [
+              {
+                "id": "work-original",
+                "name": "工匠雇约原件桶",
+                "count": 1,
+                "holder": "工匠共同保管",
+                "kind": "evidence"
+              },
+              {
+                "id": "work-receipt",
+                "name": "雇约原件点交收据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "quick",
+          "label": "沿可见梁缝找到桶把，抢先拖出",
+          "text": "调查DC13，一次，10分钟。失败原件破损，仍有公开记工可补录。",
+          "once": true,
+          "requires": {
+            "barrelResolved": false
+          },
+          "success": {
+            "facts": {
+              "barrelResolved": true,
+              "workRecords": "original"
+            },
+            "say": "桶把没有断，原雇约真实保全并点交工匠。",
+            "minutes": 10,
+            "items": [
+              {
+                "id": "work-original",
+                "name": "工匠雇约原件桶",
+                "count": 1,
+                "holder": "工匠共同保管",
+                "kind": "evidence"
+              },
+              {
+                "id": "work-receipt",
+                "name": "雇约原件点交收据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 13
+          },
+          "failure": {
+            "facts": {
+              "barrelResolved": true,
+              "workRecords": "copy"
+            },
+            "say": "桶底散开，原件无法当作全本。工匠用现存记工补录，明确不是原签。",
+            "minutes": 10,
+            "items": [
+              {
+                "id": "work-copy",
+                "name": "工匠记工补录副本（非原签）",
+                "count": 1,
+                "holder": "工匠共同保管",
+                "kind": "evidence"
+              }
+            ],
+            "promises": [
+              {
+                "id": "work-copy",
+                "text": "原件已损，以自愿存活工匠口述补录；争议工资不自动清偿",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "withdraw",
+          "label": "从真实退路撤离，向工匠说明结果",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "barrelResolved": true
+          },
+          "success": {
+            "facts": {
+              "engineeringDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "yuhanna",
+                "location": "AC08",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "halim",
+                "location": "AC08",
+                "x": 57.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "barrel",
+          "label": "记录雇约原件或补录去处",
+          "doneWhen": {
+            "barrelResolved": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "title": "受降之后：原件、名字和两版条款",
+      "scene": "AC08",
+      "date": "1191年7月11—12日后",
+      "entryLevel": 3,
+      "readAloud": "墙边的门换了看守。桌上等着原件、尚未获准的摘录与两版条款。谁实际到场，谁能自主答复，要逐项核对；未确认内容继续私存。",
+      "description": "墙边的门换了看守。桌上等着原件、尚未获准的摘录与两版条款。谁实际到场，谁能自主答复，要逐项核对；未确认内容继续私存。",
+      "dmNotes": "SC-B：城降既成，理由是饥馑、墙口压力、海路封锁；不是账房检定造成。历史赎金总额二十万/首期十万各带语境，不混为同一次实付；本支店不经手历史总赎金。姓名逐人许可：本数字默认三人共同选择封套，仅公开自愿签过的已知事实；私密细节不入公共日志。 公开摘录、下一次会面与最终出行是三种独立许可；新许可用当前npcCanConsent检查，原物暂管不是新公开。",
+      "options": [
+        {
+          "id": "compare",
+          "label": "对照两版条款，保留出处和差异",
+          "text": "0GP，无骰；获得注明“非正典”的抄本，不宣称能赎出所有人。",
+          "once": true,
+          "success": {
+            "facts": {
+              "termsCompared": true
+            },
+            "say": "条款抄本的数字带各自语境；历史总赎金未进入队伍资金或欠债。",
+            "handouts": [
+              "H03"
+            ],
+            "items": [
+              {
+                "id": "terms",
+                "name": "受降条款两轨对照抄本（非正典）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "keep-private",
+          "label": "未授权的个人内容继续不公开",
+          "text": "不替任何人作出“拒绝”陈述；未问/失能/缺席者的内容保持未授权，照护与原件保管继续。",
+          "once": true,
+          "requires": {
+            "any": [
+              {
+                "mariamDisclosure": "unasked"
+              },
+              {
+                "rafiqDisclosure": "unasked"
+              },
+              {
+                "leaDisclosure": "unasked"
+              }
+            ]
+          },
+          "success": {
+            "say": "只保存已有公开事实；未取得授权的人名不生成新摘录。",
+            "conditional": [
+              {
+                "requires": {
+                  "mariamDisclosure": "unasked"
+                },
+                "facts": {
+                  "mariamDisclosure": "withheld"
+                }
+              },
+              {
+                "requires": {
+                  "rafiqDisclosure": "unasked"
+                },
+                "facts": {
+                  "rafiqDisclosure": "withheld"
+                }
+              },
+              {
+                "requires": {
+                  "leaDisclosure": "unasked"
+                },
+                "facts": {
+                  "leaDisclosure": "withheld"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "consent-lea",
+          "label": "询问莱娅：只授权本次明确摘录段",
+          "text": "须本人实际在场、清醒且无魅惑/支配；不以照护或出行交换公开许可。可拒绝而继续保管/照护。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "leaDisclosure": "unasked"
+              },
+              {
+                "npcCanConsent": "lea"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "leaDisclosure": "allowed"
+            },
+            "say": "莱娅只同意本次逐项读过的摘录范围。没有签别人的名字，没有承诺下一程出行。"
+          }
+        },
+        {
+          "id": "consent-rafiq",
+          "label": "询问拉菲格：只授权本次明确摘录段",
+          "text": "须本人实际在场、清醒且无魅惑/支配；不以照护或出行交换公开许可。可拒绝而继续保管/照护。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rafiqDisclosure": "unasked"
+              },
+              {
+                "npcCanConsent": "rafiq"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "rafiqDisclosure": "allowed"
+            },
+            "say": "拉菲格只同意本次逐项读过的摘录范围。没有签别人的名字，没有承诺下一程出行。"
+          }
+        },
+        {
+          "id": "consent-mariam",
+          "label": "询问玛丽亚姆：只授权本次明确摘录段",
+          "text": "须本人实际在场、清醒且无魅惑/支配；不以照护或出行交换公开许可。可拒绝而继续保管/照护。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "mariamDisclosure": "unasked"
+              },
+              {
+                "npcCanConsent": "mariam"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "mariamDisclosure": "allowed"
+            },
+            "say": "玛丽亚姆只同意本次逐项读过的摘录范围。没有签别人的名字，没有承诺下一程出行。"
+          }
+        },
+        {
+          "id": "sealed",
+          "label": "将受护名册原件封交尤哈娜，由本人逐项授权",
+          "text": "只按已经实际取得的逐人授权制作公开段；尤哈娜须在场自主接收原件。无授权内容不抄出，旧原件保存不等于新公开。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rosterCustody": "undecided"
+              },
+              {
+                "all": [
+                  {
+                    "mariamDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  },
+                  {
+                    "rafiqDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  },
+                  {
+                    "leaDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "mariamDisclosure": "allowed"
+                  },
+                  {
+                    "rafiqDisclosure": "allowed"
+                  },
+                  {
+                    "leaDisclosure": "allowed"
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "rosterCustody": "sealed",
+              "rosterCopied": true,
+              "rosterArranged": true
+            },
+            "say": "原件交能自主接收的尤哈娜。队伍仅得已经逐项获准的段落及封存收据；未授权者的姓名与私密内容不在新副本内。",
+            "minutes": 20,
+            "transferItems": [
+              {
+                "id": "ledger",
+                "holder": "yuhanna",
+                "location": "封存柜"
+              }
+            ],
+            "items": [
+              {
+                "id": "roster-copy",
+                "name": "获准公开段名册副本",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              },
+              {
+                "id": "roster-receipt",
+                "name": "尤哈娜名册原件封存收据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "promises": [
+              {
+                "id": "roster",
+                "text": "原件尤哈娜保管；披露逐人询问，不凭持册强迫任何人迁移",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "carry",
+          "label": "本人保留原件，向三人各交获准摘录",
+          "text": "0GP，30分钟；队伍保留ledger，给三人独立摘录；持原件不购买代言权。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rosterCustody": "undecided"
+              },
+              {
+                "all": [
+                  {
+                    "mariamDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  },
+                  {
+                    "rafiqDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  },
+                  {
+                    "leaDisclosure": [
+                      "allowed",
+                      "withheld"
+                    ]
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "mariamDisclosure": "allowed"
+                  },
+                  {
+                    "rafiqDisclosure": "allowed"
+                  },
+                  {
+                    "leaDisclosure": "allowed"
+                  }
+                ]
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "rosterCustody": "party",
+              "rosterCopied": true,
+              "rosterArranged": true
+            },
+            "say": "原件仍由队伍保管。只按之前实际取得的许可摘录；能收件者亲收，现已不能答复者的摘录暂由队伍保管，不冒称新签或本人已收到。",
+            "minutes": 30,
+            "items": [
+              {
+                "id": "roster-copy",
+                "name": "获准公开段名册副本",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamDisclosure": "allowed"
+                    },
+                    {
+                      "npcCanRespond": "mariam"
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "mariam-extract",
+                    "name": "玛丽亚姆本人摘录",
+                    "count": 1,
+                    "holder": "mariam",
+                    "kind": "evidence"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamDisclosure": "allowed"
+                    },
+                    {
+                      "not": {
+                        "npcCanRespond": "mariam"
+                      }
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "mariam-extract-pending",
+                    "name": "玛丽亚姆既有授权摘录待核收件",
+                    "count": 1,
+                    "holder": "party",
+                    "kind": "evidence"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqDisclosure": "allowed"
+                    },
+                    {
+                      "npcCanRespond": "rafiq"
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "rafiq-extract",
+                    "name": "拉菲格本人摘录",
+                    "count": 1,
+                    "holder": "rafiq",
+                    "kind": "evidence"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqDisclosure": "allowed"
+                    },
+                    {
+                      "not": {
+                        "npcCanRespond": "rafiq"
+                      }
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "rafiq-extract-pending",
+                    "name": "拉菲格既有授权摘录待核收件",
+                    "count": 1,
+                    "holder": "party",
+                    "kind": "evidence"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaDisclosure": "allowed"
+                    },
+                    {
+                      "npcCanRespond": "lea"
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "lea-extract",
+                    "name": "莱娅本人摘录",
+                    "count": 1,
+                    "holder": "lea",
+                    "kind": "evidence"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaDisclosure": "allowed"
+                    },
+                    {
+                      "not": {
+                        "npcCanRespond": "lea"
+                      }
+                    }
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "lea-extract-pending",
+                    "name": "莱娅既有授权摘录待核收件",
+                    "count": 1,
+                    "holder": "party",
+                    "kind": "evidence"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "joint",
+          "label": "由尤哈娜与船家对实际获准段双签",
+          "text": "尤哈娜与哈利姆须实际在场、清醒自主；只核已经获准的段落，不能替死亡/失能/缺席者新增公开许可或债务。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rosterCopied": true
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "jointCertificate": true
+            },
+            "say": "两方各自签核验，接管账房不会因此取得三人的劳动。",
+            "minutes": 15,
+            "items": [
+              {
+                "id": "joint-certificate",
+                "name": "获准名册段两方核验书",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "meeting-mariam",
+          "label": "另问玛丽亚姆是否参加下一次安全岸边会面",
+          "text": "独立于公开许可。须本人能自主答复；只许AC08到AC11的这一段会面/照看转运，不预签最终迁居。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "mariamMeeting": "unasked"
+              },
+              {
+                "npcCanConsent": "mariam"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "mariamMeeting": "attend"
+            },
+            "say": "玛丽亚姆本人允许下一次到安全岸边会面；仍可在AC11决定不再继续。"
+          }
+        },
+        {
+          "id": "meeting-rafiq",
+          "label": "另问拉菲格是否参加下一次安全岸边会面",
+          "text": "独立于公开许可。须本人能自主答复；只许AC08到AC11的这一段会面/照看转运，不预签最终迁居。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rafiqMeeting": "unasked"
+              },
+              {
+                "npcCanConsent": "rafiq"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "rafiqMeeting": "attend"
+            },
+            "say": "拉菲格本人允许下一次到安全岸边会面；仍可在AC11决定不再继续。"
+          }
+        },
+        {
+          "id": "meeting-lea",
+          "label": "另问莱娅是否参加下一次安全岸边会面",
+          "text": "独立于公开许可。须本人能自主答复；只许AC08到AC11的这一段会面/照看转运，不预签最终迁居。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "leaMeeting": "unasked"
+              },
+              {
+                "npcCanConsent": "lea"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "leaMeeting": "attend"
+            },
+            "say": "莱娅本人允许下一次到安全岸边会面；仍可在AC11决定不再继续。"
+          }
+        },
+        {
+          "id": "meeting-care",
+          "label": "未答复者继续在安全处照看，不代签会面许可",
+          "text": "已经明确允许会面的人保持原有限授权；其余人可稍后再议，不因留在安全处撤销救援。",
+          "once": true,
+          "requires": {
+            "any": [
+              {
+                "mariamMeeting": "unasked"
+              },
+              {
+                "rafiqMeeting": "unasked"
+              },
+              {
+                "leaMeeting": "unasked"
+              }
+            ]
+          },
+          "success": {
+            "say": "未答复者的单段会面安排保持照看，不写成已同意迁居。",
+            "conditional": [
+              {
+                "requires": {
+                  "mariamMeeting": "unasked"
+                },
+                "facts": {
+                  "mariamMeeting": "care"
+                }
+              },
+              {
+                "requires": {
+                  "rafiqMeeting": "unasked"
+                },
+                "facts": {
+                  "rafiqMeeting": "care"
+                }
+              },
+              {
+                "requires": {
+                  "leaMeeting": "unasked"
+                },
+                "facts": {
+                  "leaMeeting": "care"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "hold",
+          "label": "原件由队伍诚实暂管，不生成未获准摘录",
+          "text": "0GP；所有当事人或抄手无法答复时仍可保全原物、继续照护。无新签、无公开段、无两方核验书。",
+          "once": true,
+          "requires": {
+            "rosterCustody": "undecided"
+          },
+          "success": {
+            "facts": {
+              "rosterCustody": "pending",
+              "rosterCopied": false,
+              "rosterArranged": true
+            },
+            "say": "原件按旧持有链暂存队伍，不制作未经许可的个人摘录，也不假称尤哈娜已接收。",
+            "items": [
+              {
+                "id": "roster-hold-note",
+                "name": "原件诚实暂管备忘（非新授权）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "close",
+          "label": "带着获准材料安排下一程",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "termsCompared": true
+              },
+              {
+                "rosterArranged": true
+              },
+              {
+                "mariamMeeting": [
+                  "attend",
+                  "care"
+                ]
+              },
+              {
+                "rafiqMeeting": [
+                  "attend",
+                  "care"
+                ]
+              },
+              {
+                "leaMeeting": [
+                  "attend",
+                  "care"
+                ]
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "surrenderDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "salim",
+                "location": "AC09",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "terms",
+          "label": "分清条款双轨",
+          "doneWhen": {
+            "termsCompared": true
+          }
+        },
+        {
+          "id": "custody",
+          "label": "原件、副本和披露权限各记一笔",
+          "doneWhen": {
+            "rosterCopied": true
+          }
+        }
+      ],
+      "safeRest": true,
+      "sensitive": true,
+      "descriptionSummary": "城降后当事人选择原件保管、摘录与条款资料层次。"
+    },
+    {
+      "id": "A09",
+      "title": "个人赎还约：有钱也不能替人答应",
+      "scene": "AC09",
+      "date": "1191年7月下旬",
+      "entryLevel": 3,
+      "readAloud": "院中要核对的是纳西尔的一次无附加劳役放行，不是买下这个人。只有能自主答复的签署者才承诺收粮或留置；受助者暂不能回答仍可获照护，未来去处另议。",
+      "description": "院中要核对的是纳西尔的一次无附加劳役放行，不是买下这个人。只有能自主答复的签署者才承诺收粮或留置；受助者暂不能回答仍可获照护，未来去处另议。",
+      "dmNotes": "本约只涉及原创纳西尔的当次通行与自愿返还，不代替历史受降赎金，不是购买人。两袋付讫与货物留置互斥；后者质押的是队伍铁马烙印实物，形成可追索的两袋债，不能再把标记转别人。拒绝仍可发真实求助，不被强行杀人封线。 有益放行不以受助者能签字为条件；无法答复时收据由队伍暂存，保留HP与照护，不写新本人同意。萨利姆的新放行/留置承诺仍须其能自主答复。",
+      "options": [
+        {
+          "id": "grain",
+          "label": "实交两袋给萨利姆，使纳西尔无附加劳役获放行",
+          "text": "须萨利姆能自主履行这次放行约；纳西尔失能仍可受助，但不让其签字或承担新债。收据由萨利姆出具，不能答复时由队伍代存。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "nasirPlan": "undecided"
+                  },
+                  {
+                    "npcAlive": "nasir"
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "salim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "nasirPlan": "paid",
+              "nasirReleased": true
+            },
+            "say": "萨利姆实收两袋并撤回本次限制，出具付讫收据；这不购买纳西尔本人、签名或未来去处。",
+            "items": [
+              {
+                "id": "nasir-receipt",
+                "name": "纳西尔个人放行两袋付讫收据（萨利姆出具）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "npcCanConsent": "nasir"
+                },
+                "facts": {
+                  "nasirConsentRecorded": true
+                },
+                "say": "纳西尔在场清醒，确认本次无追加劳役的放行安排；最终去处仍另问。",
+                "transferItems": [
+                  {
+                    "id": "nasir-receipt",
+                    "holder": "nasir",
+                    "location": "AC09"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "not": {
+                    "npcCanConsent": "nasir"
+                  }
+                },
+                "facts": {
+                  "nasirConsentRecorded": false
+                },
+                "say": "本次放行不以受助者签约为代价。现未取得纳西尔新的本人同意；保留HP与照护，未来去处待其自主确认。"
+              }
+            ],
+            "promises": [
+              {
+                "id": "nasir",
+                "text": "纳西尔这次释放已实付两袋，无追加劳役",
+                "status": "已履行"
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "food",
+                "count": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "pledge",
+          "label": "以本店铁马烙印实物作留置，承诺后续两袋",
+          "text": "0GP，brand原物交salim；形成两袋新债，纳西尔没有义务替队伍还。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "nasirPlan": "undecided"
+                  },
+                  {
+                    "npcAlive": "nasir"
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "salim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "nasirPlan": "pledged",
+              "nasirReleased": true
+            },
+            "say": "萨利姆自主接收烙印原物作有限留置，并先放行纳西尔；两袋新债只由队伍承担，纳西尔不因受助承诺劳动或同行。",
+            "transferItems": [
+              {
+                "id": "brand",
+                "holder": "salim",
+                "location": "私人质物封柜"
+              }
+            ],
+            "items": [
+              {
+                "id": "pledge-receipt",
+                "name": "铁马烙印留置与两袋偿还条",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "npcCanConsent": "nasir"
+                },
+                "facts": {
+                  "nasirConsentRecorded": true
+                },
+                "say": "纳西尔在场清醒，确认本次无追加劳役的放行安排；最终去处仍另问。"
+              },
+              {
+                "requires": {
+                  "not": {
+                    "npcCanConsent": "nasir"
+                  }
+                },
+                "facts": {
+                  "nasirConsentRecorded": false
+                },
+                "say": "本次放行不以受助者签约为代价。现未取得纳西尔新的本人同意；保留HP与照护，未来去处待其自主确认。"
+              }
+            ],
+            "promises": [
+              {
+                "id": "nasir",
+                "text": "队伍为返还铁马烙印另欠两袋；纳西尔无需代偿",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "label": "不替他签债，由他保留自己的求助路线",
+          "text": "0GP，物品全留；没有承诺释放已发生，不补造死亡。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "nasirPlan": "undecided"
+                  },
+                  {
+                    "npcAlive": "nasir"
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "nasir"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "nasirPlan": "independent",
+              "nasirReleased": false
+            },
+            "say": "纳西尔不接受终身送信条款。他自行向愿意的人求助；后续只记录已知消息，不能写成已经获救。",
+            "promises": [
+              {
+                "id": "nasir",
+                "text": "未付款、未替纳西尔签债；其独立求助结果未确认",
+                "status": "未承诺"
+              }
+            ]
+          }
+        },
+        {
+          "id": "record-unavailable",
+          "label": "记录纳西尔现况，暂缓无法当面确认的约",
+          "text": "仅当前无法履约签约时；缺席与死亡依实际NPC卡区分，不付不存在的释放费、不假称已救出。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "nasirPlan": "undecided"
+              },
+              {
+                "not": {
+                  "npcAlive": "nasir"
+                }
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "nasirPlan": "unavailable",
+              "nasirReleased": false
+            },
+            "say": "当前无法与纳西尔履行这次释放约。实际缺席、死亡或后来依法复生分别照NPC卡记录，不把未知写死；物件不转移。",
+            "promises": [
+              {
+                "id": "nasir",
+                "text": "本次释放未发生；真实生命、去处与遗物分别记录",
+                "status": "未履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "care-defer",
+          "label": "先维持照护与自由求助，暂缓无法真实签成的新约",
+          "text": "0GP、不转粮与烙印；签署者不能自主答复时不假造新债或已放行。已有安全与治疗继续，死亡、缺席与昏迷分别照实。",
+          "once": true,
+          "requires": {
+            "nasirPlan": "undecided"
+          },
+          "success": {
+            "facts": {
+              "nasirPlan": "care-deferred",
+              "nasirReleased": false,
+              "nasirConsentRecorded": false
+            },
+            "say": "保持现有照护与真实生命，释放约未履行、无新本人签名；不强迫公开、劳动、同行或悲剧。",
+            "promises": [
+              {
+                "id": "nasir",
+                "text": "新释放约暂缓；照护与自由求助保持，去处另议",
+                "status": "待确认"
+              }
+            ]
+          }
+        },
+        {
+          "id": "close",
+          "label": "向纳西尔说明实际付款与未决项",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "nasirPlan": {
+              "ne": "undecided"
+            }
+          },
+          "success": {
+            "facts": {
+              "ransomDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "yuhanna",
+                "location": "AC10",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "halim",
+                "location": "AC10",
+                "x": 57.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "nasirReleased": true
+                    },
+                    {
+                      "npcAlive": "nasir"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "nasir",
+                    "location": "AC11",
+                    "x": 62.5,
+                    "y": 27.5,
+                    "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "personal",
+          "label": "写清个人释放有没有真正履行",
+          "doneWhen": {
+            "ransomDone": true
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A10",
+      "title": "交付簿与铜水罐：真话不出售",
+      "scene": "AC10",
+      "date": "1191年8月11日前后",
+      "entryLevel": 3,
+      "readAloud": "交付消息一版比一版短，未盖印的批等着核对。桌上只摆实际带到的材料；问不到的抄手和物主留待后议，不因此撤照护或封住普通水源。",
+      "description": "交付消息一版比一版短，未盖印的批等着核对。桌上只摆实际带到的材料；问不到的抄手和物主留待后议，不因此撤照护或封住普通水源。",
+      "dmNotes": "DOC-05明确原创伪造文本，不与1193伪信混用。鉴定DC15一次失败=未确认，不能自动说真；可30分钟请原抄手无骰逐字复核。水罐原件始终halim，只借本日已倾出的一份饮水；不得每天按按钮无限刷。标准造水和治疗有实际能力便有效，不能为了道德题封魔法。",
+      "options": [
+        {
+          "id": "study",
+          "label": "鉴定“包过”批的页序与印痕",
+          "text": "调查DC15，一次。失败暂不判断，不增伤害、不毁批。",
+          "once": true,
+          "requires": {
+            "passStatus": "unread"
+          },
+          "success": {
+            "facts": {
+              "passStatus": "false",
+              "passRead": true
+            },
+            "say": "仿件被识别。把“伪造文本”盖在正面，不凭它声称有合法通行。",
+            "items": [
+              {
+                "id": "false-pass",
+                "name": "DOC-05原创仿作样本（核验状态见公开账）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "passStatus": "uncertain",
+              "passRead": true
+            },
+            "say": "目前未能确认真伪。还可请原抄手复核，也可明确不用这张批。",
+            "items": [
+              {
+                "id": "false-pass",
+                "name": "DOC-05原创仿作样本（核验状态见公开账）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "verify",
+          "label": "请尤哈娜以原抄手顺序逐字复核",
+          "text": "0GP、30分钟，无骰；不需先试鉴定。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "passStatus": [
+                  "unread",
+                  "uncertain"
+                ]
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "passStatus": "false",
+              "passRead": true
+            },
+            "say": "页序与签链对不上。尤哈娜只认自己的原抄手部分，没有替历史人物写新话。",
+            "minutes": 30,
+            "items": [
+              {
+                "id": "false-pass",
+                "name": "DOC-05原创仿作样本（核验状态见公开账）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "reject",
+          "label": "明确不用未经确认的通行批",
+          "text": "0GP；保留样本，后续只用真实合同与获准名册。",
+          "once": true,
+          "requires": {
+            "passStatus": [
+              "unread",
+              "uncertain"
+            ]
+          },
+          "success": {
+            "facts": {
+              "passStatus": "rejected",
+              "passRead": true
+            },
+            "say": "你们没有为未确认的批背书，材料仍可待查。",
+            "items": [
+              {
+                "id": "false-pass",
+                "name": "DOC-05原创仿作样本（核验状态见公开账）",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "water-patient",
+          "label": "把本日已倾出的一份水交病帐接收者",
+          "text": "0GP，只有这一天的一份；水罐原物不转移。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "waterChoice": "none"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "waterChoice": "patient"
+            },
+            "say": "病帐接收当日这份清水。它只解决一人的当次饮水，其他水源工作仍可继续。",
+            "items": [
+              {
+                "id": "water-receipt-water-patient",
+                "name": "本日清水已交病帐的见证木片",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "water-witness",
+          "label": "把本日已倾出的一份水交等待抄写的渴者",
+          "text": "0GP，不购买证词；拒喝或拒签均保留取水资格。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "waterChoice": "none"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "waterChoice": "witness"
+            },
+            "say": "抄写者喝水后仍可只说所见；真话没有被付水买断。",
+            "items": [
+              {
+                "id": "water-receipt-water-witness",
+                "name": "本日清水已交渴者的见证木片",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "water-owner",
+          "label": "让哈利姆自己分配本日水，不代他作主",
+          "text": "0GP，不得据此认定玩家冷酷或撤证据。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "waterChoice": "none"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "waterChoice": "owner"
+            },
+            "say": "哈利姆自己拿起水罐走向需要的人。你们继续处理合同。"
+          }
+        },
+        {
+          "id": "water-defer",
+          "label": "不动未获同意的水罐，保留正常照护",
+          "text": "物主缺席/死亡/失能/受魅惑时，不替其新增赠水或分配承诺；普通自有水源与合法能力照常有效。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "waterChoice": "none"
+              },
+              {
+                "not": {
+                  "npcCanConsent": "halim"
+                }
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "waterChoice": "deferred"
+            },
+            "say": "铜水罐和未获准分配的水仍属原物主；没有以缺水逼证言或冻结普通救助。"
+          }
+        },
+        {
+          "id": "close",
+          "label": "只以可查材料进入最后名册安排",
+          "text": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "passStatus": [
+                  "false",
+                  "rejected"
+                ]
+              },
+              {
+                "waterChoice": {
+                  "ne": "none"
+                }
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "deliveryDone": true
+            },
+            "say": "将实际物件、当事人选择与未履行约写进栈账，再进入下节点。",
+            "complete": true,
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamMeeting": "attend"
+                    },
+                    {
+                      "npcAlive": "mariam"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC11",
+                    "x": 42.5,
+                    "y": 22.5,
+                    "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqMeeting": "attend"
+                    },
+                    {
+                      "npcAlive": "rafiq"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC11",
+                    "x": 47.5,
+                    "y": 27.5,
+                    "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaMeeting": "attend"
+                    },
+                    {
+                      "npcAlive": "lea"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC11",
+                    "x": 52.5,
+                    "y": 32.5,
+                    "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "pass",
+          "label": "不以未知仿批承诺通行",
+          "doneWhen": {
+            "passStatus": [
+              "false",
+              "rejected"
+            ]
+          }
+        },
+        {
+          "id": "water",
+          "label": "决定当日一份水的分配权限",
+          "doneWhen": {
+            "waterChoice": {
+              "ne": "none"
+            }
+          }
+        }
+      ],
+      "safeRest": true
+    },
+    {
+      "id": "A11",
+      "title": "艾亚丁丘之外：能带走的名字",
+      "scene": "AC11",
+      "date": "1191年8月20日",
+      "entryLevel": 3,
+      "readAloud": "你们核对岸边实际在场的人、仍在照看处的人与真实船席。能自主答复者分别决定下一程；沉默与失能不替任何人签字。",
+      "description": "按实际到场者与仍在安全处的人分别记名。已授权公开不等于愿迁居；本段会面许可也不代签下一程。",
+      "dmNotes": "SC-C照既有历史锚、目击者/个体救助框架；处决不能由本节点阻止，也没有参与获益按钮。四名原创当事人不被冒充历史俘虏总数。数字改编选择公开安全岸路，无原切片“失败入处决轨道”的隐含全灭链。两席可送Rafiq/Lea，一席送Rafiq；其余由安全岸路伴行。不重救已安全者、不刷新追兵。合法额外运输按实际更改舱约。",
+      "options": [
+        {
+          "id": "defer-onward",
+          "label": "未确认者先在安全处照看，不代签出行",
+          "text": "未答复不是同意；已经自行确认的人保留其决定，不因其他人未能回答而撤销救援。",
+          "once": true,
+          "requires": {
+            "any": [
+              {
+                "mariamOnward": "unasked"
+              },
+              {
+                "rafiqOnward": "unasked"
+              },
+              {
+                "leaOnward": "unasked"
+              },
+              {
+                "nasirOnward": "unasked"
+              }
+            ]
+          },
+          "success": {
+            "say": "未确认者的去处保持待议，照护与既有安全继续。",
+            "conditional": [
+              {
+                "requires": {
+                  "mariamOnward": "unasked"
+                },
+                "facts": {
+                  "mariamOnward": "pending"
+                }
+              },
+              {
+                "requires": {
+                  "rafiqOnward": "unasked"
+                },
+                "facts": {
+                  "rafiqOnward": "pending"
+                }
+              },
+              {
+                "requires": {
+                  "leaOnward": "unasked"
+                },
+                "facts": {
+                  "leaOnward": "pending"
+                }
+              },
+              {
+                "requires": {
+                  "nasirOnward": "unasked"
+                },
+                "facts": {
+                  "nasirOnward": "pending"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "confirm-nasir",
+          "label": "当面另问纳西尔是否愿意走下一程",
+          "text": "须现在实际在场、能自主表达。公开许可、前段会面、付款或受助都不替代本次出行决定。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "nasirOnward": "unasked"
+              },
+              {
+                "npcCanConsent": "nasir"
+              },
+              {
+                "nasirReleased": true
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "nasirOnward": "yes"
+            },
+            "say": "纳西尔本人允许下一程；此决定不转让工具、证言或终身去处。"
+          }
+        },
+        {
+          "id": "confirm-lea",
+          "label": "当面另问莱娅是否愿意走下一程",
+          "text": "须现在实际在场、能自主表达。公开许可、前段会面、付款或受助都不替代本次出行决定。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "leaOnward": "unasked"
+              },
+              {
+                "npcCanConsent": "lea"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "leaOnward": "yes"
+            },
+            "say": "莱娅本人允许下一程；此决定不转让工具、证言或终身去处。"
+          }
+        },
+        {
+          "id": "confirm-rafiq",
+          "label": "当面另问拉菲格是否愿意走下一程",
+          "text": "须现在实际在场、能自主表达。公开许可、前段会面、付款或受助都不替代本次出行决定。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "rafiqOnward": "unasked"
+              },
+              {
+                "npcCanConsent": "rafiq"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "rafiqOnward": "yes"
+            },
+            "say": "拉菲格本人允许下一程；此决定不转让工具、证言或终身去处。"
+          }
+        },
+        {
+          "id": "confirm-mariam",
+          "label": "当面另问玛丽亚姆是否愿意走下一程",
+          "text": "须现在实际在场、能自主表达。公开许可、前段会面、付款或受助都不替代本次出行决定。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "mariamOnward": "unasked"
+              },
+              {
+                "npcCanConsent": "mariam"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "mariamOnward": "yes"
+            },
+            "say": "玛丽亚姆本人允许下一程；此决定不转让工具、证言或终身去处。"
+          }
+        },
+        {
+          "id": "two-seats",
+          "label": "按两席合同先送拉菲格与莱娅，其他人岸路同行",
+          "text": "需合同至少两席。0GP，40分钟；消耗的是本次席位使用权，不消耗人或原件。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "transportDone": false
+                  },
+                  {
+                    "berths": {
+                      "gte": 2
+                    }
+                  },
+                  {
+                    "npcAlive": "rafiq"
+                  },
+                  {
+                    "npcAlive": "lea"
+                  }
+                ]
+              },
+              {
+                "rafiqOnward": "yes"
+              },
+              {
+                "leaOnward": "yes"
+              },
+              {
+                "npcCanRespond": "rafiq"
+              },
+              {
+                "npcCanRespond": "lea"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "transportDone": true,
+              "transportMode": "two-seats",
+              "usedBerths": 2
+            },
+            "say": "只按实际在场且本次明确答复的名单执行这一趟；未答复/失能/缺席者继续在原安全照看处，未放行者不自动出现。实用席数按本选项记录，不再借旧许可宣称新同意。",
+            "minutes": 40,
+            "promises": [
+              {
+                "id": "transport",
+                "text": "拉菲格与莱娅实际用两席；仅本次另已确认的在场者同行，未确认者留安全照看处。",
+                "status": "已履行"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "mariam"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC12",
+                    "x": 42.5,
+                    "y": 22.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "rafiq"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC12",
+                    "x": 47.5,
+                    "y": 27.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "lea"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC12",
+                    "x": 52.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "nasirOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "nasir"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "nasir",
+                    "location": "AC12",
+                    "x": 57.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "one-seat",
+          "label": "让拉菲格先用一席，其余自愿者由岸路同行",
+          "text": "需至少一席。0GP，50分钟；不把一席扩成四席。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "transportDone": false
+                  },
+                  {
+                    "berths": {
+                      "gte": 1
+                    }
+                  },
+                  {
+                    "npcAlive": "rafiq"
+                  }
+                ]
+              },
+              {
+                "rafiqOnward": "yes"
+              },
+              {
+                "npcCanRespond": "rafiq"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "transportDone": true,
+              "transportMode": "one-seat",
+              "usedBerths": 1
+            },
+            "say": "只按实际在场且本次明确答复的名单执行这一趟；未答复/失能/缺席者继续在原安全照看处，未放行者不自动出现。实用席数按本选项记录，不再借旧许可宣称新同意。",
+            "minutes": 50,
+            "promises": [
+              {
+                "id": "transport",
+                "text": "拉菲格实际用一席；仅本次另已确认的在场者同行，不虚报其他乘客。",
+                "status": "已履行"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "mariam"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC12",
+                    "x": 42.5,
+                    "y": 22.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "rafiq"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC12",
+                    "x": 47.5,
+                    "y": 27.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "lea"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC12",
+                    "x": 52.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "nasirOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "nasir"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "nasir",
+                    "location": "AC12",
+                    "x": 57.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "land",
+          "label": "所有已同意者沿预先勘察的岸路伴行",
+          "text": "0GP，无船席需求，90分钟；保存姓名、副本、粮袋和实际生命。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "transportDone": false
+              },
+              {
+                "any": [
+                  {
+                    "all": [
+                      {
+                        "mariamOnward": "yes"
+                      },
+                      {
+                        "npcCanRespond": "mariam"
+                      }
+                    ]
+                  },
+                  {
+                    "all": [
+                      {
+                        "rafiqOnward": "yes"
+                      },
+                      {
+                        "npcCanRespond": "rafiq"
+                      }
+                    ]
+                  },
+                  {
+                    "all": [
+                      {
+                        "leaOnward": "yes"
+                      },
+                      {
+                        "npcCanRespond": "lea"
+                      }
+                    ]
+                  },
+                  {
+                    "all": [
+                      {
+                        "nasirOnward": "yes"
+                      },
+                      {
+                        "npcCanRespond": "nasir"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "transportDone": true,
+              "transportMode": "land",
+              "usedBerths": 0
+            },
+            "say": "只按实际在场且本次明确答复的名单执行这一趟；未答复/失能/缺席者继续在原安全照看处，未放行者不自动出现。实用席数按本选项记录，不再借旧许可宣称新同意。",
+            "minutes": 90,
+            "promises": [
+              {
+                "id": "transport",
+                "text": "仅本次已确认且当前能答复者按岸路护送；其余实际地点与照护保持。",
+                "status": "已履行"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "mariamOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "mariam"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "mariam",
+                    "location": "AC12",
+                    "x": 42.5,
+                    "y": 22.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "rafiqOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "rafiq"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "rafiq",
+                    "location": "AC12",
+                    "x": 47.5,
+                    "y": 27.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "leaOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "lea"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "lea",
+                    "location": "AC12",
+                    "x": 52.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "nasirOnward": "yes"
+                    },
+                    {
+                      "npcCanRespond": "nasir"
+                    }
+                  ]
+                },
+                "npc": [
+                  {
+                    "id": "nasir",
+                    "location": "AC12",
+                    "x": 57.5,
+                    "y": 32.5,
+                    "status": "已按本次明确出行许可到达，原生命伤势保留"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "care-handover",
+          "label": "保留安全照护与未定去处，不虚报已经迁居",
+          "text": "0GP，20分钟；无人能自主答复时仍可完整交接本段成果。不开船、不消耗人身、不改已有原件与已付债。",
+          "once": true,
+          "requires": {
+            "transportDone": false
+          },
+          "success": {
+            "facts": {
+              "transportDone": true,
+              "transportMode": "care-deferred",
+              "usedBerths": 0
+            },
+            "say": "本段完成的是照护和待议事项交接，未确认下一程的人没有被写成已自愿同行；他们保持实际安全地点。",
+            "minutes": 20,
+            "promises": [
+              {
+                "id": "transport",
+                "text": "本段照护交接已做；未确认者的最终迁居/出行仍待本人答复",
+                "status": "待确认"
+              }
+            ]
+          }
+        },
+        {
+          "id": "close",
+          "label": "逐人核实到达与未确认消息",
+          "text": "按NPC实际生命、释放、同意与路线分别点名；不把未知写死亡，也不把记录当救出本身。",
+          "once": true,
+          "requires": {
+            "transportDone": true
+          },
+          "success": {
+            "facts": {
+              "evacuationDone": true
+            },
+            "say": "按NPC实际生命、释放、同意与路线分别点名；不把未知写死亡，也不把记录当救出本身。",
+            "complete": true,
+            "npc": [
+              {
+                "id": "yuhanna",
+                "location": "AC12",
+                "x": 52.5,
+                "y": 22.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "halim",
+                "location": "AC12",
+                "x": 57.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              },
+              {
+                "id": "salim",
+                "location": "AC12",
+                "x": 62.5,
+                "y": 27.5,
+                "status": "按会面/照看安排转至此处；生命伤势与新意愿另核，不自动签约"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "transport",
+          "label": "兑现真实席位或岸路伴行",
+          "doneWhen": {
+            "transportDone": true
+          }
+        }
+      ],
+      "sensitive": true,
+      "descriptionSummary": "历史处决作为略述背景保留；队伍只结算原创当事人的已同意护送及实际物件。"
+    },
+    {
+      "id": "A12",
+      "title": "南行前清账：把未完的交给谁",
+      "scene": "AC12",
+      "date": "1191年8月22日前后",
+      "entryLevel": 3,
+      "readAloud": "晨光下，物品表与未结约分在桌上。只向实际到场且能自主答复的人问新约；旁人的原物、旧授权和未确认的去处不由结局名代签。",
+      "description": "晨光下，物品表与未结约分在桌上。只向实际到场且能自主答复的人问新约；旁人的原物、旧授权和未确认的去处不由结局名代签。",
+      "dmNotes": "四类结束均完整收束本切片，逐项叠加旧债、个人释放、原件和座位真实状态；不把104年框架写成已完战役。先点交余粮/援粮可选，留作自身补给合法。结局按钮不替未承诺者签名。不会额外给虚构GP奖励或自动升到6级。",
+      "options": [
+        {
+          "id": "handover",
+          "label": "把获准公开段副本交独立保管人，队伍留收据",
+          "text": "0GP；roster-copy原副本实际交yuhanna，新增队伍收据，不转移未经授权原件。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "copyHanded": false
+              },
+              {
+                "rosterCopied": true
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "copyHanded": true
+            },
+            "say": "交出去的是这一份副本，队伍手里只保留其交接收据。",
+            "transferItems": [
+              {
+                "id": "roster-copy",
+                "holder": "yuhanna",
+                "location": "独立交接封套"
+              }
+            ],
+            "items": [
+              {
+                "id": "final-copy-receipt",
+                "name": "获准副本已交独立保管人的收据",
+                "count": 1,
+                "holder": "party",
+                "kind": "evidence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "joint-ending",
+          "label": "以双签文书保留共同账房",
+          "text": "需双签+已完成护送；保留未清劳动/留置债，不凭好结局免债。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "jointCertificate": true
+                  },
+                  {
+                    "transportDone": true
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "yuhanna"
+              },
+              {
+                "npcCanConsent": "halim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "finalMode": "joint"
+            },
+            "say": "共同账房由自愿签字人继续；原件、欠债与个人去处逐项见后账。",
+            "ending": "E1",
+            "conditional": [
+              {
+                "requires": {
+                  "debtStatus": "paid"
+                },
+                "say": "D-1：两袋已经实付，旧债原条已由哈利姆交船家盖销；队伍持付讫收据。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "extended"
+                },
+                "say": "D-1：原两袋已双签替换为下季两次白日抄账，劳动尚未履行；不双重追债。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "unpaid"
+                },
+                "say": "D-1：两袋仍未付，旧条仍在队伍；本次收束不免除实际债务。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "paid"
+                },
+                "say": "个人释放：两袋已实付，萨利姆开具收据；实际收据持有人见物件表，不据付款代签纳西尔未来意愿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "pledged"
+                },
+                "say": "个人释放：纳西尔已获放行；铁马烙印原物留置于萨利姆，队伍另欠两袋。不得同时把烙印写成随身遗产。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "independent"
+                },
+                "say": "个人释放：未付款、未留置，纳西尔独立求助结果尚未确认；不写成死亡或已救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "sealed"
+                },
+                "say": "名册：原件封在尤哈娜处；队伍只有获准副本或其交接收据，不能另卖原件。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "party"
+                },
+                "say": "名册：原件仍由队伍保管，只按已经实际获准的范围摘录；能收件者本人持有，待核收件与未授权内容不冒称已交。"
+              },
+              {
+                "requires": {
+                  "copyHanded": true
+                },
+                "say": "副本：本份获准公开段已交尤哈娜；队伍持接收收据。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "copyHanded": false
+                    },
+                    {
+                      "rosterCopied": true
+                    }
+                  ]
+                },
+                "say": "副本：本份获准公开段仍由队伍持有。"
+              },
+              {
+                "requires": {
+                  "transportMode": "two-seats"
+                },
+                "say": "运输：真实使用两席，其他自愿者岸路同行；未释放者没有自动登船。"
+              },
+              {
+                "requires": {
+                  "transportMode": "one-seat"
+                },
+                "say": "运输：真实使用一席，其余自愿者岸路同行；没有把一席记成四席。"
+              },
+              {
+                "requires": {
+                  "transportMode": "land"
+                },
+                "say": "运输：未用船席，已同意者按90分钟岸路伴行；预留席位不虚报载人。"
+              },
+              {
+                "requires": {
+                  "workRecords": "original"
+                },
+                "say": "工匠雇约：原件桶已交工匠共同保管，队伍持点交收据。"
+              },
+              {
+                "requires": {
+                  "workRecords": "copy"
+                },
+                "say": "工匠雇约：原件已损，仅存明确标注来源的补录，工资争议未自动清偿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "unavailable"
+                },
+                "say": "纳西尔本次释放无法履行；缺席与死亡依实际NPC卡分别记录，没有虚构死亡或救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "pending"
+                },
+                "say": "名册：原件按旧持有链由队伍诚实暂管，无新公开许可或两方签核；照护与保全成果保留。"
+              },
+              {
+                "requires": {
+                  "rosterCopied": false
+                },
+                "say": "副本：未制作获准公开段，没有把匿名底稿或暂管备忘写成本人授权。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "care-deferred"
+                },
+                "say": "个人释放：新约未能真实签成，物件未交；照护与自主求助保持，未宣称本人签字或放行已成。"
+              },
+              {
+                "requires": {
+                  "transportMode": "care-deferred"
+                },
+                "say": "运输：本段为安全照护与待议事项交接，无船席虚报，没有把失能/缺席者写成已自主迁居。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sponsor-ending",
+          "label": "改为萨利姆本季承接营业，独立保管名册",
+          "text": "需封存原件+已护送。只让出本店下季一次公开抄账优先约；不卖受护者、手艺或证词。",
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "rosterCustody": "sealed"
+                  },
+                  {
+                    "transportDone": true
+                  }
+                ]
+              },
+              {
+                "npcCanConsent": "salim"
+              }
+            ]
+          },
+          "success": {
+            "facts": {
+              "finalMode": "sponsored",
+              "sponsorDuty": true
+            },
+            "say": "营业安排换成一份明确期限的优先约，原件仍独立封存，未清债照存。",
+            "promises": [
+              {
+                "id": "sponsor",
+                "text": "下季一次公开抄账优先约给萨利姆；不含人身、秘密、无限劳动或独家通行",
+                "status": "待履行"
+              }
+            ],
+            "ending": "E2",
+            "conditional": [
+              {
+                "requires": {
+                  "debtStatus": "paid"
+                },
+                "say": "D-1：两袋已经实付，旧债原条已由哈利姆交船家盖销；队伍持付讫收据。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "extended"
+                },
+                "say": "D-1：原两袋已双签替换为下季两次白日抄账，劳动尚未履行；不双重追债。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "unpaid"
+                },
+                "say": "D-1：两袋仍未付，旧条仍在队伍；本次收束不免除实际债务。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "paid"
+                },
+                "say": "个人释放：两袋已实付，萨利姆开具收据；实际收据持有人见物件表，不据付款代签纳西尔未来意愿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "pledged"
+                },
+                "say": "个人释放：纳西尔已获放行；铁马烙印原物留置于萨利姆，队伍另欠两袋。不得同时把烙印写成随身遗产。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "independent"
+                },
+                "say": "个人释放：未付款、未留置，纳西尔独立求助结果尚未确认；不写成死亡或已救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "sealed"
+                },
+                "say": "名册：原件封在尤哈娜处；队伍只有获准副本或其交接收据，不能另卖原件。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "party"
+                },
+                "say": "名册：原件仍由队伍保管，只按已经实际获准的范围摘录；能收件者本人持有，待核收件与未授权内容不冒称已交。"
+              },
+              {
+                "requires": {
+                  "copyHanded": true
+                },
+                "say": "副本：本份获准公开段已交尤哈娜；队伍持接收收据。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "copyHanded": false
+                    },
+                    {
+                      "rosterCopied": true
+                    }
+                  ]
+                },
+                "say": "副本：本份获准公开段仍由队伍持有。"
+              },
+              {
+                "requires": {
+                  "transportMode": "two-seats"
+                },
+                "say": "运输：真实使用两席，其他自愿者岸路同行；未释放者没有自动登船。"
+              },
+              {
+                "requires": {
+                  "transportMode": "one-seat"
+                },
+                "say": "运输：真实使用一席，其余自愿者岸路同行；没有把一席记成四席。"
+              },
+              {
+                "requires": {
+                  "transportMode": "land"
+                },
+                "say": "运输：未用船席，已同意者按90分钟岸路伴行；预留席位不虚报载人。"
+              },
+              {
+                "requires": {
+                  "workRecords": "original"
+                },
+                "say": "工匠雇约：原件桶已交工匠共同保管，队伍持点交收据。"
+              },
+              {
+                "requires": {
+                  "workRecords": "copy"
+                },
+                "say": "工匠雇约：原件已损，仅存明确标注来源的补录，工资争议未自动清偿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "unavailable"
+                },
+                "say": "纳西尔本次释放无法履行；缺席与死亡依实际NPC卡分别记录，没有虚构死亡或救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "pending"
+                },
+                "say": "名册：原件按旧持有链由队伍诚实暂管，无新公开许可或两方签核；照护与保全成果保留。"
+              },
+              {
+                "requires": {
+                  "rosterCopied": false
+                },
+                "say": "副本：未制作获准公开段，没有把匿名底稿或暂管备忘写成本人授权。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "care-deferred"
+                },
+                "say": "个人释放：新约未能真实签成，物件未交；照护与自主求助保持，未宣称本人签字或放行已成。"
+              },
+              {
+                "requires": {
+                  "transportMode": "care-deferred"
+                },
+                "say": "运输：本段为安全照护与待议事项交接，无船席虚报，没有把失能/缺席者写成已自主迁居。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "mobile-ending",
+          "label": "关闭支店，随自愿者带着实际材料南行",
+          "text": "需已护送。封存原件仍留尤哈娜，队伍只带确实持有的材料和粮袋。",
+          "once": true,
+          "requires": {
+            "transportDone": true
+          },
+          "success": {
+            "facts": {
+              "finalMode": "mobile"
+            },
+            "say": "支店关闭，合同可继续追索。带走的只是库存当前列明的物件；没有把封存原件复制回来。",
+            "ending": "E3",
+            "conditional": [
+              {
+                "requires": {
+                  "debtStatus": "paid"
+                },
+                "say": "D-1：两袋已经实付，旧债原条已由哈利姆交船家盖销；队伍持付讫收据。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "extended"
+                },
+                "say": "D-1：原两袋已双签替换为下季两次白日抄账，劳动尚未履行；不双重追债。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "unpaid"
+                },
+                "say": "D-1：两袋仍未付，旧条仍在队伍；本次收束不免除实际债务。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "paid"
+                },
+                "say": "个人释放：两袋已实付，萨利姆开具收据；实际收据持有人见物件表，不据付款代签纳西尔未来意愿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "pledged"
+                },
+                "say": "个人释放：纳西尔已获放行；铁马烙印原物留置于萨利姆，队伍另欠两袋。不得同时把烙印写成随身遗产。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "independent"
+                },
+                "say": "个人释放：未付款、未留置，纳西尔独立求助结果尚未确认；不写成死亡或已救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "sealed"
+                },
+                "say": "名册：原件封在尤哈娜处；队伍只有获准副本或其交接收据，不能另卖原件。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "party"
+                },
+                "say": "名册：原件仍由队伍保管，只按已经实际获准的范围摘录；能收件者本人持有，待核收件与未授权内容不冒称已交。"
+              },
+              {
+                "requires": {
+                  "copyHanded": true
+                },
+                "say": "副本：本份获准公开段已交尤哈娜；队伍持接收收据。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "copyHanded": false
+                    },
+                    {
+                      "rosterCopied": true
+                    }
+                  ]
+                },
+                "say": "副本：本份获准公开段仍由队伍持有。"
+              },
+              {
+                "requires": {
+                  "transportMode": "two-seats"
+                },
+                "say": "运输：真实使用两席，其他自愿者岸路同行；未释放者没有自动登船。"
+              },
+              {
+                "requires": {
+                  "transportMode": "one-seat"
+                },
+                "say": "运输：真实使用一席，其余自愿者岸路同行；没有把一席记成四席。"
+              },
+              {
+                "requires": {
+                  "transportMode": "land"
+                },
+                "say": "运输：未用船席，已同意者按90分钟岸路伴行；预留席位不虚报载人。"
+              },
+              {
+                "requires": {
+                  "workRecords": "original"
+                },
+                "say": "工匠雇约：原件桶已交工匠共同保管，队伍持点交收据。"
+              },
+              {
+                "requires": {
+                  "workRecords": "copy"
+                },
+                "say": "工匠雇约：原件已损，仅存明确标注来源的补录，工资争议未自动清偿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "unavailable"
+                },
+                "say": "纳西尔本次释放无法履行；缺席与死亡依实际NPC卡分别记录，没有虚构死亡或救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "pending"
+                },
+                "say": "名册：原件按旧持有链由队伍诚实暂管，无新公开许可或两方签核；照护与保全成果保留。"
+              },
+              {
+                "requires": {
+                  "rosterCopied": false
+                },
+                "say": "副本：未制作获准公开段，没有把匿名底稿或暂管备忘写成本人授权。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "care-deferred"
+                },
+                "say": "个人释放：新约未能真实签成，物件未交；照护与自主求助保持，未宣称本人签字或放行已成。"
+              },
+              {
+                "requires": {
+                  "transportMode": "care-deferred"
+                },
+                "say": "运输：本段为安全照护与待议事项交接，无船席虚报，没有把失能/缺席者写成已自主迁居。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "open-ending",
+          "label": "把已做与未做逐项交接，保留开放后账",
+          "text": "需已护送；不承诺任何新的经营或私债。",
+          "once": true,
+          "requires": {
+            "transportDone": true
+          },
+          "success": {
+            "facts": {
+              "finalMode": "open"
+            },
+            "say": "这一段完整结束。哪些债未付、哪人未确认、哪份原件在哪里，仍写明。开放后账不会抹去已救与实付。",
+            "ending": "E4",
+            "conditional": [
+              {
+                "requires": {
+                  "debtStatus": "paid"
+                },
+                "say": "D-1：两袋已经实付，旧债原条已由哈利姆交船家盖销；队伍持付讫收据。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "extended"
+                },
+                "say": "D-1：原两袋已双签替换为下季两次白日抄账，劳动尚未履行；不双重追债。"
+              },
+              {
+                "requires": {
+                  "debtStatus": "unpaid"
+                },
+                "say": "D-1：两袋仍未付，旧条仍在队伍；本次收束不免除实际债务。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "paid"
+                },
+                "say": "个人释放：两袋已实付，萨利姆开具收据；实际收据持有人见物件表，不据付款代签纳西尔未来意愿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "pledged"
+                },
+                "say": "个人释放：纳西尔已获放行；铁马烙印原物留置于萨利姆，队伍另欠两袋。不得同时把烙印写成随身遗产。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "independent"
+                },
+                "say": "个人释放：未付款、未留置，纳西尔独立求助结果尚未确认；不写成死亡或已救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "sealed"
+                },
+                "say": "名册：原件封在尤哈娜处；队伍只有获准副本或其交接收据，不能另卖原件。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "party"
+                },
+                "say": "名册：原件仍由队伍保管，只按已经实际获准的范围摘录；能收件者本人持有，待核收件与未授权内容不冒称已交。"
+              },
+              {
+                "requires": {
+                  "copyHanded": true
+                },
+                "say": "副本：本份获准公开段已交尤哈娜；队伍持接收收据。"
+              },
+              {
+                "requires": {
+                  "all": [
+                    {
+                      "copyHanded": false
+                    },
+                    {
+                      "rosterCopied": true
+                    }
+                  ]
+                },
+                "say": "副本：本份获准公开段仍由队伍持有。"
+              },
+              {
+                "requires": {
+                  "transportMode": "two-seats"
+                },
+                "say": "运输：真实使用两席，其他自愿者岸路同行；未释放者没有自动登船。"
+              },
+              {
+                "requires": {
+                  "transportMode": "one-seat"
+                },
+                "say": "运输：真实使用一席，其余自愿者岸路同行；没有把一席记成四席。"
+              },
+              {
+                "requires": {
+                  "transportMode": "land"
+                },
+                "say": "运输：未用船席，已同意者按90分钟岸路伴行；预留席位不虚报载人。"
+              },
+              {
+                "requires": {
+                  "workRecords": "original"
+                },
+                "say": "工匠雇约：原件桶已交工匠共同保管，队伍持点交收据。"
+              },
+              {
+                "requires": {
+                  "workRecords": "copy"
+                },
+                "say": "工匠雇约：原件已损，仅存明确标注来源的补录，工资争议未自动清偿。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "unavailable"
+                },
+                "say": "纳西尔本次释放无法履行；缺席与死亡依实际NPC卡分别记录，没有虚构死亡或救出。"
+              },
+              {
+                "requires": {
+                  "rosterCustody": "pending"
+                },
+                "say": "名册：原件按旧持有链由队伍诚实暂管，无新公开许可或两方签核；照护与保全成果保留。"
+              },
+              {
+                "requires": {
+                  "rosterCopied": false
+                },
+                "say": "副本：未制作获准公开段，没有把匿名底稿或暂管备忘写成本人授权。"
+              },
+              {
+                "requires": {
+                  "nasirPlan": "care-deferred"
+                },
+                "say": "个人释放：新约未能真实签成，物件未交；照护与自主求助保持，未宣称本人签字或放行已成。"
+              },
+              {
+                "requires": {
+                  "transportMode": "care-deferred"
+                },
+                "say": "运输：本段为安全照护与待议事项交接，无船席虚报，没有把失能/缺席者写成已自主迁居。"
+              }
+            ]
+          }
+        }
+      ],
+      "objectives": [
+        {
+          "id": "ending",
+          "label": "选择本切片真实交接方式",
+          "doneWhen": {
+            "finalMode": {
+              "ne": "none"
+            }
+          }
+        }
+      ],
+      "safeRest": true
+    }
+  ],
+  "scenes": {
+    "AC01": {
+      "id": "AC01",
+      "map_id": "AC01",
+      "name": "海墙巷口支店",
+      "title": "海墙巷口支店",
+      "width_ft": 60,
+      "height_ft": 45,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 45,
+          "label": "海墙巷口支店"
+        }
+      ],
+      "walls": [
+        {
+          "x": 29.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 29.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC01-door",
+          "a": [
+            30,
+            20
+          ],
+          "b": [
+            30,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC02": {
+      "id": "AC02",
+      "map_id": "AC02",
+      "name": "市场转角",
+      "title": "市场转角",
+      "width_ft": 70,
+      "height_ft": 50,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 50,
+          "label": "市场转角"
+        }
+      ],
+      "walls": [],
+      "openings": [],
+      "features": [
+        {
+          "kind": "crate",
+          "x": 35,
+          "y": 5,
+          "w": 10,
+          "h": 10,
+          "label": "以物易物摊",
+          "height_ft": 3
+        },
+        {
+          "kind": "difficult",
+          "x": 25,
+          "y": 35,
+          "w": 20,
+          "h": 5,
+          "difficult": true,
+          "label": "泥泞车辙",
+          "height_ft": 0
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC03": {
+      "id": "AC03",
+      "map_id": "AC03",
+      "name": "庭帐与候问处",
+      "title": "庭帐与候问处",
+      "width_ft": 65,
+      "height_ft": 50,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 65,
+          "h": 50,
+          "label": "庭帐与候问处"
+        }
+      ],
+      "walls": [
+        {
+          "x": 34.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 34.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC03-door",
+          "a": [
+            35,
+            20
+          ],
+          "b": [
+            35,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC04": {
+      "id": "AC04",
+      "map_id": "AC04",
+      "name": "援队岔路",
+      "title": "援队岔路",
+      "width_ft": 90,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 90,
+          "h": 60,
+          "label": "援队岔路"
+        }
+      ],
+      "walls": [],
+      "openings": [],
+      "features": [
+        {
+          "kind": "crate",
+          "x": 35,
+          "y": 20,
+          "w": 10,
+          "h": 10,
+          "label": "两袋余粮车",
+          "height_ft": 3
+        },
+        {
+          "kind": "difficult",
+          "x": 25,
+          "y": 40,
+          "w": 35,
+          "h": 10,
+          "difficult": true,
+          "label": "可绕行浅泥",
+          "height_ft": 0
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC05": {
+      "id": "AC05",
+      "map_id": "AC05",
+      "name": "破口外板车巷",
+      "title": "破口外板车巷",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "破口外板车巷"
+        }
+      ],
+      "walls": [],
+      "openings": [],
+      "features": [
+        {
+          "kind": "crate",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "label": "可推板车",
+          "height_ft": 3
+        },
+        {
+          "kind": "difficult",
+          "x": 30,
+          "y": 5,
+          "w": 20,
+          "h": 10,
+          "difficult": true,
+          "label": "明示碎石，不阻巷口",
+          "height_ft": 0
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC06": {
+      "id": "AC06",
+      "map_id": "AC06",
+      "name": "泊位与陆路口",
+      "title": "泊位与陆路口",
+      "width_ft": 90,
+      "height_ft": 65,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 90,
+          "h": 65,
+          "label": "泊位与陆路口"
+        }
+      ],
+      "walls": [
+        {
+          "x": 39.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 39.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 35,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC06-door",
+          "a": [
+            40,
+            20
+          ],
+          "b": [
+            40,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "water",
+          "x": 65,
+          "y": 0,
+          "w": 25,
+          "h": 65,
+          "label": "泊位水域",
+          "height_ft": 0
+        },
+        {
+          "kind": "platform",
+          "x": 55,
+          "y": 20,
+          "w": 20,
+          "h": 10,
+          "label": "系缆栈桥",
+          "height_ft": 2
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC07": {
+      "id": "AC07",
+      "map_id": "AC07",
+      "name": "工事桶与回营路",
+      "title": "工事桶与回营路",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "工事桶与回营路"
+        }
+      ],
+      "walls": [],
+      "openings": [],
+      "features": [
+        {
+          "kind": "difficult",
+          "x": 35,
+          "y": 10,
+          "w": 15,
+          "h": 10,
+          "difficult": true,
+          "label": "不稳定梁边，可绕行",
+          "height_ft": 3
+        },
+        {
+          "kind": "crate",
+          "x": 52.5,
+          "y": 12.5,
+          "w": 5,
+          "h": 5,
+          "label": "雇约桶",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC08": {
+      "id": "AC08",
+      "map_id": "AC08",
+      "name": "移交区封存屋",
+      "title": "移交区封存屋",
+      "width_ft": 70,
+      "height_ft": 55,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 55,
+          "label": "移交区封存屋"
+        }
+      ],
+      "walls": [
+        {
+          "x": 34.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 34.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 25,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC08-door",
+          "a": [
+            35,
+            20
+          ],
+          "b": [
+            35,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC09": {
+      "id": "AC09",
+      "map_id": "AC09",
+      "name": "私人交接院",
+      "title": "私人交接院",
+      "width_ft": 65,
+      "height_ft": 50,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 65,
+          "h": 50,
+          "label": "私人交接院"
+        }
+      ],
+      "walls": [
+        {
+          "x": 29.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 29.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC09-door",
+          "a": [
+            30,
+            20
+          ],
+          "b": [
+            30,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC10": {
+      "id": "AC10",
+      "map_id": "AC10",
+      "name": "抄写棚与饮水处",
+      "title": "抄写棚与饮水处",
+      "width_ft": 65,
+      "height_ft": 50,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 65,
+          "h": 50,
+          "label": "抄写棚与饮水处"
+        }
+      ],
+      "walls": [
+        {
+          "x": 34.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 34.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC10-door",
+          "a": [
+            35,
+            20
+          ],
+          "b": [
+            35,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC11": {
+      "id": "AC11",
+      "map_id": "AC11",
+      "name": "岸路与上船口",
+      "title": "岸路与上船口",
+      "width_ft": 100,
+      "height_ft": 65,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 65,
+          "label": "岸路与上船口"
+        }
+      ],
+      "walls": [],
+      "openings": [],
+      "features": [
+        {
+          "kind": "water",
+          "x": 80,
+          "y": 0,
+          "w": 20,
+          "h": 65,
+          "label": "近岸水域",
+          "height_ft": 0
+        },
+        {
+          "kind": "platform",
+          "x": 70,
+          "y": 20,
+          "w": 15,
+          "h": 10,
+          "label": "上船跳板",
+          "height_ft": 2
+        },
+        {
+          "kind": "difficult",
+          "x": 30,
+          "y": 45,
+          "w": 25,
+          "h": 5,
+          "difficult": true,
+          "label": "岸路浅泥，北侧可绕",
+          "height_ft": 0
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    },
+    "AC12": {
+      "id": "AC12",
+      "map_id": "AC12",
+      "name": "南行前账桌",
+      "title": "南行前账桌",
+      "width_ft": 70,
+      "height_ft": 50,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 50,
+          "label": "南行前账桌"
+        }
+      ],
+      "walls": [
+        {
+          "x": 34.9,
+          "y": 0,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        },
+        {
+          "x": 34.9,
+          "y": 30,
+          "w": 0.2,
+          "h": 20,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "AC12-door",
+          "a": [
+            35,
+            20
+          ],
+          "b": [
+            35,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "10尺开放门口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "table",
+          "x": 45,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "点交桌",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创局部示意，非历史城图；1格5尺。墙有真实10尺门口，地图标志不授产权。"
+    }
+  },
+  "handouts": [
+    {
+      "id": "H01",
+      "title": "开账清单与签字权限",
+      "text": "六袋账房豆粮归队伍；D-1旧欠两袋为本场原创合同。栈账、烙印为两件遗产；守夜合同为实际履约证据。人不是名册物品，任何协议不能代本人签。"
+    },
+    {
+      "id": "H02",
+      "title": "见闻与传闻两栏",
+      "text": "一条“见过双旗船”可继续核查；“刺客要账房的手”只作恐惧传言，不能转成刺客台词。阿卡物价研究无定价结论，桌上实物交换不代表历史价目。"
+    },
+    {
+      "id": "H03",
+      "title": "受降条款：两轨对照",
+      "text": "【本地研究摘录，未重新联网核查】总额二十万与首期十万属于不同语境；期限一月、四十日、三缴为不同记载。它们都不是账房本次已收/已付。处决日期依原研究采用1191-08-20；人数记载有歧异，不揭晓唯一真数。原创个人两袋释放约与历史总赎金无关。"
+    }
+  ],
+  "endings": [
+    {
+      "id": "E1",
+      "title": "共同账房，未完各有名字",
+      "text": "双签所认的是获准段落。共同营业延续；不因结局名称而免除任何旧债、新债、劳动或个人选择。下一代接到真实物件和明写的未结账，不接一份虚构的胜利总账。",
+      "requires": {
+        "jointCertificate": true
+      }
+    },
+    {
+      "id": "E2",
+      "title": "有期限的承接",
+      "text": "萨利姆取得下季一次公开抄账优先约，名册原件仍由尤哈娜独立保管。受护者、秘密与证词没有出卖；本次承接不扩成无限劳动。",
+      "requires": {
+        "rosterCustody": "sealed"
+      }
+    },
+    {
+      "id": "E3",
+      "title": "随人带账",
+      "text": "账房不再依附这顶帐篷。愿同行者走自己的路；封存物不凭空回到队伍，付过的粮不重新入袋，尚欠的约不因南行消失。",
+      "requires": {
+        "transportDone": true
+      }
+    },
+    {
+      "id": "E4",
+      "title": "留下能接续的后账",
+      "text": "已完成的帮助与实付得到保留。未确认的去处、未履行的债和未被授权的文书照实留下；这段切片收束，1187—1291框架的下一段仍待独立实施。",
+      "requires": {
+        "transportDone": true
+      }
+    }
+  ],
+  "introSafety": {
+    "title": "开桌提示：阿卡账房",
+    "summary": "成年人、饥疫背景、战争目击、债务与人身自主。历史处决只略述，不设参与获利或“单骑阻止”按钮；可淡出关系与暴力细节，成本和实际结果保留。",
+    "fadeText": "任何人可要求略述或暂停；不因拒绝秘密/亲近撤销证据、报酬或路线。"
+  },
+  "port": 8831
+}

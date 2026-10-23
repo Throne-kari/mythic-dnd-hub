@@ -1,0 +1,28 @@
+# Local author configuration and private game data
+/runtime/
+/author-sources.local.json
+*.local.json
+.env
+.env.*
+!.env.example
+node_modules/
+.local/
+*.log
+*.pid
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Standalone game runtime directories (the hub redirects these to runtime/)
+/games/**/data/rooms/
+/games/**/data/saves/
+/games/**/data/bridge/
+/games/**/data/tunnel/
+/games/**/data/*runtime*.json
+/games/**/data/mesopotamia-v3/
+/games/**/data/aztec-v3/
+/games/**/.env*
+

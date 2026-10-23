@@ -1,0 +1,5762 @@
+{
+  "id": "qwen-japan-three-arcs-v2",
+  "title": "日本神话三弧",
+  "subtitle": "五名之主 · 携云的匣 · 可畏者的登录",
+  "version": "2.1.0",
+  "language": "zh-CN",
+  "port": 8827,
+  "fixedLevel": 5,
+  "initialLevel": 5,
+  "levelMode": "fixed",
+  "initialPotions": 4,
+  "initialScene": "HUB",
+  "recommendedPlayers": 4,
+  "minimumPlayers": 1,
+  "estimatedDuration": "每弧目标4–5小时；未作真人整场试玩或时长验证，可分次保存接续。",
+  "description": "原千问日本三弧各有四个可执行节点。选择一弧独立开房，从受约、取证、实际交接走到多结局；不是《镜与归路》。",
+  "rules": {
+    "edition": "D&D 2024",
+    "srd": "5.2.1",
+    "progression": "本数字紧凑编排统一5级；原纸本3–6/4–7/6–9的独立等级带保留，不把它们当连续升级表。",
+    "openActions": "按钮列确定的常见方案；未列的合法2024/SRD能力交DM按实际条文处理，无目录禁魔。",
+    "publicCash": "公款是普通GP钱袋的实物count，玩家工资使用gold；不得混用，花费前明示支付授权。",
+    "culture": "合同、行政、地点、地图与具名凡人均原创改编；母题来源层与许可见../SOURCES_AND_ADAPTATION.md。",
+    "noPlaytest": "仅静态字段、引用、地图与文稿核对，未做自动化玩法模拟、平衡或真人试玩。"
+  },
+  "introSafety": {
+    "title": "成年与同意",
+    "text": "可友情、合伙或淡出；略过私人场面不扣薪、不丢证言。没人被高骰买走同意。已救与已交付不为制造悲剧追回。"
+  },
+  "party": [
+    {
+      "id": "p1",
+      "name": "岸行",
+      "role": "执盾护行者",
+      "bio": "靠护送维生，清楚自己答应的是哪一程。"
+    },
+    {
+      "id": "p2",
+      "name": "墨足",
+      "role": "抄录与侦路者",
+      "bio": "记录原件出处，出售自己的稿却不出售别人的秘密。"
+    },
+    {
+      "id": "p3",
+      "name": "灯枝",
+      "role": "照护者",
+      "bio": "照护与取得证言分开，尊重当事人自己的选择。"
+    },
+    {
+      "id": "p4",
+      "name": "纸舟",
+      "role": "研习与工具手",
+      "bio": "运用真实法术解决眼前问题，承认省下的钱与工。"
+    }
+  ],
+  "initialFacts": {
+    "encounter_a-bandit_cleared": false,
+    "encounter_a-bandit_defeated": false,
+    "encounter_a-bandit_surrendered": false,
+    "encounter_a-bandit_party_setback": false,
+    "encounter_a-bandit_outcome": "",
+    "encounter_b-patrol_cleared": false,
+    "encounter_b-patrol_defeated": false,
+    "encounter_b-patrol_surrendered": false,
+    "encounter_b-patrol_party_setback": false,
+    "encounter_b-patrol_outcome": "",
+    "encounter_c-wharf_cleared": false,
+    "encounter_c-wharf_defeated": false,
+    "encounter_c-wharf_surrendered": false,
+    "encounter_c-wharf_party_setback": false,
+    "encounter_c-wharf_outcome": "",
+    "cSpent": 0,
+    "HUB_done": false,
+    "A1_done": false,
+    "A2_done": false,
+    "A3_done": false,
+    "A4_done": false,
+    "B1_done": false,
+    "B2_done": false,
+    "B3_done": false,
+    "B4_done": false,
+    "C1_done": false,
+    "C2_done": false,
+    "C3_done": false,
+    "C4_done": false,
+    "arc": "",
+    "a-banditRaised": false,
+    "a-banditTruced": false,
+    "aTermsRead": false,
+    "aContract": false,
+    "aFunded": false,
+    "aAmended": false,
+    "aAmendDeclined": false,
+    "aSealBriefed": false,
+    "aSealRoute": false,
+    "aSealConsent": false,
+    "aCourierChecked": false,
+    "aCourierUnconfirmed": false,
+    "aSeat": false,
+    "aCopyReady": false,
+    "aAuthorSettled": false,
+    "aFalseDraft": false,
+    "aSealDelivered": false,
+    "aAccountRead": false,
+    "aFalseDraftCorrected": false,
+    "aAdvanceReturned": false,
+    "aFiniteWork": false,
+    "aEnd": false,
+    "b-patrolRaised": false,
+    "b-patrolTruced": false,
+    "bBriefed": false,
+    "bTravelPaid": false,
+    "bPickup": false,
+    "bBuckle": false,
+    "bFourKnown": false,
+    "bHome": false,
+    "bOldProperty": false,
+    "bListChecked": false,
+    "bListPending": false,
+    "bRobeKnown": false,
+    "bRobeReturned": false,
+    "bRefund": false,
+    "bMessenger": false,
+    "bLoan": false,
+    "bAccountRead": false,
+    "bPickupUsed": false,
+    "bMessageUsed": false,
+    "bEnd": false,
+    "c-wharfRaised": false,
+    "c-wharfTruced": false,
+    "cFundReady": false,
+    "cWaybill": false,
+    "cWaybillPending": false,
+    "cKitArrived": false,
+    "cTransport": false,
+    "cCare": false,
+    "cConsent": false,
+    "cIndependentEvidence": false,
+    "cSeat": false,
+    "cExistingBorrowed": false,
+    "cPublicSetup": false,
+    "cRental": false,
+    "cAccountRead": false,
+    "cRentalReturned": false,
+    "cExistingReturned": false,
+    "cEnd": false,
+    "cLaborDue": false
+  },
+  "publicFacts": [
+    "A1_done",
+    "A2_done",
+    "A3_done",
+    "A4_done",
+    "B1_done",
+    "B2_done",
+    "B3_done",
+    "B4_done",
+    "C1_done",
+    "C2_done",
+    "C3_done",
+    "C4_done",
+    "HUB_done",
+    "a-banditRaised",
+    "a-banditTruced",
+    "aAccountRead",
+    "aAdvanceReturned",
+    "aAmendDeclined",
+    "aAmended",
+    "aAuthorSettled",
+    "aContract",
+    "aCopyReady",
+    "aCourierChecked",
+    "aCourierUnconfirmed",
+    "aEnd",
+    "aFalseDraft",
+    "aFalseDraftCorrected",
+    "aFiniteWork",
+    "aFunded",
+    "aSealBriefed",
+    "aSealConsent",
+    "aSealDelivered",
+    "aSealRoute",
+    "aSeat",
+    "aTermsRead",
+    "arc",
+    "b-patrolRaised",
+    "b-patrolTruced",
+    "bAccountRead",
+    "bBriefed",
+    "bBuckle",
+    "bEnd",
+    "bFourKnown",
+    "bHome",
+    "bListChecked",
+    "bListPending",
+    "bLoan",
+    "bMessageUsed",
+    "bMessenger",
+    "bOldProperty",
+    "bPickup",
+    "bPickupUsed",
+    "bRefund",
+    "bRobeKnown",
+    "bRobeReturned",
+    "bTravelPaid",
+    "c-wharfRaised",
+    "c-wharfTruced",
+    "cAccountRead",
+    "cCare",
+    "cConsent",
+    "cEnd",
+    "cExistingBorrowed",
+    "cExistingReturned",
+    "cFundReady",
+    "cIndependentEvidence",
+    "cKitArrived",
+    "cLaborDue",
+    "cPublicSetup",
+    "cRental",
+    "cRentalReturned",
+    "cSeat",
+    "cSpent",
+    "cTransport",
+    "cWaybill",
+    "cWaybillPending",
+    "encounter_a-bandit_cleared",
+    "encounter_a-bandit_defeated",
+    "encounter_a-bandit_outcome",
+    "encounter_a-bandit_party_setback",
+    "encounter_a-bandit_surrendered",
+    "encounter_b-patrol_cleared",
+    "encounter_b-patrol_defeated",
+    "encounter_b-patrol_outcome",
+    "encounter_b-patrol_party_setback",
+    "encounter_b-patrol_surrendered",
+    "encounter_c-wharf_cleared",
+    "encounter_c-wharf_defeated",
+    "encounter_c-wharf_outcome",
+    "encounter_c-wharf_party_setback",
+    "encounter_c-wharf_surrendered"
+  ],
+  "chapters": [
+    {
+      "id": "HUB",
+      "title": "三册并置的渡口",
+      "scene": "HUB",
+      "entryLevel": 5,
+      "description": "三条完整独立故事，各四节点；选定后本房只跑该弧。",
+      "readAloud": "三本册子放在桌上。执笔人问：你们今天接哪一程？",
+      "dmNotes": "选弧不收钱、不完成别弧、不强迫连续升级。goToChapter是本轮共用解释器扩展，保存事实与席位。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "HUB_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "arc-a",
+          "label": "五名之主",
+          "text": "资助、作者权和受托封件；原纸本A1–A4。",
+          "success": {
+            "facts": {
+              "arc": "A"
+            },
+            "goToChapter": "A1"
+          }
+        },
+        {
+          "id": "arc-b",
+          "label": "携云的匣",
+          "text": "接应、归籍、羽衣与匣；原纸本B1–B4。",
+          "success": {
+            "facts": {
+              "arc": "B"
+            },
+            "goToChapter": "B1"
+          }
+        },
+        {
+          "id": "arc-c",
+          "label": "可畏者的登录",
+          "text": "60GP公库、照护、陈述与有限制度；原纸本C1–C4。",
+          "success": {
+            "facts": {
+              "arc": "C"
+            },
+            "goToChapter": "C1"
+          }
+        }
+      ],
+      "text": "三册并置的渡口\n\n三本册子放在桌上。执笔人问：你们今天接哪一程？\n\n三条完整独立故事，各四节点；选定后本房只跑该弧。\n\n选弧不收钱、不完成别弧、不强迫连续升级。goToChapter是本轮共用解释器扩展，保存事实与席位。"
+    },
+    {
+      "id": "A1",
+      "title": "渡口旅费与作者稿",
+      "scene": "A1",
+      "entryLevel": 5,
+      "description": "原护送资格不以接受额外钱为门槛。先决定稿源，再登记。",
+      "readAloud": "豪族把三十枚推来：买你写清楚，不买你写成我的样子。商行另报价四十。",
+      "dmNotes": "普通渡口西侧0尺，东文书桌+5尺。可查/改条款；明确愿意不骰。原委托与补给保留。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-dispute",
+          "label": "出现实际拦路：布置可选原卡遭遇",
+          "text": "仅在玩家实际升级物理冲突时建立；可谈停、退路或常规先攻。不得用打赢产生稿权/产权。",
+          "success": {
+            "facts": {
+              "a-banditRaised": true
+            },
+            "encounter": "a-bandit"
+          },
+          "requires": {
+            "not": "a-banditRaised"
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "明确认停或退回普通路",
+          "text": "对方只争物理通行，同意放弃这次拦截；不额外罚钱、不改原合同。",
+          "success": {
+            "facts": {
+              "a-banditTruced": true
+            },
+            "say": "按公开止手条件停止本次拦截，实际伤势保留。",
+            "neutralize": [
+              "a-bandit-1"
+            ]
+          },
+          "requires": {
+            "a-banditRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "read",
+          "label": "先读完整条款",
+          "text": "无成本，读第三人排除与独家冲突。",
+          "success": {
+            "facts": {
+              "aTermsRead": true
+            },
+            "say": "自己的见闻仍归作者；第三人原件另授，不能双卖互斥首次刊载。",
+            "handouts": [
+              "a-terms"
+            ]
+          }
+        },
+        {
+          "id": "sponsor",
+          "label": "收30GP有限旅费",
+          "text": "明确签者同意获准副本；以后可解约，不能假称未收。",
+          "success": {
+            "facts": {
+              "aContract": "sponsored",
+              "aFunded": true
+            },
+            "say": "实收30GP；豪族答应A3一次10GP抄印引介。",
+            "gold": 30,
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "豪族",
+                "text": "交本人获准作者副本，标明受资助；不含侍从封件。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "not": "aContract"
+          }
+        },
+        {
+          "id": "independent",
+          "label": "不收额外钱",
+          "text": "保留原护送资格和独立作者身份。",
+          "success": {
+            "facts": {
+              "aContract": "independent"
+            },
+            "say": "没有旅费或未领预支；后续可自抄。"
+          },
+          "requires": {
+            "not": "aContract"
+          }
+        },
+        {
+          "id": "market",
+          "label": "合法售自己作者稿40GP",
+          "text": "首次独家，不含第三人秘密；豪族不再免费引介。",
+          "success": {
+            "facts": {
+              "aContract": "market"
+            },
+            "say": "实收40GP，商行取得已约首次刊载，作者署名保留。",
+            "gold": 40,
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "商行",
+                "text": "首次独家刊载本人有权出售的作者稿，不含第三人封件。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "not": "aContract"
+          }
+        },
+        {
+          "id": "amend",
+          "label": "向愿考虑的豪族改清条款",
+          "text": "仅真实犹豫的改约检定；失败仍可选现成条款/独立/商稿。",
+          "success": {
+            "facts": {
+              "aContract": "sponsored",
+              "aFunded": true,
+              "aAmended": true
+            },
+            "say": "改约成立，明确第三人排除与异议权；实收30。",
+            "gold": 30,
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "豪族",
+                "text": "有限作者副本，保留异议，第三人排除。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "not": "aContract"
+          },
+          "check": {
+            "skill": "persuasion",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "aAmendDeclined": true
+            },
+            "say": "这项新增改约未成；原明确选项仍在，不扣钱、不关护送。"
+          }
+        },
+        {
+          "id": "leave",
+          "label": "带实际约走向受托人",
+          "text": "只在稿源已决定后前进。",
+          "success": {
+            "facts": {
+              "A1_done": true
+            },
+            "say": "A2先读授权边界，已收款与稿源不被重置。",
+            "complete": true,
+            "neutralize": [
+              "a-bandit-1"
+            ]
+          },
+          "requires": {
+            "aContract": [
+              "sponsored",
+              "market",
+              "independent"
+            ]
+          }
+        }
+      ],
+      "next": "A2",
+      "encounters": {
+        "a-bandit": [
+          {
+            "id": "a-bandit-1",
+            "type": "bandit",
+            "name": "沿岸索物者",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "渡口旅费与作者稿\n\n豪族把三十枚推来：买你写清楚，不买你写成我的样子。商行另报价四十。\n\n原护送资格不以接受额外钱为门槛。先决定稿源，再登记。\n\n普通渡口西侧0尺，东文书桌+5尺。可查/改条款；明确愿意不骰。原委托与补给保留。"
+    },
+    {
+      "id": "A2",
+      "title": "侍从自己的封件",
+      "scene": "A2",
+      "entryLevel": 5,
+      "description": "先读三禁，再让成年侍从决定抄件去向。拒绝代持不减原援助。",
+      "readAloud": "侍从说：我想让雇主知道做过的活，没说豪族能替我签。",
+      "dmNotes": "西侧回廊到+5尺的原件桌有唯一五尺门；法术不能代替别人授权，但真实送件/传讯可省劳动。三室不强制作三关。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "brief",
+          "label": "听三禁并核印样",
+          "text": "无需骰才获基本事实与接收席地址；封件此刻真实仍由侍从持有。",
+          "success": {
+            "facts": {
+              "aSealBriefed": true
+            },
+            "say": "接收人为海滨独立执笔席；代办普通路可达，比礼与抄件分属两物。",
+            "handouts": [
+              "a-seal"
+            ],
+            "items": [
+              {
+                "id": "a-hire",
+                "name": "比礼受托凭信",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A2",
+                "notes": "只按原许可援助；不是可出售封件。"
+              },
+              {
+                "id": "a-seal",
+                "name": "侍从工作封件",
+                "kind": "object",
+                "count": 1,
+                "holder": "attendant",
+                "location": "A2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "carry",
+          "label": "自愿亲交封件",
+          "text": "不花20，承担一趟实际携带；A4交件前仍归party持有。",
+          "success": {
+            "facts": {
+              "A2_done": true,
+              "aSealRoute": "carry",
+              "aSealConsent": true
+            },
+            "say": "侍从授权仅亲交，不准转刊。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "a-seal",
+                "holder": "party",
+                "location": "A2"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-deliver",
+                "to": "侍从",
+                "text": "亲交海滨独立执笔席；不拆售或混入自己稿。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "aSealBriefed": true
+          }
+        },
+        {
+          "id": "courier",
+          "label": "付20GP给具名代办",
+          "text": "收件范围经本人同意；钱花在这趟普通劳动，回执仍须核。",
+          "success": {
+            "facts": {
+              "A2_done": true,
+              "aSealRoute": "courier",
+              "aSealConsent": true
+            },
+            "say": "20GP已付，代办墨途接件；原件现由墨途实际持有、在普通路上，A4可查回执。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "a-seal",
+                "holder": "courier",
+                "location": "ordinary-road"
+              }
+            ],
+            "npc": [
+              {
+                "id": "courier",
+                "status": "持有侍从封件，按约在途",
+                "location": "ordinary-road"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-deliver",
+                "to": "侍从",
+                "text": "墨途按约普通路亲交并回执。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "aSealBriefed": true
+          },
+          "cost": {
+            "gold": 20
+          }
+        },
+        {
+          "id": "intro",
+          "label": "只引介，不拿原件",
+          "text": "不替她担保职位；她自行决定是否同行。",
+          "success": {
+            "facts": {
+              "A2_done": true,
+              "aSealRoute": "intro",
+              "aSealConsent": false
+            },
+            "say": "原件仍在侍从手里，原护送与比礼不减。",
+            "complete": true
+          },
+          "requires": {
+            "aSealBriefed": true
+          }
+        },
+        {
+          "id": "check",
+          "label": "核代办承诺",
+          "text": "可先查，失败仍明确接收人地址，可亲问或按明确服务委托。",
+          "success": {
+            "facts": {
+              "aCourierChecked": true
+            },
+            "say": "代办的印样与接收承诺可核。"
+          },
+          "requires": {
+            "aSealBriefed": true
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 13
+          },
+          "failure": {
+            "facts": {
+              "aCourierUnconfirmed": true
+            },
+            "say": "尚未确认，不是假回执；去问接收本人或选亲交。"
+          }
+        }
+      ],
+      "next": "A3",
+      "text": "侍从自己的封件\n\n侍从说：我想让雇主知道做过的活，没说豪族能替我签。\n\n先读三禁，再让成年侍从决定抄件去向。拒绝代持不减原援助。\n\n西侧回廊到+5尺的原件桌有唯一五尺门；法术不能代替别人授权，但真实送件/传讯可省劳动。三室不强制作三关。"
+    },
+    {
+      "id": "A3",
+      "title": "海滨列席核验",
+      "scene": "A3",
+      "entryLevel": 5,
+      "description": "稿源、原录、第三人授权分列。战胜门卫只获得物理通行。",
+      "readAloud": "卫队长说：介绍信告诉我你从哪来，不能替你看见没看见的事。",
+      "dmNotes": "东室+5尺是公开核验桌；西门不锁。主线可独立递交、自抄或旁听；不设付费唯一门槛。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "sponsored-seat",
+          "label": "按有效资助约列席",
+          "text": "豪族实际支付一次10GP抄印，不计入队伍gold也不二领。",
+          "success": {
+            "facts": {
+              "A3_done": true,
+              "aSeat": "sponsored",
+              "aCopyReady": true,
+              "aAuthorSettled": true
+            },
+            "say": "10GP服务由豪族兑现，本人约定副本同时实际交付；作者保异议，侍从抄件只按本人授权。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "豪族",
+                "text": "本人副本已按有限范围递交。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "aContract": "sponsored"
+          }
+        },
+        {
+          "id": "paid-seat",
+          "label": "自付10GP独立递交",
+          "text": "无豪族引介也有作者陈述权；不冒领侍从代表身份。",
+          "success": {
+            "facts": {
+              "A3_done": true,
+              "aSeat": "independent",
+              "aCopyReady": true
+            },
+            "say": "抄印10已付，自署姓名，稿源如实。",
+            "complete": true
+          },
+          "cost": {
+            "gold": 10
+          }
+        },
+        {
+          "id": "own-copy",
+          "label": "用本人书写工具实际自抄",
+          "text": "耗两小时普通劳动，零GP；已有书写工具的队友自愿协作。",
+          "success": {
+            "facts": {
+              "A3_done": true,
+              "aSeat": "independent",
+              "aCopyReady": true
+            },
+            "say": "自抄副本递交；作者与第三人分列，真正省下10GP。",
+            "complete": true,
+            "minutes": 120
+          }
+        },
+        {
+          "id": "commission",
+          "label": "收20GP改稿佣金",
+          "text": "明告：把资助写成独办不作授权凭信，原稿留档；本人只旁听/更正，其他证人席位保留。",
+          "success": {
+            "facts": {
+              "A3_done": true,
+              "aSeat": "observer",
+              "aFalseDraft": true
+            },
+            "say": "实收20；原录与虚稿并置，未创造第三人授权。",
+            "complete": true,
+            "gold": 20
+          }
+        },
+        {
+          "id": "listen",
+          "label": "先旁听与补问",
+          "text": "零GP，不自动丢作者稿或神话援助。",
+          "success": {
+            "facts": {
+              "A3_done": true,
+              "aSeat": "observer"
+            },
+            "say": "保持真实原录，结算时仍可署自己名。",
+            "complete": true
+          }
+        }
+      ],
+      "next": "A4",
+      "text": "海滨列席核验\n\n卫队长说：介绍信告诉我你从哪来，不能替你看见没看见的事。\n\n稿源、原录、第三人授权分列。战胜门卫只获得物理通行。\n\n东室+5尺是公开核验桌；西门不锁。主线可独立递交、自抄或旁听；不设付费唯一门槛。"
+    },
+    {
+      "id": "A4",
+      "title": "结算页与五名登录",
+      "scene": "A4",
+      "entryLevel": 5,
+      "description": "先交真实物、结实际合同，再选称谓与通道。",
+      "readAloud": "执笔人说：别名可以不取。钱若收过、话若说过，不能一起写空白。",
+      "dmNotes": "五名为引用链，不出售能力。已经履约不退30；未履而取消可真实退30或明确有限延期。所有尾声同样读账。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "A4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "deliver",
+          "label": "亲交本人受托封件",
+          "text": "只有接了封件且实际到达才交，不凭付款凭空视为完成。",
+          "success": {
+            "facts": {
+              "aSealDelivered": true
+            },
+            "say": "独立席签收真实封件，只保已授权范围。",
+            "transferItems": [
+              {
+                "id": "a-seal",
+                "holder": "scribe",
+                "location": "A4"
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-deliver",
+                "to": "侍从",
+                "text": "真实封件已在授权范围内签收。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSealRoute": "carry"
+              },
+              {
+                "not": "aSealDelivered"
+              }
+            ]
+          }
+        },
+        {
+          "id": "courier-receipt",
+          "label": "在接收席核实际代办回执",
+          "text": "普通路已可达，墨途与接收人当面核验原件到达；不是付钱即自动知情。",
+          "success": {
+            "facts": {
+              "aSealDelivered": true
+            },
+            "say": "墨途已亲交，原件现由独立执笔席持有，回执给队伍。",
+            "transferItems": [
+              {
+                "id": "a-seal",
+                "holder": "scribe",
+                "location": "A4"
+              }
+            ],
+            "items": [
+              {
+                "id": "a-receipt",
+                "name": "墨途真实交件回执",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "A4"
+              }
+            ],
+            "npc": [
+              {
+                "id": "courier",
+                "status": "封件已实际交独立席",
+                "location": "A4"
+              },
+              {
+                "id": "scribe",
+                "location": "A4",
+                "x": 52.5,
+                "y": 17.5
+              }
+            ],
+            "promises": [
+              {
+                "id": "a-deliver",
+                "to": "侍从",
+                "text": "代办封件真实到席并签收。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aSealRoute": "courier"
+              },
+              {
+                "not": "aSealDelivered"
+              }
+            ]
+          }
+        },
+        {
+          "id": "read-account",
+          "label": "逐项回读稿源、钱、封件与未完工作",
+          "text": "未交件/未履约就明写待办，不用登录抹掉；成功庇护还须完成受托交件与有效稿约。",
+          "success": {
+            "facts": {
+              "aAccountRead": true
+            },
+            "say": "按当前真实持有人、已收30/40/20、稿约状态与更正记录宣读；未履仍待履，任何尾声不谎称全部结清。"
+          }
+        },
+        {
+          "id": "correct",
+          "label": "公开更正自己的虚稿",
+          "text": "不要求他人原谅；只恢复本人真实作者陈述，已传播版本保留记录。",
+          "success": {
+            "facts": {
+              "aFalseDraftCorrected": true,
+              "aCopyReady": true
+            },
+            "say": "原稿、虚稿与更正并列，20佣金依实际收款保留。"
+          },
+          "requires": {
+            "aFalseDraft": true
+          }
+        },
+        {
+          "id": "fulfil",
+          "label": "按约交本人副本",
+          "text": "只交本人有权的内容，第三人封件另列。",
+          "success": {
+            "facts": {
+              "aAuthorSettled": true
+            },
+            "say": "有效稿约履行，已收30或40不是欠款；不重复收费。",
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "实际获稿方",
+                "text": "本人有权副本依真实有效约已交付。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aCopyReady": true
+              },
+              {
+                "not": "aAuthorSettled"
+              }
+            ]
+          }
+        },
+        {
+          "id": "refund",
+          "label": "取消尚未履行资助约并实退30",
+          "text": "没有足额可选择有限延期或保留未结，不丢通关资格。",
+          "success": {
+            "facts": {
+              "aAuthorSettled": true,
+              "aAdvanceReturned": true
+            },
+            "say": "30GP真实退还；稿归作者，已发生资助仍如实记。",
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "豪族",
+                "text": "取消未履约资助，30GP已退。",
+                "status": "已解除"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aContract": "sponsored"
+              },
+              {
+                "not": "aAuthorSettled"
+              }
+            ]
+          },
+          "cost": {
+            "gold": 30
+          }
+        },
+        {
+          "id": "defer",
+          "label": "明确一趟自愿普通护送延期",
+          "text": "本人自愿且豪族愿接受，只替尚未履行资助副本约，不变终身义务。",
+          "success": {
+            "facts": {
+              "aAuthorSettled": true,
+              "aFiniteWork": true
+            },
+            "say": "登记一次普通护送与双方约定日期；未完成就不写已结。",
+            "promises": [
+              {
+                "id": "a-author",
+                "to": "豪族",
+                "text": "尚未履副本改一次普通护送，自愿、有限、待另定日期。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "aContract": "sponsored"
+              },
+              {
+                "not": "aAuthorSettled"
+              }
+            ]
+          }
+        },
+        {
+          "id": "end-shelter",
+          "label": "谈成庇护",
+          "text": "按A1稿源、A2封件、A3更正与真实未完事分别读回；此为本弧独立结局。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "shelter"
+            },
+            "say": "钱、物、授权与有限劳动均照实记录；没有为未结的普通约追加属性惩罚。",
+            "complete": true,
+            "ending": "a-shelter"
+          },
+          "requires": {
+            "all": [
+              {
+                "aAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "aSealDelivered": true
+                  },
+                  {
+                    "aSealRoute": "intro"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "aAuthorSettled": true
+                  },
+                  {
+                    "aContract": "independent"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "aFalseDraft"
+                  },
+                  {
+                    "aFalseDraftCorrected": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "end-separate",
+          "label": "保留别席",
+          "text": "按A1稿源、A2封件、A3更正与真实未完事分别读回；此为本弧独立结局。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "separate"
+            },
+            "say": "钱、物、授权与有限劳动均照实记录；没有为未结的普通约追加属性惩罚。",
+            "complete": true,
+            "ending": "a-separate"
+          },
+          "requires": {
+            "aAccountRead": true
+          }
+        },
+        {
+          "id": "end-close",
+          "label": "封存通道",
+          "text": "按A1稿源、A2封件、A3更正与真实未完事分别读回；此为本弧独立结局。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "close"
+            },
+            "say": "钱、物、授权与有限劳动均照实记录；没有为未结的普通约追加属性惩罚。",
+            "complete": true,
+            "ending": "a-close"
+          },
+          "requires": {
+            "aAccountRead": true
+          }
+        },
+        {
+          "id": "end-research",
+          "label": "不取别名，异说并录",
+          "text": "按A1稿源、A2封件、A3更正与真实未完事分别读回；此为本弧独立结局。",
+          "success": {
+            "facts": {
+              "A4_done": true,
+              "aEnd": "research"
+            },
+            "say": "钱、物、授权与有限劳动均照实记录；没有为未结的普通约追加属性惩罚。",
+            "complete": true,
+            "ending": "a-research"
+          },
+          "requires": {
+            "aAccountRead": true
+          }
+        }
+      ],
+      "text": "结算页与五名登录\n\n执笔人说：别名可以不取。钱若收过、话若说过，不能一起写空白。\n\n先交真实物、结实际合同，再选称谓与通道。\n\n五名为引用链，不出售能力。已经履约不退30；未履而取消可真实退30或明确有限延期。所有尾声同样读账。"
+    },
+    {
+      "id": "B1",
+      "title": "银扣、来讯与一趟接应",
+      "scene": "B1",
+      "entryLevel": 5,
+      "description": "家属只托物与来讯，不替每个人保证等到永远。",
+      "readAloud": "家属说：告诉他我们过得怎样，别保证我会一直坐同一把椅子。",
+      "dmNotes": "海门只作母题改编。西码头0尺、接应登记室+5尺，岸侧路线永远可接续B2。三种明确合法方案收益不因亲密改变。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-dispute",
+          "label": "出现实际拦路：布置可选原卡遭遇",
+          "text": "仅在玩家实际升级物理冲突时建立；可谈停、退路或常规先攻。不得用打赢产生稿权/产权。",
+          "success": {
+            "facts": {
+              "b-patrolRaised": true
+            },
+            "encounter": "b-patrol"
+          },
+          "requires": {
+            "not": "b-patrolRaised"
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "明确认停或退回普通路",
+          "text": "对方只争物理通行，同意放弃这次拦截；不额外罚钱、不改原合同。",
+          "success": {
+            "facts": {
+              "b-patrolTruced": true
+            },
+            "say": "按公开止手条件停止本次拦截，实际伤势保留。",
+            "neutralize": [
+              "b-patrol-1"
+            ]
+          },
+          "requires": {
+            "b-patrolRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "brief",
+          "label": "核银扣和一趟服务范围",
+          "text": "原主在场可明确授权，不用高骰换同意。",
+          "success": {
+            "facts": {
+              "bBriefed": true
+            },
+            "say": "普通银扣与纸信分别登记；原主授权售扣用于接应的选项可当面选。",
+            "items": [
+              {
+                "id": "b-buckle",
+                "name": "家属受托银扣",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "B1"
+              },
+              {
+                "id": "b-letter",
+                "name": "普通来讯纸信",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "B1"
+              }
+            ],
+            "handouts": [
+              "b-terms"
+            ]
+          }
+        },
+        {
+          "id": "fund",
+          "label": "接受原护送普通旅费40GP",
+          "text": "本数字单弧开局的原委托旅费，用于实际生活与交通；不是银扣产权。",
+          "success": {
+            "facts": {
+              "bTravelPaid": true
+            },
+            "say": "实领40GP普通旅费。",
+            "gold": 40
+          },
+          "requires": {
+            "not": "bTravelPaid"
+          }
+        },
+        {
+          "id": "pay",
+          "label": "自付20GP接应，保扣",
+          "text": "只买一趟真实普通接应。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bPickup": true,
+              "bBuckle": "held"
+            },
+            "say": "渔户潮笠承诺一次接应，银扣仍受托。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-pickup",
+                "to": "队伍",
+                "text": "渔户一趟普通岸边接应，不穿异界。",
+                "status": "待履行"
+              }
+            ],
+            "neutralize": [
+              "b-patrol-1"
+            ]
+          },
+          "requires": {
+            "bBriefed": true
+          },
+          "cost": {
+            "gold": 20
+          }
+        },
+        {
+          "id": "sell-authorized",
+          "label": "经原主当面同意售扣付接应",
+          "text": "20卖价直接付20劳动，净gold0；纸信仍可核身份。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bPickup": true,
+              "bBuckle": "sold-authorized"
+            },
+            "say": "真实买家为岸边银匠，20已转给渔户；不凭空再发一枚扣。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "b-buckle",
+                "holder": "silversmith",
+                "location": "B1"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-pickup",
+                "to": "队伍",
+                "text": "一次普通接应，20由已获准售扣款支付。",
+                "status": "待履行"
+              }
+            ],
+            "neutralize": [
+              "b-patrol-1"
+            ]
+          },
+          "requires": {
+            "bBriefed": true
+          }
+        },
+        {
+          "id": "keep",
+          "label": "不买接应，保扣走正常交通",
+          "text": "返岸自己安排，不把节省变时间报复。",
+          "success": {
+            "facts": {
+              "B1_done": true,
+              "bPickup": false,
+              "bBuckle": "held"
+            },
+            "say": "没有购买额外劳动；家属来讯照交，B2四栏仍公开。",
+            "complete": true,
+            "neutralize": [
+              "b-patrol-1"
+            ]
+          },
+          "requires": {
+            "bBriefed": true
+          }
+        }
+      ],
+      "next": "B2",
+      "encounters": {
+        "b-patrol": [
+          {
+            "id": "b-patrol-1",
+            "type": "scout",
+            "name": "海门岸侧巡者",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "银扣、来讯与一趟接应\n\n家属说：告诉他我们过得怎样，别保证我会一直坐同一把椅子。\n\n家属只托物与来讯，不替每个人保证等到永远。\n\n海门只作母题改编。西码头0尺、接应登记室+5尺，岸侧路线永远可接续B2。三种明确合法方案收益不因亲密改变。"
+    },
+    {
+      "id": "B2",
+      "title": "四栏公开与新的住处",
+      "scene": "B2",
+      "entryLevel": 5,
+      "description": "归返者可被重新登记；现在住的人不因旧情被赶走。",
+      "readAloud": "继承者说：我帮他登记，不把现在住的人赶出去。请一起记。",
+      "dmNotes": "登记室+5尺，地面村路绕水口可达。四栏是单跑预置，连跑若曾救人则按既成事实修改，不强写死亡。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "read",
+          "label": "公开四栏与本人身份路径",
+          "text": "纸信、银扣、见闻、原契不止一把钥匙。",
+          "success": {
+            "facts": {
+              "bFourKnown": true
+            },
+            "say": "四栏已公开；B1接应与银扣去向照读，不追加时间惩罚。",
+            "handouts": [
+              "b-four"
+            ]
+          }
+        },
+        {
+          "id": "room",
+          "label": "付15GP普通客房与照护住宿",
+          "text": "本次住宿，拒亲密不撤。",
+          "success": {
+            "facts": {
+              "B2_done": true,
+              "bHome": "inn"
+            },
+            "say": "归返者获本次客房；现住者房屋保留。",
+            "complete": true
+          },
+          "requires": {
+            "bFourKnown": true
+          },
+          "cost": {
+            "gold": 15
+          }
+        },
+        {
+          "id": "friend",
+          "label": "接受旧友自愿共住",
+          "text": "零GP，双方明确一趟普通采买，友情资源相同。",
+          "success": {
+            "facts": {
+              "B2_done": true,
+              "bHome": "friend"
+            },
+            "say": "旧友荷生提供住处，采买不变终身陪伴债。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-shopping",
+                "to": "荷生",
+                "text": "自愿下一趟普通采买；未做仍待履，拒亲密不撤住处。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "bFourKnown": true
+          }
+        },
+        {
+          "id": "property",
+          "label": "先核本人旧物，住处以后定",
+          "text": "基本清单地点直接给；拿回一件普通旧物，不是继承者房屋。",
+          "success": {
+            "facts": {
+              "B2_done": true,
+              "bHome": "undecided",
+              "bOldProperty": true
+            },
+            "say": "纸信与本人见闻核对成功，归返者取回自己的旧铜碗。",
+            "complete": true,
+            "items": [
+              {
+                "id": "b-bowl",
+                "name": "归返者旧铜碗",
+                "kind": "object",
+                "count": 1,
+                "holder": "returner",
+                "location": "B2"
+              }
+            ]
+          },
+          "requires": {
+            "bFourKnown": true
+          }
+        },
+        {
+          "id": "investigate",
+          "label": "赶在日间封档前找原清单",
+          "text": "DC13失败仍给签收人/地点，不能否认本人身份。",
+          "success": {
+            "facts": {
+              "bListChecked": true
+            },
+            "say": "原清单标出本人旧物与现住者独立权利。"
+          },
+          "requires": {
+            "bFourKnown": true
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 13
+          },
+          "failure": {
+            "facts": {
+              "bListPending": true
+            },
+            "say": "未赶完核对；日间签收人、客房/共住路径仍可选。"
+          }
+        }
+      ],
+      "next": "B3",
+      "text": "四栏公开与新的住处\n\n继承者说：我帮他登记，不把现在住的人赶出去。请一起记。\n\n归返者可被重新登记；现在住的人不因旧情被赶走。\n\n登记室+5尺，地面村路绕水口可达。四栏是单跑预置，连跑若曾救人则按既成事实修改，不强写死亡。"
+    },
+    {
+      "id": "B3",
+      "title": "衣先还，退款另算",
+      "scene": "B3",
+      "entryLevel": 5,
+      "description": "羽衣先归本人，不以舞、亲近或退款为条件。",
+      "readAloud": "拾衣者说：收二十，花掉五，剩十五。我卖了一次不属于我的停留。",
+      "dmNotes": "松原地面、退费桌+5尺；羽衣主人不作敌卡，原物权利与观众退款两事分开。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "inspect-robe",
+          "label": "先看现场原物与退款账",
+          "text": "羽衣此刻由拾衣者实际持有；20预订/15余额/5已支分别列明。",
+          "success": {
+            "facts": {
+              "bRobeKnown": true
+            },
+            "say": "原羽衣在拾衣者手里，归还不以舞、亲近或退款为条件。",
+            "items": [
+              {
+                "id": "b-robe",
+                "name": "天人羽衣",
+                "kind": "object",
+                "count": 1,
+                "holder": "finder",
+                "location": "B3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "return",
+          "label": "先归羽衣",
+          "text": "原物从拾衣者交天人，零GP，无须表演。",
+          "success": {
+            "facts": {
+              "bRobeReturned": true
+            },
+            "say": "同一件羽衣已从拾衣者交天人；舞与淡出均自主，不能扣回。",
+            "transferItems": [
+              {
+                "id": "b-robe",
+                "holder": "celestial",
+                "location": "B3"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bRobeKnown": true
+              },
+              {
+                "not": "bRobeReturned"
+              }
+            ]
+          }
+        },
+        {
+          "id": "no-advance",
+          "label": "不代垫，拾衣者实退15仍欠5",
+          "text": "PC不欠退款债，没有免费送件。",
+          "success": {
+            "facts": {
+              "B3_done": true,
+              "bRefund": "15-plus-debt",
+              "bMessenger": false
+            },
+            "say": "观众已收15，拾衣者自己尚欠5；天人衣已归，合作不以舞为门槛。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-refund",
+                "to": "观众",
+                "text": "拾衣者尚欠5GP；PC未承担。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "bRobeReturned": true
+          }
+        },
+        {
+          "id": "loan",
+          "label": "垫5收借据",
+          "text": "出本人同意的5GP，与送件二选一，不能双领。",
+          "success": {
+            "facts": {
+              "B3_done": true,
+              "bRefund": "paid",
+              "bMessenger": false,
+              "bLoan": true
+            },
+            "say": "合计20退款到位，拾衣者签只还5的普通借据。",
+            "complete": true,
+            "items": [
+              {
+                "id": "b-note",
+                "name": "拾衣者5GP借据",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "B3"
+              }
+            ],
+            "promises": [
+              {
+                "id": "b-refund",
+                "to": "实际垫付者",
+                "text": "拾衣者另欠5GP，未承诺免费送件。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "bRobeReturned": true
+          },
+          "cost": {
+            "gold": 5
+          }
+        },
+        {
+          "id": "delivery",
+          "label": "垫5，换本人愿意一趟送件",
+          "text": "一趟普通文件劳动，不是载全队免费船。",
+          "success": {
+            "facts": {
+              "B3_done": true,
+              "bRefund": "paid",
+              "bMessenger": true
+            },
+            "say": "观众收足20，拾衣者自愿一趟普通送件，不再另欠5。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-message",
+                "to": "队伍",
+                "text": "一趟普通授权文件递送；使用后即已履。",
+                "status": "待履行"
+              }
+            ]
+          },
+          "requires": {
+            "bRobeReturned": true
+          },
+          "cost": {
+            "gold": 5
+          }
+        },
+        {
+          "id": "show",
+          "label": "向愿考虑的观众提替代表演",
+          "text": "仅这些观众已公开愿接受全额替代，检定解决满意；有拒者改逐人纸面结算。",
+          "success": {
+            "facts": {
+              "B3_done": true,
+              "bRefund": "accepted-show",
+              "bMessenger": false
+            },
+            "say": "全部自愿接受者抵付20；15余额归拾衣者，无自动免费送件。",
+            "complete": true
+          },
+          "requires": {
+            "bRobeReturned": true
+          },
+          "check": {
+            "skill": "performance",
+            "dc": 15
+          },
+          "failure": {
+            "facts": {
+              "B3_done": true,
+              "bRefund": "15-plus-debt",
+              "bMessenger": false
+            },
+            "say": "替代未获满意，拾衣者实退15尚欠5；PC不默认承担。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "b-refund",
+                "to": "观众",
+                "text": "拾衣者尚欠5GP。",
+                "status": "待履行"
+              }
+            ]
+          }
+        }
+      ],
+      "next": "B4",
+      "text": "衣先还，退款另算\n\n拾衣者说：收二十，花掉五，剩十五。我卖了一次不属于我的停留。\n\n羽衣先归本人，不以舞、亲近或退款为条件。\n\n松原地面、退费桌+5尺；羽衣主人不作敌卡，原物权利与观众退款两事分开。"
+    },
+    {
+      "id": "B4",
+      "title": "匣与归籍",
+      "scene": "B4",
+      "entryLevel": 5,
+      "description": "先结三项，再由有处分权本人决定匣。零必战。",
+      "readAloud": "村正说：我能写现在的你，不能让后来住的人从没活过。",
+      "dmNotes": "事先完整说匣开白云出身体变老；不能擅开NPC/别PC的匣。以下“开匣”须原处分人本人明确同意，否则选其他支。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "B4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "receipt",
+          "label": "逐项读银扣、房与退款",
+          "text": "记录真正持有人、接应待履/已履、借据/送件，不用结局代替账。",
+          "success": {
+            "facts": {
+              "bAccountRead": true
+            },
+            "say": "B1实际银扣和接应；B2住处及旧物；B3衣已还、退款/欠款/送件分别读回。",
+            "items": [
+              {
+                "id": "b-box",
+                "name": "受诫封匣",
+                "kind": "object",
+                "count": 1,
+                "holder": "returner",
+                "location": "B4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "pickup",
+          "label": "实际使用已买一趟岸边接应",
+          "text": "只在已买且未用可选，一次后保留已履，不重复领。",
+          "success": {
+            "facts": {
+              "bPickupUsed": true
+            },
+            "say": "渔户完成普通岸边接应。",
+            "promises": [
+              {
+                "id": "b-pickup",
+                "to": "队伍",
+                "text": "一趟普通岸边接应已履。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bPickup": true
+              },
+              {
+                "not": "bPickupUsed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "message",
+          "label": "实际使用已约一趟送件",
+          "text": "授权文件一趟，不当免费载全队。",
+          "success": {
+            "facts": {
+              "bMessageUsed": true
+            },
+            "say": "拾衣者完成一趟普通授权送件。",
+            "promises": [
+              {
+                "id": "b-message",
+                "to": "队伍",
+                "text": "普通授权文件一趟已送达。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "bMessenger": true
+              },
+              {
+                "not": "bMessageUsed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "end-stay",
+          "label": "当事人自选留居",
+          "text": "不替岸上人承诺一直等。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "stay"
+            },
+            "say": "结局再次读原物与劳动；身体/社会经历只按既成事实，不强行悲剧。",
+            "complete": true,
+            "ending": "b-stay"
+          },
+          "requires": {
+            "bAccountRead": true
+          }
+        },
+        {
+          "id": "end-return",
+          "label": "归返并登记当前住处",
+          "text": "本人称谓自选，不驱逐现住者。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "return"
+            },
+            "say": "结局再次读原物与劳动；身体/社会经历只按既成事实，不强行悲剧。",
+            "complete": true,
+            "ending": "b-return"
+          },
+          "requires": {
+            "bAccountRead": true
+          }
+        },
+        {
+          "id": "end-age",
+          "label": "有权本人知情开匣",
+          "text": "先确认真实同意；无额外属性罚和强制死亡。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "age"
+            },
+            "say": "结局再次读原物与劳动；身体/社会经历只按既成事实，不强行悲剧。",
+            "complete": true,
+            "ending": "b-age"
+          },
+          "requires": {
+            "bAccountRead": true
+          }
+        },
+        {
+          "id": "end-seal",
+          "label": "守匣或交还保管",
+          "text": "诫词连原物保留，零必战。",
+          "success": {
+            "facts": {
+              "B4_done": true,
+              "bEnd": "seal"
+            },
+            "say": "结局再次读原物与劳动；身体/社会经历只按既成事实，不强行悲剧。",
+            "complete": true,
+            "ending": "b-seal"
+          },
+          "requires": {
+            "bAccountRead": true
+          }
+        }
+      ],
+      "text": "匣与归籍\n\n村正说：我能写现在的你，不能让后来住的人从没活过。\n\n先结三项，再由有处分权本人决定匣。零必战。\n\n事先完整说匣开白云出身体变老；不能擅开NPC/别PC的匣。以下“开匣”须原处分人本人明确同意，否则选其他支。"
+    },
+    {
+      "id": "C1",
+      "title": "限定公库与器具运输",
+      "scene": "C1",
+      "entryLevel": 5,
+      "description": "拒绝代管也能调查；镇方逐笔付款同价。本数字版钱袋仅代表获授权的普通60枚。",
+      "readAloud": "镇方正说：六十枚，归公库。后面还有照护、抄件与场地。",
+      "dmNotes": "码头0尺、器具库+5尺。货商自有货物另列，夺泊位不夺产权。所有开支先说用途。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C1_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical-dispute",
+          "label": "出现实际拦路：布置可选原卡遭遇",
+          "text": "仅在玩家实际升级物理冲突时建立；可谈停、退路或常规先攻。不得用打赢产生稿权/产权。",
+          "success": {
+            "facts": {
+              "c-wharfRaised": true
+            },
+            "encounter": "c-wharf"
+          },
+          "requires": {
+            "not": "c-wharfRaised"
+          }
+        },
+        {
+          "id": "stand-down",
+          "label": "明确认停或退回普通路",
+          "text": "对方只争物理通行，同意放弃这次拦截；不额外罚钱、不改原合同。",
+          "success": {
+            "facts": {
+              "c-wharfTruced": true
+            },
+            "say": "按公开止手条件停止本次拦截，实际伤势保留。",
+            "neutralize": [
+              "c-wharf-1"
+            ]
+          },
+          "requires": {
+            "c-wharfRaised": true
+          },
+          "combat": true
+        },
+        {
+          "id": "fund",
+          "label": "接受限定代管60枚，或记录镇方逐笔付",
+          "text": "有权镇方明授本案已列用途；不进私人gold。",
+          "success": {
+            "facts": {
+              "cFundReady": true
+            },
+            "say": "普通公库钱袋60枚已单列；原待运器具由承运人实持，社内帘椅由当主实持，租物由原主实持。",
+            "items": [
+              {
+                "id": "c-purse",
+                "name": "镇方公库GP（普通钱币）",
+                "kind": "object",
+                "count": 60,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-waybill",
+                "name": "公用器具领取凭单",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C1"
+              },
+              {
+                "id": "c-kit",
+                "name": "公用帘椅与记录柜",
+                "kind": "object",
+                "count": 1,
+                "holder": "carrier",
+                "location": "C1-depot"
+              },
+              {
+                "id": "c-existing",
+                "name": "社内原有一帘两椅",
+                "kind": "object",
+                "count": 1,
+                "holder": "head",
+                "location": "C3"
+              },
+              {
+                "id": "c-rented",
+                "name": "本次可租借帘椅",
+                "kind": "object",
+                "count": 1,
+                "holder": "rental-owner",
+                "location": "C3"
+              }
+            ],
+            "handouts": [
+              "c-budget"
+            ]
+          }
+        },
+        {
+          "id": "check",
+          "label": "核本批已付半泊位原单",
+          "text": "DC13失败仍能问签发人/20陆运/让批，不毁原单。",
+          "success": {
+            "facts": {
+              "cWaybill": true
+            },
+            "say": "已付一半泊位核实，10GP分运可执行。"
+          },
+          "requires": {
+            "cFundReady": true
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 13
+          },
+          "failure": {
+            "facts": {
+              "cWaybillPending": true
+            },
+            "say": "未核成；签发人明日可问，其他两路在。"
+          }
+        },
+        {
+          "id": "split",
+          "label": "已核单后10枚分运",
+          "text": "公款真实60→50，器具真实到库。",
+          "success": {
+            "facts": {
+              "C1_done": true,
+              "cKitArrived": true,
+              "cTransport": "split"
+            },
+            "say": "10枚付脚夫，同批原器具从承运人签收入库；C3只需10搬搭。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "c-kit",
+                "holder": "party",
+                "location": "C1-store"
+              }
+            ],
+            "neutralize": [
+              "c-wharf-1"
+            ],
+            "increment": {
+              "cSpent": 10
+            }
+          },
+          "requires": {
+            "cWaybill": true
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 10
+              }
+            ]
+          }
+        },
+        {
+          "id": "land",
+          "label": "20枚陆运",
+          "text": "公款60→40，真实器具到库。",
+          "success": {
+            "facts": {
+              "C1_done": true,
+              "cKitArrived": true,
+              "cTransport": "land"
+            },
+            "say": "20枚付陆运；自有货商财物完整，同批原器具实际入库。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "c-kit",
+                "holder": "party",
+                "location": "C1-store"
+              }
+            ],
+            "neutralize": [
+              "c-wharf-1"
+            ],
+            "increment": {
+              "cSpent": 20
+            }
+          },
+          "requires": {
+            "cFundReady": true
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "yield",
+          "label": "让出本批，零GP",
+          "text": "器具仍在承运人手，可用原社内帘椅或后续租物。",
+          "success": {
+            "facts": {
+              "C1_done": true,
+              "cKitArrived": false,
+              "cTransport": "yield"
+            },
+            "say": "60枚仍完整；未到物不能当到库抵价。",
+            "complete": true,
+            "neutralize": [
+              "c-wharf-1"
+            ]
+          },
+          "requires": {
+            "cFundReady": true
+          }
+        }
+      ],
+      "next": "C2",
+      "encounters": {
+        "c-wharf": [
+          {
+            "id": "c-wharf-1",
+            "type": "guard",
+            "name": "泊位守卫",
+            "x": 32.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          }
+        ]
+      },
+      "text": "限定公库与器具运输\n\n镇方正说：六十枚，归公库。后面还有照护、抄件与场地。\n\n拒绝代管也能调查；镇方逐笔付款同价。本数字版钱袋仅代表获授权的普通60枚。\n\n码头0尺、器具库+5尺。货商自有货物另列，夺泊位不夺产权。所有开支先说用途。"
+    },
+    {
+      "id": "C2",
+      "title": "照护、私录与独立档案",
+      "scene": "C2",
+      "entryLevel": 5,
+      "description": "照护已经提供，额外轮班与引用授权分开问。不交私录也能完成。",
+      "readAloud": "医家说：有没有出处我能帮；愿不愿给全镇议论，请等他自己说。",
+      "dmNotes": "病宅与文书间+5尺，屋外可屏后交谈。敏感细节可略述，不发强迫公开按钮。旧祀档与使者狐旁证独立存在。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C2_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "extra-care",
+          "label": "用公库20枚买一趟额外轮班",
+          "text": "先有镇方授权，只买额外普通劳动，不能买证词。",
+          "success": {
+            "facts": {
+              "cCare": "paid"
+            },
+            "say": "额外轮班已支付并完成；本人可仍选私存，原照护不受表决影响。",
+            "promises": [
+              {
+                "id": "c-care",
+                "to": "当事人",
+                "text": "一趟额外照护已完成。",
+                "status": "已履行"
+              }
+            ],
+            "increment": {
+              "cSpent": 20
+            }
+          },
+          "requires": {
+            "not": "cCare"
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "regular-care",
+          "label": "保留原正常照护，不另买轮班",
+          "text": "零额外钱，原治疗/照护持续；真实自愿合格能力可另按规则帮助。",
+          "success": {
+            "facts": {
+              "cCare": "regular"
+            },
+            "say": "原有照护继续，未买额外轮班不等于撤照护。"
+          },
+          "requires": {
+            "not": "cCare"
+          }
+        },
+        {
+          "id": "redacted",
+          "label": "本人选择逐行脱敏摘录",
+          "text": "医家留原录，不自动公开现名；证据同等。",
+          "success": {
+            "facts": {
+              "cConsent": "redacted"
+            },
+            "say": "本人授权具体脱敏句；可撤未来公开，不抹既有独立档案。",
+            "items": [
+              {
+                "id": "c-extract",
+                "name": "逐行授权脱敏摘录",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ]
+          },
+          "requires": {
+            "not": "cConsent"
+          }
+        },
+        {
+          "id": "public",
+          "label": "本人自愿书面或屏后公开",
+          "text": "不强迫露脸/叙私人伤口，范围逐句问清。",
+          "success": {
+            "facts": {
+              "cConsent": "public"
+            },
+            "say": "本人自选书面/屏后范围，照护非交换。",
+            "items": [
+              {
+                "id": "c-extract",
+                "name": "本人自选公开范围文书",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ]
+          },
+          "requires": {
+            "not": "cConsent"
+          }
+        },
+        {
+          "id": "private",
+          "label": "本人只准医家私存",
+          "text": "PC不拿私录，独立祀档与狐旁证仍可查。",
+          "success": {
+            "facts": {
+              "cConsent": "private"
+            },
+            "say": "原录留医家；不公开仍可完成调查，不降低证据资格。"
+          },
+          "requires": {
+            "not": "cConsent"
+          }
+        },
+        {
+          "id": "archive",
+          "label": "核独立旧祀档与狐所见",
+          "text": "基本事实免骰；十分钟的准入安排不算短休也不回复HP。",
+          "success": {
+            "facts": {
+              "C2_done": true,
+              "cIndependentEvidence": true
+            },
+            "say": "独立原档与使者狐旁证齐，明确来者所求、边界与传达者；不取病宅私录也足以进入C3。",
+            "complete": true,
+            "items": [
+              {
+                "id": "c-archive",
+                "name": "独立祀档校勘副本",
+                "kind": "object",
+                "count": 1,
+                "holder": "party",
+                "location": "C2"
+              }
+            ],
+            "minutes": 10
+          },
+          "requires": {
+            "all": [
+              {
+                "cCare": [
+                  "paid",
+                  "regular"
+                ]
+              },
+              {
+                "cConsent": [
+                  "redacted",
+                  "public",
+                  "private"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "next": "C3",
+      "text": "照护、私录与独立档案\n\n医家说：有没有出处我能帮；愿不愿给全镇议论，请等他自己说。\n\n照护已经提供，额外轮班与引用授权分开问。不交私录也能完成。\n\n病宅与文书间+5尺，屋外可屏后交谈。敏感细节可略述，不发强迫公开按钮。旧祀档与使者狐旁证独立存在。"
+    },
+    {
+      "id": "C3",
+      "title": "谁坐哪把椅子",
+      "scene": "C3",
+      "entryLevel": 5,
+      "description": "三种场地都尊重同等证据资格与原授权；不要求PC演私人创伤。",
+      "readAloud": "神主家当主说：公共，不等于谁都能替谁签。",
+      "dmNotes": "东室原有帘椅；西侧地面场外陈述与代理可达，台阶+5尺不作人格门槛。资格矛盾默认成年NPC承接，除非玩家自愿。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C3_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "outside",
+          "label": "原程序＋场外同等席，零枚",
+          "text": "借现有一帘两椅，代理/屏后/场外同等核验，物理范围较窄。",
+          "success": {
+            "facts": {
+              "C3_done": true,
+              "cSeat": "outside",
+              "cExistingBorrowed": true
+            },
+            "say": "当主原有一帘两椅实际借到本次场外席，本文与授权资格同等。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "c-existing",
+                "holder": "party",
+                "location": "C3-outside"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-furniture",
+                "to": "神主家当主",
+                "text": "本次原有一帘两椅借用后归还。",
+                "status": "待履行"
+              }
+            ]
+          }
+        },
+        {
+          "id": "public-owned",
+          "label": "器具已到，公库10枚搬搭公共面",
+          "text": "不恢复已撤授权；同批柜不能在两处重复抵价。",
+          "success": {
+            "facts": {
+              "C3_done": true,
+              "cSeat": "public",
+              "cPublicSetup": true
+            },
+            "say": "10枚实付搬搭，愿意者可即时回应；私存仍私存。",
+            "complete": true,
+            "increment": {
+              "cSpent": 10
+            }
+          },
+          "requires": {
+            "cKitArrived": true
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 10
+              }
+            ]
+          }
+        },
+        {
+          "id": "public-rent",
+          "label": "未到器具，公库30枚租物搬搭",
+          "text": "20租物＋10搬搭，写归还，不变永久所有权。",
+          "success": {
+            "facts": {
+              "C3_done": true,
+              "cSeat": "public",
+              "cPublicSetup": true,
+              "cRental": true
+            },
+            "say": "30枚实付，同一批租来帘椅从原主交到本场，不等于已有记录柜；归还条件保留。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "c-rented",
+                "holder": "party",
+                "location": "C3"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-rental",
+                "to": "租物人",
+                "text": "听证后返还本次租借帘椅。",
+                "status": "待履行"
+              }
+            ],
+            "increment": {
+              "cSpent": 30
+            }
+          },
+          "requires": {
+            "cKitArrived": false
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "delegate",
+          "label": "不搭新场，委托代持，零枚",
+          "text": "用已授权书面补问，少本人即时答询，不降证据。",
+          "success": {
+            "facts": {
+              "C3_done": true,
+              "cSeat": "delegate"
+            },
+            "say": "记录代持人与具体授权，未来重授权仍需本人。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "c-delegate",
+                "to": "当事人",
+                "text": "本次授权文本代持并书面补问；非终身代办。",
+                "status": "待履行"
+              }
+            ]
+          }
+        }
+      ],
+      "next": "C4",
+      "text": "谁坐哪把椅子\n\n神主家当主说：公共，不等于谁都能替谁签。\n\n三种场地都尊重同等证据资格与原授权；不要求PC演私人创伤。\n\n东室原有帘椅；西侧地面场外陈述与代理可达，台阶+5尺不作人格门槛。资格矛盾默认成年NPC承接，除非玩家自愿。"
+    },
+    {
+      "id": "C4",
+      "title": "三份有限报价与终条",
+      "scene": "C4",
+      "entryLevel": 5,
+      "description": "先读公款/库存、授权与席位，再写谁愿做下一趟。",
+      "readAloud": "脚夫说：名字郑重写，椅子也请抬回，明天我靠它吃饭。",
+      "dmNotes": "a30=10耗材20劳动；b20=10路标10布置；c40=20两房10柜10搬运。现柜/真实劳动只能抵实际对应项；不足可合法有限赊工或改方案，不自动败。",
+      "safeRest": true,
+      "objectives": [
+        {
+          "id": "settle",
+          "label": "说清成本、权利人与可走的下一步",
+          "fact": "C4_done"
+        }
+      ],
+      "options": [
+        {
+          "id": "read",
+          "label": "签前逐项回读原账",
+          "text": "C1原物/余款，C2授权/照护，C3陈述/器材借期，全部可见。",
+          "success": {
+            "facts": {
+              "cAccountRead": true
+            },
+            "say": "未用GP仍在普通钱袋，已花不再花。私存原录不读，独立证据足够。"
+          }
+        },
+        {
+          "id": "return-rental",
+          "label": "返还本次租借帘椅",
+          "text": "物真在party时由实际持有人确认交还，非自动消失。",
+          "success": {
+            "facts": {
+              "cRentalReturned": true
+            },
+            "say": "租借帘椅已归原主，公款不会因还物自动退已用服务费。",
+            "transferItems": [
+              {
+                "id": "c-rented",
+                "holder": "rental-owner",
+                "location": "C4"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-rental",
+                "to": "租物人",
+                "text": "本次帘椅已归还。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "cRental": true
+              },
+              {
+                "not": "cRentalReturned"
+              }
+            ]
+          }
+        },
+        {
+          "id": "return-existing",
+          "label": "归还实际借出的社内一帘两椅",
+          "text": "听证已结束；同一原物实还当主，代理/场外证据仍有效。",
+          "success": {
+            "facts": {
+              "cExistingReturned": true
+            },
+            "say": "一帘两椅实际交还当主，原有物归还完成，不用终句抹掉未做劳动。",
+            "transferItems": [
+              {
+                "id": "c-existing",
+                "holder": "head",
+                "location": "C4"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-furniture",
+                "to": "神主家当主",
+                "text": "本次原有一帘两椅已交还。",
+                "status": "已履行"
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "cExistingBorrowed": true
+              },
+              {
+                "not": "cExistingReturned"
+              }
+            ]
+          }
+        },
+        {
+          "id": "town",
+          "label": "公库30枚完成镇护a",
+          "text": "真实消耗10材料20初次劳动，下一期两巡由神主家同意。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "town"
+            },
+            "say": "30枚实付；其余公款保持实际余额退镇方，下一期两巡登记有限工作。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "c-future",
+                "to": "镇方",
+                "text": "神主家下一期两次巡场。",
+                "status": "待履行"
+              }
+            ],
+            "transferItems": [],
+            "ending": "c-town",
+            "conditional": [
+              {
+                "requires": {
+                  "cKitArrived": true
+                },
+                "transferItems": [
+                  {
+                    "id": "c-kit",
+                    "holder": "town",
+                    "location": "C4-store"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "increment": {
+              "cSpent": 30
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "town-defer",
+          "label": "镇护a：20枚现付＋脚夫同意10劳动延期",
+          "text": "公开有限普通服务，尚欠10，不能写成已付；对方确已同意才执行。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "town",
+              "cLaborDue": 10
+            },
+            "say": "20实付＝10耗材＋10劳动，余10劳动经脚夫头明确同意下一次交接日后收；不生终身债。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "c-labor",
+                "to": "脚夫头",
+                "text": "尚欠10GP本次劳动，下一次约定交接日后付。",
+                "status": "待履行"
+              },
+              {
+                "id": "c-future",
+                "to": "镇方",
+                "text": "神主家下一期两次巡场。",
+                "status": "待履行"
+              }
+            ],
+            "transferItems": [],
+            "ending": "c-town",
+            "conditional": [
+              {
+                "requires": {
+                  "cKitArrived": true
+                },
+                "transferItems": [
+                  {
+                    "id": "c-kit",
+                    "holder": "town",
+                    "location": "C4-store"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "increment": {
+              "cSpent": 20
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "boundary",
+          "label": "公库20枚完成边界b",
+          "text": "10路标10初次布置，镇方一次非武装巡视。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "boundary"
+            },
+            "say": "20枚真实花费，剩余普通公款退镇方；场外申诉与隐私保留。",
+            "complete": true,
+            "promises": [
+              {
+                "id": "c-future",
+                "to": "当事方",
+                "text": "镇方下一期一次非武装巡视与申诉窗口。",
+                "status": "待履行"
+              }
+            ],
+            "transferItems": [],
+            "ending": "c-boundary",
+            "conditional": [
+              {
+                "requires": {
+                  "cKitArrived": true
+                },
+                "transferItems": [
+                  {
+                    "id": "c-kit",
+                    "holder": "town",
+                    "location": "C4-store"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "increment": {
+              "cSpent": 20
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "split-owned",
+          "label": "已有柜且商队自愿搬运：20枚房舍完成分流c",
+          "text": "柜已到且可在此使用抵10；货物未被夺、隐私受保护的商队真实愿一趟搬运抵10。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "split"
+            },
+            "say": "两处房舍20实付；记录柜只在分流处一用，商队一趟搬运有执行人。",
+            "complete": true,
+            "transferItems": [
+              {
+                "id": "c-kit",
+                "holder": "split-custodian",
+                "location": "C4-split"
+              }
+            ],
+            "promises": [
+              {
+                "id": "c-haul",
+                "to": "分流保管者",
+                "text": "商队一趟自愿搬运已约，不含免费房舍。",
+                "status": "待履行"
+              }
+            ],
+            "ending": "c-split",
+            "increment": {
+              "cSpent": 20
+            },
+            "conditional": [
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "cAccountRead": true
+                  },
+                  {
+                    "cKitArrived": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 20
+              }
+            ]
+          }
+        },
+        {
+          "id": "split",
+          "label": "公库40枚完整分流c",
+          "text": "20两房＋10柜＋10搬运，未得到现柜抵价时按完整报价。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "split"
+            },
+            "say": "40枚实付并落实两处房、柜与搬运；剩公款按实际退回。",
+            "complete": true,
+            "items": [
+              {
+                "id": "c-split-cabinet",
+                "name": "分流处普通记录柜",
+                "kind": "object",
+                "count": 1,
+                "holder": "split-custodian",
+                "location": "C4"
+              }
+            ],
+            "transferItems": [],
+            "ending": "c-split",
+            "conditional": [
+              {
+                "requires": {
+                  "cKitArrived": true
+                },
+                "transferItems": [
+                  {
+                    "id": "c-kit",
+                    "holder": "town",
+                    "location": "C4-store"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ],
+            "increment": {
+              "cSpent": 40
+            }
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "c-purse",
+                "count": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "open",
+          "label": "必要项未谈成，本祭期保留未成文",
+          "text": "退实际余额，保照护与调查；不强迫捐钱、出工或演伤口。",
+          "success": {
+            "facts": {
+              "C4_done": true,
+              "cEnd": "open"
+            },
+            "say": "退余公款、保留原物归属及已完成成果，列清下一次可谈对象。",
+            "complete": true,
+            "transferItems": [],
+            "ending": "c-open",
+            "conditional": [
+              {
+                "requires": {
+                  "cKitArrived": true
+                },
+                "transferItems": [
+                  {
+                    "id": "c-kit",
+                    "holder": "town",
+                    "location": "C4-store"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "cSpent": {
+                    "lte": 59
+                  }
+                },
+                "transferItems": [
+                  {
+                    "id": "c-purse",
+                    "holder": "town",
+                    "location": "C4"
+                  }
+                ]
+              }
+            ]
+          },
+          "requires": {
+            "all": [
+              {
+                "cAccountRead": true
+              },
+              {
+                "any": [
+                  {
+                    "not": "cExistingBorrowed"
+                  },
+                  {
+                    "cExistingReturned": true
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "not": "cRental"
+                  },
+                  {
+                    "cRentalReturned": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "text": "三份有限报价与终条\n\n脚夫说：名字郑重写，椅子也请抬回，明天我靠它吃饭。\n\n先读公款/库存、授权与席位，再写谁愿做下一趟。\n\na30=10耗材20劳动；b20=10路标10布置；c40=20两房10柜10搬运。现柜/真实劳动只能抵实际对应项；不足可合法有限赊工或改方案，不自动败。"
+    }
+  ],
+  "scenes": {
+    "HUB": {
+      "id": "HUB",
+      "map_id": "HUB",
+      "name": "三册并置的渡口",
+      "title": "三册并置的渡口",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "HUB-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "普通渡口"
+        },
+        {
+          "id": "HUB-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "三册书桌（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "HUB-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "HUB-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "HUB-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "HUB-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "三册书桌·核验桌"
+        },
+        {
+          "id": "HUB-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "HUB-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "HUB-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "HUB-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "HUB-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A1": {
+      "id": "A1",
+      "map_id": "A1",
+      "name": "渡口旅费与作者稿",
+      "title": "渡口旅费与作者稿",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "渡口会面"
+        },
+        {
+          "id": "A1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "资助签收房（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "资助签收房·核验桌"
+        },
+        {
+          "id": "A1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A1-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "A1-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A2": {
+      "id": "A2",
+      "map_id": "A2",
+      "name": "侍从自己的封件",
+      "title": "侍从自己的封件",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "三室前回廊"
+        },
+        {
+          "id": "A2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "侍从封件房（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "侍从封件房·核验桌"
+        },
+        {
+          "id": "A2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A2-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "A2-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A3": {
+      "id": "A3",
+      "map_id": "A3",
+      "name": "海滨列席核验",
+      "title": "海滨列席核验",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "海滨列席场"
+        },
+        {
+          "id": "A3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "凡人核验席（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "凡人核验席·核验桌"
+        },
+        {
+          "id": "A3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "A3-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "A3-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "A4": {
+      "id": "A4",
+      "map_id": "A4",
+      "name": "结算页与五名登录",
+      "title": "结算页与五名登录",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "A4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "登录前庭"
+        },
+        {
+          "id": "A4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "五名结算席（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "A4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "A4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "A4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "A4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "五名结算席·核验桌"
+        },
+        {
+          "id": "A4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "A4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "A4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B1": {
+      "id": "B1",
+      "map_id": "B1",
+      "name": "银扣、来讯与一趟接应",
+      "title": "银扣、来讯与一趟接应",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "海门岸侧"
+        },
+        {
+          "id": "B1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "接应登记屋（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "接应登记屋·核验桌"
+        },
+        {
+          "id": "B1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B1-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "B1-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B2": {
+      "id": "B2",
+      "map_id": "B2",
+      "name": "四栏公开与新的住处",
+      "title": "四栏公开与新的住处",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "村内旧水口"
+        },
+        {
+          "id": "B2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "归籍文书室（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "归籍文书室·核验桌"
+        },
+        {
+          "id": "B2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B2-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "B2-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B3": {
+      "id": "B3",
+      "map_id": "B3",
+      "name": "衣先还，退款另算",
+      "title": "衣先还，退款另算",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "松原归衣处"
+        },
+        {
+          "id": "B3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "观众退款小屋（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "观众退款小屋·核验桌"
+        },
+        {
+          "id": "B3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B3-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "B3-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "B4": {
+      "id": "B4",
+      "map_id": "B4",
+      "name": "匣与归籍",
+      "title": "匣与归籍",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "B4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "归籍前庭"
+        },
+        {
+          "id": "B4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "匣与结算房（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "B4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "B4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "B4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "B4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "匣与结算房·核验桌"
+        },
+        {
+          "id": "B4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "B4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "B4-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "B4-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "B4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C1": {
+      "id": "C1",
+      "map_id": "C1",
+      "name": "限定公库与器具运输",
+      "title": "限定公库与器具运输",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C1-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "装卸岸场"
+        },
+        {
+          "id": "C1-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "公用器具库（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C1-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C1-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C1-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C1-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "公用器具库·核验桌"
+        },
+        {
+          "id": "C1-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C1-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C1-water",
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "height_ft": -5,
+          "label": "浅水槽底−5尺；不等于异界"
+        },
+        {
+          "id": "C1-bridge",
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "height_ft": 0,
+          "label": "十尺宽桥面，两岸相通"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 10,
+          "h": 60,
+          "z": -5,
+          "water": true
+        },
+        {
+          "x": 15,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "z": 0
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C1-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C2": {
+      "id": "C2",
+      "map_id": "C2",
+      "name": "照护、私录与独立档案",
+      "title": "照护、私录与独立档案",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C2-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "病宅外屏后"
+        },
+        {
+          "id": "C2-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "医家私录房（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C2-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C2-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C2-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C2-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "医家私录房·核验桌"
+        },
+        {
+          "id": "C2-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C2-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C2-tree1",
+          "kind": "tree",
+          "x": 15,
+          "y": 5,
+          "w": 8,
+          "h": 8,
+          "height_ft": 18,
+          "label": "实体树干与树冠"
+        },
+        {
+          "id": "C2-rock",
+          "kind": "rock",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 10,
+          "height_ft": 8,
+          "label": "八尺岩坡；北侧绕行"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C2-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C3": {
+      "id": "C3",
+      "map_id": "C3",
+      "name": "谁坐哪把椅子",
+      "title": "谁坐哪把椅子",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C3-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "场外同等陈述庭"
+        },
+        {
+          "id": "C3-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "原程序与公共面（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C3-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C3-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C3-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C3-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原程序与公共面·核验桌"
+        },
+        {
+          "id": "C3-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C3-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C3-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    },
+    "C4": {
+      "id": "C4",
+      "map_id": "C4",
+      "name": "三份有限报价与终条",
+      "title": "三份有限报价与终条",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "rooms": [
+        {
+          "id": "C4-outside",
+          "x": 0,
+          "y": 0,
+          "w": 45,
+          "h": 60,
+          "label": "有限提案对签庭"
+        },
+        {
+          "id": "C4-inside",
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "label": "终条与原物清点房（+5尺）",
+          "height_ft": 5
+        }
+      ],
+      "walls": [
+        {
+          "id": "C4-north",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-east",
+          "x": 70,
+          "y": 10,
+          "w": 1,
+          "h": 35,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-south",
+          "x": 45,
+          "y": 44,
+          "w": 26,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-west-top",
+          "x": 45,
+          "y": 10,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        },
+        {
+          "id": "C4-west-bottom",
+          "x": 45,
+          "y": 30,
+          "w": 1,
+          "h": 15,
+          "height_ft": 10
+        }
+      ],
+      "openings": [
+        {
+          "id": "C4-door",
+          "a": [
+            45,
+            25
+          ],
+          "b": [
+            45,
+            30
+          ],
+          "kind": "door",
+          "state": "open",
+          "label": "五尺西门，原件室入口"
+        }
+      ],
+      "features": [
+        {
+          "id": "C4-table",
+          "kind": "table",
+          "x": 55,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "height_ft": 3,
+          "label": "终条与原物清点房·核验桌"
+        },
+        {
+          "id": "C4-stair",
+          "kind": "stairs",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "height_ft": 5,
+          "label": "五尺宽台阶，地面至+5尺"
+        },
+        {
+          "id": "C4-chest",
+          "kind": "chest",
+          "x": 60,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "height_ft": 3,
+          "label": "原件/物资柜；西门可达"
+        },
+        {
+          "id": "C4-cart",
+          "kind": "cart",
+          "x": 20,
+          "y": 40,
+          "w": 10,
+          "h": 5,
+          "height_ft": 4,
+          "label": "普通货车；并非免费所有权"
+        }
+      ],
+      "surfaces": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "z": 0
+        },
+        {
+          "x": 46,
+          "y": 11,
+          "w": 24,
+          "h": 33,
+          "z": 5
+        }
+      ],
+      "roofs": [
+        {
+          "id": "C4-roof",
+          "x": 45,
+          "y": 10,
+          "w": 26,
+          "h": 35,
+          "height_ft": 15
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          22.5
+        ],
+        [
+          7.5,
+          27.5
+        ],
+        [
+          12.5,
+          22.5
+        ],
+        [
+          12.5,
+          27.5
+        ]
+      ],
+      "scaleNote": "本作原创80×60尺局部战术场地；地图外行程按正文小时/日历，绝不从此图推异界年差。地面0、屋内+5、屋顶+15；屋顶不作免费准入。"
+    }
+  },
+  "npcs": {
+    "sponsor": {
+      "name": "豪族资助者",
+      "location": "A1",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "publisher": {
+      "name": "商行编辑",
+      "location": "A1",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "attendant": {
+      "name": "成年侍从·穗",
+      "location": "A2",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "courier": {
+      "name": "代办墨途",
+      "location": "A2",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "captain": {
+      "name": "海滨卫队长",
+      "location": "A3",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral",
+      "type": "guard"
+    },
+    "scribe": {
+      "name": "独立执笔人",
+      "location": "A3",
+      "x": 62.5,
+      "y": 37.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "kin": {
+      "name": "送讯家属·汀",
+      "location": "B1",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "fisher": {
+      "name": "渔户潮笠",
+      "location": "B1",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "silversmith": {
+      "name": "岸边银匠",
+      "location": "B1",
+      "x": 62.5,
+      "y": 37.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "heir": {
+      "name": "成年继承者·禾守",
+      "location": "B2",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "friend": {
+      "name": "旧友荷生",
+      "location": "B2",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "returner": {
+      "name": "归返者·浦人",
+      "location": "B2",
+      "x": 62.5,
+      "y": 37.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "finder": {
+      "name": "拾衣者·松吉",
+      "location": "B3",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "celestial": {
+      "name": "自主的天人",
+      "location": "B3",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "town": {
+      "name": "镇方正",
+      "location": "C1",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "carrier": {
+      "name": "器具承运脚夫头",
+      "location": "C1",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "physician": {
+      "name": "医家·萩",
+      "location": "C2",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "patient": {
+      "name": "成年当事人·衣代",
+      "location": "C2",
+      "x": 62.5,
+      "y": 37.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "fox": {
+      "name": "使者狐",
+      "location": "C2",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "head": {
+      "name": "神主家当主",
+      "location": "C3",
+      "x": 52.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "town-hearing": {
+      "name": "镇方正（听证）",
+      "location": "C3",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "split-custodian": {
+      "name": "分流处自愿记录柜保管人",
+      "location": "C4",
+      "x": 62.5,
+      "y": 37.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    },
+    "rental-owner": {
+      "name": "帘椅原物主",
+      "location": "C4",
+      "x": 12.5,
+      "y": 17.5,
+      "status": "可会面",
+      "attitude": "可交谈",
+      "side": "neutral"
+    }
+  },
+  "handouts": [
+    {
+      "id": "a-terms",
+      "title": "资助与作者权",
+      "text": "30GP旅费买获准作者副本，须标资助；40GP商稿买自己稿的首次独家刊载，不买第三人秘密。两项互斥部分须先解约。",
+      "chapter": 2
+    },
+    {
+      "id": "a-seal",
+      "title": "侍从封件外签",
+      "text": "属本人可处分的普通工作抄件。可亲交、20GP凡人代办或只引介；不入资助/商行副本。三室不武装搜查，主家不答黄泉道路，比礼登记出处/去向/归还条件。",
+      "chapter": 3
+    },
+    {
+      "id": "b-terms",
+      "title": "银扣与接应",
+      "text": "家属银扣约20GP，未经同意不出售。渔户20GP买一趟普通岸边接应，不穿异界、不保岁月、不无限续。关系可友情/亲属/淡出。",
+      "chapter": 6
+    },
+    {
+      "id": "b-four",
+      "title": "世界侧四栏与现住处",
+      "text": "盟约对象自然病故／旧汛盟到期／称号交成年继承者／村内水路修整关闭。不是接应消费的报复。15GP客房照护；旧友自愿共住含一次采买；先取本人物再定住处。",
+      "chapter": 7
+    },
+    {
+      "id": "c-budget",
+      "title": "限定公库60GP",
+      "text": "60枚普通GP属公库；20陆运，查原单10分运，或0让批。照护20、场地0/到物10/租物30、终约30/20/40另列，不是全部强制。未用款退镇方。",
+      "chapter": 10
+    }
+  ],
+  "endings": [
+    {
+      "id": "a-shelter",
+      "title": "1a · 谈成有限庇护",
+      "text": "庇护与稿权并录。读A1实收款/A2原件实际交接/A3稿源与更正；履约的30不追退，未完事仍留。每个人保有下一份工作的选择。"
+    },
+    {
+      "id": "a-separate",
+      "title": "1b · 别席而同卷",
+      "text": "各自陈述，援助与原合同照实兑现。独立或合法商业稿不变恶人；封件只按本人授权，已经交付不撤回。"
+    },
+    {
+      "id": "a-close",
+      "title": "1c · 封通道，债物仍在",
+      "text": "异界通道按当事人同意封存，普通稿权、欠款、封件去向与已经完成的照护不被抹掉。"
+    },
+    {
+      "id": "a-research",
+      "title": "1d · 并列研究",
+      "text": "不取神话别名亦可。异说与作者源并列，受托抄件不被收为公共所有；付过与没付过的钱逐项结清。"
+    },
+    {
+      "id": "b-stay",
+      "title": "2a · 留居，来讯仍可往来",
+      "text": "当事人自选留居，岸上人继续安排生活。读银扣/接应、住处/采买、退款/送件三账；已购买的可履服务真实兑现，不捏造无限劳力。"
+    },
+    {
+      "id": "b-return",
+      "title": "2b · 迟归的户籍",
+      "text": "归返者以现在的名字登记；已获旧物与住宿保留，继承者现生活不被抹掉。银扣、接应、欠款和送件按实结。"
+    },
+    {
+      "id": "b-age",
+      "title": "2c · 身体已变，生活继续",
+      "text": "有权本人知情开匣：匣开、白云出、身体变老。无本作追加HP/属性/死亡惩罚；合法年龄调整照原物条文。住处和授权照实，不用老化替别人签字。"
+    },
+    {
+      "id": "b-seal",
+      "title": "2d · 守匣并记原诫",
+      "text": "守匣或交还保管权，原匣只一件，不复制施法宝。读银扣/接应、住处/采买、退款/送件；拒亲密与不打开均可完整收束。"
+    },
+    {
+      "id": "c-town",
+      "title": "3a · 镇护有限成立",
+      "text": "按实际款与劳动对签，神主家下一期两次巡场。退未用普通公款、按原主还帘椅，医家照护与私录授权照旧；不是永久赎买。"
+    },
+    {
+      "id": "c-boundary",
+      "title": "3b · 边界与申诉",
+      "text": "边界路标与一次非武装巡视落实，门外陈述仍有资格。实际钱、器具、正常照护、授权与有限工作再次读回，不把拒祀判作邪恶。"
+    },
+    {
+      "id": "c-split",
+      "title": "3a · 分流安置成立",
+      "text": "两处普通房舍、可用柜与搬运逐项落实。小写c提案成功不是祭期空过；保持双方隐私与申诉，不强迫商队捐房。"
+    },
+    {
+      "id": "c-open",
+      "title": "3c · 本祭期空过，成果保留",
+      "text": "必要安排尚未得到真实资源/同意，本期留未成文；退余款、还原物、列待谈人。调查、已完成照护和已救者仍在，不新造灾祸惩罚。"
+    }
+  ],
+  "ruleCards": [
+    {
+      "id": "consent",
+      "title": "Influence与真实同意",
+      "category": "通用",
+      "tags": [
+        "2024",
+        "同意"
+      ],
+      "summary": "愿意者不用骰，拒绝者不被高骰强签；犹豫者按真实2024条文。",
+      "sourceUrl": "https://www.dndbeyond.com/srd",
+      "page": 184
+    },
+    {
+      "id": "spell-open",
+      "title": "合法法术与自由方案",
+      "category": "通用",
+      "tags": [
+        "法术",
+        "主持"
+      ],
+      "summary": "按钮不等于能力白名单。按实际目标、语言、组件、位阶、持续与本人意愿裁定；确实省钱省工就承认。",
+      "sourceUrl": "https://www.dndbeyond.com/srd"
+    },
+    {
+      "id": "source",
+      "title": "来源层位",
+      "category": "文化",
+      "tags": [
+        "来源"
+      ],
+      "summary": "古事记/日本书纪、万叶浦岛组、能羽衣与后世祀制分层；合同、角色、价格与地图为原创改编。无现实仪轨步骤。"
+    }
+  ]
+}

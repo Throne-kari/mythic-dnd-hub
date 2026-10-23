@@ -1,0 +1,591 @@
+[
+  {
+    "id": "fengshen",
+    "pantheon": "中国神话",
+    "title": "封神·岐路",
+    "subtitle": "世路人情",
+    "version": "0.3",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "六幕十二回",
+    "tags": [
+      "封神",
+      "成长战役",
+      "抉择"
+    ],
+    "description": "从朝歌走向封神之战，四名同行者在粮药、盟约与人情之间，走完六幕十二回。",
+    "defaultPort": 8811,
+    "status": "ready",
+    "directory": "games/fengshen",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家须知",
+        "path": "docs/玩家须知_世路人情.md"
+      },
+      {
+        "title": "主持增补",
+        "path": "docs/主持增补_世路人情.md"
+      },
+      {
+        "title": "AI 接入",
+        "path": "AI_DM_GUIDE.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "japan",
+    "pantheon": "日本神话",
+    "title": "镜与归路",
+    "subtitle": "暗潮归灯",
+    "version": "2.0",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "十二节点 · 四类结局",
+    "tags": [
+      "海岸",
+      "归返",
+      "证言"
+    ],
+    "description": "借船渡潮，找回被托付的证言。救下的人与许下的约定，将改变归返的路。",
+    "defaultPort": 8799,
+    "status": "ready",
+    "directory": "games/japan",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家简报",
+        "path": "docs/source/PLAYER_BRIEF.md"
+      },
+      {
+        "title": "主持正文",
+        "path": "docs/source/GM_SESSION.md"
+      },
+      {
+        "title": "AI 接入",
+        "path": "AI_DM_GUIDE.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "pantheon": "印度神话",
+    "title": "乳海余波",
+    "subtitle": "甘露的代价",
+    "version": "2.0",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "十二节点 · 四类结局",
+    "tags": [
+      "夜潮",
+      "救援",
+      "债册"
+    ],
+    "description": "夜潮中撤离，工伤债册与救命药握在手中。每一次交接，都决定谁能获得下一份援手。",
+    "defaultPort": 8800,
+    "status": "ready",
+    "directory": "games/india",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家简报",
+        "path": "PLAYER_BRIEF.md"
+      },
+      {
+        "title": "主持正文",
+        "path": "GM_SESSION.md"
+      },
+      {
+        "title": "AI 接入",
+        "path": "AI_DM_GUIDE.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "norse",
+    "pantheon": "北欧神话",
+    "title": "断誓之冬",
+    "subtitle": "盐峡湾",
+    "version": "3.2",
+    "players": "1–4 人",
+    "mode": "无需主持",
+    "chapters": "三章 · 56 场景 · 24 结局",
+    "tags": [
+      "合作",
+      "寒冬",
+      "誓言"
+    ],
+    "description": "在盐峡湾的漫长寒冬里，追寻死者证词、守住迁徙者的家园，决定港口权力的归属。",
+    "defaultPort": 18842,
+    "status": "ready",
+    "directory": "games/norse",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "游玩指南",
+        "path": "docs/PLAY_GUIDE.md"
+      },
+      {
+        "title": "规则",
+        "path": "docs/RULES.md"
+      },
+      {
+        "title": "智能体协议",
+        "path": "docs/PROTOCOL.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia",
+    "pantheon": "美索不达米亚",
+    "title": "七门之债",
+    "subtitle": "吉尔伽美什核心篇",
+    "version": "3.2",
+    "players": "1–4 人",
+    "mode": "无需主持",
+    "chapters": "三章 · 27 节点 · 24 结局",
+    "tags": [
+      "合作",
+      "王权",
+      "亡途"
+    ],
+    "description": "水、名字与死债纠缠在纳鲁渡。与吉尔伽美什交涉，决定一座城如何度过第七门。",
+    "defaultPort": 8845,
+    "status": "ready",
+    "directory": "games/mesopotamia",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "合作指南",
+        "path": "docs/COOP.md"
+      },
+      {
+        "title": "规则",
+        "path": "docs/RULES.md"
+      },
+      {
+        "title": "剧情",
+        "path": "docs/STORY.md"
+      },
+      {
+        "title": "智能体协议",
+        "path": "docs/AGENT_PROTOCOL.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "greek",
+    "pantheon": "希腊神话",
+    "title": "无葬之城",
+    "subtitle": "城门未闭",
+    "version": "1.0",
+    "players": "1–4 人＋可选主持",
+    "mode": "主持＋玩家",
+    "chapters": "四章 · 36 阶段 · 24 结局",
+    "tags": [
+      "城邦",
+      "葬仪",
+      "神谕"
+    ],
+    "description": "葬仪、粮路与被删改的神谕，织成爱琴海城邦的最后四章。封港之前，你们将把城交给谁？",
+    "defaultPort": 8841,
+    "status": "ready",
+    "directory": "games/greek",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家说明",
+        "path": "docs/PLAYER_GUIDE.md"
+      },
+      {
+        "title": "主持指南",
+        "path": "docs/STORY_GUIDE.md"
+      },
+      {
+        "title": "智能体协议",
+        "path": "docs/AGENT_PROTOCOL.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "celtic",
+    "pantheon": "凯尔特神话",
+    "title": "荆冠与归潮",
+    "subtitle": "七夜之外",
+    "version": "1.0",
+    "players": "1–4 人",
+    "mode": "无需主持",
+    "chapters": "三章 · 52 场景 · 24 结局",
+    "tags": [
+      "合作",
+      "异界",
+      "誓禁"
+    ],
+    "description": "荆冠下的土地需要供养，异界归来的人错过了一生。四名英雄穿过归潮，寻找自己的名字。",
+    "defaultPort": 18846,
+    "status": "ready",
+    "directory": "games/celtic",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "规则",
+        "path": "docs/RULES.md"
+      },
+      {
+        "title": "战役",
+        "path": "docs/CAMPAIGN.md"
+      },
+      {
+        "title": "人物",
+        "path": "docs/CHARACTERS.md"
+      },
+      {
+        "title": "AI 队友",
+        "path": "AI_PLAYER_GUIDE.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "aztec",
+    "pantheon": "阿兹特克神话",
+    "title": "第五日之城",
+    "subtitle": "湖田、烟镜与亡途",
+    "version": "3.0",
+    "status": "ready",
+    "players": "1–4 人",
+    "mode": "无需主持",
+    "chapters": "三章 · 27 节点 · 24 结局",
+    "tags": [
+      "合作",
+      "湖城",
+      "太阳"
+    ],
+    "description": "湖田、烟镜与亡者归途交织成第五日之城。与四名同伴踏过湖港，决定太阳与活城的明日。",
+    "defaultPort": 8856,
+    "directory": "games/aztec",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家指南",
+        "path": "docs/PLAYER_GUIDE.md"
+      },
+      {
+        "title": "世界",
+        "path": "docs/WORLD.md"
+      },
+      {
+        "title": "智能体协议",
+        "path": "docs/AGENT_PROTOCOL.md"
+      }
+    ]
+  },
+  {
+    "id": "jaffa",
+    "pantheon": "历史虚构",
+    "title": "雅法余烬",
+    "subtitle": "夜火余账",
+    "version": "3.0",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "六景 · 六类结局",
+    "tags": [
+      "港城",
+      "救援",
+      "历史虚构"
+    ],
+    "description": "盐仓火后，救援尚未结束。欠薪、床粮、证据与炉火的归属，等待你们在天亮前作答。",
+    "defaultPort": 8812,
+    "status": "ready",
+    "directory": "games/jaffa",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家指南",
+        "path": "docs/PLAYER_NIGHT_ACCOUNTS.md"
+      },
+      {
+        "title": "主持补篇",
+        "path": "docs/GM_NIGHT_ACCOUNTS.md"
+      },
+      {
+        "title": "AI 接入",
+        "path": "AI_DM_GUIDE.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "qchina",
+    "pantheon": "中国神话",
+    "title": "三册异途",
+    "subtitle": "中国神话三弧",
+    "version": "2.0",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "三弧 · 13 节点",
+    "tags": [
+      "独立短篇",
+      "契约",
+      "三弧"
+    ],
+    "description": "三条可分别开团的故事，从文书、约定与受托之物出发，各自抵达不同的归路。",
+    "defaultPort": 8829,
+    "status": "ready",
+    "directory": "games/qchina",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家本",
+        "path": "manuscript/rules/PLAYER_PACKET.md"
+      },
+      {
+        "title": "主持本",
+        "path": "manuscript/rules/READING_DRAFT.md"
+      },
+      {
+        "title": "分批手札",
+        "path": "manuscript/rules/HANDOUTS.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "qjapan",
+    "pantheon": "日本神话",
+    "title": "日本神话三弧",
+    "subtitle": "五名之主 · 携云的匣 · 可畏者的登录",
+    "version": "2.1",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "三弧 · 13 节点",
+    "tags": [
+      "独立短篇",
+      "姓名",
+      "归返"
+    ],
+    "description": "《五名之主》《携云的匣》《可畏者的登录》：在归返、署名与祭期之间，留下自己的决定。",
+    "defaultPort": 8827,
+    "status": "ready",
+    "directory": "games/qjapan",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家本",
+        "path": "manuscript/PLAYER_PACKET.md"
+      },
+      {
+        "title": "主持本",
+        "path": "manuscript/READING_DRAFT.md"
+      },
+      {
+        "title": "主持手札",
+        "path": "manuscript/GM_HANDOUTS.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "qindia",
+    "pantheon": "印度神话",
+    "title": "印度神话三弧",
+    "subtitle": "十四年与一个承诺 · 分甘之约 · 未赴的席",
+    "version": "2.1",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "三弧 · 13 节点",
+    "tags": [
+      "独立短篇",
+      "承诺",
+      "离别"
+    ],
+    "description": "《十四年与一个承诺》《分甘之约》《未赴的席》：面对约定、劳务与离别，选择一条仍能继续的路。",
+    "defaultPort": 8828,
+    "status": "ready",
+    "directory": "games/qindia",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家本",
+        "path": "manuscript/PLAYER_PACKET.md"
+      },
+      {
+        "title": "主持本",
+        "path": "manuscript/READING_DRAFT.md"
+      },
+      {
+        "title": "主持手札",
+        "path": "manuscript/GM_SCRIPT_AND_HANDOUTS.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  },
+  {
+    "id": "acre",
+    "pantheon": "历史虚构",
+    "title": "阿卡账房",
+    "subtitle": "围城中的交接",
+    "version": "2.0",
+    "players": "4 人＋主持",
+    "mode": "主持＋玩家",
+    "chapters": "三时段 · 12 节点",
+    "tags": [
+      "围城",
+      "账房",
+      "历史虚构"
+    ],
+    "description": "阿卡围城中的十二个节点。豆粮、船位与人的去留，都写在一张不能替别人签名的交接单上。",
+    "defaultPort": 8831,
+    "status": "ready",
+    "directory": "games/acre",
+    "entry": "server.mjs",
+    "portEnv": "PORT",
+    "hostEnv": "HOST",
+    "dataEnv": "HUB_DATA_DIR",
+    "docs": [
+      {
+        "title": "开始游戏",
+        "path": "README.md"
+      },
+      {
+        "title": "玩家本",
+        "path": "manuscript/docs/PLAYER_PACKET.md"
+      },
+      {
+        "title": "主持本",
+        "path": "manuscript/docs/GM_ACRE_LEDGER.md"
+      },
+      {
+        "title": "后果矩阵",
+        "path": "manuscript/docs/CONSEQUENCE_MATRIX.md"
+      },
+      {
+        "title": "来源与许可",
+        "path": "LICENSES.md"
+      }
+    ]
+  }
+]

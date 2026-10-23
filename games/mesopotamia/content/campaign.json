@@ -1,0 +1,5873 @@
+{
+  "id": "wet-seal-iii-gilgamesh-3-1",
+  "title": "泥印未干 3.1 · 吉尔伽美什与七门之债",
+  "subtitle": "活着的乌鲁克王、不能替换的死者、仍由你们决定的纳鲁渡",
+  "intro": "纳鲁渡的闸门逆流之夜，吉尔伽美什带着自己的粮队与测水人到港。这位仍活着的乌鲁克王做过一场死梦，想在本城旧河床修一座将来属于自己的空墓。他的粮与工程能力都是真的；纳鲁渡却不是他的属城，调查、抄名和征役都要另取本地许可。\n恩奇都已经失去，王仍在等一个无人能代答的声音。梦里未来幽魂可能有的裁判身份，不是今日的神权。你们可合作、限权、拒绝或借用他的目标；四位同伴与本城的欠账仍各有自己的名字。\n纳鲁渡的闸门开始逆流。四名工人仍在北堤，城库的死籍已经替他们领走葬粮；神庙地下，七道门按城籍号索要活人的替身。\n第一章先救人、取得临时权利；第二章把欠薪、水权、卷宗与门下债分开对质；第三章面对自己许下的承诺和造成的反扑。每章三条线可以交织处理，成功或失败都能交接，三线交接后才进入下一章。\n选择前可见即时代价；工资、现金借款、匿名、船权和伤亡分别记账。纳鲁渡及所有制度是原创，借用有来源标记的苏美尔语神话母题。游戏本地确定运行，不需模型或密钥。\n资源“净水”按瓮计量，是有限存量，不是水位或整城灌溉总量。岸上耗水用于验水、共同启闸封泥与饮用；公开轮次或果园抵押关系使既存粮仓放粮。水权和工程另记事实，不靠花水改变河势。起手净水由七碗庙借供，终门可归还维系托身的借水。前两章下行是留肉身于庙的活绳托身见证，只有记录与誓印可返岸；最终裁债才肉身过第七门。",
+  "initial": {
+    "grain": 12,
+    "silver": 24,
+    "water": 1,
+    "dread": 0
+  },
+  "companions": [
+    {
+      "id": "karat",
+      "name": "卡拉特",
+      "role": "堤工盾手",
+      "description": "欠着十二份工资的工头，也在虚报验收上签过名。他要拿回真工钱，不能靠救人洗掉旧签名。",
+      "hp": 28,
+      "attack": 6,
+      "armor": 2,
+      "range": 1
+    },
+    {
+      "id": "nisaya",
+      "name": "妮萨雅",
+      "role": "泥板见证人",
+      "description": "保管被刮改的原件。愿解释自己亲见的事，拒绝替匿名住户同意公开姓名。",
+      "hp": 20,
+      "attack": 5,
+      "armor": 1,
+      "range": 4
+    },
+    {
+      "id": "belu",
+      "name": "贝鲁",
+      "role": "渡船斥候",
+      "description": "船主，擅长远射与穿行。愿意约定社区渡次，船权与私人亲密从来分开。",
+      "hp": 22,
+      "attack": 6,
+      "armor": 1,
+      "range": 5
+    },
+    {
+      "id": "suen",
+      "name": "苏恩",
+      "role": "测水与照护",
+      "description": "老测水人，在死籍上看见自己的名字。他仍活着；他的父亲却真的留在第七门之后。",
+      "hp": 24,
+      "attack": 4,
+      "armor": 1,
+      "range": 3
+    }
+  ],
+  "factions": [
+    {
+      "id": "commons",
+      "name": "渡口共议",
+      "description": "工人、船户与沿渠住户组成的临时议席。要求救援、真实工钱和可查的供水轮次。"
+    },
+    {
+      "id": "house",
+      "name": "城库与城印",
+      "description": "艾迪勒主持的城库。能调粮、发令，也能把紧急授权延伸为永久统治。"
+    },
+    {
+      "id": "temple",
+      "name": "七碗神庙",
+      "description": "守水与葬仪的祭司群体，内部意见不一。祭司并非诸神的绝对代言人。"
+    },
+    {
+      "id": "shades",
+      "name": "门下无名者",
+      "description": "被漏祭、误记或写作替身的亡者。并非所有亡灵敌视活人，更非善恶审判机关。"
+    }
+  ],
+  "routes": [
+    {
+      "id": "ch1-canal",
+      "lane": "canal",
+      "chapter": "ch1",
+      "title": "夜水：救援与配水",
+      "conflict": "先救谁、怎样救，活命不买来服从。",
+      "summary": "本章三节点；成功与失败都可交接。",
+      "color": "#62cfc1"
+    },
+    {
+      "id": "ch1-archive",
+      "lane": "archive",
+      "chapter": "ch1",
+      "title": "城印：临时受理",
+      "conflict": "一夜授权何时归还？",
+      "summary": "本章三节点；匿名保护与真实证据各自记录。",
+      "color": "#e7b16c"
+    },
+    {
+      "id": "ch1-descent",
+      "lane": "descent",
+      "chapter": "ch1",
+      "title": "两门：本人姓名",
+      "conflict": "父亲要的平安是否建立在另一个人名上？",
+      "summary": "本章三节点；逐门推进，零资源仍有失败出口。",
+      "color": "#bd8de2"
+    },
+    {
+      "id": "ch2-canal",
+      "lane": "canal",
+      "chapter": "ch2",
+      "title": "涨水：欠薪与水权",
+      "conflict": "冬粮能保眼前，却把下一季的水交给谁？",
+      "summary": "本章三节点；成功与失败都可交接。",
+      "color": "#62cfc1"
+    },
+    {
+      "id": "ch2-archive",
+      "lane": "archive",
+      "chapter": "ch2",
+      "title": "原件：问责与初案",
+      "conflict": "真证据、愿具名的人和受理权必须分别成立。",
+      "summary": "本章三节点；匿名保护与真实证据各自记录。",
+      "color": "#e7b16c"
+    },
+    {
+      "id": "ch2-descent",
+      "lane": "descent",
+      "chapter": "ch2",
+      "title": "六门：父债与别人的明年",
+      "conflict": "拿了钱、扣了封套或夺了钥，后面有人会来问。",
+      "summary": "本章三节点；逐门推进，零资源仍有失败出口。",
+      "color": "#bd8de2"
+    },
+    {
+      "id": "ch3-canal",
+      "lane": "canal",
+      "chapter": "ch3",
+      "title": "新岸：危机与交接",
+      "conflict": "过去的签名与洪水都回来了，谁愿再动一次锤？",
+      "summary": "本章三节点；成功与失败都可交接。",
+      "color": "#62cfc1"
+    },
+    {
+      "id": "ch3-archive",
+      "lane": "archive",
+      "chapter": "ch3",
+      "title": "外庭：最终政体",
+      "conflict": "谁保管原件，谁能检查掌印者？",
+      "summary": "本章三节点；匿名保护与真实证据各自记录。",
+      "color": "#e7b16c"
+    },
+    {
+      "id": "ch3-descent",
+      "lane": "descent",
+      "chapter": "ch3",
+      "title": "七门：首次执行与最终债制",
+      "conflict": "归来以后，谁有权拒绝下一份债？",
+      "summary": "本章三节点；逐门推进，零资源仍有失败出口。",
+      "color": "#bd8de2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ch1-canal-1",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "title": "湿盘里的十二份工钱",
+      "map": "harbor",
+      "text": "艾迪勒摊开二十四份修堤银。卡拉特的手停在盘沿：“欠工班十二份。假验收也是我签的。少一个承包季，我手下的人就得散。”\n城库另有六份工伤抚恤压在柜里。艾迪勒愿把它作为紧急修闸款交出，但要你们在死者家属的领取格上盖章。窗外果园仓门锁着，管事说只有取得泄洪闸证才放出抵押冬粮。\n吉尔伽美什在另一只盘里摆出自己王库的粮签。“我付工人的真薪，也带测水人来。只先请一段河床的测绘机会。”卡拉特没有去拿：“我那行假签不能被你买走。”王答应，已发的工资不向工人追还；是否准挖空墓，仍要另议。",
+      "choices": [
+        {
+          "id": "pay",
+          "label": "先付清十二份真工资",
+          "preview": "银−12；工资已付、工班愿协作；渡口+2、卡拉特+2。假验收仍待追责。 不接受王库代付，王未取得征役权。",
+          "effects": {
+            "flags": [
+              "wages_paid",
+              "paid_hands",
+              "gilg_met",
+              "gilg_local_purse_independent",
+              "gilg_wage_offer_declined"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "relationships": {
+              "karat": 2
+            },
+            "text": "吉尔伽美什收回代付的盘，改让测水队在岸外等正式申请。"
+          },
+          "cost": {
+            "silver": 12
+          },
+          "next": "ch1-canal-2"
+        },
+        {
+          "id": "iou",
+          "label": "让艾迪勒具名承接十日欠薪",
+          "preview": "免费；十二份工资仍欠，卡拉特留代表追款；城库+1、卡拉特−1。 未接受来王代付，城库欠薪仍由具名者承担。",
+          "effects": {
+            "flags": [
+              "wages_due",
+              "gilg_met",
+              "gilg_wage_offer_declined"
+            ],
+            "factions": {
+              "house": 1
+            },
+            "relationships": {
+              "karat": -1
+            },
+            "text": "王提出过真实代付，但你们没有替工班或城市接下他的条件。"
+          },
+          "next": "ch1-canal-2"
+        },
+        {
+          "id": "divert",
+          "label": "将六份工伤抚恤拨作急用",
+          "preview": "银+6、恐惧+1；留下侵吞抚恤史及家属追款；渡口−2、卡拉特−2。确能多买修闸材料，但家属失去当期款。 吉尔伽美什好感−1，家属仍追款；不是王的命令。",
+          "effects": {
+            "flags": [
+              "wages_due",
+              "relief_money_diverted",
+              "gilg_met",
+              "gilg_family_fund_witnessed"
+            ],
+            "resources": {
+              "silver": 6,
+              "dread": 1
+            },
+            "factions": {
+              "commons": -2
+            },
+            "relationships": {
+              "karat": -2
+            },
+            "npcRelationships": {
+              "gilgamesh": -1
+            },
+            "text": "吉尔伽美什把家属款的用途另记一行，拒绝让自己的代付提案混成这次侵吞的授权。"
+          },
+          "next": "ch1-canal-2"
+        },
+        {
+          "id": "royal-wages",
+          "label": "接受王库真薪与四粮，只许先测绘",
+          "preview": "王库直接付十二工资，不扣队伍银；粮+4，工资已付且工班愿协作。仅给测绘机会，挖墓须另批；工人不退已付薪，假签照问责。吉尔伽美什+2、卡拉特+1。",
+          "effects": {
+            "flags": [
+              "gilg_met",
+              "gilg_credit_accepted",
+              "gilg_survey_lease",
+              "wages_paid",
+              "paid_hands"
+            ],
+            "resources": {
+              "grain": 4
+            },
+            "relationships": {
+              "karat": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "text": "工人逐人收到真薪。测水人把桩立在岸外，王承认它不是开墓令。"
+          },
+          "next": "ch1-canal-2"
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-canal-2",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "title": "四个人，四份自己的东西",
+      "map": "harbor",
+      "text": "阿杜把沉筐推到一边；玛妮捏着一张尚未防水的工资副页；伊利答应扶着苏恩的成年外甥过高堤。贝鲁把船钥搁在脚下：“上次城库的货占了我的船。我让他们等过一次，这回不再先载货。”\n高堤可以免费走两趟，四人都同意先保人，重料与这张普通副页留在棚里；妮萨雅的原泥板另有保护。用船则可带走全部随身物。",
+      "requires": {
+        "flags": [
+          "node:ch1-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ferry",
+          "label": "付补给，约定两日社区渡次",
+          "preview": "粮−2；四人安全、工资副页保全、自愿社区渡次；船仍归贝鲁。渡口+2、贝鲁+2。",
+          "effects": {
+            "flags": [
+              "rescued_all",
+              "witnesses_safe",
+              "payroll_page",
+              "community_ferry"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "relationships": {
+              "belu": 2
+            }
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch1-canal-3"
+        },
+        {
+          "id": "highbank",
+          "label": "按本人同意分两趟走高堤",
+          "preview": "免费；四人全救回，留重料与未防水工资副页，副页随后浸坏；原泥板不受影响。贝鲁+1，仍可用其他证据查案。",
+          "effects": {
+            "flags": [
+              "rescued_all",
+              "witnesses_safe",
+              "luggage_left",
+              "payroll_page_lost"
+            ],
+            "relationships": {
+              "belu": 1
+            }
+          },
+          "next": "ch1-canal-3"
+        },
+        {
+          "id": "commandeer",
+          "label": "征船并扣留船员补给",
+          "preview": "粮+3、恐惧+2；四人获救、物件保全，但船权被夺。渡口−2、贝鲁−3；他为追船与接人继续同行，拒绝新增免费船务。",
+          "effects": {
+            "flags": [
+              "rescued_all",
+              "witnesses_safe",
+              "payroll_page",
+              "boat_seized",
+              "boat_claim_due"
+            ],
+            "resources": {
+              "grain": 3,
+              "dread": 2
+            },
+            "factions": {
+              "commons": -2
+            },
+            "relationships": {
+              "belu": -3
+            }
+          },
+          "next": "ch1-canal-3"
+        },
+        {
+          "id": "stop",
+          "label": "主动停止本轮救援",
+          "preview": "免费；四人留在安全高台并给出位置，后章可再接；恐惧+1，渡口−1。",
+          "effects": {
+            "flags": [
+              "people_waiting"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "commons": -1
+            }
+          },
+          "next": "ch1-canal-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-surveyors-ask",
+          "requires": {},
+          "text": "王的测水人问渡次是否优先载石；贝鲁当面回答只履行已经自愿签下的船约。王让他们把载石申请放到救援之后。"
+        },
+        {
+          "id": "high-platform-stores",
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "text": "高台是汛期避水仓，四人清点原有密封麦袋、雨水缸和熏鱼，足够等过这一轮施工日。岸上的接应者每日看灯号、送绳递信；要把人接下来，仍须另一次真正的渡救。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-canal-3",
+      "chapter": "ch1",
+      "route": "ch1-canal",
+      "title": "仓门前的一瓮水",
+      "map": "canal",
+      "text": "留岸的住户代表在分水桩旁摆好四只碗。共同米仓愿在验水与公开轮次成立后放四袋存粮，果园管事则递来六袋的抵押票：“给上渠优先权，我今晚开仓。”\n仓门后确有粮袋。你们这一瓮净水可用于共同验水与启闸封泥；验水仪式后的公开轮表或果园抵押票，才是既存粮仓互相放粮的依据；若只发旱粮，就须承认临时供水尚未办成。",
+      "requires": {
+        "flags": [
+          "node:ch1-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "share",
+          "label": "按住户与菜圃轮次分水",
+          "preview": "需净水1并消耗1；粮+4，公开轮次成立；本章水务成功，渡口+2、城库−1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "water_shared"
+            ],
+            "resources": {
+              "water": -1,
+              "grain": 4
+            },
+            "completeRoute": "ch1-canal",
+            "factions": {
+              "commons": 2,
+              "house": -1
+            }
+          },
+          "requires": {
+            "resources": {
+              "water": 1
+            }
+          }
+        },
+        {
+          "id": "orchard",
+          "label": "交水换果园仓的六袋冬粮",
+          "preview": "需净水1并消耗1；粮+6，果园优先、住户限水；本章水务成功，城库+2、渡口−1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "orchard_priority"
+            ],
+            "resources": {
+              "water": -1,
+              "grain": 6
+            },
+            "completeRoute": "ch1-canal",
+            "factions": {
+              "house": 2,
+              "commons": -1
+            }
+          },
+          "requires": {
+            "resources": {
+              "water": 1
+            }
+          }
+        },
+        {
+          "id": "ration",
+          "label": "发旱粮并登记供水未成",
+          "preview": "免费；粮+2，本章水务失败结算；已救者安全，等候者仍可在后章救援。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:canal:settled",
+              "first_water_failed",
+              "water_rationed"
+            ],
+            "resources": {
+              "grain": 2
+            },
+            "failRoutes": [
+              "ch1-canal"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "arrived-mani",
+          "requires": {
+            "flags": [
+              "rescued_all"
+            ]
+          },
+          "text": "玛妮从岸上住户手里接过空碗，先把自己那份与别人摆在一样远的位置。"
+        },
+        {
+          "id": "waiting-signal",
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "text": "高台灯号仍在远处。代表在轮表上为四位等候者保留份额，不替他们作新的承诺。"
+        },
+        {
+          "id": "gilg-water-not-grave",
+          "requires": {},
+          "text": "吉尔伽美什把墓图暂时卷起，先看本城怎么决定这一瓮水。他手里的王印尚不能改变这里的配水表。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-archive-1",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "title": "妮萨雅盖过的空行",
+      "map": "archive",
+      "text": "妮萨雅用指甲挡住原件的一行空白：“这格是我留下的。当时艾迪勒说，写成暂缺就能先给两户发粮。我盖了印。后来他们被写成了死户。”\n艾迪勒承诺，若把另外两户也改为空户，仓里会马上放四份周转银。他把空白城印推过来；保管人的眼神一直停在你们手上。",
+      "choices": [
+        {
+          "id": "copy",
+          "label": "独立封存刮改前后的副本",
+          "preview": "银−4；保全证据与妮萨雅责任痕迹，妮萨雅+2。",
+          "effects": {
+            "flags": [
+              "evidence_intact",
+              "evidence_copy"
+            ],
+            "relationships": {
+              "nisaya": 2
+            }
+          },
+          "cost": {
+            "silver": 4
+          },
+          "next": "ch1-archive-2"
+        },
+        {
+          "id": "oral",
+          "label": "免费记录她愿说的事实",
+          "preview": "免费；取得口述，保留原件所在地；可在中章现场复核补证，妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "oral_evidence"
+            ],
+            "relationships": {
+              "nisaya": 1
+            }
+          },
+          "next": "ch1-archive-2"
+        },
+        {
+          "id": "forge",
+          "label": "接受拨款，把两户改成空户",
+          "preview": "银+4、恐惧+1；周转款真实到手，但伪证史永久保留，两户配粮被扣。城库+2、妮萨雅−3。",
+          "effects": {
+            "flags": [
+              "forged_evidence",
+              "false_empty_houses"
+            ],
+            "resources": {
+              "silver": 4,
+              "dread": 1
+            },
+            "factions": {
+              "house": 2
+            },
+            "relationships": {
+              "nisaya": -3
+            }
+          },
+          "next": "ch1-archive-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-second-copy-proposed",
+          "requires": {},
+          "text": "王的书记只带来一页抄本请求，妮萨雅没有把原件交过去。她要求先公开查阅对象与用途，再谈来王的名录。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-archive-2",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "title": "鲁姆的倒印",
+      "map": "harbor",
+      "text": "鲁姆把倒印的新令钉在交接台上：“十二份特别通行费。”身后的收费看守抬起粮箱，等着你们决定要不要留下证据。\n一份独立副本足以比对章向，到岸的住户也认得他昨晚换令的手。船道仍通着；绕过这道关，勒索会继续找下一个人。",
+      "requires": {
+        "flags": [
+          "node:ch1-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "compare",
+          "label": "拿副本当场比章",
+          "preview": "需封存副本；免费，取得有效受理凭证并揭穿鲁姆；城库−1、妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "gate_order",
+              "ruum_exposed"
+            ],
+            "factions": {
+              "house": -1
+            },
+            "relationships": {
+              "nisaya": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "evidence_copy"
+            ]
+          },
+          "next": "ch1-archive-3"
+        },
+        {
+          "id": "witnesses",
+          "label": "请到岸住户说明亲见事实",
+          "preview": "需到岸证人；免费，揭穿假令、取得受理凭证；渡口+1，姓名公开仍须另行同意。",
+          "effects": {
+            "flags": [
+              "gate_order",
+              "ruum_exposed"
+            ],
+            "factions": {
+              "commons": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "witnesses_safe"
+            ]
+          },
+          "next": "ch1-archive-3"
+        },
+        {
+          "id": "fight",
+          "label": "制伏收费看守",
+          "preview": "免费开战；胜利才取得受理凭证与供词，渡口+1、城库−1。撤退另加恐惧1且无胜利奖励；全倒另加恐惧2、损银至多3，需休息。",
+          "effects": {
+            "flags": [
+              "gate_contested"
+            ]
+          },
+          "encounter": {
+            "id": "seal-guard",
+            "name": "交接台收费看守",
+            "enemies": [
+              {
+                "id": "seal-guard-1",
+                "name": "鲁姆",
+                "hp": 18,
+                "attack": 5,
+                "armor": 2,
+                "range": 1,
+                "x": 9,
+                "y": 6
+              },
+              {
+                "id": "seal-guard-2",
+                "name": "收费看守",
+                "hp": 11,
+                "attack": 4,
+                "armor": 1,
+                "range": 1,
+                "x": 12,
+                "y": 4
+              }
+            ],
+            "reward": {
+              "flags": [
+                "gate_order",
+                "ruum_exposed"
+              ],
+              "factions": {
+                "commons": 1,
+                "house": -1
+              }
+            }
+          },
+          "next": "ch1-archive-3"
+        },
+        {
+          "id": "bypass",
+          "label": "走船道，把勒索留作另案",
+          "preview": "免费；恐惧+1，尚无有效受理令，仍可后续补证。",
+          "effects": {
+            "flags": [
+              "gate_bypassed"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "next": "ch1-archive-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-not-ruum-source",
+          "requires": {},
+          "text": "鲁姆试图借乌鲁克王的名吓人。王的传令者当场声明：这张倒印收费令不是王队的工程牌；两项授权必须分开查。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-archive-3",
+      "chapter": "ch1",
+      "route": "ch1-archive",
+      "title": "借一夜城印",
+      "map": "temple",
+      "text": "塔玛在神庙外庭等住户进来。艾迪勒截住她：“先借一夜紧急授权，粮船才肯认我们的票。天亮再还。”妮萨雅问，谁来检查这“一夜”是否真的结束。\n你们可以把现有证据交给临时受理台，也可以把调粮与通行一起交给城库。外庭还有一张空桌，可以留下尚不够受理的线索。\n来王递上自己的印书，要抄城籍并议河床工程。艾迪勒想把它并进一夜授权，妮萨雅却把两份书拆开：“本城给谁什么权，要分别写。活王的名字也不能替缺席的人落笔。”",
+      "requires": {
+        "flags": [
+          "node:ch1-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "limited",
+          "label": "限定受理范围，让普通祭司见证",
+          "preview": "需有效受理令；免费，本章司法成功，取得临时个人授权与第三方见证；神庙+1。 王的征役和抄取实名权限未获准。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "provisional_jurisdiction",
+              "limited_authority",
+              "gilg_met",
+              "gilg_writ_bounded",
+              "gilg_limited_once",
+              "gilg_local_review"
+            ],
+            "completeRoute": "ch1-archive",
+            "factions": {
+              "temple": 1
+            },
+            "text": "吉尔伽美什接受本次受理只限本地争议，他的工程仍须另取许可。"
+          },
+          "requires": {
+            "flags": [
+              "gate_order"
+            ]
+          }
+        },
+        {
+          "id": "emergency",
+          "label": "给城库本章紧急通行授权",
+          "preview": "免费，本章司法成功；城库开始登记通行，城库+2、渡口−1；中章可能要求延权。 此令给艾迪勒，不自动给乌鲁克来王。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "emergency_authority",
+              "gilg_met",
+              "gilg_city_not_royal"
+            ],
+            "completeRoute": "ch1-archive",
+            "factions": {
+              "house": 2,
+              "commons": -1
+            },
+            "text": "王要求确认自己的名没有被写成这份城库授权的权源；书记分别留下申请。"
+          }
+        },
+        {
+          "id": "unheard",
+          "label": "留证并承认尚未受理",
+          "preview": "免费，本章司法失败；原有材料与已救人保持，后章仍可重新受理。 王的印书也未获本地受理，不产生默认施工权。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "first_hearing_failed",
+              "gilg_met",
+              "gilg_warrant_denied"
+            ],
+            "failRoutes": [
+              "ch1-archive"
+            ]
+          }
+        },
+        {
+          "id": "royal-warrant",
+          "label": "明确给王队查阅与议工许可，开工再议",
+          "preview": "免费，本章司法成功。王可抄取明列城籍、持工程牌议工；墓室开工和征本地役仍须后批。吉尔伽美什+2，妮萨雅−1；实名副本以后可被审计。 此项只登记王队合同，不凭外国王到场补发死籍案的受理令。 仅登记王队许可；鲁姆假令与死籍案仍待本地受理，留下延期史。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "gilg_met",
+              "gilg_royal_warrant",
+              "gilg_royal_warrant_ever",
+              "gilg_archive_access",
+              "gilg_survey_lease",
+              "gilg_engineering_seal",
+              "gilg_local_case_deferred"
+            ],
+            "completeRoute": "ch1-archive",
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "relationships": {
+              "nisaya": -1
+            },
+            "text": "本城在王印旁加了自己的授权范围。来王得到的是一份可被收回的许可，不是属城。妮萨雅在另一块案牌上写明：鲁姆假令及死籍尚未正式受理，不能拿这份外王许可销案。"
+          }
+        },
+        {
+          "id": "royal-limited",
+          "label": "只许匿名测绘与公共维修，留可撤条",
+          "preview": "需有效受理令。免费，本章司法成功，取得临时受理。王队仅可测绘、用匿名汇总与工程牌协调公共维修；不给实名名录或墓役。吉尔伽美什+1，妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:archive:settled",
+              "gilg_met",
+              "gilg_writ_bounded",
+              "gilg_limited_once",
+              "gilg_local_review",
+              "gilg_survey_lease",
+              "gilg_engineering_seal",
+              "provisional_jurisdiction",
+              "limited_authority"
+            ],
+            "completeRoute": "ch1-archive",
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "吉尔伽美什把越过条款边线的那截印泥刮掉，先让技师做能获许可的工作。"
+          },
+          "requires": {
+            "flags": [
+              "gate_order"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch1-descent-1",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "title": "乌鲁带来的家信",
+      "map": "temple",
+      "text": "成年传令员乌鲁递来七碗庙的下行回条，又把母亲给他的回信折进芦苇封套：“她说明春渡河时带一块干饼。我想把这差事做完。”\n庙库经办人愿借八银，条件把缺席住户的城籍号押给门下。塔玛把现金欠条与索人附条拆成两张：“拿钱的人承担现金债。别把别人也写进去。”\n塔玛把活绳交给乌鲁：前两次只作托身见证，肉身留庙。空手者也用自己的记忆作锚，恐惧是明示代价；到了最后裁债，肉身才会过第七门，结果便不能像回声那样收回。",
+      "choices": [
+        {
+          "id": "offering",
+          "label": "备粮请塔玛作自愿见证",
+          "preview": "粮−2、恐惧+1；得到塔玛实际见证，后章可协助保护/核印；神庙+1、苏恩+1。",
+          "effects": {
+            "flags": [
+              "descent_witness",
+              "tamma_witness",
+              "echo_anchor"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "temple": 1
+            },
+            "relationships": {
+              "suen": 1
+            }
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch1-descent-2"
+        },
+        {
+          "id": "own",
+          "label": "空手报自己的登记号下行",
+          "preview": "免费；恐惧+2，乌鲁仍送路条，苏恩+1。",
+          "effects": {
+            "flags": [
+              "unprotected_descent",
+              "echo_anchor"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "relationships": {
+              "suen": 1
+            }
+          },
+          "next": "ch1-descent-2"
+        },
+        {
+          "id": "mortgage",
+          "label": "领八银，把缺席者的城籍号作抵押",
+          "preview": "银+8、恐惧+2；现金债八银与未经同意索人条同时存在，侵权史永久保留；渡口−2、妮萨雅−2。",
+          "effects": {
+            "flags": [
+              "mortgage_ever",
+              "mortgage_cash_due",
+              "names_mortgaged",
+              "echo_anchor"
+            ],
+            "resources": {
+              "silver": 8,
+              "dread": 2
+            },
+            "factions": {
+              "commons": -2
+            },
+            "relationships": {
+              "nisaya": -2
+            }
+          },
+          "next": "ch1-descent-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-live-breath",
+          "requires": {},
+          "text": "来王把手按在仍起伏的胸口，问塔玛梦里的死后称号为何不肯现在应声。塔玛只接他的活人姓名，不替未来许诺。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-descent-2",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "title": "第一、二门：称名与摘印",
+      "map": "underworld",
+      "text": "塔玛与乌鲁留下的活绳，映在第一门脚边：你们的身体仍在庙里，门廊只收见证的回声。疼痛沿绳返身，所见与誓印能带回，亡者摸不到绳的另一头。\n\n第一门的门缝吹出晒过又浸湿的芦苇味。守门影收下头衔，把人名旁边的城籍号逐个念出；第二门的铜盘只接城印，不接你们带来的私名。\n乌鲁指着盘下的小字：此契索的是纳鲁渡登记号。户主本人可以注销它并放弃本城屋产继承；离港、换称呼或替别人注销，都不算同意。",
+      "requires": {
+        "flags": [
+          "node:ch1-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "relinquish",
+          "label": "暂放城印，以本人登记号通过",
+          "preview": "免费；恐惧+1，门槛通行及本人注销权得到确认；城库−1、亡者+1。",
+          "effects": {
+            "flags": [
+              "threshold_pass",
+              "personal_index_right"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "house": -1,
+              "shades": 1
+            }
+          },
+          "next": "ch1-descent-3"
+        },
+        {
+          "id": "limited",
+          "label": "展示临时受理台的有限授权",
+          "preview": "需临时个人授权；免费且不加恐惧，门槛通行及本人注销权确认；亡者+1、妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "threshold_pass",
+              "personal_index_right",
+              "gate_law"
+            ],
+            "factions": {
+              "shades": 1
+            },
+            "relationships": {
+              "nisaya": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "provisional_jurisdiction"
+            ]
+          },
+          "next": "ch1-descent-3"
+        },
+        {
+          "id": "bribe",
+          "label": "付给门吏四银暂认通行",
+          "preview": "银−4、恐惧+1；取得门槛通行与本人注销权；亡者−1，贿赂未解决债。",
+          "effects": {
+            "flags": [
+              "threshold_pass",
+              "personal_index_right",
+              "gate_bribed"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "shades": -1
+            }
+          },
+          "cost": {
+            "silver": 4
+          },
+          "next": "ch1-descent-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-utu-witness",
+          "requires": {},
+          "text": "吉尔伽美什请求把印书举到乌图的光下。塔玛答，光可以照清哪个人签了字，不能替伊南娜授权纳鲁渡，也不能从埃列什基伽勒手里借来今日王位。"
+        }
+      ]
+    },
+    {
+      "id": "ch1-descent-3",
+      "chapter": "ch1",
+      "route": "ch1-descent",
+      "title": "门后的父亲先开口",
+      "map": "underworld",
+      "text": "苏恩父亲站在第二门尽头，手里攥着一片旧替身条：“那年没有人替我签，我就得自己留下。我写了那个外来工。你若把它读出来，连我的祭碗也没人肯端。”\n父亲当年借外来工的替身条归岸，年老自然死去后才来到这里；被强留者却从未等到自己那一年。\n苏恩摸着自己初学测水时削去一截的拇指，许久才说：“我来找你，不是来证明你从未做错。”乌鲁在旁边把回信套压平，等一个能带回岸上的答复。\n吉尔伽美什的见证回声在另一段活绳旁停下。他带来一只尚空的碗，只问能否再听一次恩奇都；苏恩父亲的声音却还没说完。妮萨雅把碗移开一掌：“不是同一个人，也不是同一份遗憾。”",
+      "requires": {
+        "flags": [
+          "node:ch1-descent-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "label": "请苏恩读出父亲签过的那一行",
+          "preview": "免费；本章门下成功，父债真相保留，苏恩开始独立见证；亡者+1、苏恩+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "father_truth",
+              "suen_independent",
+              "gilg_met",
+              "gilg_grief_heard",
+              "gilg_persons_not_substitutes"
+            ],
+            "completeRoute": "ch1-descent",
+            "factions": {
+              "shades": 1
+            },
+            "relationships": {
+              "suen": 1
+            },
+            "text": "王听见外来工的名字，没有用自己的失落盖过它；他仍未得到恩奇都的回答。"
+          }
+        },
+        {
+          "id": "protect-father",
+          "label": "答应先替父亲压住旧条",
+          "preview": "免费；本章门下成功但保留包庇史，苏恩−2、恐惧+1；中章会有人向他追问外来工。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "father_sheltered",
+              "gilg_met",
+              "gilg_name_hierarchy_noted"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "completeRoute": "ch1-descent",
+            "relationships": {
+              "suen": -2
+            },
+            "text": "吉尔伽美什望着被保住祭碗的名，问无名者是否也有同样的庇护。这个问题没有把父亲的旧签消掉。"
+          }
+        },
+        {
+          "id": "withdraw",
+          "label": "暂退，不替父子作答",
+          "preview": "免费；本章门下失败，真相未取得；两人继续各自承担未说出口的话。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "father_unheard",
+              "gilg_met",
+              "gilg_grief_unanswered"
+            ],
+            "failRoutes": [
+              "ch1-descent"
+            ],
+            "text": "王的空碗与苏恩父亲的未答旧条各自留在门边，没有人被换成另一个人。"
+          }
+        },
+        {
+          "id": "two-bowls",
+          "label": "给恩奇都一只独碗，同时读出父债",
+          "preview": "免费，恐惧+1；本章门下成功，父债与外来工真名仍读出。恩奇都单独纪名、不被任何人替换；吉尔伽美什+1、苏恩+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch1:descent:settled",
+              "father_truth",
+              "suen_independent",
+              "gilg_met",
+              "gilg_enkidu_named",
+              "gilg_persons_not_substitutes",
+              "gilg_grief_heard"
+            ],
+            "completeRoute": "ch1-descent",
+            "resources": {
+              "dread": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "relationships": {
+              "suen": 1
+            },
+            "text": "吉尔伽美什把恩奇都的碗放低到与另一只同高。他没有得到复活，苏恩也没有因此免去读出父亲的字。"
+          }
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-canal-1",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "title": "闸槽里站着旧封条",
+      "map": "canal",
+      "text": "闸轮逆转，旧验收封条被水泡成两具征水偶。卡拉特认出自己当年用的记号：“下面的木齿少一半，我当时也看见了。”\n第一章留在高台的人仍有灯号，先救人可完成那一趟；已经获救者无需重复受险。付清工资的工班愿带窄板，其他料工只收实粮。\n吉尔伽美什把测水人的图倒转，让卡拉特先看断齿而不是空墓。“先修会夺走活人的那一处。”他说。哪一队可进场、谁付工钱，仍按已经签过的范围结算。",
+      "choices": [
+        {
+          "id": "hands",
+          "label": "请已付工班修复侧闸",
+          "preview": "需工资已付；粮−1，净水+1，闸稳定；卡拉特+1。",
+          "effects": {
+            "flags": [
+              "sluice_stable"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "relationships": {
+              "karat": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "paid_hands"
+            ]
+          },
+          "cost": {
+            "grain": 1
+          },
+          "next": "ch2-canal-2"
+        },
+        {
+          "id": "repair",
+          "label": "用三粮购料修闸",
+          "preview": "粮−3，净水+1，闸稳定；渡口+1。",
+          "effects": {
+            "flags": [
+              "sluice_stable"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "factions": {
+              "commons": 1
+            }
+          },
+          "cost": {
+            "grain": 3
+          },
+          "next": "ch2-canal-2"
+        },
+        {
+          "id": "rescue",
+          "label": "先接回仍在高台的四人",
+          "preview": "需尚有等候者；免费，四人及证人安全，清除等候标记；闸仍未修。贝鲁+1。",
+          "effects": {
+            "flags": [
+              "rescued_all",
+              "witnesses_safe"
+            ],
+            "clearFlags": [
+              "people_waiting"
+            ],
+            "relationships": {
+              "belu": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "next": "ch2-canal-2"
+        },
+        {
+          "id": "fight",
+          "label": "打散征水偶，清出闸齿",
+          "preview": "免费；立即恐惧+1，胜利才净水+2、闸稳定、渡口+1。撤退另加恐惧1且无胜利奖励；全倒另加恐惧2、损银至多3，需休息。",
+          "effects": {
+            "flags": [
+              "sluice_contested"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "encounter": {
+            "id": "silt-watch",
+            "name": "逆闸征水偶",
+            "enemies": [
+              {
+                "id": "silt-watch-1",
+                "name": "征水偶",
+                "hp": 14,
+                "attack": 5,
+                "armor": 1,
+                "range": 1,
+                "x": 9,
+                "y": 4
+              },
+              {
+                "id": "silt-watch-2",
+                "name": "封条掷手",
+                "hp": 11,
+                "attack": 4,
+                "armor": 0,
+                "range": 4,
+                "x": 12,
+                "y": 6
+              }
+            ],
+            "reward": {
+              "flags": [
+                "sluice_stable"
+              ],
+              "resources": {
+                "water": 2
+              },
+              "factions": {
+                "commons": 1
+              }
+            }
+          },
+          "next": "ch2-canal-2"
+        },
+        {
+          "id": "bypass",
+          "label": "标出坏闸，改走高堤",
+          "preview": "免费；恐惧+1，供水工程仍未完成；可以继续谈水权，终章仍有失败交接。",
+          "effects": {
+            "flags": [
+              "sluice_abandoned"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "next": "ch2-canal-2"
+        },
+        {
+          "id": "royal-engineers",
+          "label": "按测绘约请王队修这一次断闸",
+          "requires": {
+            "flags": [
+              "gilg_survey_lease"
+            ],
+            "notFlags": [
+              "gilg_sluice_aid_used",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需测绘租约且未用本次王队支援；免费。王自付技师工资，净水+1、闸稳定；仅本次公共维修，不授新名役。吉尔伽美什+1、卡拉特+1。",
+          "effects": {
+            "flags": [
+              "gilg_sluice_aid_used",
+              "gilg_public_repair_done",
+              "sluice_stable"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "relationships": {
+              "karat": 1
+            },
+            "text": "王先让技师与卡拉特对过齿数，才落维修签。水样复验，空墓图暂放在干岸。"
+          },
+          "next": "ch2-canal-2"
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-canal-2",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "title": "工头与续约单",
+      "map": "canal",
+      "text": "伊杜把六袋真粮卸在工班面前，换价是下一季沿渠只向他买水。庙仓的塔玛提出四袋粮换蓄水登记权。卡拉特听见留岸工人的代表问：“你说为工班保承包。你的罚金，也是我们替你保的？”\n他承认，假签既保工班下一季的工，也保住自己家那间屋。贝鲁把上次优先载货的城库木签丢到地上：“我也拿过这个借口。”\n吉尔伽美什脱鞋蹲下，在湿沙上划出一间很小的石室；他在门前添第二个位置，停了一会又抹去。“给恩奇都再画一处，也不会让他站回来。”他把六袋粮推到工班边上，先让卡拉特说清假签为何保住自己的罚金；王的新工约不赦那一笔。\n这不是几分钟能造完的墓。测水、备石、排水与装配分属多个施工日；本章选择交接这些工期与许可，行动序号不作小时。",
+      "requires": {
+        "flags": [
+          "node:ch2-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "confess",
+          "label": "让卡拉特本人具名承认获益",
+          "preview": "免费；卡拉特亲自签证、提出工班合作水权，卡拉特+1、渡口+1；未付工资仍欠，认错不等于付款。",
+          "effects": {
+            "flags": [
+              "karat_confessed",
+              "seed_coop",
+              "gilg_workers_independent"
+            ],
+            "relationships": {
+              "karat": 1
+            },
+            "factions": {
+              "commons": 1
+            },
+            "text": "王听完卡拉特的真签，承认这支本地工班不能凭自己的号角征走。"
+          },
+          "next": "ch2-canal-3"
+        },
+        {
+          "id": "cover",
+          "label": "保住假签，接受城库保工合同",
+          "preview": "粮+4；城库免追卡拉特当期罚金，留下包庇并索下一季工役；城库+2、妮萨雅−1。终章工人会拒令。",
+          "effects": {
+            "flags": [
+              "karat_protected",
+              "seed_house",
+              "gilg_local_levy_precedent"
+            ],
+            "resources": {
+              "grain": 4
+            },
+            "factions": {
+              "house": 2
+            },
+            "relationships": {
+              "nisaya": -1
+            },
+            "text": "王把城库免罚合同放在自己的草案旁。已经被用过的“为大家”也成了他要更多役权的借口；不是神命。"
+          },
+          "next": "ch2-canal-3"
+        },
+        {
+          "id": "temple",
+          "label": "接受庙库蓄水合同",
+          "preview": "粮+4；庙仓真实供粮，取得居民汲水登记权；神庙+2、渡口−1。",
+          "effects": {
+            "flags": [
+              "temple_contract",
+              "gilg_temple_bargain_chosen"
+            ],
+            "resources": {
+              "grain": 4
+            },
+            "factions": {
+              "temple": 2,
+              "commons": -1
+            },
+            "text": "吉尔伽美什没有夺走已经交给别家水权的合同，另把自己需要的工程许可送审。"
+          },
+          "next": "ch2-canal-3"
+        },
+        {
+          "id": "market",
+          "label": "接受伊杜独家购水契约",
+          "preview": "粮+6；冬粮到手，下一季水票由伊杜发售；城库+1、渡口−1。",
+          "effects": {
+            "flags": [
+              "merchant_water",
+              "gilg_market_bargain_chosen"
+            ],
+            "resources": {
+              "grain": 6
+            },
+            "factions": {
+              "house": 1,
+              "commons": -1
+            },
+            "text": "吉尔伽美什没有夺走已经交给别家水权的合同，另把自己需要的工程许可送审。"
+          },
+          "next": "ch2-canal-3"
+        },
+        {
+          "id": "royal-tomb",
+          "label": "认清假签，再签由王出资的河床空墓提案",
+          "requires": {
+            "flags": [
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需有效王队许可且未暂停/撤销；粮+6，卡拉特本人承认假签，王承担已付工薪与勘测沉没成本。仅成提案，围堰开工须下一节点明批；无殉葬、无默认本地役。吉尔伽美什+2、卡拉特+1。",
+          "effects": {
+            "flags": [
+              "gilg_tomb_contract",
+              "gilg_tomb_funding_received",
+              "karat_confessed",
+              "gilg_karat_truth_recorded"
+            ],
+            "resources": {
+              "grain": 6
+            },
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "relationships": {
+              "karat": 1
+            },
+            "text": "王在提案末尾加写：开工仍待本地下一印，六粮先供工人与勘测，不因拒墓向领粮者追回。卡拉特的获益与假签另列责任。"
+          },
+          "next": "ch2-canal-3"
+        },
+        {
+          "id": "royal-repair",
+          "label": "只签公共维修约，王粮不买墓役",
+          "requires": {
+            "flags": [
+              "gilg_survey_lease"
+            ],
+            "notFlags": [
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需测绘机会仍可议公共项目；粮+2。卡拉特本人承认假签，成立受监督公共王队与有限协定，不授墓役。吉尔伽美什+1、卡拉特+1、渡口+1；其他查阅许可另算。",
+          "effects": {
+            "flags": [
+              "karat_confessed",
+              "seed_coop",
+              "gilg_civic_crew",
+              "gilg_bound_compact",
+              "gilg_writ_bounded",
+              "gilg_limited_once"
+            ],
+            "resources": {
+              "grain": 2
+            },
+            "relationships": {
+              "karat": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "factions": {
+              "commons": 1
+            },
+            "text": "吉尔伽美什把石室图卷到桌下，工头先署假签责任，双方再只签公共维修。两粮来自王库，工班的同意只及这份有范围的工作。"
+          },
+          "next": "ch2-canal-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "still-waiting",
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "text": "高台上还有四个人，代表拒绝替他们说都愿再干一季；把他们接回的机会就在上一段闸口交接里。"
+        },
+        {
+          "id": "mani-payroll-kept",
+          "requires": {
+            "flags": [
+              "rescued_all",
+              "payroll_page"
+            ]
+          },
+          "text": "玛妮站到代表身旁，出示自己保全的工资副页：“你先说你自己做的。”"
+        },
+        {
+          "id": "mani-payroll-lost",
+          "requires": {
+            "flags": [
+              "rescued_all",
+              "payroll_page_lost"
+            ]
+          },
+          "text": "玛妮把已经浸坏的副页留在棚里，改指向独立住户收条的位置：“我记得钱怎样发的。你先说你自己做的。”"
+        }
+      ]
+    },
+    {
+      "id": "ch2-canal-3",
+      "chapter": "ch2",
+      "route": "ch2-canal",
+      "title": "谁能关下一次闸",
+      "map": "temple",
+      "text": "三份水权草案压在同一只碗下。工班要轮表，塔玛要蓄水登记，伊杜要排他水票；艾迪勒另递来旧泄道的闸证：“只要开它，果园抵押的八袋仓粮今晚就放。”\n苏恩把测水桩摆在桌上。泄道经过仍有住户的低街，开闸会毁屋并致人死亡。管事没有否认，只把仓钥放得更近。",
+      "requires": {
+        "flags": [
+          "node:ch2-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "council",
+          "label": "把水桩和轮次交共同议席",
+          "preview": "需卡拉特已具名承认；免费，本章水权成功，water_council；渡口+2。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_council"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "commons": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "karat_confessed"
+            ]
+          }
+        },
+        {
+          "id": "temple",
+          "label": "让庙库执行蓄水登记",
+          "preview": "需庙库合同；免费，本章成功，water_temple；神庙+2。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_temple"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "temple": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "temple_contract"
+            ]
+          }
+        },
+        {
+          "id": "market",
+          "label": "让商约发放下一季水票",
+          "preview": "需独家水契；免费，本章成功，water_market；渡口−1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_market"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "commons": -1
+            }
+          },
+          "requires": {
+            "flags": [
+              "merchant_water"
+            ]
+          }
+        },
+        {
+          "id": "house",
+          "label": "签城库工役与关闸权",
+          "preview": "需城库保工合同；免费，本章成功，water_emergency；城库+2。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_emergency"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "house": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "seed_house"
+            ]
+          }
+        },
+        {
+          "id": "partition",
+          "label": "把两岸水桩分立，先签互查通水约",
+          "preview": "需卡拉特已承认；免费，本章成功，water_partition；渡口+1，尚非统一共同渠。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_partition"
+            ],
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "commons": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "karat_confessed"
+            ]
+          }
+        },
+        {
+          "id": "flood",
+          "label": "开低街泄道，换已抵押的八袋冬粮",
+          "preview": "粮+8、恐惧+3；本章工程成功但低街确实毁屋并有死者；城库+2、渡口−4、苏恩−3。终章幸存者会当面追问。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_emergency",
+              "drowned_quarter"
+            ],
+            "resources": {
+              "grain": 8,
+              "dread": 3
+            },
+            "completeRoute": "ch2-canal",
+            "factions": {
+              "house": 2,
+              "commons": -4
+            },
+            "relationships": {
+              "suen": -3
+            }
+          }
+        },
+        {
+          "id": "unsettled",
+          "label": "拒绝所有现有方案，记水权未成",
+          "preview": "免费，本章水权失败；已有粮、水、救援和修闸事实不变。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "water_plan_failed"
+            ],
+            "failRoutes": [
+              "ch2-canal"
+            ]
+          }
+        },
+        {
+          "id": "royal-cofferdam",
+          "label": "明批空墓围堰，用王队与已列工料施工",
+          "requires": {
+            "flags": [
+              "gilg_tomb_contract",
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需墓工提案与未暂停/撤销的王队许可；免费，本章工程成功。经过数个施工日开成土袋围堰，gilg_tomb_works_active；3格搬料/跨堰改困难地形每格2步，不封死路。墓仍空、未封；本地强役须另有明确许可。吉尔伽美什+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:canal:settled",
+              "gilg_tomb_works",
+              "gilg_tomb_works_active",
+              "gilg_royal_river_claim"
+            ],
+            "completeRoute": "ch2-canal",
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "text": "几天的放样、运料和排水之后，土袋堰才合拢。石室门洞仍敞着，来王还活在岸上；撤掉许可不能使这些土袋自行消失。"
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-tomb-proposal",
+          "requires": {
+            "flags": [
+              "gilg_tomb_contract"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "text": "王队把石块堆在放样绳外，等本城是否另许开堰。王没有用已经给出的六粮换一句默认同意。"
+        },
+        {
+          "id": "gilg-work-suspended",
+          "requires": {
+            "flags": [
+              "gilg_survey_suspended"
+            ]
+          },
+          "text": "审计暂停书贴在王营门口。旧王印仍是原来那一枚，却已不能拿来新签墓工；已经存在的东西还须逐件点交。"
+        },
+        {
+          "id": "gilg-workers-independent",
+          "requires": {
+            "flags": [
+              "gilg_workers_independent"
+            ]
+          },
+          "text": "卡拉特把工班自己的点工木签收在手里。吉尔伽美什想找人搬石，只能另问愿不愿意和怎样付薪。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-archive-1",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "title": "那两户来问空白行",
+      "map": "archive",
+      "text": "两户曾靠妮萨雅的空白行领过粮，如今拿着配粮中断的木签来找她。鲁姆的雇主也在找这两户，想把他们带去签“自愿迁出”。\n妮萨雅承认盖印，随即把原件与独立住户收条摊开。逐屋复核免费；两粮食宿能把被找的证人送进有守夜人的安全屋。她说：“保护他们，是我现在能做的事。”",
+      "choices": [
+        {
+          "id": "audit",
+          "label": "免费复核，并让证人各自决定署名",
+          "preview": "免费；取得独立物证与同意证言，妮萨雅+2、城库−1。尚无安全屋，终章需另挡报复。",
+          "effects": {
+            "flags": [
+              "evidence_intact",
+              "consent_witnesses",
+              "nisaya_admitted"
+            ],
+            "relationships": {
+              "nisaya": 2
+            },
+            "factions": {
+              "house": -1
+            }
+          },
+          "next": "ch2-archive-2"
+        },
+        {
+          "id": "protect",
+          "label": "支付安全屋食宿，让妮萨雅分存证言",
+          "preview": "粮−2；独立物证、同意证言、protected_names、nisaya_distributed；终章免于此次抓证人报复。渡口+1、妮萨雅+2。",
+          "effects": {
+            "flags": [
+              "evidence_intact",
+              "consent_witnesses",
+              "protected_names",
+              "nisaya_distributed",
+              "nisaya_admitted"
+            ],
+            "factions": {
+              "commons": 1
+            },
+            "relationships": {
+              "nisaya": 2
+            }
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch2-archive-2"
+        },
+        {
+          "id": "expose",
+          "label": "把所有姓名交给公开台",
+          "preview": "免费；物证保留但匿名者遭强揭名，恐惧+1、渡口−2、妮萨雅−3。她拒绝写追捕名单。",
+          "effects": {
+            "flags": [
+              "evidence_intact",
+              "names_exposed",
+              "nisaya_refused_orders"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "commons": -2
+            },
+            "relationships": {
+              "nisaya": -3
+            }
+          },
+          "next": "ch2-archive-2"
+        },
+        {
+          "id": "erase",
+          "label": "收八银，砸洗原件并毁独立对照",
+          "preview": "银+8、恐惧+2；未烧泥板被砸散、浸洗，封套遭烧，关键证据毁损；城库+3、妮萨雅−4。两户本月配粮恢复，今后难追责。",
+          "effects": {
+            "flags": [
+              "evidence_destroyed",
+              "witnesses_erased"
+            ],
+            "resources": {
+              "silver": 8,
+              "dread": 2
+            },
+            "clearFlags": [
+              "evidence_intact",
+              "evidence_copy",
+              "consent_witnesses"
+            ],
+            "factions": {
+              "house": 3
+            },
+            "relationships": {
+              "nisaya": -4
+            }
+          },
+          "next": "ch2-archive-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "royal-permit-case-delay",
+          "requires": {
+            "flags": [
+              "gilg_local_case_deferred"
+            ]
+          },
+          "text": "妮萨雅把王队许可移到另一张桌：“这份许可登记过。鲁姆的假令和死籍，却还欠本地一次受理。”她逐件指出公开问讯仍需的原件与同意证言。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-archive-2",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "title": "外庭的第二张桌",
+      "map": "temple",
+      "text": "塔玛把证据桌搬到城印桌对面。艾迪勒要求只写“经办失误”，伊杜要求暂停传票以免粮船拒港；妮萨雅在原签名旁留出一个同样大的空位，等卡拉特坐下。\n有受理令就按程序开庭；门下债簿也能证明城库越过个人授权。若城印卫封台，夺回桌子只取得受理资格，不能补造已失原件。",
+      "requires": {
+        "flags": [
+          "node:ch2-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "hearing",
+          "label": "持有效令与同意证言公开受理",
+          "preview": "需完整物证、同意证言、受理令；免费，公开受理成立，城库−2、神庙+1。",
+          "effects": {
+            "flags": [
+              "verdict_open"
+            ],
+            "factions": {
+              "house": -2,
+              "temple": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "evidence_intact",
+              "consent_witnesses",
+              "gate_order"
+            ]
+          },
+          "next": "ch2-archive-3"
+        },
+        {
+          "id": "counterseal",
+          "label": "凭门下债簿指出受理越权",
+          "preview": "需完整物证、同意证言、债簿；免费，公开受理成立，神庙+1、亡者+1。",
+          "effects": {
+            "flags": [
+              "verdict_open"
+            ],
+            "factions": {
+              "temple": 1,
+              "shades": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "evidence_intact",
+              "consent_witnesses",
+              "debt_ledger"
+            ]
+          },
+          "next": "ch2-archive-3"
+        },
+        {
+          "id": "occupy",
+          "label": "制伏封台城印卫",
+          "preview": "免费；立即城库−1并开战，胜利才取得公开受理。撤退另加恐惧1且无胜利奖励；全倒另加恐惧2、损银至多3，需休息。",
+          "effects": {
+            "flags": [
+              "tribunal_contested"
+            ],
+            "factions": {
+              "house": -1
+            }
+          },
+          "encounter": {
+            "id": "court-watch",
+            "name": "神庙外庭城印卫",
+            "enemies": [
+              {
+                "id": "court-watch-1",
+                "name": "城印卫长",
+                "hp": 18,
+                "attack": 6,
+                "armor": 2,
+                "range": 1,
+                "x": 10,
+                "y": 4
+              },
+              {
+                "id": "court-watch-2",
+                "name": "投石卫",
+                "hp": 12,
+                "attack": 4,
+                "armor": 1,
+                "range": 4,
+                "x": 12,
+                "y": 6
+              }
+            ],
+            "reward": {
+              "flags": [
+                "verdict_open"
+              ]
+            }
+          },
+          "next": "ch2-archive-3"
+        },
+        {
+          "id": "state",
+          "label": "接受城库内部受理",
+          "preview": "免费；取得内部裁定，城库+3、渡口−1、恐惧+1。",
+          "effects": {
+            "flags": [
+              "verdict_city"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "house": 3,
+              "commons": -1
+            }
+          },
+          "next": "ch2-archive-3"
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-archive-3",
+      "chapter": "ch2",
+      "route": "ch2-archive",
+      "title": "临时授权以后的许多个早晨",
+      "map": "archive",
+      "text": "几套掌印初案同时摆到档案室里。工班要查阅权，庙院要庇护登记，伊杜要水票担保人。妮萨雅把还能找到的收条逐件列清，缺失处留白。\n这次必须留下由谁执政、谁能查他的初案。没有足够凭据，也可以承认初案未成；城库不会因此把已经发出去的粮再抢回来。\n吉尔伽美什亲自搬来一箱名册。前半册是给钱的工人，后半册写着“将来跟随王”。妮萨雅要他当面分清是哪一种跟随。王指着十年祭供页：“我怕有一天没人再来喊我的名字。”卡拉特指回二十日墓工栏：“他们怕的是明天不能拒绝你。”",
+      "requires": {
+        "flags": [
+          "node:ch2-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "提出独立卷宗与可撤换议席",
+          "preview": "需公开受理、独立物证、同意证言且无伪证/灭证/强揭名；免费，本章司法成功，constitution_commons、public_basis；渡口+2。 共同议席明确拒绝把本地户号变王役名册。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_commons",
+              "public_basis",
+              "gilg_name_levy_refused",
+              "gilg_local_review"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "commons": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "verdict_open",
+              "evidence_intact",
+              "consent_witnesses"
+            ],
+            "notFlags": [
+              "forged_evidence",
+              "evidence_destroyed",
+              "names_exposed"
+            ]
+          }
+        },
+        {
+          "id": "house",
+          "label": "延长城库授权，设通行查验",
+          "preview": "免费，本章司法成功，constitution_house；城库+3、渡口−2。档案走廊开始设木障。 集中权给本城库，不等于外王宗主权。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_house",
+              "gilg_local_city_counterparty"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "house": 3,
+              "commons": -2
+            }
+          }
+        },
+        {
+          "id": "temple",
+          "label": "以庙院接纳住户并监督城库",
+          "preview": "需塔玛下行见证或庙库合同：此项使用塔玛见证；免费，本章成功，constitution_temple；神庙+2。 王的追加权力仍受本地明文范围约束。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_temple",
+              "gilg_temple_boundary"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "temple": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "tamma_witness"
+            ]
+          }
+        },
+        {
+          "id": "temple-contract",
+          "label": "由庙库合同的居民推举庙院",
+          "preview": "需庙库合同；免费，本章成功，constitution_temple；神庙+2。 王的追加权力仍受本地明文范围约束。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_temple",
+              "gilg_temple_boundary"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "temple": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "temple_contract"
+            ]
+          }
+        },
+        {
+          "id": "market",
+          "label": "让有明文担保的商约接管调粮仲裁",
+          "preview": "需独家水契；免费，本章成功，constitution_market；城库+1、渡口−1。 王的追加权力仍受本地明文范围约束。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_market",
+              "gilg_contract_not_sovereignty"
+            ],
+            "completeRoute": "ch2-archive",
+            "factions": {
+              "house": 1,
+              "commons": -1
+            }
+          },
+          "requires": {
+            "flags": [
+              "merchant_water"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "写明暂未产生可执行初案",
+          "preview": "免费，本章司法失败，constitution_failed；已有证据与保护措施仍有效。 来王未获默认追加本地征役权。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_failed",
+              "gilg_local_permission_unsettled"
+            ],
+            "failRoutes": [
+              "ch2-archive"
+            ]
+          }
+        },
+        {
+          "id": "audit-royal",
+          "label": "公开核王的实名副本，暂停其墓工和名役申请",
+          "requires": {
+            "flags": [
+              "gilg_archive_access",
+              "verdict_open",
+              "evidence_intact",
+              "consent_witnesses"
+            ],
+            "notFlags": [
+              "forged_evidence",
+              "evidence_destroyed",
+              "names_exposed"
+            ]
+          },
+          "preview": "需合法取得的王抄本与完整公开受理条件；免费，本章司法成功，形成共同初案。王队新墓工暂停、名役被拒；已建围堰和已付钱不自动消失。吉尔伽美什−2、妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_commons",
+              "public_basis",
+              "gilg_levy_audited",
+              "gilg_survey_suspended",
+              "gilg_name_levy_refused",
+              "gilg_local_review"
+            ],
+            "completeRoute": "ch2-archive",
+            "npcRelationships": {
+              "gilgamesh": -2
+            },
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "王看着本人没问过的户号被逐一圈出。他取回一份暂停副本，没有收走另一份，也不能凭原印再签新墓工。"
+          }
+        },
+        {
+          "id": "royal-levy",
+          "label": "给王六户役名与明定十年祭供差役",
+          "requires": {
+            "flags": [
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需有效王队许可；免费，本章司法以集中城库初案成功。六户各一成年役者：本次20日墓工，10年内每年1日祭供，不能退出、不传子女，不含陪葬/下冥界替死。首班现在被点进营；吉尔伽美什+2、渡口−3、妮萨雅−2。 本城换得王队协查征收及六户优先祭供的政治承诺；这不是永生保证，后章可落实黑印差序或撤权。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:archive:settled",
+              "constitution_house",
+              "gilg_name_levy",
+              "gilg_royal_labor_due",
+              "gilg_levy_started",
+              "gilg_named_priority_promised",
+              "gilg_collection_pact"
+            ],
+            "completeRoute": "ch2-archive",
+            "clearFlags": [
+              "gilg_name_levy_refused",
+              "gilg_bound_compact"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "factions": {
+              "commons": -3
+            },
+            "relationships": {
+              "nisaya": -2
+            },
+            "text": "六户的首班成年役者被书记点进营，二十日册和十年祭供册分别落印。王得到真实现世劳役，不是幽魂同意；这些人没有被判陪葬，拒役却会受人间经办追索。王把另一页推给艾迪勒：本城征收将获王队人手协查，列名六户在他的祭供中优先有碗。这种可见的秩序与纪念，就是交出退出权换来的筹码；它不能保证死后永远得食，更不能让活王今日坐上神座。"
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "overdue-emergency",
+          "requires": {
+            "flags": [
+              "emergency_authority"
+            ]
+          },
+          "text": "艾迪勒借来的一夜授权早已过了天明。数个施工晨过去，门口查验的人仍在等续权，没人能把时间只留在第一夜。"
+        },
+        {
+          "id": "limited-original",
+          "requires": {
+            "flags": [
+              "limited_authority"
+            ]
+          },
+          "text": "临时受理台把限定范围的授权收回来，要求新初案重新取得住户同意。"
+        },
+        {
+          "id": "distributed",
+          "requires": {
+            "flags": [
+              "nisaya_distributed"
+            ]
+          },
+          "text": "妮萨雅亲手拿出分存清单：“谁以后说这行从没存在，另一处还有人能拿出来。”"
+        },
+        {
+          "id": "erased-evidence",
+          "requires": {
+            "flags": [
+              "evidence_destroyed"
+            ]
+          },
+          "text": "她把一小袋已洗平的泥渣搁在空位：这份原件已经无法替任何人作证。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-descent-1",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "title": "第三、四门：应一声心疼",
+      "map": "underworld",
+      "text": "第三门收下衣襟上的香气，第四门让每个人把一句悼词放进空碗。苏恩父亲那位外来工受害者指着自己的碗：“他每年有人给水，我的名字每年都写错。”\n执吏把所有碗摞成墙，不许再说。妮萨雅蹲下，把两个近似却不同的名字分开。黑钥吊在碗墙后的反印梁上，打碎墙便能拿到，却也会震裂承债的反印。",
+      "choices": [
+        {
+          "id": "listen",
+          "label": "留供物，逐个回应名字与遗憾",
+          "preview": "粮−2；哀诉被听见、反印保持完整，亡者+2、苏恩+2。",
+          "effects": {
+            "flags": [
+              "gate_lament",
+              "counterseal_intact"
+            ],
+            "factions": {
+              "shades": 2
+            },
+            "relationships": {
+              "suen": 2
+            }
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch2-descent-2"
+        },
+        {
+          "id": "remember",
+          "label": "空手坐下来，把错名记在自己身上",
+          "preview": "免费；恐惧+2，取得哀诉记录，反印完整；亡者+1、苏恩+1。",
+          "effects": {
+            "flags": [
+              "gate_lament",
+              "counterseal_intact"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "factions": {
+              "shades": 1
+            },
+            "relationships": {
+              "suen": 1
+            }
+          },
+          "next": "ch2-descent-2"
+        },
+        {
+          "id": "key",
+          "label": "击碎执吏与碗墙，夺征债黑钥",
+          "preview": "免费；立即恐惧+2、亡者−2、苏恩−2并战斗；胜利才得黑钥、反印裂损和哀诉残页。终章可修复后解债。撤退另加恐惧1且无胜利奖励；全倒另加恐惧2、损银至多3，需休息。",
+          "effects": {
+            "flags": [
+              "shades_assaulted"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "factions": {
+              "shades": -2
+            },
+            "relationships": {
+              "suen": -2
+            }
+          },
+          "encounter": {
+            "id": "debt-bailiffs",
+            "name": "门下死契执吏",
+            "enemies": [
+              {
+                "id": "debt-bailiffs-1",
+                "name": "死契执吏",
+                "hp": 20,
+                "attack": 6,
+                "armor": 2,
+                "range": 1,
+                "x": 10,
+                "y": 4
+              },
+              {
+                "id": "debt-bailiffs-2",
+                "name": "欠名回声",
+                "hp": 13,
+                "attack": 5,
+                "armor": 0,
+                "range": 4,
+                "x": 12,
+                "y": 6
+              }
+            ],
+            "reward": {
+              "flags": [
+                "key_taken",
+                "counterseal_broken",
+                "lament_fragments"
+              ]
+            }
+          },
+          "next": "ch2-descent-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "gilg-nameless-voices",
+          "requires": {},
+          "text": "王原本只想听恩奇都的名字，碗墙后却连续响起没人祭过的名字。他扶住一只将落的碗，问这些人是否也该进纪名册；妮萨雅要求每个人保留自己的同意。"
+        }
+      ]
+    },
+    {
+      "id": "ch2-descent-2",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "title": "第五、六门：父亲的字",
+      "map": "underworld",
+      "text": "第五门把声音压成泥板上的凹痕，第六门把空白照得比字还亮。债簿与反印相合，显出旧城长附上的一条：抄写失误，被冒作活人自愿承债。\n乌鲁看见另一张空白格式令，轻声问那是不是也能套在自己名字上。他先把给母亲的回信交给贝鲁保管，再带你们去找完整反印的边角。\n吉尔伽美什把自己死梦的抄板放在债簿旁，拇指在未来的称号上按下又抬起：“他们说我将来能判。能不能先替我留一行？”苏恩指着动词后面：“这里写在死后。你今夜还在呼吸。”王没有把恩奇都的名字塞进空位。",
+      "requires": {
+        "flags": [
+          "node:ch2-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "read",
+          "label": "逐行核对债簿、父签与越权附条",
+          "preview": "免费；恐惧+2，取得债簿与越权证据，苏恩+1。",
+          "effects": {
+            "flags": [
+              "debt_ledger",
+              "debt_unmasked",
+              "gilg_future_not_present",
+              "gilg_dream_tested"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "relationships": {
+              "suen": 1
+            },
+            "text": "两份板分开读：本城旧契的越权附条是一案，王的未来梦示不是今日判令。吉尔伽美什收回了那只按在称号上的手。"
+          },
+          "next": "ch2-descent-3"
+        },
+        {
+          "id": "witness",
+          "label": "用到岸住户证言校对",
+          "preview": "需到岸证人；免费且不加恐惧，取得债簿与越权证据，亡者+1、苏恩+1。",
+          "effects": {
+            "flags": [
+              "debt_ledger",
+              "debt_unmasked",
+              "gilg_future_not_present",
+              "gilg_dream_tested"
+            ],
+            "factions": {
+              "shades": 1
+            },
+            "relationships": {
+              "suen": 1
+            },
+            "text": "到岸证人说清本人没有承王的死债；活王听见，未来幽魂的梦位并不能替今天这些人落笔。"
+          },
+          "requires": {
+            "flags": [
+              "witnesses_safe"
+            ]
+          },
+          "next": "ch2-descent-3"
+        },
+        {
+          "id": "transfer",
+          "label": "支付六银买强制转让格式令",
+          "preview": "银−6、恐惧+1；取得债簿和转让令，但未查明越权。乌鲁的封套被扣作预备担保，亡者−1。",
+          "effects": {
+            "flags": [
+              "debt_ledger",
+              "transferable_debt",
+              "uru_detained",
+              "gilg_independent_transfer_seen"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "factions": {
+              "shades": -1
+            },
+            "text": "这份强制格式令不是吉尔伽美什给的神命。王看见有人能用它扣乌鲁归期，开始追问同一格式能否给自己的名字留例外。"
+          },
+          "cost": {
+            "silver": 6
+          },
+          "next": "ch2-descent-3"
+        },
+        {
+          "id": "royal-dream",
+          "label": "让王亲自把死梦与眼前旧契分读",
+          "requires": {
+            "flags": [
+              "gilg_enkidu_named"
+            ]
+          },
+          "preview": "需已为恩奇都单独纪名；免费且不新增恐惧。取得债簿与越权证据，王承认未来幽魂非今日判官；吉尔伽美什+1、苏恩+1。不会复活恩奇都。",
+          "effects": {
+            "flags": [
+              "debt_ledger",
+              "debt_unmasked",
+              "gilg_future_not_present",
+              "gilg_dream_tested",
+              "gilg_dream_admitted"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "relationships": {
+              "suen": 1
+            },
+            "text": "他亲自把自己的梦板从纳鲁渡的附条上挪开。恩奇都的碗还空着，他却没有再要求另一个活人来填它。"
+          },
+          "next": "ch2-descent-3"
+        },
+        {
+          "id": "royal-claim",
+          "label": "利用王的未来称号，换今日强制转让格式",
+          "requires": {
+            "flags": [
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需有效王队许可；王库垫经办费，不扣队伍银，恐惧+1。得到债簿和转让令，乌鲁封套被扣；吉尔伽美什+2、苏恩−2。是人间经办僭用梦位，不是诸神授现职。 执行依靠本地格式令、书记和王队押役；女王没有因此承认他为现任判官。",
+          "effects": {
+            "flags": [
+              "debt_ledger",
+              "transferable_debt",
+              "uru_detained",
+              "gilg_judicial_usurpation",
+              "gilg_royal_death_claim"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "relationships": {
+              "suen": -2
+            },
+            "text": "经办收下王库垫款，把梦里的未来头衔抄成今日格式。乌鲁的封套被王队经办扣住；埃列什基伽勒没有交出王权，假的是授权，不是失去自由的那个人。塔玛把这项执行的来路记清：本地格式令、书记与王队押役互相背书；门下女王没有开口任命这个仍在呼吸的人。"
+          },
+          "next": "ch2-descent-3"
+        }
+      ],
+      "sceneVariants": []
+    },
+    {
+      "id": "ch2-descent-3",
+      "chapter": "ch2",
+      "route": "ch2-descent",
+      "title": "写谁的明年",
+      "map": "underworld",
+      "text": "第六门前，庙库把收据分成现金与索人两册。塔玛说，取消强制替身附条与偿还真实周转银是两笔事。乌鲁盯着自己被登记的归期，想知道明春能否带上母亲要的干饼。\n有限服务的提议只记本人开口的范围；没有人可以借队长的一枚章替其他同伴签名。",
+      "requires": {
+        "flags": [
+          "node:ch2-descent-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "repay",
+          "label": "实还抵押所得八银",
+          "preview": "需确有现金债；银−8，现金债清偿，非法人名抵押撤回，侵权史仍在；神庙+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "mortgage_repaid"
+            ],
+            "completeRoute": "ch2-descent",
+            "clearFlags": [
+              "mortgage_cash_due",
+              "names_mortgaged"
+            ],
+            "factions": {
+              "temple": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "mortgage_cash_due"
+            ]
+          },
+          "cost": {
+            "silver": 8
+          }
+        },
+        {
+          "id": "assume",
+          "label": "由收款方具名承担现金债，撤回代押人名",
+          "preview": "免费；本章门下成功，人名抵押撤回，八银若领过仍欠且有收款人责任。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "personal_cash_responsibility"
+            ],
+            "completeRoute": "ch2-descent",
+            "clearFlags": [
+              "names_mortgaged"
+            ]
+          }
+        },
+        {
+          "id": "repair-seal",
+          "label": "接回被黑钥震裂的反印，并重新逐名应和",
+          "preview": "需黑钥与债簿；免费、恐惧+2，本章门下成功；修复反印、查明越权并完整听取哀诉。后续即便执行黑印，也能另作撤约选择，但已经执行的伤害不消。",
+          "requires": {
+            "flags": [
+              "key_taken",
+              "debt_ledger"
+            ]
+          },
+          "effects": {
+            "resources": {
+              "dread": 2
+            },
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "counterseal_repaired",
+              "gate_lament",
+              "debt_unmasked"
+            ],
+            "completeRoute": "ch2-descent",
+            "text": "苏恩与外来工的名字分别被念出，裂口接回原位。黑钥仍在你们手里；是否继续使用，必须另作决定。"
+          }
+        },
+        {
+          "id": "suen",
+          "label": "接下苏恩本人一季守门的有限提议",
+          "preview": "需父债真相已读出；免费，本章门下成功，suen_offer；不是现在把他强留门下，现金债不消失。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "suen_offer",
+              "gate_lament"
+            ],
+            "completeRoute": "ch2-descent",
+            "relationships": {
+              "suen": 1
+            },
+            "text": "苏恩把父亲与那位外来工的遗憾分别听完，才写自己的一季守门。两个人不再挤在一个名字里。"
+          },
+          "requires": {
+            "flags": [
+              "father_truth"
+            ]
+          }
+        },
+        {
+          "id": "scribes",
+          "label": "记录妮萨雅和自愿抄手的有限提议",
+          "preview": "需已分存并保护证人；免费，本章成功，nisaya_offer；志愿核名不强迫其他同伴。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "nisaya_offer"
+            ],
+            "completeRoute": "ch2-descent"
+          },
+          "requires": {
+            "flags": [
+              "protected_names",
+              "nisaya_distributed"
+            ]
+          }
+        },
+        {
+          "id": "rota",
+          "label": "逐人见证社区可撤回的轮值名单",
+          "preview": "需共同水权与共同初案；免费，本章成功，rota_offer；每位明确同意者才入册，拒绝不失粮权。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "rota_offer"
+            ],
+            "completeRoute": "ch2-descent"
+          },
+          "requires": {
+            "flags": [
+              "water_council",
+              "constitution_commons"
+            ]
+          }
+        },
+        {
+          "id": "index",
+          "label": "确认每位户主自行注销本城索引的权利",
+          "preview": "需本人注销权已确认；免费，本章成功，index_exit_authorized；只授权自愿户主，私名与他人籍号不动。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "index_exit_authorized"
+            ],
+            "completeRoute": "ch2-descent"
+          },
+          "requires": {
+            "flags": [
+              "personal_index_right"
+            ]
+          }
+        },
+        {
+          "id": "deny",
+          "label": "拒绝给出答复，把争议逐项带走",
+          "preview": "免费，本章门下失败；现金债、人名抵押或被扣乌鲁各按事实保留，恐惧+1。",
+          "effects": {
+            "flags": [
+              "chapter:ch2:descent:settled",
+              "second_debt_failed"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "failRoutes": [
+              "ch2-descent"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "cash-claim",
+          "requires": {
+            "flags": [
+              "mortgage_cash_due"
+            ]
+          },
+          "text": "当初领过的八银收据追到门边，收款责任清楚地指向你们，而不是被代押的住户。"
+        },
+        {
+          "id": "no-cash-claim",
+          "requires": {
+            "notFlags": [
+              "mortgage_ever"
+            ]
+          },
+          "text": "现金册里没有你们领款的记录，庙库在这一格留白。"
+        },
+        {
+          "id": "suen-offer",
+          "requires": {
+            "flags": [
+              "father_truth"
+            ]
+          },
+          "text": "苏恩主动提出陪父亲守门一季，结束日与不传子女都写在自己名后。“他签过的那一页仍得读出来。”"
+        },
+        {
+          "id": "nisaya-offer",
+          "requires": {
+            "flags": [
+              "protected_names",
+              "nisaya_distributed"
+            ]
+          },
+          "text": "妮萨雅和已具名同意的抄手愿轮值核名。她只签自己的班，不替留在安全屋的人再签一次。"
+        },
+        {
+          "id": "rota-offer",
+          "requires": {
+            "flags": [
+              "water_council",
+              "constitution_commons"
+            ]
+          },
+          "text": "社区代表带来逐人可拒签的轮班页，拒绝者仍有粮权，名单只能按本人愿意的班数成立。"
+        },
+        {
+          "id": "uru-detained",
+          "requires": {
+            "flags": [
+              "uru_detained"
+            ]
+          },
+          "text": "乌鲁的通行封套仍扣在经办人手里；一封问他何日回家的新信从岸上送来。"
+        },
+        {
+          "id": "gilg-volunteers-not-retinue",
+          "requires": {
+            "flags": [
+              "gilg_persons_not_substitutes"
+            ]
+          },
+          "text": "苏恩和抄手谈自己的期限时，吉尔伽美什把“随王”两个字从这张纸旁挪开。他还没有解决自己的恐惧，却知道不能把别人的有限提议并成王的侍从表。"
+        },
+        {
+          "id": "gilg-royal-labor-specific",
+          "requires": {
+            "flags": [
+              "gilg_royal_labor_due"
+            ]
+          },
+          "text": "王营的现世役名仍另欠二十日与每年一日；这里没有任何人因此成了门下替身，取消其一也不自动清另一本。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-canal-1",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "title": "下一次涨水，谁肯来",
+      "map": "canal",
+      "text": "涨水沿新渠和旧闸回到纳鲁渡，工人把工具摆到岸上，等真实工钱与调度安排。贝鲁把船钥扣在掌心，重申自己只履行已同意的接人与送信。\n这次先决定要把有限资源用在补闸、履行具体索赔、切渠保住区，还是承认不能控制涨水。每项实际做了什么，会分别留下收据。\n吉尔伽美什又把那张石室图铺开，这次压图的是一双沾泥的靴。他在河边等过许多个晨昏；工地今天能交给谁，不由他的梦决定。",
+      "choices": [
+        {
+          "id": "workers",
+          "label": "让认责且已付薪的工班自愿修涨水口",
+          "preview": "需卡拉特承认且工资已付；免费，涨水受控，工班共同执行，渡口+2。",
+          "effects": {
+            "flags": [
+              "crisis_contained",
+              "workers_mobilized",
+              "gilg_workers_independent",
+              "gilg_public_project_first"
+            ],
+            "factions": {
+              "commons": 2
+            },
+            "text": "王站到工班排队处，承认这班人自己决定修哪一道活人的闸，不是他的墓役。"
+          },
+          "requires": {
+            "flags": [
+              "karat_confessed",
+              "wages_paid",
+              "sluice_stable"
+            ]
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "repair",
+          "label": "三粮购料补稳闸口",
+          "preview": "需闸已修稳；粮−3，涨水受控；不替任何人免罪。",
+          "effects": {
+            "flags": [
+              "crisis_contained",
+              "gilg_public_project_first"
+            ],
+            "text": "购来的三粮料记在本城维修账上，王的石室图没有因此多一份开工权。"
+          },
+          "requires": {
+            "flags": [
+              "sluice_stable"
+            ]
+          },
+          "cost": {
+            "grain": 3
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "compensate",
+          "label": "向低街幸存者实付三粮，并交出泄洪命令副页",
+          "preview": "需确有淹街；粮−3，成立一次真实救济与追责材料，relief_reparations；死者不复活，未顺带修闸。",
+          "effects": {
+            "flags": [
+              "relief_reparations",
+              "flood_order_disclosed",
+              "gilg_survivors_priority"
+            ],
+            "factions": {
+              "commons": 1
+            },
+            "text": "王看见粮先交失屋者；纪名工程不能把这份索赔改作向他求赏。"
+          },
+          "requires": {
+            "flags": [
+              "drowned_quarter"
+            ]
+          },
+          "cost": {
+            "grain": 3
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "return-boat",
+          "label": "归还被征船并付四银修船费",
+          "preview": "需尚欠船权；银−4，解除船主实际索赔，belu_restored；历史征用保留，贝鲁+2；未顺带修闸。",
+          "effects": {
+            "flags": [
+              "belu_restored",
+              "gilg_ship_rights_witnessed"
+            ],
+            "clearFlags": [
+              "boat_claim_due"
+            ],
+            "relationships": {
+              "belu": 2
+            },
+            "text": "归船收据写的是贝鲁的名字，王的测水队只在旁作见证，没有取得船权。"
+          },
+          "requires": {
+            "flags": [
+              "boat_claim_due"
+            ]
+          },
+          "cost": {
+            "silver": 4
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "salt",
+          "label": "切通盐渠，把这次涨水导离住区",
+          "preview": "免费；涨水受控但农地盐化、旧田减产，salt_land；恐惧+2。救人不等于恢复丰收。",
+          "effects": {
+            "flags": [
+              "crisis_contained",
+              "salt_land",
+              "gilg_salt_cost_seen"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "text": "王把盐粒按进地图边缘，石墓的漂亮线条也必须绕过这一片真实减产。"
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "requisition",
+          "label": "强征住户粮袋与劳役维持通行",
+          "preview": "粮+4、恐惧+2，建立武装供给，渡口−3、卡拉特−2；涨水未按工程修复，仍可选城库有限工程。",
+          "effects": {
+            "flags": [
+              "martial_supply",
+              "workers_refused",
+              "gilg_coercive_supply_seen"
+            ],
+            "resources": {
+              "grain": 4,
+              "dread": 2
+            },
+            "factions": {
+              "commons": -3
+            },
+            "relationships": {
+              "karat": -2
+            },
+            "text": "王的书记看见本城也能强征粮役，留下可仿用的执行表；被征者的拒绝不因此变成同意。"
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "record",
+          "label": "承认缺料或工班拒令，保留险位标记",
+          "preview": "免费；本轮危机未控制，终章仍可撤离或登记水务失败。",
+          "effects": {
+            "flags": [
+              "crisis_uncontained",
+              "gilg_public_failure_recorded"
+            ],
+            "text": "王的测水员在同一张险位表上签见证，王库没有替缺料一栏写成完工。"
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "reassign-royal",
+          "label": "三粮雇人拆王堰，材料转修公渠",
+          "requires": {
+            "flags": [
+              "gilg_tomb_works_active"
+            ]
+          },
+          "cost": {
+            "grain": 3
+          },
+          "preview": "需实际尚在的王堰；粮−3，真实拆除搬料，清施工难行地形、补稳闸并取得净水1，涨水受控，建立可撤换水务轮表。无需王好感或仍有效许可；吉尔伽美什−2。已付投资和开工史保留。",
+          "effects": {
+            "flags": [
+              "gilg_tomb_stopped",
+              "gilg_river_unblocked",
+              "gilg_demolition_recorded",
+              "sluice_stable",
+              "crisis_contained",
+              "water_council"
+            ],
+            "clearFlags": [
+              "gilg_tomb_works_active"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": -2
+            },
+            "text": "工人领三粮后逐袋搬走土堰，拆下未封的石室口，把可用石料砌进公渠。几天的清运在两份表上交接，难走的料道才恢复；新轮表写明管水者可被换下。本地抢险调度实际推进，王保留投资收据与合同异议；拆堰本身没有替双方判清旧约。"
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "negotiate-royal",
+          "label": "按有限公共合同请王队处理涨水",
+          "requires": {
+            "flags": [
+              "gilg_civic_crew",
+              "sluice_stable"
+            ],
+            "notFlags": [
+              "gilg_crisis_aid_used",
+              "gilg_warrant_revoked"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            }
+          },
+          "preview": "需既成公共工队、稳闸与王信任至少1；免费，一次性涨水受控，王+1。履行公共合同，不新授墓工/役名，不替船主或卡拉特同意。",
+          "effects": {
+            "flags": [
+              "crisis_contained",
+              "gilg_crisis_aid_used",
+              "gilg_public_repair_done"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "text": "王先把石室图卷起，再叫自己付薪的测水人去闸口。他亲自踏进泥里校桩，只在已签的公共栏落印；卡拉特仍要面对工班自己的工资与假签页。"
+          },
+          "next": "ch3-canal-2"
+        },
+        {
+          "id": "seal-royal-tomb",
+          "label": "继续数日石工，封存活王的河床空墓",
+          "requires": {
+            "flags": [
+              "gilg_tomb_works_active"
+            ],
+            "notFlags": [
+              "gilg_survey_suspended",
+              "gilg_warrant_revoked"
+            ]
+          },
+          "preview": "需实际王堰与未暂停/撤销许可；免费，王交完工礼粮4、王+2、苏恩−1。多日后空墓封成，实体难行仍在，保留该工段经营限制；不保证本城闸修成，也不置陪葬者。此后不能选无墓的有限纪念。",
+          "effects": {
+            "flags": [
+              "gilg_tomb_sealed",
+              "gilg_river_reserved",
+              "gilg_tomb_funding_received"
+            ],
+            "clearFlags": [
+              "gilg_tomb_works_active"
+            ],
+            "resources": {
+              "grain": 4
+            },
+            "npcRelationships": {
+              "gilgamesh": 2
+            },
+            "relationships": {
+              "suen": -1
+            },
+            "text": "采石、运石与封顶又经过数个施工晨。最后一道灰缝干了，室内只有王刻下的名字，没有人的身体；王站在上面很久，仍能听见自己的呼吸。料道和跨堰仍费两步，河段经营须按保留条款交涉；一份完工礼粮从他自带的仓中交出。"
+          },
+          "next": "ch3-canal-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "karat-covered",
+          "requires": {
+            "flags": [
+              "karat_protected"
+            ]
+          },
+          "text": "玛妮的代表把被压下的假签摊开，工人拒绝再按卡拉特那张免罚合同开工。"
+        },
+        {
+          "id": "karat-confessed",
+          "requires": {
+            "flags": [
+              "karat_confessed"
+            ]
+          },
+          "text": "工班确认卡拉特已经具名认责；若旧薪也已付清，他们愿自己组织一次补闸。"
+        },
+        {
+          "id": "flood-survivors",
+          "requires": {
+            "flags": [
+              "drowned_quarter"
+            ]
+          },
+          "text": "低街幸存者抬来空门框，点名问谁把他们的屋子换成仓粮，要求交出那份泄洪命令。"
+        },
+        {
+          "id": "boat-claim",
+          "requires": {
+            "flags": [
+              "boat_claim_due"
+            ]
+          },
+          "text": "贝鲁为追船才同行到这里：归还被征的船、落实四银修船费以前，他拒绝新增私船航程。"
+        },
+        {
+          "id": "king-workdays",
+          "requires": {
+            "flags": [
+              "gilg_tomb_works"
+            ]
+          },
+          "text": "王的工地曾经历测绘、运料和夯土的多个施工日。今天土堰仍在与否，按实际拆除或封存记录交接。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-canal-2",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "title": "船主取回钥匙之后",
+      "map": "harbor",
+      "text": "港口的两条绳索分别通往留城渡次与出港船队。贝鲁把两条分开：“船得由我同意。要留下的人也得自己同意。”妮萨雅在安全住处的名单前等这一次护送安排。\n每个成年人都能选择自己的去处；船队只载明确同意离开者，其他人可以留在自愿接纳的住户家。",
+      "requires": {
+        "flags": [
+          "node:ch3-canal-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ferry",
+          "label": "供两粮补给，恢复有限社区渡约",
+          "preview": "需没有未结船权索赔；粮−2，community_ferry、witness_shelter；贝鲁自愿掌船，船仍私有，贝鲁+1。",
+          "effects": {
+            "flags": [
+              "community_ferry",
+              "witness_shelter"
+            ],
+            "relationships": {
+              "belu": 1
+            }
+          },
+          "requires": {
+            "notFlags": [
+              "boat_claim_due"
+            ]
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch3-canal-3"
+        },
+        {
+          "id": "convoy",
+          "label": "三粮备航，让同意者自愿出港",
+          "preview": "需没有未结船权索赔；粮−3，convoy_exodus，船主同意，贝鲁+2。原城籍号未注销者仍可能被旧契追索。",
+          "effects": {
+            "flags": [
+              "convoy_exodus",
+              "belu_consent"
+            ],
+            "relationships": {
+              "belu": 2
+            }
+          },
+          "requires": {
+            "notFlags": [
+              "boat_claim_due"
+            ]
+          },
+          "cost": {
+            "grain": 3
+          },
+          "next": "ch3-canal-3"
+        },
+        {
+          "id": "banks",
+          "label": "执行两岸互查渡次和通水约",
+          "preview": "需中章两岸水约；免费，two_banks_truce、witness_shelter；贝鲁见证渡次但可拒超载。",
+          "effects": {
+            "flags": [
+              "two_banks_truce",
+              "witness_shelter"
+            ]
+          },
+          "requires": {
+            "flags": [
+              "water_partition"
+            ]
+          },
+          "next": "ch3-canal-3"
+        },
+        {
+          "id": "sanctuary",
+          "label": "用已建立的庙院见证把人接进庙仓",
+          "preview": "需塔玛下行见证；免费，witness_shelter，神庙+1。不是无期限庙产归属。",
+          "effects": {
+            "flags": [
+              "witness_shelter",
+              "tamma_shelter"
+            ],
+            "factions": {
+              "temple": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "tamma_witness"
+            ]
+          },
+          "next": "ch3-canal-3"
+        },
+        {
+          "id": "scatter",
+          "label": "免费分散到自愿接纳的住户家",
+          "preview": "免费，refuge_scattered；已有安全屋继续保护证人，其余无统一护送，不虚报全部获庇护。",
+          "effects": {
+            "flags": [
+              "refuge_scattered"
+            ]
+          },
+          "next": "ch3-canal-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "protected-houses",
+          "requires": {
+            "flags": [
+              "protected_names"
+            ]
+          },
+          "text": "找证人的人扑到已经撤空的旧住处。妮萨雅的安全屋和分存清单把这次报复挡在门外。"
+        },
+        {
+          "id": "no-shelter",
+          "requires": {
+            "notFlags": [
+              "protected_names"
+            ]
+          },
+          "text": "没有既成安全屋的证人请求一次真实护送；单凭档案还在，挡不住来人的脚步。"
+        },
+        {
+          "id": "flood-refugees",
+          "requires": {
+            "flags": [
+              "drowned_quarter"
+            ]
+          },
+          "text": "低街失屋者和追问命令的家属也来到渡口，有人等粮，有人等能回住处的消息。"
+        },
+        {
+          "id": "ili-alive-arrived",
+          "requires": {
+            "flags": [
+              "rescued_all"
+            ]
+          },
+          "text": "伊利说想留下帮下一班，阿杜愿去新岸。他们各自站到自己选的绳索旁。"
+        },
+        {
+          "id": "workers-wait",
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "text": "高台上的四人还没有到港；接应者留下位置，不把他们写成已经同意随船离开。"
+        },
+        {
+          "id": "king-passengers-not-retinue",
+          "requires": {
+            "flags": [
+              "gilg_met"
+            ]
+          },
+          "text": "王的书记来问能否把船队写作随王而行。贝鲁把空白乘客栏转回来：“先问每一位。你能包一班货，不能包他们的归期。”王最后只问自己那箱石工工具的运价。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-canal-3",
+      "chapter": "ch3",
+      "route": "ch3-canal",
+      "title": "岸上的水务交接",
+      "map": "temple",
+      "text": "水桩、现存合同和实际船约摆在交接台上。卡拉特把自己的签名刻得和其他签名一样小。贝鲁只签自己真正同意的渡次。\n这一页决定此后人们去哪里取水、向谁交费、能否换掉管水的人。未完成的救援、未付工钱与家属款都有自己的位置，不因盖工程印而被划掉。",
+      "requires": {
+        "flags": [
+          "node:ch3-canal-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "common",
+          "label": "执行共同渠与有限船约",
+          "preview": "需共同水权、稳定闸、全员救回、工资已付、涨水受控及社区船约；本章水务成功，canal_common，渡口+3。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_common",
+              "civic_canal"
+            ],
+            "completeRoute": "ch3-canal",
+            "factions": {
+              "commons": 3
+            }
+          },
+          "requires": {
+            "flags": [
+              "water_council",
+              "sluice_stable",
+              "rescued_all",
+              "wages_paid",
+              "crisis_contained",
+              "community_ferry"
+            ]
+          }
+        },
+        {
+          "id": "house",
+          "label": "把现有稳定闸交城库执行",
+          "preview": "需闸稳；免费，本章有限工程成功，canal_state、canal_patrol，城库+2、渡口−1；其他水约须附卷。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_state",
+              "canal_patrol"
+            ],
+            "completeRoute": "ch3-canal",
+            "factions": {
+              "house": 2,
+              "commons": -1
+            }
+          },
+          "requires": {
+            "flags": [
+              "sluice_stable"
+            ]
+          }
+        },
+        {
+          "id": "temple",
+          "label": "执行庙库蓄水与登记限额",
+          "preview": "需中章庙库水权；免费，本章成功，canal_temple；庙仓配水、居民保留同意边界。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_temple"
+            ],
+            "completeRoute": "ch3-canal"
+          },
+          "requires": {
+            "flags": [
+              "water_temple"
+            ]
+          }
+        },
+        {
+          "id": "market",
+          "label": "执行明文水票和船运报价",
+          "preview": "需中章商约水权；免费，本章成功，canal_market；购水费用继续，不交出人身。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_market"
+            ],
+            "completeRoute": "ch3-canal"
+          },
+          "requires": {
+            "flags": [
+              "water_market"
+            ]
+          }
+        },
+        {
+          "id": "partition",
+          "label": "把两岸互查约刻成执行条款",
+          "preview": "需两岸渡次已成立；免费，本章成功，canal_partition；统一水务被分为两套互查规则。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_partition"
+            ],
+            "completeRoute": "ch3-canal"
+          },
+          "requires": {
+            "flags": [
+              "two_banks_truce"
+            ]
+          }
+        },
+        {
+          "id": "exodus",
+          "label": "把自愿出港船队实际交给贝鲁领航",
+          "preview": "需船队与船主同意；免费，本章撤离目标成功，canal_exodus；不声称旧城水务修成。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_exodus"
+            ],
+            "completeRoute": "ch3-canal"
+          },
+          "requires": {
+            "flags": [
+              "convoy_exodus",
+              "belu_consent"
+            ]
+          }
+        },
+        {
+          "id": "failed",
+          "label": "登记水务未成，把位置与人数交下一班",
+          "preview": "免费，本章水务失败，canal_failed；既有救援、伤亡、工资与船权各保持事实。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:canal:settled",
+              "canal_failed",
+              "relief_failed"
+            ],
+            "failRoutes": [
+              "ch3-canal"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "salt-sample",
+          "requires": {
+            "flags": [
+              "salt_land"
+            ]
+          },
+          "text": "苏恩把新盐渠的白色样本放到水桩旁，要求下一季迁田与减产列进交接。"
+        },
+        {
+          "id": "memorial-frame",
+          "requires": {
+            "flags": [
+              "drowned_quarter"
+            ]
+          },
+          "text": "幸存者把那副空门框靠在城印旁边，不让死者变成完工碑上的一行小字。"
+        },
+        {
+          "id": "king-water-handover",
+          "requires": {
+            "flags": [
+              "gilg_met"
+            ]
+          },
+          "text": "吉尔伽美什把测水副图交给实际接管者，指着自己的签名要求注明曾付出的工料。卡拉特在旁另列假签责页，两张纸没有互相抵销。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-archive-1",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "title": "谁来拿走那两户",
+      "map": "harbor",
+      "text": "鲁姆的雇主来寻找那两位证人。妮萨雅在通道口停下，要求你们这次明确决定如何回应追索；工头与掌印者也被叫到同一张桌边。\n艾迪勒说，只要别把城库写成被告，他能继续调粮。留在桌上的每项证据，都只按实际曾经发生的事问讯。\n吉尔伽美什到了，随从把折椅放在艾迪勒旁边。他没坐，先看妮萨雅手里的两份名册：“你要问哪一份？”她答：“你想拿走人的那一份。还有谁准你拿。”",
+      "choices": [
+        {
+          "id": "sheltered",
+          "label": "依已经成立的安全屋拒交证人",
+          "preview": "需保护名单；免费，报复被挡、证人行动保留，witness_reprisals_blocked；妮萨雅+1。",
+          "effects": {
+            "flags": [
+              "witness_reprisals_blocked",
+              "gilg_witnesses_not_retinue"
+            ],
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "王的随从被挡在安全屋门外；这两户没有因王来到就成为他的证人或役户。"
+          },
+          "requires": {
+            "flags": [
+              "protected_names"
+            ]
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "escort",
+          "label": "花两粮组织一次有主人的护送",
+          "preview": "粮−2，建立本次保护、保留证人行动，witness_reprisals_blocked；妮萨雅+1。先前揭名或灭证不被抹去。",
+          "effects": {
+            "flags": [
+              "witness_reprisals_blocked",
+              "late_escort",
+              "gilg_local_escort_independent"
+            ],
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "本城出粮的护送队自行领人离开，王的工牌没有取代这份保护。"
+          },
+          "cost": {
+            "grain": 2
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "testify",
+          "label": "让卡拉特本人当着工班交出假签",
+          "preview": "需他已承认；免费，karat_testified、问责材料进入终章；城库−1、卡拉特+1。尚未另行挡住证人报复。",
+          "effects": {
+            "flags": [
+              "karat_testified",
+              "accountability_heard",
+              "gilg_cannot_speak_for_workers"
+            ],
+            "factions": {
+              "house": -1
+            },
+            "relationships": {
+              "karat": 1
+            },
+            "text": "王要替卡拉特谈自己能给工程多少帮助，妮萨雅让他停下。卡拉特自己讲完为什么签假页、又怕失去什么，真薪并不替他回答。"
+          },
+          "requires": {
+            "flags": [
+              "karat_confessed"
+            ]
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "expel-key",
+          "label": "在公开初案下声明城不承认黑钥统治",
+          "preview": "需共同初案和黑钥；免费，council_veto，亡者+1；后续若继续夺权，地上与门下会分裂。",
+          "effects": {
+            "flags": [
+              "council_veto",
+              "gilg_black_indemnity_denied"
+            ],
+            "factions": {
+              "shades": 1
+            },
+            "text": "议席的声明也递给来王：任何未来名位都不能替今日黑印豁免本城的追问。"
+          },
+          "requires": {
+            "flags": [
+              "constitution_commons",
+              "key_taken"
+            ]
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "submit",
+          "label": "让城库收走这次问讯",
+          "preview": "免费，问责未公开，witness_reprisals_unchecked；若有既成安全屋仍不交人，其余人被迫躲避，妮萨雅拒签追捕名单。",
+          "effects": {
+            "flags": [
+              "witness_reprisals_unchecked",
+              "nisaya_refused_orders",
+              "gilg_royal_testimony_deferred"
+            ],
+            "relationships": {
+              "nisaya": -1
+            },
+            "text": "王的一箱名单也暂随城库收去；延期让他的权力问题未被公开答复，并没有生成一张全城给他的空白赦免。"
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "summon-king",
+          "label": "凭公开受理与完整证据传问来王，撤回查阅征役许可",
+          "requires": {
+            "flags": [
+              "gilg_royal_warrant_ever",
+              "verdict_open",
+              "evidence_intact",
+              "consent_witnesses"
+            ],
+            "notFlags": [
+              "forged_evidence",
+              "evidence_destroyed",
+              "names_exposed"
+            ]
+          },
+          "preview": "需王许可史、已有公开受理、完整物证与同意证言且无伪造/灭证/强揭名；不要求共同初案，集中王役路线也可问责。免费，王−2、妮萨雅+1。收回当前许可/查阅权，放免未来王役；已服劳役、开工实体、已封空墓不消失，拆堰仍可另付三粮。",
+          "effects": {
+            "flags": [
+              "gilg_warrant_revoked",
+              "gilg_royal_accounted",
+              "gilg_levy_released",
+              "accountability_heard"
+            ],
+            "clearFlags": [
+              "gilg_royal_warrant",
+              "gilg_archive_access",
+              "gilg_royal_labor_due",
+              "gilg_royal_death_claim"
+            ],
+            "npcRelationships": {
+              "gilgamesh": -2
+            },
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "妮萨雅当众读王队许可的本城签署栏，要求交还名册副本。王的手伸向佩印又停住，他把许可压在台上：“我的工队已经远来。”她答：“所以写清你出了什么。再写清你没买到什么。”本城许可上的未来役名权被收回，既有劳动收据照实际保留；河边石土留待真正处置。"
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "bind-royal-warrant",
+          "label": "与王重订可撤回公共协议，放免未来王役",
+          "requires": {
+            "flags": [
+              "gilg_survey_lease",
+              "gilg_future_not_present"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            }
+          },
+          "preview": "需测绘协议、已校梦与王信任至少1；免费，王+1、妮萨雅+1。收回王的广泛查阅/役名许可，只留公共工程合同与有限纪念提案；未来役者获释，过往强役与已建墓体保留。尚未自动批准末门纪念。",
+          "effects": {
+            "flags": [
+              "gilg_bound_compact",
+              "gilg_memorial_proposed",
+              "gilg_writ_bounded",
+              "gilg_levy_released",
+              "gilg_judicial_claim_withdrawn"
+            ],
+            "clearFlags": [
+              "gilg_royal_warrant",
+              "gilg_archive_access",
+              "gilg_royal_labor_due",
+              "gilg_royal_death_claim"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "relationships": {
+              "nisaya": 1
+            },
+            "text": "王删去抄户号的一栏，把可撤回公共工单留在桌上。“若将来没人来？”他问。苏恩把手指按在空行前：“你可以请人记住。不能替他们答应十年。”本城把广泛查阅与征役栏封住：已经发出的许可收回，尚未获准的请求划去，实存名册副本归本城逐件核存；未来王役不再追索。有限公共工单仍按真正签成的范围，已有的堰和石室不被纸上的删改搬走。"
+          },
+          "next": "ch3-archive-2"
+        },
+        {
+          "id": "borrow-royal-seal",
+          "label": "超用工程牌，借王威势挡住找证人的人",
+          "requires": {
+            "flags": [
+              "gilg_engineering_seal"
+            ],
+            "notFlags": [
+              "gilg_seal_misused"
+            ]
+          },
+          "preview": "需工程牌；免费，本次真实挡住报复。把工程许可冒称王的护人命令，王−2；王将追索实牌与公开更正，滥用史保留。未获通行神权，也没免除原件或受理前置。",
+          "effects": {
+            "flags": [
+              "witness_reprisals_blocked",
+              "gilg_patron_exploited",
+              "gilg_seal_misused",
+              "gilg_seal_return_due",
+              "gilg_guard_deployed"
+            ],
+            "npcRelationships": {
+              "gilgamesh": -2
+            },
+            "text": "你举起王队工程牌，声称找人会妨碍来王工程。追索者退了，证人真从后门离开；王的随从随后来索实牌：“他准你核工，没有准你替他下这个命令。”你借他的畏死工程护住了人，也留下必须公开纠正的越权。"
+          },
+          "next": "ch3-archive-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "protected-refusal",
+          "requires": {
+            "flags": [
+              "protected_names"
+            ]
+          },
+          "text": "安全屋与分存清单都在。妮萨雅打开已经空掉的旧住处，让来人看见床已冷了。"
+        },
+        {
+          "id": "no-protection",
+          "requires": {
+            "notFlags": [
+              "protected_names"
+            ]
+          },
+          "text": "没有先期安全屋，妮萨雅挡在通道口；尚需这一次真实护送才能把人带开。"
+        },
+        {
+          "id": "flood-questioned",
+          "requires": {
+            "flags": [
+              "drowned_quarter"
+            ]
+          },
+          "text": "低街的泄洪命令被点名问起，幸存者要求把用房屋换仓粮的签名交出来。"
+        },
+        {
+          "id": "mortgage-questioned",
+          "requires": {
+            "flags": [
+              "mortgage_ever"
+            ]
+          },
+          "text": "未经缺席者同意抵押城籍号的收据也被摆上桌；现金债与非法索人条分别受问。"
+        },
+        {
+          "id": "karat-called",
+          "requires": {
+            "flags": [
+              "karat_confessed"
+            ]
+          },
+          "text": "卡拉特已经承认假签获益。今天他要自己当着工班再说一次，而非靠代表转述。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-archive-2",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "title": "还能找到的原件",
+      "map": "archive",
+      "text": "妮萨雅把现存的材料逐件摆出来，逐一注明谁保存、谁曾见过、哪些只能由口述再查。另一户的收条不会被冒作原件。\n艾迪勒愿收走剩余保管权，伊杜愿出钱清走妨碍码头扩仓的旧案室。那笔款付建筑与封套清运；未烧泥板若被砸散浸洗，刻痕与相互比对的位置便难再重建。",
+      "requires": {
+        "flags": [
+          "node:ch3-archive-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "public",
+          "label": "独立保管原件、匿名页与反证",
+          "preview": "需完整物证、同意证言、公开受理且无伪证/灭证/强揭名；免费，archive_public、public_justice，妮萨雅+2。政体仍待下一节点决定。",
+          "effects": {
+            "flags": [
+              "archive_public",
+              "public_justice"
+            ],
+            "relationships": {
+              "nisaya": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "evidence_intact",
+              "consent_witnesses",
+              "verdict_open"
+            ],
+            "notFlags": [
+              "forged_evidence",
+              "evidence_destroyed",
+              "names_exposed"
+            ]
+          },
+          "next": "ch3-archive-3"
+        },
+        {
+          "id": "house",
+          "label": "把剩余原件交城库封存",
+          "preview": "免费，archive_state；现有毁损仍在，独立查阅权交出，城库+2、妮萨雅−1。",
+          "effects": {
+            "flags": [
+              "archive_state"
+            ],
+            "factions": {
+              "house": 2
+            },
+            "relationships": {
+              "nisaya": -1
+            }
+          },
+          "next": "ch3-archive-3"
+        },
+        {
+          "id": "destroy",
+          "label": "接受清运款，砸洗剩余关键泥板与封套",
+          "preview": "银+6、恐惧+2，evidence_destroyed、archive_destroyed；释放旧案室作仓库，原件索赔途径丧失，妮萨雅−3。",
+          "effects": {
+            "flags": [
+              "evidence_destroyed",
+              "archive_destroyed"
+            ],
+            "resources": {
+              "silver": 6,
+              "dread": 2
+            },
+            "clearFlags": [
+              "evidence_intact",
+              "evidence_copy",
+              "public_justice",
+              "archive_public"
+            ],
+            "relationships": {
+              "nisaya": -3
+            }
+          },
+          "next": "ch3-archive-3"
+        },
+        {
+          "id": "scatter",
+          "label": "分存仍有材料，不宣称完整卷宗",
+          "preview": "免费，archive_fragments；已有保护或毁损各保持，不能据此宣称公开正义已成。",
+          "effects": {
+            "flags": [
+              "archive_fragments"
+            ]
+          },
+          "next": "ch3-archive-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "intact-original",
+          "requires": {
+            "flags": [
+              "evidence_intact"
+            ],
+            "notFlags": [
+              "evidence_destroyed"
+            ]
+          },
+          "text": "原件的覆刻和独立收条仍可相互比对，保管人能明确指出盖空行与后改死籍各是哪一笔。"
+        },
+        {
+          "id": "destroyed-original",
+          "requires": {
+            "flags": [
+              "evidence_destroyed"
+            ]
+          },
+          "text": "一袋已洗平的泥渣放在缺卷处，旁边是焦黑的芦苇封套。妮萨雅拒绝给这袋泥写出原件仍在的证明。"
+        },
+        {
+          "id": "king-copy-account",
+          "requires": {
+            "flags": [
+              "gilg_archive_access"
+            ],
+            "notFlags": [
+              "gilg_warrant_revoked"
+            ]
+          },
+          "text": "王的书记也来查哪一份副本归本城保管。妮萨雅让每个保管权各签自己的行，不许把“王看过”盖成原件永存。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-archive-3",
+      "chapter": "ch3",
+      "route": "ch3-archive",
+      "title": "城印由谁接走",
+      "map": "temple",
+      "text": "外庭的两张桌还在。住户代表把可撤换的席位册铺到桌上，艾迪勒拿来通行查验册，塔玛带庙院登记簿，伊杜把报价写成可追索的合约。\n妮萨雅不再替任何一方把空行补成同意。你们必须选择一套确能执行的制度，或承认还没有；这一次谁掌城印，并不自动改变已经另签的水权。",
+      "requires": {
+        "flags": [
+          "node:ch3-archive-2"
+        ]
+      },
+      "choices": [
+        {
+          "id": "commons",
+          "label": "让共同议席接受独立卷宗监督",
+          "preview": "需共同初案和公开卷宗；免费，本章司法成功，regime_commons；渡口+3。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_commons"
+            ],
+            "completeRoute": "ch3-archive",
+            "factions": {
+              "commons": 3
+            }
+          },
+          "requires": {
+            "flags": [
+              "constitution_commons",
+              "archive_public"
+            ]
+          }
+        },
+        {
+          "id": "house",
+          "label": "确认城库集中通行与调粮权",
+          "preview": "需城库初案；免费，本章司法成功，regime_house；城库+3、渡口−1。水权按原合同保留，不凭此吞并。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_house",
+              "city_command"
+            ],
+            "completeRoute": "ch3-archive",
+            "factions": {
+              "house": 3,
+              "commons": -1
+            }
+          },
+          "requires": {
+            "flags": [
+              "constitution_house"
+            ]
+          }
+        },
+        {
+          "id": "temple",
+          "label": "确认庙院庇护与登记权",
+          "preview": "需庙院初案；免费，本章成功，regime_temple；神庙+2。未另签的供水不会自动归庙。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_temple"
+            ],
+            "completeRoute": "ch3-archive",
+            "factions": {
+              "temple": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "constitution_temple"
+            ]
+          }
+        },
+        {
+          "id": "market",
+          "label": "确认商约调粮仲裁及明文收费",
+          "preview": "需商约初案；免费，本章成功，regime_market；城库+1、渡口−1。人身不自动成为商票。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_market"
+            ],
+            "completeRoute": "ch3-archive",
+            "factions": {
+              "house": 1,
+              "commons": -1
+            }
+          },
+          "requires": {
+            "flags": [
+              "constitution_market"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "交接散卷，承认政体尚未成形",
+          "preview": "免费，本章司法失败，regime_failed；所有局部粮务和证据各自保留，未冒充统一制度。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:archive:settled",
+              "regime_failed",
+              "justice_unfinished"
+            ],
+            "failRoutes": [
+              "ch3-archive"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "king-seated-by-permission",
+          "requires": {
+            "flags": [
+              "gilg_met"
+            ]
+          },
+          "text": "王把折椅交给自己随从，没有擅坐掌印席。他仍可以提出工料索赔或新约，城印的接管者则须按今天真正成立的制度答复。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-descent-1",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "title": "第七门的候选名字",
+      "map": "underworld",
+      "text": "活绳仍连着庙中身体。第七门前先核候选号与执行令，岸上两份交接齐备以后，最后裁债才解绳过阈。\n乌鲁母亲的信影从门缝滑来：“他若没有回来，我该找谁？”一张格式令能把一个人的归期交给别人。苏恩要求先让被写进格中的人说话。\n王的回声立在自己的空碗后，没去占苏恩父亲的位置。他带着一只私人的旧空碗，碗口蒙灰；再多一个活人的被扣名，也填不满那一只。",
+      "choices": [
+        {
+          "id": "hear",
+          "label": "让苏恩和乌鲁分别把话说完",
+          "preview": "免费，final_witness；父债、被扣者和家属位置写清，苏恩+1。抵押和现金债尚须各自处理。",
+          "effects": {
+            "flags": [
+              "final_witness"
+            ],
+            "relationships": {
+              "suen": 1
+            }
+          },
+          "next": "ch3-descent-2"
+        },
+        {
+          "id": "repay",
+          "label": "先实还尚欠八银，撤回现金附押",
+          "preview": "需现金债确存；银−8，现金债清偿，名字抵押撤回，final_witness；侵权史保留。",
+          "effects": {
+            "flags": [
+              "mortgage_repaid",
+              "final_witness"
+            ],
+            "clearFlags": [
+              "mortgage_cash_due",
+              "names_mortgaged"
+            ]
+          },
+          "requires": {
+            "flags": [
+              "mortgage_cash_due"
+            ]
+          },
+          "cost": {
+            "silver": 8
+          },
+          "next": "ch3-descent-2"
+        },
+        {
+          "id": "uru",
+          "label": "把乌鲁写进待执行替身栏",
+          "preview": "需强制转让令；免费，claim_uru、final_witness，乌鲁仍被扣，恐惧+1；终章仍可撤销或继续强留。",
+          "effects": {
+            "flags": [
+              "claim_uru",
+              "uru_detained",
+              "final_witness"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "transferable_debt"
+            ]
+          },
+          "next": "ch3-descent-2"
+        },
+        {
+          "id": "ili",
+          "label": "把已经救回的伊利列入替身附件",
+          "preview": "需转让令、曾抵押活名且伊利已获救；免费，claim_ili、final_witness、恐惧+2。卡拉特当面拒替你点工，关系−3。",
+          "effects": {
+            "flags": [
+              "claim_ili",
+              "final_witness",
+              "karat_refused_register"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "relationships": {
+              "karat": -3
+            }
+          },
+          "requires": {
+            "flags": [
+              "transferable_debt",
+              "mortgage_ever",
+              "rescued_all"
+            ]
+          },
+          "next": "ch3-descent-2"
+        },
+        {
+          "id": "buy",
+          "label": "以黑钥为凭，补买六银转让令",
+          "preview": "需黑钥；银−6，得到转让令、claim_uru、乌鲁被扣与final_witness；恐惧+1。",
+          "effects": {
+            "flags": [
+              "transferable_debt",
+              "claim_uru",
+              "uru_detained",
+              "final_witness"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "key_taken"
+            ]
+          },
+          "cost": {
+            "silver": 6
+          },
+          "next": "ch3-descent-2"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "uru-held",
+          "requires": {
+            "flags": [
+              "uru_detained"
+            ]
+          },
+          "text": "乌鲁拿不回自己的通行封套，靠墙数着该给母亲回信的日子。"
+        },
+        {
+          "id": "ili-present",
+          "requires": {
+            "flags": [
+              "rescued_all"
+            ]
+          },
+          "text": "伊利从已获救的人中前来送粮。他仍在盘算下一班要带多少，不知道有人会把这份到场当作可交债的理由。"
+        },
+        {
+          "id": "ili-not-present",
+          "requires": {
+            "flags": [
+              "people_waiting"
+            ]
+          },
+          "text": "伊利仍在高台等接应，现场没有他的本人授权或到场印；不得把他写成自愿候选。"
+        },
+        {
+          "id": "enkidu-formally-named",
+          "requires": {
+            "flags": [
+              "gilg_enkidu_named"
+            ]
+          },
+          "text": "正式分立的祭名页写着恩奇都，和苏恩父亲、外来工各占自己的行；那次共同承认不可替代的签印仍在。"
+        },
+        {
+          "id": "enkidu-private-memory",
+          "requires": {
+            "notFlags": [
+              "gilg_enkidu_named"
+            ]
+          },
+          "text": "王自己的旧碗还不是本城正式分立的祭名记录。他能低声念友人，却没有替在场者取得一份共同见证。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-descent-2",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "title": "新债的第一张命令",
+      "map": "underworld",
+      "text": "绳上第六个结已松，外廊仍连着庙里的身体。在这里盖下拘束令，岸上的执行者便会真的扣住那个人。\n执吏把黑钥转向你们，第一道正式命令只要求一个明确名字：乌鲁，拘束一夜，并在他的腕上烙下可转让号印。妮萨雅则找到反印裂口，愿重念错名、接回反印，撤去那张不曾得到个人授权的附条。",
+      "requires": {
+        "flags": [
+          "node:ch3-descent-1"
+        ]
+      },
+      "choices": [
+        {
+          "id": "repair",
+          "label": "修接反印、重听哀诉并撤回拘束",
+          "preview": "需债簿；免费，恐惧+2，恢复越权证据、哀诉与完整反印，释放待扣者、放弃黑印执行权；既成侵权史不清。",
+          "effects": {
+            "flags": [
+              "gate_lament",
+              "counterseal_repaired",
+              "debt_unmasked",
+              "decline_coercion"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "clearFlags": [
+              "uru_detained",
+              "captives_held",
+              "black_authority",
+              "claim_uru",
+              "claim_ili"
+            ],
+            "factions": {
+              "shades": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "debt_ledger"
+            ]
+          },
+          "next": "ch3-descent-3"
+        },
+        {
+          "id": "enforce",
+          "label": "用黑钥执行第一次索名命令",
+          "preview": "需黑钥、转让令且没有伊利附件；免费，恐惧+2。明确拘束乌鲁一夜并烙下永久可转让号痕，black_authority；亡者−3、苏恩−2。最后可释放，但这次夺取自由与烙印史不消失。",
+          "effects": {
+            "flags": [
+              "black_authority",
+              "captives_held",
+              "first_collection_enforced",
+              "claim_uru",
+              "uru_detained",
+              "uru_branded"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "factions": {
+              "shades": -3
+            },
+            "relationships": {
+              "suen": -2
+            },
+            "text": "乌鲁在庙中被实扣一夜，手腕烙上可转让号印；释放不会消掉号痕，家属知道是谁盖令。"
+          },
+          "requires": {
+            "flags": [
+              "key_taken",
+              "transferable_debt"
+            ],
+            "notFlags": [
+              "claim_ili"
+            ]
+          },
+          "next": "ch3-descent-3"
+        },
+        {
+          "id": "hold",
+          "label": "按格式令继续扣住待替者",
+          "preview": "需转让令；免费，captives_held、恐惧+1，乌鲁或伊利仍无法自由离开；可在末节点承认强留或释放。此刻乌鲁和已经列明的待替者继续失去自由；没有当事人同意。",
+          "effects": {
+            "flags": [
+              "captives_held",
+              "coercion_continued"
+            ],
+            "resources": {
+              "dread": 1
+            }
+          },
+          "requires": {
+            "flags": [
+              "transferable_debt"
+            ]
+          },
+          "next": "ch3-descent-3"
+        },
+        {
+          "id": "refuse",
+          "label": "拒绝写新名字，原样带回未解债",
+          "preview": "免费，decline_coercion；释放暂扣乌鲁与待替者，不给强索奖励；原现金债与旧契仍待末节点。",
+          "effects": {
+            "flags": [
+              "decline_coercion"
+            ],
+            "clearFlags": [
+              "uru_detained",
+              "captives_held",
+              "black_authority",
+              "claim_uru",
+              "claim_ili"
+            ]
+          },
+          "next": "ch3-descent-3"
+        },
+        {
+          "id": "return-royal-seal",
+          "label": "归还超用工程牌并更正，重听哀诉、修反印撤扣令",
+          "preview": "需债簿与待归工程牌；免费，恐惧+2。庙使岸上实还牌并公开更正，王+1；门廊逐人重听哀诉、读回错名与原契，查明越权，接反印并释放暂扣者、放弃黑印。归牌本身不赋撤约依据；已护人和滥用史保留。",
+          "effects": {
+            "flags": [
+              "gate_lament",
+              "counterseal_repaired",
+              "debt_unmasked",
+              "decline_coercion",
+              "gilg_seal_returned",
+              "gilg_seal_misuse_acknowledged"
+            ],
+            "resources": {
+              "dread": 2
+            },
+            "clearFlags": [
+              "uru_detained",
+              "captives_held",
+              "black_authority",
+              "claim_uru",
+              "claim_ili",
+              "gilg_seal_return_due",
+              "gilg_engineering_seal"
+            ],
+            "factions": {
+              "shades": 1
+            },
+            "npcRelationships": {
+              "gilgamesh": 1
+            },
+            "text": "庙使接到活绳传来的话，把实牌送回王营，张贴这份护人命令未经授权的更正。人已经护出，不被重新交回；借威势的记录也没有撤走。\n门廊里，苏恩重新坐到碗墙前，听每位当事人讲完被错写的名字、家人和想归去的日子；妮萨雅把错名逐个读回债簿，再与原契核对，指出代签栏越过本人授权的那一笔。你们承受这些哀诉带回的恐惧，才把反印按裂口接回原位，明文撤销扣人令并放弃黑印执行权。还牌解决岸上的越权，证言、原契与完整反印共同给出门下撤约依据。"
+          },
+          "requires": {
+            "flags": [
+              "debt_ledger",
+              "gilg_seal_return_due"
+            ]
+          },
+          "next": "ch3-descent-3"
+        }
+      ],
+      "sceneVariants": [
+        {
+          "id": "uru-confrontation",
+          "requires": {
+            "flags": [
+              "uru_detained"
+            ]
+          },
+          "text": "乌鲁把手腕收进袖里：“我送你们路条时，没答应把自己也寄出去。”"
+        },
+        {
+          "id": "ili-confrontation",
+          "requires": {
+            "flags": [
+              "claim_ili"
+            ]
+          },
+          "text": "卡拉特把点工木签摔在桌上：“我签过假验收。现在不能再替你点第二次人。”伊利亲口拒绝这份替身附件。"
+        },
+        {
+          "id": "king-at-sixth-knot",
+          "requires": {
+            "flags": [
+              "gilg_met"
+            ]
+          },
+          "text": "吉尔伽美什看着烙号用的铜头，伸出手又缩回。那是活人的手。他的梦还没有把今天变成死后的任命。"
+        }
+      ]
+    },
+    {
+      "id": "ch3-descent-3",
+      "chapter": "ch3",
+      "route": "ch3-descent",
+      "title": "未干的空行，由谁留下",
+      "map": "underworld",
+      "text": "岸上的两份交接已经落印。塔玛与乌鲁的活绳在阈下解开；此次裁定以肉身过门或在门外关门结束，不再是可撤回的托身见证。通过者只能按这次实际成立的返还、服务、索债或注销条款回来，亡者仍无此路。\n\n门后原契的一角仍湿着。苏恩把父亲的手放回自己的膝上；乌鲁望着通向岸上的缝；妮萨雅只肯在已明确同意的名字旁落笔。\n第七门等的不是一段赞词，而是此后由谁承担、谁能拒绝、何时结束。岸上的水与城印已经各有去处，门下这一笔也要单独写清。\n塔玛把维系活绳的借水碗放在阈上。将一瓮净水倒回原碗，是归还托身借水并洗去旧誓印；越权证据与修复反印同时呈上，才足以撤销那条代签，水本身不能买出一份清白。",
+      "requires": {
+        "flags": [
+          "node:ch3-descent-2",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled"
+        ]
+      },
+      "choices": [
+        {
+          "id": "release",
+          "label": "把托身借水归还塔玛原碗，撤销越权条",
+          "preview": "需门槛通行、重听哀诉、越权查明、反印修复且净水1；水−1，本章成功，mode_release/debt_released；亡者+3、苏恩+2。只消非法索人，现金债与历史伤害不消。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_release",
+              "debt_released",
+              "gilg_present_judgeship_denied",
+              "gilg_mortality_confronted"
+            ],
+            "resources": {
+              "water": -1
+            },
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "names_mortgaged",
+              "uru_detained",
+              "captives_held",
+              "black_authority"
+            ],
+            "factions": {
+              "shades": 3
+            },
+            "relationships": {
+              "suen": 2
+            },
+            "text": "净水归入塔玛守的原碗，活绳旧印洗去；越权证据与完整反印被同时按回原契。待扣者被明确释放，现金债与已受伤害仍各有自己的债权人。\n王亲眼看见撤约依据是越权证据与归还旧誓，不是自己梦中的称号。他仍活着，恩奇都仍在亡者一边。"
+          },
+          "requires": {
+            "flags": [
+              "threshold_pass",
+              "gate_lament",
+              "debt_unmasked",
+              "counterseal_repaired"
+            ],
+            "resources": {
+              "water": 1
+            }
+          }
+        },
+        {
+          "id": "suen",
+          "label": "接受苏恩本人限期守门的决定",
+          "preview": "需中章suen_offer、门槛通行及哀诉；免费，本章成功，mode_suen；他一季后可归，不继承给家属；其他同伴未被代签。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_suen",
+              "suen_stays",
+              "gilg_suen_not_retinue"
+            ],
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "names_mortgaged",
+              "uru_detained",
+              "captives_held",
+              "black_authority"
+            ],
+            "relationships": {
+              "suen": 1
+            },
+            "text": "苏恩只给自己的一季落印，王不能把这一个人的决定写成未来王役的范本。"
+          },
+          "requires": {
+            "flags": [
+              "suen_offer",
+              "threshold_pass",
+              "gate_lament"
+            ]
+          }
+        },
+        {
+          "id": "scribes",
+          "label": "由妮萨雅与具名志愿抄手限期核名",
+          "preview": "需中章本人提议、保护名单及门槛通行；免费，本章成功，mode_scribes；她辞城库职，服务可撤回，其他人不被代签。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_scribes",
+              "nisaya_gate_watch",
+              "gilg_scribes_not_retinue"
+            ],
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "names_mortgaged",
+              "uru_detained",
+              "captives_held",
+              "black_authority"
+            ],
+            "text": "妮萨雅让王看清抄手每次可撤的签名，核名站没有把来王定成今日判官。"
+          },
+          "requires": {
+            "flags": [
+              "nisaya_offer",
+              "protected_names",
+              "threshold_pass"
+            ]
+          }
+        },
+        {
+          "id": "rota",
+          "label": "批准逐人同意且可撤回的社区轮值",
+          "preview": "需中章轮值提议、终章共同渠及共同政体；免费，本章成功，mode_rota；反对者不失粮权，下一班仍须本人签名。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_rota",
+              "city_rota",
+              "gilg_rota_boundary"
+            ],
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "names_mortgaged",
+              "uru_detained",
+              "captives_held",
+              "black_authority"
+            ],
+            "text": "王的书记也须照轮值拒绝栏执行，不能拿一位志愿者的名字借走下一班。"
+          },
+          "requires": {
+            "flags": [
+              "rota_offer",
+              "canal_common",
+              "regime_commons"
+            ]
+          }
+        },
+        {
+          "id": "index",
+          "label": "只为已同意者注销本城索引，随船队出港",
+          "preview": "需本人注销授权与自愿出港船队；免费，本章成功，mode_nameless；这些户放弃本城屋产继承和登记权，私名不删，未同意者不被代表。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_nameless",
+              "indices_cancelled",
+              "gilg_indices_not_owned"
+            ],
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "uru_detained",
+              "captives_held",
+              "black_authority"
+            ],
+            "text": "注销的是各自同意放弃的本城索引，王不能接收这些私名作失去公民号后的新役籍。"
+          },
+          "requires": {
+            "flags": [
+              "index_exit_authorized",
+              "personal_index_right",
+              "canal_exodus"
+            ]
+          }
+        },
+        {
+          "id": "uru",
+          "label": "把乌鲁永久留作强制替身",
+          "preview": "需乌鲁附件及仍在拘束的待替者；免费，本章技术成功，mode_uru、恐惧+3；苏恩−4、贝鲁−2。乌鲁无同意，不可写自愿。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_uru",
+              "captive_uru",
+              "gilg_uru_not_enkidu"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "completeRoute": "ch3-descent",
+            "relationships": {
+              "suen": -4,
+              "belu": -2
+            },
+            "clearFlags": [
+              "black_authority"
+            ],
+            "text": "王看着乌鲁留下，恩奇都的空碗没有多一声回答。乌鲁不是他失去的那个人。"
+          },
+          "requires": {
+            "flags": [
+              "claim_uru",
+              "captives_held"
+            ]
+          }
+        },
+        {
+          "id": "ili",
+          "label": "把曾救回的伊利永久留作替身",
+          "preview": "需伊利附件及仍在拘束的待替者；免费，本章技术成功，mode_ili、恐惧+3；卡拉特−4、苏恩−3。救援后又被交出的事实永久保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_ili",
+              "captive_ili",
+              "gilg_ili_not_enkidu"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "completeRoute": "ch3-descent",
+            "relationships": {
+              "karat": -4,
+              "suen": -3
+            },
+            "clearFlags": [
+              "uru_detained",
+              "black_authority"
+            ],
+            "text": "伊利的名字被强留，王的祭碗仍然空着。这一次夺走的生命不能补成另一段友谊。"
+          },
+          "requires": {
+            "flags": [
+              "claim_ili",
+              "captives_held"
+            ]
+          }
+        },
+        {
+          "id": "crown",
+          "label": "接下黑印，并按一夜令释放暂扣乌鲁",
+          "preview": "需黑钥与已执行的黑印命令；免费，本章技术成功，mode_crown、恐惧+3；亡者−3、神庙−2。保留索人机制，取得的是本城旧契权力。 此项同时释放乌鲁的一夜拘束，腕上号痕永久保留；索债制度继续。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_crown",
+              "dark_crown",
+              "gilg_black_petition_ungranted"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "completeRoute": "ch3-descent",
+            "factions": {
+              "shades": -3,
+              "temple": -2
+            },
+            "clearFlags": [
+              "uru_detained",
+              "captives_held"
+            ],
+            "text": "王来问新黑印能给他什么；接印本身没有授予他席位或免死，也没有替地方另给王役授权。"
+          },
+          "requires": {
+            "flags": [
+              "key_taken",
+              "black_authority"
+            ]
+          }
+        },
+        {
+          "id": "close",
+          "label": "释放待扣者，关门并承认旧契未解",
+          "preview": "免费，本章门下失败，mode_closed；恐惧+1；暂扣者获释，旧契与现金债仍在，已死者不复活。 本次明确解除待扣者的拘束；既成烙印与侵权史保留。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_closed",
+              "gate_closed",
+              "gilg_returns_without_verdict"
+            ],
+            "resources": {
+              "dread": 1
+            },
+            "failRoutes": [
+              "ch3-descent"
+            ],
+            "clearFlags": [
+              "uru_detained",
+              "captives_held",
+              "claim_uru",
+              "claim_ili",
+              "black_authority"
+            ],
+            "text": "王随活绳返回自己的身体，带走一份仍未解开的死亡问题，没有从关门中拿到判官任命。"
+          }
+        },
+        {
+          "id": "royal-finite-memorial",
+          "label": "在撤约同时约束来王，只留公开有限纪念",
+          "preview": "需全部正当撤约前置、净水1、有限王约、已校梦、恩奇都独碗及王信任≥1；不得仍有王堰/封墓/未归牌/强役。净水−1，本章成功；王+2，只留公开有限纪念、本人志愿祭供；已拆墓史与侵权史不抹去。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_release",
+              "debt_released",
+              "gilg_present_judgeship_denied",
+              "gilg_mortality_confronted",
+              "gilg_finite_memorial",
+              "gilg_mortality_accepted"
+            ],
+            "resources": {
+              "water": -1
+            },
+            "completeRoute": "ch3-descent",
+            "clearFlags": [
+              "names_mortgaged",
+              "uru_detained",
+              "captives_held",
+              "black_authority",
+              "gilg_royal_warrant",
+              "gilg_archive_access",
+              "gilg_royal_death_claim"
+            ],
+            "factions": {
+              "shades": 3
+            },
+            "relationships": {
+              "suen": 2
+            },
+            "text": "净水归入塔玛守的原碗，活绳旧印洗去；越权证据与完整反印被同时按回原契。待扣者被明确释放，现金债与已受伤害仍各有自己的债权人。\n王亲眼看见撤约依据是越权证据与归还旧誓，不是自己梦中的称号。他仍活着，恩奇都仍在亡者一边。\n王把刻着“随我”的泥条掰成两段，留下恩奇都的一只碗。“我可以修一段人走的堤。”他说，“名字让愿意念的人念。”公开岸碑只有有限纪名，追加工程仍须本城同意；他没有得到返死或现任神职。",
+            "npcRelationships": {
+              "gilgamesh": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "threshold_pass",
+              "gate_lament",
+              "debt_unmasked",
+              "counterseal_repaired",
+              "gilg_bound_compact",
+              "gilg_future_not_present",
+              "gilg_enkidu_named"
+            ],
+            "resources": {
+              "water": 1
+            },
+            "notFlags": [
+              "gilg_tomb_works_active",
+              "gilg_tomb_sealed",
+              "gilg_seal_return_due",
+              "gilg_royal_labor_due"
+            ],
+            "npcRelationships": {
+              "gilgamesh": 1
+            }
+          }
+        },
+        {
+          "id": "crown-royal",
+          "label": "同活王分执黑印，以王队协查有名与无名",
+          "preview": "需黑钥、已执行黑令、王僭称裁判及仍有效本城许可；免费，恐惧+3、王+2，延续索人并建立王队协查/有名优先祭供的差序。释放一夜暂扣乌鲁，号痕永久；活王不获永生或神权。",
+          "effects": {
+            "flags": [
+              "chapter:ch3:descent:settled",
+              "mode_crown",
+              "dark_crown",
+              "gilg_black_alliance",
+              "gilg_exemption_claim",
+              "gilg_named_priority_active"
+            ],
+            "resources": {
+              "dread": 3
+            },
+            "completeRoute": "ch3-descent",
+            "factions": {
+              "shades": -3,
+              "temple": -2
+            },
+            "clearFlags": [
+              "uru_detained",
+              "captives_held"
+            ],
+            "text": "吉尔伽美什把自己的署名放在黑印执行页旁，王队开始协查本城旧契，优先供碗给王册有名者。新的差序取得现世执行人，无名者站到更远的队尾。乌鲁被按一夜令释放，腕痕仍在；王写的是人间差序，不是一纸免死。本地格式令供给索取凭证，王队和书记承担现世协查，黑印执吏持旧契追索；埃列什基伽勒的领域与乌图的见证都没有被这场人的结盟据为己有。",
+            "npcRelationships": {
+              "gilgamesh": 2
+            }
+          },
+          "requires": {
+            "flags": [
+              "key_taken",
+              "black_authority",
+              "gilg_judicial_usurpation",
+              "gilg_royal_death_claim",
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_warrant_revoked",
+              "gilg_survey_suspended"
+            ]
+          }
+        }
+      ],
+      "sceneVariants": []
+    }
+  ],
+  "endings": [
+    {
+      "id": "black-city",
+      "title": "城印与黑印",
+      "text": "城库把活人屋权与门下替身收进同一署。居民上一次查阅申请被盖上新的黑印；下一位拒签者必须同时面对两种执吏。实际供水仍照岸上另签的水约执行，中央权力也无法把没修成的渠写成完工。\n卡拉特被要求替新死籍点工，苏恩把测水木尺倒扣在桌上：他拒绝替你们测名字。城库若要继续索人，须公开承认这份拒绝。你们取得权力，也留下了被查问的工资、抚恤和死者。\n\n吉尔伽美什把一份由王队协查征收的提案送到新共同署，经办人要求先查他今天还有哪些有效许可，再决定是否受理。他想让自己的名字在死后仍像今天这样能叫来工班；艾迪勒却要先算谁负担下一次押役。王站在两枚印之间，发现长久的纪念也会长成另一项役差。河床工地与王役是否仍有效，各按真正签过或撤回的许可执行。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_crown",
+          "regime_house"
+        ]
+      }
+    },
+    {
+      "id": "black-temple",
+      "title": "七碗之国",
+      "text": "七只碗被摆到庙院登记台旁。祭司们把门下轮值加入自己的庇护名册，获得稳定供粮的人也开始担心明年会轮到谁；另立的共同渠、商票或停水事实仍按原约保留。\n塔玛与妮萨雅分开坐下：前者掌碗，后者把一份不可改动的拒签页送出庙门。这里有配给和护佑，也有以庇护名义运行的索人制度。\n\n王带来一只刻有自己名字的供碗，请塔玛把它排在第一列。塔玛把碗留在地上，让他看庙院正在登记的下一位索人户。“碗多一只，少掉的人不会少一个。”他仍盼死后不断祭供，眼前却必须把愿望交给庙院经办，不能拿梦中头衔接走七碗。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_crown",
+          "regime_temple"
+        ]
+      }
+    },
+    {
+      "id": "black-market",
+      "title": "活名交易所",
+      "text": "伊杜把黑印契拆成可以转手的偿债票。居民不再只面对祭司或国王，而要知道谁买下了自己登记号后的索取权；岸上既定水权也不能被这张票悄悄吞并。\n贝鲁把所有新增承运约留空，要求先说明无票者能否上船。他已经同意的渡次与未结船权仍各自有效。粮船到得更准时，拒绝一份新票也因此有了新的代价。\n\n伊杜向来王报出一份可继承的祭供报价，连每季送麦与留名都列了价格。吉尔伽美什在“续供”旁按住手指，第一次问谁能保证付钱的人死后还有人续款。黑印让别人的登记号可转让，也让他的长久愿望变成一份会涨价的合同；他没有买到恩奇都回来。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_crown",
+          "regime_market"
+        ]
+      }
+    },
+    {
+      "id": "black-exile",
+      "title": "岸上拒认的地下王",
+      "text": "外庭拒绝承认你们的黑印，或者根本没有一个能替全城承认它的机构。你们握住门下这一本旧契，地上却没有因此向你们交出城印。\n妮萨雅把可核的记录带回岸上，苏恩不替你们召集亲属。有人可能仍需与你们交涉才能放回被索者；那是分裂主权中的求援，不是全城臣服。\n\n王的使者在岸上递出一份黑印往来书，外庭要求把它退到普通外来工程申请那一摞。吉尔伽美什若要同门下新权力往来，必须承受本城不承认它的后果；他的船粮、工人和未来纪念请求都不能因此取得岸上通行特权。他留住名声的捷径，成了另一条需要讨价还价的界线。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_crown"
+        ],
+        "notFlags": [
+          "regime_house",
+          "regime_temple",
+          "regime_market"
+        ]
+      }
+    },
+    {
+      "id": "uru-substitute",
+      "title": "缺席的传令员",
+      "text": "第二天，渡口有人问乌鲁的船期。贝鲁把积下的家信交给母亲，封套完好，人却在第七门后。你们亲自确认的转让令让一个不欠债的成人永久留下。\n岸上各自成立的水务与掌印制度仍运转；这一项制度的共同底色，是允许别人替一个拒绝者签终身。苏恩在经过庙门时停下，拒绝把乌鲁写进自愿者名册。\n\n王在出庙时拦住送信的学徒，问乌鲁留下的那封母信能否转交。学徒把收信人的名字念给他听，等王重复一遍才走。吉尔伽美什没有收到一个回来的恩奇都，只见另一位母亲开始等一个回不来的人；他的纪名册再翻一页，也不能把这两种失去交换。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_uru"
+        ]
+      }
+    },
+    {
+      "id": "ili-substitute",
+      "title": "救回又交出去的人",
+      "text": "伊利的工具还挂在获救时背回的绳袋上。下一班开工，卡拉特把点工格空着：“我救过他，你们也救过。那不是给第二次交人的收据。”\n工班不再接受用领粮或救援登记附带替身授权，妮萨雅留下控告。岸上的政体和水约并未因此全部崩溃，但它们必须面对一个具体事实：被救回的人又被你们交了出去。\n\n吉尔伽美什来到工班空出的点工格前，想付一份纪念工钱。卡拉特把银放回他的掌心：“先别替他立碑。先说是谁又把他交出去。”王的慷慨第一次被要求留在问题后面；空墓或供碗的申请仍须另受本地问讯，不能拿这一次施惠买走工班的愤怒。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_ili"
+        ]
+      }
+    },
+    {
+      "id": "suen-watch",
+      "title": "父子之间的一季",
+      "text": "换季那天，苏恩把水尺交给岸上的学徒，自己在第七门旁放下两只碗。一只给父亲，另一只写着当年外来工的真名。“你在这里陪我听他把话说完。”他说。\n一季服务有明确结束日，只由苏恩本人同意，不传给家属，其他同伴自由返岸。旧错误索人条暂冻结而非被宣称从未存在；队伍此季少一位测水人，苏恩仍会按约归来。\n\n苏恩值守的第一夜，王把恩奇都的碗留在门外，自己在岸上坐到灯灭。他没有要求苏恩顺道替自己多守十年。天亮后，他向学徒询问的是那段水尺怎么用；一季有归期的服务让王看见，留下一个名字可以从答应一个结束日开始。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_suen"
+        ]
+      }
+    },
+    {
+      "id": "scribes-watch",
+      "title": "未眠的抄手",
+      "text": "妮萨雅从城库门上取下自己的职位木签，挂在第七门临时抄录台后。自愿抄手各带水壶，名后只写自己愿值的班；安全屋里的住户没有被她顺手签进来。\n核名站让每次索取都须接受反证，旧债转入持续复核，并未凭一笔全消。她保留撤回服务的权利，也把缺班时必须重新找自愿者写在台前；贝鲁是否承运仍依真实船约。\n\n妮萨雅把王递来的名册放在抄录台最末，不让书页金边改变复核次序。吉尔伽美什等抄手逐行问完个人同意，才领回一份带删线的副本。他想让名字长存，先得容忍名字被查、被拒收，连自己的也一样。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_scribes"
+        ]
+      }
+    },
+    {
+      "id": "city-rota",
+      "title": "谁都不能代下一班签名",
+      "text": "第一班轮值到期，卡拉特把班册递给下一人，先指那一格“拒绝仍领粮”。没有人凭上一班的签名就能替下一班落印。\n共同渠与共同议席为可撤回服务提供实际执行者，门下不再强索替身。苏恩回岸校水桩，塔玛保管空白拒绝栏。居民支付的是自己明确愿承担的劳动，不是让缺席者替全城永远留下。\n\n第一班交接时，王带着测水人来到班册前。塔玛把“今日愿来、明日可拒”指给每一人，他们各自亲填日期，王只留下已答应付的工资，不替下一班落笔。工程能力是否加入轮值，也要由实际承担者签字，不能变成无尽随王而行。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_rota"
+        ]
+      }
+    },
+    {
+      "id": "nameless-exodus",
+      "title": "没有城印的活人",
+      "text": "离开的户主逐人注销纳鲁渡城籍号，并确认放弃该号附带的屋产继承与公民登记权。私名、记忆和未同意离开者的号都保留；旧契只能索特定号，因此这些被注销的索引不再给它抓手。\n贝鲁领航新岸船队，妮萨雅把私名写在各自愿带走的小页上，不替他们伪造新城身份。离开不等于抹掉收款人的现金债，也没有替留城者作决定。\n\n吉尔伽美什在码头拦下注销页，原想把离城者接进自己的纪名册；妮萨雅要求他把本城公民号、私名和王役分成三栏。他让书记空着役籍栏，转向每位当事人提出单独雇约。王仍想有人记住他，却失去了靠一页总登记直接接走整群人的捷径。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_nameless"
+        ]
+      }
+    },
+    {
+      "id": "release-memorial",
+      "title": "堤上刻的是死者",
+      "text": "门下越权索人条撤去了，低街的死者仍然死去。幸存者把空门框立在旧闸旁，要求记住是谁以他们的屋子换出仓粮；救济是否已经付出、掌印者是否肯受问，由终章真实操作留下的附页写明。\n苏恩逐一核对死者姓名，卡拉特拒绝把纪念堤刻成一场无伤胜利。此后每一季的水务都绕不过这道门框；新的自由没有抵销赔偿与追责。\n\n王来到旧闸的空门框前，提议把自己的营造名刻到更高处。苏恩让他先等死者的名字刻完。吉尔伽美什收起量碑的绳，站在队末念出第一个并不认识的人名；他的死亡工程此后每次要取用河工，都须面对这道由真实损失立起的次序。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "drowned_quarter"
+        ]
+      }
+    },
+    {
+      "id": "release-oral",
+      "title": "没有原件的公堂",
+      "text": "门下的替身条撤去了，地上的关键原件却已被砸洗毁损。住户重新把门楣、收条与邻人证言摆上桌，一部分屋产争议只能注明尚有相互冲突的说法。\n妮萨雅教新抄手保留疑读与反证，拒绝给灭证者写清白书。谁现在掌印、水从哪里来仍按另立制度运行；这座城得到免受索人的自由，却没有获得被毁掉的确定性。\n\n王的书记来核河工旧契，妮萨雅递给他一份标满疑读的口述页，拒绝补成整齐王卷。吉尔伽美什坐到讲述者对面，听见同一名字的两种说法。他追求不朽的刻文，在这座失去原件的城里首先必须承认有些事只能留下缺口，自己的纪念合同也只能按仍能核实的范围写。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "evidence_destroyed"
+        ],
+        "notFlags": [
+          "drowned_quarter"
+        ]
+      }
+    },
+    {
+      "id": "release-salt",
+      "title": "白盐地上的自由",
+      "text": "旧契不再索活人，白盐地却没有因门开而恢复耕作。住区免过这次涨水，旧田下一季必须减种或迁田，城里要靠有期限的外来粮度过。\n卡拉特组织换田，贝鲁向实际掌船者提出按真实可用船约运粮的请求，苏恩在盐桩上测水。掌印者仍须按实际制度处理配给，谁也不能在盐地上盖一枚丰收印。\n\n王蹲在新盐桩前，用指甲刮下一点白粉，没再把那张河床图压在农地上。他向实际管水者提出另找可用工段的申请，先问迁田运输需要什么。自由没有把盐变回泥土；他能献出的工程能力也须先承认活人的下一季，不能让墓的位置占走这份难题。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "salt_land"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed"
+        ]
+      }
+    },
+    {
+      "id": "release-common",
+      "title": "名字与水都在城里",
+      "text": "卡拉特从掌印台走回工班，把自己的罚责另列一页。玛妮在水桩前照着能被撤换的轮表放第一份水；妮萨雅把匿名页和公开页分别封好，贝鲁签的仍只是有限渡次。\n门下越权索人条已经撤销，岸上也有能查掌印者的独立卷宗与共同渠。城里还有争执，谁也不能再用“大家已经同意”替下一人落笔。\n\n共同议席让吉尔伽美什的工程申请像任何新约一样排号。轮到他时，玛妮先问谁可以撤换管工，王把自己的姓名写进待审承包申请栏。卡拉特仍保留单独的罚责页；王提出的粮与技术要经下一次真实批准和当事人同意才可加入，已经做过的贡献另按收据，不凭这次申请长出凌驾共同渠的王名。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_commons",
+          "canal_common"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-fleet",
+      "title": "新岸上的渡次",
+      "text": "贝鲁等最后一位真正愿离开的人上船，才解开纳鲁渡的缆绳。妮萨雅把可携的副页分给各户；留城者的材料也有自己保管的去处。\n门下索人条已撤销，出港不是逃过一个会追名的漏洞。共同议席在新岸从季节渡次重新开始，卡拉特按新工约领工资；旧家与现成灌渠留在身后，新岸不会一夜长成旧城。\n\n王到码头提出把自己的石工工具送往新岸，贝鲁只给出一班明确运价，不承诺替王选址。吉尔伽美什看着缆绳松开，第一次把“下一座留下我名字的城”改成“你们还要不要我来修”。旧港的河床申请不能跟着船自动移到新岸。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_commons",
+          "canal_exodus"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-two-banks",
+      "title": "同一条水，两套城印",
+      "text": "贝鲁在两岸各敲一次渡钟，没人能只凭自己那边的城印撤掉通水。苏恩按两套互查水桩测完，才把尺放平。\n门下索人条已撤销，共同议席接受分立水权与互查条约，不把统一改革当作唯一胜利。资产与通行权限已经实际分开，两岸仍须在同一条河上相处。\n\n苏恩把王的测水副图各交一份给两岸，要求任何新围堰先过两边互查。吉尔伽美什绕着两枚不同的城印看了一圈，没能用一份宏大的改河计划把它们压成一枚。若要继续营造，他得分别说明上游与下游的代价，纪名不再替他省掉第二次同意。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_commons",
+          "canal_partition"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-dry-council",
+      "title": "有议席，没有共同的渠",
+      "text": "共同议席第一次开会，桌上先摆的是外部水约。卡拉特把可用水量与收费逐项读出，拒绝把有问责权写成已经掌握共同渠。\n公开卷宗与可撤换城权成立，门下索人条也已撤销；共同渠、约定新岸或两岸执行方案却未成立。实际供应可以由庙库、商约、城库或援助维持，数量与限额按原约，议席仍须交涉，无法单凭表决改变掌水者。\n\n议席把王的工程报价与外部水约放在同一张桌上。吉尔伽美什愿意派测水人，居民却要求先写清能提供哪一段、原掌水者是否答应；一次表决不能凭空给他河流。王的慷慨成为交涉筹码，既未补出共同渠，也未让他取得本城的缺口作永久权利。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_commons"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land",
+          "canal_common",
+          "canal_exodus",
+          "canal_partition"
+        ]
+      }
+    },
+    {
+      "id": "release-house",
+      "title": "不再索人的城库",
+      "text": "艾迪勒把越权索人附条从城库的总契上拆下来，另封一盒。门外仍有通行查验，调粮仍按集中登记走，水权则须遵守此前真实签成的那套规则。\n妮萨雅来索可复核的查阅范围，获准多少由实际档案保管约决定，旁白不替她补出监察权。这里不再索活人替身，却还没有独立于城库的完整监督。\n\n艾迪勒把王的祭供与河工申请拆成两个限期附件，要求每次续期都到城库登记。吉尔伽美什追问谁能保证下一位掌印者还认这些字，艾迪勒只交出今天的收据。王能与集中权力交易，却不能从一个活人的印买到无限久的名字。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_house"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-sanctuary",
+      "title": "庙院不再收人",
+      "text": "塔玛在庙院门口改写仪式：念完名字，把碗放回本人手里。庙院继续登记庇护住户，登记权也仍是一项需要被追问的权力；供水依实际水约，不因她掌碗便自动归庙。\n苏恩回岸后第一次看仪式，等她把拒绝宣誓的人也领到庇护台旁才转身。门下不再索替身，机构与居民之间的边界却还要在每天配给时落实。\n\n塔玛把王的供碗放回他自己手里，请他像别的求庇者那样说明愿给多少、可否撤回。吉尔伽美什低头看见手指仍压着碗沿；他能捐仓粮、供石工，不能因为被歌颂为受眷顾者便接管庙院登记。恩奇都的那只碗始终单放。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_temple"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-charter",
+      "title": "不可以买卖的名字",
+      "text": "伊杜在商约第一页刻下人名不可转让。下一位来仲裁的人带的是欠款票，不是可被过户的身契；门下越权索人条已经撤销。\n商约掌印与调粮收费继续运行，实际水务和船约照另页执行。贝鲁把承运拒绝权留在每一张新报价末尾，妮萨雅核查这一行有没有在抄写中消失。稳定货源仍要付费，自由没有替居民付清每一份票。\n\n伊杜给王拟了新营造价目，妮萨雅把“愿被记住者不得以他人姓名抵价”添进仲裁页。吉尔伽美什划掉一项可转包役名，只保留石料、工期和自己的付款额。价格能决定一段工程能否继续，不能再替他买一个会答话的友人。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_market"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "release-fragments",
+      "title": "无城可盖的归来印",
+      "text": "苏恩回到临时测水棚时，三种印还各放在自己的箱里，没有一枚能代表全城。妮萨雅携散卷逐处核认，能成立的局部水约仍由各自执行者履行。\n门下索人条已撤销；岸上没有建立统一可执行的政体，并不等于所有水务与互助都不存在。她把缺的那一格留空，没有替空位盖成改革。\n\n来王问该把河工申请交给谁，三只印箱的保管人各自说明只能答应哪一段。吉尔伽美什把整图折成几张，逐处重写请求；他仍有大工程的愿望，这里却没有一个能替所有人保证的总签名。已成水约继续，王也只能承担一份份具体约定的寿命。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_release",
+          "regime_failed"
+        ],
+        "notFlags": [
+          "drowned_quarter",
+          "evidence_destroyed",
+          "salt_land"
+        ]
+      }
+    },
+    {
+      "id": "closed-fleet",
+      "title": "名字仍追着船",
+      "text": "贝鲁照约领船出港。有人问河弯后旧债是否就追不上，苏恩把仍有效的城籍号指给他看：航程与注销是两件事。\n居民明确选择了离开，尚未解除的替身条仍按未注销号追索。旧港空出一些位置，船上却要继续商量下一站如何应对；贝鲁送人，不出售无债的保证。\n\n吉尔伽美什的使者问能否用王名护送船队免受旧契追索。苏恩把未注销的城籍号递来，要求先指出一条真正生效的豁免。王最终交出的只是自己愿付的航行支援申请，不能把活人的名号唱成开门的法令；船队与王都把未解决的事带向下一程。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_closed",
+          "canal_exodus"
+        ]
+      }
+    },
+    {
+      "id": "closed-house",
+      "title": "门后仍有一份城令",
+      "text": "艾迪勒把未解原契封入城库的另一个盒子，写下经办人和期限。门外日常查验继续，坏闸、修成的水约或盐地都按实际交接执行。\n苏恩拒绝在盒上签“已清”。这座城选择集中管理与延期风险换眼前秩序，既没有把队伍重新困在门下，也没有让替身债消失。\n\n王离开前向艾迪勒索要一份死后纪名保障，城库经办人在封盒旁又放一个新盒，写下未来复议日期。吉尔伽美什盯着日期，终于问如果他活不到那天怎么办。城库能够保存延期，不能兑现永生；王的未来仍握在会更换的人与会干裂的泥上。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_closed",
+          "regime_house"
+        ],
+        "notFlags": [
+          "canal_exodus"
+        ]
+      }
+    },
+    {
+      "id": "closed-remains",
+      "title": "最后一张未干收条",
+      "text": "关门之前，暂扣者已被明确释放；原契却仍在门后。卡拉特填写工资表上的真实余额，妮萨雅逐项交接能找到的卷宗，苏恩最后标记父亲的位置。\n终章其余制度与局部成果各自留存，尚没有一套门下解法。下一班要从这张未干收条继续：他们知道谁已安全、哪里仍缺材料，以及哪一项承诺还不能算完成。\n\n王在未干收条旁留下自己的测绘副图，不签“债已清”。他走到日光里，又回头数一遍庙前的碗；恩奇都那一只仍然空着。纳鲁渡未给他一份解决死亡的判词，他也不能把未完工程与未清旧契带走冒作胜利，下一次来仍须从具体欠项谈起。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled",
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled",
+          "chapter:ch3:canal:settled",
+          "chapter:ch3:archive:settled",
+          "chapter:ch3:descent:settled",
+          "mode_closed"
+        ],
+        "notFlags": [
+          "canal_exodus",
+          "regime_house"
+        ]
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "第一章 · 夜水与借来的城印",
+      "summary": "救人、临时供水、受理与第一二门。三种权利仍有期限，错误的保证开始跟随人名。",
+      "requires": {},
+      "settledFlags": [
+        "chapter:ch1:canal:settled",
+        "chapter:ch1:archive:settled",
+        "chapter:ch1:descent:settled"
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "第二章 · 谁签下别人的明年",
+      "summary": "修闸、问责、制宪与第三至六门。冬粮、水票、证人及替身格式令开始要求兑现。本章跨数个勘测与施工日，行动序号不是小时；工人有实际付薪班次。",
+      "requires": {
+        "flags": [
+          "chapter:ch1:canal:settled",
+          "chapter:ch1:archive:settled",
+          "chapter:ch1:descent:settled"
+        ]
+      },
+      "settledFlags": [
+        "chapter:ch2:canal:settled",
+        "chapter:ch2:archive:settled",
+        "chapter:ch2:descent:settled"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "第三章 · 第七门前没有空白人名",
+      "summary": "幸存者、证人与被抵押者主动追问。决定实际水务、掌印制度与归来代价，得到二十四种互斥归宿。前期放样与围堰已经过施工日，封石室仍需后续施工，王没有因做梦即刻死亡。",
+      "requires": {
+        "flags": [
+          "chapter:ch2:canal:settled",
+          "chapter:ch2:archive:settled",
+          "chapter:ch2:descent:settled"
+        ]
+      },
+      "settledFlags": [
+        "chapter:ch3:canal:settled",
+        "chapter:ch3:archive:settled",
+        "chapter:ch3:descent:settled"
+      ]
+    }
+  ],
+  "epilogues": [
+    {
+      "id": "flood-paid",
+      "requires": {
+        "flags": [
+          "drowned_quarter",
+          "relief_reparations"
+        ]
+      },
+      "text": "低街：三粮救济已实际付给幸存者，泄洪命令副页也已交出；他们仍可追索其余损失，死者没有复活。"
+    },
+    {
+      "id": "flood-unpaid",
+      "requires": {
+        "flags": [
+          "drowned_quarter"
+        ],
+        "notFlags": [
+          "relief_reparations"
+        ]
+      },
+      "text": "低街：幸存者没有收到本轮三粮救济。他们在掌印台外继续要求交出抵押冬粮与泄洪命令；任何主结局都未替他们同意放弃追索。"
+    },
+    {
+      "id": "damaged-evidence",
+      "requires": {
+        "flags": [
+          "evidence_destroyed"
+        ]
+      },
+      "text": "毁证：关键未烧泥板遭砸洗、封套遭毁，原件的追责路径已经消失。妮萨雅保留能找到的散证，拒绝声称恢复了完整卷宗。"
+    },
+    {
+      "id": "salt-fields",
+      "requires": {
+        "flags": [
+          "salt_land"
+        ]
+      },
+      "text": "盐地：切渠把涨水导离住区，旧农地因此盐化；下一季须迁田或减种，配给与外援仍有期限。"
+    },
+    {
+      "id": "cash-due",
+      "requires": {
+        "flags": [
+          "mortgage_cash_due"
+        ]
+      },
+      "text": "八银借款：收款方仍欠庙库八银。撤销非法索人不免这笔现金债，庙库会向收款方追款，不能找被代押住户代还。"
+    },
+    {
+      "id": "mortgage-paid",
+      "requires": {
+        "flags": [
+          "mortgage_repaid"
+        ]
+      },
+      "text": "八银借款：已从银额实扣偿还；先前代押缺席者籍号的侵权历史仍由乌鲁家属与住户记得。"
+    },
+    {
+      "id": "mortgage-history",
+      "requires": {
+        "flags": [
+          "mortgage_ever"
+        ]
+      },
+      "text": "抵押史：缺席者曾未经同意被写成担保。已发生的曝光与恐惧不因后来撤条消失，也不会被改写成全体自愿。"
+    },
+    {
+      "id": "boat-unreturned",
+      "requires": {
+        "flags": [
+          "boat_claim_due"
+        ]
+      },
+      "text": "贝鲁：被征用的船与修船索赔尚未归结。他完成答应的接人和送信后拒绝新增无偿船务，并公开追索船权。"
+    },
+    {
+      "id": "boat-returned",
+      "requires": {
+        "flags": [
+          "belu_restored"
+        ]
+      },
+      "text": "贝鲁：船已真实归还，四银修船费已付；他恢复的是有期限的自愿渡约，历史征船并未被抹去。"
+    },
+    {
+      "id": "funds-diverted",
+      "requires": {
+        "flags": [
+          "relief_money_diverted"
+        ]
+      },
+      "text": "家属款：六份工伤抚恤曾被拿作急用，家属没有收到该笔应付款。新增粮食或闸修成果不能当作家属收条。"
+    },
+    {
+      "id": "wages-due",
+      "requires": {
+        "flags": [
+          "wages_due"
+        ],
+        "notFlags": [
+          "wages_paid"
+        ]
+      },
+      "text": "工资：十二份旧薪仍欠，艾迪勒的具名收条或后来接手者继续承担它；路线技术办结不是工资已付。"
+    },
+    {
+      "id": "karat-confession",
+      "requires": {
+        "flags": [
+          "karat_confessed"
+        ]
+      },
+      "text": "卡拉特：他已承认为保工班续约也保自己罚金而假签，责任没有由全工班分摊；是否已经向工班出庭另看终章签证。"
+    },
+    {
+      "id": "karat-testimony",
+      "requires": {
+        "flags": [
+          "karat_testified"
+        ]
+      },
+      "text": "卡拉特：终章本人已在工班面前交出签名，接受后续问责；他不再用“为了大家”要求别人替自己受罚。"
+    },
+    {
+      "id": "karat-covered",
+      "requires": {
+        "flags": [
+          "karat_protected"
+        ]
+      },
+      "text": "工班：中章假签被压下，终章拒令有真实原因。工人保留自行组织的工具与工钱诉求，不把卡拉特的赦免当共同同意。"
+    },
+    {
+      "id": "protected-action",
+      "requires": {
+        "flags": [
+          "protected_names"
+        ]
+      },
+      "text": "妮萨雅：安全屋和分存页确实让本次找人的雇主扑空。她亲自负责保管承诺，拒绝以配粮或救援逼证人公开姓名。"
+    },
+    {
+      "id": "unblocked-reprisal",
+      "requires": {
+        "flags": [
+          "witness_reprisals_unchecked"
+        ],
+        "notFlags": [
+          "protected_names",
+          "witness_reprisals_blocked"
+        ]
+      },
+      "text": "证人：本次报复未被挡下，未受保护者只能躲避追查；原件尚存不代表人身保护已经完成。"
+    },
+    {
+      "id": "father-truth",
+      "requires": {
+        "flags": [
+          "father_truth"
+        ]
+      },
+      "text": "苏恩父子：父亲签过外来工替身的事实已公开给同行者。苏恩仍愿悼念他，却没有替他改写无辜；外来工也有自己的祭名。"
+    },
+    {
+      "id": "father-covered",
+      "requires": {
+        "flags": [
+          "father_sheltered"
+        ]
+      },
+      "text": "苏恩父子：父亲的旧签仍被遮掩，外来工家属继续追问。与父亲团聚的愿望没有抹去另一个人的缺席。"
+    },
+    {
+      "id": "uru-free",
+      "requires": {
+        "flags": [
+          "transferable_debt"
+        ],
+        "notFlags": [
+          "captive_uru"
+        ]
+      },
+      "text": "乌鲁：暂扣最终被明确解除，他拿回封套。若此前执行过黑印，腕上的号痕仍在；贝鲁交还积下的母信，乌鲁保留拒绝下一次送路条的权利。"
+    },
+    {
+      "id": "water-common",
+      "requires": {
+        "flags": [
+          "canal_common"
+        ]
+      },
+      "text": "实际水务：共同渠由可撤换议席执行轮表，船仍私有且渡次有限；任何别的掌印者都不能靠结局措辞吞并它。"
+    },
+    {
+      "id": "water-state",
+      "requires": {
+        "flags": [
+          "canal_state"
+        ]
+      },
+      "text": "实际水务：稳定闸交城库执行，供水以城库查验为准；这项集中工程不自动废除独立卷宗或其他政治机构。"
+    },
+    {
+      "id": "water-temple",
+      "requires": {
+        "flags": [
+          "canal_temple"
+        ]
+      },
+      "text": "实际水务：庙库按登记限额放水。庙仓承担配给，同时保留登记权；它不是无限供水也不因此拥有人身。"
+    },
+    {
+      "id": "water-market",
+      "requires": {
+        "flags": [
+          "canal_market"
+        ]
+      },
+      "text": "实际水务：伊杜商约按水票收费，价格与追索写在明文票上；水费仍需支付，居民不是商票的所有物。"
+    },
+    {
+      "id": "water-banks",
+      "requires": {
+        "flags": [
+          "canal_partition"
+        ]
+      },
+      "text": "实际水务：两岸按互查约分别管理，通水与渡次不能单方撤销；统一政体若存在也须尊重此条约。"
+    },
+    {
+      "id": "water-exodus",
+      "requires": {
+        "flags": [
+          "canal_exodus"
+        ]
+      },
+      "text": "实际居住：只有明确同意者随贝鲁出港，船队粮与船权均照实支付；留下者没有被代签注销或强制迁走。"
+    },
+    {
+      "id": "water-failed",
+      "requires": {
+        "flags": [
+          "canal_failed"
+        ]
+      },
+      "text": "实际水务：终章工程/撤离目标未成，已救者仍安全，下一班取得坏闸、剩余者与材料清单；它没有被另两线胜利盖成完工。"
+    },
+    {
+      "id": "regime-commons",
+      "requires": {
+        "flags": [
+          "regime_commons"
+        ]
+      },
+      "text": "实际城权：可撤换的共同议席受独立卷宗监督，原件保管与掌印者分开，居民可据反证复核。"
+    },
+    {
+      "id": "regime-house",
+      "requires": {
+        "flags": [
+          "regime_house"
+        ]
+      },
+      "text": "实际城权：艾迪勒及继任城库集中调粮和通行查验；对已另签的水约仍须按原条款交涉。"
+    },
+    {
+      "id": "regime-temple",
+      "requires": {
+        "flags": [
+          "regime_temple"
+        ]
+      },
+      "text": "实际城权：庙院执行庇护与住户登记，塔玛承担配给义务，仍受她实际签下的个人授权限制。"
+    },
+    {
+      "id": "regime-market",
+      "requires": {
+        "flags": [
+          "regime_market"
+        ]
+      },
+      "text": "实际城权：商约负责调粮仲裁与明文收费，私人承运拒绝权及人身不可转让条按实际债制执行。"
+    },
+    {
+      "id": "regime-failed",
+      "requires": {
+        "flags": [
+          "regime_failed"
+        ]
+      },
+      "text": "实际城权：终章没有建立可执行的统一政体；各局部组织维持自己明确接下的事，空缺没有被旁白填成改革。"
+    },
+    {
+      "id": "first-black-order",
+      "requires": {
+        "flags": [
+          "first_collection_enforced"
+        ]
+      },
+      "text": "第一道黑印命令：乌鲁被真实拘束一夜，腕上被烙可转让号印。后来即使释放、解债、轮值或关门，这一夜与永久号痕都不会撤销；他的母亲向盖令者追索，妮萨雅留下一份按印人的姓名。"
+    },
+    {
+      "id": "gilg-wage-gift",
+      "requires": {
+        "flags": [
+          "gilg_credit_accepted"
+        ]
+      },
+      "text": "王库真薪已经付给工班，四粮救急也进过账。工人没有欠王一笔工资债；卡拉特的假签责另列，王只能索自己后来真正获准的项目。"
+    },
+    {
+      "id": "gilg-own-purse",
+      "requires": {
+        "flags": [
+          "gilg_local_purse_independent"
+        ]
+      },
+      "text": "本城自己付清旧薪，王没有据此取得测绘或墓役的对价。后来另授过的许可照其独立条款执行。"
+    },
+    {
+      "id": "gilg-case-deferred",
+      "requires": {
+        "flags": [
+          "gilg_local_case_deferred"
+        ]
+      },
+      "text": "王队许可曾先登记，鲁姆假令与死籍的本地受理曾被延期；中章是否正式受理按真实卷宗，不把这段延误改写成王来即得正义。"
+    },
+    {
+      "id": "gilg-coffer-still-real",
+      "requires": {
+        "flags": [
+          "gilg_tomb_works_active"
+        ]
+      },
+      "text": "王的土堰和未封石室仍在，三格跨堰/料道各费两步。暂停或撤许可只改人的权力，不移动实体；若再清运仍须真实工料，王当年已出的费用也留在收据中。"
+    },
+    {
+      "id": "gilg-empty-tomb-sealed",
+      "requires": {
+        "flags": [
+          "gilg_tomb_sealed"
+        ]
+      },
+      "text": "经过数日工序封成的河床石室保持空置，活王尚未下葬；跨堰和料道仍难行。保留河段经营条款须由实际管水者继续处理，既无陪葬，也没有跨地图行动禁令。"
+    },
+    {
+      "id": "gilg-demolition-history",
+      "requires": {
+        "flags": [
+          "gilg_tomb_stopped"
+        ]
+      },
+      "text": "三粮清运确曾拆掉王的临时围堰并转料补公渠，工程史没有消失。吉尔伽美什保留投资收据，但他不能把已拆实体写成仍供自己封墓的石室。"
+    },
+    {
+      "id": "gilg-labor-still-due",
+      "requires": {
+        "flags": [
+          "gilg_royal_labor_due"
+        ]
+      },
+      "text": "六户各一成年人的本次二十日墓工与十年内每年一日祭供仍受追索，不能退出，不传子女。王队协查与优先祭供的承诺对照记录；这些现世义务没有因为门下暂扣者被放出而自动取消。"
+    },
+    {
+      "id": "gilg-labor-released",
+      "requires": {
+        "flags": [
+          "gilg_levy_started",
+          "gilg_levy_released"
+        ],
+        "notFlags": [
+          "gilg_royal_labor_due"
+        ]
+      },
+      "text": "已到营的首班和曾经失去退出权的历史被保留，未来王役已在终章明文放免。吉尔伽美什收回追役木签，役户家属仍可以追问已经付过的劳动。"
+    },
+    {
+      "id": "gilg-levy-unallied",
+      "requires": {
+        "flags": [
+          "gilg_named_priority_promised"
+        ],
+        "notFlags": [
+          "gilg_black_alliance"
+        ]
+      },
+      "text": "王曾以协查征收和有名优先祭供换取六户役名。黑印联盟没有成立，这项承诺没有变成门下现任判官的特权；任何现世祭供仍由实际合同与供粮者负责，梦辞不能保证永久受供。"
+    },
+    {
+      "id": "gilg-misused-badge-due",
+      "requires": {
+        "flags": [
+          "gilg_seal_return_due"
+        ]
+      },
+      "text": "借工程牌吓退追索者的保护已经发生，王仍索回实牌与公开更正。证人不会被重新交回作为还牌代价；超范围命令史也一直可查。"
+    },
+    {
+      "id": "gilg-misuse-acknowledged",
+      "requires": {
+        "flags": [
+          "gilg_seal_misused",
+          "gilg_seal_returned"
+        ]
+      },
+      "text": "实牌已由庙使送回，工程权限范围的更正已公开。吉尔伽美什收回牌，却无法撤销曾救走证人的事实；借威势干预的记录在本城副页留下。"
+    },
+    {
+      "id": "gilg-civic-aid",
+      "requires": {
+        "flags": [
+          "gilg_public_repair_done"
+        ]
+      },
+      "text": "王自己付薪的技师确曾参加公共维修，有限合同没有把工班或贝鲁的船交给他。暂停墓工和撤查阅权各按文书，公共成果不因争执消失。"
+    },
+    {
+      "id": "gilg-future-tested",
+      "requires": {
+        "flags": [
+          "gilg_future_not_present"
+        ]
+      },
+      "text": "梦辞被核成死亡之后可能的幽魂身份。今日的吉尔伽美什仍在呼吸，乌图的见证、伊南娜的眷顾传说与埃列什基伽勒的领域各有边界；他没有因此获得现任裁判权。"
+    },
+    {
+      "id": "gilg-false-judgeship-history",
+      "requires": {
+        "flags": [
+          "gilg_judicial_usurpation"
+        ]
+      },
+      "text": "王曾引用未来名位，让本地格式令、书记与王队押役相互背书，乌鲁因此真被扣过通行封套。这场现世僭权史可被查问，女王从未授他今日神职。"
+    },
+    {
+      "id": "gilg-revoked-no-erase",
+      "requires": {
+        "flags": [
+          "gilg_warrant_revoked"
+        ]
+      },
+      "text": "来王的广泛查阅、征役许可已收回，未来王役获释。已实际交付的粮工各照收据，未获准的援助不补入账；撤权没有替任何既成伤害结清赔偿。"
+    },
+    {
+      "id": "gilg-finite-shared",
+      "requires": {
+        "flags": [
+          "gilg_finite_memorial"
+        ]
+      },
+      "text": "岸上的有限纪念写着两行分开的名字：恩奇都，和仍活着的吉尔伽美什。追加工程须再同意，祭供须本人志愿，公开岸碑不能演变成无期限随王役；他接受纪念有结束与失传的可能。"
+    },
+    {
+      "id": "gilg-black-ranked",
+      "requires": {
+        "flags": [
+          "gilg_black_alliance"
+        ]
+      },
+      "text": "王队开始按新黑印协查，王册有名者获优先供碗；无名者的队列更远。双方获得执行与祭供秩序，不是免死。恩奇都没有被另一位受索者替回，王继续在自己的身体里衰老。"
+    },
+    {
+      "id": "gilg-six-household-pact-executed",
+      "requires": {
+        "flags": [
+          "gilg_name_levy",
+          "gilg_black_alliance"
+        ]
+      },
+      "text": "六户役名所换的协查与优先供碗承诺开始照黑印联盟执行，王队在人间协查，书记标出优先祭供的户。首班与实际已服天数各有收据，未完的二十日/十年义务没有凭一次开营写成完成。"
+    }
+  ],
+  "majorNpcs": [
+    {
+      "id": "gilgamesh",
+      "name": "吉尔伽美什",
+      "title": "乌鲁克来王",
+      "description": "仍活着、做过有限死梦的王。艾迪勒邀其测水队来纳鲁渡议工，他用真粮和技师换取工程与文书权限；本城不是他的属城。恩奇都已失，空墓与纪名册无法让另一个人替代友人。",
+      "portrait": "/assets/gilgamesh-portrait.png",
+      "stances": [
+        {
+          "id": "living-king",
+          "requires": {},
+          "title": "来的是活王",
+          "text": "他能支配自带的粮与工队，本城许可决定他能在这里做什么。他仍然会死，也不在可认领队伍中。"
+        },
+        {
+          "id": "independent-pay",
+          "requires": {
+            "flags": [
+              "gilg_local_purse_independent"
+            ]
+          },
+          "title": "本城先付自己的账",
+          "text": "工资由本城公款实付，王的代付没有被接受；他仍可递交工程申请，不能把救急说成已获征役权。"
+        },
+        {
+          "id": "royal-aid",
+          "requires": {
+            "flags": [
+              "gilg_credit_accepted"
+            ]
+          },
+          "title": "王库已付出真物",
+          "text": "王直接支付过工班真薪并给四粮，取得的只有测绘机会。已付工钱不向工人追还，也没有买清假验收。"
+        },
+        {
+          "id": "limited-scope",
+          "requires": {
+            "flags": [
+              "gilg_writ_bounded"
+            ],
+            "notFlags": [
+              "gilg_royal_labor_due"
+            ]
+          },
+          "title": "他的印有边界",
+          "text": "本地受理或王方协议有明示边界，效力各按实际文书。没有对应项目时，测绘、公共工作或汇总仍须另行申请；有限受理本身不授来王征役或查阅权。"
+        },
+        {
+          "id": "warrant",
+          "requires": {
+            "flags": [
+              "gilg_royal_warrant"
+            ],
+            "notFlags": [
+              "gilg_warrant_revoked",
+              "gilg_survey_suspended"
+            ]
+          },
+          "title": "持有当地王队许可",
+          "text": "查阅与议工权限来自纳鲁渡书面许可，不是乌鲁克的主权；追加开工仍须后续明示。"
+        },
+        {
+          "id": "audited",
+          "requires": {
+            "flags": [
+              "gilg_survey_suspended"
+            ]
+          },
+          "title": "许可已被暂停审计",
+          "text": "墓工和名役申请暂停，不能凭旧印新签或新开围堰；已成立的有限公共维修另照合同，既建实体和既付工钱须真实交接。"
+        },
+        {
+          "id": "labor-due",
+          "requires": {
+            "flags": [
+              "gilg_royal_labor_due"
+            ]
+          },
+          "title": "六户负有王役",
+          "text": "每户一名成年役者：本次二十日墓工、十年内每年一日祭供，无退出权且不传子女；不包括陪葬或门下替死。"
+        },
+        {
+          "id": "revoked",
+          "requires": {
+            "flags": [
+              "gilg_warrant_revoked"
+            ]
+          },
+          "title": "本城已收回他的许可",
+          "text": "查阅与征调权已撤，未来王役获释；实体工程没有因此消失，须另作真正拆除或保留交接。"
+        },
+        {
+          "id": "seal-due",
+          "requires": {
+            "flags": [
+              "gilg_seal_return_due"
+            ]
+          },
+          "title": "工程牌被超范围使用",
+          "text": "玩家借王工程牌的威势挡了一次找证人；王追索实牌和公开更正，已得到的保护不倒退，滥用史也不消失。"
+        },
+        {
+          "id": "mortal-compact",
+          "requires": {
+            "flags": [
+              "gilg_finite_memorial"
+            ]
+          },
+          "title": "他接受有限纪念",
+          "text": "恩奇都有单独的碗，活王不占今日判官座；停止新增隐墓役，只留公开有限纪名与实际工程责任。"
+        },
+        {
+          "id": "black-ally",
+          "requires": {
+            "flags": [
+              "gilg_black_alliance"
+            ]
+          },
+          "title": "活王与黑印结盟",
+          "text": "有名与无名的差序开始由人的名册执行。这不赋永生，也不让埃列什基伽勒交出王权。"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "survey",
+          "requires": {
+            "flags": [
+              "gilg_survey_lease"
+            ]
+          },
+          "title": "测绘租约",
+          "text": "曾明确获准在本城旧河段测绘；不等于墓工许可。"
+        },
+        {
+          "id": "enkidu",
+          "requires": {
+            "flags": [
+              "gilg_enkidu_named"
+            ]
+          },
+          "title": "给恩奇都的一只独碗",
+          "text": "友人不可由苏恩父亲、乌鲁、伊利或另一位亡者替代。"
+        },
+        {
+          "id": "works",
+          "requires": {
+            "flags": [
+              "gilg_tomb_works"
+            ]
+          },
+          "title": "围堰确曾开工",
+          "text": "河床空墓工程的实体史已发生，撤权不能删除。"
+        },
+        {
+          "id": "stopped",
+          "requires": {
+            "flags": [
+              "gilg_tomb_stopped"
+            ]
+          },
+          "title": "拆堰转公渠",
+          "text": "工人实际拆过临时围堰并补渠，材料移动成本已结算。"
+        },
+        {
+          "id": "sealed",
+          "requires": {
+            "flags": [
+              "gilg_tomb_sealed"
+            ]
+          },
+          "title": "空墓已封",
+          "text": "石室还没有安放王的遗体；政治上的经营限制不等于规则禁止跨堰。"
+        },
+        {
+          "id": "future",
+          "requires": {
+            "flags": [
+              "gilg_future_not_present"
+            ]
+          },
+          "title": "死梦被校核",
+          "text": "梦中死后可能的身份与今日活王的权利被分开。"
+        },
+        {
+          "id": "misuse",
+          "requires": {
+            "flags": [
+              "gilg_seal_misused"
+            ]
+          },
+          "title": "工程牌滥用史",
+          "text": "即使后来归牌并公开更正，借王威势的那次民事干涉仍有记录。"
+        }
+      ]
+    }
+  ],
+  "welcomeText": "纳鲁渡的旧闸、死籍与替身债同时出了问题。活着的乌鲁克王吉尔伽美什带真粮和测水队来，却想把河床留给自己的空墓。恩奇都已失，没有别人能替他归来。你与四位同伴可借王之力、限制或反对他；三章交错的选择将决定水归谁管、谁能查城印，以及第七门留下谁的名字。"
+}

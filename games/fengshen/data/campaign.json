@@ -1,0 +1,4064 @@
+{
+  "scenes": {
+    "B001": {
+      "schema_version": "1.0",
+      "map_id": "B001",
+      "name": "旧祠",
+      "width_ft": 80,
+      "height_ft": 105,
+      "origin": "NW; east+x; south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "constraint_ids": [
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "seed": "N/A: fixed authored geometry",
+      "layout_classification": "FLEXIBLE except explicitly cited dimensions/relationships",
+      "rooms": [
+        {
+          "label": "前院",
+          "x": 20,
+          "y": 63,
+          "w": 30,
+          "h": 30,
+          "kind": "yard",
+          "classification": "FACT dimensions; FLEXIBLE placement"
+        },
+        {
+          "label": "前厅",
+          "x": 20,
+          "y": 42,
+          "w": 30,
+          "h": 20,
+          "kind": "floor",
+          "classification": "FACT dimensions; FLEXIBLE placement"
+        },
+        {
+          "label": "内殿",
+          "x": 25,
+          "y": 21,
+          "w": 20,
+          "h": 20,
+          "kind": "floor",
+          "classification": "FACT dimensions; FLEXIBLE placement"
+        },
+        {
+          "label": "东侧屋",
+          "x": 51,
+          "y": 47,
+          "w": 15,
+          "h": 15,
+          "kind": "floor",
+          "classification": "FACT dimensions; FLEXIBLE placement"
+        }
+      ],
+      "walls": [
+        {
+          "x": 24,
+          "y": 20,
+          "w": 22,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 24,
+          "y": 20,
+          "w": 1,
+          "h": 22,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 45,
+          "y": 20,
+          "w": 1,
+          "h": 22,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 41,
+          "w": 1,
+          "h": 22,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 41,
+          "w": 11,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 40,
+          "y": 41,
+          "w": 11,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 50,
+          "y": 41,
+          "w": 1,
+          "h": 9,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "w": 1,
+          "h": 8,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 62,
+          "w": 11,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 40,
+          "y": 62,
+          "w": 11,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 50,
+          "y": 46,
+          "w": 17,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 50,
+          "y": 62,
+          "w": 17,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 66,
+          "y": 46,
+          "w": 1,
+          "h": 4,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 66,
+          "y": 55,
+          "w": 1,
+          "h": 8,
+          "height_ft": "UNKNOWN",
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        }
+      ],
+      "openings": [
+        {
+          "label": "前厅入口",
+          "a": [
+            30,
+            62.5
+          ],
+          "b": [
+            40,
+            62.5
+          ],
+          "kind": "door",
+          "state": "open",
+          "sill_ft": 0,
+          "classification": "FLEXIBLE width/placement"
+        },
+        {
+          "label": "内殿门",
+          "a": [
+            30,
+            41.5
+          ],
+          "b": [
+            40,
+            41.5
+          ],
+          "kind": "door",
+          "state": "open",
+          "sill_ft": 0,
+          "classification": "FLEXIBLE width/placement"
+        },
+        {
+          "label": "侧屋木门",
+          "a": [
+            50.5,
+            50
+          ],
+          "b": [
+            50.5,
+            55
+          ],
+          "kind": "door",
+          "state": "barred",
+          "sill_ft": 0,
+          "classification": "FLEXIBLE width/placement"
+        },
+        {
+          "label": "东窗",
+          "a": [
+            66.5,
+            50
+          ],
+          "b": [
+            66.5,
+            55
+          ],
+          "kind": "window",
+          "state": "open",
+          "sill_ft": 5,
+          "classification": "FLEXIBLE width/placement"
+        }
+      ],
+      "features": [
+        {
+          "kind": "mountain",
+          "x": 24,
+          "y": 0,
+          "w": 22,
+          "h": 20,
+          "label": "实心山壁",
+          "height_ft": 0
+        },
+        {
+          "kind": "threshold",
+          "x": 30,
+          "y": 42,
+          "w": 10,
+          "h": 0.45,
+          "label": "白石线",
+          "height_ft": 0
+        },
+        {
+          "kind": "table",
+          "x": 37,
+          "y": 77,
+          "w": 6,
+          "h": 3,
+          "label": "石桌",
+          "height_ft": 3
+        },
+        {
+          "kind": "tree",
+          "x": 23,
+          "y": 78,
+          "w": 5,
+          "h": 5,
+          "label": "歪树",
+          "height_ft": 0
+        },
+        {
+          "kind": "altar",
+          "x": 29,
+          "y": 23,
+          "w": 12,
+          "h": 3,
+          "label": "供台",
+          "height_ft": 3
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "A",
+          "label": "阿禾",
+          "x": 58.5,
+          "y": 57.5,
+          "description": "被关在侧屋；可以从东窗救出，不必越白石线。"
+        },
+        {
+          "key": "1",
+          "label": "甲",
+          "x": 32.5,
+          "y": 32.5,
+          "description": "Animated Armor；默认摆位为制图选择。"
+        },
+        {
+          "key": "2",
+          "label": "剑",
+          "x": 42.5,
+          "y": 27.5,
+          "description": "Animated Flying Sword；执行内殿守卫行为。"
+        },
+        {
+          "key": "L",
+          "label": "账包",
+          "x": 20.5,
+          "y": 52.5,
+          "description": "前厅西侧松砖；油布包不在内殿。"
+        }
+      ],
+      "notes": [
+        "前院30×30；前厅30×20；侧屋15×15；内殿20×20ft，均按净地面尺寸绘制。",
+        "侧屋门闩在前厅侧；东窗窗台高5ft，窗洞不是地面通道。",
+        "北侧实心山壁仅沿内殿北墙示意；其余室外边缘不加隐形墙。",
+        "白线是守卫行为边界，不是实体墙；人物位置按本桌当前情况移动。"
+      ],
+      "flexible_choices": [
+        "画布80×105ft含周边；前院不增设原文未写的封闭围墙。",
+        "墙厚1ft；厅和内殿门净宽10ft；侧门/东窗净宽5ft。门窗宽度为可逆选择。",
+        "前院开放；厅/殿墙高未定，不虚填高度。墙厚置于房间净尺寸外。",
+        "石桌、树、供台尺寸与位置仅为本版摆放；桌高3ft为制图选择，掩护照实际遮挡。"
+      ],
+      "routes_to_check": [
+        {
+          "name": "院门至前厅",
+          "start": [
+            35,
+            100
+          ],
+          "goal": [
+            35,
+            52
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "前厅至内殿",
+          "start": [
+            35,
+            52
+          ],
+          "goal": [
+            35,
+            36
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "院外至东窗外",
+          "start": [
+            55,
+            95
+          ],
+          "goal": [
+            70,
+            52.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "移闩后进侧屋",
+          "start": [
+            35,
+            52.5
+          ],
+          "goal": [
+            58,
+            52.5
+          ],
+          "mode": "door_open"
+        },
+        {
+          "name": "东窗救援",
+          "start": [
+            70,
+            52.5
+          ],
+          "goal": [
+            58,
+            52.5
+          ],
+          "mode": "window_with_rope"
+        }
+      ],
+      "player_release": "场地已获知/观察后；PNG本身不带探索雾，逐步探索请由主持遮盖。"
+    },
+    "B002": {
+      "schema_version": "1.0",
+      "map_id": "B002",
+      "name": "石梁仓",
+      "width_ft": 80,
+      "height_ft": 60,
+      "origin": "NW; east+x; south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "constraint_ids": [
+        "C08"
+      ],
+      "seed": "N/A: fixed authored geometry",
+      "layout_classification": "FLEXIBLE except explicitly cited dimensions/relationships",
+      "rooms": [
+        {
+          "label": "仓院",
+          "x": 10,
+          "y": 10,
+          "w": 60,
+          "h": 40,
+          "kind": "yard",
+          "classification": "FACT dimensions; FLEXIBLE east-west assignment"
+        }
+      ],
+      "walls": [
+        {
+          "x": 9,
+          "y": 9,
+          "w": 26,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 40,
+          "y": 9,
+          "w": 31,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 9,
+          "y": 50,
+          "w": 41,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 60,
+          "y": 50,
+          "w": 11,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "w": 1,
+          "h": 42,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 70,
+          "y": 9,
+          "w": 1,
+          "h": 42,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        }
+      ],
+      "openings": [
+        {
+          "label": "南大门",
+          "a": [
+            50,
+            50.5
+          ],
+          "b": [
+            60,
+            50.5
+          ],
+          "kind": "door",
+          "state": "open",
+          "sill_ft": 0,
+          "classification": "FACT width10; FLEXIBLE eastward placement"
+        },
+        {
+          "label": "北后门",
+          "a": [
+            35,
+            9.5
+          ],
+          "b": [
+            40,
+            9.5
+          ],
+          "kind": "door",
+          "state": "unlocked",
+          "sill_ft": 0,
+          "classification": "FACT width5/unlocked; FLEXIBLE placement"
+        }
+      ],
+      "features": [
+        {
+          "kind": "crates",
+          "x": 15,
+          "y": 27,
+          "w": 10,
+          "h": 8,
+          "label": "齐腰木箱",
+          "height_ft": 3
+        },
+        {
+          "kind": "cart",
+          "x": 52.5,
+          "y": 25,
+          "w": 5,
+          "h": 10,
+          "label": "粮车",
+          "height_ft": 3
+        },
+        {
+          "kind": "eaves",
+          "x": 25,
+          "y": 10,
+          "w": 25,
+          "h": 5,
+          "label": "北侧仓檐",
+          "height_ft": 0
+        },
+        {
+          "kind": "bush",
+          "x": 1,
+          "y": 15,
+          "w": 6,
+          "h": 18,
+          "label": "树丛",
+          "height_ft": 0
+        },
+        {
+          "kind": "bush",
+          "x": 73,
+          "y": 12,
+          "w": 6,
+          "h": 20,
+          "label": "树丛",
+          "height_ft": 0
+        },
+        {
+          "kind": "bush",
+          "x": 10,
+          "y": 54,
+          "w": 20,
+          "h": 5,
+          "label": "树丛",
+          "height_ft": 0
+        },
+        {
+          "kind": "bags",
+          "x": 13,
+          "y": 43,
+          "w": 7,
+          "h": 4,
+          "label": "行李",
+          "height_ft": 0
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "C",
+          "label": "曹斗",
+          "x": 62.5,
+          "y": 32.5,
+          "description": "Berserker；在粮车边。"
+        },
+        {
+          "key": "1",
+          "label": "弓手",
+          "x": 42.5,
+          "y": 12.5,
+          "description": "Scout；北侧仓檐下。"
+        },
+        {
+          "key": "2",
+          "label": "弓手",
+          "x": 27.5,
+          "y": 32.5,
+          "description": "Scout；西侧木箱旁。"
+        }
+      ],
+      "notes": [
+        "仓院净尺寸60×40ft；南门10ft，北后门5ft且未锁；墙高8ft。",
+        "东侧粮车中心距南门内沿20ft；不把粮车画成不可移动的城墙。",
+        "西木箱可提供半掩护；树丛在墙外。行李没有人质。",
+        "向北可逃；向南可撤；敌人不会凭空增加或在图外刷新。"
+      ],
+      "flexible_choices": [
+        "60ft取东西、40ft取南北；原文未标轴向，此处明确选择。",
+        "南门偏东，使东侧粮车到门的20ft直线关系可清晰量取；北门位置为选择。",
+        "墙厚1ft、木箱与粮车的轮廓及3ft高度、北檐覆盖范围均为制图选择。",
+        "北檐不是另一间封闭仓房；图外仓体未知，不在院内添加额外房间。"
+      ],
+      "routes_to_check": [
+        {
+          "name": "南门到粮车旁",
+          "start": [
+            55,
+            57.5
+          ],
+          "goal": [
+            62.5,
+            32.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "曹斗到北门",
+          "start": [
+            62.5,
+            32.5
+          ],
+          "goal": [
+            37.5,
+            2.5
+          ],
+          "mode": "door_open"
+        },
+        {
+          "name": "南北两门连通",
+          "start": [
+            55,
+            57.5
+          ],
+          "goal": [
+            37.5,
+            2.5
+          ],
+          "mode": "door_open"
+        }
+      ],
+      "player_release": "场地已获知/观察后；PNG本身不带探索雾，逐步探索请由主持遮盖。"
+    },
+    "B003": {
+      "schema_version": "1.0",
+      "map_id": "B003",
+      "name": "北山山祠",
+      "width_ft": 80,
+      "height_ft": 110,
+      "origin": "NW; east+x; south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "source_ids": [
+        "SRC-03"
+      ],
+      "constraint_ids": [
+        "C09",
+        "C10",
+        "C11"
+      ],
+      "seed": "N/A: fixed authored geometry",
+      "layout_classification": "FLEXIBLE except explicitly cited dimensions/relationships",
+      "rooms": [
+        {
+          "label": "前院",
+          "x": 20,
+          "y": 81,
+          "w": 30,
+          "h": 20,
+          "kind": "yard",
+          "classification": "FLEXIBLE dimensions/placement"
+        },
+        {
+          "label": "中院",
+          "x": 20,
+          "y": 40,
+          "w": 30,
+          "h": 40,
+          "kind": "paving",
+          "classification": "FACT dimensions; DERIVED orientation"
+        },
+        {
+          "label": "后院",
+          "x": 20,
+          "y": 19,
+          "w": 30,
+          "h": 20,
+          "kind": "yard",
+          "classification": "FACT dimensions; FLEXIBLE placement"
+        },
+        {
+          "label": "东侧小径",
+          "x": 51,
+          "y": 39,
+          "w": 5,
+          "h": 62,
+          "kind": "path",
+          "classification": "FACT width5; FLEXIBLE length/placement"
+        },
+        {
+          "label": "沟北接应处",
+          "x": 51,
+          "y": 19,
+          "w": 5,
+          "h": 10,
+          "kind": "path",
+          "classification": "FLEXIBLE extent"
+        }
+      ],
+      "walls": [
+        {
+          "x": 19,
+          "y": 18,
+          "w": 32,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 18,
+          "w": 1,
+          "h": 63,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 50,
+          "y": 18,
+          "w": 1,
+          "h": 63,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 39,
+          "w": 11,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 40,
+          "y": 39,
+          "w": 11,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 19,
+          "y": 80,
+          "w": 11,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        },
+        {
+          "x": 40,
+          "y": 80,
+          "w": 11,
+          "h": 1,
+          "height_ft": 8,
+          "classification": "FLEXIBLE thickness/placement; height per chapter"
+        }
+      ],
+      "openings": [
+        {
+          "label": "中院南门",
+          "a": [
+            30,
+            80.5
+          ],
+          "b": [
+            40,
+            80.5
+          ],
+          "kind": "door",
+          "state": "open",
+          "sill_ft": 0,
+          "classification": "FACT width10; FLEXIBLE centered placement"
+        },
+        {
+          "label": "中院北门",
+          "a": [
+            30,
+            39.5
+          ],
+          "b": [
+            40,
+            39.5
+          ],
+          "kind": "door",
+          "state": "open",
+          "sill_ft": 0,
+          "classification": "FACT width10; FLEXIBLE centered placement"
+        }
+      ],
+      "features": [
+        {
+          "kind": "ditch",
+          "x": 51,
+          "y": 29,
+          "w": 29,
+          "h": 10,
+          "label": "干沟 · 深10尺",
+          "height_ft": -10
+        },
+        {
+          "kind": "platform",
+          "x": 22,
+          "y": 20,
+          "w": 26,
+          "h": 4,
+          "label": "平台",
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "kind": "timber",
+          "x": 22,
+          "y": 31,
+          "w": 7,
+          "h": 4,
+          "label": "木料",
+          "height_ft": 2
+        },
+        {
+          "kind": "tree",
+          "x": 8,
+          "y": 84,
+          "w": 6,
+          "h": 7,
+          "label": "护坡树",
+          "height_ft": 0
+        },
+        {
+          "kind": "tree",
+          "x": 62,
+          "y": 69,
+          "w": 7,
+          "h": 8,
+          "label": "护坡树",
+          "height_ft": 0
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "S",
+          "label": "石叔",
+          "x": 27.5,
+          "y": 92.5,
+          "description": "在南门外；拿回原铃后才能依旧节奏召回本地守卫。"
+        },
+        {
+          "key": "M",
+          "label": "工匠",
+          "x": 35,
+          "y": 22.5,
+          "description": "孟平和两名帮手共三人；后院平台安全等候。此标记代表群体，不是单个Token。"
+        },
+        {
+          "key": "1",
+          "label": "甲",
+          "x": 27.5,
+          "y": 57.5,
+          "description": "Animated Armor；西侧初始位置。"
+        },
+        {
+          "key": "2",
+          "label": "甲",
+          "x": 42.5,
+          "y": 62.5,
+          "description": "Animated Armor；东侧初始位置。"
+        },
+        {
+          "key": "3",
+          "label": "剑",
+          "x": 32.5,
+          "y": 42.5,
+          "description": "Animated Flying Sword；北门旁。"
+        },
+        {
+          "key": "4",
+          "label": "剑",
+          "x": 37.5,
+          "y": 42.5,
+          "description": "Animated Flying Sword；北门旁。"
+        },
+        {
+          "key": "L",
+          "label": "铜铃",
+          "x": 53.5,
+          "y": 38,
+          "description": "近侧壁石缝，距南侧沟沿向下6ft，重2lb；点位在图上投影，不在地面。"
+        }
+      ],
+      "notes": [
+        "中院东西30、南北40ft；南北门净宽10ft；院墙高8ft。",
+        "后院30×20ft。门间40ft按中院净深量取，墙厚另绘。",
+        "东墙外5ft小径不穿中院；遇10ft宽、10ft深干沟。铜铃在近侧沿下6ft。",
+        "现状无桥无梯。架板跨沟、架梯越后院墙是玩家可实施的办法，不预画成现成设施。",
+        "图边不是结界；绕远、翻其他墙、飞行等仍按实际能力处理。"
+      ],
+      "flexible_choices": [
+        "画布80×110ft；前院暂取30×20ft且保持开放，后续可改。",
+        "墙厚1ft；东西院墙向北接后院。中院墙的内沿南北距40ft，门洞横跨独立墙厚。",
+        "干沟横切东径，从东墙外延伸至图东边；其更远走向UNKNOWN，不宣称无法绕到另一端。",
+        "平台高度UNKNOWN；木料、护坡树和人物落点为制图选择，不增加水系走向或新怪物。"
+      ],
+      "routes_to_check": [
+        {
+          "name": "前院至后院",
+          "start": [
+            35,
+            105
+          ],
+          "goal": [
+            35,
+            27.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "前院至取铃沟沿",
+          "start": [
+            35,
+            92.5
+          ],
+          "goal": [
+            53.5,
+            41.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "name": "搭桥后沿东径过沟",
+          "start": [
+            53.5,
+            41.5
+          ],
+          "goal": [
+            53.5,
+            24
+          ],
+          "mode": "bridge_built"
+        },
+        {
+          "name": "过沟并架梯救出工匠",
+          "start": [
+            53.5,
+            24
+          ],
+          "goal": [
+            35,
+            27.5
+          ],
+          "mode": "ladder_built"
+        }
+      ],
+      "player_release": "场地已获知/观察后；PNG本身不带探索雾，逐步探索请由主持遮盖。"
+    },
+    "B004": {
+      "origin": "NW: east+x,south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "player_release": "到达并观察本场地后按进度发放；公开平面无探索遮罩，未观察区域由主持遮盖。",
+      "source_classification": "FACT dimensions and relative positions; FLEXIBLE wall thickness, missing placements and canvas margins.",
+      "map_id": "B004",
+      "name": "麦亭转运院",
+      "source_ids": [
+        "SRC-05"
+      ],
+      "width_ft": 140,
+      "height_ft": 120,
+      "source_transform": {
+        "source_origin": "院内西南角",
+        "canvas_origin_of_source": [
+          20,
+          100
+        ],
+        "formula": "screen_x = 20 + source_x; screen_y = 100 - source_y"
+      },
+      "rooms": [
+        {
+          "label": "转运院",
+          "x": 20,
+          "y": 20,
+          "w": 100,
+          "h": 80,
+          "kind": "yard"
+        },
+        {
+          "label": "西北货棚",
+          "x": 20,
+          "y": 20,
+          "w": 30,
+          "h": 20,
+          "kind": "floor"
+        },
+        {
+          "label": "东北账房",
+          "x": 100,
+          "y": 20,
+          "w": 20,
+          "h": 20,
+          "kind": "floor"
+        },
+        {
+          "label": "东工房",
+          "x": 100,
+          "y": 50,
+          "w": 20,
+          "h": 30,
+          "kind": "floor"
+        },
+        {
+          "label": "窗外小径",
+          "x": 121,
+          "y": 40,
+          "w": 5,
+          "h": 75,
+          "kind": "path"
+        },
+        {
+          "label": "南乡道",
+          "x": 65,
+          "y": 101,
+          "w": 10,
+          "h": 19,
+          "kind": "path"
+        },
+        {
+          "label": "西门道路",
+          "x": 0,
+          "y": 42.5,
+          "w": 19,
+          "h": 10,
+          "kind": "path"
+        }
+      ],
+      "walls": [
+        {
+          "x": 19,
+          "y": 19,
+          "w": 102,
+          "h": 1,
+          "height_ft": 8
+        },
+        {
+          "x": 19,
+          "y": 100,
+          "w": 46,
+          "h": 1,
+          "height_ft": 8
+        },
+        {
+          "x": 75,
+          "y": 100,
+          "w": 46,
+          "h": 1,
+          "height_ft": 8
+        },
+        {
+          "x": 19,
+          "y": 20,
+          "w": 1,
+          "h": 22.5,
+          "height_ft": 8
+        },
+        {
+          "x": 19,
+          "y": 52.5,
+          "w": 1,
+          "h": 47.5,
+          "height_ft": 8
+        },
+        {
+          "x": 120,
+          "y": 20,
+          "w": 1,
+          "h": 40,
+          "height_ft": 8
+        },
+        {
+          "x": 120,
+          "y": 65,
+          "w": 1,
+          "h": 35,
+          "height_ft": 8
+        },
+        {
+          "x": 99,
+          "y": 20,
+          "w": 1,
+          "h": 7,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 99,
+          "y": 30,
+          "w": 1,
+          "h": 11,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 100,
+          "y": 40,
+          "w": 6,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 111,
+          "y": 40,
+          "w": 9,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 99,
+          "y": 49,
+          "w": 21,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 99,
+          "y": 50,
+          "w": 1,
+          "h": 20,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 99,
+          "y": 75,
+          "w": 1,
+          "h": 6,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 100,
+          "y": 80,
+          "w": 8,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 110,
+          "y": 80,
+          "w": 10,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        }
+      ],
+      "openings": [
+        {
+          "label": "南门",
+          "a": [
+            65,
+            100.5
+          ],
+          "b": [
+            75,
+            100.5
+          ],
+          "state": "barred",
+          "kind": "door"
+        },
+        {
+          "label": "西门",
+          "a": [
+            19.5,
+            42.5
+          ],
+          "b": [
+            19.5,
+            52.5
+          ],
+          "state": "barred",
+          "kind": "door"
+        },
+        {
+          "label": "工房西门",
+          "a": [
+            99.5,
+            70
+          ],
+          "b": [
+            99.5,
+            75
+          ],
+          "state": "open",
+          "kind": "door"
+        },
+        {
+          "label": "工房东后窗",
+          "a": [
+            120.5,
+            60
+          ],
+          "b": [
+            120.5,
+            65
+          ],
+          "state": "propped",
+          "kind": "window",
+          "sill_ft": 3,
+          "medium_passable": true
+        },
+        {
+          "label": "工房南观察窗",
+          "a": [
+            108,
+            80.5
+          ],
+          "b": [
+            110,
+            80.5
+          ],
+          "state": "fixed",
+          "kind": "window",
+          "sill_ft": "UNKNOWN",
+          "medium_passable": false
+        },
+        {
+          "label": "账房南门",
+          "a": [
+            106,
+            40.5
+          ],
+          "b": [
+            111,
+            40.5
+          ],
+          "state": "open",
+          "kind": "door"
+        },
+        {
+          "label": "账房朝院窗",
+          "a": [
+            99.5,
+            27
+          ],
+          "b": [
+            99.5,
+            30
+          ],
+          "state": "fixed",
+          "kind": "window",
+          "sill_ft": "UNKNOWN",
+          "medium_passable": false
+        }
+      ],
+      "features": [
+        {
+          "kind": "eaves",
+          "x": 20,
+          "y": 20,
+          "w": 30,
+          "h": 20
+        },
+        {
+          "kind": "cart",
+          "x": 25,
+          "y": 25,
+          "w": 5,
+          "h": 8
+        },
+        {
+          "kind": "cart",
+          "x": 38,
+          "y": 25,
+          "w": 5,
+          "h": 8
+        },
+        {
+          "kind": "crates",
+          "x": 27,
+          "y": 68,
+          "w": 10,
+          "h": 7,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "kind": "table",
+          "x": 110,
+          "y": 24,
+          "w": 7,
+          "h": 4
+        },
+        {
+          "kind": "timber",
+          "x": 104,
+          "y": 53,
+          "w": 10,
+          "h": 4
+        },
+        {
+          "kind": "bush",
+          "x": 128,
+          "y": 46,
+          "w": 8,
+          "h": 20
+        },
+        {
+          "kind": "bush",
+          "x": 129,
+          "y": 84,
+          "w": 8,
+          "h": 22
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "C",
+          "label": "岑岳",
+          "x": 47,
+          "y": 27,
+          "description": "守货棚；实际开战位置随行动调整。"
+        },
+        {
+          "key": "F",
+          "label": "费安",
+          "x": 95,
+          "y": 72.5,
+          "description": "工房门前；查包放人后不再阻拦。"
+        },
+        {
+          "key": "Z",
+          "label": "祝槐",
+          "x": 70,
+          "y": 90,
+          "description": "南门内10尺；护身法术随本人移动，非固定院地。"
+        },
+        {
+          "key": "1",
+          "label": "账房弓手",
+          "x": 103,
+          "y": 28.5,
+          "description": "靠朝院窗；完整墙不能透射。"
+        },
+        {
+          "key": "2",
+          "label": "院内弓手",
+          "x": 85,
+          "y": 72.5,
+          "description": "费安西侧10尺。"
+        },
+        {
+          "key": "R",
+          "label": "鲁青等三人",
+          "x": 113,
+          "y": 73,
+          "description": "工房内；此标记代表三人，逐人移动。"
+        },
+        {
+          "key": "L",
+          "label": "往来记录",
+          "x": 113,
+          "y": 26,
+          "description": "桌上查阅可得传令路线，非救人前提。"
+        }
+      ],
+      "notes": [
+        "净院东西100、南北80尺；外墙8尺，南/西门各10尺，木闩在内侧。",
+        "货棚30×20；账房20×20；工房东西20、南北30尺。",
+        "东后窗5尺宽、窗台3尺；鲁青能移木撑。南观察窗不可供中型生物穿过。",
+        "北坡距北墙40尺；后窗小径到码头100尺，场外距离见R003。",
+        "祝槐法术不是永久地形；未绘制固定伤害区。车、人、记录可分别处理。"
+      ],
+      "flexible_choices": [
+        "院内100取东西、80取南北；画布140×120尺含院外余量。墙厚1尺向院外或房外放置，房间净尺寸不缩小。",
+        "南门中心在原坐标(50,0)；工房西门中心(79.5,27.5)。南门内沿至棚近角约63.25尺、至工房门约40.33尺，对应原文约60/40尺。",
+        "西门南北位置、工房门宽5尺、账房门宽5尺及其窗宽3尺、工房观察窗宽2尺为布局选择；观察窗不作为通路。",
+        "工房南北范围取原坐标20～50；棚为开放货棚，不新增封闭南墙。房屋及棚顶高度UNKNOWN，不擅定高差。",
+        "车辆连轮宽5尺、车身长8尺，另留2尺车辕，含辕轮廓5×10尺；木箱、桌子、木撑摆位为制图选择。不改变载重或普通车规则。小径仅画到画布边，不把剩余100尺压缩进图。"
+      ],
+      "off_map": [
+        {
+          "label": "北侧高坡",
+          "distance_ft": 40,
+          "reference": "北墙",
+          "direction": "north",
+          "elevation_ft": "UNKNOWN"
+        },
+        {
+          "label": "码头",
+          "distance_ft": 100,
+          "reference": "工房东后窗外小径",
+          "direction": "UNKNOWN"
+        }
+      ],
+      "routes_to_check": [
+        {
+          "label": "南门至货棚",
+          "start": [
+            70,
+            110
+          ],
+          "goal": [
+            46,
+            37
+          ],
+          "mode": "doors_open"
+        },
+        {
+          "label": "南门至工房门",
+          "start": [
+            70,
+            110
+          ],
+          "goal": [
+            96,
+            72.5
+          ],
+          "mode": "doors_open"
+        },
+        {
+          "label": "院内至账房",
+          "start": [
+            70,
+            60
+          ],
+          "goal": [
+            108.5,
+            35
+          ],
+          "mode": "doors_open"
+        },
+        {
+          "label": "工房至后窗外",
+          "start": [
+            113,
+            73
+          ],
+          "goal": [
+            123.5,
+            70
+          ],
+          "mode": "rear_window_assisted"
+        },
+        {
+          "label": "东侧小径撤离",
+          "start": [
+            123.5,
+            62.5
+          ],
+          "goal": [
+            123.5,
+            112.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "西门撤离",
+          "start": [
+            46,
+            37
+          ],
+          "goal": [
+            10,
+            47.5
+          ],
+          "mode": "doors_open"
+        },
+        {
+          "label": "货车甲从棚至西门",
+          "start": [
+            27.5,
+            30
+          ],
+          "goal": [
+            10,
+            47.5
+          ],
+          "mode": "cart_transport",
+          "footprint": [
+            5,
+            10
+          ]
+        },
+        {
+          "label": "货车乙从棚至西门",
+          "start": [
+            40.5,
+            30
+          ],
+          "goal": [
+            10,
+            47.5
+          ],
+          "mode": "cart_transport",
+          "footprint": [
+            5,
+            10
+          ]
+        }
+      ]
+    },
+    "B005": {
+      "origin": "NW: east+x,south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "player_release": "到达并观察本场地后按进度发放；公开平面无探索遮罩，未观察区域由主持遮盖。",
+      "source_classification": "FACT dimensions and relative positions; FLEXIBLE wall thickness, missing placements and canvas margins.",
+      "map_id": "B005",
+      "name": "青石驿",
+      "source_ids": [
+        "SRC-06"
+      ],
+      "width_ft": 120,
+      "height_ft": 160,
+      "source_transform": {
+        "source_origin": "南门中心内沿",
+        "canvas_origin_of_source": [
+          60,
+          140
+        ],
+        "formula": "screen_x = 60 + source_x; screen_y = 140 - source_y",
+        "note": "门宽按净开口；南门内沿为原文坐标测距基线，外墙厚度另计。"
+      },
+      "rooms": [
+        {
+          "label": "驿院",
+          "x": 20,
+          "y": 20,
+          "w": 80,
+          "h": 120,
+          "kind": "yard"
+        },
+        {
+          "label": "西石屋",
+          "x": 20,
+          "y": 60,
+          "w": 20,
+          "h": 25,
+          "kind": "floor"
+        },
+        {
+          "label": "东侧土坡",
+          "x": 101,
+          "y": 15,
+          "w": 15,
+          "h": 130,
+          "kind": "path"
+        },
+        {
+          "label": "南路",
+          "x": 52.5,
+          "y": 141,
+          "w": 15,
+          "h": 19,
+          "kind": "path"
+        },
+        {
+          "label": "北路",
+          "x": 52.5,
+          "y": 0,
+          "w": 15,
+          "h": 19,
+          "kind": "path"
+        }
+      ],
+      "walls": [
+        {
+          "x": 19,
+          "y": 19,
+          "w": 33.5,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "x": 67.5,
+          "y": 19,
+          "w": 33.5,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "x": 19,
+          "y": 140,
+          "w": 33.5,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "x": 67.5,
+          "y": 140,
+          "w": 33.5,
+          "h": 1,
+          "height_ft": 10
+        },
+        {
+          "x": 19,
+          "y": 20,
+          "w": 1,
+          "h": 120,
+          "height_ft": 10
+        },
+        {
+          "x": 100,
+          "y": 20,
+          "w": 1,
+          "h": 10,
+          "height_ft": 10
+        },
+        {
+          "x": 100,
+          "y": 40,
+          "w": 1,
+          "h": 100,
+          "height_ft": 10
+        },
+        {
+          "x": 20,
+          "y": 94.5,
+          "w": 30,
+          "h": 1,
+          "height_ft": 8
+        },
+        {
+          "x": 70,
+          "y": 94.5,
+          "w": 30,
+          "h": 1,
+          "height_ft": 8
+        },
+        {
+          "x": 20,
+          "y": 59,
+          "w": 21,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 20,
+          "y": 85,
+          "w": 21,
+          "h": 1,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 40,
+          "y": 60,
+          "w": 1,
+          "h": 10,
+          "height_ft": "UNKNOWN"
+        },
+        {
+          "x": 40,
+          "y": 75,
+          "w": 1,
+          "h": 10,
+          "height_ft": "UNKNOWN"
+        }
+      ],
+      "openings": [
+        {
+          "label": "南门",
+          "a": [
+            52.5,
+            140.5
+          ],
+          "b": [
+            67.5,
+            140.5
+          ],
+          "state": "open",
+          "kind": "door"
+        },
+        {
+          "label": "北门",
+          "a": [
+            52.5,
+            19.5
+          ],
+          "b": [
+            67.5,
+            19.5
+          ],
+          "state": "open",
+          "kind": "door"
+        },
+        {
+          "label": "东墙旧缺口",
+          "a": [
+            100.5,
+            30
+          ],
+          "b": [
+            100.5,
+            40
+          ],
+          "state": "open",
+          "kind": "gap"
+        },
+        {
+          "label": "隔墙门洞",
+          "a": [
+            50,
+            95
+          ],
+          "b": [
+            70,
+            95
+          ],
+          "state": "open",
+          "kind": "gap"
+        },
+        {
+          "label": "西石屋东门",
+          "a": [
+            40.5,
+            70
+          ],
+          "b": [
+            40.5,
+            75
+          ],
+          "state": "open",
+          "kind": "door"
+        }
+      ],
+      "features": [
+        {
+          "kind": "trough",
+          "x": 32.5,
+          "y": 113.5,
+          "w": 15,
+          "h": 3,
+          "height_ft": 3
+        },
+        {
+          "kind": "cracked_jar",
+          "x": 94,
+          "y": 130,
+          "w": 2,
+          "h": 2,
+          "height_ft": "UNKNOWN"
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "X",
+          "label": "许照",
+          "x": 70,
+          "y": 60,
+          "description": "相对南门东10、北80尺；地面起始，尚未飞行/隐形。"
+        },
+        {
+          "key": "D",
+          "label": "杜衡",
+          "x": 60,
+          "y": 110,
+          "description": "南门以北30尺；不封死门口。"
+        },
+        {
+          "key": "1",
+          "label": "驿内弓手",
+          "x": 85,
+          "y": 35,
+          "description": "南门东25、北105尺。"
+        }
+      ],
+      "notes": [
+        "净院东西80、南北120尺；外墙10尺；南北门15尺、未锁。",
+        "东墙北段旧缺口10尺，外侧平坡可走；具体落点为本版选择。",
+        "内隔墙位于南门北45尺，高8尺；中央门洞20尺。",
+        "西石屋20×25尺、东门5尺；有完整石墙和屋顶，初始无人。",
+        "水槽中心偏西20、北25尺，长15、高3尺；不把掩护视作范围伤害免疫。",
+        "观察坡在南门外90尺，茶棚在300尺外；第二弓手在茶棚或送簿路上，不放入院中。"
+      ],
+      "flexible_choices": [
+        "画布120×160尺含院外余量；墙厚1尺。120×80为院内净尺寸；石屋20×25按净室处理，外墙不吃掉院落尺寸。",
+        "南门中心内沿定为原点；隔墙中心线北45尺，完整墙厚度各占0.5尺；不为对齐网格挪动原坐标。",
+        "旧缺口取原坐标北100～110尺、东40～41尺；原文仅指定东墙靠北端，具体落点可逆。",
+        "水槽取东西长15、宽3尺，原文点位按中心计；石屋敞门取北65～70尺；石屋墙高与屋顶高度UNKNOWN。",
+        "冻裂水缸在东南墙边，位置为装饰选择；40尺焦痕在更远的驿前石路，未压缩塞入这张场地图。",
+        "土坡仅标通行区域，未知高程不捏造坡度惩罚；西山脊绕行属于场外路线，绝不画成穿过西石屋。"
+      ],
+      "off_map": [
+        {
+          "label": "矮坡观察处",
+          "source_xy": [
+            0,
+            -90
+          ],
+          "distance_ft": 90,
+          "reference": "南门"
+        },
+        {
+          "label": "南路茶棚",
+          "source_xy": [
+            0,
+            -300
+          ],
+          "distance_ft": 300,
+          "reference": "南门"
+        },
+        {
+          "label": "西侧山脊绕行",
+          "extra_minutes": 120,
+          "avoids": "整个青石驿"
+        }
+      ],
+      "routes_to_check": [
+        {
+          "label": "南门穿中央洞到北门",
+          "start": [
+            60,
+            152.5
+          ],
+          "goal": [
+            60,
+            7.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "南门至西石屋",
+          "start": [
+            60,
+            152.5
+          ],
+          "goal": [
+            30,
+            72.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "西石屋退回南门",
+          "start": [
+            30,
+            72.5
+          ],
+          "goal": [
+            60,
+            152.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "东侧接近旧缺口再到北门",
+          "start": [
+            108.5,
+            150
+          ],
+          "goal": [
+            60,
+            7.5
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "许照可从旧缺口撤出",
+          "start": [
+            70,
+            60
+          ],
+          "goal": [
+            108.5,
+            35
+          ],
+          "mode": "walk"
+        },
+        {
+          "label": "北院至隔墙南侧",
+          "start": [
+            85,
+            35
+          ],
+          "goal": [
+            60,
+            110
+          ],
+          "mode": "walk"
+        }
+      ]
+    },
+    "B006": {
+      "origin": "NW: east+x,south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "source_classification": "FACT dimensions; FLEXIBLE missing placements and canvas margins",
+      "openings": [],
+      "player_release": "已到现场观察地形后发放；公开图不含守卫、被扣者和停战答案，未观察区域仍由主持遮盖。",
+      "map_id": "B006",
+      "name": "回风石场",
+      "source_ids": [
+        "SRC-08"
+      ],
+      "width_ft": 110,
+      "height_ft": 120,
+      "source_transform": {
+        "source_origin": "本版主工地西南角",
+        "canvas_origin_of_source": [
+          10,
+          110
+        ],
+        "formula": "screen_x=10+local_x; screen_y=110-local_y",
+        "note": "原文未给坐标。本版把90×60作为主工地，北坡另向北延伸40尺；不是已证实的唯一场址边界。"
+      },
+      "rooms": [
+        {
+          "kind": "yard",
+          "x": 10,
+          "y": 50,
+          "w": 90,
+          "h": 60,
+          "label": "主工地 90×60"
+        },
+        {
+          "kind": "floor",
+          "x": 85,
+          "y": 60,
+          "w": 15,
+          "h": 20,
+          "label": "旧工棚"
+        }
+      ],
+      "walls": [],
+      "features": [
+        {
+          "kind": "raised_platform",
+          "x": 45,
+          "y": 50,
+          "w": 20,
+          "h": 20,
+          "height_ft": 20,
+          "label": "台架 +20ft"
+        },
+        {
+          "kind": "ramp",
+          "x": 50,
+          "y": 10,
+          "w": 10,
+          "h": 40,
+          "height_start_ft": 0,
+          "height_end_ft": 20,
+          "label": "北缓坡 40×10"
+        },
+        {
+          "kind": "stone_pile",
+          "x": 20,
+          "y": 78,
+          "w": 15,
+          "h": 10,
+          "height_ft": 5
+        },
+        {
+          "kind": "eaves",
+          "x": 85,
+          "y": 60,
+          "w": 15,
+          "h": 20
+        },
+        {
+          "kind": "ladder_stored",
+          "x": 95,
+          "y": 60,
+          "w": 2,
+          "h": 20,
+          "length_ft": 20
+        },
+        {
+          "kind": "beam",
+          "x": 46,
+          "y": 52,
+          "w": 18,
+          "h": 1,
+          "height_ft": "UNKNOWN",
+          "note": "台上可系绳的完好木梁；不作为地面挡路矮墙"
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "1",
+          "label": "脊角",
+          "x": 50,
+          "y": 90,
+          "description": "空地；只使用这一只原有石像鬼。",
+          "z_ft": 0
+        },
+        {
+          "key": "2",
+          "label": "缺耳",
+          "x": 72.5,
+          "y": 60,
+          "description": "台架东侧；站位为本版选择。",
+          "z_ft": 0
+        },
+        {
+          "key": "R",
+          "label": "冯迟与实际在场工匠",
+          "x": 57.5,
+          "y": 62.5,
+          "description": "高20尺台上；只放入仍活着且确在此处的人，标记不是单一Token。",
+          "z_ft": 20
+        }
+      ],
+      "conditional_markers": [],
+      "public_annotations": [
+        {
+          "text": "台架 +20ft",
+          "x": 55,
+          "y": 67
+        },
+        {
+          "text": "坡底 0ft",
+          "x": 55,
+          "y": 7
+        },
+        {
+          "text": "坡顶 +20ft",
+          "x": 55,
+          "y": 47
+        },
+        {
+          "text": "石料 +5ft",
+          "x": 27.5,
+          "y": 91
+        },
+        {
+          "text": "木梯20ft（未架设）",
+          "x": 89,
+          "y": 85
+        }
+      ],
+      "notes": [
+        "主工地90×60尺，四周开放。台架20×20、高20尺；没有围墙。",
+        "北坡宽10、平面长40尺，本版从北侧坡底走向南侧台面；坡上无锁门。",
+        "工棚内存放20尺木梯；梯、绳需实际取用或架设。台上完好梁可系绳。",
+        "石料堆高5尺；其余空地不增加困难地形。台架三侧有20尺落差。",
+        "白石亭约半小时外；真正北口阵场是另一处，相距约一小时。"
+      ],
+      "flexible_choices": [
+        "主工地90×60保持原尺寸。北坡与它的精确包含关系UNKNOWN；本版台架置主工地北缘，40尺北坡延伸至场外。含北坡与余量总画布110×120，不新增围墙或整片台地。",
+        "北坡原文长40尺按地图平面长度绘制；高差20尺照原文保留，不额外推定行走速度、坡度惩罚或山崖。",
+        "台架位置、工棚15×20且开放、石料堆15×10与守卫落点均为可逆摆图选择。旧棚屋顶高度UNKNOWN，不凭空加封闭房间。",
+        "南侧示例到达点(75,110)距棚入口(85,70)直线约41.23尺；棚入口到台架东南脚(65,70)为20尺，对应原文约40/20。",
+        "木梁绘制为台上结构示意，梁高未知，不阻断地面路线。木梯20尺完整存于棚内，图中没有已架好的额外梯绳。"
+      ],
+      "surface_links": {
+        "platform": [
+          45,
+          50,
+          20,
+          20
+        ],
+        "connector": [
+          50,
+          10,
+          10,
+          40
+        ],
+        "connector_kind": "ramp",
+        "ground_port": [
+          55,
+          7.5,
+          0
+        ],
+        "upper_port": [
+          55,
+          52.5,
+          20
+        ],
+        "height_ft": 20
+      },
+      "routes_to_check": [
+        {
+          "label": "南侧到旧工棚",
+          "points": [
+            [
+              75,
+              112.5,
+              0
+            ],
+            [
+              80,
+              112.5,
+              0
+            ],
+            [
+              80,
+              70,
+              0
+            ],
+            [
+              90,
+              70,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        },
+        {
+          "label": "绕西侧至北坡底",
+          "points": [
+            [
+              75,
+              112.5,
+              0
+            ],
+            [
+              40,
+              112.5,
+              0
+            ],
+            [
+              40,
+              7.5,
+              0
+            ],
+            [
+              55,
+              7.5,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        },
+        {
+          "label": "北坡登台",
+          "points": [
+            [
+              55,
+              7.5,
+              0
+            ],
+            [
+              55,
+              10,
+              0
+            ],
+            [
+              55,
+              50,
+              20
+            ],
+            [
+              55,
+              62.5,
+              20
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "connector"
+        },
+        {
+          "label": "台上人员经北坡撤到南侧",
+          "points": [
+            [
+              57.5,
+              62.5,
+              20
+            ],
+            [
+              55,
+              62.5,
+              20
+            ],
+            [
+              55,
+              50,
+              20
+            ],
+            [
+              55,
+              10,
+              0
+            ],
+            [
+              55,
+              7.5,
+              0
+            ],
+            [
+              40,
+              7.5,
+              0
+            ],
+            [
+              40,
+              112.5,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "connector"
+        },
+        {
+          "label": "东侧接应台架脚",
+          "points": [
+            [
+              90,
+              70,
+              0
+            ],
+            [
+              80,
+              70,
+              0
+            ],
+            [
+              80,
+              65,
+              0
+            ],
+            [
+              67.5,
+              65,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        },
+        {
+          "label": "已架梯后的水平接近与升台",
+          "points": [
+            [
+              67.5,
+              65,
+              0
+            ],
+            [
+              62.5,
+              65,
+              20
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "ladder_installed"
+        }
+      ],
+      "off_map": [
+        {
+          "label": "白石亭",
+          "minutes": 30
+        },
+        {
+          "label": "风吼阵所在北口阵场",
+          "minutes": 60
+        }
+      ]
+    },
+    "B007": {
+      "origin": "NW: east+x,south+y",
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "source_classification": "FACT dimensions; FLEXIBLE missing placements and canvas margins",
+      "openings": [],
+      "player_release": "已到现场观察地形后发放；公开图不含守卫、被扣者和停战答案，未观察区域仍由主持遮盖。",
+      "map_id": "B007",
+      "name": "风吼阵",
+      "source_ids": [
+        "SRC-09"
+      ],
+      "width_ft": 160,
+      "height_ft": 140,
+      "source_transform": {
+        "source_origin": "原文采石地西南角(0,0)",
+        "canvas_origin_of_source": [
+          10,
+          130
+        ],
+        "formula": "screen_x=10+source_x; screen_y=130-source_y",
+        "note": "原文140×120采石地保留，四周各加10尺画布余量，不把边界画成封闭墙。"
+      },
+      "rooms": [
+        {
+          "kind": "yard",
+          "x": 10,
+          "y": 10,
+          "w": 140,
+          "h": 120,
+          "label": "北口阵场 140×120"
+        },
+        {
+          "kind": "path",
+          "x": 0,
+          "y": 65,
+          "w": 10,
+          "h": 10,
+          "label": "西入口"
+        },
+        {
+          "kind": "path",
+          "x": 35,
+          "y": 130,
+          "w": 10,
+          "h": 10,
+          "label": "南缺口"
+        },
+        {
+          "kind": "path",
+          "x": 100,
+          "y": 0,
+          "w": 10,
+          "h": 10,
+          "label": "北路"
+        }
+      ],
+      "walls": [
+        {
+          "x": 40,
+          "y": 89.5,
+          "w": 40,
+          "h": 1,
+          "height_ft": 10,
+          "label": "石墙A"
+        },
+        {
+          "x": 79.5,
+          "y": 20,
+          "w": 1,
+          "h": 40,
+          "height_ft": 10,
+          "label": "石墙B"
+        }
+      ],
+      "features": [
+        {
+          "kind": "raised_platform",
+          "x": 100,
+          "y": 30,
+          "w": 20,
+          "h": 20,
+          "height_ft": 10,
+          "label": "板台 +10ft"
+        },
+        {
+          "kind": "stairs",
+          "x": 100,
+          "y": 10,
+          "w": 10,
+          "h": 20,
+          "height_start_ft": 0,
+          "height_end_ft": 10,
+          "label": "北台阶 20×10"
+        },
+        {
+          "kind": "stone_pile",
+          "x": 30,
+          "y": 60,
+          "w": 10,
+          "h": 10,
+          "height_ft": 3
+        },
+        {
+          "kind": "stone_pile",
+          "x": 125,
+          "y": 70,
+          "w": 10,
+          "h": 10,
+          "height_ft": 3
+        },
+        {
+          "kind": "flag_pole",
+          "x": 109.7,
+          "y": 39.7,
+          "w": 0.6,
+          "h": 0.6,
+          "height_ft": 20,
+          "flag_width_ft": 2,
+          "flag_length_ft": 3
+        },
+        {
+          "kind": "rope_clasp",
+          "x": 109.7,
+          "y": 49.7,
+          "w": 0.6,
+          "h": 0.6,
+          "z_ft": 14
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "D",
+          "label": "董全",
+          "x": 110,
+          "y": 40,
+          "description": "台面高10尺，原坐标(100,90)。",
+          "z_ft": 10
+        },
+        {
+          "key": "W1",
+          "label": "长嘶",
+          "x": 60,
+          "y": 70,
+          "description": "原坐标(50,60)；Large占10×10尺，飞行按原卡。",
+          "z_ft": 0,
+          "space_ft": 10
+        },
+        {
+          "key": "W2",
+          "label": "回响",
+          "x": 105,
+          "y": 70,
+          "description": "原坐标(95,60)；Large占10×10尺，飞行按原卡。",
+          "z_ft": 0,
+          "space_ft": 10
+        },
+        {
+          "key": "K",
+          "label": "绳扣",
+          "x": 110,
+          "y": 50,
+          "description": "台面上方4尺，即地面上14尺；可见普通挂扣，不是魔法阵眼。",
+          "z_ft": 14
+        }
+      ],
+      "conditional_markers": [
+        {
+          "key": "G1",
+          "label": "原石像鬼之一（条件）",
+          "x": 75,
+          "y": 65,
+          "description": "仅第五回对应守卫确已赶到才放入；不刷新伤势或承诺。",
+          "z_ft": 0
+        },
+        {
+          "key": "G2",
+          "label": "原石像鬼之二（条件）",
+          "x": 75,
+          "y": 15,
+          "description": "同一批另一只；两场相隔约一小时，不瞬移。",
+          "z_ft": 0
+        }
+      ],
+      "public_annotations": [
+        {
+          "text": "板台 +10ft",
+          "x": 110,
+          "y": 47
+        },
+        {
+          "text": "台阶升10ft",
+          "x": 105,
+          "y": 25
+        },
+        {
+          "text": "石墙A 高10ft",
+          "x": 60,
+          "y": 96
+        },
+        {
+          "text": "石墙B 高10ft",
+          "x": 73,
+          "y": 43
+        },
+        {
+          "text": "碎石 +3ft",
+          "x": 35,
+          "y": 74
+        },
+        {
+          "text": "碎石 +3ft",
+          "x": 130,
+          "y": 84
+        },
+        {
+          "text": "幡顶约20ft",
+          "x": 133,
+          "y": 37
+        },
+        {
+          "text": "绳扣离地14ft",
+          "x": 134,
+          "y": 53
+        }
+      ],
+      "notes": [
+        "原文场地140×120尺，四边开放；三个入口各10尺，东侧也可实际离场。",
+        "石墙A/B均高10尺、厚1尺，可绕两端；不补封闭外墙。",
+        "板台20×20、高10尺；北台阶20×10，真实接通台面。",
+        "幡杆约离地20尺，绳扣离地14尺；黑幡可见，非固定伤害场。",
+        "两风灵各占10×10尺；虚线G1/G2仅为条件落点，不是额外守卫。",
+        "西棚在西门外200尺；场外西门绕北路约220尺，见R004。"
+      ],
+      "flexible_choices": [
+        "本版画布160×140，包住原文140×120与四周10尺余量；不改变任一源坐标。",
+        "两墙用原文线段为中心线，厚1尺向两边各0.5尺。只有A/B有确定实墙，所谓西门/南缺口作为宽10尺通路，不据名称补整圈墙。",
+        "幡在俯视图中以小旗符号表现，符号朝向可逆；绳扣物理点照原文固定，尺寸仅为符号。",
+        "石像鬼条件落点取墙B两端旁，不压墙体；仅在确实来援时启用。",
+        "北台阶的20尺按平面长度，阶数为制图符号，不设额外困难地形。板台下是否可穿行UNKNOWN；普通步行审核保守按不可穿台体处理，飞行另按能力。"
+      ],
+      "surface_links": {
+        "platform": [
+          100,
+          30,
+          20,
+          20
+        ],
+        "connector": [
+          100,
+          10,
+          10,
+          20
+        ],
+        "connector_kind": "stairs",
+        "ground_port": [
+          105,
+          7.5,
+          0
+        ],
+        "upper_port": [
+          105,
+          32.5,
+          10
+        ],
+        "height_ft": 10
+      },
+      "routes_to_check": [
+        {
+          "label": "西入口绕墙A东端到台南",
+          "points": [
+            [
+              5,
+              70,
+              0
+            ],
+            [
+              20,
+              70,
+              0
+            ],
+            [
+              20,
+              85,
+              0
+            ],
+            [
+              85,
+              85,
+              0
+            ],
+            [
+              85,
+              57.5,
+              0
+            ],
+            [
+              110,
+              57.5,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        },
+        {
+          "label": "南缺口借墙后接近台南",
+          "points": [
+            [
+              40,
+              137.5,
+              0
+            ],
+            [
+              40,
+              102.5,
+              0
+            ],
+            [
+              85,
+              102.5,
+              0
+            ],
+            [
+              85,
+              57.5,
+              0
+            ],
+            [
+              110,
+              57.5,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        },
+        {
+          "label": "北路走台阶登台",
+          "points": [
+            [
+              105,
+              5,
+              0
+            ],
+            [
+              105,
+              10,
+              0
+            ],
+            [
+              105,
+              30,
+              10
+            ],
+            [
+              105,
+              42.5,
+              10
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "connector"
+        },
+        {
+          "label": "台上绕开幡杆到绳扣旁",
+          "points": [
+            [
+              105,
+              42.5,
+              10
+            ],
+            [
+              107.5,
+              47.5,
+              10
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "upper"
+        },
+        {
+          "label": "台面撤北路",
+          "points": [
+            [
+              117.5,
+              42.5,
+              10
+            ],
+            [
+              105,
+              42.5,
+              10
+            ],
+            [
+              105,
+              30,
+              10
+            ],
+            [
+              105,
+              10,
+              0
+            ],
+            [
+              105,
+              5,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "connector"
+        },
+        {
+          "label": "长嘶Large绕墙B北端到北路",
+          "points": [
+            [
+              60,
+              70,
+              0
+            ],
+            [
+              60,
+              10,
+              0
+            ],
+            [
+              90,
+              10,
+              0
+            ],
+            [
+              90,
+              5,
+              0
+            ],
+            [
+              105,
+              5,
+              0
+            ]
+          ],
+          "footprint_ft": 10,
+          "mode": "walk"
+        },
+        {
+          "label": "回响Large从东侧撤北",
+          "points": [
+            [
+              105,
+              70,
+              0
+            ],
+            [
+              115,
+              70,
+              0
+            ],
+            [
+              115,
+              60,
+              0
+            ],
+            [
+              140,
+              60,
+              0
+            ],
+            [
+              140,
+              5,
+              0
+            ],
+            [
+              105,
+              5,
+              0
+            ]
+          ],
+          "footprint_ft": 10,
+          "mode": "walk"
+        },
+        {
+          "label": "Large可从西入口退出",
+          "points": [
+            [
+              60,
+              70,
+              0
+            ],
+            [
+              50,
+              70,
+              0
+            ],
+            [
+              50,
+              80,
+              0
+            ],
+            [
+              20,
+              80,
+              0
+            ],
+            [
+              20,
+              75,
+              0
+            ],
+            [
+              5,
+              75,
+              0
+            ],
+            [
+              5,
+              70,
+              0
+            ]
+          ],
+          "footprint_ft": 10,
+          "mode": "walk"
+        },
+        {
+          "label": "阵场东侧离场",
+          "points": [
+            [
+              105,
+              70,
+              0
+            ],
+            [
+              115,
+              70,
+              0
+            ],
+            [
+              115,
+              60,
+              0
+            ],
+            [
+              155,
+              60,
+              0
+            ]
+          ],
+          "footprint_ft": 5,
+          "mode": "walk"
+        }
+      ],
+      "off_map": [
+        {
+          "label": "西侧接应石棚",
+          "distance_ft": 200,
+          "reference": "西门向西"
+        },
+        {
+          "label": "西门外至北路绕行",
+          "distance_ft": 220,
+          "classification": "approximate route length"
+        },
+        {
+          "label": "东山口",
+          "distance_ft": "UNKNOWN"
+        }
+      ]
+    },
+    "B008": {
+      "map_id": "B008",
+      "name": "汜水关门区",
+      "width_ft": 160,
+      "height_ft": 120,
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "origin": "NW: east+x,south+y",
+      "source_ids": [
+        "SRC-12"
+      ],
+      "source_transform": {
+        "source_origin": "SW",
+        "formula": "screen_x=source_x; screen_y=120-source_y"
+      },
+      "source_classification": "FACT quoted dimensions; FLEXIBLE symbol sizes and unspecified placements",
+      "rooms": [
+        {
+          "kind": "path",
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 120,
+          "label": ""
+        },
+        {
+          "kind": "paving",
+          "x": 0,
+          "y": 55,
+          "w": 160,
+          "h": 15,
+          "label": "主道 15ft"
+        }
+      ],
+      "walls": [
+        {
+          "kind": "wall",
+          "x": 70,
+          "y": 0,
+          "w": 10,
+          "h": 55,
+          "label": "城墙北段",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 70,
+          "y": 70,
+          "w": 10,
+          "h": 50,
+          "label": "城墙南段",
+          "height_ft": 20
+        }
+      ],
+      "features": [
+        {
+          "kind": "ditch",
+          "x": 50,
+          "y": 0,
+          "w": 20,
+          "h": 120,
+          "label": "干壕",
+          "depth_ft": 10
+        },
+        {
+          "kind": "stairs",
+          "x": 80,
+          "y": 0,
+          "w": 10,
+          "h": 40,
+          "label": "登墙石阶",
+          "height_start_ft": 0,
+          "height_end_ft": 20
+        },
+        {
+          "kind": "timber",
+          "x": 115,
+          "y": 80,
+          "w": 20,
+          "h": 10,
+          "label": "木料",
+          "height_ft": 5
+        },
+        {
+          "kind": "winch",
+          "x": 93.5,
+          "y": 43.5,
+          "w": 3,
+          "h": 3,
+          "label": "绞盘"
+        },
+        {
+          "kind": "bar",
+          "x": 84,
+          "y": 59,
+          "w": 2,
+          "h": 2,
+          "label": "锁闩操作点"
+        }
+      ],
+      "openings": [
+        {
+          "label": "双扇木门",
+          "a": [
+            80,
+            55
+          ],
+          "b": [
+            80,
+            70
+          ],
+          "kind": "door",
+          "state": "barred"
+        }
+      ],
+      "gm_markers": [
+        {
+          "key": "K",
+          "label": "木闩与普通锁",
+          "x": 85,
+          "y": 60,
+          "description": "源(85,60)，仅这一套；与推门、放桥分别处理。",
+          "space_ft": 5
+        },
+        {
+          "key": "W",
+          "label": "吊桥绞盘",
+          "x": 95,
+          "y": 45,
+          "description": "源(95,75)，邻侧10尺站位；无第二把锁。",
+          "space_ft": 5
+        }
+      ],
+      "public_annotations": [
+        {
+          "text": "干壕 −10ft",
+          "x": 59,
+          "y": 20
+        },
+        {
+          "text": "墙顶 +20ft",
+          "x": 75,
+          "y": 95
+        },
+        {
+          "text": "桥起 / 门闭",
+          "x": 58,
+          "y": 77
+        },
+        {
+          "text": "阶梯向北升至20ft",
+          "x": 97,
+          "y": 21
+        },
+        {
+          "text": "绞盘",
+          "x": 99,
+          "y": 50
+        },
+        {
+          "text": "木料 +5ft",
+          "x": 125,
+          "y": 95
+        },
+        {
+          "text": "南便道入口",
+          "x": 140,
+          "y": 115
+        }
+      ],
+      "notes": [
+        "源160×120尺；西南原点转换为左上原点。",
+        "门洞宽15、高15；墙厚10、高20。",
+        "吊桥20×15；干壕宽20、深10。",
+        "阶梯南端地面，北端接20尺墙顶。",
+        "默认桥起门闭；四种独立状态均有导出。",
+        "西等候棚在图外200尺；东居所图外300尺。",
+        "南入口往旧运石门300尺，再绕500尺接营路。"
+      ],
+      "flexible_choices": [
+        "绞盘、锁闩用小符号表示，物件外廓未规定；绞盘东侧留10×10站位。",
+        "起桥俯视以东岸竖板符号表示；不可将起桥符号当作壕上可走面。",
+        "未给敌人坐标，不添加固定起位；木料纹理填满给定20×10外廓。",
+        "阶梯按原40尺平面长度分段，高差线性仅为制图解释；最北端与西邻墙顶相连。"
+      ],
+      "routes_to_check": [
+        {
+          "label": "门桥均开后主道",
+          "points": [
+            [
+              5,
+              62.5
+            ],
+            [
+              150,
+              62.5
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "绞盘东侧站位至南道",
+          "points": [
+            [
+              105,
+              45
+            ],
+            [
+              105,
+              107.5
+            ],
+            [
+              140,
+              107.5
+            ],
+            [
+              140,
+              117.5
+            ]
+          ],
+          "footprint_ft": 5
+        }
+      ],
+      "player_release": "现场观察后发放；公开图没有探索遮罩，未见区域由主持遮盖。",
+      "gate_state": "closed",
+      "bridge_state": "raised",
+      "bridge_rect": [
+        50,
+        55,
+        20,
+        15
+      ]
+    },
+    "B009": {
+      "map_id": "B009",
+      "name": "北门阁院",
+      "width_ft": 160,
+      "height_ft": 140,
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "origin": "NW: east+x,south+y",
+      "source_ids": [
+        "SRC-14"
+      ],
+      "source_transform": {
+        "source_origin": "SW",
+        "formula": "screen_x=source_x; screen_y=140-source_y"
+      },
+      "source_classification": "FACT quoted dimensions; FLEXIBLE symbol sizes and unspecified placements",
+      "rooms": [
+        {
+          "kind": "path",
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 140,
+          "label": ""
+        },
+        {
+          "kind": "floor",
+          "x": 105,
+          "y": 85,
+          "w": 30,
+          "h": 30,
+          "label": "石阁室内"
+        }
+      ],
+      "walls": [
+        {
+          "kind": "wall",
+          "x": 45,
+          "y": 55,
+          "w": 40,
+          "h": 5,
+          "label": "院中石墙",
+          "height_ft": 10
+        },
+        {
+          "kind": "wall",
+          "x": 100,
+          "y": 80,
+          "w": 5,
+          "h": 40,
+          "label": "阁西墙",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 135,
+          "y": 80,
+          "w": 5,
+          "h": 40,
+          "label": "阁东墙",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 105,
+          "y": 115,
+          "w": 30,
+          "h": 5,
+          "label": "阁南墙",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 105,
+          "y": 80,
+          "w": 10,
+          "h": 5,
+          "label": "阁北西段",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 125,
+          "y": 80,
+          "w": 10,
+          "h": 5,
+          "label": "阁北东段",
+          "height_ft": 20
+        }
+      ],
+      "features": [
+        {
+          "kind": "trough",
+          "x": 20,
+          "y": 95,
+          "w": 25,
+          "h": 10,
+          "label": "浅水石槽",
+          "height_ft": 3
+        },
+        {
+          "kind": "rack",
+          "x": 119,
+          "y": 99,
+          "w": 2,
+          "h": 2,
+          "label": "普通铁架"
+        }
+      ],
+      "openings": [],
+      "gm_markers": [
+        {
+          "key": "J",
+          "label": "挂剑处",
+          "x": 120,
+          "y": 100,
+          "description": "源(120,40)，挂扣离地4尺；剑架符号2尺为制图选择。",
+          "space_ft": 5
+        },
+        {
+          "key": "S",
+          "label": "石像",
+          "x": 105,
+          "y": 50,
+          "description": "源(105,90)，Large；保护区至院外30尺。",
+          "space_ft": 10
+        },
+        {
+          "key": "I",
+          "label": "无形客",
+          "x": 120,
+          "y": 90,
+          "description": "源(120,50)，Large；仅主持可见的实际位置标记。",
+          "space_ft": 10
+        }
+      ],
+      "public_annotations": [
+        {
+          "text": "北入口 20ft",
+          "x": 80,
+          "y": 9
+        },
+        {
+          "text": "西侧绕道",
+          "x": 15,
+          "y": 35
+        },
+        {
+          "text": "东侧坡道",
+          "x": 149,
+          "y": 85
+        },
+        {
+          "text": "石墙 高10ft",
+          "x": 65,
+          "y": 52
+        },
+        {
+          "text": "石槽 +3ft",
+          "x": 32,
+          "y": 92
+        },
+        {
+          "text": "门洞10ft / 高15ft",
+          "x": 120,
+          "y": 77
+        },
+        {
+          "text": "南侧开放",
+          "x": 80,
+          "y": 134
+        }
+      ],
+      "notes": [
+        "160×140尺；北、西、东、南均有接近/离场办法。",
+        "石阁40×40、墙厚5；北门宽10、高15。",
+        "主图揭顶看室内；另附+20尺屋顶图。",
+        "屋顶无通入室内的暗门；不画梯或暗梯。",
+        "挂扣离地4尺，室内有正常站位。",
+        "石像与无形客按源坐标放置；无形不等于无位置。",
+        "北口外200尺会合；西绕约多180尺。"
+      ],
+      "flexible_choices": [
+        "外围只显示开口方向，不因庭院一词虚构围墙。",
+        "浅水石槽内缘与铁架2×2符号是可逆绘制；不改变给定外廓。",
+        "平顶独立替换图层，+20尺；未规定板厚，不推定坠落洞或楼梯。"
+      ],
+      "routes_to_check": [
+        {
+          "label": "北入绕院墙东端至阁门",
+          "points": [
+            [
+              80,
+              5
+            ],
+            [
+              95,
+              5
+            ],
+            [
+              95,
+              70
+            ],
+            [
+              120,
+              70
+            ],
+            [
+              120,
+              92.5
+            ]
+          ],
+          "footprint_ft": 5
+        },
+        {
+          "label": "西入绕院墙西端",
+          "points": [
+            [
+              5,
+              40
+            ],
+            [
+              35,
+              40
+            ],
+            [
+              35,
+              70
+            ],
+            [
+              120,
+              70
+            ],
+            [
+              120,
+              92.5
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "东坡绕阁北进入",
+          "points": [
+            [
+              155,
+              90
+            ],
+            [
+              147.5,
+              90
+            ],
+            [
+              147.5,
+              70
+            ],
+            [
+              120,
+              70
+            ],
+            [
+              120,
+              92.5
+            ]
+          ],
+          "footprint_ft": 5
+        },
+        {
+          "label": "南侧退场",
+          "points": [
+            [
+              120,
+              70
+            ],
+            [
+              150,
+              70
+            ],
+            [
+              150,
+              135
+            ]
+          ],
+          "footprint_ft": 10
+        }
+      ],
+      "player_release": "现场观察后发放；公开图没有探索遮罩，未见区域由主持遮盖。",
+      "roof": [
+        100,
+        80,
+        40,
+        40
+      ],
+      "roof_height_ft": 20
+    },
+    "B010": {
+      "map_id": "B010",
+      "name": "断壁石沟",
+      "width_ft": 150,
+      "height_ft": 150,
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "origin": "NW: east+x,south+y",
+      "source_ids": [
+        "SRC-15"
+      ],
+      "source_transform": {
+        "source_origin": "SW",
+        "formula": "screen_x=source_x; screen_y=150-source_y"
+      },
+      "source_classification": "FACT quoted dimensions; FLEXIBLE symbol sizes and unspecified placements",
+      "rooms": [
+        {
+          "kind": "path",
+          "x": 0,
+          "y": 0,
+          "w": 150,
+          "h": 150,
+          "label": ""
+        }
+      ],
+      "walls": [
+        {
+          "kind": "wall",
+          "x": 45,
+          "y": 55,
+          "w": 5,
+          "h": 40,
+          "label": "石壁A",
+          "height_ft": 12
+        },
+        {
+          "kind": "wall",
+          "x": 85,
+          "y": 40,
+          "w": 30,
+          "h": 5,
+          "label": "石壁B",
+          "height_ft": 12
+        },
+        {
+          "kind": "wall",
+          "x": 105,
+          "y": 80,
+          "w": 5,
+          "h": 35,
+          "label": "石壁C",
+          "height_ft": 12
+        }
+      ],
+      "features": [
+        {
+          "kind": "ditch",
+          "x": 15,
+          "y": 115,
+          "w": 80,
+          "h": 10,
+          "label": "碎石低沟",
+          "depth_ft": 5
+        },
+        {
+          "kind": "slope",
+          "x": 115,
+          "y": 0,
+          "w": 35,
+          "h": 35,
+          "label": "东北缓坡",
+          "height_ft": 10
+        }
+      ],
+      "openings": [],
+      "gm_markers": [
+        {
+          "key": "D",
+          "label": "定光",
+          "x": 80,
+          "y": 65,
+          "description": "源(80,85)，幡在手边；是否参战依实际选择。",
+          "space_ft": 5
+        },
+        {
+          "key": "R",
+          "label": "赤炉客",
+          "x": 130,
+          "y": 55,
+          "description": "源(130,95)，Large；无固定火墙。",
+          "space_ft": 10
+        },
+        {
+          "key": "Z",
+          "label": "烛尾",
+          "x": 130,
+          "y": 95,
+          "description": "源(130,55)，Large；独立意愿。",
+          "space_ft": 10
+        }
+      ],
+      "public_annotations": [
+        {
+          "text": "石壁A 高12ft",
+          "x": 35,
+          "y": 52
+        },
+        {
+          "text": "石壁B 高12ft",
+          "x": 100,
+          "y": 37
+        },
+        {
+          "text": "石壁C 高12ft",
+          "x": 122,
+          "y": 117
+        },
+        {
+          "text": "碎石干沟 −5ft",
+          "x": 55,
+          "y": 129
+        },
+        {
+          "text": "缓坡至 +10ft",
+          "x": 130,
+          "y": 21
+        },
+        {
+          "text": "四边均可离场",
+          "x": 70,
+          "y": 144
+        }
+      ],
+      "notes": [
+        "150×150尺；所有外缘开放。",
+        "三段石壁高12尺；攀绕与正常能力有效。",
+        "低沟宽10、深5；碎石底为困难地形。",
+        "东北坡平缓，最高10尺；非额外攻击加值。",
+        "两名追索者各占10×10尺。",
+        "不把火墙、光环或幡法术烙进地面。",
+        "不参战者在北侧200尺外小路。"
+      ],
+      "flexible_choices": [
+        "缓坡等高线为示意，无原文坡顶点坐标；只保留区域、最高10尺和正常通行。",
+        "水壶小炉不铺成障碍，物件坐标随定光所在点记录。"
+      ],
+      "routes_to_check": [
+        {
+          "label": "西侧绕石壁A北端",
+          "points": [
+            [
+              20,
+              75
+            ],
+            [
+              20,
+              47.5
+            ],
+            [
+              77.5,
+              47.5
+            ],
+            [
+              77.5,
+              65
+            ]
+          ],
+          "footprint_ft": 5
+        },
+        {
+          "label": "西侧绕石壁A南端",
+          "points": [
+            [
+              20,
+              75
+            ],
+            [
+              20,
+              105
+            ],
+            [
+              80,
+              105
+            ],
+            [
+              80,
+              65
+            ]
+          ],
+          "footprint_ft": 5
+        },
+        {
+          "label": "赤炉客退出东侧",
+          "points": [
+            [
+              130,
+              55
+            ],
+            [
+              145,
+              55
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "烛尾绕石壁C南端向西",
+          "points": [
+            [
+              130,
+              95
+            ],
+            [
+              130,
+              135
+            ],
+            [
+              5,
+              135
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "北侧绕石壁B",
+          "points": [
+            [
+              80,
+              65
+            ],
+            [
+              75,
+              65
+            ],
+            [
+              75,
+              5
+            ]
+          ],
+          "footprint_ft": 10
+        }
+      ],
+      "player_release": "现场观察后发放；公开图没有探索遮罩，未见区域由主持遮盖。"
+    },
+    "B011": {
+      "map_id": "B011",
+      "name": "官桥前庭",
+      "width_ft": 180,
+      "height_ft": 140,
+      "grid_ft": 5,
+      "pixels_per_grid": 100,
+      "origin": "NW: east+x,south+y",
+      "source_ids": [
+        "SRC-17"
+      ],
+      "source_transform": {
+        "source_origin": "NW",
+        "formula": "screen_x=source_x; screen_y=source_y"
+      },
+      "source_classification": "FACT quoted dimensions; FLEXIBLE symbol sizes and unspecified placements",
+      "rooms": [
+        {
+          "kind": "path",
+          "x": 0,
+          "y": 0,
+          "w": 180,
+          "h": 140,
+          "label": ""
+        },
+        {
+          "kind": "floor",
+          "x": 15.5,
+          "y": 10.5,
+          "w": 39,
+          "h": 34,
+          "label": "灶屋室内"
+        }
+      ],
+      "walls": [
+        {
+          "kind": "wall",
+          "x": 0,
+          "y": 0,
+          "w": 180,
+          "h": 5,
+          "label": "北宫墙",
+          "height_ft": 20
+        },
+        {
+          "kind": "wall",
+          "x": 15,
+          "y": 10,
+          "w": 40,
+          "h": 0.5,
+          "label": "灶屋北墙",
+          "height_ft": 10
+        },
+        {
+          "kind": "wall",
+          "x": 15,
+          "y": 10.5,
+          "w": 0.5,
+          "h": 34.5,
+          "label": "灶屋西墙",
+          "height_ft": 10
+        },
+        {
+          "kind": "wall",
+          "x": 54.5,
+          "y": 10.5,
+          "w": 0.5,
+          "h": 34.5,
+          "label": "灶屋东墙",
+          "height_ft": 10
+        },
+        {
+          "kind": "wall",
+          "x": 15.5,
+          "y": 44.5,
+          "w": 14.5,
+          "h": 0.5,
+          "label": "灶屋南西段",
+          "height_ft": 10
+        },
+        {
+          "kind": "wall",
+          "x": 40,
+          "y": 44.5,
+          "w": 14.5,
+          "h": 0.5,
+          "label": "灶屋南东段",
+          "height_ft": 10
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 75,
+          "y": 45,
+          "w": 30,
+          "h": 20,
+          "label": "石台",
+          "height_ft": 5
+        },
+        {
+          "kind": "stairs",
+          "x": 87.5,
+          "y": 40,
+          "w": 5,
+          "h": 5,
+          "label": "北阶",
+          "height_start_ft": 0,
+          "height_end_ft": 5
+        },
+        {
+          "kind": "stairs",
+          "x": 87.5,
+          "y": 65,
+          "w": 5,
+          "h": 5,
+          "label": "南阶",
+          "height_start_ft": 0,
+          "height_end_ft": 5
+        },
+        {
+          "kind": "dry_trough",
+          "x": 40,
+          "y": 90,
+          "w": 30,
+          "h": 5,
+          "label": "无水矮槽",
+          "height_ft": 3
+        },
+        {
+          "kind": "lamp",
+          "x": 14.7,
+          "y": 69.7,
+          "w": 0.6,
+          "h": 0.6,
+          "label": "灯火"
+        },
+        {
+          "kind": "lamp",
+          "x": 79.7,
+          "y": 19.7,
+          "w": 0.6,
+          "h": 0.6,
+          "label": "灯火"
+        },
+        {
+          "kind": "lamp",
+          "x": 144.7,
+          "y": 69.7,
+          "w": 0.6,
+          "h": 0.6,
+          "label": "灯火"
+        },
+        {
+          "kind": "lamp",
+          "x": 94.7,
+          "y": 119.7,
+          "w": 0.6,
+          "h": 0.6,
+          "label": "灯火"
+        }
+      ],
+      "openings": [],
+      "gm_markers": [
+        {
+          "key": "D",
+          "label": "妲己",
+          "x": 150,
+          "y": 35,
+          "description": "源与屏幕(150,35)；不提前开飞行或隐形。",
+          "space_ft": 5
+        },
+        {
+          "key": "H",
+          "label": "胡喜媚",
+          "x": 155,
+          "y": 55,
+          "description": "(155,55)，Large。",
+          "space_ft": 10
+        },
+        {
+          "key": "W",
+          "label": "王贵人",
+          "x": 130,
+          "y": 35,
+          "description": "(130,35)，Large。",
+          "space_ft": 10
+        }
+      ],
+      "public_annotations": [
+        {
+          "text": "宫墙 +20ft / 厚5ft",
+          "x": 112,
+          "y": 11
+        },
+        {
+          "text": "灶屋揭顶 +10ft",
+          "x": 35,
+          "y": 8
+        },
+        {
+          "text": "敞门10ft / 高8ft",
+          "x": 35,
+          "y": 51
+        },
+        {
+          "text": "石台 +5ft",
+          "x": 90,
+          "y": 59
+        },
+        {
+          "text": "东门15ft / 高15ft",
+          "x": 165,
+          "y": 26
+        },
+        {
+          "text": "西街30ft",
+          "x": 13,
+          "y": 88
+        },
+        {
+          "text": "无水石槽 +3ft",
+          "x": 55,
+          "y": 100
+        },
+        {
+          "text": "南街30ft",
+          "x": 90,
+          "y": 137
+        }
+      ],
+      "notes": [
+        "180×140尺；原文西北原点，y向南，不翻转。",
+        "官桥为街名，场内没有桥或关门机关。",
+        "北墙厚5、高20；其余边界不补围墙。",
+        "灶屋木墙厚0.5、顶高10；主图揭顶。",
+        "石台高5，南北各5尺宽阶梯。",
+        "四灯各20尺明亮、再20尺微光。",
+        "独立灯光图是半径参照，不自动穿墙照亮。",
+        "西街外约500尺到后营；南街可退。"
+      ],
+      "flexible_choices": [
+        "北墙占y0～5，厚度放在画布内；原文未规定厚度相对边界的内外分配。",
+        "阶梯宽5尺明确，平面长度未定；本版各5尺，位于石台南北中点。",
+        "东门15尺以y35为中心，范围27.5～42.5；西街30尺以y70为中心，南街30尺以x90为中心。",
+        "边界入口只画门槛与方向，不从门名推定东西两侧存在连续围墙。",
+        "灯具符号不占整格；照明参考圆另存可关闭图层，由实体遮挡裁定实际照明。"
+      ],
+      "routes_to_check": [
+        {
+          "label": "东门进入",
+          "points": [
+            [
+              175,
+              35
+            ],
+            [
+              145,
+              35
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "Large沿石台北侧走西街",
+          "points": [
+            [
+              155,
+              55
+            ],
+            [
+              155,
+              30
+            ],
+            [
+              65,
+              30
+            ],
+            [
+              65,
+              70
+            ],
+            [
+              5,
+              70
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "Large经东侧退南街",
+          "points": [
+            [
+              130,
+              35
+            ],
+            [
+              130,
+              110
+            ],
+            [
+              90,
+              110
+            ],
+            [
+              90,
+              135
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "进入灶屋",
+          "points": [
+            [
+              35,
+              70
+            ],
+            [
+              35,
+              40
+            ],
+            [
+              35,
+              30
+            ]
+          ],
+          "footprint_ft": 10
+        },
+        {
+          "label": "绕石槽南端去西街",
+          "points": [
+            [
+              90,
+              135
+            ],
+            [
+              30,
+              135
+            ],
+            [
+              30,
+              70
+            ],
+            [
+              5,
+              70
+            ]
+          ],
+          "footprint_ft": 5
+        }
+      ],
+      "player_release": "现场观察后发放；公开图没有探索遮罩，未见区域由主持遮盖。",
+      "lamps": [
+        [
+          15,
+          70
+        ],
+        [
+          80,
+          20
+        ],
+        [
+          145,
+          70
+        ],
+        [
+          95,
+          120
+        ]
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "title": "第一回：青蒲渡的假军令",
+      "level": 3,
+      "scene": "B002",
+      "source": "02_第一回_青蒲渡的假军令.md",
+      "text": "# 第一回：青蒲渡的假军令\n\n四名 3 级角色 · 约 3～4 小时 · v0.7 未测试草案。\n\n本回的小人物和地点为本团编写，插在黄飞虎归周之后。需要的敌人卡：2024 Bandit、Animated Armor、Animated Flying Sword、Berserker、Scout。链接及页码见 [主持人速查](04_主持人速查与敌人索引.md)。\n\n## 主持人先知道这几件事\n\n玩家护送十二名旅人、两车口粮前往西岐，在青蒲渡被截住。当地的曹斗趁乱假传军令，冒充检查逃人的军差，实际把过路粮食存入北边石梁仓，准备卖掉。\n\n抄写过假文书的阿禾发现有人要抢接济粮，藏了账单副本。曹斗的手下把他关在旧祠侧屋，不敢走近祠里的会动兵器，却能从外面封住房门。\n\n这件事没有幕后神仙操纵，也不是救世界的秘密。先让朋友们靠自己办成一件像样的事。\n\n成功目标：让旅人与粮食安全渡河。揭穿骗局、救出阿禾是值得做的事，但不是故事继续的唯一门票。\n\n## 一眼能用的人物\n\n| 人物 | 想要什么 | 怎么演 | 会提供什么 |\n| --- | --- | --- | --- |\n| 陶七，渡工 | 让十二个人平安过河 | 话多，紧张时反复摸缆绳 | 认识浅滩和岸边小路；愿意配合计划 |\n| 阮寿，假军差 | 拿钱办事，别惹祸上身 | 官腔背得很熟，被追问就说“上头的意思” | 被拆穿后供出石梁仓；使用 Bandit 卡 |\n| 阿禾，抄书学徒 | 离开旧祠，把文书交给可信的人 | 受了惊，仍忍不住纠正错字 | 假令底稿、藏账位置、曹斗人数 |\n| 曹斗，截粮头目 | 留住赃物，自己脱身 | 先谈利益，失去优势便谈人情 | 使用 Berserker 卡；能投降和逃跑 |\n\n旅人可挑两位露面：一位坚持带着会骂人的家鹅，一位凡事要问孩子意见的木匠。只作气氛，不给他们战斗特技。\n\n## 开场读给大家听\n\n> 泥路走到了尽头，河面上是两条晃悠悠的渡船。陶七刚喊了一声“到啦”，渡棚里便钻出几个人，把一块写满字的木牌横在路中。\n>\n> “奉令查验。人可以等，粮得先留下。”\n>\n> 十二名旅人停住脚步。车上的鹅伸长脖子，对着那块木牌叫了一声。\n\n让每位玩家用一句话说自己站在哪里、正在做什么，然后开始。\n\n## 场景一：这道军令不太对\n\n阮寿带着另外三名 Bandit 堵在渡棚前。四人都怕事情闹大，初始愿意说话。他们要求扣下一车粮食，给一张日后可领回的空白收据。\n\n玩家能直接看见：木牌上的墨很新；四人的衣着装备不统一；没有人认真检查旅人的身份。问得具体，阮寿便开始重复官话。\n\n### 让信息自然出来\n\n- 看文书：不需要检定也能发现收据上没有经手人名字。智力（调查）DC 12 成功，进一步看出牌上署名与随身纸令的字样不一致。\n- 聊两句：感知（洞悉）DC 12 成功，看出阮寿更怕曹斗责罚，而不是怕违反军法。失败只是不知道这一层，不表示必须相信他。\n- 有相关经历：玩家说明自己当过兵、做过文书并指出具体问题，可直接获得合理常识；不必先通过“我认不认识自己职业”的检定。\n- 问当地人：陶七知道前两天有个抄书学徒被带往旧祠，也知道这伙人搬粮去石梁仓。无论检定如何，这两条去向都会告诉玩家。\n\n### 三种很顺手的办法\n\n拿两份文书当面对质，或承诺去西岐请人核实：阮寿会退一步，允许先把旅人安置在渡棚。要求他立刻认罪，可用魅力（威吓或说服）DC 13；提供安全退路时主持人可判优势。失败后他要求玩家去找曹斗谈，仍能推进。\n\n假装配合，找机会查粮去向：阮寿会派两名手下带路去石梁仓，玩家可以全队同行，也可以留人照顾渡口的旅人，不必分队。\n\n动手：四名 Bandit，合计 100 XP，低于本队低难度预算。两人倒下或玩家明确给出停手机会时，其余人撤退或投降。NPC 的退让按动机处理，不另做士气检定。正常先攻，没说完话便动手也不免费获得整轮攻击。\n\n阮寿被放走，可以在终场前传话：“那几位愿意给你留条活路。”若玩家羞辱或殴打投降者，他不会再帮忙；只影响关系，不扣道德点数。\n\n## 选路：先救人，还是直接追粮\n\n告诉玩家目前知道的路线。没有必须按顺序走的箭头。\n\n```text\n                         石梁仓（曹斗与粮食）\n                         /              \\\n                岸边小路                北侧林路\n                       /                  \\\n渡口、旅人与渡船 —— 旧祠（阿禾与账单）\n       |\n     河对岸 → 通往西岐\n```\n\n地点之间约十五至二十分钟步行，是本回的场景距离。不是小说或现实地理。\n\n先渡人：陶七能把旅人送到对岸农舍暂歇，玩家回来处理粮食。直接绕浅滩：花半天走远路可把人和自有粮车一起送走，代价是未追回先前被抢的粮，曹斗暂时继续活动。接受这个结果，不临时封死浅滩。\n\n先去石梁仓：按场景三开始；若玩家控制局面，曹斗手下会告知阿禾被关在哪里，可随后救人。\n\n## 场景二：别碰祠里的那把剑\n\n旧祠曾有人修行，如今无人主持。兵器仍守着内殿，曹斗的人利用这一点看住阿禾。\n\n### 不画精细地图也能带\n\n- 前院：30 × 30 尺，通向前厅；有歪树、石桌和侧屋窗户。\n- 前厅：30 × 20 尺，亮光能照进来。北边是内殿门，门前有一道磨旧的白石线。\n- 东侧屋：15 × 15 尺，阿禾被关在这里。木门从前厅一侧用横木顶住；东窗距地 5 尺，可从院外接近。\n- 内殿：20 × 20 尺，一具 Animated Armor 和一把 Animated Flying Sword 守在供台附近。北墙后方是实心山壁。\n\n阿禾听到人来便叫他们小心：自己曾看见木棍越过白线时，那把剑立刻飞来。他把藏账的油布包塞在前厅西边松砖里，未越白线；认真搜索松砖即可找到。\n\n### 救出阿禾\n\n移开横木需要一个 Utilize 动作，不需要检定。若玩家想从窗走，有绳子和同伴协助便能稳妥完成；硬要赶时间攀爬光滑窗沿，可用力量（运动）DC 10，失败会滑回地面，不附加莫名重伤。\n\n阿禾和包裹都不在内殿。细心的玩家完全可以不打守卫便完成任务。\n\n### 如果有人越线\n\n先描述甲片颤动、剑尖抬起，给玩家停止的机会；继续进入才开始先攻。一甲一剑共 250 XP。它们执行“守住内殿”的命令，只攻击越入内殿或攻击它们的人，并会跟到前厅门口；越界者退出祠门且不再攻击后，它们返回内殿。\n\n这是当地守卫的行为安排，数据不变。飞剑有盲视，不会因室内烟雾自动看不见；照原卡感官处理。玩家可以用正常的法术、遮挡、移动或战斗解决，但不能用一句“我是主人”获得永久控制权。\n\n祠里没有必须取走的神器。击败守卫后只剩损坏器物，不掉落可无限操纵的魔法装备。\n\n### 得到什么\n\n阿禾交出假令底稿，并告诉玩家曹斗在石梁仓，身边只有两名精干弓手。账单记录粮食来源，包括另外两户被劫商旅。阿禾愿意当证人，不必再劝一次。\n\n包裹丢了也不锁死剧情：阿禾能指认曹斗，粮袋上还有原主人记号。玩家若完全跳过旧祠，石梁仓的粮袋同样是证据。\n\n此处清理完后可安全短休。陶七的对岸亲戚也能提供长休处；若过夜，曹斗会把一部分货装车，但不会凭空把所有线索与人一起抹去。\n\n## 场景三：石梁仓谈不拢才打\n\n曹斗在仓院里清点赃物，两名 Scout 帮他看门。合计 650 XP，落在本队中难度预算内；实际危险受资源、弓手位置与打法影响。\n\n### 场地\n\n仓院 60 × 40 尺。南边大门宽 10 尺；北侧后门宽 5 尺，未上锁。西边堆了几只齐腰木箱，可提供半身掩护。东边粮车距门 20 尺。两名弓手起始分别在北侧仓檐下和西边木箱旁，曹斗在粮车边。院墙高 8 尺，墙外有能藏人的树丛。\n\n墙角有三个旅人的行李包，没有人质。不要临时抓一个小孩来逼玩家选择。\n\n### 可以谈成的条件\n\n曹斗先提出放走旅人，自己留下粮食。玩家若拒绝，他想要的是保命和不当场被绑回朝歌。\n\n- 有账单或阿禾作证，且玩家明确允许他交还粮物后带随身行李离开：曹斗接受。是否以后举报他，由玩家决定；不要替他们承诺。\n- 只有一方口头指控：魅力（说服或威吓）DC 15 可以让他相信玩家真有办法追究。失败时，他仍愿意让旅人渡河，但坚持留粮。玩家可以换筹码、潜入或开打。\n- 想让两个弓手退出：告诉他们赃物证据已经送出，并给出能活着离开的机会，魅力（说服）DC 13；有阮寿帮忙作证则直接谈成。两人最关心报酬与自身安全。\n\n这里的 DC 是现场建议。已经形成足够可信的协议，就不用为了掷骰而反复掷骰。\n\n### 可以绕过去\n\n观察一阵便能发现后门。骗曹斗到南门长谈，可让同伴去后院接应；潜藏使用规则原文的 Hide 流程，守卫用各自感知。不要用一个统一“潜入 DC”覆盖所有能力。\n\n搬动整车粮会有声音。玩家可以先取回关键物证，也可以让陶七在院外安排空车接运。详细操作由现场决定，不必逼所有方案都变成最后的正面战斗。\n\n### 打起来以后\n\n曹斗用 Berserker 原卡，挥重斧靠近威胁最大的对手；他受伤到原卡 Bloodied 条件时使用其 Bloodied Frenzy，不套旧版能力。\n\n弓手用 Scout 原卡，在院中找掩护；不爬上无法接近的高塔。双方都能利用木箱。粮袋不会被普通箭矢一击炸成火海。\n\n一名弓手倒下后，另一名愿意接受停手条件。曹斗在失去同伴、自己又已重伤时，优先向北门逃跑或投降。他不是必须死在这里的首领。\n\n玩家撤退，曹斗也不追出仓院。他想搬粮逃走，玩家下一步可以跟踪、求援或先完成护送。全队失去战斗能力时，依规则处理死亡豁免等结果；只有实际被非致命击倒的角色才可能被拘押，不能用“轻松团”悄悄把已经发生的死亡改掉。\n\n## 收尾与奖励\n\n护送旅人过河即可完成主目标。全队获得约定的 100 GP 和两瓶标准 Potion of Healing；治疗药水由接济处作为额外感谢交付，使用现有规则。钱可以在叙述里写成等值钱货，角色卡仍记 GP。\n\n原主的粮食与行李归还原主。敌人可回收装备按原卡 Gear 和装备规则处理；账单只作证据，不另藏第二袋巨款。\n\n若粮食没保住，旅人仍感谢救命，报酬照付；下一回接济处会更急需打通山路。若玩家放走曹斗，他以后可能再出现，也可以就此离开，不必硬做成长线反派。\n\n首回结束，全队升到 4 级；谈成、绕过或打赢都算完成。不要只给杀敌路线升级。\n\n### 可直接交给玩家的纸条\n\n> 西岐接济处收讫：十二人平安抵达。\n>\n> 护送诸位若还愿意做一桩好事，烦请明日来见。我处往北山请的木匠已经误了归期。\n>\n> ——程简\n\n## 时间紧就这样缩短\n\n阮寿当场认怂，直接供出旧祠与粮仓；旧祠从窗救人，守卫只展示一次；把聚会的主要时间留给石梁仓。不要为了凑三场战斗把谈成的事再变回战斗。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n原假令与赃粮调查有效。可以追问谁用文书卸责，不反转十二旅人获救与阿禾现状，不给善举追加暗罚。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n现有账据后可选ledgerOpen：半小时留公副本，解锁第四回新增急递；或ledgerBought：真实入80GP，签只追差役、不查雇主的限责专报。后者第四回无新增急递、十二回公开稽核有冲突；可退80GP更正。原账、已救者、追回粮食与100GP不改。梁嵩买责任解释，不买任何人的身体或姓名。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 2,
+      "title": "第二回：山祠借路",
+      "level": 4,
+      "scene": "B003",
+      "source": "03_第二回_山祠借路.md",
+      "text": "# 第二回：山祠借路\n\n四名 4 级角色 · 约 3～4 小时 · v0.7 未测试草案。\n\n需要的敌人卡：2024 Scout、Berserker、Animated Armor、Animated Flying Sword。没有必须战斗的名人或神祇。\n\n## 一件小事，三方各有道理\n\n接济处的程简想修好北山旧路，方便安置不断到来的旅人。木匠孟平带两个帮手去勘路，结果困在山祠后院。\n\n守祠人石叔不反对救人，却不肯让任何人擅动山道边的老树与水渠。他曾帮过山上修行者，替人照看这处地方；他没有现成的万能法术，也不是什么隐藏的高等级神明。\n\n一队来找旧日兵器的人先一步试图搬走祠中铜铃，触发了构装守卫。铜铃滚落后院排水沟；孟平怕砍树挖沟伤到山道，一边修木撑一边等人帮忙，错过归期。寻宝者退在山下，仍想抢走铜铃。\n\n铜铃是这里守卫识别的召回信号器具，不是可带走指挥万军的神器。其设定与相关人物都是本团的小故事。\n\n## 从上一回带来什么\n\n- 救了阿禾：他替大家画一张简单的祠院草图，标出排水沟出口。\n- 陶七信任小队：他借出绳索、木板与一辆运木小车，结束后归还。\n- 粮食丢了：程简仍信任小队，但请求优先带工匠回来，别为寻宝耽搁。\n- 首回没有做完所有支线：不影响接任务。程简看重的是旅人已平安到达。\n\n报酬为全队 150 GP。目标是把三位工匠带回，并告诉接济处这条路是否可用；不要求一定取得通路。\n\n## 开场\n\n> 程简把一张画歪了的山路图推到你们面前。\n>\n> “孟师傅说去半天，已经过了一夜。我原以为是路难走，刚才有人回来，说山里有一副盔甲追着人跑。”\n>\n> 他停了一下，又把借条放到图上。\n>\n> “陶七说木板随便用。车要还。”\n\n## 场景一：在山路上遇见谁\n\n山脚两名 Scout 自称来找人，实际是寻宝者的前哨。他们不急着开打，希望玩家替他们把铜铃取出来。\n\n他们愿意透露山祠方向，声称工匠“偷了宝物”。感知（洞悉）DC 12 可以看出他们对工匠姓名一无所知。即使失败，石叔和工匠的证言也会说明真相；不靠一次检定决定玩家有没有机会知道。\n\n玩家可以答应同行、拒绝、套话或直接走。两人不会强行拦路。如果战斗，两名 Scout 共 200 XP，受伤后便撤回山脚，不追杀。\n\n这里见过、打败、放走的就是终场可能出现的那两名弓手，不会在结尾凭空刷新一对。\n\n## 场景二：石叔的一碗茶\n\n石叔在祠外守着一只烧水壶。先让他倒茶，再谈正事。他的第一句话可以是：“来救人的坐这边，来搬东西的先把车停远一点。”\n\n他直接告诉玩家三件事：\n\n1. 孟平等人活着，在后院；守卫不让他们走过中院。\n2. 铜铃掉在排水沟里，原来挂在石叔的杖头；有人抢铃时打翻了它。\n3. 守卫按旧命令守住中院，只有石叔拿回原铃，站在中院门外按旧节奏敲响，才会退回两侧壁龛。\n\n石叔知道办法，却独自够不到铃，也无力保护工匠撤离。这正是小队能帮忙的地方。他把完整办法提前说清，不等玩家先挨一顿打。\n\n### 为什么不给路\n\n石叔担心大批车辆压坏水渠、为了让宽车通过而砍去护坡树。孟平若回来，会提出用窄车分批通行，并修一座不压住水渠的木桥。\n\n玩家提出保护水渠、保留树木并安排日后修路的人手，石叔愿意商量，无需先刷好感。若只是笼统说“一切都听我们的”，魅力（说服）DC 15 可以换来一次救援期间的临时通行；失败只意味着长期借路还没谈成。\n\n可以只救人不借路。这个结果也完成任务，后续接济处继续使用青蒲渡。\n\n## 场景三：过院、取铃、接人\n\n这是本回的主要场景。玩家可从侧面取铃、架板绕行，或者进入中院牵制守卫。让他们先观察，再选择。\n\n### 简图与距离\n\n```text\n北：后院 30 × 20 尺，孟平和两位帮手，旁有木料\n    ┌───────────────────┐\n    │ 后院              │\n    ├──────中院北门──────┤\n    │ 中院 40 × 30 尺    │──东墙外排水沟──铜铃\n    │ 两甲、两剑        │                 ↑\n    ├──────中院南门──────┤              绕行小径\n    │ 前院、石叔        │─────────────────┘\n    └───────────────────┘\n南：下山道路\n```\n\n中院南北门各宽 10 尺，门间 40 尺；院墙高 8 尺。东墙外小径宽 5 尺，可以步行，到铜铃处有一段 10 尺宽、10 尺深的干沟。沟底是软土和碎石；铃在近侧壁下的石缝，距沟沿约 6 尺。不存在暗藏毒雾或额外怪物。\n\n孟平三人在后院北边的平台上安全休息。守卫执行的是阻止未授权者穿越中院，不主动追杀待在后院的人。玩家能隔墙交谈，得知他们可自己攀梯、搬木板，不必全程当作包裹背走。\n\n### 办法一：去沟边取铃\n\n绕行小径不进入中院，无需潜行。长杆带钩、绳套或合适法术能从沟沿取铃，只要工具与描述确实够到便成功。铜铃为 2 磅、可触碰的普通物件；若玩家用法术，检查法术自己的承重、距离及其他限制。\n\n下沟也可以。有绳索固定后按正常攀爬移动处理；急着徒手下碎石壁，用力量（运动）DC 12，失败从当前高度滑落，跌落按原规则。不要把沟临时加深来克制玩家。\n\n取回后，把铃交给南门外的石叔。他用一个 Utilize 动作敲响既定信号，所有仍能听到铃声的本地守卫在各自下一回合停止攻击，回到原位；非战斗时直接描述它们归位。玩家或 NPC 若主动再次攻击它们，它们照原命令自卫。\n\n这里是本场景的识别信号，不能控制其他构装体；铃离开此地只是普通铜铃。若有 Silence 等效果阻断声音，先结束或离开影响区；不是凭空无视法术。\n\n### 办法二：把工匠接出来\n\n陶七借来的木板与孟平的木料能搭一条跨沟小桥，再以梯子越过后院矮墙。众人安稳合作花二十分钟即可完成，不必连掷五次失败就坠落。\n\n若在战斗中赶建，按具体动作与移动处理；主持人告知需要哪些工作，再让玩家分工。没有一个固定的“累计成功次数系统”。\n\n此路线能救走三人，守卫仍在原处。石叔愿意留下等人日后修复；玩家不必为完成救援消灭它们。\n\n### 办法三：在中院正面应对\n\n两具 Animated Armor、两把 Animated Flying Sword，共 500 XP，低于四名 4 级角色的低难度预算。高 AC 与免疫仍可能拖慢战斗；击败不是唯一目标。\n\n进入白石铺成的中院前，描述守卫转身和拔剑声。开始战斗时两甲在院中两侧，两剑悬在北门旁；前后门都没有自动关闭。\n\n守卫阻拦穿越者、追到中院门边，优先处理仍在院内或持续攻击的人。队友可以牵制，另一个人去取铃，也可以掩护工匠经东边绕走。\n\n数据卡中的免疫、盲视和移动不变。全部离开中院且停止攻击后，它们不追下山。原卡没有的擒抱、推人或法术不临时加给它们；需要通用动作时按规则使用。\n\n### 铜铃坏了怎么办\n\n救出工匠仍有绕行与战斗两种办法。石叔会感到可惜，但优先让人活着出去；不要因为铃损坏宣布整回失败。后续修复安排留作一句后日谈即可，不创建制造神器系统。\n\n## 场景四：山脚的讨价还价\n\n寻宝者头领厉三使用 Berserker 卡。他认为铜铃能操纵仙家器物，打算高价卖掉。终场最多为厉三与此前的两名 Scout，共 650 XP，低于本队低难度预算。\n\n发生地点是宽 20 尺的山路岔口，南边通山下，西边通一处能绕回大路的平坡。两侧树石提供掩护，没有断崖和必须守满若干轮的关门机关。工匠可先退到平坡后，不强行塞进伤害范围。\n\n### 先说话\n\n厉三要铃。玩家可以告诉他铃只能召回这里的守卫，还可以当场给他看它在山脚毫无作用；石叔和孟平都能说明其来历。\n\n提供证据并允许寻宝者离开，魅力（说服）DC 12 可让厉三认栽。他的同伴若此前得到玩家善待，可帮忙劝说，直接谈成。失败时他仍可能要求用 20 GP 当所谓“误工钱”，玩家可还价、拒绝或准备动手。\n\n如果玩家愿意花钱送走他们，故事照样推进；这不意味着世界从此给他们贴上“懦弱”标签。\n\n### 真打起来\n\n只放入尚在场、仍愿意帮厉三的敌人。厉三前压，弓手利用树石；如果两名弓手已经被俘或离开，就只有他一个。\n\n当厉三进入 Bloodied，原卡特性生效。给玩家直观描述他明显受伤后反而越打越急，不偷偷把血量加回来。任何一方提出可信的停手条件都可以重新交涉。\n\n厉三失去同伴支持或意识到铃不值钱时会撤走。即便他逃跑，也不妨碍救援完成。\n\n## 收尾：让这一趟留下痕迹\n\n三位工匠回去，全队领取 150 GP。若还谈成借路，程简加送两瓶标准 Potion of Healing，并把新路口的木牌交给大家题字。写什么由玩家决定，往后有机会再见到它。\n\n没谈成借路：程简谢过大家，把地图折回去，“那就先走水路，人回来最要紧。”后续守城任务从渡口补给线切入。\n\n借路成功：后续守城任务从山路接应切入。两条路线都通向主线，只改变玩家接下来面对的场地与熟人。\n\n本回结束，全队升到 5 级。留五分钟让每位玩家说一件自己的角色想在西岐做的事，再安排下一回。\n\n### 下一回的钩子\n\n借路成功时：\n\n> 新来的军士一眼认出了你们的路牌。\n>\n> “这条路是你们走通的？正好。城外来了新的军队，上头要找认识这片地形的人。”\n>\n> 他把一份封好的信递过来，又补了一句：“有军饷。这次真有。”\n\n若没有借到山路，把开头改为军士认出接回孟平的小队：“你们就是接回孟师傅的诸位？正好。城外来了新的军队，上头要找认识渡口和周边地形的人。”其余邀请照常。\n\n## 节奏建议\n\n把时间花在玩家怎样救人与借路上。山脚前哨可压缩为一次短对话，结尾也可以谈成。若大家已经享受过一场热闹战斗，接下来让他们顺利把事办成，不为凑时长追加敌人。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n石叔关心护树护渠，孟平也有接工程的利益。有限承诺可以守住，不把借路或借物改成无限欠债。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n早先有账据选择时可ledgerAudit调查DC13，成功半小时、失败一小时均取得梁嵩委任副本，不锁线索。查明后第四／十二回退款更正只需半小时。石叔守祠护渠有真实价值，不能因发现商人逐利把信仰整体写成骗局。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 3,
+      "title": "第三回：西岐城下",
+      "level": 5,
+      "scene": "B004",
+      "source": "05_第三回_西岐城下.md",
+      "text": "# 第三回：西岐城下\n\n四名 5 级角色 · 约 3～4 小时 · v0.7 未测试草案。\n\n需要的完整 2024 敌人卡：Guard Captain、Knight、Priest、Scout。原卡定位见 [第二幕规则备忘](../research/ACT2_RULE_NOTES.md)。五名对手全部参战为 2,450 XP，介于本队低预算 2,000 与中预算 3,000 之间；地形与双方目标仍会影响实际风险。\n\n本回要做的事：从麦亭转运院接回两车粮药、鲁青和两位帮手。查到敌方传令路线是额外收获，不是完成任务的隐藏门槛。\n\n## 开桌前只记这些\n\n张桂芳部队来到西岐附近后，一条乡间补给线被截。麦亭只是外围小据点，远处的大军不会按轮次无限增援。\n\n守院军官岑岳扣了补给，还要工匠先修他的运货桥。副官费安认为扣住民用药物和工匠已经超出原来查兵械的差事。随军术士祝槐用法术吓住门口的人，但他并非能整日维持大阵的仙人。\n\n玩家有空间拆开这三个人的立场，也可以从侧面救人、夺货或直接打进去。人、物、消息各有用途，不必全拿齐才算有进展。\n\n## 接上前两回\n\n在西岐安顿数日，让角色完成正常休息和升级，再开本回。\n\n| 前两回结果 | 这回开场与便利 |\n| --- | --- |\n| 北山借路成功 | 孟平先前把窄车送到麦亭，回城取单时才听到扣押消息；现在带队走已借到的山路，仍遵守不砍护坡树、不压水渠的承诺。可以从转运院北侧高坡直接观察院内 |\n| 没借到北山路 | 粮药先前经青蒲渡运到麦亭，陶七在码头装完车才收到扣货消息；现在带队回去。他知道沿岸芦苇小径，能把人带到工房后窗外 |\n| 阿禾平安且愿意帮忙 | 随单写清货物归属和数量。玩家不用靠临时伪造凭证证明这些货原本就属于接济处 |\n| 孟平或陶七无法同行 | 接济处安排普通车工/渡工带路；不追溯改写旧结果，也不凭空提供熟人的额外人脉 |\n\n两条路都能完成冒险。只有开场观察位置与熟人不同，地图和敌人不会因为玩家选对了路就偷偷加码。\n\n### 城门边的差事\n\n> 程简指着桌上两张收货单：“这一车吃的，这一车救急的。都不是给神仙吃的，所以不能等神仙忙完。”\n>\n> 他又在角上补了三个名字。\n>\n> “鲁青，修桥做轮子的师傅，还有两个帮手。人也被扣在麦亭了。能一起接回来最好，实在顾不过来，先把人带回来。”\n\n报酬提前说清：接回三位工匠，全队 200 GP；只接回其中一部分，先付 100 GP，找回其余人再补足。收回全部物资，另 100 GP；只收回部分物资，另 50 GP。出发即提供两瓶普通 Potion of Healing，未用完归小队，不从报酬扣。\n\n货物共 24 包，每包 15 磅；12 包粮食，12 包药材、绷带与御寒物，共 360 磅，分放两辆普通 Cart。这只是接济处一批急用物资，不是整座西岐唯一的存粮。货物可以拆包搬运，车本身不必完整带回。具体承重仍按角色与装备规则。\n\n程简给出合法货单，但不能给商军下令。货单是谈条件的依据，不是出示就让敌军消失的通关牌。\n\n### 可选的封神人物短场\n\n若朋友们想见见原著人物，让哪吒在出城时问路。他听说有人一听张桂芳叫名字就摔下马，觉得“这人打架前还得先点名，规矩倒不少”。他要去另一处军前应战，顺便提醒小队：听说的异术不等于眼前这个术士也会，先看清再动手。\n\n留给玩家几句交谈便继续他们自己的差事。哪吒不跟队、不发额外免疫，也不在玩家打不过时突然清场。此处是本团插入的会面，不复刻小说台词。\n\n## 场景一：先看见门怎么关着\n\n抵达时是午后。院里没有屠杀：鲁青三人在修一根桥梁的木撑，岑岳正在点货，费安与他争论扣押范围。祝槐刚在南门内施完 Spirit Guardians，浅金色的小旗与披甲虚影绕着他走。他喊：“三步以外说话，脚下看清！”\n\n玩家从高坡或岸边都能直接看见三件事，无需检定：\n\n- 工匠活着、没被绑住，关在东工房；南窗能说话，东后窗能进出。\n- 两车还在棚下，尚未转运。门内横着一根普通木闩，没有会自动锁死整个院子的机关。\n- 光影只绕着祝槐，跟人移动；越过光影外缘的院地没有变化。\n\n玩家若观察片刻，祝槐会对岑岳抱怨：“这术撑不了一炷香，你要扣车，终究得靠人。”主持人直接解释：它不是永久封路，等待是可行选项。别要求先用身体试出伤害才肯给线索。\n\n感知（察觉）DC 13 的额外收获是看清两名弓手的位置；失败仍能判断守军人数不多。智力（奥秘或宗教）DC 13 的额外收获是把眼前现象与需专注维持的护身法术联系起来；没有相应技能熟练的角色仍可凭光影跟随人移动这一点推理。\n\n### 场地，可直接画\n\n```text\n北：高坡观察处，距离北墙 40 尺；向两侧都有下坡路\n           北墙高 8 尺，院内 100 × 80 尺\n     ┌──────────────────────────────┐\n     │ 西北货棚             东北账房 │\n     │ 两车、岑岳           一名弓手 │\n     │                              │\n西门 │          开放院地     东工房 │ 后窗 → 芦苇小径\n10尺 │                    鲁青等人 │           → 码头\n     │ 西侧木箱        费安、弓手   │\n     │             祝槐             │\n     └──────────南门10尺────────────┘\n                  乡道，向西接回城路\n```\n\n以西南院角为起点：货棚在西北角，占 30 × 20 尺；账房在东北角，占 20 × 20 尺；东工房沿东墙，南北长 30 尺、东西宽 20 尺，入口朝院内。南门到货棚约 60 尺，到工房门约 40 尺。工房东后窗宽 5 尺，窗台高 3 尺，无铁栏，木撑从里面顶着；鲁青可自己挪开。窗外是一条 5 尺宽的小径，离码头 100 尺。\n\n南门虚掩，木闩在院内；西门同宽，从里面以同样木闩关闭。站到闩旁，用一个 Utilize 动作便能移开。翻墙依正常攀爬处理；这里有明显砖缝与可固定绳索的梁，不另设必须成功的攀爬谜题。普通完整墙面阻挡视线，木箱视具体角度提供半掩护。\n\n工房南窗朝向院内，只够观察和说话，不够中型生物通行。院外接应应到东后窗，敲窗便能与鲁青低声交谈。账房有朝南的门和朝院内的窗；完整墙面给里面的人全掩护，探窗射击再按露出程度处理，不能隔墙射箭。\n\n### 让计时保持诚实\n\n祝槐本次 Spirit Guardians 从玩家抵达时开始，最长十分钟；把经过的谈话与等待算进去，提前结束或专注中断同样失效。原卡一天仅一次，耗掉后就真的没有了。\n\n敌军原计划一小时后把货搬上东侧大路。等十分钟不会丢掉货物，先花一小时短休则可能看见他们开始搬货；可以在场外观察、跟随到下个路口或重新谈判。告诉玩家这一安排再让他们决定。岑岳并不因此处死人质；工匠仍在工房修木撑，到傍晚才准备随军带走。\n\n## 场景二：三个人，三种谈法\n\n先把角色想要什么说清，再看对方是否已经愿意接受。已满足下列明确条件就直接成立；对犹豫的要求，使用 2024 Influence，默认 DC 为 15 或对方智力属性值，取较高者，并按当下态度处理优劣势。同一种说辞失败后，不能轮流掷到成功；拿来新证据、提出不同交换，局面才会变。\n\n战斗前，费安与祝槐对持货单来谈的人为 Indifferent；岑岳对前来取回被扣物资的人为 Hostile，但仍愿意听报价。攻击、兑现承诺或真正达成停战后，再按实际情况改变关系。\n\n### 岑岳：我得有东西交差\n\nGuard Captain 原卡。他知道这是民用货，仍希望带点物资回去证明自己办成了差事。盔甲擦得亮，说话反复强调“奉命”。\n\n他愿意公开说出一个成交条件：留下六包粮食，并让鲁青在现有木料上修完木撑，随后其余物资和三人一起离开。修木撑是熟练工匠二十分钟的正常工作，无需检定；条件落实后他守约，也让祝槐停止拦阻。\n\n玩家不用喜欢这个条件，也可以讨价还价、调包或直接拒绝。让他只留三包、接受价值 30 GP 的现钱代替粮食，是他会犹豫的另一类交易；使用 Influence。成功后的具体约定说清楚，他不会在出门时又编一笔新税。\n\n若玩家提供可信的上级文书或其他真正改变局面的证据，按证据处理。冒充官员不能凭一次高骰点永久控制敌军。\n\n### 费安：查兵械，不是扣做轮子的\n\nKnight 原卡。他在军中领职，但认为本次命令是检查兵械。他的请求很具体：让他打开货包，鲁青把已拆开的木撑收拾到可安全搬走的状态。\n\n玩家出示接运单并同意查包，没有武器这一点可直接确认。费安随即提出放人，并明确不再参与阻拦三位工匠；无须再掷骰证明他“足够感动”。岑岳虽不肯立即放货，愿意让人先走。这条谈法可以先解决救援，再决定是否冒险取货。\n\n费安不是自动变成玩家控制的盟友。他护送三人离开战区后留在外围，不攻打旧同袍；若玩家主动追杀正在放人的他，再按实际行动处理。需要物理交战时，他的 Knight 能力照卡，不能用不在新版卡上的 Leadership。\n\n### 祝槐：这份差事给的钱并不多\n\nPriest 原卡，中立的人类术士。披甲虚影是法术外观，不是死人魂魄或某神亲临，不因玩家喊破来历就额外削弱。\n\n他受雇维护据点，最怕岑岳硬拖着大家一起送命。若岑岳已成交、费安已安排放人，祝槐配合，不需要单独再买一遍路。若两边谈崩，他可以接受 25 GP 作为结束本次雇佣的代价，收款后停止专注、从西门离开；这是假定其个人动机成立的交易，不是对所有 Priest 都有效的职业弱点。\n\n若玩家一分钱不想花，告诉他“今天的法术已用掉，我们只带走自己的人和货，准你离开”，属于会让他犹豫的劝退条件，走 Influence。若他仍参战，使用原卡 Spellcasting、Divine Aid 和其他动作，不为了配合虚影外观增加新招式。\n\n## 场景三：从侧面把事情办了\n\n### 先救工匠\n\n鲁青不是等人扛走的包裹。她知道后窗能开，只因两名帮手和货物还在，不愿独自走。\n\n玩家在窗外明确接应路线，她便开窗，三人依次出来。无敌人关注后窗时，离开工房本身不需潜行检定；若已有敌人守望该处，依正常视线、Hide 与感知规则应对。战斗中三人各按自己的移动和动作离开，不用一个玩家动作把三人瞬移到安全地带。\n\n他们从芦苇小径退到码头后，可跟接应人去先前约好的集合处。守军想保住活着的工匠，不会凭空改成弓手集中处决百姓。若角色主动把他们留在伤害范围，照常处理危险；不要把这句动机当成无敌护罩。\n\n若确实要给普通工匠建立先攻与受伤记录，用现有 2024 Commoner 卡；他们主要 Dash、Dodge 或寻找全掩护，不提供额外战斗输出。\n\n### 再取货或取消息\n\n西门离货棚最近；打开后可以搬包、推走车，或者让接应的车工等到路线安全再进来。混战里逐个操作与搬运，照正常动作、负重和移动处理；脱离战斗后搬完剩余货物只需几分钟，不给物流另开一个数值系统。\n\n敌人能被声响吸引，但不会因为出现一次 Minor Illusion 就自动全部背对玩家。按法术自身的距离、内容与检验方式处理；有效的幻象、隐形、飞行或其他能力也不临时失效。藏在完整墙后的人和货，不因场面需要而自动被发现。\n\n账房桌上是正常往来记录，不是魔法密卷。进入账房并翻查即可知道：**青石驿正在给传令者换马，岑岳与城外术士许照通过那里传话。**\n\n查看排班或问愿意说话的弓手还能得知：**青石驿南面的路哨，近日都在午后沿另一条路送簿，往返约一小时。** 下一回在这个时段经过，就能避开这一处普通哨位。纸上也画着送簿的路，不靠到了现场再成功一次检定才兑现情报；若过很久才来，按实际排班变化处理。\n\n鲁青也听到士兵反复提到青石驿，至少能告诉玩家这个地名。没拿到纸、毁掉账房或没通过额外检定，都不会切断求援线；程简本来就知道收信人住哪儿。\n\n## 场景四：要打，打什么\n\n全部敌人为岑岳、费安、祝槐和两名 Scout，共五人；谈走的、撤出的、已被俘的不会刷新。\n\n先攻开始时使用当时已经实际走到的位置。若玩家直接从南门攻入，岑岳在西北货棚，费安在工房门前，祝槐在南门内 10 尺，一名弓手在东北账房窗边，另一名在费安西侧 10 尺。没有额外伏兵或自动封闭的出口。\n\n敌方目标是阻止带走货、人，保护自己；小队目标由玩家决定，可以先救三人、打开西门、夺到账册或逼岑岳谈条件。先把这些目标摆上桌，不只问“你打谁”。\n\n### 近身封锁的真实规则\n\n祝槐身边的 Spirit Guardians 是以他为中心、半径 15 尺的 Emanation，随本人移动；由 Priest 原卡以其 DC 施放。范围内受影响生物速度减半，触发时作感知豁免，伤害、成功减半及每个生物每回合最多一次的限制照 2024 法术全文。施法时他排除了当时眼前的同袍与三位工匠，因而他们可正常离开；此后不会免费追加排除目标。\n\n可以在光影外远程攻击他，使其正常检定专注；可以在规则允许时推走施法者、使用 Dispel Magic，或走侧门、等待结束。Silence 会阻碍其中的言语施法，但不会自动消除已经生效的 Spirit Guardians。祝槐如果改为专注 Bless，就不再维持原法术。\n\n把虚影画在术士周围，别把整片院子涂成“结界”。南门走不通，西门、窗后和墙外依然存在。木旗、道袍、地上装饰不额外提供 HP，也不是必须拆掉的法术发生器。\n\n### 敌人的行动意图\n\n- 岑岳优先守货棚和西门，用原卡攻击赶开近身取货者；追到门外发现货、人都已不在视线后，会收拢同袍。\n- 费安若仍参与，先阻拦去工房的人；有人展示正确货单、愿意让他查包，战斗中也能给停手机会。实际说服/查验占用正常行动与时间。\n- 祝槐不主动穿过工房追逐。他依靠现有法术保护自己与关口，身边没有同袍或已经没有可守的东西时会撤离。\n- 两名弓手利用可见射线和掩护，优先压制持武器的敌人；近处受压就退到账房或西北棚后，不神奇地隔墙射击。\n\n岑岳进入 Bloodied，或费安与祝槐都退出后，他会主动喊停，提出保留三包粮食、其余全放行。玩家可接受，也可要求无条件放行；同袍都已败退、退路被截且玩家承诺放他走时，他愿意放弃货物求生。没有一个必须打到 0 HP 才能触发的隐藏胜利阶段。\n\n若队伍撤退，乡道和码头都有离场方向。敌人围着据点和货物行动，不追着角色跑遍地图。以后再来时按已发生的转运、伤亡与协议继续，不把场景重置。\n\n## 回城：人情留在下一回\n\n| 结果 | 当下收尾 | 后续回声 |\n| --- | --- | --- |\n| 鲁青和帮手回城 | 按约付救援报酬；她把没吃完的半块饼也塞给接应者 | 鲁青能画青石驿侧墙与地势，后续阵内有人可请教普通结构与修护 |\n| 收回部分或全部物资 | 按事先公布的报酬结算，接济处有药、有饭 | 下一次让玩家看见某位熟人用上带回的绷带；不额外发长期属性加值 |\n| 查到传令路线 | 程简抄下青石驿的名字和换岗习惯 | 第四回能观察并避开普通路哨，仍须处理具体地形 |\n| 只救人、没货 | 接济处另找货源，程简照约付全队救援款 | 求援信加一句缺物资即可，不克扣升级或取消休息 |\n| 暂时谁也没接回 | 鲁青被带去敌后修运输器，接济处知道其去向 | 第四回求援仍可进行；今后可循俘虏线找她，不宣布西岐立刻陷落 |\n\n若只救回其中一部分工匠，救援报酬先付 100 GP，找回其余人后补足 200 GP。不是按死亡人数惩罚小队的道德积分；这只是事先约定任务尚未全部完成的结算，程简仍提供后续线索。若工匠死亡，把这个事实留在记录中，别以需要角色而复活替换。\n\n这次行动有了结果、队伍回到可安顿之处后，升至 **6 级**，进入 [第四回：一封信出西岐](06_第四回_一封信出西岐.md)。和平谈成、只救到人或需要日后再来，都不影响本章升级；不要叠加战斗 XP 再升一次。\n\n> 夜里，程简把一封还没封口的信交过来。\n>\n> “城里缺的不光是粮，能看懂仙家阵势的人也缺。我认识一个能张罗修护、勘路的沈砚，住在城外栖霞观。”\n>\n> 他把信摊开：“先看，免得你们到了路上才知道替我答应了什么。”\n\n## 主持人最后记四句\n\n三位工匠的去向：____。带回多少货：____。\n\n岑岳、费安、祝槐分别怎样离场：____。青石驿消息知道多少：____。\n\n## 制作备忘\n\n原著背景取第36回张桂芳征西岐的军情、异术威胁和哪吒到来；第37回子牙上昆仑取榜的线保留给后续时间推进。麦亭、军官、工匠、货物与这次局部行动均为本团编排，不把祝槐的数据当作张桂芳呼名落马的完整转写。来源见 [SOURCES](../research/SOURCES.md) 与 [第二幕规则备忘](../research/ACT2_RULE_NOTES.md)。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n追回实际18/24包粮药后，执行选项supplyCivil分12民诊余包军需，supplyArmy全部军需，或supplyReserve留实物。未选即留存，不代捐。原救援与追回报酬照付。民诊12包解锁第六回两瓶药、第十一回十分钟撤营；军需6包解锁工兵勘路和第九回80GP劳务。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n粮药的分配先看真实包数和具名签收；军需与民诊都能救人，但同一包不重复记账。新增利益交易不能以反写获救者死亡或追加暗罚强迫玩家选择。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 4,
+      "title": "第四回：一封信出西岐",
+      "level": 6,
+      "scene": "B005",
+      "source": "06_第四回_一封信出西岐.md",
+      "text": "# 第四回：一封信出西岐\n\n四名 6 级角色 · 约 3～4 小时，巧解时可以更短 · v0.7 未测试草案。\n\n承接第三回《西岐城下》。需要的敌人原卡：2024 Mage、Berserker、Scout。先准备完整卡与相关法术；本章的提醒不代替原文。\n\n## 先把这件事说清\n\n**把程简的求援内容传到栖霞观的沈砚那里，并让他知道怎样回联。**\n\n公函请求检修城防、接续驿路的人手，以及能辨认异术危险的勘察者。它不含城防部署，不是封神榜，也没有“必须送达唯一原件”的仙家封印。复制、背诵、口述或合适法术都能完成任务。程简希望明日傍晚前有答复，好安排下一批差事；稍晚会调整安排，不会凭空死掉一批人。\n\n挡路的是方术士许照。他从“借调勘阵人手”猜成了西岐要请修士来打他师门的脸，带人在青石驿查信。他有本事，也爱摆架子；与他打起来很危险，说清来意、绕开他、骗过检查都有机会。\n\n本回可在第三回结束后隔一两天开始。城内有正常休整条件，让角色按规则完成长休并处理升级。不要把上一回剩余的伤势偷偷当作这回的难度来源。\n\n## 开场：程简也想过用别的办法\n\n> 程简把信递过来，这回没封口。\n>\n> “字多是我的毛病。意思只有几句：城里缺会修的，城外缺会看的，请沈砚替我们联系人。”\n>\n> 他指着落款。“有人查，就给他看。真有人问你们为什么只送这几句话，告诉他，最近普通信差不是绕路，就是被扣下盘问。”\n>\n> “你们若有更快的法子，让我少写一张纸也好。”\n\n程简亲自见过沈砚，可以描述其相貌、声音和现住地点：一个常把细木尺夹在耳后的中年人，借住栖霞观东厢，管的是联系工匠和看路，不是给众人算命。两人都是原创人物；不要临时给他们万能通信或破阵能力。\n\n任务报酬为全队 400 GP，成功传达即支付；送得快不扣钱。另给两瓶标准 Potion of Healing，出发时交付，可自由使用，最终报酬不再重复发这两瓶。金币由西岐接济处结算，不要求带盖章回执才能领取；沈砚的可信回复、正常回信或小队说明都可交代。\n\n### 带上前一回的结果\n\n| 上一回发生的事 | 现在具体能用在哪里 |\n| --- | --- |\n| 鲁青获救 | 她画出青石驿南北门、东墙北端旧缺口及外侧土坡。小队知道可从那里绕过正门，不必先破墙；图不保证没有守卫。 |\n| 查到传令表 | 表上写着南路哨兵每日午后离岗送簿的时段。选择这个时段经过，直接避开那一处普通哨位，无需再掷骰“检验情报是否有用”。 |\n| 两件都办成 | 小队可从已知的东侧缺口接近北门，途中绕过南路盘查。驿内仍有哪些人，观察就能知道。 |\n| 没取得上述帮助 | 程简仍知道大路与栖霞观的位置；路边脚夫能指出山脊慢路。缺少情报会少一个便利，不会少掉全部解法。 |\n| 补给路线走北山或青蒲渡 | 开场由石叔的送菜人或陶七带来沿途消息，称呼和笑话沿用旧交情。不会兑换成额外通行点数。 |\n\n### 公函的正文\n\n> 沈砚足下：\n>\n> 西岐新接来人众，房舍、城防器具与驿路都需修护。请代寻愿来相助的工匠，并问有无识得异术危险、愿先来勘看的同行。所需人手、材料与工钱，请回信商议，不必勉强任何人。\n>\n> 来人可到西岐接济处找我；沿途若不便，请先回消息，我们另议接应。\n>\n> 程简\n\n玩家可以给这封略显公事公办的信加一句问候。沈砚稍后会记得那句话。\n\n## 场景一：走哪条路\n\n栖霞观距城外出发处约半日脚程，大路经过青石驿；越过驿站后约一小时到观。西侧山脊小径可完全绕过驿站，约多走两小时，路线有旧石阶和猎户留下的路标，正常天气下并非悬崖绝路。\n\n三条办法从一开始就说得清楚：\n\n- **大路查验：** 最快，有人查问来处和携带的公函。可能谈成，也可能冲突。\n- **驿站东侧：** 利用鲁青的草图，或亲自观察找到旧缺口，从侧面接近北门。路短，但仍在敌人可能看见的范围内。\n- **西侧山脊：** 多用两小时，完全绕过青石驿。敌人没有能监看整片山林的法术；按已知路线稳妥走就能过去，不另加一场怪物填空。\n\n山脊路线的乐趣可以放在行旅交谈：送菜人想请小队给自己那头倔驴取名；若他们曾替旧路题字，他还想听听那个名字怎么来的。玩两三分钟即可；不靠一串攀爬检定拖足一晚。\n\n如果小队已经从远处成功传信，直接去“栖霞观的回复”。他们可以选择是否仍去看望沈砚或会一会许照；那是自愿的新行动。\n\n### 南路茶棚的普通哨位\n\n茶棚在青石驿南门以南 300 尺，值守者是一名 Scout。他是许照手下两名弓手之一，另一人在驿内。总人数不会因小队走了不同路线而增加。\n\n他照本宣科问：“去哪里？替谁办事？有没有给山上人的信？”不是见面就搜身。让玩家看见他脚边装文书的竹筒与腰上的传警号角。\n\n出示真实信函、说明去栖霞观找人修护，他会建议到驿站找许照把话讲明。玩家可以接受、掉头或改走山路，他没有扣押所有行人的命令。若假扮商军差役、谎称没有信件而需要影响他的决定，使用 Influence 的魅力（欺瞒）检定，默认 DC 为 15 或其智力属性值，取较高者；他起初为 Indifferent，合理伪装与准备依现有规则处理。失败时他叫驿站来人核实，不会自动识破角色身上所有秘密。\n\n取得传令表并选对时段：到达时茶棚无人，哨兵已沿另一条路送簿。他不在下一场战斗中突然出现。\n\n若在茶棚开打，只有这一名 Scout。他尝试拉开距离、用动作吹号示警，再往驿站退。号角是普通器具，会被真实的距离、障碍或 Silence 影响；没有不占行动的全场警报。许照等人若得知有人袭击，留在驿内准备交涉或防御，不能瞬移 300 尺赶到茶棚。\n\n## 场景二：先看见方术，再决定近不近\n\n在南门外 90 尺的一片矮坡，玩家能观察驿院。此时许照若在初始位置，与小队约隔 170 尺。先描述清楚视野、退路和敌人位置，再问玩家怎样接近。\n\n> 驿前石路上，一片约四十尺宽的焦黑还没有被车辙磨掉。院墙旁搁着一只冻裂的水缸，缸底背阴处还有几块没化的冰。\n>\n> 院里的人把长袖拂得很响，正教训一个弓手：“下回别人问起，说是奉师门之义查验。不要说是我听岔了。”\n>\n> 弓手点头：“那还查不查？”\n>\n> “查。”\n\n焦痕与冻裂的缸都来自昨日的斗法，不是无伤害的特殊演示。许照已经休息，今天按原卡的完整次数开始。若主持另外安排他当天先施法夸口，就实际扣除相应次数，不能进入正式战斗后重置。\n\n附近等路通的脚夫直接说明：“他能隔着院子放一大片火，也能把面前一大块地方冻白。千万别挤在门口和他吵。”不用检定就能听懂范围威胁。想准确辨认法术名称，可用智力（奥秘）DC 13；失败仍知道危险类型，不能把警告全部藏在成功后。\n\n许照想扣下他认定的军事召集信，也想让旁人承认自己是在执行正经差事。他不会因看见旅人站在远处就扔火球。玩家若主动进攻，或交涉明确破裂而双方准备动武，先掷先攻；预警不代表玩家或敌人可以白拿一轮攻击。\n\n## 青石驿的场地\n\n院落南北长 120 尺、东西宽 80 尺。南北门都宽 15 尺、未上锁，没有自动落下的铁闸。外墙高 10 尺；东墙靠北端留有宽 10 尺的旧缺口，墙外土坡平缓可走。站在墙内能看到缺口附近，外墙也确实阻挡穿墙视线。\n\n```text\n北：出驿，往栖霞观\n               北门\n┌────────────────────────┐\n│                         │──东墙旧缺口\n│      北院：一名弓手      │  外侧土坡\n│                         │\n│ 西石屋      许照        │\n│                         │\n│────石隔墙──宽门洞───────│\n│                         │\n│ 水槽        杜衡        │\n│                         │\n└──────────南门───────────┘\n        矮坡观察处，门外 90 尺\n        茶棚，门外 300 尺\n南：回西岐；西侧山脊可绕过整座驿站\n```\n\n图供主持定位，不按字符比例量距离。正面接近时的默认位置，以南门中心为起点：\n\n| 地点或人物 | 位置与用途 |\n| --- | --- |\n| 杜衡 | 门内向北 30 尺，站在水槽以东；不堵死整座门。 |\n| 许照 | 门内向北 80 尺、偏东 10 尺；初始在地面，未施放 Fly 或 Invisibility。 |\n| 驿内弓手 | 门内向北 105 尺、偏东 25 尺，能查看北门及旧缺口。 |\n| 西石屋 | 西侧墙边，南北约 55～80 尺处；20 × 25 尺，有完整石墙和屋顶，东面敞门宽 5 尺。屋内无人。 |\n| 内院隔墙 | 南门以北 45 尺处横向延伸，高 8 尺，中央留 20 尺门洞；完整石墙后可获得全掩护，门洞本身没有掩护。 |\n| 水槽 | 南门以北 25 尺、偏西 20 尺，长 15 尺、高 3 尺；合适方向提供半身掩护，不等于免疫范围伤害。 |\n| 退路 | 南门始终可退回矮坡；北门、东缺口均可出院。西石屋能隔开视线，适合重新组织，不能无条件挡住从门口投进的法术。 |\n\n玩家从侧面潜入、飞越或先遣侦察，按真实路线调整开战位置。敌人只根据察觉到的事情行动，不会因为主持知道信在谁身上就精准围住那人。掩护和法术区域依 2024 原文及实际起点裁定，不把示意图上的石墙当作万能护盾。\n\n## 场景三：许照到底肯不肯放行\n\n许照可隔着门洞喊话，也可以派弓手接过去看信。不要求全队站进一个火球范围才能开始社交场景。给玩家安排队形与退路的机会。\n\n他对前来说明事情的旅人起初为 Indifferent。明确满足下列愿意接受的条件就直接谈成；对犹豫的要求，用 2024 Influence，默认 DC 为 15 或 Mage 的智力属性值，取较高者，按当前态度处理优劣势。同一说辞失败后不轮流重掷；新证据或不同条件可以重新谈。交战后是否愿意停手，按下面的人物动机判断。\n\n他的开场白：“信可以过去，人也可以过去。可若是请人来破我师门的阵，这就不是送信，是递刀。”\n\n玩家问他究竟听谁说的，他支吾着承认只看到“勘阵”二字。感知（洞悉）DC 12 能判断他在意的是猜错丢脸；失败时也可从弓手先前的对话、他反复说“按规矩”看出这个谈判方向。不要要求玩家猜一个主持心中的关键词。\n\n### 三个确实能谈成的条件\n\n**把事情核实清楚。** 出示真实公函，说明所请人手自愿决定去不去，并允许许照留下一份相同内容的抄本。再给他一个不必当众认错的说法：“你已查明这是修护与勘察，不是调兵令。”这些条件齐备，他放行，不必再掷一次骰否定已有的解决办法。小队不需要承诺今后永不参与破阵，也不替沈砚签下终身中立誓约。\n\n**只许阅读，不愿留副本。** 公函内容与同行者说法一致时，用上述 Influence 的魅力（说服）检定。他若接受，就在簿上写“已验”；若拒绝，提出让弓手同行到栖霞观听沈砚确认。弓手正常走路、只见证这一封信，小队可接受或拒绝。许照不会在信已被沈砚听见后再宣布“不算送到”。\n\n**拿他的话反问他。** 玩家可提出“你先写清具体军令及扣信理由，我们把它一并带去”。许照没有禁止修护人员通信的明确命令；让他承认仅查这封信的性质，而不是扣住所有人，有合理论据时用上述 Influence 的魅力（说服）检定。失败意味着他仍要查信，不会触发无预警攻击。\n\n若小队采用冒名、换信或藏副本，按其实际做法使用欺瞒、巧手与法术规则；有机会接触验证才会识破。许照的卡没有读心、自动识谎或看穿一切幻象。合理欺骗成功后就让小队通过，后果从将来实际发现的证据发展。\n\n### 杜衡的立场\n\n杜衡使用 Berserker 原卡，是受雇看守驿站的武人。他把话说得很直：“我收的是看门的钱，不是杀送信人的钱。”\n\n他不愿替许照烧死行人。玩家公开信函并指出这不是调兵令，他会催许照谈成；不用额外收买。许照若命令攻击已放下武器的人，杜衡拒绝。让杜衡直接替小队砍许照则是另一回事，他没有这种自动倒戈承诺。\n\n玩家只想转身离开时，许照会喝问两句，但不自动开战。除非此前已有具体冲突，他不知道小队是在撤回城里还是改走别路。\n\n## 想打，也有一场值得认真对待的斗法\n\n许照为 Mage，杜衡为 Berserker，两名弓手为 Scout。全部在场共 2,950 XP；四名 6 级角色的低、中、高预算分别为 2,400、4,000、5,600 XP。此处位于低与中之间，但 Mage 的范围伤害与集中攻击仍可能迅速击倒角色；这不是已测试的安全保证。\n\n**只加入真正赶到现场的敌人。** 茶棚的弓手若仍在 300 尺外，需正常移动赶来；送簿去了、已被俘或已谈成离开，就不参战。不要在院里补出第三名弓手凑满预算。\n\n### 许照的本事与记账\n\n完整复用 SRD 5.2.1 p.305 的 Mage。袖中火符、冰气和飞行只是外观，不更改原能力。\n\n- **Arcane Burst：** 原卡每个动作三次攻击，最远 120 尺；它是卡上的攻击能力，不是施法。Counterspell 不能反制它，Silence 也不会自动关闭它。\n- **Fireball：** 每日两次，按四环施放，9d6 火焰，150 尺内选点、半径 20 尺。这解释了为什么要让玩家提前看到范围威胁，而不是在小门洞里惊喜开打。\n- **Cone of Cold：** 每日一次，60 尺锥形、8d8 寒冷；记得是否已在本日用掉，不会因进入正式战斗刷新。\n- **Protective Magic：** 每日三次的反应次数，由 Counterspell 与 Shield 共享；仍然只有正常的反应时机与次数。新版 Counterspell 是目标进行体质豁免，不是照旧版按法术环级自动成功。\n- **其余能力：** Invisibility、Fly、Misty Step 及各自次数照原卡；飞行和隐形的专注照各自法术。没有额外的迷雾、沉默、束缚符或第二阶段。\n\n上列不是完整战斗卡；法术 DC、攻击、豁免、成分、伤害与持续时间均以原卡和原文为准。玩家使用 Counterspell、Dispel Magic、Silence、掩护、分散或有效控制时诚实结算，许照不会因剧情重要而获得额外免疫。\n\n### 他怎样打\n\n许照想逼退来人、截信并保住自己，不会为了表现厉害把杜衡与弓手一起炸死。小队分散、有同伴贴近或靠完整石墙掩护时，他会移动、选攻击或防御；没有合适区域就不会强行用范围法术。若玩家密集冲入敞院，且没有盟友在区域内，已获预警的 Fireball 或 Cone of Cold 可以正常使用，不偷偷降低伤害。\n\n杜衡守住通往许照的直接路线，但允许合理停战。他受伤达到 Bloodied 时照原卡应用 Bloodied Frenzy；不能拿旧版 Reckless 代替。弓手以掩护和射击为主，既不自带狙击读心，也没有抓住送信人就自动焚毁信件的能力。\n\n许照进入 Bloodied、杜衡退出战斗，或两名弓手都失去战斗意愿时，他会主动提出：“信我验过了，今日到此为止。”这是人物态度变化，不抹去已造成的伤害，也不强迫玩家接受。\n\n若玩家同意停手，双方按各自位置停战；许照允许带走伤员与物品，不索要超出原争执的新条件。若玩家继续进攻，他用原有能力撤退或自卫，已用次数不恢复。\n\n### 撤退与被俘\n\n许照不离开驿站追捕已经撤走、也不再攻击的队伍；他认为守住驿路就算尽责。杜衡与弓手也不进行跨山追杀。玩家穿过北门逃脱后可以继续传信；回到南侧则能改走山脊。正在互相攻击时照正常轮次、速度和作用范围处理，不能用一句“我撤了”跳出战斗。\n\n敌方接受明确投降；优先停火和看管活人，不继续攻击倒地者。但已经由正常伤害造成的濒死、死亡仍用 D&D 规则，不倒改成全员安全晕倒。\n\n投降者暂留驿内西石屋，武器收在门外箱中，两名弓手中仍在场者轮班照看；不存在封法牢。许照读完信后愿意以留下真实抄本、承认已经查验为条件放人并还物品。玩家也可用正常交涉、潜逃或法术处理。若此前已有伤亡或双方不愿和解，就按实际情况发展，不让所有敌人突然忘事。\n\n## 法术和巧办法该怎样奏效\n\n**Sending 可以在出发前完成本回目标。** 2024 版允许联系施法者见过的生物，或由见过该生物的人向施法者描述的生物；程简确实见过沈砚。按原文组织不超过 25 个词的消息，同位面正常送达，沈砚可立即回复。中文桌用彼此约定的清晰词数读法，不靠标点争论扣掉成功。消息至少包含“西岐程简请联系修护与勘察人手，请回复接济处”。既已送达，就进入收尾，不再追加“还必须护送一件巨大器物”的门槛。\n\n**分开传信同样有效。** 一人吸引注意、另一人绕路；几人各记内容；抄两份从不同路径送出；都按真实行动处理。许照截下一张纸不会清空所有人的记忆，也不会自动拦住已经走远的副本。\n\n**其他法术看各自条件。** 隐形要处理声音与其他感官；飞行要处理距离、持续时间和实际视野；幻象看触碰、调查等原文条件。信可由有能力完成投递的熟悉生物或其他合法方式携带。Animal Messenger 等若要求施法者到过目的地，不能把“听过程简描述”当成已经去过；能满足要求就照常生效。\n\n玩家巧解使本回缩短时，把余下时间用在西岐安顿、角色私事或提前结束一晚。章节奖励由完成目标获得，不取决于有没有把许照的 HP 打到零。\n\n## 场景四：栖霞观的回复\n\n栖霞观是山腰一座小观，前院有水井与晒着的木尺，东厢可以坐下来写信。沈砚本人没有躲进新的迷宫，也不先要求解决另一件大事才肯听来意。\n\n> 沈砚看完，先问谁负责付工钱，接着才问城外是什么异术。\n>\n> “会修屋的不一定会破阵，先说哪儿漏风。”\n>\n> 他把纸转过来，又补了一行：“肯来的人，我替你们联系；不肯来的，不拉着去。”\n\n若通过 Sending 联系，将同一态度浓缩为回复：“收到。我联系愿来的修护和勘察人手，回消息给程简。具体人数与路途随后商议。”这就是已收到请求的明确反馈。\n\n沈砚能做的事情写实而具体：联系两名修护熟手，让他们先在城内接济处报到；另向一位愿意勘看异术威胁的同行递话。安排需要几天，不承诺立即有大批仙人援军。有关人员的工作作为后续可用的帮助，不把沈砚变成购买阵法答案的万能商店。\n\n到观的玩家可以吃一顿热饭、讲路上的遭遇，按实际条件休息。若有弓手同行见证，他听到与公函一致的答复后自行回去，不新增返程战斗。许照已经谈妥或小队选过绕路时，回程沿该结果叙述即可。\n\n### 成功、部分成功和拒绝\n\n| 结果 | 接着发生什么 |\n| --- | --- |\n| 请求已传到沈砚 | 支付全队 400 GP；联系修护与勘察的工作开始。方法是步行、交涉、潜行、法术或别的合法解法都一样。 |\n| 信被扣，但副本或口述已到 | 目标完成，正常支付。许照手上留着一份普通公函，未来是否利用它取决于已发生的互动。 |\n| 小队折返，请求尚未送达 | 不先发成功报酬；程简会允许重新准备。已给的两瓶药水无需退还。若仍想完成，可下一日换路或找合法通信办法继续，不强迫重演同一战斗。 |\n| 明确放弃这趟差事 | 程简另派人，不扣旧任务报酬、不强迫角色接单。另一条线后来带回修护请求，却未联系到勘阵同行，第三幕从找人开始。 |\n| 因伤亡只能结束这一幕 | 先处理角色与同伴的后果。消息是否到达据实际结果决定；后续仍能围绕失联者、旧友与新的线索推进。 |\n\n本回收束、进入第三幕时全队升到 7 级，仍采用章节升级，不再叠加敌人 XP 升级。如果大家选择折返回城后继续做这封信的差事，先完成或明确结束这条任务，再进入幕间升级。\n\n## 幕间：那封回信里多了一块木片\n\n让战事经过一段时间，再听到更大的阵战消息；不是要求本回投递后翌日立刻出现十绝阵。子牙上昆仑、获榜与安排封神台发生在原著第 37 回前后的主线中，不由本封公函代替，也不靠玩家背着封神榜出城。\n\n送信成功时，几日后沈砚的回信会先送到，告知修护人手已联系。到第三幕开场时，由那位勘察同行带来的损坏木片、幸存者描述和一处待查的地势，引出“十阵问路”。让玩家听到：“有些地方越是急着冲进去，越弄不明白该救谁、该断哪一处。”\n\n鲁青获救则能认出木片上的修护痕迹，并愿意修理行动需要的普通器具；查到的传令路线则让小队熟悉青石驿通往后方的一段岔路，后续接近勘察区域时能用上。真正的阵内情报仍在第三幕取得。这些帮助保留各自用途，不相互替代，更不变成自动破阵券。\n\n若本回没传到消息，或上一回情报与救人都未完成，第三幕从接济处收到另一名信使失联的消息开始。救人、找见证者与查明危险仍是可走的入口。不要宣布“因为你们漏了前两项，所以没有第三幕”。\n\n沈砚是否顺利联系到人、许照以后是熟面孔还是对头，都由本回实际结果延续；大人物不在结尾飞来替小队打赢青石驿。\n\n## 主持人收尾只记五件事\n\n1. 求援是否送达，通过什么方式。\n2. 鲁青与传令表的帮助是否仍可用。\n3. 许照、杜衡及两名弓手各自的去向与态度。\n4. 小队是否留下值得日后回应的承诺，只记实际承诺。\n5. 第三幕从归来的勘察者还是失联的信使切入。\n\n本回没有新的仙门声望资源、法宝制造系统或承诺点数。场景 DC 为主持建议；规则已有明确程序时依规则。未进行测试、模拟或试玩。\n\n## 制作备忘与规则入口\n\n程简、沈砚、许照、杜衡、青石驿与这封信均为本团编排。大背景沿用 [六幕主线](01_背景与六幕主线.md) 中的西岐守城与后续十绝阵阶段，不把这次送信说成原著佚事。\n\n规则核查记录见 [第二幕规则备忘](../research/ACT2_RULE_NOTES.md)。本回采用 [SRD 5.2.1](https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf) 的 Mage p.305、Berserker p.263、Scout p.322，以及既有 Potion of Healing p.99。预算见 pp.202～203。\n\n线上原文入口：[2024 Mage](https://www.dndbeyond.com/monsters/4831023-mage)、[2024 法术](https://www.dndbeyond.com/sources/dnd/br-2024/spell-descriptions)、[Sending](https://www.dndbeyond.com/spells/2619015-sending)。完整授权说明见 [封神团规则基线](../../research/CN_RULE_BASELINE.md)。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n许照要能自保的查验记录，沈砚想掌握主动；原传讯、绕行与合法送达全有效。成年人可自愿友情或非露骨暧昧，信息与工作报酬不绑定关系，私人内容只离线手工分发。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n公副本或已退80GP更正的账据可走independentRelay：自愿急递半小时送真实求援、带回沈砚明确回复，不假称小队亲至观中；沈砚须实际能回话。买断专报可ledgerCorrect退80GP，已调查半小时、否则一小时。原查信、山脊、合法传讯与400GP照常。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 5,
+      "title": "第五回：风里带回的消息",
+      "level": 7,
+      "scene": "B006",
+      "source": "08_第五回_风里带回的消息.md",
+      "text": "# 第五回：风里带回的消息\n\n四名 7 级角色 · 约 2～3 小时，也可与入阵连玩 · v0.7 未测试草案。\n\n这回让小队决定怎样破风吼阵。先见人、看现场、找帮手；顺序由玩家选择，不要求清完三项清单才准入阵。需要的原卡只有 Gargoyle，以及真有必要记录行动时使用的 Scout、Commoner；完整出处见 [第三幕规则备忘](../research/ACT3_RULE_NOTES.md)。\n\n## 本幕到底交给玩家什么\n\n十绝阵已经成为西岐城外的新威胁。其他阵各有人应对，**风吼阵及它堵住的北口道路由小队解决**。任务完成后，这座阵就真的结束，不会再揭露“你们只拆了一个没用的外壳”。\n\n第五回弄清入口、守阵者与可行办法，第六回落实行动。总委托报酬为全队 600 GP，撤阵或打开安全通路后结算；找人、看阵不再各付一笔相同报酬。另有一条标准 Rope of Climbing 在本回交给小队使用并保留。\n\n### 用前面的结果开场\n\n| 已发生的事 | 这回怎样开始 |\n| --- | --- |\n| 求援送到沈砚 | 他联系的勘路同伴顾行舟带着损坏木片到接济处。入口位置、失联者姓名与大致见闻，开场就能问清 |\n| 求援未送到或小队放弃送信 | 西岐另一名车工带来信使冯迟失联的消息，最后见到他在回风石场。顾行舟因当地风阵传闻自行到场勘察，如今在阵外白石亭；车工知道去亭子的路 |\n| 鲁青和帮手已回城 | 鲁青愿意看木片、修普通梯板；她不懂所有仙术，不能一看木头便给出整座阵的答案 |\n| 鲁青或帮手仍被扣，而且还活着 | 尚被扣的人已被调到回风石场做台架。他们与冯迟一起等待离开的机会；本回可以接回，不要求另开支线。已死或另有明确去向的人不凭空出现 |\n| 青石驿传令路线已查清 | 送簿岔路通向白石亭一侧，小队认识这段路；去亭子不用绕到敌营前问路。未查到时由车工带路，多花半小时即可 |\n| 许照愿意与小队往来 | 可以托他看一次报告。他指出“会动、会选目标的风，要先当对手看，别只找一只风箱”，不跟队代打，也不凭空知道董全的全部底细 |\n\n过去的成败改变便利与关系，不决定玩家还有没有资格进入主线。\n\n## 开场：这次不是去替神仙试刀\n\n> 程简桌上摆着一截带着灰尘的栏木。木头裂了，绳孔还在，旁边是一张被改了三遍的草图。\n>\n> “这回来的是风。能拐弯，还知道堵路。”\n>\n> 他把另一张军中文书压在图旁：“但上头说了，能谈便谈，能绕便绕。没有哪条军令写着非得先死个人。”\n\n程简经手转交姜子牙授权的本路撤离条件：**董全返还被扣平民与征用物，拆旗撤出北口道路；小队可护送他和幸存从者携带私人物件到东山口，当日该路西岐军不追击。** 这是具体路段的通行保证，不是承诺全线停战，也不是程简自己有权号令全军。第六回若换了一天，军中更新当日文书即可，不追加筹码任务。\n\n喜欢见名人的桌，可以把递文书改成姜子牙当面交代。他会回答三件事：路通了确实有用；对方若依约退阵就守约放行；小队提出的具体方法由小队做主。他不知道每一只风灵想什么，不把答案念完才放玩家出门。\n\n### 三处地方，先去哪里都可以\n\n- **顾行舟的报告。** 求援成功时在城内，失败时到白石亭见他。能得到目击细节、翻译帮助和攀云绳。\n- **回风石场。** 冯迟和可能尚被扣的熟人在这里，距白石亭约半小时。能救人，取到他画的板台图与抄下的约定。\n- **白石亭与阵外观察处。** 可直接看到北口阵场的道路和板台；亭子到真正阵场约半小时。能亲自确认入口、旗号与守阵者的行为。\n\n回风石场是阵外的工作地点；第六回北口阵场是另一处旧采石场，两者相隔约一小时路程。两处不要画成一张混战地图。白石亭位于战区外，供行人歇脚，能安排正常短休；长休可回城或栖霞观，时间按实际赶路计算。\n\n## 一、顾行舟：我看见的，和我猜的\n\n顾行舟用 Scout 原卡。其可选的一种额外语言选为 Primordial，能与风灵和石像鬼交流；四种方言可以互通。他的这项知识来自学习，不是给 NPC 临时补一项万能能力。\n\n他没有负伤到无法说话，也没有关键时刻忽然失忆。让他把事实与猜想分别说清：\n\n| 他确实看见或听见 | 目前不能据此断定 |\n| --- | --- |\n| 板台边有执黑幡的修者；幡起以后，两个风中轮廓各守一边 | 幡布本身就是无限力量的法宝 |\n| 两个轮廓会转向、追近处的人，也会停下来听呼喊 | 整片空地每一步都在受到同样的伤害 |\n| 风中传来的话提到“守这一场”“北面留路”；他懂这些话 | 董全能不经同意永远控制它们 |\n| 栏木被冲击震裂，尘沙和碎片从它旁边飞过 | 第一个进去的人必须被献祭，后面才安全 |\n\n顾行舟的笑话：“我学这门话，本来想问山里的石头哪边好走。如今石头先问我带了多少钱。”\n\n两种流言已经在城外传开：一派说这阵靠固定机关，一派说风会闻见人的气息、进谁都一样。玩家不必选一个信。实际危险来自两只会自主行动的风灵和一位施法者；提前说清这一点，玩家才能据此侦察和准备。\n\n鲁青若在，或角色花时间查看木片，可以直接看出它来自普通栏杆，绳孔没有锁扣。智力（调查）DC 13 可进一步辨认拆装方向，在画板台时标出系绳侧；失败也能从冯迟的图或到现场观察得到相同关键信息。不把“找对一个技能”设为破阵门票。\n\n### 顾行舟能帮多少\n\n他愿意跟到白石亭，或在明确停战的阵门外翻译对话；不会自愿站在风灵中间替玩家吸收攻击。小队若自己懂 Primordial 或有合适语言法术，可直接谈。他进入危险区域时按原卡和真实位置行动，不提供隔着整座山谷的免费传话。\n\nComprehend Languages 能帮助听懂，不能自动让对方听懂回答。Tongues、懂对应语言的同伴与双方已明白的图画手势，按各自实际能力处理。复杂的停战条件不能靠“我挥挥手”自动完整传达。\n\n### 一条值得拿出来用的绳\n\n顾行舟拿出沈砚为勘路准备的 **Rope of Climbing**，当地叫“攀云绳”。沈砚事先让他交给真正需要入险接人的人，因此本回见面即可把绳交给小队，作为团队物品保留；不用先欠一笔神秘人情债。只有这一条，第六回不再重复发。\n\n这是标准 Uncommon 奇物，不需共鸣，长度 60 尺、承重 3,000 磅。持一端用 Magic 动作指挥另一端移动，首次及之后每次使用者回合开始各移动 10 尺，能按条目系牢、解开、打结等。打结后长 50 尺，借绳攀爬的属性检定有优势。其余限制、AC 与 HP 见 SRD p.242。\n\n它能把绳头送上台架，不会瞬间把所有人拉上去，不会捆住任意敌人，也不是原著定风珠。先让玩家试着命令它系上亭柱、打结，再讨论行动，通常比念一段长说明容易记。\n\n## 二、回风石场：两个石头讨工钱\n\n冯迟来取板台资料，被两只石像鬼扣住。他把自己看到的旗号约定也抄了下来，准备带回去；石像鬼觉得留着送信人能逼人把欠下的看守钱结清。\n\n这两只 Gargoyle 外号“脊角”和“缺耳”，只懂 Primordial（Terran）。外号可由顾行舟翻译；它们并不会为了说笑突然都会 Common。它们对人没多少同情，但很在乎拿到好处、保住自己，不愿为董全无限加班。\n\n它们要的是 **60 GP，付一次便放走所有在场被扣的人，并退出这次守阵**。两只事先已分好了钱，交给其中一只就算结清，不在玩家付款后突然一只再要 60。小队也可以通过翻译提出：现在放人、放弃守阵，允许两只带走自己的普通物件，退到远离两座场地的山坡；小队不追猎它们。这个承诺只约束玩家自己，不冒用军中文书保证全线安全。两只对不付钱的办法犹豫，按 Influence 的魅力（说服）检定与当前态度处理，默认 DC 为 15 或智力属性值中较高者。\n\n两只起初对谈交易者为 Indifferent。玩家已明确打算赶走或伤害它们时才变 Hostile；拿走自己人不代表必须接受勒索。不同办法带来真实结果，不因未付钱就强迫战斗。\n\n### 一眼能画的石场\n\n工地东西宽 90 尺、南北长 60 尺，四周开放，没有围墙。\n\n```text\n北：缓坡通上层台架，宽10尺，长40尺\n           ┌──────────────┐\n           │ 上层20×20尺  │  冯迟与尚被扣的工匠\n           │ 高出地面20尺 │  内有可系绳的完好木梁\n           └──────────────┘\n            缺耳在台架东侧\n\n    西侧石料堆       脊角在空地       东侧旧工棚\n    高5尺可作掩护                     木梯放在棚内\n\n南：来路与集合处，再走约半小时到白石亭\n```\n\n台架是小块石台与普通木架组成的工作平台；从地面到上面可走北缓坡，也能取工棚里的 20 尺木梯或用绳。台上木梁完好，能够承受本场景普通人员攀爬；不是玩家一系绳就断的暗雷。缓坡没有锁门，守卫只是会察觉直接下坡的人。\n\n玩家从南侧到工棚约 40 尺，工棚到台架脚约 20 尺；上层人员能隔空交谈。石料堆按实际遮挡提供半掩护或全掩护，不是满场难以移动的碎石地形。陡边确实有 20 尺落差，跌落按正常规则；北缓坡没有坠落危险。\n\n冯迟和普通工匠用 Commoner 卡，仅在确有危险时记先攻与伤势。他们能自己走路、爬合适的梯绳，不要求每名玩家各消耗一个回合“操作人质”。战斗中仍各用自己的移动和动作，别一次检定把所有人传送到集合处。\n\n### 不给钱，也不一定要打\n\n一部分人可以在南边谈话，让其他人带梯或绳接近台架；只要确实离开敌人视线、满足条件，就依 Hide 与正常察觉处理。也可以从北缓坡接人，借石料堆遮挡，或用正常能力引开守卫。飞行能跨过高度；隐形不自动消除声音，但这两只也没有看穿一切的感官。\n\n鲁青若在，会提醒同伴先把自己做的普通工具带上；若工具太多，可以留在工棚以后取，不为搬一箱锤子卡住撤离。被救的人最看重能离开，不会为了等“完美营救姿势”拒绝已经安全的出口。\n\n两只静止时确实像石兽，但新版 Gargoyle 没有 False Appearance。本场景开头它们正在活动，直接告诉玩家这是有生命的守卫；不能临时宣布没过某个检定就永远看不出。\n\n### 动手时只放这两只\n\n两只 Gargoyle 合计 900 XP，低于四名 7 级角色低预算 3,000；这是可以迅速处理的外围阻碍，不是必须榨干资源的主战。\n\n它们利用飞行与 Flyby 攻击近处威胁，想逼玩家退开、保住勒索机会；不追杀已经跑远的工匠。Flyby 只在按卡飞离触及时避免借机攻击，不等于它们移动和行动都不受任何限制。\n\n任一只进入 Bloodied，或所有被扣的人都已脱离它们能控制的位置时，另一只会叫着撤走。接受停手后双方真停手；玩家继续追杀，就继续正常行动。它们不会因少付工钱而凭空变身、召来第三只或刷新 HP。\n\n没谈成且活着逃走的石像鬼可能退到主阵，加入第六回；已经明确约定退出、被俘或被杀的就不出现。保留真实伤势与后续是否有时间休息的事实，不在转换地图时自动恢复。\n\n### 冯迟手里有什么\n\n他最想说的是：“我不是没送信。我送到一半，石头嫌我工钱没送到。”\n\n安全下来后，他交出板台图与 Common 字抄件：**黑幡升着，风灵守这一场；黑幡降下，这一场即结束，不论是谁降幡。双方约定北面留出口，散场者不受追杀。** 他看到董全和风灵用已经说好的手势确认过，明白这是一场有边界的约战。\n\n这份抄件没有控制魔法。旗降要让风灵实际看见，风灵按自己的行动离开；它们不会被纸上的字直接驱散。董全也要遵守这场约定，不能让玩家成功降幡后再补一个必须死斗的阶段。\n\n图上板台高 10 尺，北侧有台阶，挂幡绳扣在南缘；普通挂扣可以接近后操作，台后与石墙之间也有路。详细尺寸照第六回地图。冯迟不是唯一知道这些事的人；即使资料毁了、没救到他或大家跳过石场，阵外仍能看见这些布局，也能直接问风灵或董全。\n\n## 三、白石亭：真正看一眼再做决定\n\n白石亭不在法术范围内。沿亭外小路前行，到北口阵场的外围观察点，就能看见第六回标出的西门、南缺口、北出口与台上的黑幡。正常观察不要求先跨进风灵的攻击范围。\n\n主持人先向玩家展示第六回地图的地形与看得见的守卫位置，再说明距离。尘土、风声和飞动碎片提供气氛；没有隐藏的全谷持续伤害。两只风灵的具体攻击、移动、免疫与抗性照 Air Elemental 原卡，不能因为小说说得厉害而叠加无豁免风刃。\n\n至少交给玩家三个可用事实：\n\n1. **危险会移动。** 两个风中轮廓各有位置，追人要移动，攻人要用动作；贴近其中一个不是同时触发整座山谷。\n2. **通路不只有门。** 南侧缺口、北道和板台台阶都真实存在；石墙挡视线，风灵却能从小缝绕进来。墙能改变路线，不保证永远隔绝所有敌人。\n3. **守阵也有约定。** 在阵外喊话、由顾行舟翻译，董全允许一次明确的观阵交谈。玩家问及散场条件时，他公开承认降幡的约定；风灵也能确认北路必须保持可撤离。\n\n这里有一段真正停战的说话时间，不因主持人想展示伤害突然偷袭。若玩家借观阵主动动手，按实际位置掷先攻，之后的态度由发生的事决定。观察不提供免费攻击轮，也不要求玩家承诺从此不与商军为敌。\n\n### 风灵想走，董全为什么还摆阵\n\n风灵愿意履行已经答应的一场守备，不愿被当成永远不许回去的工具。董全为了同门和闻仲的情面而来，也在乎自己的约定。他愿意听一个能够交代人情、又不把同行耗死的退场办法。\n\n军中文书提供了实际退路，小队可以加上一句双方都能接受的公开说法：“此路约战已毕，各自收兵。”条件仍包括交还平民与征用物、拆旗撤路，不是用一句夸奖便使他服从任何要求。具体成交、风灵另行解除约定及战斗办法，接第六回。\n\n让玩家知道全部方向以后再选：交涉、接近幡扣、远程处理确实能看见的普通挂幡，或迎战守备都可以。不要把已经可用的飞行、语言或工具临时封掉。\n\n## 把计划说给同伴听\n\n回到亭子，用五分钟决定谁先做什么、以什么为成功、在哪里集合。可以拿 [玩家手札](10_第三幕_玩家手札.md) 写几句；没有准备点、优势点或必须累计几次成功的规则。\n\n| 拿到了什么 | 第六回具体能用的事 |\n| --- | --- |\n| 顾行舟的报告与翻译 | 辨认真实施法者、向风灵提出能被听懂的条件；不会把风声全当成无差别陷阱 |\n| 冯迟的板台图 | 从一开始知道普通系绳扣与北台阶的位置，可以计划接近与撤离 |\n| 石像鬼已退出 | 主阵确实少掉对应敌人，不补新的怪来凑预算 |\n| 攀云绳、鲁青准备的普通梯板 | 依法操作和攀爬；好工具能让简单行动直接可行，不额外送免疫击退 |\n| 本路撤离文书 | 有可兑现的停战条件，董全不必拿性命赌一句空口保证 |\n\n若第五回的找人、侦察和计划已经有了结果，队伍回到可安顿处后升至 **8 级**，接 [第六回《风吼阵前》](09_第六回_风吼阵前.md)。可以把两回安排在两个晚上；若合玩，照正常规则完成休息和升级安排，不把升级当作战斗中即时回满所有资源的按钮。\n\n玩家若选择直接进阵，先给已能直接观察的事实，明确这条准备线已结束，按章进入 8 级阶段；不扣住升级逼他们做满三处。失联者仍需继续救，未取得的情报不凭空自动拥有。\n\n### 没救到人或暂时撤走\n\n冯迟和仍被扣的工匠留在石场，守卫用活人换钱，不在玩家一次交涉失败后立即处决。可以稍后回来，或在撤阵协议里要求一并交还。若敌人已离场而人还在，重新接人可以顺利完成，不刷新另一队看守。\n\n真的造成死亡，就记录死亡和同伴的反应，按 D&D 规则处理。战役继续，但不为了下一回需要地图就让死者突然活过来。\n\n## 本回收尾记录\n\n顾行舟在哪里、是否愿意继续翻译：____。攀云绳由谁携带：____。\n\n冯迟及以前未救工匠的去向：____。脊角和缺耳的去向、伤势与承诺：____。\n\n玩家准备采用的入阵办法与撤离集合处：____。\n\n## 制作备忘\n\n第43回观阵、第44回风吼阵说明、第45～46回借珠与破阵提供背景。顾行舟、冯迟、回风石场、语言翻译、降幡约定与撤离文书都是本团编排；不强制复演原著先行者死亡，不把攀云绳称为定风珠。人物和现成规则怎样接合，见 [原著备忘](../research/ACT3_STORY_NOTES.md) 与 [规则备忘](../research/ACT3_RULE_NOTES.md)。本回没有新增规则子系统，没有进行测试。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n顾行舟既希望结束扣人，也希望保留两边说话的资格。已取得报告、营救或观察仍按真实成果前进，不临时捏造线索为假。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n第二回未查委任可在此补做ledgerAudit，失败仍给副本。顾行舟有旧交和自利，不因此把原亲见报告改成假线索；完成报告、观察或营救任一原目标仍可推进。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 6,
+      "title": "第六回：风吼阵前",
+      "level": 8,
+      "scene": "B007",
+      "source": "09_第六回_风吼阵前.md",
+      "text": "# 第六回：风吼阵前\n\nv0.7 · 四名 8 级角色 · 主持人草案 · 约一晚，交涉与筹划可单独玩一晚。没有测试、模拟或试玩，不宣称平衡通过。\n\n前接 [第五回《风里带回的消息》](08_第五回_风里带回的消息.md)，收尾升至 9 级，进入东征。完整规则索引见 [第三幕规则备忘](../research/ACT3_RULE_NOTES.md)；准备时同时打开其中的三张完整敌卡。\n\n## 本回要做成什么\n\n**让风吼阵停止封住西岐的北口通路。** 玩家可以谈妥撤阵，依照阵中公开的约定降下黑幡，争取风灵退出，或者打败继续抵抗的守阵者。达成任一完整方案，风吼阵就在本团故事里被解决。随后运粮、接伤员的队伍确实能通过，这条路也能用于后来的东行集结；不再另派一位仙人完成“真正破阵”。\n\n这不是需要逐间清空的地城。先把看得见的布置、阵主愿意承担的条件、敌人的实际攻击方式交给玩家，再让他们选怎么行动。有人用一个好法术提前结束冲突，也算好好解决了一回。\n\n## 开场前，接回已有结果\n\n只需把第五回的几项事情放到桌边，不记分。\n\n| 已发生的事 | 这次实际带来的帮助 |\n| --- | --- |\n| 顾行舟愿意相助 | 他在阵外担任翻译，所用 Scout 原卡的第二语言为 Primordial。他可以把风灵的话转述出来，不进入战区代打。 |\n| 得到顾行舟的目击记录 | 玩家知道风灵是能说话、有攻击范围的生物；它们会主动近身，旋风只针对同空间的一个体型合适的目标。 |\n| 冯迟获救或已交出草图 | 直接给出板台、北台阶与南侧绳扣的位置；他听见过“黑幡落，此场便罢”的约定。 |\n| 石像鬼已经谈退、被杀、被俘或另有承诺 | 按已经发生的结果处理。本回最多出现第五回那两只，不补员、不恢复成两只全新守卫。 |\n| 鲁青已经获救 | 她可指认台阶、挂扣与普通木构，说明绕北路不必攀岩；这些也能从现场看见，不由她独占关键线索。 |\n| 许照仍友好且愿提供建议 | 他提醒：“先认清是谁在施法。会飞的未必听摇幡人的每一句话。”他不免费进阵清场。 |\n| 队伍已取得 Rope of Climbing | 本回继续使用同一条；不能在此再领一条。其具体规则见下文。 |\n\n没有上述成果，也可以开始本回。营地能看到板台和黑幡；向董全发起阵前交谈时，他愿意公开自己的约战条件。用眼睛、共同语言、法术或新的办法取得情报都成立。\n\n### 把权限与报酬讲清\n\n姜子牙已通过程简交付一份**仅限本条撤离路线**的授权：守阵者返还被扣平民和征用物后，玩家可护送董全与幸存从者，携带私人物件，撤至东山口；当日该路的西岐友军不追击这一行人。若第五回后隔了几日，先换成当天有效的凭据。\n\n程简负责转交和联络，不是凭自己的官职宣布全军停战。凭据不保证别处战线停火，也不要求玩家放弃伐纣；它给小队一个能够兑现的谈判条件。出发前把这些边界告诉玩家。\n\n本幕承诺的 **600 GP 为全队完成两回任务的总报酬**，在本回收尾结清；已经预支的部分扣除，不重复发放。沈砚提供的仙绳就是现有的 Rope of Climbing，不冒名定风珠，也没有额外控风能力。\n\n## 人物先有打算，再有数据卡\n\n### 董全：愿意出力，也想留下能回去的人\n\n董全完整采用 **Druid，CR 2 / 450 XP**。这张卡只用于本回的有限遭遇，不代表原著人物或整个截教的力量排名。\n\n他来这里是为同门和闻仲出力。挡过路、撑过场面、护住同伴撤走，已经能向自己交代；继续把借来的援手与被卷入的工匠留在阵前，未必更有意义。他仍然骄傲，也确实愿意迎战，但不愿为了别人一句“你不敢”就撕毁自己许过的约。\n\n先演一位讲究面子、把承诺当回事的对手。只要玩家没有正在攻击，他愿意停下听清一份具体提议。\n\n可用台词：\n\n> “要过此路，先把话说明白。你们是来夺我性命，还是来拆我的阵？”\n\n> “我可以收兵。你得让我带人走，也得让接路的人认你这句话。”\n\n> “记作‘约战已毕，双方收兵’。别替我写成什么叛门归顺，我没有答应。”\n\n他懂 Common、Druidic、Sylvan，不自动懂 Auran。与两位风灵的旧约曾由通晓双方语言的人讲清；之后靠已经约好的旗号与手势执行。今日若要增加复杂条件，仍需共同语言或翻译。\n\n### 两位风灵：长嘶与回响\n\n各用一张完整 **Air Elemental，CR 5 / 1,800 XP**。\n\n长嘶重视自己答应过的事，最不喜欢被当作没有判断力的风。回响已经厌倦守着同一堆石头，但不想背着同伴独自走。他们是自愿帮忙的生物，没有被黑幡拘魂，不是一个持续召唤法术的产物。\n\n两者都接受第五回可听来的同一套约定：\n\n1. 黑幡升起时，守住这处阵地，迎击进场挑战的人；不追出阵场去攻击已经退出、也停止进攻的人。三个出口是方便通行的路线，从别处确实离场也算退出。\n2. **黑幡降下或明显损毁，这一场约战结束，无论是谁办到。** 撤阵后不重新升旗续打这一场。\n3. 任何一位风灵都可以当面提出结束自己的援助；董全同意不强留。提出者用双臂展开、再指向北路的约定手势说明离意。\n\n第三条不会要求一位守阵者先被打掉多少 HP。玩家若能沟通，并答应不在他们撤离时追猎、留出北路，两位愿意一起提出结束援助。董全面对自己亲口答应过的事，会收阵。他可以不高兴，但不能突然宣布这条从未存在。\n\n若有人在已经讲妥的撤离过程中攻击，受袭者保留正常行动和自卫的意愿；这不是施加了 Charmed 或强制和平状态。受伤的生物也不会因协议瞬间恢复。\n\n### 石像鬼：有几个，就用几个\n\n最多两只 **Gargoyle，CR 2 / 450 XP**，来自第五回的回风石场。只有当它们确实从那里离开并选择投奔主阵，才会在这里出现；石场与本阵相隔约一小时，不凭叙事瞬移过来。\n\n照抄此前的去向、伤势和承诺。已谈妥退场的一只，不会因为本回需要敌人就反悔。仍在石场、被俘或死亡的，也不出现在这里。若尚未发生足够的恢复时间，保留剩余 HP；后来真的完成正常休息，才按规则恢复。\n\n它们肯留下，是相信这场约战有明确结束方式；降幡或董全撤阵时，它们同样离开。它们懂 Primordial（Terran），能与风灵交流，但不因此额外获得 Common。\n\n## 到场：先把能看见的东西说出来\n\n阵外西侧 200 尺有一处卸空的石料棚，程简安排的车工在那里接应。棚后有回营地的土路；棚内和营地都不是战场。玩家可以先休息、摆出普通装备、留下随行证人，再接近阵门。\n\n念给玩家：\n\n> 采石场里立着一面黑幡。幡下是木板搭起的高台，台上道人扶着一根藤杖，正盯着西边。两股风在场内转来转去，轮廓像披着碎布的高大人影，声音一会儿像刃口刮石，一会儿又像人在低声说话。南边石墙留着缺口；更远处有条平缓的路绕到台后。没有人站在出口上等着把退路堵死。\n\n场内扬尘、尖啸与碎布提供气氛，**不会自行造成伤害、Deafened、Heavily Obscured 或额外的困难地形**。真正的攻击和效果来自所列生物的动作与法术。玩家可以看见板台、黑幡、各入口以及实际出现的守卫。\n\n从西门外说要观阵或谈话，董全会出来回答，并示意风灵先不攻击。他公开说明“降幡便结束这一场”，也会指一指台上绳扣。他以为自己能守住，不需要秘密改规则才能有面子。\n\n若玩家直接进攻，照正常先攻、攻击与法术处理，不先强塞一段无法打断的讲话。关键约定可以事先由证人、营地口信或阵前观察提供。\n\n## 一张能够直接画的地图\n\n以下以西南角为 `(0,0)`，向东为 x、向北为 y，单位英尺；用 5 尺方格即可。可活动的采石地约 **140 × 120 尺**，边缘是普通坡地与低矮堆料，没有包围全场的隐形墙。\n\n| 位置 | 尺寸与坐标 | 对行动有什么影响 |\n| --- | --- | --- |\n| 西门 | 西边 `(0,60)`，宽 10 尺 | 最直接的公开入口。门外向西 200 尺是接应石棚。 |\n| 南缺口 | 南边 `(30,0)`，宽 10 尺 | 能沿南墙背面靠近，不必从风灵正前方走。 |\n| 北路 | 北边 `(95,120)`，宽 10 尺 | 一条平缓土路绕到场后；无需攀岩或跳崖。从西门外沿场外绕至北路约走 220 尺。 |\n| 石墙 A | 从 `(30,40)` 到 `(70,40)` | 高 10 尺、厚约 1 尺的实墙；挡住相应视线与直线路径，可绕两端。 |\n| 石墙 B | 从 `(70,70)` 到 `(70,110)` | 同样高 10 尺、厚约 1 尺；从西侧接近台后可借它遮挡。 |\n| 板台 | `x90～110，y80～100` | 20 × 20 尺，高 10 尺；有立柱与横梁，可作为绳索固定处。 |\n| 北台阶 | `x90～100，y100～120` | 长 20 尺、宽 10 尺，升到台面。普通台阶，不加困难地形。 |\n| 幡杆 | 台上 `(100,90)` | 高出地面约 20 尺，普通小黑布幡，宽约 2 尺、长约 3 尺；可以从多方向看见。 |\n| 挂幡绳扣 | 台上南缘 `(100,80)`，台面以上约 4 尺 | 幡用穿过杆顶环的普通细绳升起，绳尾固定于此；到得着就能用 Utilize 解扣降幡。 |\n| 两堆碎石 | 中心约 `(25,65)` 与 `(120,55)`，各占 10 × 10 尺、高 3 尺 | 对实际被挡住的攻击提供 Half Cover；可绕过，不挡整条路。 |\n\n默认位置：董全站在台上 `(100,90)`；长嘶在 `(50,60)`，回响在 `(95,60)`。风灵各占正常 Large 生物空间，可使用本来的飞行移动。若石像鬼在场，它们分别停在石墙 B 两端附近；它们的姿态像石兽，但仍能被观察，不具有旧版 False Appearance。\n\n只有董全在板台时，台面并不满。他会试着拦靠近绳扣的人，但没有“站在台上就封锁所有互动”的能力。敌我位置变化、掩护、视线与够不够得着，按实际移动后的局面处理。\n\n北路外沿与场内主体都是平地。Whirlwind 不会把人直接卷入未预告的百丈深渊；若真从 10 尺高板台跌下，才按普通坠落规则处理这 10 尺。\n\n### 三条清楚的接近办法\n\n- **西门正入。** 路最短，便于喊话、让对手看见撤离凭据，也最容易被两位风灵注意。碎石可以在确实挡住攻击时提供掩护。\n- **南侧借墙。** 从南缺口到墙 A 后，再选择绕墙东端接近板台南面。不要因为玩家选择这一条就让守卫提前知道；是否隐藏、是否被发现照 Hide、视线与察觉的正常规则。\n- **绕北登台。** 从场外平缓北路走到台阶，也可借石墙 B 接近台的西面，用绳索、攀爬、飞行或传送上台。绕路能真实改变接触顺序，不额外生成一道只在这条路出现的封印。\n\n这三条是例子。玩家从空中、东侧空地或自己想到的路线行动，只处理那里实际有的障碍。\n\n## 三种完整的解决办法\n\n### 一：谈一份能执行的撤阵约定\n\n董全愿意接受下面这组条件；对方满足之后，他直接同意，不需要再连过三次劝说检定。\n\n1. 玩家出示当天有效的授权，并实际护送董全及愿走的幸存从者到东山口；这一行人能带走自己的衣物、普通装备及私人物件。玩家保证自己不追击，友军保证限定路线当日不追击。\n2. 董全放还自己一方仍扣着的平民，返还这一线尚存的征用物，降幡撤去封锁，此后不回到这条路重新摆阵。\n3. 双方公开留下“此路约战已毕，双方收兵”的记录。不强迫他诋毁师门、宣布归顺，或者替尚在别处交战的所有同门投降。\n\n玩家可以讨价还价，例如亲自点清征用物、要求俘虏先到安全处，或不让武装从者夹带赃物。合理的执行顺序不会使他突然拒绝全部条件。若石场还有被扣者，兑现放人要真的去接，或由有能力联络的人安排交接；凭一句“我们已经同意”不会使失踪者瞬间来到营地。\n\n这是撤离协议，不是赦免一切争议。玩家若认定董全必须受审，也可以提出新的条件；他没有义务同意。用 Influence 的意愿、态度与检定规则处理有争议的提议；已经明确不愿接受的“杀光你同门才放你走”，不会因掷出高点数就强制生效。\n\n若队伍不愿护送，只愿保证自己不追，他会要求看到由友军接替护送的具体安排；接应点有联络人，可以当场去安排。不要把这变成新的整回跑腿任务。\n\n撤离办完后，路就开放。董全仍可以是有分歧的人，却欠玩家一次说话算数的人情。\n\n### 二：依约取幡，或请风灵撤出\n\n先确保玩家知道：黑幡是这一场双方约定的结束信号。它不会控制其他风、解除其他阵，也不对不知此约的生物产生效果。\n\n**操作挂扣。** 角色能够触及台上绳扣时，用一个 Utilize 动作解扣并放下黑幡；挂扣没有锁，熟悉后无需属性检定。通常在扣旁 5 尺内即可；地面上的角色需先解决 14 尺高的触及问题。符合条目限制的 Mage Hand 等能力也可以操作这个普通小挂扣；不因为玩家用了法术就临时加密。\n\n**破坏黑幡。** 这块普通 Small 脆弱布幡采用 **AC 11、3 HP**，免疫毒素和心灵伤害。攻击或法术必须能合法指定物件，射程与掩护照实计算。细绳、小幡、木杆不是同一个目标，不把命中附近的地面也算取幡。玩家可以提出剪绳、取幡或其他合理方式，依据普通物件与动作处理。无需为了守住剧情给布加伤害阈值。\n\n**何时停手。** 幡被放下、取走或明显损毁后，能亲眼看见这一事实的风灵，在自己的下一回合停止主动攻击，沿北路或空中离开。它们仍占空间、保有 HP 和状态，可能采用 Disengage 或其他正常行动脱身；不会瞬间消失，也没有脱离攻击的特殊豁免。视线被实墙遮住时，可由能交流的人告知，或由它移动到能核实的位置；不要把它写成永远拒绝回头看。\n\n董全发现幡落也承认这一场结束。他可以抱怨队伍取巧，但不会重新绑一块布启动隐藏第二阶段。石像鬼若在场，接受同样的结束安排。只有玩家在停手后继续攻击，或把撤离路线堵死又拒绝解释，才可能因新冲突恢复正常自卫。\n\n**直接沟通。** 会 Primordial 任一方言的人，或能使用适当法术的人，可以在阵前和风灵提出解除援助。顾行舟可在安全的门外翻译；如果听说条件后风灵愿意靠近说话，按它们自己的移动来到能听清的位置，不替玩家增加传声法术。\n\n长嘶和回响要的是一条不被追猎的退路，以及同伴一起离开的保证，不要求献血、交魔法武器或削减能力。双方谈清、北路确实未被敌意阻拦后，它们向董全作出约定手势；他接受并降幡。这个结果与玩家亲手取幡一样，完整结束本阵。\n\nComprehend Languages 可以让使用者理解它们的话，却不能自动让风灵听懂使用者的回答。Tongues、真正通晓语言的同伴和双方看得懂的简单手势各有实际用途；复杂撤离条件要确实说明白，不用“翻译检定失败”凭空改成血战。\n\n### 三：交锋并使守阵者失去继续封路的能力\n\n若玩家选择战斗，用下表的现有动作。董全没有阵眼护盾、额外 Legendary Action、无穷召来的兵刃或卡外生命值。先击倒他、远射他、压制他的专注，都能真正改变战斗。\n\n| 敌人 | 开始想做什么 | 情况改变后怎么做 |\n| --- | --- | --- |\n| 董全 / Druid | 在合法范围内用 Entangle 控制一处接近路线，或用 Moonbeam 逼人离开固定站位；只能专注其中一个。未施法时使用原卡的两次攻击。 | 对手上台后可用 Thunderwave 解围，留意范围内所有生物与未固定物体。生命受创或援手明确想走时，提出停战/撤离；玩家能拒绝。 |\n| 长嘶 / Air Elemental | 用移动接近试图登台的人，选择两次 Thunderous Slam，或在能使用时对同空间的一个 Medium 或更小目标用 Whirlwind。 | 有人已离开阵场且停止进攻，不追出去打；幡落或达成散伙条件则撤。它有判断力，不必为了拖住队伍坚持站在持续伤害里。 |\n| 回响 / Air Elemental | 守另一条实际有人接近的路线，避免两个风灵无意义地挤在同一口；不能隔墙攻击目标。 | 同样尊重退场条件。一位同伴已撤，另一位不会因“还没轮到高潮”被迫死守。 |\n| 在场的 Gargoyle | 用自身飞行和 Flyby 从实际可达的方向干扰接近者，正常进行两次 Claw。 | 服从已有撤离协议。失去继续帮忙的理由后，可以自己飞走，不等待全体战死。 |\n\n风灵的 **Whirlwind 是 Recharge 4–6 的独立动作**：只能针对自身空间里的一个 Medium 或更小生物；力量 DC 13，失败受到原卡雷鸣伤害、沿远离它的直线被推至多 20 尺并 Prone，成功仅半伤。它没有自动扫全场、碰撞后额外伤害或每轮免费风刃。进入他人空间不等于自动命中，普通范围攻击也不能穿过实体墙。\n\nAir Elemental 的物理抗性在新版没有“仅非魔法”的限制，且免疫雷鸣等原卡列出的伤害与状态。对玩家讲清看得见的反馈，允许他们换战术。不能临时把原卡没有的免疫补给董全或石像鬼。\n\n董全的 Thunderwave 只有原卡每天次数。Moonbeam 的后续移动花 Magic 动作；Entangle 与 Moonbeam 的范围、专注、持续时间及解除方式照原文。Verdant Wisp 是原卡远程攻击而非施放法术，不能因描述成一道法光而允许 Counterspell；同样不能把它的光耀伤害偷换成风刃挥砍。\n\n**击败董全不让风灵自动消失。** 它们会先确认同伴与退路；玩家可以照常降幡、沟通，或继续战斗。若董全死去或失去战斗能力，两位风灵不愿为了一个已经无法履约的人追杀退走者，会用能表达的方式提出各自撤离；没有共同语言时指向出口、退开并停止攻击，也能让玩家知道它们在尝试结束冲突。\n\n当守阵者都战败、主动撤出、投降，或已无意/无力继续封路时，本阵结束。若玩家选择杀死董全，保留这一结果，不安排“原来只是幻影”把他复原；若制服并留他性命，使用 2024 正常活捉与恢复规则，不另加“仙人必死”剧情条款。\n\n### 主持人手边的预算\n\n董全加两位风灵为 **4,050 XP**；第五回的两只石像鬼都真实在场时，最多 **4,950 XP**。四名 8 级角色的官方参考预算为低 4,000 / 中 6,800 / 高 8,400 XP，不使用 2014 的数量倍率。\n\n这只是选卡参考，不是实测难度。交涉使敌人离开，就留下更少的敌人；不要补怪凑预算。不要为了制造高潮增加未预告的崖坠、强制分队或先打三场才许接近板台。\n\n## 能力、撤退与时间\n\n### 法术和工具有用，就让它们有用\n\n飞行可以跨墙，传送在满足自身条件时可以抵达台面，远程攻击可瞄准看得到且合法的目标。不是每一种方法都必须让两位风灵各打足三轮。风灵自己的飞行和移动也照原卡使用，不能为了惩罚飞行者突然得到额外射程。\n\nDispel Magic 处理可被解除的实际法术，不能把有生命值、能独立行动的风灵当作阵中特效抹掉。反过来，也不能以“神阵”为由拒绝解除 Entangle 或 Moonbeam。若需要知道是谁施法、是否专注，给出现场动作与法术现象；合理的观察不会只得到“你什么都不知道”。\n\nRope of Climbing 长 60 尺、不需共鸣、承重 3,000 磅；持一端用 Magic 动作让另一端向绳长内的目标移动，初次在当回合移 10 尺，随后每次自己回合开始再移 10 尺。它可按条目系在板台立柱或横梁上；打结后为 50 尺，攀爬检定有优势。它不自动拉人升空、不捆住不愿意的敌人，也不能瞬间飞完全部绳长。\n\n台面只有 10 尺高，普通梯子、带钩绳和走台阶同样可能奏效。是否需要攀爬检定看所选表面和实际危险；不要把每次普通攀爬都变成额外收费的 DC。\n\n### 可以撤，休息不是违禁品\n\n三个出口从开始就可见。按旧约，守阵者不追击已经退出的人；PC 仍需实际移动出去，途中普通 Opportunity Attack 与 Disengage 按正常规则。敌人不会在地图边线免费传送，也不把撤退者拖回剧本。\n\n回到石棚后可以按规则短休；回营地可长休。敌方没有凭空补充的同类守卫，已经花掉的每天次数与伤势不会因玩家转身便重置。真正满足休息条件后，双方都按正常规则恢复。\n\n时间变化造成的是公开的局势变化：董全可以派现有从者收拾私物、提出再谈，也可能发现风灵已经决定结束援助。若玩家明说数日后再来，军队会暂改走其他路线，之后再给一次行动窗口；不要暗扣一个没宣布过的毁城倒计时。\n\n## 收尾：路到底开没开\n\n| 桌上结果 | 立即变化 | 留给东征的具体回声 |\n| --- | --- | --- |\n| 完成有护送保障的撤阵协议 | 被扣者与征用物完成交接，董全一行撤离，路开放。 | 董全愿为玩家曾兑现的承诺作证。以后遇到愿谈的守关者，可得到一次正式引见；引见不等于自动说服。 |\n| 取幡或争取风灵主动结束援助 | 守阵者依约停止，阵地可接管，路开放。 | 长嘶与回响记得谁给了他们离开的余地；再次相遇可以直接说话，不自动成为无限召唤的战斗资源。 |\n| 战胜并留下俘虏 | 解除守阵能力，按约押送、救治或交给西岐，路开放。 | 活下来的对手与曾扣押的人都可能在后续作证；他们讲述的是实际经过。 |\n| 董全或其他守阵者死亡，余者退出或战败 | 不强行复活，风吼阵确实结束，路开放。 | 死者的同门可能来问经过，也可能只求取回遗物；不设自动报复点数，不改写玩家已经获胜的事实。 |\n| 救出了人或拿回物，却仍有守阵者继续封路 | 先结算已经完成的营救、归还与承诺；这条路尚未开放。 | 军方改道，下一场从重谈、再次入阵或护住替代路线中选择；已得到的地图、消耗和人情继续有效。 |\n| 队伍撤退、失散或被俘 | 按实际伤势与控制状态处理；没有自动全员死亡，也没有神仙强制救场。 | 董全可提出“停止当场攻击，带伤者离开再谈”的条件；玩家能利用已有朋友、能力和实际退路脱身。 |\n\n不要让降幡之后还必须打一只秘密首领才算“真正成功”。如果黑幡是在一轮内被合法手段取下，就用余下时间演交接、护送和彼此怎么道别。反之，玩家选择硬仗，就让其打出的胜利有同样分量。\n\n风吼阵解除封锁，或小队与军方商定并真正落实另一条安全通路后，结清本幕全队 600 GP 的未付部分。只救到人而尚未打通路线，先保留这个营救结果，不提前发成功报酬；已经交付的 Rope of Climbing 仍归小队，也不重复发放。归还平民的财物与征用物不是小队战利品；董全自己的物件如何处理，按战斗结果、先前协议和正常装备条目决定。黑幡与木杆都是普通物件，不因带走就获得一件未写规则的神器。\n\n当风吼阵被解决，或全队明确接受放弃此路并完成一个能够推进主线的替代收束后，结束第三幕并升至 **9 级**。不要每次撤出重进都发章节等级；也不另叠加战斗 XP 升级。\n\n留一小段安静的回营场景。程简拿着通路回执，先问人有没有齐，再问要把谁的名字写在上面。把玩家说出的名字记下来，下一幕的军中文书会再次用到。\n\n给这一幕留下修护、安顿与军情变化的间隔。其他阵的战事另有参与者，逐渐推进至姜子牙金台拜将之后，才开始第四幕东征；不宣布风吼阵一破，其余九阵便同时消失。这次通路与人物的结果保留，幕间不回滚。\n\n到东征集结时，第一封新消息可以这样来：\n\n> “前面那位守关的人愿意谈。他先问了一句：西岐有没有说过话、也肯认账的人？”\n\n## 制作备忘\n\n原著风吼阵的董全、板台、黑幡、风载兵刃与借定风珠的段落，见 [第三幕原著备忘](../research/ACT3_STORY_NOTES.md)。本回的可玩规模、旧约、三入口地图、风灵身份、董全的可成交条件及所有玩家结局为本团编排。未安排必须先牺牲的人，也不要求慈航在玩家成功后再完成一次本阵。\n\n规则直接采用 SRD 5.2.1：Air Elemental p.258；Druid p.282；Gargoyle p.286；Rope of Climbing p.242；物件 AC/HP 见 pp.177–178；遭遇预算见 pp.202–203。卡片和法术的完整入口、具体限制与查阅范围见 [ACT3_RULE_NOTES](../research/ACT3_RULE_NOTES.md)。不增加通用阵法资源、统一降幡规则、卡外免疫或复活机制。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n民诊12包可领两瓶药一次，前两队员各一；军需6包可花半小时勘察，替代路施工4小时改2小时。队伍留存包可先实际交付。原公开约战、法师之手合法降幡和同成果600GP都有效。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n另可reliefExclusive收180GP卖小队后续运力。十一回新增民诊撤营合作及十二回民诊理事因此暂不可用，已得两瓶药不收回。reliefExit退180GP、半小时班次交接可退出；六／十一／十二回可办。不卖则无新增损失，合法降幡和原600GP照旧。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 7,
+      "title": "第七回：汜水关前的酒席",
+      "level": 9,
+      "scene": "B008",
+      "source": "11_第七回_汜水关前的酒席.md",
+      "text": "# 第七回：汜水关前的酒席\n\nv0.7 · 四名 9 级角色 · 主持人草案 · 约半晚至一晚。前接 [风吼阵前](09_第六回_风吼阵前.md)，后接 [今夜开关](12_第八回_今夜开关.md)。两回都在 9 级进行，第四幕收束后升 10 级；未测试或试玩。\n\n## 这回，玩家能改变谁的结局\n\n**让汜水关有一条双方肯照着办的过关办法。** 韩荣已经想退，韩升不愿部属像贼一样被赶走，韩变担心一开门就没人管城里的普通人。玩家不必把父子三人都说成西岐的忠臣；让他们愿意停战、交出关防并履行离关安排，就足以推进东征。\n\n这里有一顿能坐下来吃的酒席，也有一座尚未交接的关。酒桌上可以发问、吹牛、还价、作证，甚至吵一架；随后去看桥、点军饷、选路线，让谈好的话变成事情。玩家若当晚一口气把门也开了，就直接使用下一回的结算，不为凑篇幅再关一次。\n\n没有“韩家父子必须死”的终点。也没有全员交涉成功后必来的刺客。若大家选择硬闯，关内的四名对手和机关布局见下一回；那是同一批人，不是另一组补充战斗。\n\n## 开场前，接住上幕的人情\n\n给风吼阵之后留出修护、休息与军情推进的时间。现在已到金台拜将、金鸡岭之后，姜子牙大军驻于汜水关外；佳梦、青龙是分兵方向，不是小队接下来必须按顺序清空的两道门。\n\n| 过去的结果 | 这次怎么出现 |\n| --- | --- |\n| 董全活着，且撤离约定已经兑现 | 他先向韩荣说明小队确实护送过对手离开。韩荣因此愿意当面听，不等于替玩家答应全部条件。可以只递一句口信，不必让董全赶来代谈。 |\n| 董全活着，但约定还有没办的部分 | 他如实说已经做成和仍没做成的事。补交遗物、接走尚在等候的人能由现有联络安排完成；不强迫整队重跑旧冒险。 |\n| 董全已死、双方不睦或没有这份引见 | 韩荣从关外看到了安置难民和修路的实际情形，仍可主动相邀。已有朋友可讲自己见过的事，不冒充亲历风吼阵。 |\n| 鲁青、孟平或冯迟获救且愿意帮忙 | 可请其中一人同行看普通绞盘和南侧石道。已有约定、伤势与工作安排优先；没有他们，本地工匠也能说明路线。 |\n| 陶七仍与小队亲近 | 他托程简带来一小坛酒：“要真能少打一回，开坛时算我一份。”不凭此让他瞬移到关前，也不自动征走他的渡船。 |\n\n先请每位玩家用一句话说：这一段军旅里，角色最想在下一座关里找到什么？热饭、能补书的纸、失散同门、安静睡一晚，都可用作席间聊天的入口，不成为额外必做任务。\n\n## 把这次差事一次讲清\n\n姜子牙此次明确授权：若守方停止抵抗，移交关防和公共军械，小队可以安排韩荣父子、愿同行的守军与家属沿约定路线安全离开，保留合法私物；本次交接的西岐部队按约放行。未发军饷可依据现有账册和库中实物结清，不能把民户粮食当作额外军饷。程简负责把安排传达到实际接手的人。\n\n这是本次接管汜水关的决定。它不是程简擅自发布的全军赦令，也不强迫玩家替所有战线、未来所有官员许下永不追究的承诺。若韩家要求更大的条件，小队可以请姜子牙明确答复；送口信、Sending 或回营当面问都可行，不要求某一封唯一原件。\n\n**事先点明本次首批人员：**\n\n- 关内拟离开者共 **17 人**：韩荣、韩升、韩变；两名近卫；另有 12 名自愿归乡者，默认四名普通守军、四名工匠、四名家属。\n- 关外来接手的共 **5 人**：程简和四名没有战斗任务的交接吏。\n- 随身物件、应付军饷随人走。没有另藏一批必须运出的粮车或俘虏。其余关民可自行选择留下或日后出关，本次安排还须给他们留下实际可用的道路。\n\n17 人是开场名单，不是要强迫完成的数字。有人选择留下、受伤需改走法或已经死亡，就记实际变化；不会在收尾突然补人凑数。普通守军、工匠、家属和交接吏有必要进入先攻时用 Commoner，不成为免费战斗分队。\n\n这两回的报酬合计 **全队 1,000 GP**，程简此刻预支 **200 GP**，第四幕完成后结清 **800 GP**。另外，军中为这次差事备好一件标准 **Weapon, +2** 和完整一对 **Sending Stones**，同样在收尾交给小队。武器类型由玩家从既有简单／军用武器中选定，主持把它描述为已经备妥的一件成品；不是现场出现任意锻造的机器。和平、潜入与正面作战达成任务，都按同一报酬结算。\n\n## 酒席摆在哪里\n\n韩荣选了关西门外向西约 300 尺的凉棚。棚南北通透，后面是农田小路，离门前射界有一段距离。西岐营地在更西方半里之外；这里不是被四面围住的审讯室。\n\n韩荣、两个儿子和两名近卫赴席。双方都能携带自己平时的装备，武器留在鞘里；没有没收法器、搜空成分袋的强制入场条件。韩荣的意思是“既然谈放人，总得先让人敢来”。其余归乡者在关内收拾，交接吏在营地等候，不在席间充当人质。\n\n念给玩家：\n\n> 关墙下支起了一张长桌，凳子却高低不齐。韩荣亲手往最短的桌腿下垫了一块砖，招呼你们坐下。左边的年轻武人把酒碗摆得整整齐齐；右边那个袖口沾着油渍，正拿一根筷子修汤勺的柄。\n>\n> “关里的厨子不肯换招牌，”韩荣说，“所以今日招待贵客，还是守关人的饭。诸位若嫌淡，盐在我儿子手边。若嫌话难听，也先吃两口再说。”\n\n先让这顿饭像一顿饭。挑两件小事给玩家接话：韩升听过他们闯阵的三个版本，想知道哪个最离谱；韩变想看看攀云绳，却会先问能不能碰；韩荣问谁家里也把剩饭烩成一锅。这些交谈不收费、不刷关系值，十分钟左右就能自然转入正事。\n\n## 父子三人，都有能商量的地方\n\n### 韩荣：想让一家人活着下关\n\n必要时完整采用 **Guard Captain，CR 4 / 1,100 XP**。正常安排里他不参加下一回的门口战斗，谈完先回居所收拾；若玩家主动改变这一点，再按实际在场者处理，不免费增援。\n\n他承认局势变了，也知道两个儿子还想争口气。他怕的不是一句“你输了”，而是门交出去了，人却走不了。\n\n> “若只剩我一个，卷了铺盖便走。如今我说走，他们说丢脸；我说留，他们又说我老了。”\n\n他首先问的是：谁来接门？谁认放行的话？父子和同行的人能在交接部队进入前离开吗？玩家给出真实权限、具体接手者和可执行顺序，他便愿意退，不再为这一组已接受的条件要求说服检定。\n\n### 韩升：要让跟随自己的人抬头走\n\n完整采用 **Gladiator，CR 5 / 1,800 XP**。沿用三次矛攻击、可替换的一次盾击与 Parry，不另给“万刃军威”、必定反击或士兵伤害加成。\n\n他最容易先说硬话，也最在意近卫和老兵怎么想。他愿意接受：结清确有依据的军饷，愿走的人带上私有普通装备，不要求他们跪着出门或当众侮辱旧主。关防、公用军械和军中公物仍须交出。\n\n> “让他们把自己那口刀带走。回家路上有山贼，总不能拿你的军令砍人。”\n\n如果有人只是想留下谋生，他不会逼着同行。玩家问“你自己以后想做什么”，他一开始嘴硬，随后会说想去外家看看：那边的孩子还以为他守的是天下第一座城门。让这件小事比抽象的忠义口号更有重量。\n\n### 韩变：不愿把一城人当成车前的障碍\n\n完整采用 **Mage，CR 6 / 2,300 XP**。他的机关兴趣与本地称呼不改变生物类型，也不在 Mage 卡外增加法术。若发生战斗，他的火球和寒冷锥形确有原卡威力，不能把饭桌玩笑误读成没有威胁。\n\n他提出：关民与工匠自行决定去留，西岐先接管军用区域；交接时不把万刃车和武装队伍塞进民居街巷。门前桥旧，最好先看一眼再排通行队伍。\n\n> “我修得好一根轴，未必接得回一条腿。要进关，走给车马修的路，别挤人家的门。”\n\n本团这时尚未上演原著的万刃车大战，相关军械停在关后演武场，由双方在安全时封存、拆卸或接管。本幕不设远隔地图自动降下的刀雨，也不以车队名义另增敌人。他真正参与小队遭遇的能力就是 Mage 原卡。普通车架与刃具可以查看、搬动；它们不是谁拾到就获得一套未写规则的军阵法术。\n\n### 两名近卫：会听见谈话，也会自己决定\n\n两人各用 **Knight，CR 3 / 700 XP**，与下一回是同两人。他们的目标是跟着韩家平安出去，不另有必反叛的秘密。如果韩升已经同意交接，他们协助引路，不为让下一回有仗打而另找借口反悔。\n\n不用再给两人写长传记。让其中一人默默把热菜夹给年纪小的，另一人担心带回家的酒坛会碎，就够了。\n\n## 桌上最有用的三个问题\n\n### 一：“你们凭什么相信这一次？”\n\n韩荣可以直接提佳梦关：他听到有人献关后仍遭诛杀。这个担忧有真实的原著背景，主持人不要说成只需戳穿的假消息，也不替任何一方强制辩白。此刻能改变的，是这一次怎样接管。\n\n可谈的具体保障：先把愿走者送到关外安全处，再接门；让程简把负责交接的四人带来当面认约；由玩家亲自同行；写下或当众说出关防交出的时点。董全的经历若适用，可以作证小队曾经怎样做过，而不是保证从此所有人都会诚信。\n\n玩家也可以质问姜子牙、拒绝替西岐作保证，或者只接受自己能亲自做到的部分。先让军中给出本次明确答复，再决定是否继续；不要用一次 Insight 强迫角色相信谁。若阵营方向因此改变，保存已谈成的人员安全安排，后续东行目标再与玩家商量。\n\n### 二：“先走谁，走哪条路？”\n\n给两种已经可调查的安排，不把它们伪装成必然伤人的二选一。\n\n| 路线 | 今天要做的事 | 会留下的结果 |\n| --- | --- | --- |\n| 西门官道 | 查看并启用门与吊桥；先让离关者出去，再让程简等五人接管。其他军伍在外等候。 | 最省工，交接顺序清楚；关民沿原路继续往来。 |\n| 南侧旧运石便道 | 通往西门两侧的旧便道绕开门前拥挤处。自愿工匠用半天清理，西岐当天等得起；离关者走便道，交接人员走官道，或另按实地安排分流。 | 少一次队伍迎面擦过，修好的便道留给当地人用。仍须完成关防交接、留下可用通路。 |\n\n南道的情况由韩变或实际去看的人说明：不是隐藏密道，没有怪物自动刷新。韩变能联系四名愿意接活的留关工匠，从关内维修经费付工钱，清理普通落石、移开破车；他们不计入17人离关名单，也不强迫那四名归乡工匠留下劳动。工作换来的是道路，不消耗新的“工程点”。鲁青或孟平在场可参与判断；没有熟人时也能完成。\n\n具体门前地图和桥的操作见下一回。玩家若用飞行、穿墙、造桥或传送完成需要的交通，就按真实能力落实，节省下来的时间真的省下来。去到墙内并不自动让整条道路开放，但也不用先走回来，重新排队做原定步骤。\n\n### 三：“军饷、私物和公物怎么分？”\n\n韩升把欠饷名册带在身边，韩荣允许查看库房。该付的款由现存公库结算，数额足够，不另藏“钱早没了”的必做支线。玩家可以让本人领走并记在原账上，也可由双方各一人见证清点。懂财务、军务或相关工具的人若提出合理办法，直接办成；不要求人人轮流通过 Investigation。\n\n有争议的物件只挑一件演：例如某兵想带走公家弩架，却说轴承是自己掏钱补的。先问他真正想要什么——取回自买配件、换一笔正常补偿、留下继续修弩，都可解决。别把每只碗都做成判例。\n\nNPC 的普通装备按既有卡和归属处理。奖励中的 +2 武器来自出发前说好的军中成品，与韩家私有物件无关；玩家不必为了拿奖励先搜韩升的尸体。\n\n## 有效提议怎么落地\n\n满足已经说明的底线，三人就接受。一份可直接成交的例子是：\n\n> “照账结清军饷，私物各自带走，公物留给接管的人。门桥先由我们看妥。愿走的人先过，走到指定接应处以后，程简他们五个入关点交；其他兵马等口信。城里人自己决定留还是走，军械不走民居街。”\n\n可以写下来，也可以在见证人面前说清；它是人物同意的安排，不是必须持有原件才能生效的魔法契约。约定了南道或玩家自己的办法，就替换对应句子。\n\n对犹豫的额外请求使用现行 Influence：先判断对方愿不愿意，再在有不确定性时选检定。默认 DC 为 15 或其智力属性值中的较高者，态度按规则影响优劣势。同一句话失败不能轮流刷骰；拿到新保障、改变要求或实际解决顾虑，才是在做新的尝试。巧妙角色扮演可以说明提议为何足够，不要求不擅长即兴讲话的玩家真当外交家。\n\n魅惑、侦测与控制法术照原文。能拿到信息或改变当时态度的，就真的生效；但具体条目没给永久服从时，不扩张成永久服从。不要为保护酒席剧情临时给 NPC 免疫。玩家若不愿交谈，可侦察、绕行或提出武力方案，转下一回的实际地图。\n\n## 想露一手，可以，但不必打满一场\n\n韩升有时会说：“风吼阵都过了，能不能让我们见见本事？”这可以是角色选择的展示：抬走挡路的木料，隔墙取到桌上的酒碗，用合法法术上城查看桥，或者请他在空地比一段枪法。没有隐藏的“完成展示才能谈正事”条件，也没有自动赠送的永久加值。\n\n若双方真要切磋，开打前说清边界：谁参加、何时认输、是否禁用远程和范围伤害；先清空无关人员，再按完整原卡和正常先攻处理。近战将目标降至 0 HP 时，2024 击昏规则允许改为 1 HP 并陷入 Unconscious，具体恢复照原规则；火球等手段不能随口宣布非致命。伤害、每日次数和休息照实保留，韩升不会在下一回变成新满血的一张卡。\n\n这是一项可选活动，席散也可完全无人拔刀。若争执真的升级成敌对战斗，用下一回同批四人的状态与意愿，不先打一场再把他们复活到城门。\n\n## 本回怎样收束\n\n双方谈妥后，韩荣先回居所取行李，两名近卫可带小队去看门。韩升去召集愿同行的人，韩变负责解释桥和军用区域。让每位玩家选择下一步亲自负责的事：陪离关者、先看绞盘、联络交接人员、走南道，或提出别的分工。接 [第八回《今夜开关》](12_第八回_今夜开关.md)。\n\n只谈妥而未交接，**仍是 9 级**，不在中间额外补一次章节升级。若当晚休息，按原规则恢复；军中已经同意等半天，没有未告知的“过子时全城失败”。若一次谈话已连同开门、护送和接管一并完成，就直接结算第四幕，照下一回发剩余报酬和物品，并升 10 级。\n\n若没有谈妥，保留已经接受的部分。例如韩变愿意先让工匠走，不因韩升还在争执就撤回；韩荣愿意退，也可以另行被安全带出。把尚未解决的实际问题交给下一回，不宣布整幕失败。\n\n桌边只记这几句话：\n\n> 谁愿意走／留，人数怎样变：____。已接受的条件：____。仍有争议：____。\n>\n> 路线与通行顺序：____。谁亲自陪同／接手：____。预支 200 GP 是否已付：____。\n>\n> 韩荣父子、两名近卫的伤势与已用能力：____。本次哪些旧人情真正派上用场：____。\n\n## 制作备忘\n\n韩荣父子的原著结局和献关动机见 [第四幕原著备忘](../research/ACT4_STORY_NOTES.md)。酒席、17 人名单、军饷与路线条款为本团可玩编排；不把原著死亡当成必达节点。佳梦、青龙维持并行军情，汜水关交接后向界牌关推进。\n\n采用 SRD 5.2.1 的 Guard Captain、Gladiator、Mage、Knight、Commoner、Influence、击昏和标准魔法物品。完整入口与本幕采用范围见 [第四幕规则备忘](../research/ACT4_RULE_NOTES.md)。没有新阵法引擎、军械控制资源或跨阵营信誉数值。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n原交关约之外，可选公开补偿60GP（20民伤40北门终止雇约），或限名责任零即时GP但第九回复核，或只守原约。签前读全成本；韩家父子利益不一，但不反悔已救者和原欠饷。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n除原三份韩家附约，可hanPatron收200GP，给魏简签只录新军功、不收新民伤异议的附报。九回失去新增工兵80GP委托，十二回独立稽核／民诊理事冲突；可花260GP、一小时撤回更正。旧军饷、自由离关、安全交接原约从未作废。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 8,
+      "title": "第八回：今夜开关",
+      "level": 9,
+      "scene": "B008",
+      "source": "12_第八回_今夜开关.md",
+      "text": "# 第八回：今夜开关\n\nv0.7 · 默认四名 **9 级**角色；接 [第七回《汜水关前的酒席》](11_第七回_汜水关前的酒席.md)。本回把谈好的去留变成一条真的能走的路，也允许玩家用自己的办法打开关口。第一次完成第四幕后升至 **10 级**。这是尚未测试的主持草案。\n\n“今夜”是众人盼着事情办完的说法。玩家选择花半天清理便道、明早再交接，西岐此次等得起；没有藏在标题里的超时失败。\n\n## 先把上一回的结果摆上桌\n\n开场只需问清三件事：哪些条件已经谈妥、谁现在愿意离关、大家准备走哪条路。沿用桌上结果，不重置人物。\n\n- **已经谈成。** 韩荣父子遵守已经接受的条件，近卫听从实际命令。今日的乐趣在如何安排开关、谁先道别、哪些旧怨愿意留在门里。不会追加刺客、假传军令或强迫韩荣突然背约来补一场战斗。\n- **只有部分人同意。** 分别保留承诺。韩变已经答应不阻碍关民，就不会为了和兄长凑齐敌人重新扣人；韩升已经认可军饷和归乡安排，就不会收钱后再索一次。只处理尚未谈妥的分歧。\n- **上一回已实际完成开门、交接与安全离关。** 直接跳到本回收尾，照常结算。玩家早一步把事办好了，不需要再关一次门。\n- **已经交过手。** 保留同一批人物的 HP、每日次数、伤势、俘虏、死亡与去向；只有真实经过符合规则的休息才恢复。这里没有第二个韩变或补来的两名同款近卫。\n\n董全若曾获得约定的撤离、并愿意介绍玩家，他介绍的那份信任仍在。韩荣可以请玩家讲一句风吼阵后来怎样了，不用再拿出新的信物。董全若已死，就按当时发生的事讲；本回不把他偷偷复活来完成引荐。鲁青、孟平、陶七等熟人若愿意帮忙，依据已有关系提供手艺、认路或联络，不自动成为无偿随军队伍。\n\n## 这回到底要让谁过去\n\n在行动前把下面的名单和目标交给玩家。若第七回已经定过不同人数，直接使用那一份，不能到玩家施法时才增加乘客。\n\n| 已知对象 | 本回默认人数与安排 |\n| --- | --- |\n| 西岐交接一方 | **程简与四名交接吏，共 5 人**。他们清点公共军械、接收关防，不承担战斗任务，在关外西侧等候棚等待通行通知。 |\n| 离关一方 | **韩荣父子三人、同批两名近卫、十二名自愿归乡者，共 17 人**。十二人默认为四名普通守军、四名工匠、四名家属；他们此次不参与门口作战，必要时用 Commoner。 |\n| 随身物件 | 离关者各自的私物、获准带走的普通装备与已经合法结算的军饷。没有额外必须护送的满载货车，也没有装在箱底、必须打完才发现的宝物。 |\n| 后续通行 | 西岐能接管约定的关防与公共军械，关民可按自己的意愿进出；留下的是一条大家以后还可以使用的普通道路。不能只让四名冒险者越墙便声称整座关已交接。 |\n\n父子、近卫或归乡者若已死亡、离开，或自由决定留下，就按实际结果减少或改写名单，不拉陌生人来补足 17。交接吏同样不因剧情固定而免疫伤害。关内其余居民早已知道可以留在家中或去安全处，不会忽然成为追加给队伍的数百名护送对象。\n\n**本幕完整成果**是落实双方接受的去留安排，并使约定的通路和交接真正成立。若玩家提出另一条可持续使用的路线，程简可立即把实际方案报给本路负责人，认可后依该方案结算。若法术已经把约定的人与物全部送到应到之处，就承认该部分已完成；道路还有没有必要、由谁随后开放，要依行动前讲明的交接条件解决，不能临时增加任务。\n\n## 到场：今晚的第一盏灯\n\n若和平交接已经约好，念给玩家：\n\n> 门内烧着一锅热汤，门外还亮着另一盏灯。吊桥竖在干壕上，绞盘旁的工匠正给木柄缠布，免得推到半途磨破手。韩荣穿着赶路的外衣，手里却还攥着守关时的腰牌。\n>\n> 韩升看着门外，说：“先送他们走。我最后。”\n>\n> 韩变已经蹲到木轮旁，朝你们招手：“这东西不难。难的是让两边的人都肯把脚迈出来。”\n\n若尚未谈成，韩荣留在门内东侧的居所，等候新的提议；两名儿子和原来的两名近卫在门区守着。居民与归乡者在地图外的等候院内，知道这里可能交锋，可以自行离开。不要先把他们摆进一圈法术范围，再称这是玩家造成的困难。\n\n## 一张可以直接画的门区地图\n\n西南角为 `(0,0)`，向东为 x、向北为 y，单位英尺。门前局部约 **160 × 120 尺**，可用 5 尺方格。西侧是关外，东侧是关内；图边不是不能越过的结界。\n\n| 位置 | 尺寸、坐标与公开结构 |\n| --- | --- |\n| 西城墙 | `x70～80`，沿南北延伸；普通石墙，**厚 10 尺、高 20 尺**。门洞以外没有暗藏夹铁层。墙顶宽 10 尺，可沿墙顶走动。 |\n| 门洞与木门 | 门洞在 `y50～65`，**宽 15 尺、高 15 尺**，贯穿这段 10 尺厚的墙。双扇木门位于内侧 `x80`，向东打开。门内只有下述一根木闩和一把普通锁。 |\n| 干壕 | `x50～70`，南北延伸，**宽 20 尺、深 10 尺**；没有水、尖桩或隐藏怪物。两岸桥头各有牢固的石砌基础，其余土坡粗糙可攀，普通攀爬、跳跃与坠落规则适用。 |\n| 木吊桥 | 放下时占 `x50～70，y50～65`，**长 20 尺、宽 15 尺**，接西岸与门洞。默认尚未放下；若前回已放下，保持原状。 |\n| 门内木闩与锁 | 操作处在 `(85,60)`。普通铁锁固定木闩，钥匙由韩升保管；门内可看见整套结构。没有第二道铁栅、机关房门或同时必须凑齐的另一把钥匙。 |\n| 吊桥绞盘 | `(95,75)`，地面上的露天配重机构，旁边有 10 尺见方站位；从内侧和墙顶可看见。无单独锁、封印或隐藏卡木。 |\n| 上墙石阶 | `x80～90，y80～120`，南端接地面，沿 40 尺长的阶梯升至北端 20 尺高平台，与墙顶相通。可从墙上沿阶梯走到绞盘。 |\n| 主道路 | `y50～65`，贯穿东西两边；外侧通西岐等候棚，内侧通关内街道与离关者等候院。 |\n| 木料堆 | `x115～135，y30～40`，高约 5 尺。对确实被遮挡的攻击提供相应掩护；它不遮住全场，也不是一堵不能攀越的墙。 |\n| 南便道入口 | 地图南边 `(140,0)`。向南走约 300 尺到旧运石门，再沿旧坡道绕行约 500 尺接关外营路。门和路原本宽 10 尺，现有散落碎石；人可从空处通过，清理半天后可恢复全宽货路。 |\n\n西岐等候棚在图西边以外约 200 尺；韩荣居所和离关者等候院在图东边以外约 300 尺。那里的人没有瞬间到达门口的能力。地图不把这两处安全等候点算入战场范围；角色主动把战斗带过去，才按实际移动和处境重新处理。\n\n旧运石门是从开始就存在的普通侧门，守关者知道它；南路沿采石坡绕出关线，碎石拖慢运货而不阻止步行。其用途和入口可由工匠直接指出，侦察也能发现。韩升若仍敌对，可以凭自己与两名近卫的实际移动去阻拦，不能让正门的整队守卫复制到那里。\n\n若需要先攻，默认韩升在 `(100,60)`，韩变在 `(130,90)`，两名近卫分别在 `(100,40)` 与 `(90,90)`。战斗开始前已观察到的巡走、藏身和谈判站位优先于这个默认摆放。\n\n### 这套普通机构怎么开\n\n先说明结构，再让玩家决定用钥匙、工具、法术还是力气。以下操作次数只描述本地这一套重门与配重，不是所有 D&D 城门通用的新规则。\n\n1. **解开一把锁。** 韩升交出钥匙即可正常使用；战斗中用一个 Utilize 完成解锁。无钥匙时，可按 Lock 条目使用 Thieves' Tools 作 DC 15 敏捷（Sleight of Hand）检定；也可依法术或破坏规则处理。\n2. **取闩并推开重门。** 锁已解除，在门内操作处用一个 Utilize 搬开配重木闩、推开门扇；无需再作属性检定。这个动作完成后，门洞畅通。\n3. **放下吊桥。** 在绞盘旁连续完成总共 **两个 Utilize 动作**，第一次把桥放到中途，第二次把桥放平、扣住保险。不同角色可以接手，已经完成的行程保留。桥未放平前不是正常步行桥面；若有人要冒险跃过去，按眼前的距离、落点与一般规则处理。\n\n锁和木闩只挡门，不阻止转动吊桥绞盘，因此可以同时进行。无干扰时，熟悉机构的人很快办完，不需要让全桌逐轮报四次动作，也不靠一次低骰让和平交接卡住。\n\n门锁采用 Tiny 坚固铁物件 **AC 19、5 HP**；木闩是 Medium 坚固木物件 **AC 15、18 HP**，可以从内侧合法触及或瞄准。木闩被破坏后，锁连同这道阻挡一起失去作用，仍需实际把重门推开。两扇木门下部各取一块宽 7.5 尺、高 10 尺的可破坏门板，按 Large 坚固木段 **AC 15、27 HP** 处理；打穿一块就留下相应缺口，可供人通过，不会让整座城墙自动塌下。它们均免疫毒素、心灵伤害，攻击与法术须能指定相应物件。绞盘与桥的任意划痕不等于自动开路；想破坏承重结构，先说明真实后果，不能在玩家砍断链条后才宣布桥一定倒在最坏的位置。\n\nKnock 能解除其条目允许的锁闭、卡住或门闩；这是同一扇门上的一把锁，不借锁闩名称反复收费。若一次施法已使门的阻挡解除，就只剩实际推门和放桥。它会发出原法术的响声，不能因此让未知部队瞬移进场。Mage Hand 可处理自己能力范围内的钥匙、锁扣等小物，不能凭描述变成能搬动重门和整座配重的巨手；更有力的合法能力照其原文使用。\n\n## 和平开关也值得玩一段\n\n若父子都已同意，让玩家决定从哪一件事开始。下面是可演的场面，挑两三个喜欢的即可，解决办法没有隐藏正确答案。\n\n**谁第一个过桥。** 一位家属端着还没吃完的汤，不肯把碗放下；一名交接吏站在对面，担心伸手接碗被误会是在收缴私物。玩家可以亲自陪第一人走完、请程简先过来帮忙，或者让两边先坐下把汤喝完。所有人要的是一个看得见的善意行动，不再要求一枚凭空出现的通行印。\n\n**把旗带去哪儿。** 韩升想带走自己缝补过的家旗，又不愿让外面以为他举着旧旗再来挑战。玩家可以商量卷旗而行、交给家属收藏，或临行再与老部下站在旗下一一道别。这里说的是他的私物，不能突然解释为控制全关的神器；也不要求他当众羞辱父亲才能开门。\n\n**手艺归谁。** 四名工匠中，有人想跟亲友走，有人可能愿意留下修复街市。让他们各自说一句自己的打算。玩家可以介绍鲁青、约一次有报酬的活，或只是认可其自由选择。韩变的条件是他们能选择，答应交接不等于把工匠所有权交给另一支军队。\n\n若有人担心“献关之后还会不会被杀”，这个担忧可以认真回答。附近战事已经让人不敢仅凭一个“降”字放心；不必判成全是造谣。玩家可以让韩荣看到此次实际授权、选择亲自护送、允许先送家属，或者请已经被他们平安送走的人作证。过去的真实承诺有用，NPC 不会要求玩家保证全天下所有军队永远守约。\n\n### 西门官道：一队先走，一队再来\n\n主路与吊桥宽 15 尺。默认按上回约定，先让自愿归乡者走到关外等候棚附近的岔路，再通知程简和交接吏入关。韩升愿意殿后，也接受玩家陪同或双方各派一人见证；不要求全员挤在桥心交换人质。\n\n普通路况下，门桥开好后约一刻钟就足够这些人从等候处走完这段交接。时间是主持安排场面的尺度，不是逐轮赶人的新倒计时。私物留在各人手中，合法军饷不再重新征缴；官仓清册交给交接吏处理，不需要四名玩家现场审核整座城的每一张账。\n\n交接完成后，门桥保持日常开放状态，由接管者照正常治安维护。若街坊愿意，可以让第一辆卖菜车自行走过桥，作为已经真的通路的结束镜头；它不是现在才追加的必须护送货物。\n\n### 南侧旧路：把绕行变成一条大家能用的路\n\n愿意帮忙的工匠知道哪些是废料，哪块石头只需要滚进旁边旧料坑。默认由韩变联系 **四名愿意接活的本地工匠**，从已交接的关内维修经费付工钱；这四名是留关工作者，不加入 17 人归乡名单，也不要求此前那四名归乡工匠留下劳动。平常工具和半天工作即可清出原有 10 尺宽道路。\n\n队伍可以一起干活、找熟悉此事的人来带工，或用真正适用的能力加快；无需为每一铲石子掷骰。没有办法显著加速，就花半天，西岐照约等候。这不是把选侧路的人罚去做一串跑腿。\n\n路清好后，归乡队走南路，程简一方走西门，可以分流；也可以让两队分批共用南路，再从内侧交接关防。南路今后仍归大家使用，关民不必把菜筐挤进大军队列。陶七若得知此事，可能说运货终于能少排半日队；这份好处不会在一幕结束后消失。\n\n玩家也可决定不等清成货路，先护送愿走的人步行绕出，再留下协助完成道路。先送到的人确实已经安全离关，不因后一项尚在进行便回到起点。\n\n## 若仍然要在门口打一场\n\n只有协议尚未成立，且在场人物实际选择诉诸武力时，才使用本节。若前回已彻底打败或谈离某人，删掉其参战位置，不找替身补上。\n\n| 人物与原卡 | 场上目标与可改变之处 |\n| --- | --- |\n| **韩升：Gladiator**，CR 5 / 1,800 XP，AC 16、HP 112 | 想保住愿跟随自己的部下，担心开门之后被一网打尽。他守住道路或接近绞盘的人，用原卡矛击、盾击与反应。看到军饷已依法结清、自己人确实能够安全离开，或认可新的保障后，他会停止阻拦并命近卫退开。 |\n| **韩变：Mage**，CR 6 / 2,300 XP，AC 15、HP 81 | 想阻止公共军械被拖入居民街巷、关民与工匠被扣住。对手提出并开始执行可接受的安排后，他可独自退出战斗；不必等兄长也同意。若继续交战，使用完整原卡攻击和法术。 |\n| **两名同批近卫：Knight**，各 CR 3 / 700 XP，AC 18、HP 52 | 服从韩升的当场命令，也会保护愿意撤出的同伴。他们不是与主将生命绑定的机关，韩升投降后不继续战至最后一人。已被俘、退场或死亡者不再出现。 |\n\n开局准备好 SRD 5.2.1 的完整 **Gladiator、Mage、Knight** 卡，而非只用这张动机表。保留其属性、感官、豁免、装备、状态与次数；这些卡用于这一场遭遇，不是韩氏父子在所有传说中的实力排名。\n\n韩荣按 Guard Captain 处理，但通常在自己的居所内等候，不加入这场门区遭遇。玩家主动前往与他冲突，就按实际场景处理；不让他因为儿子受伤，免费从 300 尺外跳到绞盘旁。关内其他普通守军已被告知留守本岗位、不要自行冲来混战，不会一轮轮生成新增部队。\n\n**完整四名对手为 5,500 XP**，四人 9 级官方参考预算为低 5,200 / 中 8,000 / 高 10,400 XP，不使用 2014 的怪物数量倍率。这只是原卡选取参考，不是实测难度；地形、集中火力与资源余量都会改变实际危险。说服一个人退出就真实减少一个对手。\n\n### 让危险在出手前可知\n\n韩变会直说自己能焚开一片广场、冻住近处一大片敌人。关内练法的焦痕、看过他动手的工匠和他自己的警告，都足以让玩家知道：**这是能施放四环 Fireball、也会 Cone of Cold 的 Mage**，不要把四个人全挤到他面前等试伤害。若主持安排他当场示范真实法术，照常扣除当天次数。\n\n默认居民与归乡者在等候院，交接吏在关外棚；有时间准备时，各自愿意先避开可能的交锋。NPC 不靠把家属当盾牌强迫队伍吃下第一轮。如果玩家在人员尚未离开时突然攻击，按当时真实位置、范围与行动处理，让这些人寻路逃开，不把他们固定在原地配合剧情。\n\n原卡危险保留：Mage 的四环 Fireball 为 **9d6 火焰**，Cone of Cold 为 **8d8 寒冷**；后者与前者的每日次数不同，依原卡记录。Arcane Burst 是原卡攻击，不因描写为一道法光就变成可用 Counterspell 打断的施法；Protective Magic 的 Shield / Counterspell 共用原卡三次反应使用次数。它仍须能反应，不能同时挡住每个攻击。\n\nGladiator 的 Multiattack 是三次 Spear，可把一次替换成 Shield Bash；不是矛打三下之后免费再盾击。盾击对 Medium 或更小目标的倒地效果依原卡力量豁免处理；Parry 需要反应，持武器时对触发的近战命中提高 AC 3。Knight 则采用新版原卡及自己的 Parry，没有旧版 Leadership。\n\n### 打的是通路，局面可以改变\n\n- **先占绞盘。** 角色可沿墙、翻墙、飞行或传送到内侧，使敌人必须选择追人还是守路。绞盘没有魔法认主，合法站到旁边就能操作；敌人也要用实际移动、攻击或能力阻止，不能用一句“他看守那里”取消角色的动作。\n- **拆开父子的理由。** 韩升收到可信的安全安排、韩变看到自己的底线得到尊重，都可以停手。战斗中一句短话能传达明确提议；需要完整解释的内容，可先约停战再说。Influence 按意愿与态度规则使用，不强制三次累计成功，也不是高骰即洗脑。\n- **打开另一条路。** 西门之外的南路、石墙与干壕都有已知结构。对手决定追过去时，原地点就缺少这位对手；没有地图外另一队一模一样的人等着玩家。\n- **迫使对手投降或退出。** 韩升、韩变可以在明显不利时提出“让我先带伤者走”。玩家能够接受、要求放下武器、提出其他合理条件，也能选择继续作战。投降的人停手，不在背后触发一段强制背刺剧情。\n\n玩家若希望活捉，采用 2024 规则：近战攻击造成的伤害本会使目标降至 0 HP 时，攻击者可使其留在 **1 HP**、陷入 Unconscious，随后按对应短休与恢复规则处理。不要把所有远程攻击和范围法术自动算为无害制服；也不因对手来自原著就禁止玩家留下其性命。\n\n本回没有无限刀雨。关内提到的**万刃车是等待移交、停用或拆存的公共军械**，不是这场战斗追加的无穷区域伤害、隐藏首领或随身召唤资源。玩家可以去看、保护工匠拆存、决定公开展示或封入军库；需要把它改成可重复使用的战斗载具时另行写清规则，当前不偷偷发放一套没有数值的无限法宝。\n\n## 九级的本领应该让这座关变小\n\n以下是入口提醒，具体施法仍须角色真正掌握、准备并满足成分、法术位、范围等条件。详情见 [第四幕规则备忘](../research/ACT4_RULE_NOTES.md)。\n\n- **Fly、Dimension Door 与普通绳梯。** 飞上 20 尺城墙、传送到已知的空地、带人越过干壕，都能成立。Dimension Door 不要求看见落点，500 尺内可按其条目描述目的地；地图已经给出可用空地，不等施法后把每个落点塞满石头。Fly 仍须专注，空中结束时处理真实坠落。\n- **Arcane Eye。** 可借箭窗、门缝与原本的孔洞侦察，按原法术得到视觉与移动。看到锁、门闩和绞盘位置就是有效情报，不再要求以肉身侦察一次才准使用。眼睛没有听觉或代替双手操作的能力。\n- **Passwall。** 本处石墙厚 10 尺，能在法术深度内形成通路；其至多 5 尺宽、8 尺高的通道足以让常见体型的人依实际空间通过，一小时不需专注。有人货适合就照常通行，不能突然加一层铁墙。法术结束后临时孔消失，若任务还需要长期通路，可以先到内侧开门或安排南路。\n- **Wall of Stone。** 现有两侧石基可作为修桥、坡道的连接与支撑。依原法术板数、尺寸、跨度与支撑限制铺设；专注满十分钟而成为永久石构后，确实留下可用的新路，不以“不是原桥”拒绝交接，也不要求再修一次同样的桥。\n- **Teleportation Circle。** 开场前先确定角色按规则知道的两个物质位面永久目的地。若实际已有合适目的地，队伍能在法术开放时间内把约定的人与物送走，就完成对应护送；消耗和人数通过时间照原规则。不能在玩家宣布施法时才把已经知道的节点全部禁用。\n\nDispel Magic 解决现场确有的持续法术，不会自行修好吊桥或清掉普通门闩。反过来，Mage 的真实法术也不因叫“仙家封门”就免于解除。永久化后的 Wall of Stone 按它自己的条目处理。\n\n## 撤退、休息与没能全办成的情况\n\n若队伍退出门区并停止攻击，韩升优先守住父亲与部下，韩变优先守住工匠，不追出关外长途猎杀。交战中的脱离、Opportunity Attack、Disengage 与实际移动正常结算，没有免费撤离传送。\n\n等候棚可以用来集合伤者，营地可供正常休息。四名对手没有自动补满的伤势或次数；经过足够时间并满足休息条件时，再按同样规则恢复。若两边休息一夜，第二天也可接着谈，不自动失去整幕。\n\n| 实际结果 | 本回怎么结束 |\n| --- | --- |\n| 依约完成离关、开门与交接 | 人按自己的选择去留，西岐取得约定关防，普通通路保持开放。可以直接进入庆贺与报酬。 |\n| 用能力、潜入、战斗或替代道路完成同一结果 | 同样是完整成功。已经死伤或被俘者的处境照实保留，不为了“和平结局”改写；已答应的保护条件仍须执行。 |\n| 人员已安全离开，关防或持续通路尚未交付 | 把营救和护送成果记下；路没有因为人救到了便自动开，也不把已送走的人抓回来。后续可以重谈、转交修路或完成大家接受的替代安排。 |\n| 已夺门，但父子与归乡者的去向尚未安顿 | 门已经夺到，不需再打一场证明。让玩家处理真实的俘虏、治疗、追赶或撤离问题；既有协议不会因胜利自动失效。 |\n| 双方决定放弃这处关口，完成经军方认可的替代通路与交接收束 | 依事先讲明的新方案算完成第四幕，不强迫回汜水再刷一遍。只说“我们以后会找一条路”尚不是已完成。 |\n| 暂撤、失散或被俘 | 根据实际人物动机和能力，进入救人、换俘、停战或重新商议。没有预定全员死亡，也没有名人忽然开门替队伍完成主目标。 |\n\n## 报酬与过关后的那一晚\n\n第四幕两回的总钱款为**全队 1,000 GP**。第七回已支付的 **200 GP** 不追回、不重复发；完整落实本幕目标后支付余下 **800 GP**。和平、潜入、飞行、法术开路、正面交锋或认可的替代方案，同样结算。\n\n只完成部分人员安全而通路尚未落实时，先保留已付的 200 GP 和真实成果，余款待收束；不要为了取余款把玩家逼回已经不想玩的同一场。可在明确新的可接受目标后继续完成，也可如实以部分结果转入后续主线。\n\n完整收束另交付以下两件奖励，均为现有标准物品，不是新造封神神器：\n\n- **完整一对 Sending Stones**。两块都交给小队，由玩家决定各自带着，或把其中一块留给哪位朋友。它们是 Uncommon 奇物，不需共鸣；触摸一块可依条目对另一块的携带者施放 Sending。任意一块成功施放后，整对都要等下个黎明才可再用；另一块无人携带时不会施放，也不消耗这次使用。不是无限通话，更不是两块每天各一次。\n- **一件 Weapon, +2**。由玩家选择现有普通武器表中的一种 Simple 或 Martial 武器，由西岐军械库提供相应现成成品；整队共一件。采用 SRD 标准 Rare 条目，不需共鸣，该武器的攻击检定和伤害掷骰获得 +2。保留所选武器原有属性，不额外附送法术、弹药或新型武器特性。当地可以替它起名字，名字不改变规则。\n\nSending Stones 的 Sending 保留动作施法与至多 25 个词、立即回复等原规则；中文桌按简短口信处理，不误读为只有 25 个汉字。跨位面才有法术写明的失败几率。若一块毁坏，另一块失去魔法。\n\n第一次解决第四幕，或第一次完成大家接受、足以推进主线的替代收束后，小队升至 **10 级**。第七回与本回原本都以 9 级游玩，不额外在谈成一次酒席后先升一回；重复开关、重复来领钱或反复撤退都不重复升级，也不叠加战斗 XP 升级。\n\n给玩家一个轻松的结束镜头。可以是众人在关楼下吃完早就凉了一半的饭，韩荣终于把腰牌放在桌上；也可以是韩升临走还嫌桥摇得不好，韩变回头说下次记得给工匠结工钱。如果他们有人没能活到这里，就把空出来的位置留着，让留下的人自己说话。\n\n程简将完整一对石头推到桌子中间：\n\n> “两块都在这里。你们想跟谁说话，自己挑。”\n\n## 下一幕：界牌关外的红气\n\n汜水通路的结果已经成立。青龙、佳梦的军情仍是另外两路的消息，不要求玩家再按顺序去把两关各打一遍。给队伍安顿、正常休息和使用奖励的时间，再让往前探路的人带回新消息。\n\n> 清早，东边山口上有一道红色云气，细看却像绷直的剑锋。回来的人把水喝完，仍旧下意识绕过桌上那柄新兵器。\n>\n> “界牌关前起了阵。来的人说，要问的不是谁有本事过关——他们要知道，谁肯替自己说过的话走进去。”\n\n这条消息把第五幕带到仙门纷争与诛仙阵。玩家在汜水放走了谁、护住了谁、把一块传讯石交给谁，都能成为下一幕真正可找的人；不是加减一项隐藏善恶分。名人可以提供消息和立场，尚未替小队决定下一场要救谁、站在哪里。\n\n## 本次会话留下六行记录\n\n这是方便下回继续的空白，不是测试或评分表。只记录实际发生的事。\n\n- 本次真正通行的路线，以及门、桥、南路的现状：\n- 韩荣、韩升、韩变和两名近卫的去向、伤势与承诺：\n- 自愿归乡者谁走谁留；程简与交接吏是否已入关：\n- 私物、合法军饷、公共军械分别由谁持有：\n- 两回累计领到多少钱；Sending Stones 分给谁；+2 武器选了什么：\n- 第四幕是否已完整收束、是否已升 10 级；下一回要联系的那个人：\n\n## 制作备忘\n\n韩荣父子、万刃车、献关动机及随后界牌关方向见 [第四幕原著备忘](../research/ACT4_STORY_NOTES.md)。本回让原著中的悲剧成为玩家能够改变的局面，具体交接、地图、人数、人物底线与所有结局均为本团编排。\n\n规则采用固定 SRD 5.2.1：Gladiator p.289、Mage p.305、Knight p.302、Guard Captain p.296；普通物件 pp.177–178；Lock p.98；遭遇预算 pp.202–203；Sending Stones p.243、Weapon, +1, +2, or +3 p.253。法术完整条目与查阅入口见 [第四幕规则备忘](../research/ACT4_RULE_NOTES.md)。没有新增开关点数、交通子系统、车辆战斗规则或自制神器；没有测试、模拟、回归测试或试玩。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n第七回同一份附约、同一批人物和资源继续，尚未选择可在本回选。门桥独立、居民自由、先走后交接和原1000GP照旧。额外附约不是原交关成功条件。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n第七回有偿附报同一份延续；未选且已听hanTerms可在此签。魏简争升迁、韩变拒独立背书，各有具体利益；不要让新附报替代或推翻已经谈妥的安全护送。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 9,
+      "title": "第九回：北门摘剑",
+      "level": 10,
+      "scene": "B009",
+      "source": "14_第九回_北门摘剑.md",
+      "text": "# 第九回：北门摘剑\n\nv0.7 · 四名 **10 级**角色 · 主持人草案 · 约一晚。前接 [今夜开关](12_第八回_今夜开关.md)，本回收束升 **11 级**，随后接 [幡下各有归路](15_第十回_幡下各有归路.md)。未进行测试或试玩。\n\n## 这一回，摘下的就是真剑\n\n**把北门的绝仙剑移离剑架，使它不再回到阵位。** 这一路由玩家负责；其余三路是预先约好的并行行动。在本回正式入阵的镜头开始前，三口剑已被取走，北门是本次诛仙阵最后的支点。小队做成，诛仙阵就真正破了，不再等某位天尊来补取一口“真正的剑”。\n\n绝仙剑不是诱饵，也不是离台即碎的赝品。本团以一把完整的 **Weapon, +3（Longsword）** 表现它：Very Rare，不需共鸣，该武器的攻击检定与伤害掷骰各加 3，其余长剑规则照原条目。既不因是仙剑自动给持有者熟练或精通，也不附带挥一下便杀尽全场的能力。玩家取得后可以使用、保留、赠予或协议交存，不强制上交。\n\n战前就把这张物品说明交给玩家。原著大阵的声势属于众人参与的一场战事，不是这把随身武器藏着一页尚未公布的无限效果。奖励说明从敌人持有到玩家取得始终相同。\n\n## 从关楼饭桌，到北门剑光\n\n汜水关的结果照实留下：韩荣父子活着便继续自己的去处，死者不复活；通路开放就继续开放。留出行军、安顿与正常休息的间隔。程简不在吃完饭后马上把小队推进另一场未休息的大战。\n\n临近界牌关，道行天尊请小队看一张极简单的图：东诛仙、南戮仙、西陷仙、北绝仙。\n\n> “原先北路由我摘剑。这回交给你们。我把看见的布置说清，你们选怎么进去。剑取下来后怎么用，也该由取剑的人说话。”\n>\n> 他看了一眼小队新得的兵器，又补了一句：“别把两把混了。北门那把剑脾气没有传言那么大，名头倒比你我都大。”\n\n他提供已经观察到的北门布局，以及守卫会发射力场、压慢动作的消息；不赠送新法术、掌心免死符或忽略所有防御的通行权。高层仙人的交战牵住通天与其余战线，是本场开始时双方已知的局势。玩家面对的具体危险，全部写在本地地图和两张数据卡里。\n\n先听玩家想借哪些旧关系：\n\n| 旧关系或物品 | 这次的实用帮助 |\n| --- | --- |\n| 董全仍友好、愿意传话 | 可说明北门无形守卫是能听懂话、有自己打算的风中来客。没有他，守卫自己也能开口，情报不锁在死人身上。 |\n| 韩变活着且愿意回话 | 提醒看石像手掌朝向：它能隔空出手，飞起来不等于已经安全。他不奉命返回战场代打。 |\n| 顾行舟或许照仍可联系 | 前者能翻译 Primordial，后者能讲施法与专注；本回无形客也懂 Common，翻译不是必备门票。 |\n| 攀云绳、传讯石、既有法术 | 按现有规则使用。绳能帮助上阁，石头能联系携带另一块的人；送给旧友的那一块不会又出现在小队背包。 |\n\n没有这些帮助，北门依然可以侦察和进入。给每名玩家一个参与筹划的机会：谁看路径，谁准备应对压慢动作，谁接剑，谁负责让人能撤出来？可以一人做几件，也可以临场改变。\n\n**钱款在出发前讲清：** 本回完成取剑、确实终止北门阵位后，军中向全队付 **1,000 GP**。下一回另有独立的 1,000 GP 委托；这次不扣下半笔钱等万仙阵。剑是这回实际取得的同一件法宝，不在结算时另外复制一把。\n\n## 入场前应知道的四件事\n\n1. 北门有一具石像守卫和一位看不见形体的守卫；没有每轮增加的兵卒。\n2. 石像会近身重击，也会朝远处射出力场；它还能施放真正的 Slow，能被解除或打断专注。\n3. 宝剑挂在有实墙遮挡的小石阁里，离地不高，普通挂扣不认人。取剑可以靠手、合法的远程操作或破坏剑架，不要求杀光守卫。\n4. 取剑后守卫不会自动消失。带剑脱离其保护区域、谈妥停手或使其失去阻止能力，才算把这一结果稳稳留住。\n\n道行愿把已知情况全讲清。玩家若还想看现场，外围北坡有能观察庭院的低石脊；Arcane Eye、隐匿观察或直接阵前喊话都能获得进一步信息。不要让取得可靠目击还要再掷一次“相信情报”的骰子。\n\n## 能直接画的北门小图\n\n以西南角 `(0,0)` 为原点，向东为 x、向北为 y，单位英尺。庭院约 **160 × 140 尺**；小队通常从北侧进入。红云、剑光与远处雷声只提供画面，不额外造成伤害、失明、耳聋或全场遮蔽。\n\n| 位置 | 尺寸与行动意义 |\n| --- | --- |\n| 北入口 | `(80,140)`，宽 20 尺，接阵外石坡。通道开着，没有自动落下的铁栅。 |\n| 西侧绕道 | 从 `(0,100)` 入场，绕过低石脊进入院西。地面可步行，不需先攀悬崖；从北侧阵外绕来约多走 180 尺。 |\n| 东侧坡道 | 从 `(160,50)` 入场，普通平缓坡道。场外可绕达，能接近石阁东墙。 |\n| 院中石墙 | `x45～85，y80～85`，高 10 尺、厚 5 尺。真实挡视线与直线通行，可绕两端或越过。 |\n| 矮石槽 | `x20～45，y35～45`，高 3 尺。对实际被挡住的攻击提供 Half Cover，内有浅浅清水。不是藏着酸液的陷阱。 |\n| 石阁 | 外廓 `x100～140，y20～60`，顶高 20 尺。西、东、南三面普通石墙厚 5 尺，顶为普通石板；北面也有墙，仅中央留门洞。 |\n| 石阁门洞 | 北面 `y55～60，x115～125`，宽 10 尺、高 15 尺，无门扇。能从合适角度看见里面；阁墙提供实际遮挡，不可隔墙射中剑架。 |\n| 剑架与挂剑 | 阁内 `(120,40)`，挂扣离地 4 尺。剑约 3 磅，挂在普通铁架上；周围有站位，不被石像身体填满。 |\n| 阁顶 | 20 尺高的平屋顶，普通表面。能借梯、绳或飞行到达；屋顶本身没有通到室内的暗门。 |\n| 南侧空地 | 图南缘接普通荒地，可离场；不是踏出一步即死的阵壁。 |\n\n默认石像站在 `(105,90)`；无形客在阁内 `(120,50)`。已有侦察发现它们走动，就按实际站位。不要把无形状态误作同时占据三个入口，也不要让石像隔着阁墙看见一切。\n\n北入口之外再走 200 尺是会合石坡。开场时把它标出来，便于玩家约定撤离点。两名守卫也必须按实际距离移动和追击；它们没有阵门间免费传送的能力。\n\n## 守剑者：一位认真，一位太认真\n\n### 石像：原卡 Stone Golem\n\n完整采用 **Stone Golem，CR 10 / 5,900 XP，AC 18、HP 220**。准备时打开 [第五幕规则备忘](../research/ACT5_RULE_NOTES.md) 中的完整原卡入口。\n\n它的本地任务是阻止未获原守阵者许可的人取剑，不能被冒充道行的一句话自动接管。它懂 Common、Primordial 和 Celestial（后两种为本具原卡允许的额外语言选择），但不会说话，也不是一尊需要被劝说回家的老兵。识别它的巡走与攻击范围、引开、阻挡、解除 Slow 或取得宝剑后甩开它，都是有效办法。\n\n它在每个动作中按原卡作两次 Slam 或 Force Bolt：前者近身重击，后者是 **120 尺**力场远射。不能因为上一回的构装体没有远程攻击，就假定这具也只能站在台下发呆。它的法术与防御也不补回旧版同名卡的条目。\n\nSlow 是充能后可用的附赠动作施法，依原卡 **DC 17**，需要专注。受到伤害后照常作专注豁免；Dispel Magic 可解除这项真实法术。它施放时免全部成分，2024 Counterspell 没有看见 V/S/M 施法的触发条件，不能因此使用；这不影响解除已生效的 Slow。不要给它未列出的传奇抗性。\n\n这具是构装生物，不是能被 Passwall 当成石墙开洞的非魔法物件。它也没有旧版针对非魔法钝击、穿刺、挥砍的免疫。具体状态免疫和其他特性照新版全卡，不凭“仙家石头”增加。\n\n### 无形客：原卡 Invisible Stalker\n\n完整采用 **Invisible Stalker，CR 6 / 2,300 XP**。他懂 **Common、Auran**，可以和小队正常谈话。身形看不见，不表示没有脚步、声音、位置、意愿或受伤后的反应；发现、隐藏和攻击仍按实际规则。\n\n第一次有人在阁前喊话，他可以回答：\n\n> “你们是来摘剑的，我是来不让人摘剑的。很好，至少今日没有谁把差事听错。”\n\n他接受的是守这一门的工作，不是永远为任何持幡人效命。若玩家用可核实的消息说明其他三门已经失守，他会认真考虑自己的处境，但不自动认输。若愿意给出真实且他认可的补偿，让他有理由结束这次受雇工作，或让他看到继续抵抗已没有可达成的目标，可使用 Influence 的意愿和态度规则交涉。\n\n不设唯一礼物或固定成交暗号；主持人可让他对小队某件**已经持有、愿意交换**的精巧物件感兴趣，并在交换前说清这是个人要价，玩家完全可以拒绝。他不接受空口承诺“以后封你最大的神位”，也不要求另一名角色替死。若谈妥退场，他按自己的移动离开，不反悔来填满战斗预算。\n\n若继续守剑，他用新版原卡的三次近战力场攻击，或依 Multiattack 替换其中一次使用 Vortex。Vortex 是同空间、体型符合条件的单目标动作；限制移动与说话的效果按卡处理，**不是全庭院沉默或永久禁魔**。玩家事前能从道行见过的情形得知：风会裹住人的口鼻，不要把负责言语施法的人独自送到他面前。\n\n原卡没有旧版 Faultless Tracker，也没有“雇主不见便消失”或“剑被拿走便死”的特性。他在场时恒有 Invisible 状态，其物理抗性不以攻击是否魔法为分界；用 +3 剑也不自动无视该抗性。See Invisibility、其他能实际感知他的能力与合适的范围效果照原规则起作用。\n\n## 三种入阵思路，都能把事办成\n\n### 一、有人拖住守卫，有人进阁取剑\n\n院中石墙能打断实际视线，阁的三面墙也能挡住力场弹。小队可让一人引出石像，其他人从东侧绕到门洞；也可先把无形客逼出狭窄入口，再换同伴进去。\n\n这不是预定的职业分工。战士能去取剑，施法者能拖住石像，游荡者也能站出来跟风谈价。敌人按眼前发生的事反应，不在玩家刚提出分工时便凭主持人的知识布满所有路口。\n\n取剑处没有重力封印。角色在挂扣旁能触及时，用一个 **Utilize** 动作解开挂扣并取剑；无需先解谜或作额外力量检定。战斗中同时承担其他动作，仍按正常行动经济安排。\n\n### 二、让已经学会的法术省掉步骤\n\nDimension Door 可以按已知的空间描述直接到阁内空位，不能因为阁墙挡视线就判无效。Passwall 可在 5 尺厚的阁墙开出通道；Fly、攀云绳或普通梯子可以改变接近路线。法术只有角色真正掌握、准备并符合施法条件时才可用。\n\nMage Hand 也能依其完整条目操作这个普通轻小挂扣、搬起约 3 磅的剑；满足距离、控制动作和携物限制，就让它奏效。它不是生物，守卫不能对着一只魔手施加只影响生物的减速或缚住状态。守卫仍可以主动移动到看得见角色的位置、保护剑架或攻击真实的敌人，但没有免费打断每次物品操作的反应。\n\n若玩家把剑合法传送或搬运到阁外，阵位就已经失去这口剑。不要追加“还得用肉身摸一次才算”。后续是否仍有追来的守卫、剑会不会被抢回，按实际行动处理。\n\nArcane Eye 的侦察能看清阁内与普通挂扣；它没有手，不能自己取剑。隐形能改变相应视线，但不等于无声，也不让任何生物忽略全卡已有感官。判定前给出足够可观察的线索，不靠新增 True Seeing 防住所有计划。\n\n### 三、破坏剑架，或让一名守卫先退出\n\n普通铁剑架的有效支撑部分采用 **Small 坚固铁物件，AC 19、10 HP**，免疫毒素与心灵伤害。能合法指定物件并确实有路径的攻击可以破坏它；剑架断裂，剑落地，便脱离原来的固定阵位。阁墙仍会挡住实际射线，不能从院外隔墙瞄架。\n\n这是拆普通支撑，不是随手杀死石像。被击落的真剑仍在阁内，是同一件可以捡起的魔法武器；不是因为“任务完成”就免费飞入背包。玩家若想直接毁剑，先讲明魔法物品的正常抵抗与后果，依据所选条目处理，不把剑架的 10 HP 当成真剑的属性。\n\n无形客可以单独退出，不要求石像也同意。石像则不会因为另一位受雇者说走，就自动改变原命令。分开两者的责任，往往比从头削光所有 HP 更有用。\n\n## 守卫怎样反应，什么时候收场\n\n正常全员在场时，总敌人为 **1 Stone Golem + 1 Invisible Stalker = 8,200 XP**。四人 10 级预算为低 **6,400**、中 **9,200**、高 **12,400 XP**；只用于选卡参考，未作平衡测试。无形客退走后只剩一具石像，主持不补来另一个。\n\n石像优先阻止正在取剑或持剑离开的人，使用真实移动、攻击和 Slow；无形客可拦下单独穿行的人，也会判断自己是否要继续受伤。两者都没有传奇动作或“玩家每走一步就额外打一次”的能力。Force Bolt 是原卡攻击，不是可被 Counterspell 打断的法术。\n\n**一旦剑确实离开阵位，先立即承认变化：** 北门剑光断开，阵上红气失去最后一处牵引，其他战线的人能看见这一结果。诛仙阵至此已破；其他三剑都已撤走，仅将这一剑重新挂起也不能重建整场四剑大阵。守卫仍是原来的生物，未失去行动能力者可能追取落在附近的剑，不会瞬间爆炸或消失。之后争的是这一口剑与同伴的安全，不是隐藏的第二次破阵任务。\n\n石像的保护区域限定在这处庭院和四周 **30 尺**内，出发前道行能说明这一观察。它会在该范围内拦截取剑者，超过范围便回到剑架处；这个本地守卫命令不变成它的法术射程。若玩家仍在其可攻击距离内持续攻击，它可以在保护区域内正常还击。无形客不为此次工作追到阵外营地；谈妥退出后更不会远程索命。\n\n保持剑离位并带离可被立即重新挂回的局面，或者已经解决守卫、明确不再复位，便完整完成本回。这里不是要求所有人必须踏过同一扇门；东坡、南荒地、传送或玩家找到的退路都有效。\n\n取剑只用了一轮也可以结束这一核心行动。余下时间演阵外的人认出是谁出来、谁想先摸摸仙剑、谁反而把剑鞘收紧；不要为凑一晚再塞一只必打首领。\n\n## 可以退，也可以再来\n\n庭院没有无形边界墙。正常移动、脱离攻击与 Disengage 仍须处理；进入安全会合点不是全员瞬移。玩家可以带伤者撤到北坡，或用其他已知出口离开。\n\n短休与长休按正常规则。若小队尚未取剑就撤出，其他三剑不会长回去；北门仍未完成，由小队再制定办法。两名守卫保留实际伤势、次数与去向，只有满足各自恢复规则才恢复，不趁玩家出图刷新。\n\n没有未告知的三轮崩阵倒计时。若队伍决定长时间离开，先公开局势会怎样变化：双方可能停战重议，或原守阵者准备带剩下的剑撤走。玩家可以追踪、拦截、交涉，或者与盟友商量新的结束方式；不在幕后宣布神仙已经替他们完成任务。\n\n| 实际结果 | 继续怎么讲 |\n| --- | --- |\n| 取得真剑，阻止其复位，队伍能够脱离 | 本次诛仙阵结束，剑归取得者按约处置；正常结算。 |\n| 拆架使剑离位，守卫也已解决或愿意停手 | 阵已结束。剑留在现场等小队实际领取、赠予或封存，不另外生成奖励副本。 |\n| 剑已离位，但还在争夺 | 破阵成果已经成立，剑的归属和同伴的脱离仍用真实回合处理；不假定敌人自动投降，也不恢复四剑大阵。 |\n| 一名同伴先带剑走，其他人还在庭院 | 剑的成果保留，同伴的脱离仍要处理；不将持剑者传回去陪打。 |\n| 取到剑后自愿交给可信的保管者，双方落实不复位 | 一样完成目标，交出是玩家选择；保管条件记在桌边，不能由名人单方面没收。 |\n| 暂撤、被俘或放弃原计划 | 保存伤势、位置、俘虏和已发生的事，进入营救、换俘或重新谋划；没有原著规定的必死角色。 |\n\n## 取剑之后，先让角色说一句话\n\n小队完成本回，获得全队 **1,000 GP**，并升至 **11 级**。没有击杀也同样结算；战斗 XP 不再叠加升级，同一口剑不反复计功。未满足恢复条件时，升级本身不免费补满所有已消耗资源。\n\n道行见到真剑，先问人是否都回来了，再问怎么取到的。他可以请求把剑借给后面的战事，也可以讲自己的看法，**玩家可以拒绝**。拒绝不扣已赚报酬，不让剧情停在“不同意就没有下一回”。\n\n让四个人各选一句接话：\n\n- 我本来以为最难的是________，结果是________。\n- 这把剑以后绝不该用来________。\n- 我想让________知道，我们做成了。\n- 仙人们若再吵起来，我最想问他们________。\n\n这是角色的想法，不会变成永久誓约惩罚。有人后悔、争辩或改变主意，也能继续演。\n\n诛仙阵到万仙阵之间留出行军与休整，两阵不是同地同日。小队正常学习11级新能力；已经获得 Teleportation Circle 的人保留其已知目的地，新获得六环法术者按职业和准备规则选择，不因下一回有既定路线就禁用。\n\n万仙阵的消息到来时，一名小队认识、仍活着且愿意联络的人可以先表达自己的立场：“这一次，我不想再进去。”没有适合的旧人，就由下一回的当地退阵者开口，不临时把一位玩家写过的亲人绑在阵里。\n\n随后有人带来长耳定光仙的口信：\n\n> “剑既然到了能自己拿主意的人手里，幡是不是也可以？”\n\n## 制作备忘\n\n第78回的北门绝仙剑原由道行摘取；本团把这一路实际交给玩家，其余三剑的取下为并行战事。原著四剑对应与第84回的文本差异见 [第五幕原著备忘](../research/ACT5_STORY_NOTES.md)。两名局部守卫、保护区域、地图与实际物品数值是本团编排。\n\nStone Golem、Invisible Stalker 与 Weapon, +3 均完整采用 SRD 5.2.1；Slow、Counterspell、Dispel Magic、隐形与物件操作按当前规则，详细页码与限制见 [第五幕规则备忘](../research/ACT5_RULE_NOTES.md)。本回没有新夺宝点数、阵法等级、诛仙印记或法宝认主子系统。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n公开收据由实际生还韩变与可交谈无形客核销，不再扣钱；韩变无法回话则自己一小时核账。限名附约出现两Scout中立封签护卫，书记魏简删改本人行为条款。调查DC15失败一小时得到原件可无骰撤封；交涉DC15失败半小时，仍可查账、60GP押金、半小时绕行。主动武力按钮真正开始原地图先攻，不自动判赢。原真剑、法师之手、退路和1000GP不变。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n有偿附报可patronProbe调查DC15，失败加半小时但仍取得删录副本。patronSeal知情确认不再给钱，继续排除新异议、失独立委托；patronExpose退200GP加60GP补印、一小时更正，恢复工兵新增80GP委托与公账资格。原真剑、入口、法师之手、1000GP不变。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 10,
+      "title": "第十回：幡下各有归路",
+      "level": 11,
+      "scene": "B010",
+      "source": "15_第十回_幡下各有归路.md",
+      "text": "# 第十回：幡下各有归路\n\n第五幕《仙门风暴》后半 · 四名 11 级角色 · 主持草案 v0.7 · 未测试\n\n诛仙阵已经破了，门人之间的话却越来越难说。有人认为退一步便是背师，有人已经不想再为别人一句气话出手。万仙阵起时，长耳定光仙握着六魂幡走到了阵外。他知道有人会来找他，却还没有决定幡该交给谁、自己该往哪里去。\n\n本回要解决的事是：**让这一路以幡逼人参战的威胁真正停下，解决眼前的追索，并决定这件幡的去向。**劝定光明确拒令、改变追索者的条件、取走幡后确保其不再参与此次胁迫，或打退真正阻拦的人，都能完成。玩家无需使万仙阵的每一个人同时停战，也不必先杀死一个持宝人。\n\n整幕钱款分成两个独立目标：上回摘剑的 1,000 GP 已经归上回；本回完成另得全队 1,000 GP。完整解决本回后升至 12 级。没有为本回强制指定一条必须付出人命的结局。\n\n## 开场前，接住上一回的决定\n\n诛仙阵与万仙阵并非同地同日。给队伍幕间时间，正常休息、升级、疗伤，与自己想见的人谈话。绝仙剑仍是上一回那件完整 **Weapon, +3（Longsword）**，持有者按已作的选择确定；没有大人物在开场一句话把它收走，也不把已经摘下的剑重新挂回另一座必打机关。\n\n出发前选一个愿意联系小队的人。优先用上一回玩家点名的师门联系人、旧友，或持有另一块 Sending Stone 的人。这位联系人只说自己知道的事，不自动获知所有战场的动向。若没有合适旧人，就用退阵者**许苓**：她是来替同门做饭、如今打算回家的普通人，需要数值时用 Commoner。她已走出危险地带，来告诉玩家自己看见了什么，不是又一名等着从牢里救出的工匠。\n\n> “那位长耳仙人，先把幡卷起来了。我以为他要拦我，他却问我：‘回去之后，谁给你开门？’我说我娘。他很久没说话。”\n>\n> “现在有人去找他。他坐在断壁旁边烧水，一直没进阵。”\n\n沈砚希望有人去听明白定光的意思。他能为这一路停用幡、停追与安顿去向联系相应的人，也准备了本回报酬。他不替小队作战。若玩家提出先传讯、请定光来谈，或请可信的师门联系人出面，按实际可联系的人和法术办理；不要求先穿过一个入口才算开始冒险。\n\n问玩家一句就够：“你想让哪位熟人知道，你带着那口剑走到了这里？”把答案带入后来谈话。旧友愿意出声、留在后方或者拒绝前来，都按其经历处理；已经离开、重伤或死亡的人不为凑齐演员重新出现。\n\n## 先说清这面幡能做什么\n\n本团的六魂幡是一件真正可以被交出、夺得、保留并继续使用的魔法物品：**Wand of Fear，Rare，需共鸣，不限施法者。**外形是短杆上系着六条小幡尾，持用方式和所有数值均按原魔杖条目。那六个名字——老子、元始、接引、准提、武王、姜尚——是写在布上的报复誓词；它们不产生隔空寻人、跨位面索命或无豁免即死的能力。\n\n见面时定光愿意把实际用法说出来，沈砚也知道它会令人畏惧、逃走或伏下。玩家在决定争夺和保留前，应得到这些信息：\n\n- 最多 **7 充能**；本回开始时定光已共鸣，幡为满充能。之后沿用实际剩余量，更换共鸣人不恢复充能。持握并以 Magic 动作发动。\n- 消耗 **1 充能**施放 Command，只能选 **Flee** 或 **Grovel**；消耗 **3 充能**施放 Fear。两种法术均为 **DC 15**，完整效果、目标与持续时间照 2024 原法术。\n- Fear 是实际的 **60 尺锥形区域**、专注至多 1 分钟，影响范围内所有符合条件的生物，不随意豁免朋友；不是喊出某人姓名便命中。豁免失败者丢下所持物件并恐慌，在各自回合沿最安全路线 Dash 远离施法者；无路可走时不强行继续逃。回合结束时与施法者没有视线，才再作感知豁免解除。它不能强迫目标沿明显危险的路跳进火墙或深坑，完整效果照 Fear 条目。\n- 每个黎明恢复 **1d6+1 充能**。用尽最后一个充能时掷 d20，掷出 1 则物品化灰；这是取得前就公开的原条目风险，不是玩家拿到后主持人才添加的损坏剧情。\n- 幡被交给别人时，已施出的 Fear 不会自动结束。可以解除真实法术、打断施法者专注，或等其正常结束；新持有者须依法完成自己的共鸣才可使用，不能从定光手里接过来便立刻摇幡。\n\n共鸣需要接触、专注于物品完成一次短休；别人成功共鸣会终止旧共鸣，不要求先杀死定光。他也可照规则主动结束自己的共鸣。若需要用短休鉴定同一物品，那与共鸣是分别进行的短休，不能一次休息重复计算。\n\n把名字剪下、洗去或改写，可以表达一个人的决定，但不删除或增加物品的魔法。它也不会因为落入玩家手里才失去充能、变成假货，或自行飞回原主。若毁掉幡，场景中没有第二件同名宝物补发。\n\n玩家决定毁幡前，先说明真正的魔法物件是**木质短幡杆**：本场选作 Tiny 坚固木物件，AC 15、5 HP，依普通魔法物品规则抗所有伤害，并有物件的毒素、心灵伤害免疫。攻击和能力须能合法以它为目标，所用伤害也须能损坏眼前材料。只撕去布尾并未摧毁完好的杆；Dispel Magic 不能直接把这件永久魔法物品消魔。愿意交出且无其他干扰时，可以花实际时间用合适工具处理，不必强制展开一场对木杆的逐轮战斗。\n\n## 石沟边的三句话\n\n定光坐在一段旧石壁后面。他把幡卷在膝上，用另一只手护住快要吹灭的炉火。见到玩家时，他先看一眼绝仙剑；剑不在小队手里，就问它最后交给了谁。\n\n> “你们能决定那口剑交给谁，我也想决定这面幡还拿来做什么。”\n\n他不要求玩家先认同自己。他承认曾经答应听令摇幡，也知道有人准备拿它吓回不肯参战的人。他如今不愿继续，却怕一转身就被两边当成随时能卖主求荣的人。\n\n定光最在意三件事，玩家回应其中真正相关的部分就可以继续谈：\n\n| 他会问的话 | 他实际需要什么 |\n| --- | --- |\n| “我不摇了，你们还要我先跪下么？” | 可以公开拒绝此次命令，不以马上换投另一门、供出所有同门或受辱为前提。 |\n| “我放下它，谁替我把话讲完？” | 明确由他本人、玩家或一位真实愿意出面的联系人，向眼前追索者说清拒绝及幡的去向；不是无人认领的一句“以后再说”。 |\n| “若你们也拿它逼我走呢？” | 说明实际保管人，以及眼下是否会用它强迫他或退阵者参战。他会参考小队此前对俘虏、韩家父子和董全的真实做法。 |\n\n他默认愿意商量，不主动用幡打开战斗。若玩家提出让他带幡隐居、把幡交给双方信得过的人、交给小队保管，或者当面留下拒令的话后自己离开，都可以谈成。没有“只能交给西方”这个隐藏答案。他也可以选择仍留师门，只拒绝眼前这项差事。\n\n若玩家持强硬立场，也给他真实回答。他可能愿意先交幡、接受暂时看管或答应面对质询；他不会因为一次高骰点便同意自杀、任人奴役或伤害所有同门。已有具体可接受方案便成立；只有态度仍犹疑、结果不明时才按 Influence 处理，不用连续三次交涉检定凑进度。\n\n谈到去向时，让定光把水倒出来。壶口缺了一角，他一直先把缺口转向自己。这样的小动作，比宣读他的全部生平更适合让玩家决定是否愿意相信他。\n\n## 追索者也有自己的答复\n\n**赤炉客**穿着火云纹长袍，影子有炉口大小。他是本团出场的一位追索仙客，数值完整采用 **Efreeti**；仍是 **Large Elemental**，不是改成 Humanoid 的术士。此个体不具有稀有的 Wish 能力，也不靠一句“仙人”额外获得法术。\n\n他与一位火灵**烛尾**一同来接定光和幡。烛尾使用完整 **Fire Elemental**，有自己的意愿，不是赤炉客倒下时自动消失的召唤特效。\n\n赤炉客原本相信定光会照约带幡回去。他要对等待答复的人有所交代，也不愿公开承担“把宝物交给仇家”的责任。默认他先在石沟东侧停下交谈，烛尾留在离人群更远的东南侧。没有一见面就把未参战的人圈进火墙的开场袭击。\n\n> 赤炉客：“先前说好，由我来接你。你现在要我带什么话回去？”\n>\n> 定光：“带我的话。不要带一个已经不愿意的人。”\n\n赤炉客可能接受以下安排，玩家也可提出其他能解决其顾虑的办法：\n\n- **亲耳听完拒令。** 定光当面说明不再以幡驱使退阵者，并接受日后在双方认可的安全地方讲清自己做过的事；赤炉客带回原话。幡由谈定的人保管，赤炉客明确停止本次追索。若他只欠一个真实答复，这便够了，不要求玩家先到别处跑三趟。\n- **当场联系有权接话的人。** 用 Sending、已安排的接应或其他实际途径，让接话者确认收到拒绝或接受会面。赤炉客可以留下听完答复、再决定退走。对方没有权限承诺全线停战，就只谈这一路；一次回信也不被主持人自动扩大为全天下都已和解。\n- **保留物主与保管人的区别。** 愿意提出第三方暂存的双方，要当场确定谁接收、物品实际交到哪里，以及这次不再拿它逼人参战。已有愿意接收的联系人和可达方式就能办，不凭空增加密库钥匙任务。赤炉客接受后按约退走。\n- **把幡带回，但用途改变。** 若玩家和定光都愿意，赤炉客可以带幡回去，同时接受并说出明确承诺：本次不会用它逼退阵者或谈判者重新参战。让他向眼前的人宣布这个改变，并停止抓人；不是嘴上应允、下一镜头照旧发动。玩家可以要求见证或同行，也可以不接受他的保证。\n\n烛尾关心的是自己是否又会被当成开路的火种。它愿意帮助朋友，不愿为了别人逞怒一直烧到最后。若能交流，玩家可以分别问它的打算；赤炉客和它并非一个共用意志。它获准离开、认定本次差事已经结束，或接受自己的退路后，就实际退出，不由另一只相同火灵补位。\n\n赤炉客、烛尾使用原卡语言。赤炉客可以依原卡消耗当日 **Tongues** 解决语言问题；这个施法不是免费永久通晓。定光的 Mage 原卡可选语言在本场安排为包括 Primordial，以便他能传达双方原话；若顾行舟本来愿意同行，他也可按自己已知的 Primordial 协助。Primordial 与相应元素方言互通，不把译者的名字变成唯一通关钥匙。\n\n### 把熟人的立场放在桌上\n\n选一位已有关系、愿意说话的人，或者让许苓在离开前说一句。不要一次让所有熟人回来开评议会。\n\n- 被小队放走过的人可以说：“我能站在这里，是他们当时肯让我自己选。”\n- 留在师门的联系人可以反对交给敌方：“我赞成停手，但宝物交到对面，明日还能听到我们的解释么？”\n- 想结束这段战事的人可以直说：“我不需要你替师门原谅我。我只要你别挡着回家的路。”\n\n这些话给玩家可以回应的难题，不产生隐藏阵营积分。小队若曾违约，对方可以指出那件具体的事；玩家可以道歉、作出可兑现的新安排，或承担对方不肯信任的结果。不能用一条“天命判定”抹去已经实际做到的善意。\n\n## 可画的战场：断壁石沟\n\n仅当有人确实决定动武时进入战斗。采用约 **150 × 150 尺**的露天旧营地，西南角为 `(0,0)`，每格 5 尺。平地视野清楚，没有额外的全场仙气伤害。\n\n| 位置 | 可直接画下的地形 |\n| --- | --- |\n| 西侧到场处 | 默认小队在 `(20,75)` 附近分开站位。西边界全部开放，来时的路由此通出。玩家选择其他接近方法时按实际位置开始。 |\n| A 石壁 | `x=45～50，y=55～95`，高 12 尺的完整旧石壁。阻挡实际视线与效果路径，依位置提供掩护；可以绕两头、攀爬或飞越。 |\n| B 石壁 | `x=85～115，y=105～110`，高 12 尺。北侧到场的人能借其接近，也能从两头离开。 |\n| C 石壁 | `x=105～110，y=35～70`，高 12 尺。赤炉客与烛尾之间并非处处有直线视野。 |\n| 定光的位置 | 开场在 `(80,85)`，壶与小炉在旁边；幡卷在膝上、由他持握。没有藏在无法说明的随身异空间内。 |\n| 追索者的位置 | 赤炉客在 `(130,95)`，烛尾在 `(130,55)`。二者各按 Large 体型占位；默认地面到场，开始后照原卡移动。 |\n| 西南低沟 | `x=15～95，y=25～35`，宽 10 尺、深 5 尺，干燥碎石底为 Difficult Terrain。坡面可以正常攀出，平地可绕两头；不额外要求每步掷骰。 |\n| 东北缓坡 | `x=115～150，y=115～150`，缓升至最高 10 尺，正常移动。没有凭空获得的攻击优势；好处是实际视线和路线。 |\n| 其他出口 | 北、东、南边界均可离开。退阵者和不参战的联系人默认已走到北侧 200 尺外的小路，不集中摆在法术模板里。 |\n\n石壁是真正存在的普通石头。按具体能力，Passwall 可以开洞，攀爬绳和飞行可以越过，传送可以跳过阻挡；不临时镀上阻断玩家法术的金属。若要破坏某一段，再按实际尺寸和物件规则处理，不把砍掉一角等同于整段自动粉碎。\n\n没有固定的“第 3 轮天火落下”。远处万仙阵的声响只是气氛；本场的每一次伤害、控制和传送，都必须来自场上人物实际拥有、实际使用的能力。\n\n## 真要动手，先让人知道热从哪里来\n\n赤炉客到场时，附近旧石头已经有被高温烧裂的痕迹。他会警告：“再往前一步，我会立火墙。”让有见识的人知道这是 **Wall of Fire**，而不是声称范围无边的仙家劫火。烛尾靠近时则有真实热浪与飘出的火星；说清它身边很近就可能被点燃。无需先让角色吃一轮伤害才允许知道有危险。\n\n| 参战者 | 原卡与本场行为 |\n| --- | --- |\n| 赤炉客 | 完整 Efreeti，CR 11 / 7,200 XP，AC 17、HP 212。他首先要阻止幡被带离或迫使对方重新谈判，可以守出口、截住持有者或用真实法术改变路线。得到可接受的答复后能停手，不要求战至 0 HP。 |\n| 烛尾 | 完整 Fire Elemental，CR 5 / 1,800 XP，AC 13、HP 93。它通常支持赤炉客，但能独自退走，不会凭空穿过完整石壁。它的火焰效果照原卡结算，不扩成全场被动伤害。 |\n| 长耳定光仙 | 完整 Mage，CR 6 / 2,300 XP，AC 15、HP 81，另有已共鸣的这一件 Wand of Fear。他默认不参战，先护住幡与自己；决定帮谁之后才使用实际动作、法术和物品充能。原卡用于这一次出场，不给传说中的仙人排实力名次。 |\n\n事先准备三种完整原卡。只打赤炉客与烛尾为 **9,000 XP**，四人 11 级官方参考预算为低 7,600 / 中 11,600 / 高 16,400 XP，不使用 2014 怪物数量倍率。这不是实测难度。不要因为定光站在场上，就自动把三人加成共同敌队。若定光实际加入某一方，按真实站队、在场援手和资源说明局面，不能一边让 Mage 免费帮忙，一边仍把它描述成同样难度。\n\n赤炉客每次 Multiattack 是三次 Heated Blade 或 Hurl Flame，任选组合；前者近战 +10，造成 2d6+6 挥砍加 2d12 火焰，后者射程 120 尺、+8，造成 7d6 火焰。他选择正常施法动作时，不会同时免费打完三下。飞行 60 尺、可悬浮是真实能力；烛尾只有地面速度 50 尺，不能随其飞起。赤炉客免疫火焰、有 Magic Resistance，没有传奇抗性。\n\n赤炉客的 **Wall of Fire 为七环，每日一次，DC 16、8d8 火焰，专注至多 1 分钟**。实际范围为原术的至多长 60 尺、高 20 尺、厚 1 尺墙，或直径至多 20 尺的环墙。放下模板时说明哪一侧是热侧：出现时墙内目标作敏捷豁免，失败全伤、成功一半；之后在墙内或热侧 10 尺内结束回合，以及每回合首次进入墙的伤害，照原术处理，不再另给一次任意豁免。墙体不透明，冷侧不自动产生热侧的伤害。\n\n角色可以打断专注、以 Dispel Magic 解除实际火墙、利用开放出口绕行，或使用合适的移动能力。普通驱散检定对这道七环法术为 DC 17。赤炉客施法仍须满足其条目，Counterspell 也看真实触发条件；不能同时专注火墙、Invisibility 和 Major Image。不要把“火墙”画成不论站在哪里都持续受伤的整场天气。\n\n烛尾每次 Multiattack 为两次 Burn：近战 +6，每次 2d6+3 火焰并点燃符合条件的目标。在**它自己的回合结束**，10 尺光环内的生物受 1d10 火焰，并点燃其中的生物与可燃物，不区分敌我；每回合首次进入某生物格的 Fire Form 另按原卡结算。Burning 的持续伤害是被燃烧者自己回合开始 **1d4 火焰**，可用动作倒地打滚、浇灭等结束，不误用旧版每回合 1d10，也不重复叠上多个燃烧计时器。石沟已经留有足够绕行空间，定光不会在友好的烛尾身边站着被烧、又被叙述成毫无影响。\n\n若定光使用幡的 Fear，沿安全路线退开与躲到石壁后面都可能有用。Fear 不能使人冲进明显危险的火墙；没有安全路时按原法术处理，不追加跳火或自伤。物品施法免成分，不符合 2024 Counterspell 所需可见 V、S 或 M 成分触发；其已经产生的法术仍可被 Dispel Magic 解除，Fear 的专注也照常会断。赤炉客等原卡的正常施法不能借此一概宣布反制无效。\n\n### 不必把所有血条清空\n\n**把答话送到对方耳边。** 战斗中的一句短话可以提出明确停战条件。若一方已经愿意停手，让其真正停止攻击、退开或等候答复。需要长谈就先停战，不要求玩家在持续挨打时花三整轮重复同一个说服动作。\n\n**先争到保管权。** 愿意交幡的人可以照正常物件交互把它交出。敌人仍持握时，不能用一个没有依据的 Sleight of Hand 就当场从紧握的手中免对抗取走；采用角色真正拥有的夺取、控制、迫使弃物、失能或其他合适能力。若幡落地或已被放下，位置就按地图记录，任何依法触及它的人都可拾取。带走以后是否能立刻发动，仍取决于自己的共鸣。\n\n**隔开追索者。** 石壁、移动、控制和传送都能把不同人分开。赤炉客被挡住时，烛尾可以选择留下、离开或重新谈，不能自动共享视线与意志。玩家安全带幡离开以后，可从安全位置继续完成追索方的答复和停追；已取得的物品不会因交涉尚未结束便倒回原位置。\n\n**逼退而非逼杀。** 赤炉客明显处于不利、同伴已退出，或者已经听到足够交待时，可以说：“今日我把你这句话带回去。”接受退让就保留真实结果。他的离场、飞行或传送按现有动作与能力处理，不因他说退便获得额外免伤回合；也不在退出地图后立即刷新全部资源重来。\n\n**按自己的办法结束。** 角色已有的高环控制、驱散或放逐等能力可以直接改变战局，依法结算。Disintegrate 对这两位元素生物照生物豁免与伤害处理，不把火焰外形当成可无豁免移除的物件。Banishment 若依法专注满一分钟，可以将 Elemental 送往相关位面；不沿用旧版只看原生位面的裁定。赤炉客仍拥有自己的 Plane Shift 使用次数，但不会为了抹掉本次成果立即在原格免费回来；一次败退后，他可以带着听见的拒绝交待此事，无须追索到底。Plane Shift 不能强行带走不愿同行的人。\n\n处理完实际阻拦并使本次追索终止，就结算目标；不要以“这样太快”为由马上补上同样一队敌人。短暂控制或临时逃出范围尚未解决后续追索时，讲清还欠的只是这一件实际问题，不取消已经得到的安全与自由。\n\n## 没有打起来，就把告别演完\n\n方案已经谈成便执行。定光亲自把幡递过去、收回自己的怀里，或按约交给那位愿意保管的人。赤炉客把答复再说一遍，确认自己听对了；烛尾愿意离开，就向没有人的空地走去。没有第二个追索队等着在喝完水时出场。\n\n让玩家决定最后想对谁说话。定光可能问持绝仙剑的角色：“你以后还要拿它做什么？”师门联系人可能愿意留一条联系办法，也可能说需要时间消化今日的选择。这些人没有因为谈成停战就变成小队永远随叫随到的部下。\n\n许苓若仍在附近，可以回来取自己落下的饭勺。她看一眼那壶凉水，问要不要重新烧。若她已经走远，就让这个收尾落在定光自己身上：他终于把幡放在一旁，两只手拿稳了壶。\n\n## 结局按真正做成的事记录\n\n| 发生了什么 | 如何收束 |\n| --- | --- |\n| 定光明确拒令，幡去向已定，追索者接受并停止这一路胁迫与追赶 | 完整成功。幡可以由定光、玩家或实际愿意接收者保管，不需统一交给某位名人。 |\n| 玩家取得、封存或毁掉幡，并击退、说退或以其他有效方式结束现行追索 | 同样完整成功。伤亡和物品损失照实保留，不要求先改成和平镜头才领报酬。 |\n| 幡按新协议返回，但本次逼人参战已经实际取消，定光与退阵者去留自由 | 若各方真正执行此安排，也是完整成功；不把“交回宝物”本身等同于输掉冒险。 |\n| 已取得幡、定光已脱身，但追索仍明确持续且尚无安全安排 | 保存已有成果。从安全位置再答复、谈条件或面对实际追踪能力；不把被救出的人和已得物品重置。暂缓本回的完整结算。 |\n| 暂退、被俘或有人死亡 | 依实际动机继续停战、换俘、追讨或重新选择目标；不预定团灭，也没有神仙赶来代做本处最后一步。 |\n\n战斗脱离、休息与追踪使用正常规则。赤炉客有自己的来意，不会无限召出手下；长耳、烛尾同样不会无条件追杀已离开且不再构成眼前威胁的人。赤炉客若在此死亡，Efreeti 的 Elemental Restoration 使其在 1d4 天后于火元素位面获得新身体；这不是当场第二阶段，也不会一并复活烛尾。是否再见与届时为何再见，依已经发生的事和他的选择安排，不能拿复生自动取消本次成功。\n\n若对话或剧情时间足够满足正常休息条件，各方才能按规则恢复，不在每次镜头切换时补满 HP、次数或幡的充能。怪物原卡的每日能力按长休恢复通则处理，物品另写的黎明恢复照物品原文。\n\n## 报酬、物品与十二级\n\n这一路的主目标完整收束后，沈砚经约定渠道支付**全队 1,000 GP**，和平解决与战斗解决相同。上一回已经完成的摘剑报酬不因本回暂退或意见不同被追回，本回也不预支后再强迫玩家接受某种结局。\n\n沈砚另交出自己备存的一件 **Cape of the Mountebank**，本地可称“遁烟披风”：Rare 奇物，不需共鸣。穿戴者用 Magic 动作施放 Dimension Door；使用后须等到下个黎明才可再次使用。**离开处**留下的烟使原空间 Lightly Obscured，持续至穿戴者下一回合结束。Dimension Door 可传送至多 500 尺，可携带施法时 5 尺内的一名自愿生物；落点与占用位置后果均按完整原法术，披风不额外获得不限次数传送。\n\n> 沈砚把披风抖开，抖出一股很淡的烟味。\n>\n> “它能帮你走到想去的地方。往哪儿走，就不替你选了。”\n\n六魂幡是场景里原有的**一件** Wand of Fear。玩家若取得并选择保留，就另外真实拥有它；若归还、留给定光、由第三方保管或毁掉，披风不会把它复制一份。幡的充能消耗、共鸣人和末充能毁损结果按实际记录。取得一件物品不附赠原主人所有尚未施放的法术。\n\n首次完整收束本回后，小队由 **11 级升至 12 级**。不要求杀死定光、赤炉客或烛尾，也不要求为了“应劫”再毁掉一件玩家想留的宝物。章节升级不与战斗 XP 重复叠加；重复谈妥、重复出入同一营地都不再升级。升级本身不代替正常休息恢复。\n\n## 朝歌还在前面\n\n万仙阵中其他人的去向可由军情、亲友来信和之后的选择慢慢显露。本处停幡、停追已经由玩家做成，不需要某位仙人后来赶来重打一遍才能生效；这也不等于远处全部战斗从未发生。\n\n给玩家一个能够自己选人的传讯时刻。若 Sending Stones 此次仍可使用、另一块也有人携带，可以按原条目发出一句消息；若已经用过，就等下个黎明或采用其他实际办法，不额外送一次免费通话。\n\n> 风小了之后，最先听清的是东去行人的脚步。有人问起朝歌的城门，也有人只想问今晚哪里能买到热饭。\n>\n> 你们手里仍有自己决定留下的东西。如今，可以给一路上某个人报个平安。\n\n让回话回应真实关系：陶七可以问他们回来还坐不坐船；若北山借路已经落实，孟平可以说那条路一直有人用；韩家父子若平安离关，便说自己已找到落脚处。选择一个就够，不在最后把所有姓名逐一清点，也不强制这些人到朝歌送死。第六幕将接着处理朝歌与封神后的去向；此处不是整条战役的结束。\n\n## 留给下回的六行\n\n- 定光拒绝或接受了什么；他自己选择的去处：\n- 赤炉客与烛尾各自的答复、伤势与去向；是否已停止本次追索：\n- 六魂幡由谁实际持有、谁共鸣、剩余充能，是否已毁；名字怎么处理：\n- 绝仙剑仍由谁持有；师门或旧友对此说了什么：\n- 本回 1,000 GP 与披风是否交付；是否完整收束、升至 12 级：\n- 给谁传了讯，收到什么回话，进朝歌前还惦记哪件事：\n\n## 制作备忘\n\n长耳定光仙的退意、持幡次序、六名与万仙阵后续见 [第五幕原著备忘](../research/ACT5_STORY_NOTES.md)。本团的追索者、局部地图、可谈安排与结局为游戏编排；六魂幡采用标准魔法物品完整规则，不照小说名号新增全位面索命系统，也不强制发生原著归西方的结局。\n\n规则以 SRD 5.2.1 为准，具体查阅定位见 [第五幕规则备忘](../research/ACT5_RULE_NOTES.md)：Efreeti、Fire Elemental、Mage、Wand of Fear、Cape of the Mountebank，以及 Command、Fear、Wall of Fire、Dimension Door、专注、共鸣和现有行动。全部为 rules 草案，未进行测试、模拟、回归或试玩。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n原停幡停追后可另征询定光本人核稿。公开40GP半小时；军议保管零GP半小时并留终局复核承诺；或只写小队目击。失能亡者不得代言，不问不扣原1000GP披风。幡的物件归属不因证言自动改变。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n定光核稿须实际在世清醒、未受魅惑／支配；1HP击昏、失能状态与离场失能快照均不能替他同意。可只写自己的目击继续。成年人可以自利、后悔或保留秘密，不以揭出私人内容换基础报酬。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 11,
+      "title": "第十一回：朝歌最后一夜",
+      "level": 12,
+      "scene": "B011",
+      "source": "17_第十一回_朝歌最后一夜.md",
+      "text": "# 第十一回：朝歌最后一夜\n\n第六幕《朝歌之后》前半 · 四名12级角色 · 主持草案 v0.7 · 未测试\n\n朝歌的外城门已经开了，午门仍然关着。街边有人把店里的灯重新挑亮，又有人把门闩插回去。大家都在等：天亮以后，还要不要再打一场。\n\n三妖准备在今夜袭击周军后营。她们想趁城中尚未安定杀出一个缺口，让围宫的人退却，然后再决定留在宫中还是逃走。小队得到消息时，行动还没有发生。\n\n**本回目标：让这次夜袭停下来，让后营不再暴露于突然袭击。**截住三妖、谈成撤袭、制伏她们，或先把消息送到、切实撤空目标并使她们放弃此次出击，都可以做到。斩杀人数不是完成条件，追杀到另一个位面也不是任务的隐藏下半场。\n\n完成后小队合计获得 **2,000 GP**。战前另有两瓶标准英雄药水，不从报酬中扣除。两回终幕都保持12级；第十二回负责尾声，不再次发这份钱，也不自动升13级。\n\n## 开场：熟人把最后一盏灯递过来\n\n从前五幕选一个确实活着、愿意联系小队的人，带来消息。默认是程简；也可以是阿禾、玩家的师门联系人，或另一块传讯石的持有者。没有这一位，就用正在办入城安顿的普通军吏，不把失踪者突然写成平安归来。\n\n> “我本来想问，明天给诸位煮什么粥。”\n>\n> “宫里有人报信，三位娘娘披了甲，正在往西偏道来。后营还以为今夜只等开门。你们离得最近。”\n>\n> “这回想怎么收场，由你们去谈。只求那边的人能好好等到天亮。”\n\n消息包括三个可直接相信的事实：三妖将从宫墙西侧的官桥前庭经过；前庭西面的街道通往后营；营中正在拆卸白日的接济棚，尚不知道此次出击。宫中报信者亲耳听见并看见了准备，联系人转交的是这份见闻，不要求玩家再过一项辨谎检定才能获得冒险入口。\n\n这里的官桥是旧街名，前庭没有必须升降的桥或关门机关。午门在这幅局部地图以外，打完本场不等于全城每道宫门同时打开。\n\n给玩家一段真实的准备时间。消息是三妖整装时送出的，小队可以换武器、分药水、传一则短讯或先赶去观察；需要长休、长时间仪式或漫游全城的计划则会让局势继续发展，先说明所需时间，不暗中宣布所有准备已经来不及。上一幕之后有正常行军与休整，并非前回斗法一结束就强制接战。\n\n## 战前就给出的准备与权限\n\n程简有本次军中授权：小队可接受三妖停止夜袭、暂时停战或自愿接受看管的条件，并将具体处置留到天亮后当面商议。他能保证本次接收期间不以交出兵器为由立即处死对方，不能许诺替天下所有受害者免除她们的一切责任。若此前换成其他联系人，仍由程简或已建立的实际军务渠道送达这项授权。\n\n交付小队合计 **两瓶 Potion of Heroism（英雄药水，Rare，无需共鸣）**：饮用或喂给另一生物花附赠动作；饮用者得到持续一小时的10临时HP，并在这一小时处于无需专注的Bless效果。攻击检定和豁免加1d4，不加所有属性检定；同名Bless不叠成2d4，临时HP也不相加。没喝的药水留下，不因本回结束作废。\n\n军中普通军械可供挑选矛、短弓与箭等现有普通武器，每位角色可借一件自己想用的武器及通常所需弹药，记录品种；不另造专门克妖神器。熟练、射程、装备占用和武器属性照规则。绝仙剑依然是造成挥砍的+3长剑，不能临时描述成“刺一下”就换成穿刺。\n\n一位此前与妖术交过手的斥候已把这些观察交给小队。直接给出可操作的信息，不设必须先受骗一次的门槛：\n\n| 已知情报 | 玩家可以据此做什么 |\n| --- | --- |\n| 妲己极难被术法直接命中、恐吓或魅惑；她没有抵挡普通刀枪的普遍免疫 | 普通武器照常有效。用Bless配合武器穿刺可打中她的弱处，英雄药水是真正的Bless效果 |\n| 她的魔抗不替同伴挡术，也不消除对友军的祝福 | 支援、治疗、移动同伴、改变地形、对付另外两妖，都有实际价值 |\n| 三妖都披着人形幻象；另外两妖真实身体很大 | 留意实际占位、脚步和碰到东西时的错位；看穿幻象不会自动驱散她们 |\n| 妲己能离开此界，但不能任意带走不愿同行的人 | 不用把每个被她碰到的同伴都当成即将被强制掳走；她逃走和她投降是不同结局 |\n| 她的爪伤会留下不能从休息受益的诅咒 | Remove Curse可以真实解除；当场说明中了什么，不等大家空耗一次长休才揭露 |\n\n若玩家要先联络后营，普通跑腿、Sending或已安排好的Sending Stones都可用。传讯石沿用真实持有人和整对每日次数，不能凭空在程简手里多出第三块。Sending的目标条件与25词限制照2024法术，不改成25个汉字。\n\n## 官桥前庭：三条路都在眼前\n\n这是为本回编排的局部地图。横向180尺、纵向140尺，以西北角为(0,0)，向东、向南增加。所有坐标只为方便摆图，不是隐藏机关。\n\n```text\n                         北：宫墙，高20尺\n              灶屋\n          ┌────────┐                      东侧门\n          │        │                         ← 三妖\n          └────────┘         石台\n                          ┌────────┐\n 西街 → 后营              └────────┘\n               矮石槽\n\n                           南：宽街，可退向城中\n```\n\n| 区域 | 实际尺寸与用途 |\n| --- | --- |\n| 东侧门 | 东边界(180,35)处，宽15尺、高15尺，门扇已经打开。通向宫墙侧道，三妖从这里进入；没有必须先破的封印 |\n| 西街 | 西边界(0,70)附近宽30尺的街口，再向西约500尺到后营。不是踏出地图一步便瞬间袭营成功 |\n| 南街 | 南边界(90,140)附近宽30尺。通往已经疏开的街区，是队伍和三妖都可以尝试使用的退路 |\n| 北墙 | 高20尺、厚5尺的普通石墙。攀爬、越墙、Fly、Passwall等按实际能力处理；墙后是侧道，不直通摘星楼顶 |\n| 灶屋 | 外廓x15～55、y10～45，屋顶高10尺，木墙厚半尺；南面中央有宽10尺、高8尺的敞门。屋内无人，无地窖与暗藏人质 |\n| 石台 | x75～105、y45～65，高5尺，南北各一段5尺宽石阶。可绕、可登。它只提供高差与实体遮挡，不放出自动伤害 |\n| 矮石槽 | x40～70、y90～95，高3尺、宽5尺，无水。是否半掩护取决于实际体型与射线，不能遮住站直的大型妖躯 |\n\n夜色为微光；(15,70)、(80,20)、(145,70)、(95,120)各有一盏固定灯火，20尺明亮、再20尺微光。灯灭只改变照明，不让已在眼前的人自动成功躲藏。灶屋、石台和宫墙的实体照常挡视线；大型生物占10尺方格。\n\n三妖初到时，妲己位于(150,35)，胡喜媚(155,55)，王贵人(130,35)；若发生战斗，这些是默认起位而非强制传送点。玩家选择先来的位置、侦察后的绕路或在门外截住她们，就按真实位置开始。她们默认只维持Disguise Self，未预先开Fly、Invisibility或Major Image，也没有事先对全城宫人施下Geas。\n\n前庭已经没有平民，不新增一队老朋友供三妖挟持。后营的人是否收到消息另行记录。墙外的大军负责其余方向，没有每轮进入本图的无限援兵，也不在小队倒下时自动击杀本图敌人补完目标。\n\n## 三妖各自想听见的回答\n\n第一次看见她们时，读一小段即可：\n\n> 王贵人抬头看了一眼熄了半边灯的长街：“这里从前夜里也有人唱曲。”\n>\n> 胡喜媚说：“你现在还想着听曲？”\n>\n> 妲己没有接话。她看着挡路的人，看见那把剑，或者认出了曾经在关前守约的名字。\n>\n> “好。最后又是你们。今日准备给我们留哪条路？”\n\n“认出”来自近来的军中传闻和眼前见闻，不让她无条件读取玩家秘密。若队伍从未公开露面，她只将其视为阻路的高手。\n\n**妲己**想挽回败局，同时给自己保留最后的退路。她会用“你们也替仙家做过事”试探小队是否愿意听她说话，但这句话不能免除她对自己选择的责任。她不接受当场献首或自杀，也不会因一次高骰点就终身服从。她可能接受：此次不再袭营，带愿意同行的姐妹退出这片战场；或在明确暂不处死、天亮公开议处的条件下，自愿留下接受实际看管。后者通常需要玩家展示确实有能力拦她、并给出可信的履约办法；说空话时她仍可拒绝。\n\n**胡喜媚**不愿当最后被丢下的人。她会直接问：“我们若放下手，谁准你们的军士再动手？”给她看本次真实授权、当面联系能接收的人，或同意小队亲自留下见证，都能影响她。若另外两妖已答应停止出击，她不坚持为面子独自继续；她也可以拒绝跟妲己去陌生位面。\n\n**王贵人**已经想走。她最先接受真正可走的南街或一份有期限、有去处的停战安排，不要求玩家替她恢复宫中地位。若玩家把她的退让当成开打信号，她会自卫；若允许她退出，便从此夜袭中实际退出，不在下一轮换装回来。\n\n以下方案给主持人判断用，不是逐项盖章的流程：\n\n- **有条件停战。**说清今夜不再攻击后营与城中退离者，先在前庭等待，还是由谁接往何处；小队同时把停战与识别办法告知己方。对方真的同意就执行，不在握手时强塞一个“本来就要背叛”的伏兵。\n- **退出此战。**允许她们沿约定道路离开，或让妲己以自己的法术带自愿者去另一个位面。此夜威胁停止，人物去向与尚未追究的责任保留到尾声。小队没有许诺永远无人找她们，也没有因此获得永久控制她们的权力。\n- **分开谈。**一人退出，不迫使另外两人立刻退出；也不强迫先退者必须回头替小队杀姐妹。实际战斗名单随之改变。\n- **使夜袭失去目标。**如果后营已经撤空、道路被依法隔开，或可信消息让三妖知道偷袭机会已失，给她们重新权衡的机会。这里没有藏着另一份“真正后营名单”。\n\n只在对方仍犹疑、结果确有不确定性时用Influence。依2024规则处理态度、理由与DC，不规定连掷三次才算说服。玩家可以问她们愿意接受什么，也可以明确拒绝放行，进入冲突。\n\n## 交锋：强项公开，办法不只一种\n\n默认敌人是三名真实人物：**妲己完整采用Rakshasa，胡喜媚与王贵人各完整采用Lamia**。合计12,200 XP；四名12级角色低／中／高预算为8,800／14,800／18,800 XP。只作编排参考，尤其妲己的抗魔和诅咒会明显影响不同队伍，未据此宣称平衡已验证。\n\n| 对手 | 上桌要点 |\n| --- | --- |\n| 妲己／Rakshasa | Medium Fiend；AC17、HP221、速度40尺。动作三次Cursed Touch：+10、触及5尺，各2d6+5挥砍＋3d12黯蚀；命中生物即施加不能从短休或长休获益的诅咒。Baleful Command动作、充能5–6：30尺内每个敌人作感知DC18，失败8d6心灵并恐惧、失能至她下回合开始。成功无所列效果。免疫魅惑与恐惧 |\n| 胡喜媚／Lamia | Large Fiend；AC13、HP97、速度40尺。动作两次Claw：+5、触及5尺，各1d8+3挥砍＋2d6心灵；其中一次可换Corrupting Touch，5尺可见一个目标感知DC13，失败3d8心灵并受一小时诅咒，期间魅惑、中毒。附赠Leap花10尺移动跳至多30尺 |\n| 王贵人／Lamia | 同上，独立HP、法术次数与选择。没有和胡喜媚共享伤害或共同死亡的机制 |\n\n完整感官、技能、法术与边界见[第六幕规则备忘](../research/ACT6_RULE_NOTES.md)。两名Lamia没有原卡飞行、抗魔或复生；九头、雉羽和玉色是外观，不产生九次攻击或变成物件的豁免。她们可以用Disguise Self显现为中型两足外观，真实身体仍是Large。妲己的真身是中型狐首直立妖躯，幻作女子；她没有真变成小狐狸钻缝的能力。\n\n妲己的Greater Magic Resistance按新版完整使用：对法术及其他魔法效果的豁免自动成功，法术攻击自动失手；未经许可，不能用法术远程观察她、读思想、检测类型或阵营。**不是“六环以下全免”，也不是所有法术皆无效。**成功仍受半伤的法术照常造成半伤；Magic Missile满足可见、射程等条件时正常伤害，她原卡没有Shield。妲己被伤害打断专注时仍按专注规则进行，不把抗魔扩大成所有体质豁免自动成功。\n\n受Bless影响者以武器造成的穿刺伤害触发她的弱点。判断每种伤害分量，不把武器上的火焰、其他附加伤害或长剑挥砍一并翻倍。没人使用这个弱点也可以正常作战；弱点是有帮助的办法，不是唯一许可伤害她的钥匙。\n\n施法者还有清楚的选择：\n\n- Bless、治疗、移动、掩护和战场分隔作用在真正的目标上；她不会一靠近便消去同伴身上的有益法术。\n- 两名Lamia正常接受合法的控制与伤害。六魂幡的Fear可影响她们，不能影响妲己；锥形范围也仍要考虑队友。\n- 三妖都是Fiend，Hold Person、Charm Person等限定Humanoid的法术不合法。Banishment可正常对两名Lamia使用；专注满一分钟按2024类型规则送往相关位面，妲己对其豁免自动成功。\n- True Seeing在近处看透幻象；Dispel Magic可结束实际Disguise Self、Fly、Invisibility或Major Image，不删除怪物特质。Counterspell使目标作体质豁免，妲己对此自动成功，不能许诺它必能阻止她离场。\n- 攀云绳、绝仙剑、传送披风等按实际物主和剩余次数使用；本图没有临时追加的禁飞、禁传送或所有物品失灵区。披风在出发位置留轻度遮蔽烟雾，按Cape of the Mountebank原条目处理。\n\n三妖的施法照正常时间、成分与专注。妲己随意的幻象与每日各一次的Fly、Invisibility、Major Image、Plane Shift各有用处，也各花真实动作；两名Lamia各有每日一次Geas、Major Image、Scrying。**Geas施法一分钟，不能当成瞬发接管玩家。**Corrupting Touch的魅惑也只按状态行事，不让主持人任意接手玩家角色。\n\n## 对手怎样行动，什么时候可以停\n\n不要规定她们必须活到第三轮才能谈，也不设血量到零仍继续念台词的阶段。\n\n妲己优先逼退挡路的高手，敌人聚在30尺内时会考虑Baleful Command；近身交手时使用Cursed Touch。她会认出眼前明显的祝福与穿刺威胁，尝试换位、借掩护或攻击施加祝福的人，但不自动知道谁准备了什么法术。她若要同时用Fly与Invisibility等专注法术，照正常专注限制选择，不能都保留。\n\n胡喜媚用Leap越过石槽或拉近距离，试图让一人陷入Corrupting Touch诅咒；她不会因为施加魅惑就能命令此人转身砍队友。王贵人更愿意沿石台与南街保留退路，可以用Major Image制造岔路上的动静，但幻象没有真实伤害、掩护或实体墙的阻挡能力。\n\n当妲己降到约70 HP、两名姐妹都已退出，或突袭目标已经撤走时，她会明确提出退战条件或准备离开。这是她改变主意的时机，不是无论玩家怎样行动都必定逃走的过场。胡喜媚与王贵人到约25 HP时各自优先考虑停手或撤退；能谈时，让她们出声。\n\n妲己的Plane Shift每日一次，花动作，可与至多八名手拉手成圈的**自愿**生物同行。她必须真的走到愿意同行者身边并完成施法；不能从全图点名收走姐妹，更不能带走不愿去的俘虏。角色的真实控制、失能、无法满足施法条件等可阻止她正常施法；不为保证逃走而忽略它们。已经使用的每日次数照常记录。\n\n若在Nine Hells之外死亡，她依原卡立即在Nine Hells获得新身体；朝歌的身体化去。这不在原地补第二条血，也不把“本地击败”伪写成永久灭绝。她没有此时立刻回朝歌的附加能力。两名Lamia没有同样的复生条款，死亡按实际结果记。\n\n玩家想留活口时，在合法近战攻击本应将目标降至0 HP时，可按2024击昏规则改为1 HP并使其昏迷；不要把任意远程攻击或法术都默认改成击昏。昏迷之后的绳索与看管也不是永久封术：妲己若恢复、仍能满足施法条件且留有Plane Shift，普通捆绑不保证长期关住她。最可靠的停战是明确的自愿安排，或角色确有的有效能力；没有隐藏赠送一副全能封妖镣。\n\nRemove Curse能解除本场Cursed Touch、Corrupting Touch及合法持续的Geas。玩家有此术便可照常处理，不附加杀死施咒者、拿到原著葫芦或求女娲到场的条件。没有资源时如实记录，并在第十二回正常找已有可得的帮助。\n\n## 如果先报信、撤离，或三妖闯过去\n\n后营距离西街约500尺。到达前，玩家仍能传讯、移动、追赶、阻路或改约见地点。进入战斗后的行动按实际轮次与速度处理，不以“离开地图”省略玩家还能做的事。\n\n**消息及时且目标确实撤开：**程简组织营中人员按已有南侧通路离开，拆卸中的器材可放下，人可以先走。一次明确传讯足以启动这个安排；是否来得及取决于双方实际位置与行动，不额外要求盖印原件。三妖见营中已无可突袭的人，默认放弃本次袭营，转而考虑撤离。小队完成了这次任务；如果还想追究三妖或保护留下的器材，是自己的下一步选择，不强加一场补考。\n\n**只有一两人被阻下：**保留已经退出的对手；仍出击者继续按自身速度与行动前进。小队可以追、先通知后营，也可以接受这次只拦住部分人的结果。不会让已被俘的人在营里重新出现。\n\n**队伍撤退或未能拦住：**三妖继续走向后营，小队有机会发出迟来的警告。若确实让突袭发生，把实际受影响的人、物资和现有救援条件写清，再让玩家决定救援、追索或停下；不临时指定一位全程不在场的旧友必死来惩罚失败。该危机尚未解决时，不宣称全额任务已经完成，后续可继续处理同一目标，已经获得的成果不清零。\n\n**停战已经执行：**到约定时辰，各方照约做事，剧情可以直接进入天亮。是否日后追责在尾声谈，不能用一队新敌人逼玩家证明和平结局也必须打到资源见底。\n\n## 玩家主动去摘星楼\n\n本回默认只承担三妖这一路，不把全城所有事件都同时压到小队身上。但若玩家明确要救下、劝降或抓住纣王，就让他们及时得到正在准备自焚的消息，按他们真正开始介入的时点演下去。\n\n可把此事压成一个短场面：带队者领小队到楼下，楼梯仍可通行，纣王独自在上层大厅，柴堆刚堆好；若他们先前已花去很长时间，则如实说明火势和可达路径，再让已具备的飞行、传送、灭火与救援能力生效。不要等玩家宣布行动后才倒填“刚才已烧成灰”。不用另设预定死期、不可驱散天命火或强制失败检定。\n\n纣王先说：“你们要的是我的命，还是我自己走下来？”玩家提出的条件要得到具体回答。若需要人身冲突的数据，使用完整 **Knight** 作为本团此时纣王的战斗接口，真实兵器装备依卡，王者身份不额外增加传奇动作；原卡是此处游玩编排，不是小说人物力量评级。他不再有另一支隐藏三妖亲卫。通常通过停火、离楼或接受看管结束场景，已无须另开高强度终战。\n\n救下便让他活着面对后续，不为了第九十九回的名单补一次猝死；未介入时可简短交代原著方向的自焚与午门开启，不描写细节。摘星楼、鹿台财物与钜桥粮仓分别处理，烧楼不自动把战后粮财全部烧光。此支线不改变已经完成的截袭报酬。\n\n## 天亮之前，留五行记录\n\n1. 此夜袭营是否已经停止，后营是否获知并安排安全。\n2. 三妖各自：留下、离去、被俘、死亡，或妲己在Nine Hells复生；实际位置与未完责任。\n3. 谁受了伤或诅咒，哪些治疗、解除或复生条件实际可用。\n4. 两瓶英雄药水用了几瓶，钱款是否已结清，旧法宝目前在谁手里。\n5. 玩家最想在天亮后见谁，或者最想先做哪一件小事。\n\n任务确实解决即结清全队2,000 GP。让报信的熟人回来问开场那句话：“那现在，明天的粥里放什么？”回答可以很普通。\n\n随后进入[第十二回《封神之后》](18_第十二回_封神之后.md)。女娲与子牙不会在这时出场把玩家留下的人全部杀掉，也没有旁白宣布此前作战的人全是替身。桌上发生的事，就是这条战役最后一夜发生的事。\n\n---\n\n制作依据：[原著备忘](../research/ACT6_STORY_NOTES.md)所记第95～98回相关段；[规则备忘](../research/ACT6_RULE_NOTES.md)所记SRD 5.2.1原条目。前庭地图、截袭主体、人物可谈条件及结算为本团编排。所有内容仍为未测试草案。\n\nThis work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.\n\n\n---\n\n## v0.3 世路人情执行增补\n\n三妖欲望、依附、恐惧分别演，不以亲密换安全。民诊此前真实12包可十分钟北路接应，原半小时撤营仍有效；不复活已死者，不收回合法谈退成果。原2000GP照付。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n独家运力未退出时clinicEvac不可用，原evacuate半小时撤营仍有效，原2000GP不减。可先reliefExit退180GP、花半小时交班，再按真实12包及合作人调用十分钟接应；此前救援和回礼没有被撤回。三妖各自退意，不以一人决定代全体同意。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    },
+    {
+      "id": 12,
+      "title": "第十二回：封神之后",
+      "level": 12,
+      "scene": "B011",
+      "source": "18_第十二回_封神之后.md",
+      "text": "# 第十二回：封神之后\n\n第六幕《朝歌之后》后半 · 四名12级角色 · 约半晚至一晚 · 主持草案 v0.7 · 未测试\n\n第一次来到青蒲渡时，你们要保住的是十二名旅人与两车粮。如今朝歌已经变了天，有人等着你们裁断一件大事，也有人只想知道：那辆借走的车，还回来了没有？\n\n这一回结束《封神·岐路》的六幕主线。**让玩家看见自己造成的改变，再亲口决定角色往哪里去。**没有必须打败的尾声敌人，不要求把每一项旧事办得完美才能结束。队伍保持12级；上回的2,000 GP全队报酬按上回实际完成条件结算，本回不再发一份，也不自动升13级。\n\n## 先接住昨夜，别急着念封神名单\n\n开始前只整理实际发生的结果。三妖中谁死、谁被俘、谁答应了什么、谁确实逃掉；午门是否交接；队伍是否介入纣王的处置；还有谁需要立即治疗。这些事按第十一回的真实经过续写。\n\n若玩家还在追逐、交战、抢救或讨论眼前尚未结束的交接，先把那一场继续完，别用“现在进入尾声”跳过其选择。若有人逃脱，逃脱就是事实；可以由玩家选择继续追，也可以明确交给愿意承接的人去查，或承认其下落将成为以后的故事。结束战役不等于把所有逃敌悄悄写成已经伏法。\n\n对朝歌局势用一句话说明即可：外城已先开放，皇城午门的交接与内宫事件另行处理。队伍没有介入纣王事件、也没有改变其前提时，可以用简短军情交代原著的自焚与火后交接，不细述惨状。玩家已经救下、劝降或俘获他，就沿那个结果写，不能在休息时补上一场不可避免的死亡。\n\n三妖若已接受约束，就兑现谈好的看管和处置方式；若已被杀，不让替身现形取消胜利；若尚在逃，不让女娲突然把她们全部捆好送来。**妲己使用完整Rakshasa原卡：在Nine Hells以外死亡，会立即在Nine Hells获得新身体。**因此她被本地杀死的结果是朝歌妖躯已毁、本人已在该位面重生，不能记录为永久消灭；也不因此在原地多一条血或立刻返回朝歌。喜媚与王贵人的Lamia卡没有这个复生特质。姜子牙可以处理战争的后续事务，玩家完成的关键行动仍属于玩家。\n\n读给大家听：\n\n> 城里第一次传来的不是催战的鼓，是木轮压过石板的声音。粮车转过街角，有人掀开锅盖，有人把门上的兵器收了进去。\n>\n> 你们睡醒的时候，没有人来喊立刻出发。\n>\n> 桌上有热水，还有几封不知道该先拆哪一封的信。\n\n先让每位玩家说一件角色今天想做的事，再从下面六个短场面里选三个。每场约十五至二十五分钟；最后留时间给每位角色一句个人收束。玩家主动提了别的好主意，直接替换一场。\n\n## 六个短场面，选你们在意的三个\n\n| 场面 | 适合谁想做的事 | 放在何时 |\n| --- | --- | --- |\n| 一、你们答应过他什么 | 处置俘虏、兑现停战、为某人说话 | 朝歌刚安定时 |\n| 二、今天这锅饭算谁的 | 做一件看得见的战后好事 | 朝歌散财发粟时 |\n| 三、渡口又摆了一张桌 | 见旧友、还东西、说说一路见闻 | 归程中 |\n| 四、门开着，你可以走 | 辞师门、留任、归山或换一种生活 | 回程或稍后的拜访 |\n| 五、封神台外的一句话 | 告别死者、商量神职或复活的愿望 | 岐山封神时 |\n| 六、下次在哪里见 | 决定物件去向与小队的以后 | 最后的饭桌或送别处 |\n\n无需把未选的场面硬塞进来。世界仍在推进：朝歌发粮散财，归程有休养和道别，子牙请敕后在岐山封神，随后有归山与分封。不是同一天连做完所有仪式。队伍参与哪一段，由玩家的兴趣决定。\n\n### 一、你们答应过他什么\n\n只选一件本桌真正在意、仍未处理的事。例如三妖中的俘虏已经答应停止袭击，某位普通守军等待释放，或玩家曾保证降者家人不受牵连。没有这样的旧事，就换下一场，别为了开庭临时抓个人。\n\n选一位仍活着、愿意见队伍、确实知道这件事的人。程简适合帮忙把约定写清楚；他可以联系有权接管俘虏的人，不能自己代表所有军队作判决。涉及三妖或纣王时，可以由姜子牙听取小队的方案，不必再排出一队新官员。\n\n> 程简把笔停在纸上：“名字我会写。可你们当时答应的那句话，我不能替你们猜。”\n\n让玩家先重述自己承诺了什么，再让当事人回应。若是普通投降者，他可以问：“我能回家，还是还得等别人点名？”若是仍敌视玩家的俘虏，她可以要求明确由谁看管、何时再谈，不必突然变成感恩戴德的人。\n\n玩家可以提出释放、移交、继续看管、让愿意出面的证人作证，或修改一项双方都肯接受的约定。已经谈妥且愿意履行的事直接落实；有真实分歧才谈判，不为签字强制掷一串说服检定。一次成功的影响动作也不会替所有未在场的人作出决定。\n\n把结果演到能看见：被释放的人取回自己的包袱离开；接管者当面接受约定；家属听到明确消息；或者双方承认尚有争议，约好下一次会面。只写此次实际达成的内容。玩家若坚持执行先前的宽待，也不必为此遭遇一场专门证明“心软有罪”的突袭。\n\n这场改变的是一个人的去留和一项承诺的状态。它不评定小队是否配得到结局。\n\n### 二、今天这锅饭算谁的\n\n鹿台的财物正在分发，钜桥的粮车进了街道。武王的诏令和负责搬运的人已经到位，小队不必自掏腰包才能让全城吃饭，也不必把散财的功劳全部据为己有。\n\n街口的饭棚摆出两口大锅，一位负责做饭的居民看着挤在一起的空碗，朝队伍招手：\n\n> “诸位能上天入地，总会有个办法让这两队人别挤在一条巷子里吧？锅里的饭够，路不够。”\n\n这里没有潜伏妖怪。实际问题是两处饭棚的指引都挂在同一条狭巷里，带孩子与伤者的人走得慢，运水的车又要从中经过。居民知道旁边院子可以借用，但缺人安排桌椅、搬水和把消息传过去。\n\n请每位想参加的玩家选一个具体办法：帮忙搬开桌椅、找愿意领路的人、在院内增设发饭处、治疗一位需要帮助的人，或使用角色本来就有的合适能力。普通劳作有足够时间时直接完成；法术正常消耗，效果照条目，不因到了尾声就改成无限施法。\n\n愿意出钱添菜很好，不出钱也照样能帮忙。给居民一个能继续自己使用的办法，便让他们接手，不需要由英雄终身掌勺。\n\n最后，那位居民多盛一碗递来：\n\n> “这碗不用排。别客气，刚才你们搬的桌子。”\n\n这场改变的是眼前街坊如何度过今天。玩家可以给饭棚取个名字、留一位愿意联系的朋友，或决定日后再来；不新增稳定收入、追随者数值或据点等级。\n\n### 三、渡口又摆了一张桌\n\n从陶七、阿禾、孟平、石叔等旧友中挑实际活着、与队伍仍愿来往的一至两位。其余人可以各忙各的，无需全部召回。若玩家更关心鲁青、顾行舟或另一位旧识，就把饭桌搬到合适的地方。\n\n默认地点是青蒲渡。能回来的旧友在渡棚前支起桌子；若渡口已经毁坏或关系不适合聚餐，就用山路上的茶棚或朋友如今住的地方。不要让失去过的地方在无人付出行动时自行恢复原样。\n\n陶七见到大家，可以先看装备，再看人数：\n\n> “出去的时候两车粮，回来一身金光。行，船钱照旧——先吃饭，待会儿再说。”\n\n如果阿禾也在，他把当年的抄写本放在桌边：\n\n> “你们这一路，我只知道别人说的。有没有哪件事，跟他们传的不一样？”\n\n请每位玩家讲一个自己最想让旧友记住的瞬间。其他人可以补一句，也可以纠正一个善意的夸张。把早期借物是否归还、老路是否修好、有人是否终于回家顺手兑现；已经完成的事不用重做。\n\n旧友也说一件自己的新鲜事：渡船补了一块新板，山路现在能过窄车，或自己换了谋生地方。只采用与旧回结果相容的版本。他们不是一直站在原地等英雄回来。\n\n饭后让玩家留下一件不必贵重的东西：一封信、一段笑话、下次会面的日子，或真的自愿赠给朋友的一件物品。赠物按真实归属办理。若这一桌有人永远回不来了，可以留一个空位，也可以直接谈起他，不强求大家用同一种方式难过。\n\n这场让开头的小事得到回应。渡口记住的可能不是摘剑破阵，而是当年有人没有把那车口粮交出去。\n\n### 四、门开着，你可以走\n\n由想谈个人去处的玩家点名一个人：自己的师门长辈、邀请留任的人、曾一起退阵的同道，或始终在家等消息的人。没有已建立的师门，就不凭空指定一个师父替玩家作主。\n\n对方先给一个具体邀请，不一次许下全世界。例如留下帮几个月忙、回山安住一个季节，或明年春天一起走一段路。\n\n> “门给你留着。你若想走，也不必编一个我喜欢听的理由。”\n\n让玩家说自己愿意接受、拒绝还是改条件。可以请老师再教一点东西、提出先回家、要求不再因一句门派恩怨出手，或承认自己还没想好。对方有自己的感情与立场，可以惋惜、争论或祝福；不要把拒绝邀请自动改成失去职业能力、废去法术或被全门追杀。\n\n若前几幕的长耳、董全或韩家成员仍活着、已经与队伍建立联系，也可由其中一人说出自己的选择。他不会因为玩家选归山，就必须跟着归山；玩家选留周，也不使所有朋友自动接受官职。\n\n落实一个小结果：给愿留下的人安排暂住之处，为离开者写一封介绍信，约定下次联系日期，或当面解除一项双方自愿结束的承诺。官职、名号或拜师若只用于尾声，就是故事去处；需要额外游戏能力时，另按继续战役时的现有规则讨论，不在此即席发放。\n\n这场改变的是角色与一个群体往后的关系。未来可以再改，不必拿今天的一句话锁死余生。\n\n### 五、封神台外的一句话\n\n子牙回到西岐、请来符敕，岐山才有封神仪式。宣封跨过敌我两方，也给某些生前有过恶行者安排职责；它不是本桌的好人排名，更不按谁击杀最多发神位。\n\n主持人不必通读原著名单。用几声遥远的唱名、一面迎风舒展的旗、山下等着的人，交代仪式正在进行。**本桌仍活着的人不因原著榜上有名就突然消失；已死的人不因名单上没有名字就被忘记。**\n\n请每位想参与的玩家选一位确实已死的人。可以只写一封永远不会寄出的信，也可以共同描写一次告别；涉及已死的玩家角色时，先征得该角色玩家同意。这是本桌共同选择的收束画面，不给角色一项此后随时召魂问讯的新能力。\n\n> 台外有人将一张空纸递来：“名字写不写都成。你想告诉他的那句话，留在这里就好。”\n\n问玩家：“如果他只听得见一句，你会说什么？”若死者是玩家角色，让那位玩家决定是否回应、回应什么。可以道谢，可以责备，也可以约定日后再相见；不要求强行和解。\n\n若玩家愿意为已死角色选择叙事神职，先说清楚想照看的事，再一起写一小段结尾，例如守望常有旅人失足的一段河岸。这个选择须得到该角色玩家同意；不自动复活，不赋予无限战力，也不因此剥夺别的角色的魔法物品。想继续以该角色参与常规冒险时，另按既有角色与复活规则落实，不能把一句神职描述当作新角色卡。\n\n若玩家希望角色实际复活，先看该角色是否愿意，再按所用法术的时限、遗体、材料及其他限制办理。正常的救命机会应在前一场及时处理，不为等封神仪式而故意耗尽时限；仪式也不代替真实可得的施法者与材料。没有现成条件时，可以把寻求复活作为下一段冒险的愿望，不假装今天已经成功。\n\n需要当场决定时，用这张简表，完整接口见[第六幕规则备忘](../research/ACT6_RULE_NOTES.md)：\n\n| 现有法术 | 主持人先确认什么 |\n| --- | --- |\n| Revivify，三环 | 死亡不超过一分钟；动作、接触，消耗至少300 GP的一颗钻石；复生为1 HP，不复活老死者、不补身体缺损。 |\n| Raise Dead，五环 | 死亡不超过十天、死亡时不是Undead；一小时施法、接触，消耗至少500 GP钻石；复生为1 HP，缺失维生必需部位会失败。复生后的D20检定受−4，每次长休减少1直至消失。 |\n| Reincarnate，五环 | 死亡不超过十天的Humanoid或其身体一部分；一小时、接触，消耗至少1,000 GP稀有油。按原法术生成新身体与种族，保留记忆能力、更替种族特质；先让玩家知道并决定是否愿意回来。 |\n| Resurrection，七环 | 常规施法者13级才获得七环；本桌保持12级，不默认拥有。若实际找到相应帮助，再依原法术办理，不自动赠送免费施法。 |\n\n所有复生都服从Dead通则：灵魂知道施法者身份并可以拒绝，Revivify也不例外。一般仍持续的诅咒不会仅因复生全部消失，具体看原法术；死亡已经结束物品共鸣，复生后使用六魂幡仍须重新共鸣。Gentle Repose可依法保存遗体，并使覆盖时间不计入复生时限，不能重置早已过期的死亡日期。Speak with Dead只让尸体依生前所知回答，不带回灵魂，不能拿一句尸体的答话代替该角色玩家的当前意愿。以上依[SRD 5.2.1](https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf)第135、157～159、164、180页。\n\n不想写神职或告别的玩家可以让角色在山下喝茶、修理装备、陪朋友等候。仪式照常继续，不会因此失去任何已经取得的成长。\n\n这场改变的是你们愿意怎样记住一个人，以及是否还有准备继续追寻的愿望。\n\n### 六、下次在哪里见\n\n把队伍真正带来的物件放到最后一张桌上，或只在纸上列给大家看。已经送人、遗失或依法毁坏的，不为谢幕重新出现。\n\n> “以后谁还会用这东西？谁只是舍不得它？”\n\n让每件仍由小队保有的物品有一个明确去处。不愿分家的队伍也可以只确认当前持有人，继续一起走。\n\n| 本战役出现的物件 | 本场要说清楚的事 |\n| --- | --- |\n| 攀云绳，Rope of Climbing，一条 | 原持有人继续带着、借出，还是自愿赠给某位朋友。不会拆成四条同样的魔法绳。 |\n| Weapon, +2，一件 | 沿用第四幕实际选择的武器种类和当前归属；不重新选择并补发一件。 |\n| Sending Stones，原来完整一对 | 分别由谁持有哪一端，两个人是否愿意以后联系。它们仍是原来的一对，不是两套。 |\n| 真绝仙剑，Weapon, +3（Longsword） | 按已发生的赠还、保留或转交决定；归山、受职与故事结束都不会让剑自动飞走。 |\n| 六魂幡，Wand of Fear，若仍保有 | 写下持有人、实际充能和共鸣者。交物不等于新持有人立即完成共鸣，改写布上的名字也不改变法术。 |\n| Cape of the Mountebank，一件 | 当前谁穿、是否已经使用及恢复安排仍照原物品条目；不因结尾自动刷新次数。 |\n\n可以借给朋友，但要真的交过去；可以送回师门，但要出于持有人的决定；也可以继续带着，无需证明自己有足够高尚的理由。角色之间的物件分配由玩家谈妥，主持人不安排偷窃剧情替他们强行分好。\n\n最后问小队：“下次还想一起出门吗？”想继续，就约一个具体地点、一件愿意做的事，或者只说等谁的口信。想在此停下，也可以约下一顿饭。不必用新的灭世威胁逼大家购买下一段冒险。\n\n这场改变的是关系和物品的真实去向。它可以成为下一段故事的第一句话，也可以就是一个圆满句点。\n\n## 每个人都有最后一个镜头\n\n无论选了哪三个场面，最后都轮到每位玩家。让他选一个时间：第二天、第一场春雨，或几年之后；说角色在哪里、身边有谁、正在做什么。\n\n活着的角色可以留在人间做事、归山、回家、受职、开店或继续同行。已死角色的玩家可以选择一个被人记住的细节、一句告别或自愿讨论过的神职尾声。角色还在等待救回，就承认等待；没有人为讲一个漂亮结局而被自动复活或强行赴死。\n\n主持人只添一个呼应早期的细节。例如青蒲渡那只鹅又对木牌叫了一声，山祠铜铃被风轻轻碰响，陶七还惦记着那辆车，或传讯石里传来一句：“锅开了，你们什么时候到？”这句话应由确实愿意联系且持有相应石头的人说出，并按传讯石的正常使用限制传来。\n\n然后结束。封神的大事有人记在榜上，你们做过的小事，也已经有人记住了。\n\n## 最后一页：这一桌实际发生的结局\n\n这页记录已经谈妥的事实，不计分，不为每个空格追加任务。只填本桌用到的行；可直接复制给全体玩家留存。\n\n**战役结束日期：**＿＿＿＿　**角色等级：**12　**若继续，再见地点：**＿＿＿＿\n\n| 角色 | 生还／死亡／其他实际状态 | 玩家选择的归处或愿望 | 最后一个镜头 |\n| --- | --- | --- | --- |\n| ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ |\n| ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ |\n| ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ |\n| ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ |\n\n| 要留下的事实 | 本桌结果 |\n| --- | --- |\n| 三妖各自的真实结局；仍在逃者最后已知去向 | ＿＿＿＿ |\n| 午门交接与纣王事件；玩家是否介入、改变了什么 | ＿＿＿＿ |\n| 最想再见的一至两位旧友；他们自己的去处 | ＿＿＿＿ |\n| 已死或未归者；玩家愿怎样纪念，是否还想寻找 | ＿＿＿＿ |\n| 尚有一件愿意履行的承诺；谁愿意继续办理 | ＿＿＿＿ |\n| 第十一回完成报酬是否已领；其余钱款按原记录 | ＿＿＿＿ |\n\n| 物件 | 当前持有人／实际去处 | 使用状态或借还约定 |\n| --- | --- | --- |\n| 攀云绳 | ＿＿＿＿ | ＿＿＿＿ |\n| +2武器，种类：＿＿＿＿ | ＿＿＿＿ | ＿＿＿＿ |\n| 传讯石第一端 | ＿＿＿＿ | ＿＿＿＿ |\n| 传讯石第二端 | ＿＿＿＿ | 与上一端为原来同一对；＿＿＿＿ |\n| 真绝仙剑，Longsword +3 | ＿＿＿＿ | ＿＿＿＿ |\n| 六魂幡，Wand of Fear，若有 | ＿＿＿＿ | 共鸣者：＿＿＿＿；充能：＿＿＿＿ |\n| Cape of the Mountebank | ＿＿＿＿ | ＿＿＿＿ |\n| 尚未使用的消耗品，包括上回两瓶英雄药水的实际剩余 | ＿＿＿＿ | 名称与数量：＿＿＿＿ |\n\n**下一顿饭，谁请：**＿＿＿＿\n\n原著顺序与改编空间见[第六幕原著备忘](../research/ACT6_STORY_NOTES.md)。魔法物品沿用各取得章节及标准条目；本回没有新增神位数值、资源或战斗子系统。六幕主线至此有完整草案，不代表已经测试，也不代表多文明规则书已经完成。\n\n\n---\n\n## v0.3 世路人情执行增补\n\n限名附件可一小时终审，60GP押金按实际全退一次。军议证言先免费半小时复核；可付75GP按原准范围归档。公开稽核官资格源于公开证言，预支150GP、每年两次公账；军议录事源于复核保管，预支250GP、30日阅卷名册；民诊理事源于12包交割，预支100GP、每季实物账。各人独立选择，封卷前可改；最终封卷才付款和写义务。原普通任职、回家、归山、行旅照旧。\n\n完整桌前说明见 docs/主持增补_世路人情.md 与 docs/后果矩阵_世路人情.md。所有私人内容只离线手工分发，不进入共享facts／日志／AI玩家请求。\n\n\n### v0.3 有偿委任与独立责任\n\n可补退80GP更正限责专报、退180GP交接运力、花260GP一小时更正魏简附报。未撤魏简附报可officePatron选四百GP附报总办：继续每季军功附报、拒收新增民伤异议，不能兼独立稽核或民诊理事。封卷才发最终职书与钱；改选回家不发该款。所有角色最后物件、后果与未尽责任在封卷时刷新，先前选回家者也更新。无交易者不受新资格惩罚。\n\n逐回场面与全部退出成本见 docs/主持增补_世路人情.md、docs/后果矩阵_世路人情.md。只将已发生的公共结果写回房间；无新善恶、好感或业力条。\n"
+    }
+  ],
+  "id": "fengshen-worldly-v03",
+  "title": "封神·岐路：世路人情",
+  "subtitle": "独立 v0.3 · 十二回 3–12级",
+  "port": 8811
+}

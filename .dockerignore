@@ -1,0 +1,13 @@
+.git
+.github
+runtime
+node_modules
+author-sources.local.json
+author-sources.local.json.tmp
+.env
+.env.*
+!.env.example
+*.log
+design
+qa
+tmp

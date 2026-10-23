@@ -1,0 +1,3 @@
+
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',x===b));document.querySelectorAll('article').forEach(a=>a.hidden=b.dataset.filter!=='all'&&a.dataset.kind!==b.dataset.filter)}));
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',x===b));document.querySelectorAll('img[data-id]').forEach(img=>{img.src=img.dataset.id+'/'+img.dataset.id+'-'+b.dataset.view+'.png';img.alt=img.alt.replace(/鸟瞰|侧面/g,b.dataset.view==='side'?'侧面':'鸟瞰')})}));

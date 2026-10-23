@@ -1,0 +1,6070 @@
+{
+  "id": "india-milk-sea-dark-v2",
+  "title": "乳海余波：甘露的代价",
+  "subtitle": "四人三级 · 成熟叙事短篇 · 你救回什么，又替谁把账做平",
+  "version": "2.0.0-adult-draft",
+  "rules": "D&D 2024 / SRD 5.2.1；神话题材为原创改编，无新子系统。",
+  "initialLevel": 3,
+  "levelMode": "fixed",
+  "initialScene": "I01",
+  "initialFacts": {
+    "commission": "unset",
+    "p1Confessed": false,
+    "p2Confessed": false,
+    "workerMandate": false,
+    "jointGuarantee": false,
+    "cityCover": false,
+    "witnessSafe": false,
+    "sumanTreated": false,
+    "originalLedger": false,
+    "ledgerLost": false,
+    "evidenceQuality": "none",
+    "evidencePublic": false,
+    "privacyProtected": false,
+    "cityComplicityKnown": false,
+    "unionComplicityKnown": false,
+    "unionAccountable": false,
+    "engineerRevealed": false,
+    "stabilizerKnown": false,
+    "cargoSecured": false,
+    "cargoLost": false,
+    "lateCargo": false,
+    "warehouseAlarm": false,
+    "waterAccess": false,
+    "depositPaid": false,
+    "waterLease": false,
+    "waterFouled": false,
+    "engineMethod": "unset",
+    "engineStable": false,
+    "harborClosed": false,
+    "restTaken": false,
+    "raidAlert": false,
+    "witnessProtected": true,
+    "claimResolved": false,
+    "quietPact": false,
+    "compensationForfeited": false,
+    "medicineUsed": false,
+    "allocation": "unassigned",
+    "policyChosen": false,
+    "channelRestored": false,
+    "returnReady": false,
+    "exiled": false,
+    "storyEnded": false,
+    "partySeize": false,
+    "seizedRemainderReturned": false,
+    "medicineEverClaimed": false,
+    "rescuedFirst": false,
+    "townTailForfeited": false
+  },
+  "publicFacts": [
+    "commission",
+    "p1Confessed",
+    "workerMandate",
+    "jointGuarantee",
+    "cityCover",
+    "witnessSafe",
+    "sumanTreated",
+    "originalLedger",
+    "ledgerLost",
+    "evidenceQuality",
+    "evidencePublic",
+    "privacyProtected",
+    "cityComplicityKnown",
+    "unionComplicityKnown",
+    "unionAccountable",
+    "engineerRevealed",
+    "stabilizerKnown",
+    "cargoSecured",
+    "cargoLost",
+    "lateCargo",
+    "warehouseAlarm",
+    "waterAccess",
+    "depositPaid",
+    "waterLease",
+    "waterFouled",
+    "engineMethod",
+    "engineStable",
+    "harborClosed",
+    "restTaken",
+    "raidAlert",
+    "witnessProtected",
+    "claimResolved",
+    "quietPact",
+    "compensationForfeited",
+    "medicineUsed",
+    "allocation",
+    "policyChosen",
+    "channelRestored",
+    "returnReady",
+    "exiled",
+    "storyEnded",
+    "partySeize",
+    "seizedRemainderReturned",
+    "medicineEverClaimed",
+    "rescuedFirst",
+    "townTailForfeited",
+    "node1Done",
+    "node2Done",
+    "node3Done",
+    "sumanNeedsCare",
+    "node4Done",
+    "warehouseBroken",
+    "node5Done",
+    "node6Done",
+    "bankRoute",
+    "node7Done",
+    "p2Confessed",
+    "node8Done",
+    "witnessReady",
+    "campSafe",
+    "node9Done",
+    "rajExposed",
+    "hearingBond",
+    "paidRelease",
+    "claimByForce",
+    "claimSetback",
+    "node10Done",
+    "debtFreed",
+    "node11Done",
+    "depositRefunded",
+    "workerWay",
+    "bankPaid",
+    "claimRecorded",
+    "violentExit",
+    "wanted",
+    "node12Done",
+    "encounter_i09_claim_surrendered",
+    "encounter_i09_claim_party_setback",
+    "encounter_i11_exit_surrendered",
+    "encounter_i11_exit_party_setback",
+    "originalSealedAway"
+  ],
+  "party": [
+    {
+      "id": "p1",
+      "name": "阿鲁娜",
+      "role": "护渠卫士 · 战士／勇士",
+      "bio": "她拿惯印信，也记得印信不能托住落水的人。旧同袍见她时总把话说得格外客气。",
+      "portrait": "p1.png",
+      "color": "#c47f38",
+      "privateBrief": {
+        "sealedHistory": "你按莉拉要求签过风暴封渠令，却知道工班仍被要求下井。你以为只是少一晚工钱，没有再问。你可以自愿承认签名，也可以先借旧职权取药。",
+        "temptation": "交接前不公开责任，莉拉保留你的职务和60GP尾款；公开会失去便利，工人却愿带路。",
+        "relationship": "你曾与维罗一起守洪水。他信你能扛事，已不信‘手续没问题’。"
+      }
+    },
+    {
+      "id": "p2",
+      "name": "那林",
+      "role": "港口寻路人 · 游荡者／盗贼",
+      "bio": "他记得仓门的开法，却很少说为什么记得。拉吉见他时像见熟客一样让开半步。",
+      "portrait": "p2.png",
+      "color": "#4b9d9d",
+      "privateBrief": {
+        "sealedHistory": "你替拉吉转卖过工人的债契，换来亲人赎身。苏曼的原册能证明这笔交易。",
+        "temptation": "拉吉肯付80GP并注销你家的债，交换证人保护路线；接受会使证人被专门拘押，不能再用安全证词方案。",
+        "relationship": "苏曼曾信你能带人离港。他不该替你的亲人付账。"
+      }
+    },
+    {
+      "id": "p3",
+      "name": "米拉",
+      "role": "行路医者 · 牧师／生命领域",
+      "bio": "她习惯先问‘想让我留下吗’，再打开药包。她和苏曼已很久没有坐下来好好说过话。",
+      "portrait": "p3.png",
+      "color": "#e1be6b",
+      "privateBrief": {
+        "sealedHistory": "你和苏曼都已成年，曾相爱，后来和平分开。你想离港，他要照顾留下的人。谁都没有重续关系的义务。",
+        "temptation": "可以治疗、作证或保持专业距离；照护不能换亲密，拒绝复合不损失证词或通路。",
+        "relationship": "他愿安全后再谈，不承诺复合。双方随时可改变主意。"
+      }
+    },
+    {
+      "id": "p4",
+      "name": "迦维娅",
+      "role": "契书学者 · 法师／塑能学派",
+      "bio": "她能把报告写得极有说服力，最近却总把署名留到最后。绞盘的木响对她而言格外熟悉。",
+      "portrait": "p4.png",
+      "color": "#7d6eb0",
+      "privateBrief": {
+        "sealedHistory": "你起草验收报告，写过‘建议更换制动楔’，又在承包人催促下删掉。你知道正确停机次序。",
+        "temptation": "承认删改可确定取得安全次序，却失去城方资助和尾款；保持沉默时，其他人仍可实际调查，有失败风险。",
+        "relationship": "莉拉欣赏你，也会把你的上进心写进预算。维罗会愤怒，但允许承担责任的人继续修复。"
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": "I01",
+      "number": 1,
+      "title": "先付的半份工钱",
+      "opening": "钱袋的响声比井里的呼救更清楚。莉拉把委托推向你们，维罗又推回半寸：“先把那一行读完。”",
+      "description": "镇方能预付40GP，工班只有20GP。两方都要救回苏曼，也都希望今晚先按自己的说法记账。收预付会接受具体承诺；不收则保留立场，但得自己解决押金。",
+      "scene": "I01",
+      "entryLevel": 3,
+      "next": "I02",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node1Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "town-contract",
+          "label": "收镇方40GP，交接前保留沉默",
+          "text": "全队实得40GP；承诺交接前不公开责任。若公开，镇方尾款60GP与职权便利作废。",
+          "success": {
+            "facts": {
+              "node1Done": true,
+              "commission": "town",
+              "cityCover": true
+            },
+            "say": "莉拉收起空钱袋：“先把人带回来。别把沉默写成无罪。”",
+            "gold": 40,
+            "handouts": [
+              "H01"
+            ],
+            "promises": [
+              {
+                "id": "town-silence",
+                "text": "交接前不公开责任文件，违约失去尾款60GP。",
+                "status": "open"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            25,
+            25,
+            20
+          ],
+          "textSummary": "全队实得40GP；承诺交接前不公开责任。若公开，镇方尾款60GP与职权便利作废。"
+        },
+        {
+          "id": "crew-contract",
+          "label": "收工班20GP，承诺保护姓名与证人",
+          "text": "全队实得20GP；工班另允30GP尾款。保护路线若被卖给债主，工班撤回支援和尾款。",
+          "success": {
+            "facts": {
+              "node1Done": true,
+              "commission": "crew",
+              "workerMandate": true
+            },
+            "say": "维罗少数了一枚，同伴替他补上：“先让他们吃饭，别让他们先欠我们。”",
+            "gold": 20,
+            "handouts": [
+              "H01"
+            ],
+            "promises": [
+              {
+                "id": "crew-protect",
+                "text": "不出卖证人保护路线与债契名单。",
+                "status": "open"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            25,
+            25,
+            20
+          ],
+          "textSummary": "全队实得20GP；工班另允30GP尾款。保护路线若被卖给债主，工班撤回支援和尾款。"
+        },
+        {
+          "id": "independent",
+          "label": "不收预付，保留独立见证",
+          "text": "现在0GP；有见证的交接完成后可收50GP。中途的押金、抄录与通行仍需实际解决。",
+          "success": {
+            "facts": {
+              "node1Done": true,
+              "commission": "independent"
+            },
+            "say": "没有钱袋递来，也没有人离开。独立是立场，不是免费的船和纸墨。",
+            "handouts": [
+              "H01"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            25,
+            25,
+            20
+          ],
+          "textSummary": "现在0GP；有见证的交接完成后可收50GP。中途的押金、抄录与通行仍需实际解决。"
+        }
+      ],
+      "durationMinutes": 15,
+      "readAloud": "钱袋的响声比井里的呼救更清楚。莉拉把委托推向你们，维罗又推回半寸：“先把那一行读完。”"
+    },
+    {
+      "id": "I02",
+      "number": 2,
+      "title": "两份都不完整的命令",
+      "opening": "同一夜，在一张纸上叫紧急救济，在另一张纸上叫停工待查。阿鲁娜认得自己落笔留下的墨点。",
+      "description": "阿鲁娜签过封渠令，工班却仍当夜下井。莉拉说救济不能断，维罗说停工就丢掉整季合同。他们没亲手推人下井，却都把风险留给了井下的人。",
+      "scene": "I02",
+      "entryLevel": 3,
+      "next": "I03",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node2Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "p1-confess",
+          "label": "阿鲁娜：承认签名，交出职权便利",
+          "text": "仅本人可选。失去镇方尾款与职权便利，换来工人实际担保和后续带路机会。",
+          "success": {
+            "facts": {
+              "node2Done": true,
+              "p1Confessed": true,
+              "cityCover": false,
+              "workerMandate": true,
+              "jointGuarantee": true,
+              "townTailForfeited": true
+            },
+            "say": "阿鲁娜放下印信。维罗看了很久：“这次别替我们说没事。带路我来。”",
+            "handouts": [
+              "H02"
+            ],
+            "npc": [
+              {
+                "id": "vira",
+                "attitude": "愿合作",
+                "relationship": "阿鲁娜公开承担签名责任。"
+              }
+            ]
+          },
+          "once": true,
+          "actorIds": [
+            "p1"
+          ],
+          "complete": true,
+          "at": [
+            35,
+            25,
+            15
+          ],
+          "textSummary": "仅本人可选。失去镇方尾款与职权便利，换来工人实际担保和后续带路机会。"
+        },
+        {
+          "id": "use-warrant",
+          "label": "借镇方取货令，暂不公开签名旧事",
+          "text": "只有镇方委托可用。取得仓库担保，保留尾款；封渠责任暂未解决。",
+          "success": {
+            "facts": {
+              "node2Done": true,
+              "jointGuarantee": true,
+              "cityCover": true
+            },
+            "say": "莉拉盖章。维罗没有接她递来的茶。",
+            "handouts": [
+              "H02"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "commission": "town"
+          },
+          "complete": true,
+          "at": [
+            35,
+            25,
+            15
+          ],
+          "textSummary": "只有镇方委托可用。取得仓库担保，保留尾款；封渠责任暂未解决。"
+        },
+        {
+          "id": "bond-guarantee",
+          "label": "付10GP共同担保，不替谁证明清白",
+          "text": "实际扣10GP，取仓库担保。责任继续保留，不自动获得工人小径。",
+          "success": {
+            "facts": {
+              "node2Done": true,
+              "jointGuarantee": true
+            },
+            "say": "钱封进铁盒，两方终于在同一页签字，仍不肯对视。",
+            "handouts": [
+              "H02"
+            ]
+          },
+          "once": true,
+          "cost": {
+            "gold": 10
+          },
+          "complete": true,
+          "at": [
+            35,
+            25,
+            15
+          ],
+          "textSummary": "实际扣10GP，取仓库担保。责任继续保留，不自动获得工人小径。"
+        },
+        {
+          "id": "no-guarantee",
+          "label": "不付钱不背书，拿副本去救人",
+          "text": "无成本，取得可读副本；构装仓库仍会要求担保。",
+          "success": {
+            "facts": {
+              "node2Done": true,
+              "jointGuarantee": false
+            },
+            "say": "你们带走两份命令，没带走任何人的免责证明。",
+            "handouts": [
+              "H02"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            35,
+            25,
+            15
+          ],
+          "textSummary": "无成本，取得可读副本；构装仓库仍会要求担保。"
+        }
+      ],
+      "durationMinutes": 20,
+      "readAloud": "同一夜，在一张纸上叫紧急救济，在另一张纸上叫停工待查。阿鲁娜认得自己落笔留下的墨点。"
+    },
+    {
+      "id": "I03",
+      "number": 3,
+      "title": "井中的人和那本账",
+      "opening": "皮袋和人，在同一根绳够不到的两边。苏曼喊：“里面不只是我的名字。”水响盖过后半句。",
+      "description": "苏曼抓着低层绳索，原始夜班与债契账册卡在另一侧溃口。可靠地先救人会丢原册；先取账，其他工人能保住苏曼，但他会在逃生时受伤，完整作证前需要实际治疗。",
+      "scene": "I03",
+      "entryLevel": 3,
+      "next": "I04",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node3Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "save-suman",
+          "label": "先稳妥救人，接受原册失去",
+          "text": "不掷骰。苏曼安全；I05只能重建较弱证据，不能自动得到原册。",
+          "success": {
+            "facts": {
+              "node3Done": true,
+              "witnessSafe": true,
+              "originalLedger": false,
+              "ledgerLost": true,
+              "rescuedFirst": true
+            },
+            "say": "苏曼踩上宽阶，问了两遍皮袋在哪，随后不问了。",
+            "handouts": [
+              "H03"
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "获救，需照护",
+                "attitude": "信任",
+                "location": "I08"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            27.5,
+            32.5,
+            15
+          ],
+          "textSummary": "不掷骰。苏曼安全；I05只能重建较弱证据，不能自动得到原册。"
+        },
+        {
+          "id": "save-ledger",
+          "label": "先取原册，让工班承担伤工脱身风险",
+          "text": "不掷骰。保全原册；苏曼存活但受伤、保持戒备，完整作证前须治疗。",
+          "success": {
+            "facts": {
+              "node3Done": true,
+              "witnessSafe": true,
+              "originalLedger": true,
+              "sumanNeedsCare": true
+            },
+            "say": "原册落进怀里时，背后传来压住的痛呼。救他的人看了看账本，没有道谢。",
+            "items": [
+              {
+                "id": "debt-ledger",
+                "name": "原始夜班与债契账册",
+                "kind": "document",
+                "count": 1
+              }
+            ],
+            "handouts": [
+              "H03"
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "获救，受伤暂不能长谈",
+                "attitude": "戒备",
+                "location": "I08"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            27.5,
+            32.5,
+            15
+          ],
+          "textSummary": "不掷骰。保全原册；苏曼存活但受伤、保持戒备，完整作证前须治疗。"
+        },
+        {
+          "id": "risk-both",
+          "label": "两者都取：先付3HP擦伤，再掷体操DC14",
+          "text": "操作者实际消耗3HP且至少留1。成功同时保全；失败人救回、原册失去、呼喊引来后续额外巡查。成本在尝试前支付。",
+          "success": {
+            "facts": {
+              "node3Done": true,
+              "witnessSafe": true,
+              "originalLedger": true,
+              "rescuedFirst": true
+            },
+            "say": "皮袋和人一起越过裂口。维罗接住账本，却先把干布递给你。",
+            "items": [
+              {
+                "id": "debt-ledger",
+                "name": "原始夜班与债契账册",
+                "kind": "document",
+                "count": 1
+              }
+            ],
+            "handouts": [
+              "H03"
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "获救，需照护",
+                "attitude": "信任",
+                "location": "I08"
+              }
+            ],
+            "saySummary": "人和原册均保全；操作者已承担3HP，未增加警报。"
+          },
+          "once": true,
+          "cost": {
+            "actorResources": [
+              {
+                "actorId": "actor",
+                "resource": "hp",
+                "amount": 3
+              }
+            ]
+          },
+          "check": {
+            "skill": "acrobatics",
+            "dc": 14,
+            "once": true
+          },
+          "failure": {
+            "facts": {
+              "node3Done": true,
+              "witnessSafe": true,
+              "ledgerLost": true,
+              "raidAlert": true,
+              "rescuedFirst": true
+            },
+            "say": "人被拉回，原册仍被卷走。3HP伤势已经付出，喊声也招来港口巡查。",
+            "complete": true,
+            "handouts": [
+              "H03"
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "获救，需照护",
+                "attitude": "信任",
+                "location": "I08"
+              }
+            ],
+            "saySummary": "苏曼获救、原册遗失；3HP已支付，后续增加巡查。"
+          },
+          "complete": true,
+          "at": [
+            27.5,
+            32.5,
+            15
+          ],
+          "textSummary": "操作者实际消耗3HP且至少留1。成功同时保全；失败人救回、原册失去、呼喊引来后续额外巡查。成本在尝试前支付。"
+        }
+      ],
+      "durationMinutes": 20,
+      "sensitive": true,
+      "descriptionSummary": "两处目标来不及稳妥兼顾：救苏曼、保原册，或承担明示3HP与DC14风险尝试两全。失败仍救人，但失去原册并引来巡查。",
+      "dmNotes": "合法法术、工具或准备真能改变代价时，按实际规则处理；不能为了悲剧临时反魔法。默认伤口只一句略述。",
+      "readAloud": "皮袋和人，在同一根绳够不到的两边。苏曼喊：“里面不只是我的名字。”水响盖过后半句。"
+    },
+    {
+      "id": "I04",
+      "number": 4,
+      "title": "蛇门担保仓",
+      "opening": "蛇纹不是神罚，只是旧港的标记。构装守卫连这也不在意，它们只重复担保条款。",
+      "description": "越早取得药物，越能用于当晚照护。只取登记副本绕行虽然安全，会给拉吉调护运人的时间。守卫保护的是扣押担保，不裁决善恶。",
+      "scene": "I04",
+      "entryLevel": 3,
+      "next": "I05",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node4Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "authorized-cargo",
+          "label": "交担保，取回真实4瓶",
+          "text": "已有担保直接取货；不会重复发放同一堆。",
+          "success": {
+            "facts": {
+              "node4Done": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true
+            },
+            "say": "药物回到队伍手里，担保仍有人要结算。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "handouts": [
+              "H04"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "jointGuarantee": true
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            15
+          ],
+          "textSummary": "已有担保直接取货；不会重复发放同一堆。"
+        },
+        {
+          "id": "quiet-window",
+          "label": "安全取副本绕行，药留仓内",
+          "text": "无即时成本；I09多一名护运人，队伍暂时不能使用这4瓶。",
+          "success": {
+            "facts": {
+              "node4Done": true,
+              "lateCargo": true,
+              "cargoSecured": false
+            },
+            "say": "窗外路确实安全。另一辆空绳车也正驶向渡桥。",
+            "handouts": [
+              "H04"
+            ]
+          },
+          "once": true,
+          "at": [
+            67.5,
+            27.5,
+            10
+          ],
+          "complete": true,
+          "textSummary": "无即时成本；I09多一名护运人，队伍暂时不能使用这4瓶。"
+        },
+        {
+          "id": "pick-seal",
+          "label": "查停机封记DC14；失败启动守卫与警报",
+          "text": "普通调查不收费。成功取药，失败触发同一批构装体并增加后续巡查。",
+          "success": {
+            "facts": {
+              "node4Done": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true
+            },
+            "say": "维护封记接通，守卫停止，药物转入库存。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "handouts": [
+              "H04"
+            ],
+            "neutralize": [
+              "i04-armor-a",
+              "i04-sword"
+            ]
+          },
+          "once": true,
+          "at": [
+            17.5,
+            27.5,
+            10
+          ],
+          "check": {
+            "skill": "investigation",
+            "dc": 14,
+            "once": true
+          },
+          "failure": {
+            "facts": {
+              "warehouseAlarm": true,
+              "raidAlert": true
+            },
+            "say": "封记接错，警报传向港口。可实际撤退取副本，或处理构装体。",
+            "encounter": "i04_guard"
+          },
+          "complete": true,
+          "textSummary": "普通调查不收费。成功取药，失败触发同一批构装体并增加后续巡查。"
+        },
+        {
+          "id": "fight-guards",
+          "label": "解除扣押：实际战术交锋",
+          "text": "一具Animated Armor和一柄Animated Flying Sword，按原卡；退出仓门可撤退。",
+          "success": {
+            "encounter": "i04_guard",
+            "say": "守卫执行扣押，不接受道德口号，也不追出仓门。"
+          },
+          "once": true,
+          "textSummary": "一具Animated Armor和一柄Animated Flying Sword，按原卡；退出仓门可撤退。"
+        },
+        {
+          "id": "after-guards",
+          "label": "实际击败后取药",
+          "text": "仅defeated可用，停战不等于取货胜利。",
+          "success": {
+            "facts": {
+              "node4Done": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "warehouseBroken": true
+            },
+            "say": "药物取得，破损守卫也留在港口损失表上。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "handouts": [
+              "H04"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "encounter_i04_guard_defeated": true
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            15
+          ],
+          "textSummary": "仅defeated可用，停战不等于取货胜利。"
+        },
+        {
+          "id": "withdraw-window",
+          "label": "警报后撤到外窗，仅保全副本",
+          "text": "无货物胜利，不重置伤势；I09多一护运人。",
+          "success": {
+            "facts": {
+              "node4Done": true,
+              "cargoSecured": false,
+              "lateCargo": true
+            },
+            "say": "你们带走副本，药仍未交付。",
+            "handouts": [
+              "H04"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "warehouseAlarm": true
+          },
+          "at": [
+            67.5,
+            27.5,
+            10
+          ],
+          "complete": true,
+          "textSummary": "无货物胜利，不重置伤势；I09多一护运人。"
+        }
+      ],
+      "durationMinutes": 25,
+      "encounters": {
+        "i04_guard": [
+          {
+            "id": "i04-armor-a",
+            "type": "armor",
+            "name": "扣押活化盔甲",
+            "x": 42.5,
+            "y": 27.5,
+            "side": "enemy"
+          },
+          {
+            "id": "i04-sword",
+            "type": "sword",
+            "name": "仓内活化飞剑",
+            "x": 62.5,
+            "y": 42.5,
+            "side": "enemy"
+          }
+        ]
+      },
+      "readAloud": "蛇纹不是神罚，只是旧港的标记。构装守卫连这也不在意，它们只重复担保条款。"
+    },
+    {
+      "id": "I05",
+      "number": 5,
+      "title": "谁的名字能被公开",
+      "opening": "账上最先映入眼睛的不是罪名，是利息。姓氏被划掉又换上另一个姓氏，像一桌不肯散的饭。",
+      "description": "镇方用救济款担保了承包人，工头明知制动有缺陷仍排夜班。原册也记着家庭私债。公开整册能阻止遮掩，却公开这些人的隐私；脱敏抄录要10GP实际纸墨工钱。",
+      "scene": "I05",
+      "entryLevel": 3,
+      "next": "I06",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node5Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "p4-confess",
+          "label": "迦维娅：承认删掉的警告，交出安全次序",
+          "text": "本人可选，非终结。失去城方资助和尾款，确定取得安全停机次序；随后仍选账册去向。",
+          "success": {
+            "facts": {
+              "engineerRevealed": true,
+              "stabilizerKnown": true,
+              "townTailForfeited": true
+            },
+            "say": "迦维娅把删掉的那行重新写下。维罗骂了一句，随后问：这次你会留在机器旁边吗？",
+            "npc": [
+              {
+                "id": "vira",
+                "relationship": "愤怒于删改；愿让承担责任的迦维娅参与修复。"
+              }
+            ]
+          },
+          "once": true,
+          "actorIds": [
+            "p4"
+          ],
+          "requires": {
+            "engineerRevealed": false
+          },
+          "at": [
+            37.5,
+            22.5,
+            15
+          ],
+          "visibility": "owner",
+          "textSummary": "本人可选，非终结。失去城方资助和尾款，确定取得安全停机次序；随后仍选账册去向。"
+        },
+        {
+          "id": "publish-original",
+          "label": "公开整册：责任与私债名单一起公布",
+          "text": "要求保全原册。镇方尾款作废，责任公开；债主也知道哪些家庭正在追索，I09增加巡查。",
+          "success": {
+            "facts": {
+              "node5Done": true,
+              "evidenceQuality": "original",
+              "evidencePublic": true,
+              "privacyProtected": false,
+              "cityComplicityKnown": true,
+              "unionComplicityKnown": true,
+              "raidAlert": true,
+              "townTailForfeited": true
+            },
+            "say": "围观的人先认出官员，又认出邻居。两部分名字没有重新分开。",
+            "handouts": [
+              "H05"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "originalLedger": true
+          },
+          "complete": true,
+          "at": [
+            37.5,
+            22.5,
+            15
+          ],
+          "textSummary": "要求保全原册。镇方尾款作废，责任公开；债主也知道哪些家庭正在追索，I09增加巡查。"
+        },
+        {
+          "id": "redact-original",
+          "label": "付10GP脱敏抄录，原件封存",
+          "text": "真实扣10GP，公开责任摘要并保留家庭隐私；公开仍失去镇方尾款。",
+          "success": {
+            "facts": {
+              "node5Done": true,
+              "evidenceQuality": "protected",
+              "evidencePublic": true,
+              "privacyProtected": true,
+              "cityComplicityKnown": true,
+              "unionComplicityKnown": true,
+              "townTailForfeited": true
+            },
+            "say": "抄工遮住家庭姓名，却把负责人的签名抄大了一点：“这处不用省墨。”",
+            "items": [
+              {
+                "id": "redacted-record",
+                "name": "脱敏责任抄件",
+                "kind": "document",
+                "count": 1
+              }
+            ],
+            "handouts": [
+              "H05"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "originalLedger": true
+          },
+          "cost": {
+            "gold": 10
+          },
+          "complete": true,
+          "at": [
+            37.5,
+            22.5,
+            15
+          ],
+          "textSummary": "真实扣10GP，公开责任摘要并保留家庭隐私；公开仍失去镇方尾款。"
+        },
+        {
+          "id": "hold-original",
+          "label": "封存原册，留作谈判筹码",
+          "text": "保留强证据和家庭隐私；责任尚未公开，仍有人能开价。不会顺便得到停机图。",
+          "success": {
+            "facts": {
+              "node5Done": true,
+              "evidenceQuality": "original",
+              "privacyProtected": true,
+              "cityComplicityKnown": true,
+              "unionComplicityKnown": true
+            },
+            "say": "原册包回油布。莉拉和维罗都松口气，又都想知道它最后进谁的柜子。",
+            "handouts": [
+              "H05"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "originalLedger": true
+          },
+          "complete": true,
+          "at": [
+            37.5,
+            22.5,
+            15
+          ],
+          "textSummary": "保留强证据和家庭隐私；责任尚未公开，仍有人能开价。不会顺便得到停机图。"
+        },
+        {
+          "id": "rebuild-proof",
+          "label": "原册已失：调查副册DC13",
+          "text": "无额外费用。成功得可用旁证，失败仅部分副本；仍能谈、交易、交锋或保全人撤走。",
+          "success": {
+            "facts": {
+              "node5Done": true,
+              "evidenceQuality": "witness",
+              "privacyProtected": true,
+              "cityComplicityKnown": true,
+              "unionComplicityKnown": true
+            },
+            "say": "你把签收副本与苏曼能确认的部分对上，得到旁证；机器还得实际调查或让知情人说明。",
+            "handouts": [
+              "H05"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "originalLedger": false
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 13,
+            "once": true
+          },
+          "failure": {
+            "facts": {
+              "node5Done": true,
+              "evidenceQuality": "partial",
+              "cityComplicityKnown": true,
+              "unionComplicityKnown": true
+            },
+            "say": "副本缺关键签名。你知道责任不止一人，却不能把猜测当作让护运人投降的证据。",
+            "complete": true,
+            "handouts": [
+              "H05"
+            ]
+          },
+          "complete": true,
+          "at": [
+            37.5,
+            22.5,
+            15
+          ],
+          "textSummary": "无额外费用。成功得可用旁证，失败仅部分副本；仍能谈、交易、交锋或保全人撤走。"
+        }
+      ],
+      "durationMinutes": 25,
+      "dmNotes": "不把普通调查失败变成无预告扣钱；检定只区分已说明的证据强度。公开并非保证正义，隐私损害也非凭空道德惩罚。",
+      "readAloud": "账上最先映入眼睛的不是罪名，是利息。姓氏被划掉又换上另一个姓氏，像一桌不肯散的饭。"
+    },
+    {
+      "id": "I06",
+      "number": 6,
+      "title": "莲眼的水权",
+      "opening": "莲眼把旧账放在新契旁：“上回他们说清完就结钱，再上回说下次一定先问我。”",
+      "description": "莲眼愿借船道，也想把临时善后权变成长久决定权。可付20GP可退押金，或签十年排他水权；拒绝仍有离港办法，但没有通用免费保证。",
+      "scene": "I06",
+      "entryLevel": 3,
+      "next": "I07",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node6Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "repair-deposit",
+          "label": "付20GP修渠押金，履约可退",
+          "text": "实际扣20GP。只有清洁停机且实际清渠才原额退；污染或弃约不退。",
+          "success": {
+            "facts": {
+              "node6Done": true,
+              "waterAccess": true,
+              "depositPaid": true
+            },
+            "say": "莲眼点清钱：“不是信任，是我终于不必假装只有信任可用。”",
+            "handouts": [
+              "H06"
+            ],
+            "promises": [
+              {
+                "id": "channel-repair",
+                "text": "清洁停机并实际清渠后，退押金20GP。",
+                "status": "open"
+              }
+            ]
+          },
+          "once": true,
+          "cost": {
+            "gold": 20
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            15
+          ],
+          "textSummary": "实际扣20GP。只有清洁停机且实际清渠才原额退；污染或弃约不退。"
+        },
+        {
+          "id": "exclusive-lease",
+          "label": "免押金，签十年排他用水权",
+          "text": "零即时金币。莲眼取得长期控制，工班今后须她许可借水；结局保留此权力。",
+          "success": {
+            "facts": {
+              "node6Done": true,
+              "waterAccess": true,
+              "waterLease": true
+            },
+            "say": "莲眼没有藏笑。维罗说：“省了今晚的钱，顺手签了我们的明天。”",
+            "handouts": [
+              "H06"
+            ],
+            "npc": [
+              {
+                "id": "lotus",
+                "status": "取得十年排他水权",
+                "attitude": "满意"
+              },
+              {
+                "id": "vira",
+                "attitude": "不满",
+                "relationship": "工班通路被他人签走。"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            15
+          ],
+          "textSummary": "零即时金币。莲眼取得长期控制，工班今后须她许可借水；结局保留此权力。"
+        },
+        {
+          "id": "refuse-water",
+          "label": "不交押金，也不签水权",
+          "text": "零即时成本。I11须面对已发生的巡查、通行费或驱逐，不能免费抹掉此前行动。",
+          "success": {
+            "facts": {
+              "node6Done": true,
+              "waterAccess": false,
+              "bankRoute": true
+            },
+            "say": "莲眼收起契纸。她没有诅咒你们，也没有送来本不存在的免费船。",
+            "handouts": [
+              "H06"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            15
+          ],
+          "textSummary": "零即时成本。I11须面对已发生的巡查、通行费或驱逐，不能免费抹掉此前行动。"
+        }
+      ],
+      "durationMinutes": 20,
+      "readAloud": "莲眼把旧账放在新契旁：“上回他们说清完就结钱，再上回说下次一定先问我。”"
+    },
+    {
+      "id": "I07",
+      "number": 7,
+      "title": "把裂缝停在哪里",
+      "opening": "机器不关心哪张契约先签，只在每次回摆时给伸手的人同样短的一瞬。",
+      "description": "保住机器需要安全次序或实际战术操作。切断主轴一定停机，却让工班失去下季合同；排入公渠可快停并保机器，却污染取水口、关闭船道。两只蒸汽小魔蝠追着热雾聚来。",
+      "scene": "I07",
+      "entryLevel": 3,
+      "next": "I08",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node7Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "clean-with-plan",
+          "label": "按次序清洁停机：操作者付2HP",
+          "text": "要求已知次序且水路开放。操作者消耗2HP且至少留1，保机器与取水口；元素生物随海上热雾离开。",
+          "success": {
+            "facts": {
+              "node7Done": true,
+              "engineStable": true,
+              "engineMethod": "clean"
+            },
+            "say": "木齿咬住制动楔。港口能工作，手臂也确实烫伤；两件事都是真的。",
+            "neutralize": [
+              "i07-steam-a",
+              "i07-steam-b"
+            ],
+            "handouts": [
+              "H07"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "stabilizerKnown": true,
+            "waterAccess": true
+          },
+          "cost": {
+            "actorResources": [
+              {
+                "actorId": "actor",
+                "resource": "hp",
+                "amount": 2
+              }
+            ]
+          },
+          "combat": true,
+          "at": [
+            62.5,
+            17.5,
+            15
+          ],
+          "complete": true,
+          "textSummary": "要求已知次序且水路开放。操作者消耗2HP且至少留1，保机器与取水口；元素生物随海上热雾离开。"
+        },
+        {
+          "id": "inspect-brake",
+          "label": "查磨损制动DC14；失败招来元素生物",
+          "text": "不扣未说明费用。成功得次序但仍须实际停机；失败触发两只小魔蝠和后续警报。",
+          "success": {
+            "facts": {
+              "stabilizerKnown": true
+            },
+            "say": "你辨清磨损和可用顺序；如何停机还未决定。"
+          },
+          "once": true,
+          "requires": {
+            "stabilizerKnown": false
+          },
+          "check": {
+            "skill": "investigation",
+            "dc": 14,
+            "once": true
+          },
+          "failure": {
+            "facts": {
+              "raidAlert": true
+            },
+            "say": "转轮回摆，你及时退回，没有额外自动伤害；小魔蝠与巡查都听见了动静。",
+            "encounter": "i07_steam"
+          },
+          "at": [
+            42.5,
+            27.5,
+            20
+          ],
+          "textSummary": "不扣未说明费用。成功得次序但仍须实际停机；失败触发两只小魔蝠和后续警报。"
+        },
+        {
+          "id": "break-shaft",
+          "label": "切断主轴：确定停机，港口停业",
+          "text": "无检定和个人资源成本。机器损毁、下季合同消失；眼前的人能撤开。",
+          "success": {
+            "facts": {
+              "node7Done": true,
+              "engineStable": true,
+              "engineMethod": "broken",
+              "harborClosed": true
+            },
+            "say": "主轴断开的声音很脆。维罗把下季排班表折成四折，没有骂人。",
+            "neutralize": [
+              "i07-steam-a",
+              "i07-steam-b"
+            ],
+            "handouts": [
+              "H07"
+            ],
+            "npc": [
+              {
+                "id": "workers",
+                "status": "失去下季合同"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "combat": true,
+          "at": [
+            42.5,
+            27.5,
+            20
+          ],
+          "textSummary": "无检定和个人资源成本。机器损毁、下季合同消失；眼前的人能撤开。"
+        },
+        {
+          "id": "flood-channel",
+          "label": "排热污水入公渠：保机器，失去水路",
+          "text": "要求开渠协议。确定停机、机器完整；取水口污染、押金不退、船道关闭。",
+          "success": {
+            "facts": {
+              "node7Done": true,
+              "engineStable": true,
+              "engineMethod": "flooded",
+              "waterFouled": true,
+              "waterAccess": false
+            },
+            "say": "机器保住了，公渠翻起带油白沫。莲眼先去堵水口，没有看你们。",
+            "neutralize": [
+              "i07-steam-a",
+              "i07-steam-b"
+            ],
+            "handouts": [
+              "H07"
+            ],
+            "npc": [
+              {
+                "id": "lotus",
+                "attitude": "愤怒",
+                "status": "关闭船道，处理取水污染"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "waterAccess": true
+          },
+          "complete": true,
+          "combat": true,
+          "at": [
+            42.5,
+            27.5,
+            20
+          ],
+          "textSummary": "要求开渠协议。确定停机、机器完整；取水口污染、押金不退、船道关闭。"
+        },
+        {
+          "id": "fight-steam",
+          "label": "先按战术处理小魔蝠",
+          "text": "两只SRD原卡；死亡爆发与朦胧形体照常。击败仅清平台，不自动修好机器。",
+          "success": {
+            "encounter": "i07_steam",
+            "say": "热雾里的形体散开，制动楔还在转轮边。"
+          },
+          "once": true,
+          "textSummary": "两只SRD原卡；死亡爆发与朦胧形体照常。击败仅清平台，不自动修好机器。"
+        },
+        {
+          "id": "after-steam-risk",
+          "label": "实际击败后制动，运动DC13",
+          "text": "成功清洁停机；失败也停机，但主轴裂开、港口停业。不要求再攒成功次数。",
+          "success": {
+            "facts": {
+              "node7Done": true,
+              "engineStable": true,
+              "engineMethod": "clean"
+            },
+            "say": "最后一次回摆中，制动楔终于卡住，机器完整停下。",
+            "handouts": [
+              "H07"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "encounter_i07_steam_defeated": true
+          },
+          "check": {
+            "skill": "athletics",
+            "dc": 13,
+            "once": true
+          },
+          "failure": {
+            "facts": {
+              "node7Done": true,
+              "engineStable": true,
+              "engineMethod": "broken",
+              "harborClosed": true
+            },
+            "say": "机器停住，主轴也裂开。工班丢了下季合同，没人被留在转轮旁。",
+            "complete": true,
+            "handouts": [
+              "H07"
+            ]
+          },
+          "complete": true,
+          "at": [
+            42.5,
+            27.5,
+            20
+          ],
+          "textSummary": "成功清洁停机；失败也停机，但主轴裂开、港口停业。不要求再攒成功次数。"
+        }
+      ],
+      "durationMinutes": 30,
+      "encounters": {
+        "i07_steam": [
+          {
+            "id": "i07-steam-a",
+            "type": "steam_mephit",
+            "name": "制动旁蒸汽小魔蝠",
+            "x": 32.5,
+            "y": 27.5,
+            "side": "enemy"
+          },
+          {
+            "id": "i07-steam-b",
+            "type": "steam_mephit",
+            "name": "排气管蒸汽小魔蝠",
+            "x": 47.5,
+            "y": 32.5,
+            "side": "enemy"
+          }
+        ]
+      },
+      "dmNotes": "明示HP成本为普通事故伤害，不是神话新资源。合法准备可真正降低代价；主持按实际D&D法术与工具结算，不为阴暗结局硬禁。",
+      "readAloud": "机器不关心哪张契约先签，只在每次回摆时给伸手的人同样短的一瞬。"
+    },
+    {
+      "id": "I08",
+      "number": 8,
+      "title": "白花下的旧话",
+      "opening": "苏曼把袖口翻到里面：“别担心，这回不是为了见你才摔下去的。”米拉把干布放下，等他说要不要留下。",
+      "description": "治疗让苏曼回到4HP，能完整长谈；若先救人，他即使带伤也肯作完整亲见证词。这里能按正常规则短休，但实际休息会让桥上多一侦察者。旧情由双方同意，不交换治疗、证词或资源。",
+      "scene": "I08",
+      "entryLevel": 3,
+      "next": "I09",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node8Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "potion-for-suman",
+          "label": "自愿用自己的药照护（扣个人1瓶）",
+          "text": "只扣当前角色的个人药水，不扣同伴。苏曼Commoner为1/4HP，药水最低治疗4，足以满血。",
+          "success": {
+            "facts": {
+              "sumanTreated": true
+            },
+            "say": "苏曼把空瓶摆好，问要不要替你收回药包。",
+            "actorResources": [
+              {
+                "actorId": "suman",
+                "resource": "hp",
+                "amount": 4
+              }
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "已治疗，可完整作证",
+                "attitude": "信任"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "sumanTreated": false
+          },
+          "cost": {
+            "potions": {
+              "count": 1,
+              "from": "actor"
+            }
+          },
+          "at": [
+            27.5,
+            32.5,
+            5
+          ],
+          "textSummary": "只扣当前角色的个人药水，不扣同伴。苏曼Commoner为1/4HP，药水最低治疗4，足以满血。"
+        },
+        {
+          "id": "cure-suman",
+          "label": "米拉：一环疗伤术（扣一环位1）",
+          "text": "仅米拉。米拉本卡Cure Wounds最低治疗8（含生命门徒），足以从1/4到4/4；施法动作、成分与距离仍按原文。",
+          "success": {
+            "facts": {
+              "sumanTreated": true
+            },
+            "say": "米拉按原术照护。他道谢后补了一句：“不是让你为此留下。”",
+            "actorResources": [
+              {
+                "actorId": "suman",
+                "resource": "hp",
+                "amount": 4
+              }
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "已治疗，可完整作证",
+                "attitude": "信任"
+              }
+            ]
+          },
+          "once": true,
+          "actorIds": [
+            "p3"
+          ],
+          "requires": {
+            "sumanTreated": false
+          },
+          "cost": {
+            "actorResources": [
+              {
+                "actorId": "actor",
+                "resource": "slots",
+                "slot": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "at": [
+            27.5,
+            32.5,
+            5
+          ],
+          "textSummary": "仅米拉。米拉本卡Cure Wounds最低治疗8（含生命门徒），足以从1/4到4/4；施法动作、成分与距离仍按原文。"
+        },
+        {
+          "id": "task-potion-for-suman",
+          "label": "用任务药照护（真实扣任务1瓶）",
+          "text": "要求已取药。余下3瓶才可分配，不补回。",
+          "success": {
+            "facts": {
+              "sumanTreated": true,
+              "medicineUsed": true
+            },
+            "say": "四个瓶位空了一个。活人坐在这里，也没有让空位更容易分。",
+            "actorResources": [
+              {
+                "actorId": "suman",
+                "resource": "hp",
+                "amount": 4
+              }
+            ],
+            "npc": [
+              {
+                "id": "suman",
+                "status": "已治疗，可完整作证",
+                "attitude": "信任"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": true,
+            "sumanTreated": false
+          },
+          "cost": {
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "count": 1
+              }
+            ]
+          },
+          "at": [
+            27.5,
+            32.5,
+            5
+          ],
+          "textSummary": "要求已取药。余下3瓶才可分配，不补回。"
+        },
+        {
+          "id": "p2-sell-route",
+          "label": "接受私下80GP，交出保护路线",
+          "text": "只本人/GM可见。全队实得80GP，证人保护失去，I09有专门拘押者；免费安全证词方案关闭。",
+          "success": {
+            "facts": {
+              "witnessProtected": false,
+              "raidAlert": true
+            },
+            "gold": 80,
+            "privateFacts": {
+              "p2": {
+                "soldWitness": true
+              }
+            },
+            "privateSay": [
+              {
+                "actorId": "p2",
+                "text": "你交出苏曼的保护路线。拉吉付80GP并注销你家的债；未替其他工人注销。",
+                "summary": "私下交易完成，公开后果将在渡桥出现。"
+              }
+            ],
+            "relationships": [
+              {
+                "npcId": "suman",
+                "actorId": "p2",
+                "status": "保护路线已被出卖，尚未坦白",
+                "visibility": "owner"
+              }
+            ]
+          },
+          "once": true,
+          "visibility": "owner",
+          "actorIds": [
+            "p2"
+          ],
+          "requires": {
+            "not": {
+              "privateFact": {
+                "actorId": "p2",
+                "key": "soldWitness",
+                "value": true
+              }
+            }
+          },
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "textSummary": "只本人/GM可见。全队实得80GP，证人保护失去，I09有专门拘押者；免费安全证词方案关闭。"
+        },
+        {
+          "id": "p2-confess",
+          "label": "那林：坦白旧债契，不接受新交易",
+          "text": "本人自愿公开。0额外金币，工班改保护路线阻止拘押者；不会抹掉旧事。",
+          "success": {
+            "facts": {
+              "p2Confessed": true,
+              "witnessProtected": true
+            },
+            "privateFacts": {
+              "p2": {
+                "confessed": true
+              }
+            },
+            "say": "苏曼听完只问：“这次你把路告诉谁了？”工班换了路线，没有把过去一笔勾销。",
+            "relationships": [
+              {
+                "npcId": "suman",
+                "actorId": "p2",
+                "status": "知道旧事，允许在监督下修复",
+                "visibility": "public"
+              }
+            ]
+          },
+          "once": true,
+          "actorIds": [
+            "p2"
+          ],
+          "requires": {
+            "all": [
+              {
+                "not": {
+                  "privateFact": {
+                    "actorId": "p2",
+                    "key": "soldWitness",
+                    "value": true
+                  }
+                }
+              },
+              {
+                "p2Confessed": false
+              }
+            ]
+          },
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "textSummary": "本人自愿公开。0额外金币，工班改保护路线阻止拘押者；不会抹掉旧事。",
+          "visibility": "owner"
+        },
+        {
+          "id": "p3-boundary",
+          "label": "米拉：问过意愿，约好安全后再谈",
+          "text": "只本人/GM。双方不承诺复合，随时可改主意。拒绝此路线不损失治疗、证词或通行。",
+          "success": {
+            "privateFacts": {
+              "p3": {
+                "talkLater": true,
+                "relationshipChosen": true,
+                "relationshipChoice": "talk-later"
+              }
+            },
+            "privateSay": [
+              {
+                "actorId": "p3",
+                "text": "苏曼愿意安全后重新坐一会，不承诺复合；你们都能改变主意。",
+                "summary": "双方自愿约好安全后再谈。"
+              }
+            ],
+            "relationships": [
+              {
+                "npcId": "suman",
+                "actorId": "p3",
+                "status": "安全后自愿再谈，未承诺复合",
+                "visibility": "owner"
+              }
+            ],
+            "saySummary": "双方自愿约好安全后再谈，不承诺复合。"
+          },
+          "once": true,
+          "visibility": "owner",
+          "actorIds": [
+            "p3"
+          ],
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "textSummary": "本人可选的非露骨旧关系；双方自愿约好安全后再谈，不复合也无机械损失。",
+          "requires": {
+            "not": {
+              "privateFact": {
+                "actorId": "p3",
+                "key": "relationshipChosen",
+                "value": true
+              }
+            }
+          }
+        },
+        {
+          "id": "p3-friendship",
+          "label": "米拉：保持友情与专业照护",
+          "text": "只本人/GM。明确不重续亲密关系，保持友情与照护。与安全后再谈完全同机械效果：不影响证词、费用、通路、援助或报酬；两种立场互斥。",
+          "textSummary": "保持友情，不重续亲密；与再谈路线机械后果相同。",
+          "once": true,
+          "visibility": "owner",
+          "actorIds": [
+            "p3"
+          ],
+          "requires": {
+            "not": {
+              "privateFact": {
+                "actorId": "p3",
+                "key": "relationshipChosen",
+                "value": true
+              }
+            }
+          },
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "success": {
+            "privateFacts": {
+              "p3": {
+                "relationshipChosen": true,
+                "relationshipChoice": "friendship",
+                "friendship": true
+              }
+            },
+            "privateSay": [
+              {
+                "actorId": "p3",
+                "text": "你们把旧关系留在过去。苏曼点头：“那就先当能替彼此端稳一杯茶的朋友。”照护和亲见证词不因此改变。",
+                "summary": "双方自愿保持友情与专业照护，不重续亲密关系。"
+              }
+            ],
+            "relationships": [
+              {
+                "npcId": "suman",
+                "actorId": "p3",
+                "status": "双方自愿保持友情与专业照护，不重续亲密",
+                "visibility": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "id": "short-rest",
+          "label": "先安排正常短休，再出发",
+          "text": "不自动花骰。逐人正常短休，真实恢复后桥上增加侦察者；开别处休息也触发同样后果。",
+          "success": {
+            "facts": {
+              "node8Done": true,
+              "witnessReady": true,
+              "campSafe": true
+            },
+            "say": "干布热茶确实有用。渡桥上的灯，也比来时多一盏。",
+            "handouts": [
+              "H08"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "textSummary": "不自动花骰。逐人正常短休，真实恢复后桥上增加侦察者；开别处休息也触发同样后果。"
+        },
+        {
+          "id": "move-on",
+          "label": "带当前伤势出发，不自动恢复",
+          "text": "若此前实际休息过，侦察者仍会到位；此选择不能洗掉已花的一小时。",
+          "success": {
+            "facts": {
+              "node8Done": true,
+              "witnessReady": true
+            },
+            "say": "苏曼收好绳头：“趁他们还没喝完第二杯茶，走吧。”",
+            "handouts": [
+              "H08"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            32.5,
+            22.5,
+            15
+          ],
+          "textSummary": "若此前实际休息过，侦察者仍会到位；此选择不能洗掉已花的一小时。"
+        }
+      ],
+      "durationMinutes": 25,
+      "safeRest": true,
+      "sensitive": true,
+      "descriptionSummary": "可自愿用自己的药、一环位或一瓶任务药治疗苏曼。旧情可略述或拒绝，证词收益不受感情选择影响。真实休息给敌方部署时间。",
+      "dmNotes": "照护不是买亲密。专属交易和旧情只owner/GM可见；非终结动作后仍须选出发。",
+      "readAloud": "苏曼把袖口翻到里面：“别担心，这回不是为了见你才摔下去的。”米拉把干布放下，等他说要不要留下。"
+    },
+    {
+      "id": "I09",
+      "number": 9,
+      "title": "象首桥上的和解价",
+      "opening": "拉吉摆了两张凳，一张给谈和的人，一张给可能被拘的人。“先别选谁像好人，好人也要吃赊来的粮。”",
+      "description": "拉吉确实删账，也确实垫过救济款。公开责任会使救济担保受追索；封存能维持信用，却留下债契。护运阵容会读取晚取药、实际休息、警报和证人保护。",
+      "scene": "I09",
+      "entryLevel": 3,
+      "next": "I10",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node9Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "protected-proof",
+          "label": "用完整、受保护的证词对质",
+          "text": "要求强证据、证人路线未泄露，且苏曼已治疗或被优先救出。护运人直接退出；责任公开、镇方尾款作废。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "evidencePublic": true,
+              "townTailForfeited": true,
+              "rajExposed": true
+            },
+            "say": "护运人先收起拘押绳。拉吉说：“你们赢了一页纸。看谁还愿给港口赊粮。”",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "neutralize": [
+              "i09-raj",
+              "i09-porter",
+              "i09-late",
+              "i09-scout",
+              "i09-guard",
+              "i09-captor"
+            ],
+            "handouts": [
+              "H09"
+            ],
+            "npc": [
+              {
+                "id": "raj",
+                "status": "接受有见证交货",
+                "attitude": "敌对"
+              },
+              {
+                "id": "lila",
+                "status": "救济担保被追索"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "all": [
+              {
+                "evidenceQuality": [
+                  "original",
+                  "protected"
+                ]
+              },
+              {
+                "witnessProtected": true
+              },
+              {
+                "any": [
+                  {
+                    "sumanTreated": true
+                  },
+                  {
+                    "rescuedFirst": true
+                  }
+                ]
+              }
+            ]
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "要求强证据、证人路线未泄露，且苏曼已治疗或被优先救出。护运人直接退出；责任公开、镇方尾款作废。"
+        },
+        {
+          "id": "quiet-settlement",
+          "label": "接受和解：取药与60GP，封存责任",
+          "text": "责任尚未公开才可选。真实收60GP与药物，保住赊粮信用；限制工班追索、允许拉吉保留债权，不称无罪。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "quietPact": true,
+              "privacyProtected": true
+            },
+            "say": "拉吉付钱，让人搬药：“不要叫宽恕。你们没那个权力。”",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "neutralize": [
+              "i09-raj",
+              "i09-porter",
+              "i09-late",
+              "i09-scout",
+              "i09-guard",
+              "i09-captor"
+            ],
+            "handouts": [
+              "H09"
+            ],
+            "gold": 60,
+            "npc": [
+              {
+                "id": "raj",
+                "status": "局部赔付，保留债权",
+                "attitude": "合作但戒备"
+              },
+              {
+                "id": "lila",
+                "status": "保住救济信用"
+              },
+              {
+                "id": "vira",
+                "status": "追索被限制",
+                "attitude": "愤怒"
+              }
+            ],
+            "promises": [
+              {
+                "id": "quiet-settlement",
+                "text": "局部补给换封存责任，不视为清白。",
+                "status": "open"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "originalLedger": true
+                },
+                "transferItems": [
+                  {
+                    "id": "debt-ledger",
+                    "holder": "lila",
+                    "location": "封存责任档案"
+                  }
+                ],
+                "facts": {
+                  "originalSealedAway": true
+                }
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "evidencePublic": false
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "责任尚未公开才可选。真实收60GP与药物，保住赊粮信用；限制工班追索、允许拉吉保留债权，不称无罪。"
+        },
+        {
+          "id": "public-sacrifice",
+          "label": "用自己的所有尾款担保公开听证",
+          "text": "有旁证或更强证据即可。无需即时金币；放弃所有本次尾款和官方便利，换有见证交货。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "evidencePublic": true,
+              "compensationForfeited": true,
+              "cityCover": false,
+              "hearingBond": true
+            },
+            "say": "你们签下承担追索的名字。药物放行，剩余工钱划去；苏曼轻声念了那些签名。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "neutralize": [
+              "i09-raj",
+              "i09-porter",
+              "i09-late",
+              "i09-scout",
+              "i09-guard",
+              "i09-captor"
+            ],
+            "handouts": [
+              "H09"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "evidenceQuality": [
+              "witness",
+              "original",
+              "protected"
+            ]
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "有旁证或更强证据即可。无需即时金币；放弃所有本次尾款和官方便利，换有见证交货。"
+        },
+        {
+          "id": "pay-release",
+          "label": "付30GP解除扣货，不宣称洗清责任",
+          "text": "真实扣30GP取药。债契和责任仍在；之后可决定保管方式。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "paidRelease": true
+            },
+            "say": "收据写得很诚实：扣货解除费，不是赔偿，也不是道歉。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "neutralize": [
+              "i09-raj",
+              "i09-porter",
+              "i09-late",
+              "i09-scout",
+              "i09-guard",
+              "i09-captor"
+            ],
+            "handouts": [
+              "H09"
+            ]
+          },
+          "once": true,
+          "cost": {
+            "gold": 30
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "真实扣30GP取药。债契和责任仍在；之后可决定保管方式。"
+        },
+        {
+          "id": "challenge-claim",
+          "label": "拒绝交易，按真实阵容交锋",
+          "text": "所有伤势资源保留；可停战或撤退，停战本身不交药。",
+          "success": {
+            "encounter": "i09_claim",
+            "say": "护运人散向桥墩与绳箱。人数就是此前行动留下的结果。"
+          },
+          "once": true,
+          "textSummary": "所有伤势资源保留；可停战或撤退，停战本身不交药。"
+        },
+        {
+          "id": "after-claim",
+          "label": "击败或迫使全体主动投降后取药",
+          "text": "全员实际击败，或因自身伤势主动投降交货；队伍倒地触发的停追不满足。强取/受压交货仍留下警报。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": true,
+              "medicineEverClaimed": true,
+              "claimByForce": true,
+              "raidAlert": true
+            },
+            "say": "药取回了，旁观者也看见了你们怎样取回。",
+            "items": [
+              {
+                "id": "salvage-medicine",
+                "name": "打捞治疗药水",
+                "kind": "potion",
+                "type": "potion",
+                "count": 4,
+                "heal": "2d4+2",
+                "holder": "party"
+              }
+            ],
+            "neutralize": [
+              "i09-raj",
+              "i09-porter",
+              "i09-late",
+              "i09-scout",
+              "i09-guard",
+              "i09-captor"
+            ],
+            "handouts": [
+              "H09"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "any": [
+              {
+                "encounter_i09_claim_defeated": true
+              },
+              {
+                "encounter_i09_claim_surrendered": true
+              }
+            ]
+          },
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "全员实际击败，或因自身伤势主动投降交货；队伍倒地触发的停追不满足。强取/受压交货仍留下警报。"
+        },
+        {
+          "id": "leave-cargo",
+          "label": "留下药物保全人和证据，承认取货失利",
+          "text": "不获得药或尾款；先前已取药的实际堆交回拉吉，没取过则仍在仓中。I10不能凭空分配。",
+          "success": {
+            "facts": {
+              "node9Done": true,
+              "claimResolved": true,
+              "cargoSecured": false,
+              "cargoLost": true,
+              "claimSetback": true
+            },
+            "say": "药匣留在桥上。苏曼没说没关系，只让能走的人扶住不能走的人。",
+            "conditional": [
+              {
+                "requires": {
+                  "medicineEverClaimed": true
+                },
+                "transferItems": [
+                  {
+                    "id": "salvage-medicine",
+                    "holder": "raj",
+                    "location": "担保仓"
+                  }
+                ]
+              }
+            ],
+            "handouts": [
+              "H09"
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            32.5,
+            32.5,
+            20
+          ],
+          "textSummary": "不获得药或尾款；先前已取药的实际堆交回拉吉，没取过则仍在仓中。I10不能凭空分配。"
+        }
+      ],
+      "durationMinutes": 30,
+      "encounters": {
+        "i09_claim": [
+          {
+            "id": "i09-raj",
+            "type": "bandit_captain",
+            "name": "债契货主拉吉",
+            "x": 47.5,
+            "y": 32.5,
+            "side": "enemy",
+            "truceHp": 15,
+            "truceOnPartyDown": 1
+          },
+          {
+            "id": "i09-porter",
+            "type": "bandit",
+            "name": "受雇护运人",
+            "x": 57.5,
+            "y": 32.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          },
+          {
+            "id": "i09-late",
+            "type": "bandit",
+            "name": "晚取药后增派的护运人",
+            "x": 62.5,
+            "y": 37.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "lateCargo": true
+            }
+          },
+          {
+            "id": "i09-scout",
+            "type": "scout",
+            "name": "休息期间到位的侦察者",
+            "x": 67.5,
+            "y": 22.5,
+            "side": "enemy",
+            "truceHp": 4,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "restTaken": true
+            }
+          },
+          {
+            "id": "i09-guard",
+            "type": "guard",
+            "name": "循警报到来的巡查",
+            "x": 72.5,
+            "y": 32.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "raidAlert": true
+            }
+          },
+          {
+            "id": "i09-captor",
+            "type": "guard",
+            "name": "掌握证人保护路线的拘押者",
+            "x": 67.5,
+            "y": 47.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "witnessProtected": false
+            }
+          }
+        ]
+      },
+      "dmNotes": "cleared非defeated。败退留药与听证是有不同真实代价的继续路；不把证词当随手免费消除所有利害的按钮。",
+      "readAloud": "拉吉摆了两张凳，一张给谈和的人，一张给可能被拘的人。“先别选谁像好人，好人也要吃赊来的粮。”"
+    },
+    {
+      "id": "I10",
+      "number": 10,
+      "title": "真正拿得走的四瓶",
+      "opening": "没人愿先数空位，仿佛数清就得承认谁已经花掉、谁仍没拿到。",
+      "description": "公共药房可能继续替旧权力维持体面；工班自管也可能养出新掌柜。先前实际用掉的药不补回。决定药物归属，也决定谁掌握钥匙。",
+      "scene": "I10",
+      "entryLevel": 3,
+      "next": "I11",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node10Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "hold-vira-accountable",
+          "label": "要求维罗承认夜班责任、交轮值钥匙",
+          "text": "非终结。已知其责任时无需掷骰；他接受事实记录，失去单独控制。可随后分配药物。",
+          "success": {
+            "facts": {
+              "unionAccountable": true
+            },
+            "say": "维罗说‘别无选择’，停了一会，把这句划掉，将轮值表递给最年轻的扛绳工。",
+            "npc": [
+              {
+                "id": "vira",
+                "status": "接受轮值监督"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "unionComplicityKnown": true,
+            "unionAccountable": false
+          },
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "非终结。已知其责任时无需掷骰；他接受事实记录，失去单独控制。可随后分配药物。"
+        },
+        {
+          "id": "public-clinic",
+          "label": "余药全交公共药房，公开追责",
+          "text": "要已取药且责任公开。真实整堆转交，不留库存副本；镇方不付失效尾款。",
+          "success": {
+            "facts": {
+              "node10Done": true,
+              "policyChosen": true,
+              "allocation": "clinic"
+            },
+            "say": "瓶子逐一进药房箱。莉拉交钥匙，却没因此得到原谅。",
+            "transferItems": [
+              {
+                "id": "salvage-medicine",
+                "holder": "clinic",
+                "location": "公共药房"
+              }
+            ],
+            "handouts": [
+              "H10"
+            ],
+            "npc": [
+              {
+                "id": "lila",
+                "status": "药房改共管、接受追责"
+              },
+              {
+                "id": "clinic",
+                "status": "取得实际余药"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "originalLedger": true
+                },
+                "transferItems": [
+                  {
+                    "id": "debt-ledger",
+                    "holder": "clinic",
+                    "location": "公开听证档案"
+                  }
+                ]
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": true,
+            "evidencePublic": true
+          },
+          "complete": true,
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "要已取药且责任公开。真实整堆转交，不留库存副本；镇方不付失效尾款。"
+        },
+        {
+          "id": "limited-settlement",
+          "label": "和解交药房2瓶，实际余药留队伍",
+          "text": "必须已谈成和解。真实分割2瓶；实际剩余1或2瓶才留队伍，债权和封存责任不消失。",
+          "success": {
+            "facts": {
+              "node10Done": true,
+              "policyChosen": true,
+              "allocation": "quiet"
+            },
+            "say": "两瓶入药房，余药留包里。收据没有道德评价一栏。",
+            "transferItems": [
+              {
+                "id": "salvage-medicine",
+                "holder": "clinic",
+                "count": 2,
+                "splitId": "settlement-clinic",
+                "location": "公共药房"
+              }
+            ],
+            "handouts": [
+              "H10"
+            ],
+            "npc": [
+              {
+                "id": "clinic",
+                "status": "收到和解药2瓶"
+              },
+              {
+                "id": "lila",
+                "status": "保持职权、局部监督"
+              },
+              {
+                "id": "raj",
+                "status": "局部赔付、保留债权"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": true,
+            "quietPact": true
+          },
+          "complete": true,
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "必须已谈成和解。真实分割2瓶；实际剩余1或2瓶才留队伍，债权和封存责任不消失。"
+        },
+        {
+          "id": "worker-coop",
+          "label": "余药全交工班自管，结束债主控制",
+          "text": "未接受封存和解且有可用证据。真实整堆转交；是否监督工头会改变权力结局。城方停止为工班担保赊粮。",
+          "success": {
+            "facts": {
+              "node10Done": true,
+              "policyChosen": true,
+              "allocation": "workers",
+              "debtFreed": true
+            },
+            "say": "维罗接药箱时，众人等他说钥匙交不交给轮值的人。",
+            "transferItems": [
+              {
+                "id": "salvage-medicine",
+                "holder": "workers",
+                "location": "工班药箱"
+              }
+            ],
+            "handouts": [
+              "H10"
+            ],
+            "npc": [
+              {
+                "id": "lila",
+                "status": "停止为工班担保赊粮"
+              }
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "unionAccountable": true
+                },
+                "npc": [
+                  {
+                    "id": "vira",
+                    "status": "受轮值监督"
+                  },
+                  {
+                    "id": "workers",
+                    "status": "实际自管药箱"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "unionAccountable": false
+                },
+                "npc": [
+                  {
+                    "id": "vira",
+                    "status": "独掌药箱与债契名册"
+                  },
+                  {
+                    "id": "workers",
+                    "status": "药物受工头控制"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "originalLedger": true
+                },
+                "transferItems": [
+                  {
+                    "id": "debt-ledger",
+                    "holder": "workers",
+                    "location": "工班自管责任档案"
+                  }
+                ]
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": true,
+            "quietPact": false,
+            "evidenceQuality": [
+              "witness",
+              "original",
+              "protected"
+            ]
+          },
+          "complete": true,
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "未接受封存和解且有可用证据。真实整堆转交；是否监督工头会改变权力结局。城方停止为工班担保赊粮。"
+        },
+        {
+          "id": "hold-for-party",
+          "label": "把实际余药留队伍，接受追索和拦截",
+          "text": "不多给一瓶。委托尾款作废、水路关闭、I11增派追索人；能付40GP通行或实际突围/交回。",
+          "success": {
+            "facts": {
+              "node10Done": true,
+              "policyChosen": true,
+              "allocation": "party",
+              "partySeize": true,
+              "compensationForfeited": true,
+              "waterAccess": false,
+              "raidAlert": true
+            },
+            "say": "你们称它暂管，他们开始按带走药物安排出港。",
+            "handouts": [
+              "H10"
+            ],
+            "npc": [
+              {
+                "id": "lila",
+                "attitude": "敌对",
+                "status": "追索药物"
+              },
+              {
+                "id": "vira",
+                "attitude": "敌对",
+                "status": "撤回带路工人"
+              },
+              {
+                "id": "lotus",
+                "status": "拒绝为擅带药者开船道"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": true
+          },
+          "complete": true,
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "不多给一瓶。委托尾款作废、水路关闭、I11增派追索人；能付40GP通行或实际突围/交回。"
+        },
+        {
+          "id": "empty-case",
+          "label": "没取回药：保全人和可用证据",
+          "text": "承认取货失败，不补出四瓶，不发尾款。仍可让证人安全离港。",
+          "success": {
+            "facts": {
+              "node10Done": true,
+              "policyChosen": true,
+              "allocation": "failed",
+              "compensationForfeited": true
+            },
+            "say": "桌上没有瓶子。苏曼把救援绳放在旁边：“至少它今晚用到了。”",
+            "handouts": [
+              "H10"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "cargoSecured": false
+          },
+          "complete": true,
+          "at": [
+            40,
+            25,
+            20
+          ],
+          "textSummary": "承认取货失败，不补出四瓶，不发尾款。仍可让证人安全离港。"
+        }
+      ],
+      "durationMinutes": 25,
+      "readAloud": "没人愿先数空位，仿佛数清就得承认谁已经花掉、谁仍没拿到。"
+    },
+    {
+      "id": "I11",
+      "number": 11,
+      "title": "最后一条出港路",
+      "opening": "船道等押金，岸门等签字，侧门外还等着一个不许回来的名字。没有路只收你打算付的那部分。",
+      "description": "水路开放、未污染且未擅带药者可履约乘船；其他人可付明示通行费、按地图突围，或接受驱逐。此前选择改变费用、援助和敌人，不只是旁白。",
+      "scene": "I11",
+      "entryLevel": 3,
+      "next": "I12",
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node11Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "restore-and-sail",
+          "label": "清渠乘船；合条件者退20GP押金",
+          "text": "实际清理后通行；只有已付押金且清洁停机才退20GP。十年水权不会因清理自动注销。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "channelRestored": true
+            },
+            "say": "莲眼该退多少就退多少，船靠上石阶。",
+            "handouts": [
+              "H11"
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "depositPaid": true,
+                  "engineMethod": "clean"
+                },
+                "gold": 20,
+                "facts": {
+                  "depositRefunded": true
+                }
+              },
+              {
+                "requires": {
+                  "waterLease": true
+                },
+                "npc": [
+                  {
+                    "id": "lotus",
+                    "status": "继续持有十年排他水权"
+                  }
+                ]
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "waterAccess": true,
+            "waterFouled": false,
+            "partySeize": false
+          },
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "实际清理后通行；只有已付押金且清洁停机才退20GP。十年水权不会因清理自动注销。"
+        },
+        {
+          "id": "worker-guide",
+          "label": "由工人带路：承担责任换来的实际援助",
+          "text": "要求阿鲁娜已公开承担、工头受监督且未擅带药。无额外金钱，不是所有分支通用的免费岸路。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "workerWay": true
+            },
+            "say": "带路人把旧印章还给阿鲁娜：“留着。别再替人担保没事。”",
+            "handouts": [
+              "H11"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "p1Confessed": true,
+            "unionAccountable": true,
+            "partySeize": false
+          },
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "要求阿鲁娜已公开承担、工头受监督且未擅带药。无额外金钱，不是所有分支通用的免费岸路。"
+        },
+        {
+          "id": "pay-bank-pass",
+          "label": "付15GP岸门通行（擅带药者40GP）",
+          "text": "普通通行实际扣15GP；只有未擅带药可用，清渠责任不会自动完成。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "bankPaid": true
+            },
+            "say": "门打开了。巡查没问钱来自工钱、预付还是朋友凑的。",
+            "handouts": [
+              "H11"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "partySeize": false
+          },
+          "cost": {
+            "gold": 15
+          },
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "普通通行实际扣15GP；只有未擅带药可用，清渠责任不会自动完成。"
+        },
+        {
+          "id": "pay-seizure-pass",
+          "label": "擅带药者付40GP和解通行",
+          "text": "真实扣40GP，可带已有余药；保留追索，仍无委托尾款。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "bankPaid": true,
+              "claimRecorded": true
+            },
+            "say": "双方姓名留在临时和解书上。药在包里，纸在柜里。",
+            "handouts": [
+              "H11"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "partySeize": true
+          },
+          "cost": {
+            "gold": 40
+          },
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "真实扣40GP，可带已有余药；保留追索，仍无委托尾款。"
+        },
+        {
+          "id": "fight-exit",
+          "label": "按真实地图突围",
+          "text": "两守卫；警报加Scout，擅带药再加护运人。伤势资源保留，停战不等于胜利。",
+          "success": {
+            "encounter": "i11_exit",
+            "say": "巡查把侧门关到一半。桥、箱和出口都真实可见。"
+          },
+          "once": true,
+          "textSummary": "两守卫；警报加Scout，擅带药再加护运人。伤势资源保留，停战不等于胜利。"
+        },
+        {
+          "id": "after-exit",
+          "label": "击败或迫使全体主动投降后离港",
+          "text": "全员实际击败或因自身伤势主动投降放行；队伍倒地止战不满足。保留物品，并留下通缉记录。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "violentExit": true,
+              "wanted": true
+            },
+            "say": "你们跨过侧门，门后记录没有消失。",
+            "handouts": [
+              "H11"
+            ]
+          },
+          "once": true,
+          "requires": {
+            "any": [
+              {
+                "encounter_i11_exit_defeated": true
+              },
+              {
+                "encounter_i11_exit_surrendered": true
+              }
+            ]
+          },
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "全员实际击败或因自身伤势主动投降放行；队伍倒地止战不满足。保留物品，并留下通缉记录。"
+        },
+        {
+          "id": "accept-exile",
+          "label": "接受驱逐保命；擅带余药交回药房",
+          "text": "0即时金币，失去再入港与安全落脚权。已转给药房/工班的药不变；仍在队伍的任务余药整堆真实交回。",
+          "success": {
+            "facts": {
+              "node11Done": true,
+              "returnReady": true,
+              "exiled": true,
+              "cityCover": false
+            },
+            "say": "旧通行牌被收走。有人想说总有一天回来，最后只是扶住身边的人走出门。",
+            "handouts": [
+              "H11"
+            ],
+            "conditional": [
+              {
+                "requires": {
+                  "allocation": [
+                    "party",
+                    "quiet"
+                  ]
+                },
+                "transferItems": [
+                  {
+                    "id": "salvage-medicine",
+                    "holder": "clinic",
+                    "location": "离港追缴药箱"
+                  }
+                ],
+                "facts": {
+                  "seizedRemainderReturned": true
+                }
+              }
+            ],
+            "npc": [
+              {
+                "id": "lila",
+                "status": "登记禁止再入港"
+              },
+              {
+                "id": "lotus",
+                "status": "不再提供落脚"
+              }
+            ]
+          },
+          "once": true,
+          "complete": true,
+          "at": [
+            52.5,
+            17.5,
+            20
+          ],
+          "textSummary": "0即时金币，失去再入港与安全落脚权。已转给药房/工班的药不变；仍在队伍的任务余药整堆真实交回。"
+        }
+      ],
+      "durationMinutes": 25,
+      "encounters": {
+        "i11_exit": [
+          {
+            "id": "i11-watch-a",
+            "type": "guard",
+            "name": "侧门巡查",
+            "x": 47.5,
+            "y": 22.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          },
+          {
+            "id": "i11-watch-b",
+            "type": "guard",
+            "name": "缆绳旁巡查",
+            "x": 62.5,
+            "y": 22.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1
+          },
+          {
+            "id": "i11-scout",
+            "type": "scout",
+            "name": "循警报部署的侦察者",
+            "x": 72.5,
+            "y": 17.5,
+            "side": "enemy",
+            "truceHp": 4,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "raidAlert": true
+            }
+          },
+          {
+            "id": "i11-claim",
+            "type": "bandit",
+            "name": "追索药物的护运人",
+            "x": 67.5,
+            "y": 7.5,
+            "side": "enemy",
+            "truceHp": 3,
+            "truceOnPartyDown": 1,
+            "requires": {
+              "partySeize": true
+            }
+          }
+        ]
+      },
+      "readAloud": "船道等押金，岸门等签字，侧门外还等着一个不许回来的名字。没有路只收你打算付的那部分。"
+    },
+    {
+      "id": "I12",
+      "number": 12,
+      "title": "谁替今晚落款",
+      "opening": "最轻的收据先被海风吹起，最重的名字还压在下面。落款前，你们仍可说清自己真正带走了什么。",
+      "description": "结局读取证据、照护、工头监督、水权、离港和实际库存。可以今晚结账，不能替受害者说已经过去。金币是仍有效的合同尾款，不是道德奖。",
+      "scene": "I12",
+      "entryLevel": 3,
+      "next": null,
+      "objectives": [
+        {
+          "id": "goal",
+          "label": "按实际结果收束本节点",
+          "fact": "node12Done"
+        }
+      ],
+      "options": [
+        {
+          "id": "end-clinic",
+          "label": "把灯留给别人",
+          "text": "药房收到真实余药、责任公开。记录隐私、停港、水权与证人后果，结算仍有效尾款。",
+          "success": {
+            "facts": {
+              "node12Done": true,
+              "storyEnded": true
+            },
+            "say": "药房能开灯。港口能否开工、谁还能作证，得按此前真正发生的事回答。",
+            "ending": "witness-light",
+            "conditional": [
+              {
+                "requires": {
+                  "commission": "town",
+                  "townTailForfeited": false,
+                  "compensationForfeited": false
+                },
+                "gold": 60
+              },
+              {
+                "requires": {
+                  "commission": "independent",
+                  "compensationForfeited": false
+                },
+                "gold": 50
+              },
+              {
+                "requires": {
+                  "commission": "crew",
+                  "compensationForfeited": false,
+                  "witnessProtected": true
+                },
+                "gold": 30
+              },
+              {
+                "requires": {
+                  "harborClosed": true
+                },
+                "say": "下季合同消失了，工人不能再说等发薪就还。",
+                "npc": [
+                  {
+                    "id": "workers",
+                    "status": "有药却失去下季工作"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "waterLease": true
+                },
+                "say": "每次借水仍要莲眼签字。灯亮了，钥匙却多一把。"
+              },
+              {
+                "requires": {
+                  "privacyProtected": false,
+                  "evidencePublic": true
+                },
+                "say": "公开名单的家庭开始收到债主来信。真相没有替他们保密。"
+              },
+              {
+                "requires": {
+                  "sumanTreated": true,
+                  "witnessProtected": true
+                },
+                "say": "苏曼亲交证词，没有替谁补一句清白。"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "allocation": "clinic"
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            20
+          ],
+          "textSummary": "药房收到真实余药、责任公开。记录隐私、停港、水权与证人后果，结算仍有效尾款。"
+        },
+        {
+          "id": "end-quiet",
+          "label": "平静也是一笔生意",
+          "text": "两瓶补药已兑现、余药仍按库存。旧债与封存责任继续存在；按有效委托领尾款。",
+          "success": {
+            "facts": {
+              "node12Done": true,
+              "storyEnded": true
+            },
+            "say": "第二天港口照常赊粮。每个人能说保住什么，最难说的是替谁付了价。",
+            "ending": "quiet-harbor",
+            "conditional": [
+              {
+                "requires": {
+                  "commission": "town",
+                  "townTailForfeited": false,
+                  "compensationForfeited": false
+                },
+                "gold": 60
+              },
+              {
+                "requires": {
+                  "commission": "independent",
+                  "compensationForfeited": false
+                },
+                "gold": 50
+              },
+              {
+                "requires": {
+                  "commission": "crew",
+                  "compensationForfeited": false,
+                  "witnessProtected": true
+                },
+                "gold": 30
+              },
+              {
+                "requires": {
+                  "witnessProtected": false
+                },
+                "say": "苏曼不在公开合照里。登记的人说这让港口好看一点。",
+                "npc": [
+                  {
+                    "id": "suman",
+                    "status": "保护受损，拒绝公开出庭"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "exiled": true
+                },
+                "say": "你们没留在受益名单旁，侧门记着禁止再入港。"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "allocation": "quiet"
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            20
+          ],
+          "textSummary": "两瓶补药已兑现、余药仍按库存。旧债与封存责任继续存在；按有效委托领尾款。"
+        },
+        {
+          "id": "end-workers",
+          "label": "把钥匙交给谁",
+          "text": "药已转给工班。问责决定轮值自管或换新掌柜；失去赊粮担保与工作风险仍在。",
+          "success": {
+            "facts": {
+              "node12Done": true,
+              "storyEnded": true
+            },
+            "say": "旧债主的名字划掉了，旁边留下等人签的新空格。是轮值表还是欠条，要看钥匙交给谁。",
+            "ending": "free-hands",
+            "conditional": [
+              {
+                "requires": {
+                  "commission": "town",
+                  "townTailForfeited": false,
+                  "compensationForfeited": false
+                },
+                "gold": 60
+              },
+              {
+                "requires": {
+                  "commission": "independent",
+                  "compensationForfeited": false
+                },
+                "gold": 50
+              },
+              {
+                "requires": {
+                  "commission": "crew",
+                  "compensationForfeited": false,
+                  "witnessProtected": true
+                },
+                "gold": 30
+              },
+              {
+                "requires": {
+                  "unionAccountable": true
+                },
+                "say": "钥匙按轮值交。维罗仍能说话，却不能独自替全班签名。",
+                "npc": [
+                  {
+                    "id": "vira",
+                    "status": "受轮值监督的工头"
+                  },
+                  {
+                    "id": "workers",
+                    "status": "取得实际自管权"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "unionAccountable": false
+                },
+                "say": "维罗保留唯一钥匙。换掉债主后，工班又多一个不能拒绝的人。",
+                "npc": [
+                  {
+                    "id": "vira",
+                    "status": "新的无监督控制者"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "harborClosed": true
+                },
+                "say": "药有了，工作停了。轮值第一项是找下一份活。"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "allocation": "workers"
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            20
+          ],
+          "textSummary": "药已转给工班。问责决定轮值自管或换新掌柜；失去赊粮担保与工作风险仍在。"
+        },
+        {
+          "id": "end-carried",
+          "label": "药匣不会替你撒谎",
+          "text": "带药或空手失利者：不补额外药、不发失效尾款。追缴、驱逐、通缉和证据如实留下。",
+          "success": {
+            "facts": {
+              "node12Done": true,
+              "storyEnded": true
+            },
+            "say": "有人带药，有人只有空匣。两者都不能把今晚改写成没有发生。",
+            "ending": "carried-cost",
+            "conditional": [
+              {
+                "requires": {
+                  "allocation": "party",
+                  "seizedRemainderReturned": false
+                },
+                "say": "实际余药仍在包里。拿到的东西和被拒的门，都是真的。",
+                "npc": [
+                  {
+                    "id": "lila",
+                    "status": "继续追索药物"
+                  },
+                  {
+                    "id": "workers",
+                    "status": "未得这批救济药"
+                  }
+                ]
+              },
+              {
+                "requires": {
+                  "seizedRemainderReturned": true
+                },
+                "say": "余药离港时被追缴。保住人、没保住药，不称胜利。"
+              },
+              {
+                "requires": {
+                  "allocation": "failed"
+                },
+                "say": "失利写在纸上。保住的证人和副本，让下次还能从事实开始。"
+              },
+              {
+                "requires": {
+                  "p2Confessed": true
+                },
+                "say": "苏曼没立刻原谅那林，却让他走在自己看得见的前面。"
+              }
+            ]
+          },
+          "once": true,
+          "requires": {
+            "allocation": [
+              "party",
+              "failed"
+            ]
+          },
+          "complete": true,
+          "at": [
+            35,
+            22.5,
+            20
+          ],
+          "textSummary": "带药或空手失利者：不补额外药、不发失效尾款。追缴、驱逐、通缉和证据如实留下。"
+        }
+      ],
+      "durationMinutes": 20,
+      "readAloud": "最轻的收据先被海风吹起，最重的名字还压在下面。落款前，你们仍可说清自己真正带走了什么。"
+    }
+  ],
+  "scenes": {
+    "I01": {
+      "id": "I01",
+      "title": "先付的半份工钱",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I01-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "莲池码头"
+        }
+      ],
+      "walls": [
+        {
+          "x": 55,
+          "y": 19.75,
+          "w": 10,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "码头棚北墙"
+        },
+        {
+          "x": 75,
+          "y": 19.75,
+          "w": 5,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "码头棚北墙"
+        },
+        {
+          "x": 54.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "码头棚西墙"
+        },
+        {
+          "x": 54.75,
+          "y": 35,
+          "w": 0.5,
+          "h": 7,
+          "height_ft": 10,
+          "label": "码头棚西墙"
+        },
+        {
+          "x": 55,
+          "y": 41.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "码头棚后墙"
+        },
+        {
+          "x": 79.5,
+          "y": 20,
+          "w": 0.5,
+          "h": 22,
+          "height_ft": 10,
+          "label": "码头棚东墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "dock-shed",
+          "a": [
+            55,
+            25
+          ],
+          "b": [
+            55,
+            35
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "码头棚西门"
+        },
+        {
+          "id": "dock-north",
+          "a": [
+            65,
+            20
+          ],
+          "b": [
+            75,
+            20
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "装卸棚北口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "water",
+          "x": 0,
+          "y": 45,
+          "w": 80,
+          "h": 15,
+          "label": "港水",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "platform",
+          "x": 20,
+          "y": 25,
+          "w": 35,
+          "h": 15,
+          "label": "砂岩码头",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 25,
+          "y": 25,
+          "w": 10,
+          "h": 5,
+          "label": "四格药匣",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "tree",
+          "x": 60,
+          "y": 10,
+          "w": 5,
+          "h": 5,
+          "label": "椰树",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "banner",
+          "x": 65,
+          "y": 25,
+          "w": 5,
+          "h": 5,
+          "label": "双旗桅杆",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 20,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 2,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "port",
+      "name": "先付的半份工钱",
+      "roofs": [
+        {
+          "id": "dock-shed",
+          "x": 55,
+          "y": 20,
+          "w": 25,
+          "h": 22,
+          "height_ft": 10,
+          "label": "砂岩码头棚顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I01",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I01原场景与操作坐标"
+        ],
+        "adaptation": "码头与装卸棚：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "出生区→公开委托点→码头台阶；四格药匣仍是实体，棚有两个10尺出口。",
+        "specialTransit": [
+          "深水、船渡与跳入水中的行为不是普通陆路；合法游泳/飞行/乘船仍由主持处理。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I02": {
+      "id": "I02",
+      "title": "两份都不完整的命令",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I02-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "双旗议亭"
+        }
+      ],
+      "walls": [
+        {
+          "x": 24.75,
+          "y": 30,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 9,
+          "label": "议亭西风墙"
+        },
+        {
+          "x": 54.75,
+          "y": 30,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 9,
+          "label": "议亭东风墙"
+        },
+        {
+          "x": 25,
+          "y": 44.75,
+          "w": 30,
+          "h": 0.5,
+          "height_ft": 9,
+          "label": "议亭后墙"
+        }
+      ],
+      "openings": [],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 25,
+          "y": 20,
+          "w": 30,
+          "h": 25,
+          "label": "开放议亭",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 25,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "石柱",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 50,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "石柱",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "table",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 10,
+          "label": "两份契书",
+          "height_ft": 2.5,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 60,
+          "y": 30,
+          "w": 15,
+          "h": 20,
+          "label": "莲池",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 30,
+          "y": 15,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 2,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "pavilion",
+      "name": "两份都不完整的命令",
+      "roofs": [
+        {
+          "id": "council",
+          "x": 25,
+          "y": 20,
+          "w": 30,
+          "h": 25,
+          "height_ft": 11,
+          "label": "开放议亭顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I02",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I02原场景与操作坐标"
+        ],
+        "adaptation": "双旗议亭：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "开放前庭与三面风墙；两柱及契书桌不堵北侧台阶和交涉半径。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I03": {
+      "id": "I03",
+      "title": "井中的人和那本账",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I03-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "回声阶井"
+        }
+      ],
+      "walls": [
+        {
+          "x": 14.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 35,
+          "height_ft": 6,
+          "label": "阶井西侧挡土壁"
+        },
+        {
+          "x": 64.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 35,
+          "height_ft": 6,
+          "label": "阶井东侧挡土壁"
+        },
+        {
+          "x": 15,
+          "y": 57.25,
+          "w": 50,
+          "h": 0.5,
+          "height_ft": 6,
+          "label": "井后挡土壁"
+        }
+      ],
+      "openings": [],
+      "features": [
+        {
+          "kind": "stairs",
+          "x": 15,
+          "y": 10,
+          "w": 50,
+          "h": 10,
+          "label": "上层宽阶",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 20,
+          "y": 20,
+          "w": 40,
+          "h": 10,
+          "label": "中层宽阶",
+          "height_ft": -5,
+          "difficult": false
+        },
+        {
+          "kind": "platform",
+          "x": 25,
+          "y": 30,
+          "w": 30,
+          "h": 10,
+          "label": "下层走廊",
+          "height_ft": -10,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 30,
+          "y": 40,
+          "w": 20,
+          "h": 15,
+          "label": "井水",
+          "height_ft": -15,
+          "difficult": false
+        },
+        {
+          "kind": "rope",
+          "x": 55,
+          "y": 20,
+          "w": 5,
+          "h": 15,
+          "label": "救援绳位",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 47.5,
+          "y": 32.5,
+          "w": 5,
+          "h": 5,
+          "label": "账册所在溃口标记；存否看剧情事实",
+          "height_ft": 1
+        },
+        {
+          "kind": "pillar",
+          "x": 67.5,
+          "y": 25,
+          "w": 5,
+          "h": 5,
+          "label": "救援绳固定石柱",
+          "height_ft": 6
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "stepwell",
+      "name": "井中的人和那本账",
+      "map_id": "I03",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I03原场景与操作坐标"
+        ],
+        "adaptation": "回声阶井：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "两侧挡土壁保持正面50/40尺宽阶；苏曼原坐标仍可从中阶进入下层接近，井水不铺成地板。",
+        "specialTransit": [
+          "阶井0/−5/−10/−15尺层面由显示与主持裁定；平面寻路只验证已有台阶入口，不冒称完整3D落差/攀爬规则。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I04": {
+      "id": "I04",
+      "title": "蛇门担保仓",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I04-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "蛇纹货仓"
+        }
+      ],
+      "walls": [
+        {
+          "x": 20,
+          "y": 19.75,
+          "w": 10,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "仓门西墙"
+        },
+        {
+          "x": 40,
+          "y": 19.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "仓门东墙"
+        },
+        {
+          "x": 19.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 30,
+          "height_ft": 12,
+          "label": "仓库西墙"
+        },
+        {
+          "x": 64.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 12,
+          "label": "检修窗上墙"
+        },
+        {
+          "x": 64.75,
+          "y": 30,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 12,
+          "label": "检修窗下墙"
+        },
+        {
+          "x": 20,
+          "y": 49.75,
+          "w": 45,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "仓库后墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "warehouse-front",
+          "a": [
+            30,
+            20
+          ],
+          "b": [
+            40,
+            20
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "蛇纹仓门；担保与封条由剧情决定"
+        },
+        {
+          "id": "inspection-window",
+          "a": [
+            65,
+            25
+          ],
+          "b": [
+            65,
+            30
+          ],
+          "state": "open",
+          "kind": "window",
+          "label": "检修小窗；不能步行穿越"
+        }
+      ],
+      "features": [
+        {
+          "kind": "door",
+          "x": 30,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "label": "蛇纹仓门",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 25,
+          "y": 35,
+          "w": 10,
+          "h": 10,
+          "label": "封存药匣",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 50,
+          "y": 35,
+          "w": 10,
+          "h": 10,
+          "label": "种粮货架",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 15,
+          "y": 25,
+          "w": 5,
+          "h": 5,
+          "label": "绳结印记石柱",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 65,
+          "y": 20,
+          "w": 10,
+          "h": 20,
+          "label": "外侧检修阶梯",
+          "height_ft": 5,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "warehouse",
+      "name": "蛇门担保仓",
+      "roofs": [
+        {
+          "id": "warehouse",
+          "x": 20,
+          "y": 20,
+          "w": 45,
+          "h": 30,
+          "height_ft": 12,
+          "label": "蛇纹货仓顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I04",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I04原场景与操作坐标"
+        ],
+        "adaptation": "蛇纹担保仓：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "正门10尺、东检修窗5尺、外围阶梯；原两守器点在仓内，撬封点和窗口点在外侧可接近。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I05": {
+      "id": "I05",
+      "title": "谁的名字能被公开",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I05-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "分水账房"
+        }
+      ],
+      "walls": [
+        {
+          "x": 30,
+          "y": 14.75,
+          "w": 5,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "账房前墙"
+        },
+        {
+          "x": 45,
+          "y": 14.75,
+          "w": 5,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "账房前墙"
+        },
+        {
+          "x": 29.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "西桥口上墙"
+        },
+        {
+          "x": 29.75,
+          "y": 25,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 10,
+          "label": "西桥口下墙"
+        },
+        {
+          "x": 49.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "东桥口上墙"
+        },
+        {
+          "x": 49.75,
+          "y": 25,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 10,
+          "label": "东桥口下墙"
+        },
+        {
+          "x": 30,
+          "y": 44.75,
+          "w": 20,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "账房后墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "records-north",
+          "a": [
+            35,
+            15
+          ],
+          "b": [
+            45,
+            15
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "账房正门"
+        },
+        {
+          "id": "records-west",
+          "a": [
+            30,
+            20
+          ],
+          "b": [
+            30,
+            25
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "西侧窄桥门"
+        },
+        {
+          "id": "records-east",
+          "a": [
+            50,
+            20
+          ],
+          "b": [
+            50,
+            25
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "东侧窄桥门"
+        }
+      ],
+      "features": [
+        {
+          "kind": "water",
+          "x": 0,
+          "y": 25,
+          "w": 30,
+          "h": 10,
+          "label": "入渠",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 50,
+          "y": 25,
+          "w": 30,
+          "h": 10,
+          "label": "出渠",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "platform",
+          "x": 30,
+          "y": 15,
+          "w": 20,
+          "h": 30,
+          "label": "闸上账房",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "table",
+          "x": 35,
+          "y": 20,
+          "w": 10,
+          "h": 5,
+          "label": "工班与货运两份账",
+          "height_ft": 2.5,
+          "difficult": false
+        },
+        {
+          "kind": "lever",
+          "x": 45,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "label": "阀门图纸",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "bridge",
+          "x": 25,
+          "y": 20,
+          "w": 30,
+          "h": 5,
+          "label": "石桥",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 35,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 25,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "西桥接入3尺平台",
+          "height_ft": 3
+        },
+        {
+          "kind": "stairs",
+          "x": 50,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "东桥接入3尺平台",
+          "height_ft": 3
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "waterworks",
+      "name": "谁的名字能被公开",
+      "roofs": [
+        {
+          "id": "records",
+          "x": 30,
+          "y": 15,
+          "w": 20,
+          "h": 30,
+          "height_ft": 11,
+          "label": "闸上账房顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I05",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I05原场景与操作坐标"
+        ],
+        "adaptation": "闸上账房：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "前后墙与双侧桥口明确；正门、窄桥和3尺平台接阶均实际留洞，桌面操作在15尺半径内有站位。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I06": {
+      "id": "I06",
+      "title": "莲眼的水权",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I06-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "莲影水庭"
+        }
+      ],
+      "walls": [
+        {
+          "x": 15,
+          "y": 4.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 9,
+          "label": "莲庭北墙"
+        },
+        {
+          "x": 50,
+          "y": 4.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 9,
+          "label": "莲庭北墙"
+        },
+        {
+          "x": 74.75,
+          "y": 5,
+          "w": 0.5,
+          "h": 50,
+          "height_ft": 9,
+          "label": "莲庭东墙"
+        },
+        {
+          "x": 15,
+          "y": 54.75,
+          "w": 60,
+          "h": 0.5,
+          "height_ft": 9,
+          "label": "莲庭南墙"
+        },
+        {
+          "x": 14.75,
+          "y": 5,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 9,
+          "label": "莲庭西门北段"
+        },
+        {
+          "x": 14.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 35,
+          "height_ft": 9,
+          "label": "莲庭西墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "lotus-west",
+          "a": [
+            15,
+            10
+          ],
+          "b": [
+            15,
+            20
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "莲庭西门"
+        },
+        {
+          "id": "lotus-north",
+          "a": [
+            40,
+            5
+          ],
+          "b": [
+            50,
+            5
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "莲庭取水门"
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 30,
+          "y": 25,
+          "w": 20,
+          "h": 15,
+          "label": "水权会面台",
+          "height_ft": 1,
+          "difficult": false
+        },
+        {
+          "kind": "bridge",
+          "x": 5,
+          "y": 30,
+          "w": 25,
+          "h": 5,
+          "label": "石梁",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 60,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "水位刻尺",
+          "height_ft": 8,
+          "difficult": false
+        },
+        {
+          "kind": "tree",
+          "x": 65,
+          "y": 40,
+          "w": 5,
+          "h": 5,
+          "label": "遮荫树",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 25,
+          "y": 30,
+          "w": 5,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 1,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 25,
+          "y": 20,
+          "w": 30,
+          "h": 5,
+          "label": "莲池水面",
+          "height_ft": -1,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 25,
+          "y": 25,
+          "w": 5,
+          "h": 5,
+          "label": "莲池水面",
+          "height_ft": -1,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 25,
+          "y": 35,
+          "w": 5,
+          "h": 10,
+          "label": "莲池水面",
+          "height_ft": -1,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 50,
+          "y": 25,
+          "w": 5,
+          "h": 20,
+          "label": "莲池水面",
+          "height_ft": -1,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 30,
+          "y": 40,
+          "w": 20,
+          "h": 5,
+          "label": "莲池水面",
+          "height_ft": -1,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "lotus",
+      "name": "莲眼的水权",
+      "map_id": "I06",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I06原场景与操作坐标"
+        ],
+        "adaptation": "莲影水庭：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "西门到莲池西侧石梁/台阶，再上会面台；水环缺口是原5尺台阶，未画穿池捷径。",
+        "specialTransit": [
+          "深水、船渡与跳入水中的行为不是普通陆路；合法游泳/飞行/乘船仍由主持处理。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I07": {
+      "id": "I07",
+      "title": "把裂缝停在哪里",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I07-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "热雾绞盘"
+        }
+      ],
+      "walls": [
+        {
+          "x": 10,
+          "y": 4.75,
+          "w": 15,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "机房北墙"
+        },
+        {
+          "x": 40,
+          "y": 4.75,
+          "w": 35,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "机房北墙"
+        },
+        {
+          "x": 9.75,
+          "y": 5,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 12,
+          "label": "机房西墙"
+        },
+        {
+          "x": 9.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 35,
+          "height_ft": 12,
+          "label": "机房西墙"
+        },
+        {
+          "x": 74.75,
+          "y": 5,
+          "w": 0.5,
+          "h": 50,
+          "height_ft": 12,
+          "label": "机房东墙"
+        },
+        {
+          "x": 10,
+          "y": 54.75,
+          "w": 65,
+          "h": 0.5,
+          "height_ft": 12,
+          "label": "冷却渠后墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "machine-north",
+          "a": [
+            25,
+            5
+          ],
+          "b": [
+            40,
+            5
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "绞盘操作院北口"
+        },
+        {
+          "id": "machine-west",
+          "a": [
+            10,
+            10
+          ],
+          "b": [
+            10,
+            20
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "西侧检修口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 25,
+          "y": 20,
+          "w": 30,
+          "h": 25,
+          "label": "圆形绞盘台",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "wheel",
+          "x": 35,
+          "y": 25,
+          "w": 10,
+          "h": 10,
+          "label": "双侧搅杆",
+          "height_ft": 5,
+          "difficult": false
+        },
+        {
+          "kind": "lever",
+          "x": 60,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "外侧泄压阀",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 25,
+          "y": 45,
+          "w": 30,
+          "h": 10,
+          "label": "冷却水渠",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "pipe",
+          "x": 15,
+          "y": 20,
+          "w": 5,
+          "h": 20,
+          "label": "开口排气管",
+          "height_ft": 8,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 55,
+          "y": 35,
+          "w": 10,
+          "h": 5,
+          "label": "湿帆布",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 25,
+          "y": 15,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 3,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "winch",
+      "name": "把裂缝停在哪里",
+      "map_id": "I07",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I07原场景与操作坐标"
+        ],
+        "adaptation": "热雾绞盘：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "北15尺口与西检修口分开；3尺高机台保留入口，泄压阀从外围可达，蒸汽生物原坐标不改。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I08": {
+      "id": "I08",
+      "title": "白花下的旧话",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I08-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "白花回廊"
+        }
+      ],
+      "walls": [
+        {
+          "x": 14.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 8,
+          "label": "白花廊西风墙"
+        },
+        {
+          "x": 64.75,
+          "y": 20,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 8,
+          "label": "白花廊东风墙"
+        },
+        {
+          "x": 15,
+          "y": 39.75,
+          "w": 20,
+          "h": 0.5,
+          "height_ft": 8,
+          "label": "水庭风墙"
+        },
+        {
+          "x": 45,
+          "y": 39.75,
+          "w": 20,
+          "h": 0.5,
+          "height_ft": 8,
+          "label": "水庭风墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "rest-garden",
+          "a": [
+            35,
+            40
+          ],
+          "b": [
+            45,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "水庭一侧敞口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 15,
+          "y": 15,
+          "w": 50,
+          "h": 25,
+          "label": "通风石柱廊",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 15,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "莲瓣柱",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 60,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "莲瓣柱",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "table",
+          "x": 30,
+          "y": 25,
+          "w": 15,
+          "h": 5,
+          "label": "热茶与干布",
+          "height_ft": 2.5,
+          "difficult": false
+        },
+        {
+          "kind": "tree",
+          "x": 65,
+          "y": 40,
+          "w": 5,
+          "h": 5,
+          "label": "白花树",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 20,
+          "y": 45,
+          "w": 40,
+          "h": 10,
+          "label": "安静水渠",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 20,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 2,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "rest",
+      "name": "白花下的旧话",
+      "roofs": [
+        {
+          "id": "rest",
+          "x": 15,
+          "y": 15,
+          "w": 50,
+          "h": 25,
+          "height_ft": 10,
+          "label": "白花通风柱廊顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I08",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I08原场景与操作坐标"
+        ],
+        "adaptation": "白花回廊：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "通风廊三侧风墙、庭院敞口；苏曼照护点5尺范围有合法站位，茶桌未压住照护点。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I09": {
+      "id": "I09",
+      "title": "象首桥上的和解价",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I09-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "象首渡桥"
+        }
+      ],
+      "walls": [
+        {
+          "x": 14.75,
+          "y": 10,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 8,
+          "label": "西桥头挡岸墙"
+        },
+        {
+          "x": 14.75,
+          "y": 40,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 8,
+          "label": "西桥头挡岸墙"
+        },
+        {
+          "x": 64.75,
+          "y": 10,
+          "w": 0.5,
+          "h": 20,
+          "height_ft": 8,
+          "label": "东桥头挡岸墙"
+        },
+        {
+          "x": 64.75,
+          "y": 40,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 8,
+          "label": "东桥头挡岸墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "bridge-west",
+          "a": [
+            15,
+            30
+          ],
+          "b": [
+            15,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "西桥口"
+        },
+        {
+          "id": "bridge-east",
+          "a": [
+            65,
+            30
+          ],
+          "b": [
+            65,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "东桥口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "bridge",
+          "x": 10,
+          "y": 30,
+          "w": 60,
+          "h": 10,
+          "label": "宽石渡桥",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 40,
+          "y": 30,
+          "w": 5,
+          "h": 5,
+          "label": "绳箱，半身掩护",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 55,
+          "y": 35,
+          "w": 5,
+          "h": 5,
+          "label": "空木桶，半身掩护",
+          "height_ft": 3,
+          "difficult": false
+        },
+        {
+          "kind": "pillar",
+          "x": 15,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "象首桥墩",
+          "height_ft": 10,
+          "difficult": false
+        },
+        {
+          "kind": "boat",
+          "x": 50,
+          "y": 47.5,
+          "w": 10,
+          "h": 5,
+          "label": "停靠东岸的赃货小舟",
+          "height_ft": -3,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 20,
+          "y": 0,
+          "w": 40,
+          "h": 30,
+          "label": "桥北潮渠；水底−5尺",
+          "height_ft": -5
+        },
+        {
+          "kind": "water",
+          "x": 20,
+          "y": 40,
+          "w": 40,
+          "h": 20,
+          "label": "桥南潮渠；水底−5尺",
+          "height_ft": -5
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "bridge",
+      "name": "象首桥上的和解价",
+      "map_id": "I09",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I09原场景与操作坐标"
+        ],
+        "adaptation": "象首渡桥：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "40尺潮渠由既有60尺桥跨越；两只绳箱形成可绕行交错掩体，六种条件敌人均留原岸/桥坐标。",
+        "specialTransit": [
+          "深水、船渡与跳入水中的行为不是普通陆路；合法游泳/飞行/乘船仍由主持处理。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I10": {
+      "id": "I10",
+      "title": "真正拿得走的四瓶",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I10-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "四瓣药匣"
+        }
+      ],
+      "walls": [
+        {
+          "x": 20,
+          "y": 14.75,
+          "w": 5,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "药物交接所前墙"
+        },
+        {
+          "x": 35,
+          "y": 14.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "药物交接所前墙"
+        },
+        {
+          "x": 19.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 10,
+          "label": "交接所西墙"
+        },
+        {
+          "x": 19.75,
+          "y": 40,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "交接所西墙"
+        },
+        {
+          "x": 59.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 15,
+          "height_ft": 10,
+          "label": "交接所东墙"
+        },
+        {
+          "x": 59.75,
+          "y": 40,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "交接所东墙"
+        },
+        {
+          "x": 20,
+          "y": 44.75,
+          "w": 40,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "交接所后墙"
+        }
+      ],
+      "openings": [
+        {
+          "id": "assembly-north",
+          "a": [
+            25,
+            15
+          ],
+          "b": [
+            35,
+            15
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "公开交接正门"
+        },
+        {
+          "id": "assembly-west",
+          "a": [
+            20,
+            30
+          ],
+          "b": [
+            20,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "西侧出口"
+        },
+        {
+          "id": "assembly-east",
+          "a": [
+            60,
+            30
+          ],
+          "b": [
+            60,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "东侧出口"
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 20,
+          "y": 15,
+          "w": 40,
+          "h": 30,
+          "label": "公开开匣台",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "table",
+          "x": 30,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "label": "四格药匣与原始封条",
+          "height_ft": 2.5,
+          "difficult": false
+        },
+        {
+          "kind": "banner",
+          "x": 15,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "灯镇旗",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "banner",
+          "x": 60,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "盐岬工班旗",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 25,
+          "y": 45,
+          "w": 30,
+          "h": 10,
+          "label": "莲池",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 25,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 15,
+          "y": 30,
+          "w": 5,
+          "h": 10,
+          "label": "西侧交接台阶",
+          "height_ft": 2
+        },
+        {
+          "kind": "stairs",
+          "x": 60,
+          "y": 30,
+          "w": 5,
+          "h": 10,
+          "label": "东侧交接台阶",
+          "height_ft": 2
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "assembly",
+      "name": "真正拿得走的四瓶",
+      "roofs": [
+        {
+          "id": "assembly",
+          "x": 20,
+          "y": 15,
+          "w": 40,
+          "h": 30,
+          "height_ft": 12,
+          "label": "公开药物交接所顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I10",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I10原场景与操作坐标"
+        ],
+        "adaptation": "四瓣药匣交接所：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "有正门和双侧出口；两侧补2尺接阶，围绕实体药桌可走到原分配半径。",
+        "specialTransit": [],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I11": {
+      "id": "I11",
+      "title": "最后一条出港路",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I11-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "雨前的船闸"
+        }
+      ],
+      "walls": [
+        {
+          "x": 39.75,
+          "y": 0,
+          "w": 0.5,
+          "h": 10,
+          "height_ft": 10,
+          "label": "岸门北墙"
+        },
+        {
+          "x": 39.75,
+          "y": 25,
+          "w": 0.5,
+          "h": 5,
+          "height_ft": 10,
+          "label": "岸门南墙"
+        },
+        {
+          "x": 0,
+          "y": 29.75,
+          "w": 15,
+          "h": 0.5,
+          "height_ft": 4,
+          "label": "船闸西护岸"
+        },
+        {
+          "x": 65,
+          "y": 29.75,
+          "w": 15,
+          "h": 0.5,
+          "height_ft": 4,
+          "label": "船闸东护岸"
+        }
+      ],
+      "openings": [
+        {
+          "id": "bank-gate",
+          "a": [
+            40,
+            10
+          ],
+          "b": [
+            40,
+            25
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "岸上侧门；通行资格仍由剧情验证"
+        }
+      ],
+      "features": [
+        {
+          "kind": "water",
+          "x": 0,
+          "y": 30,
+          "w": 80,
+          "h": 25,
+          "label": "船闸水道",
+          "height_ft": -4,
+          "difficult": false
+        },
+        {
+          "kind": "bridge",
+          "x": 15,
+          "y": 25,
+          "w": 50,
+          "h": 5,
+          "label": "闸顶通路",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "lever",
+          "x": 50,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "出港闸杆",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "boat",
+          "x": 25,
+          "y": 35,
+          "w": 20,
+          "h": 10,
+          "label": "载人平底渡船",
+          "height_ft": -3,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 65,
+          "y": 5,
+          "w": 10,
+          "h": 20,
+          "label": "岸上绕行路",
+          "height_ft": 5,
+          "difficult": false
+        },
+        {
+          "kind": "crate",
+          "x": 5,
+          "y": 15,
+          "w": 10,
+          "h": 5,
+          "label": "固定缆绳",
+          "height_ft": 3,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "locks",
+      "name": "最后一条出港路",
+      "map_id": "I11",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I11原场景与操作坐标"
+        ],
+        "adaptation": "出港船闸：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "15尺岸门把两侧陆路接起来；原巡查与闸杆可达，水道、渡船、5尺外岸阶梯各自有边界。",
+        "specialTransit": [
+          "深水、船渡与跳入水中的行为不是普通陆路；合法游泳/飞行/乘船仍由主持处理。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    },
+    "I12": {
+      "id": "I12",
+      "title": "谁替今晚落款",
+      "width_ft": 80,
+      "height_ft": 60,
+      "grid_ft": 5,
+      "theme": "印度海港幻想；砂岩、莲池、阶井与石柱廊，地点与几何均为原创",
+      "rooms": [
+        {
+          "id": "I12-floor",
+          "x": 0,
+          "y": 0,
+          "w": 80,
+          "h": 60,
+          "label": "灯下落款"
+        }
+      ],
+      "walls": [
+        {
+          "x": 20,
+          "y": 14.75,
+          "w": 5,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "归港亭入口西墙"
+        },
+        {
+          "x": 35,
+          "y": 14.75,
+          "w": 25,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "归港亭入口东墙"
+        },
+        {
+          "x": 19.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 25,
+          "height_ft": 10,
+          "label": "归港亭西风墙"
+        },
+        {
+          "x": 59.75,
+          "y": 15,
+          "w": 0.5,
+          "h": 25,
+          "height_ft": 10,
+          "label": "归港亭东风墙"
+        },
+        {
+          "x": 20,
+          "y": 39.75,
+          "w": 10,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "面海栏墙西段"
+        },
+        {
+          "x": 50,
+          "y": 39.75,
+          "w": 10,
+          "h": 0.5,
+          "height_ft": 10,
+          "label": "面海栏墙东段"
+        }
+      ],
+      "openings": [
+        {
+          "id": "ending-north",
+          "a": [
+            25,
+            15
+          ],
+          "b": [
+            35,
+            15
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "归港亭敞门"
+        },
+        {
+          "id": "ending-sea",
+          "a": [
+            30,
+            40
+          ],
+          "b": [
+            50,
+            40
+          ],
+          "state": "open",
+          "kind": "door",
+          "label": "面海开口；不是渡海通路"
+        }
+      ],
+      "features": [
+        {
+          "kind": "platform",
+          "x": 20,
+          "y": 15,
+          "w": 40,
+          "h": 30,
+          "label": "归港石亭",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "table",
+          "x": 30,
+          "y": 25,
+          "w": 20,
+          "h": 10,
+          "label": "共同签署的交接书",
+          "height_ft": 2.5,
+          "difficult": false
+        },
+        {
+          "kind": "water",
+          "x": 0,
+          "y": 45,
+          "w": 80,
+          "h": 15,
+          "label": "平息后的海",
+          "height_ft": 0,
+          "difficult": false
+        },
+        {
+          "kind": "light",
+          "x": 25,
+          "y": 20,
+          "w": 5,
+          "h": 5,
+          "label": "一盏油灯",
+          "height_ft": 2,
+          "difficult": false
+        },
+        {
+          "kind": "tree",
+          "x": 65,
+          "y": 15,
+          "w": 5,
+          "h": 5,
+          "label": "棕榈",
+          "height_ft": 12,
+          "difficult": false
+        },
+        {
+          "kind": "stairs",
+          "x": 25,
+          "y": 10,
+          "w": 10,
+          "h": 5,
+          "label": "平台入口宽阶",
+          "height_ft": 2,
+          "difficult": false
+        }
+      ],
+      "starting": [
+        [
+          7.5,
+          7.5
+        ],
+        [
+          12.5,
+          7.5
+        ],
+        [
+          7.5,
+          12.5
+        ],
+        [
+          12.5,
+          12.5
+        ]
+      ],
+      "kind": "ending",
+      "name": "谁替今晚落款",
+      "roofs": [
+        {
+          "id": "ending",
+          "x": 20,
+          "y": 15,
+          "w": 40,
+          "h": 25,
+          "height_ft": 12,
+          "label": "归港石亭顶",
+          "color": "#8e8067",
+          "alpha": 0.18
+        }
+      ],
+      "map_id": "I12",
+      "cartography": {
+        "revision": "2026-10-20-layout-1",
+        "sourceFiles": [
+          "GM_SESSION.md",
+          "data/campaign.json:I12原场景与操作坐标"
+        ],
+        "adaptation": "归港石亭：本作海港幻想的D原创运行布局，非历史建筑或现实宗教场所复原；保留原80×60尺场地、剧情操作和角色坐标。",
+        "manualReview": "北侧敞门与面海开口；签署桌周边能站立，平台入口保持2尺接阶，海面没有假路。",
+        "specialTransit": [
+          "深水、船渡与跳入水中的行为不是普通陆路；合法游泳/飞行/乘船仍由主持处理。"
+        ],
+        "coordinatePolicy": "保留原场景ID、starting、剧情操作坐标与敌人坐标；新增墙厚0.5尺，J03保留旧1尺边界墙；门洞先断墙再设openings。"
+      }
+    }
+  },
+  "npcs": {
+    "lila": {
+      "id": "lila",
+      "name": "莉拉",
+      "identity": "灯镇代表，原创成年人",
+      "location": "I02",
+      "attitude": "正式",
+      "wants": "保住赊粮信用与秩序，也保住自己能治理的形象。",
+      "dmNotes": "用救济款担保承包人，愿局部赔付而不愿担保链曝光。"
+    },
+    "vira": {
+      "id": "vira",
+      "name": "维罗",
+      "identity": "阿修罗工头，原创成年人",
+      "location": "I02",
+      "attitude": "戒备",
+      "wants": "补给、下一季工作和自己的声望。",
+      "dmNotes": "明知制动缺陷仍排夜班；能接受监督，也想掌握新药箱。"
+    },
+    "lotus": {
+      "id": "lotus",
+      "name": "莲眼",
+      "identity": "那伽水庭使者，原创成年人",
+      "location": "I06",
+      "attitude": "厌倦善后",
+      "wants": "修渠预算、取水安全与长期决定权。"
+    },
+    "suman": {
+      "id": "suman",
+      "name": "苏曼",
+      "identity": "人类工人，原创成年人",
+      "type": "commoner",
+      "side": "neutral",
+      "location": "I03",
+      "x": 27.5,
+      "y": 32.5,
+      "initialHp": 1,
+      "vital": true,
+      "attitude": "自持",
+      "wants": "活着离港，只为亲见事实作证；不以照护换亲密。"
+    },
+    "raj": {
+      "id": "raj",
+      "name": "拉吉",
+      "identity": "人类债契货主，原创成年人",
+      "location": "I09",
+      "attitude": "精于交换",
+      "wants": "保留债权，愿付真钱换封存；确实垫过救济款。"
+    },
+    "clinic": {
+      "id": "clinic",
+      "name": "公共药房",
+      "location": "I10",
+      "status": "待收实际药物"
+    },
+    "workers": {
+      "id": "workers",
+      "name": "工班互助箱",
+      "location": "I10",
+      "status": "未获药物"
+    }
+  },
+  "handouts": [
+    {
+      "id": "H01",
+      "title": "今晚的委托",
+      "text": "4瓶标准Potion of Healing。镇方预付40GP、尾款60GP，要求交接前不公开责任；工班预付20GP、尾款30GP，要求保护名单和证人；独立见证不预付，完成可得50GP。明示尾款失效条件会实际执行。"
+    },
+    {
+      "id": "H02",
+      "title": "封渠令的空白",
+      "text": "封渠令上有阿鲁娜签名，工班仍当夜下井。城方接受救济工程，工头明知制动缺陷仍排夜班。自愿公开责任失去镇方便利，也能换工人援助。"
+    },
+    {
+      "id": "H03",
+      "title": "井中的人与原册",
+      "text": "先救苏曼：安全证人、原册失去。先取原册：人仍救回但受伤，完整作证前需照护。冒险两全须先承受3HP并掷DC14；失败人回、账失、巡查增加。合法D&D准备仍可改变办法。"
+    },
+    {
+      "id": "H04",
+      "title": "担保条款",
+      "text": "担保令可取药。调查停机封记DC14，失败警报并启动同一批构装体。安全外窗只取副本，给拉吉调一名护运人的时间；药暂不进队伍库存。"
+    },
+    {
+      "id": "H05",
+      "title": "两张都不干净的账",
+      "text": "原册有镇方担保和工头夜班责任，也有家庭私债。公开全册会泄露隐私；10GP脱敏抄录保护隐私。失去原册只能重建旁证，成功与失败证据强度不同。"
+    },
+    {
+      "id": "H06",
+      "title": "水路的三个价格",
+      "text": "20GP押金：仅清洁停机且实际清渠退回。免押金换十年排他水权：未来通路由莲眼掌握。拒绝两者仍能离港，但无通用免费岸路。"
+    },
+    {
+      "id": "H07",
+      "title": "裂缝不是仪式",
+      "text": "正确次序与近身操作可保机器；断轴必停但停港；排热污水保机器但污水路、押金不退。元素生物是D&D组件，不是传统神祇或族类。"
+    },
+    {
+      "id": "H08",
+      "title": "证词与旧关系",
+      "text": "照护可自愿花自己的药、米拉的一环位或1瓶真实任务药。苏曼Commoner1/4HP，治疗后4HP。曾优先救他者即使带伤也可获得完整亲见证词。拒绝复合不损失证词或通路。"
+    },
+    {
+      "id": "H09",
+      "title": "和解不等于无罪",
+      "text": "公开强证据和受保护证人能迫使交货；旁证可用自己的尾款担保听证；可付30GP、接受60GP封存和解或实际交锋。停战不等于打赢，失利可留药保全人。"
+    },
+    {
+      "id": "H10",
+      "title": "药物唯一清单",
+      "text": "药是一个实际堆，已用于照护者不补回。整堆转给药房或工班、真实分2瓶和解或留在队伍，会改变库存、通行与结局；不能同时各保留一份。"
+    },
+    {
+      "id": "H11",
+      "title": "出港条件",
+      "text": "履约船道、工人带路、15GP通行、擅带药40GP通行、实际突围或驱逐，前提不同。驱逐时队伍的任务余药被追缴；已交药房/工班的物品不动。"
+    },
+    {
+      "id": "H12",
+      "title": "落款核对",
+      "text": "核实药物去处、证人保护、责任公开、工头监督、停港、水权、驱逐/通缉和有效尾款。无神力、业力、好感条；结局由真实事实而非道德评分组成。"
+    }
+  ],
+  "endings": [
+    {
+      "id": "witness-light",
+      "title": "把灯留给别人",
+      "text": "药房收到实际余药，责任公开；隐私、证人、停港和水权后果继续存在。"
+    },
+    {
+      "id": "quiet-harbor",
+      "title": "平静也是一笔生意",
+      "text": "局部赔付兑现、赊粮信用维持；旧债与封存责任没有消失。"
+    },
+    {
+      "id": "free-hands",
+      "title": "把钥匙交给谁",
+      "text": "工班收到真实余药；轮值监督决定是否只是换掌柜。"
+    },
+    {
+      "id": "carried-cost",
+      "title": "药匣不会撒谎",
+      "text": "带走、追缴与没能取回都留下真实库存、失利和关系。"
+    }
+  ],
+  "sourceNotes": "独立v2；神话来源与SRD许可见docs/source，剧情与代价重写见docs/V2_CONTENT_CHANGES.md；不继承v1通过结论。",
+  "pacing": {
+    "targetMinutes": 300,
+    "openingMinutes": 10,
+    "breakMinutes": 10,
+    "sceneMinutesTotal": 280,
+    "note": "约4–5小时编排上沿300分钟；只用1–2场完整战斗更稳妥。全打四场会延长，程序模拟不是真人时长/好玩验证。"
+  },
+  "ruleCards": [
+    {
+      "id": "d20",
+      "title": "D20检定与DC",
+      "category": "基础",
+      "tags": [
+        "能力检定",
+        "豁免",
+        "攻击"
+      ],
+      "summary": "能力检定、豁免与攻击均以各自规则加值掷d20；技能熟练不是自动成功。合理确定的行动无需掷骰。本场DC只表示具体任务难度，不判断道德。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=6",
+      "page": 6
+    },
+    {
+      "id": "advantage",
+      "title": "优势与劣势",
+      "category": "基础",
+      "tags": [
+        "优势",
+        "劣势",
+        "重掷"
+      ],
+      "summary": "优势掷两枚d20取高，劣势取低；多份优势不叠成更多骰。优势与劣势同时存在时相消。允许重掷一枚d20的能力不会同时重掷两枚。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=7",
+      "page": 7
+    },
+    {
+      "id": "inspiration",
+      "title": "英雄激励",
+      "category": "资源",
+      "tags": [
+        "Heroic Inspiration",
+        "人类"
+      ],
+      "summary": "可在掷骰后花费一次英雄激励重掷任意一枚骰，必须使用新结果；至多持有一次。人类在完成长休后获得英雄激励；好的扮演也可由主持按规则授予。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=8",
+      "page": 8
+    },
+    {
+      "id": "action-economy",
+      "title": "行动、附赠动作与反应",
+      "category": "战斗",
+      "tags": [
+        "行动",
+        "附赠动作",
+        "反应",
+        "移动"
+      ],
+      "summary": "每回合通常有一个动作，并按速度移动；只有特性提供时才可用相应附赠动作。每轮至多一个反应，直到自己下回合开始恢复。叙述“祭宝”不提供免费动作。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=9",
+      "page": 9
+    },
+    {
+      "id": "influence",
+      "title": "影响动作与NPC诉求",
+      "category": "交涉",
+      "tags": [
+        "Influence",
+        "Persuasion",
+        "Deception",
+        "Intimidation"
+      ],
+      "summary": "先说出想让NPC做什么与如何说服。愿意或不可能接受的请求通常不需要随机判定；结果不确定时按态度、请求与相关技能裁定。本作三方各有可接受条件，检定不洗掉真实动机。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=184",
+      "page": 184
+    },
+    {
+      "id": "help",
+      "title": "协助动作",
+      "category": "探索",
+      "tags": [
+        "Help",
+        "协作",
+        "熟练"
+      ],
+      "summary": "帮助能力检定时，需满足Help规定的熟练与实际协助条件，并能合理影响该任务；符合时让受助者的相应检定具有优势。战斗协助攻击按Help的距离与时限处理。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=182",
+      "page": 182
+    },
+    {
+      "id": "tools",
+      "title": "工具与技能",
+      "category": "探索",
+      "tags": [
+        "Thieves' Tools",
+        "工具",
+        "锁"
+      ],
+      "summary": "工具熟练使用相应属性进行能力检定；若一次检定同时适用自己熟练的工具与技能，按2024工具条目获得优势。普通绳、稳固石柱与时间可以让简单救援直接成功。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=93",
+      "page": 93
+    },
+    {
+      "id": "rest",
+      "title": "短休与生命骰",
+      "category": "资源",
+      "tags": [
+        "Short Rest",
+        "Hit Dice",
+        "恢复"
+      ],
+      "summary": "短休需要一小时低强度活动且开始时至少1HP。完成后可逐枚决定花费生命骰恢复HP，回复各特性明示的资源；不自动补满法术位。掷先攻、非戏法施法或受伤会中断短休。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=187",
+      "page": 187
+    },
+    {
+      "id": "potion",
+      "title": "治疗药水与甘露昵称",
+      "category": "物品",
+      "tags": [
+        "Potion of Healing",
+        "甘露",
+        "治疗"
+      ],
+      "summary": "本作四瓶“甘露”完整采用Potion of Healing：附赠动作饮用或给5尺内另一生物服用，恢复2d4+2HP。没有额外不死、轮回、属性或疾病全免效果。每瓶只有一个实际去处。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=98",
+      "page": 98
+    },
+    {
+      "id": "concentration",
+      "title": "专注与每回合法术位",
+      "category": "法术",
+      "tags": [
+        "Concentration",
+        "专注",
+        "法术位"
+      ],
+      "summary": "同一生物只能维持一个专注。受伤后按专注规则进行体质豁免；失能等也会终止专注。2024每回合至多花费一个法术位施法；不能把它误写成2014附赠施法口径。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=105",
+      "page": 105
+    },
+    {
+      "id": "spell-components",
+      "title": "法术成分与仪式",
+      "category": "法术",
+      "tags": [
+        "V",
+        "S",
+        "M",
+        "Ritual"
+      ],
+      "summary": "法术仍按原条目的动作、成分、目标、范围、持续时间与专注执行。文化别名不删除材料或额外增加目标。法师Ritual Adept可从法术书施放带Ritual标记的法术，即使未准备，按仪式增加时间。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=104",
+      "page": 104
+    },
+    {
+      "id": "knockout",
+      "title": "2024击昏",
+      "category": "战斗",
+      "tags": [
+        "Knocking Out",
+        "Unconscious",
+        "投降"
+      ],
+      "summary": "以近战攻击将生物降至0HP时，可改为将其降至1HP并给予昏迷状态，使其开始短休；不是2014的0HP稳定口径。剧情NPC另可因自身意愿在明确HP阈值投降，投降不等于魔法控制。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=17",
+      "page": 17
+    },
+    {
+      "id": "fighter",
+      "title": "三级战士／勇士",
+      "category": "角色",
+      "tags": [
+        "Fighter",
+        "Champion",
+        "Second Wind",
+        "Action Surge"
+      ],
+      "summary": "勇士的武器与徒手攻击19–20暴击，先攻与Athletics检定有优势。Second Wind三级有两次，附赠动作回复1d10+3HP，短休回一次；Action Surge短休回复，额外动作不能是Magic。Tactical Mind按原规则花Second Wind补失败能力检定。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=47",
+      "page": 47
+    },
+    {
+      "id": "rogue",
+      "title": "三级游荡者／盗贼",
+      "category": "角色",
+      "tags": [
+        "Rogue",
+        "Thief",
+        "Sneak Attack",
+        "Fast Hands"
+      ],
+      "summary": "偷袭三级为每回合一次2d6，仍须满足武器与优势或邻接盟友等条件。Cunning Action可附赠Dash/Disengage/Hide；Fast Hands还可附赠执行相应巧手、Utilize或触发需Magic动作的魔法物品。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=61",
+      "page": 61
+    },
+    {
+      "id": "cleric",
+      "title": "三级生命领域牧师",
+      "category": "角色",
+      "tags": [
+        "Cleric",
+        "Life Domain",
+        "Channel Divinity"
+      ],
+      "summary": "生命领域固定准备Aid、Bless、Cure Wounds、Lesser Restoration。Disciple of Life仅在以法术位施法治疗的当回合追加2+环级HP；免费Magic Initiate施法不触发。Preserve Life花引导神力，总计15HP，仅对Bloodied目标，不能恢复超过最大HP一半。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=36",
+      "page": 36
+    },
+    {
+      "id": "wizard",
+      "title": "三级塑能法师",
+      "category": "角色",
+      "tags": [
+        "Wizard",
+        "Evoker",
+        "Potent Cantrip"
+      ],
+      "summary": "三级Evoker获得Evocation Savant与Potent Cantrip：伤害戏法攻击失手或目标豁免成功仍半伤，没有其余效果。Sculpt Spells到六级才获得。三级Arcane Recovery在短休后可回总环级不超过2的法术位，每长休一次。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=77",
+      "page": 77
+    },
+    {
+      "id": "foes",
+      "title": "本场敌卡检索",
+      "category": "主持",
+      "tags": [
+        "Animated Armor",
+        "Steam Mephit",
+        "Bandit Captain",
+        "Bandit"
+      ],
+      "summary": "活化盔甲见p259；Bandit与Bandit Captain见p261；Steam Mephit见p308。小魔蝠常驻朦胧形体、火/毒免疫，原卡吐息与死亡爆发照用。敌人是具体构装体、元素生物与受雇人，不代表印度神话族类的本性。",
+      "sourceUrl": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf#page=259",
+      "page": 259
+    },
+    {
+      "id": "culture",
+      "title": "承诺、业与水权的采用边界",
+      "category": "设定",
+      "tags": [
+        "dharma",
+        "karman",
+        "nāga",
+        "asura",
+        "文化"
+      ],
+      "summary": "冲突由具体义务与共同劳动的后果推动；只记录承诺、NPC意愿与已做事实。没有业力条、誓约点或出身等级。阿修罗与那伽在本作是可交涉人物；神祇不提供可战斗数值卡，现实仪轨不变成关卡。",
+      "sourceUrl": "docs/source/02_神话来源与改编边界.md",
+      "page": null
+    }
+  ],
+  "port": 8800,
+  "restEffects": {
+    "short": {
+      "facts": {
+        "restTaken": true
+      },
+      "text": "短休真实恢复资源，也让渡桥多一名侦察者；同一共享休息仅触发一次。"
+    },
+    "long": {
+      "facts": {
+        "restTaken": true,
+        "raidAlert": true
+      },
+      "text": "长休真实恢复资源，也让侦察者和额外巡查到位；不另扣时间。"
+    }
+  },
+  "introSafety": {
+    "title": "《甘露的代价》开桌约定",
+    "summary": "成年叙事：工伤、债务胁迫、权力交换、背叛与自愿成年人的非露骨旧关系。没有性暴力或猎奇细节，也不把现实信仰群体写成邪恶。",
+    "topics": [
+      "受伤与事故责任",
+      "经济胁迫和隐瞒",
+      "同伴秘密及背叛",
+      "自愿的非露骨旧情"
+    ],
+    "fadeText": "默认略述。可将伤口和亲密对话改为摘要；选择、资源、NPC自主权及后果完全相同。拒绝感情不损失机械收益。"
+  }
+}
