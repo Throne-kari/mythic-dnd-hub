@@ -1,3 +1,4 @@
+import {beginBattleCapture, recordBattleEffect, captureBattleTransition, publicBattleReport} from '../../server/combat-ledger.mjs';
 // Pure, JSON-serializable rules. No I/O, wall clock, or external random source.
 export const GAME_ID = 'aztec-fifth-sun-v3';
 const RESOURCE_KEYS = ['grain', 'silver', 'water', 'dread'];
@@ -280,8 +281,10 @@ function lineOfSight(map, a, b) {
   return true;
 }
 
-function hurt(state, unit, damage) {
+function hurt(state, unit, damage, source = null, method = '规则伤害') {
+  const previousHp = unit.hp;
   unit.hp = Math.max(0,unit.hp-damage); unit.down = unit.hp === 0;
+  recordBattleEffect(state,{kind:'damage',actor:source,target:unit,amount:Math.max(0,previousHp-unit.hp),method});
   if (unit.down) { unit.ap=0; unit.move=0; journal(state,`${unit.name}倒下了。`); }
 }
 
@@ -291,7 +294,7 @@ function walk(state, map, unit, path) {
     if(state.party.some(p=>p.id===unit.id))reveal(state,map,unit);
     if(map.tiles[cell.y][cell.x]==='*') {
       const damage=1+(map.id==='underworld'&&(state.factions.shades??0)<=-4?1:0);
-      hurt(state,unit,damage);journal(state,`${unit.name}受到危险地形伤害 ${damage}${damage>1?'（亡影敌意）':''}。`);
+      hurt(state,unit,damage,null,'危险地形');journal(state,`${unit.name}受到危险地形伤害 ${damage}${damage>1?'（亡影敌意）':''}。`);
     }
     if(!living(unit))break;
   }
@@ -300,7 +303,7 @@ function walk(state, map, unit, path) {
 function strike(state,map,attacker,target) {
   assert(distance(attacker,target) <= attacker.range && lineOfSight(map,attacker,target),'目标超出射程或被墙壁阻隔');
   const roll=die(state), damage=Math.max(1,attacker.attack+roll-target.armor-(target.guarding?2:0));
-  hurt(state,target,damage); journal(state,`${attacker.name}攻击${target.name}：骰 ${roll}，造成 ${damage} 伤害。`);
+  hurt(state,target,damage,attacker,'普通攻击'); journal(state,`${attacker.name}攻击${target.name}：骰 ${roll}，造成 ${damage} 伤害。`);
 }
 
 function finishCombat(state,maps) {
@@ -309,12 +312,14 @@ function finishCombat(state,maps) {
     const training=state.combat.training;
     if(!training)state.flags=unique([...state.flags,`encounter:${state.combat.id}:lost`]);
     state.resources.dread+=2;state.resources.silver=Math.max(0,state.resources.silver-3);
+    recordBattleEffect(state,{kind:'battle-end',result:'defeat'});
     state.phase='defeat';state.combat=null;
     journal(state,training?'工坊遭遇全员倒下，蚀影+2、损失可可至多3。请休整恢复；没有改变剧情旗标。':'队伍全员倒下，商旅将你们送回营地。遭遇失败；休整后可承担后果继续剧情。');
     placeParty(state,currentMap(state,maps));return true;
   }
   if(!state.combat.enemies.some(living)) {
     const {reward,name}=state.combat;
+    recordBattleEffect(state,{kind:'battle-end',result:'victory'});
     state.combat=null;state.phase='exploration';
     applyEffects(state,reward);
     for(const unit of state.party){unit.ap=2;unit.move=5;unit.guarding=false;}
@@ -447,7 +452,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
   assert(input?.schema===3,'不支持的存档版本');assert(action&&typeof action.type==='string','缺少行动');
   assert(campaign.id===GAME_ID&&input.gameId===GAME_ID&&input.campaignId===campaign.id,'此进度不属于《第五日之城》，请新建本作房间');
   assert(input.phase!=='ending'&&!input.ending,'结局已经写定，不能继续行动');authorize(actor,action);
-  const state=clone(input);state.npcRelationships=initialNpcRelationships(campaign,state.npcRelationships);
+  const state=clone(input);beginBattleCapture(state);state.npcRelationships=initialNpcRelationships(campaign,state.npcRelationships);
   const map=currentMap(state,maps);assert(map,'当前地图不存在');
   if(state.phase==='defeat')assert(action.type==='rest','队伍倒下，请先休整恢复');
   state.clock++;
@@ -494,7 +499,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
       const unit=ownUnit(state,action),target=state.party.find(p=>p.id===action.targetId);
       assert(target&&target.hp<target.maxHp,'治疗目标无效或无需治疗');assert(distance(unit,target)<=1,'治疗需要相邻');
       assert(state.resources.grain>=1,'治疗需要1玉米');if(state.phase==='combat')assert(unit.ap>=1,'行动点不足');
-      state.resources.grain--;target.hp=Math.min(target.maxHp,target.hp+5);target.down=false;
+      state.resources.grain--;const previousHp=target.hp;target.hp=Math.min(target.maxHp,target.hp+5);target.down=false;recordBattleEffect(state,{kind:'healing',actor:unit,target,amount:target.hp-previousHp,method:'补给治疗'});
       journal(state,`${unit.name}消耗1玉米治疗${target.name}，恢复至${target.hp}生命。`);
       if(state.phase==='combat'){unit.ap--;if(unit.ap===0)advanceTurn(state,maps);}break;
     }
@@ -507,7 +512,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
         assert(target,'请选择存活敌人作为技能目标');
         const range=unit.id==='yaotl'?3:4;
         assert(distance(unit,target)<=range&&lineOfSight(map,unit,target),'技能目标超出范围或被墙壁阻隔');
-        const reduction=(unit.id==='yaotl'?2:3)+(empowered?1:0);target.armor=Math.max(0,target.armor-reduction);
+        const reduction=(unit.id==='yaotl'?2:3)+(empowered?1:0);const previousArmor=target.armor;target.armor=Math.max(0,target.armor-reduction);recordBattleEffect(state,{kind:'status',actor:unit,target,method:unit.id==='yaotl'?'黑曜破阵':'镜纹封刃',statusesAdded:[`护甲降低 ${previousArmor-target.armor}`]});
         if(unit.id==='yaotl') {
           const blocked=occupied(state,target.id);
           const pull=neighbors(map,target).filter(cell=>!blocked.has(positionKey(cell))&&distance(unit,cell)<distance(unit,target)).sort((a,b)=>distance(unit,a)-distance(unit,b)||a.y-b.y||a.x-b.x)[0];
@@ -521,7 +526,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
         assert(target&&target.hp<target.maxHp,'请选择需要治疗的队友');
         assert(distance(unit,target)<=3&&lineOfSight(map,unit,target),'净水救护范围为3且需要视线');
         assert(state.resources.grain>=1,'净水救护需要1玉米');state.resources.grain--;
-        target.hp=Math.min(target.maxHp,target.hp+(empowered?10:8));target.down=false;
+        const previousHp=target.hp;target.hp=Math.min(target.maxHp,target.hp+(empowered?10:8));target.down=false;recordBattleEffect(state,{kind:'healing',actor:unit,target,amount:target.hp-previousHp,method:'净水救护'});
         journal(state,`${unit.name}使用净水救护，消耗1玉米，使${target.name}恢复至${target.hp}生命。`);
       } else throw new Error('此角色没有配置独特技能');
       if(empowered)journal(state,`${unit.name}与你们的信任令技能增强。`);
@@ -534,7 +539,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
       assert(state.phase==='combat','当前没有战斗');
       const training=state.combat.training;
       if(!training)state.flags=unique([...state.flags,`encounter:${state.combat.id}:lost`]);
-      state.resources.dread++;state.combat=null;state.phase='exploration';
+      state.resources.dread++;recordBattleEffect(state,{kind:'battle-end',result:'escape'});state.combat=null;state.phase='exploration';
       for(const unit of state.party)if(!living(unit)){unit.hp=1;unit.down=false;}
       placeParty(state,map);journal(state,training?'工坊遭遇撤退，队伍回到出生区域，蚀影+1，没有改变剧情旗标。':'队伍撤回营地，蚀影 +1，遭遇失败；可继续处理此路线的后果。');break;
     }
@@ -577,6 +582,7 @@ export function applyAction(input, action, campaign, maps, actor={role:'host',ch
     default: throw new Error('未知行动');
   }
   state.revision++;
+  captureBattleTransition(input,state,action,{actorId:action.characterId,targetId:action.targetId});
   return state;
 }
 
@@ -623,7 +629,7 @@ export function legalActionsForState(state,campaign,maps,actor) {
 }
 
 export function publicState(state, actor={role:'host',characterId:null}) {
-  const result=clone(state);
+  const result=clone(state);result.battleReport=publicBattleReport(state,{privileged:actor.role==='host'});
   const capabilities=capabilitiesForActor(actor);
   // Engine state never stores seat credentials. Also drop accidentally attached server metadata.
   for(const key of ['token','tokens','seats','password','secret'])delete result[key];

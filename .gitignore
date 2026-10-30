@@ -1,5 +1,6 @@
 # Local author configuration and private game data
 /runtime/
+**/.hub-chat/
 /author-sources.local.json
 *.local.json
 .env

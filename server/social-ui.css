@@ -1,0 +1,67 @@
+:host { all: initial; color-scheme: dark; font: 14px/1.5 system-ui, -apple-system, "Noto Sans SC", sans-serif; color: #eee7d6; --social-gold: #ceb179; --social-muted: #adb7ab; }
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+button, textarea { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 2px solid #f0d398; outline-offset: 3px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.social-shell { position: fixed; z-index: 2147483000; right: max(14px, env(safe-area-inset-right)); top: 80px; max-width: calc(100vw - 28px); pointer-events: none; }
+.social-launcher { display: block; min-height: 42px; margin-left: auto; padding: 10px 16px; border: 1px solid #a58b55; border-radius: 20px; background: #142223f2; color: #e7d09d; box-shadow: 0 4px 20px #0005; pointer-events: auto; font-size: 12px; font-weight: 650; letter-spacing: .025em; }
+.social-panel { display: flex; flex-direction: column; width: 410px; max-width: calc(100vw - 28px); height: min(680px, calc(100dvh - 150px)); margin-bottom: 10px; overflow: hidden; border: 1px solid #88734c; border-radius: 12px; background: #101b1cf5; box-shadow: 0 12px 50px #0009; pointer-events: auto; }
+.social-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 18px 18px 12px; border-bottom: 1px solid #a98b4d35; background: linear-gradient(120deg, #273431, #132123); }
+h2, h3, h4, p { margin: 0; }
+h2 { color: #e6d0a4; font: 600 19px/1.4 Georgia, "Noto Serif SC", serif; letter-spacing: .08em; }
+.social-identity { margin-top: 5px; color: var(--social-muted); font-size: 11px; overflow-wrap: anywhere; }
+.social-close { display: grid; place-items: center; width: 44px; min-width: 44px; height: 44px; margin: -7px -8px 0 6px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #dbd1bc; font-size: 27px; }
+.social-close:hover { background: #ffffff12; }
+.social-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 6px 8px 0; border-bottom: 1px solid #a98b4d35; }
+.social-tab { min-height: 44px; padding: 8px 3px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #aab7ae; font-size: 12px; }
+.social-tab[aria-selected="true"] { color: #efd8a3; border-bottom-color: #c7a76b; background: #b29c6b0b; }
+.social-content { display: flex; flex: 1; min-height: 0; }
+.social-pane { width: 100%; min-height: 0; display: flex; flex-direction: column; }
+.chat-messages { flex: 1; min-height: 0; overflow: auto; padding: 12px 14px; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #627064 #132123; }
+.message { margin: 0 0 13px; padding: 9px 11px; border: 1px solid #ffffff0a; border-radius: 9px; background: #26353465; }
+.message.mine { border-color: #baa16c30; background: #564a302f; }
+.message-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: #d5c3a1; font-size: 11px; }
+.message-meta strong { max-width: 220px; overflow-wrap: anywhere; }
+.message-meta time { margin-left: auto; color: #839487; font-size: 10px; }
+.identity-kind { display: inline-block; padding: 0 5px; border: 1px solid #91aa952d; border-radius: 3px; color: #acbda9; font-size: 9px; }
+.identity-kind.agent { color: #e2c387; border-color: #dfb65c55; }
+.message-text { margin-top: 6px; color: #e5e6d9; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; }
+.chat-composer { padding: 10px 14px 12px; border-top: 1px solid #a98b4d35; }
+.chat-composer label { display: block; color: #b3bdad; font-size: 11px; margin-bottom: 6px; }
+textarea { display: block; width: 100%; min-height: 66px; max-height: 160px; resize: vertical; padding: 9px 10px; border: 1px solid #6a766449; border-radius: 6px; background: #0a1518; color: #eee9d8; line-height: 1.6; }
+textarea::placeholder { color: #778e80; }
+.composer-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 7px; }
+.social-counter { color: #8fa18f; font-size: 10px; }
+.chat-send { min-width: 72px; min-height: 36px; padding: 6px 14px; border: 1px solid #c3a46e; border-radius: 5px; background: #ad8f55; color: #141b19; font-weight: 650; }
+.chat-error { min-height: 0; margin-top: 6px; color: #efb7a0; font-size: 11px; }
+.chat-error:empty { display: none; }
+.social-connection { padding: 7px 14px; border-top: 1px solid #ffffff0a; color: #94ac97; background: #0d181b; font-size: 10px; }
+.social-connection[data-state="error"] { color: #e2b48f; }
+.social-empty { padding: 25px 12px; color: #91a391; text-align: center; font-size: 12px; line-height: 1.9; list-style: none; }
+.pane-note { padding: 12px 16px; border-bottom: 1px solid #ffffff0b; color: #a5b6a5; font-size: 10px; }
+.battle-events { margin: 0; padding: 9px 14px; overflow: auto; overscroll-behavior: contain; list-style: none; flex: 1; scrollbar-width: thin; }
+.battle-event { display: grid; grid-template-columns: 44px 1fr; gap: 9px; padding: 11px 0; border-bottom: 1px solid #e2dcc00d; }
+.event-kind { align-self: start; text-align: center; border: 1px solid #b3a16e30; border-radius: 4px; padding: 1px 3px; color: #bdb998; font-size: 10px; }
+.damage .event-kind { color: #e6a091; border-color: #b278654f; }
+.healing .event-kind { color: #a8ceac; border-color: #6e99714f; }
+.status .event-kind { color: #c9b2df; border-color: #8e739f4f; }
+.event-text { color: #e0dfce; overflow-wrap: anywhere; white-space: pre-wrap; font-size: 12px; line-height: 1.75; }
+.battle-summaries { padding: 14px; flex: 1; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.battle-summary { padding: 16px; margin: 0 0 13px; border: 1px solid #c7a76b40; border-radius: 8px; background: linear-gradient(145deg, #3c3c282f, #1b2d2c7f); }
+h3 { color: #e4cb94; font: 600 17px/1.5 Georgia, "Noto Serif SC", serif; margin-bottom: 8px; }
+.battle-summary > p { color: #c8cfbb; font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; white-space: pre-wrap; }
+.summary-actions { margin-top: 6px; }
+.summary-group { margin-top: 14px; }
+h4 { margin-bottom: 5px; color: #b2bda5; font-size: 11px; font-weight: 500; }
+dl { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; margin: 0; font-size: 12px; }
+dt { color: #ddd8bd; overflow-wrap: anywhere; } dd { margin: 0; color: #e6c684; font-variant-numeric: tabular-nums; }
+.summary-statuses { padding-left: 16px; margin: 13px 0 0; color: #b7bfae; font-size: 11px; line-height: 1.8; }
+@media (max-width: 680px) { .social-shell { top: auto; right: 8px; left: 8px; bottom: max(66px, calc(env(safe-area-inset-bottom) + 58px), var(--social-keyboard-bottom, 0px)); max-width: none; } .social-panel { width: 100%; max-width: none; height: min(62dvh, var(--social-available-height, 540px)); margin-bottom: 7px; border-radius: 13px; } .social-launcher { min-height: 38px; padding: 8px 13px; font-size: 11px; } .social-header { padding: 12px 14px 8px; } .social-tabs { padding-top: 0; } .social-tab { min-height: 38px; } .chat-composer { padding: 8px 12px; } textarea { min-height: 54px; max-height: 100px; } .message-meta strong { max-width: 175px; } }
+@media (max-height: 530px) and (min-width: 681px) { .social-shell { top: 45px; } .social-panel { height: calc(100dvh - 105px); } textarea { min-height: 40px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+@media (max-width: 680px) { :host([data-keyboard="open"]) .social-header { padding: 4px 10px; } :host([data-keyboard="open"]) h2 { font-size: 14px; } :host([data-keyboard="open"]) .social-identity, :host([data-keyboard="open"]) .social-connection, :host([data-keyboard="open"]) .chat-composer label { display: none; } :host([data-keyboard="open"]) .social-close { margin: 0 -4px 0 4px; height: 32px; } :host([data-keyboard="open"]) .social-tab { min-height: 34px; } :host([data-keyboard="open"]) .chat-composer { padding: 6px 10px; } :host([data-keyboard="open"]) textarea { min-height: 40px; max-height: 56px; } :host([data-keyboard="open"]) .chat-send { min-height: 32px; } }
+
+.social-counter[data-overlimit="true"] { color: #efb7a0; }

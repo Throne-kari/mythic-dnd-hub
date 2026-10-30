@@ -5,8 +5,8 @@
     "title": "封神·岐路",
     "subtitle": "世路人情",
     "version": "0.3",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "六幕十二回",
     "tags": [
       "封神",
@@ -31,11 +31,11 @@
         "path": "docs/玩家须知_世路人情.md"
       },
       {
-        "title": "主持增补",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "docs/主持增补_世路人情.md"
       },
       {
-        "title": "AI 接入",
+        "title": "可选智能体协议（进阶）",
         "path": "AI_DM_GUIDE.md"
       },
       {
@@ -50,8 +50,8 @@
     "title": "镜与归路",
     "subtitle": "暗潮归灯",
     "version": "2.0",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "十二节点 · 四类结局",
     "tags": [
       "海岸",
@@ -76,11 +76,11 @@
         "path": "docs/source/PLAYER_BRIEF.md"
       },
       {
-        "title": "主持正文",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "docs/source/GM_SESSION.md"
       },
       {
-        "title": "AI 接入",
+        "title": "可选智能体协议（进阶）",
         "path": "AI_DM_GUIDE.md"
       },
       {
@@ -95,8 +95,8 @@
     "title": "乳海余波",
     "subtitle": "甘露的代价",
     "version": "2.0",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "十二节点 · 四类结局",
     "tags": [
       "夜潮",
@@ -121,11 +121,11 @@
         "path": "PLAYER_BRIEF.md"
       },
       {
-        "title": "主持正文",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "GM_SESSION.md"
       },
       {
-        "title": "AI 接入",
+        "title": "可选智能体协议（进阶）",
         "path": "AI_DM_GUIDE.md"
       },
       {
@@ -234,8 +234,8 @@
     "title": "无葬之城",
     "subtitle": "城门未闭",
     "version": "1.0",
-    "players": "1–4 人＋可选主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "四章 · 36 阶段 · 24 结局",
     "tags": [
       "城邦",
@@ -260,7 +260,7 @@
         "path": "docs/PLAYER_GUIDE.md"
       },
       {
-        "title": "主持指南",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "docs/STORY_GUIDE.md"
       },
       {
@@ -369,8 +369,8 @@
     "title": "雅法余烬",
     "subtitle": "夜火余账",
     "version": "3.0",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "六景 · 六类结局",
     "tags": [
       "港城",
@@ -395,11 +395,11 @@
         "path": "docs/PLAYER_NIGHT_ACCOUNTS.md"
       },
       {
-        "title": "主持补篇",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "docs/GM_NIGHT_ACCOUNTS.md"
       },
       {
-        "title": "AI 接入",
+        "title": "可选智能体协议（进阶）",
         "path": "AI_DM_GUIDE.md"
       },
       {
@@ -414,8 +414,8 @@
     "title": "三册异途",
     "subtitle": "中国神话三弧",
     "version": "2.0",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "三弧 · 13 节点",
     "tags": [
       "独立短篇",
@@ -440,7 +440,7 @@
         "path": "manuscript/rules/PLAYER_PACKET.md"
       },
       {
-        "title": "主持本",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/rules/READING_DRAFT.md"
       },
       {
@@ -459,8 +459,8 @@
     "title": "日本神话三弧",
     "subtitle": "五名之主 · 携云的匣 · 可畏者的登录",
     "version": "2.1",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "三弧 · 13 节点",
     "tags": [
       "独立短篇",
@@ -485,11 +485,11 @@
         "path": "manuscript/PLAYER_PACKET.md"
       },
       {
-        "title": "主持本",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/READING_DRAFT.md"
       },
       {
-        "title": "主持手札",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/GM_HANDOUTS.md"
       },
       {
@@ -504,8 +504,8 @@
     "title": "印度神话三弧",
     "subtitle": "十四年与一个承诺 · 分甘之约 · 未赴的席",
     "version": "2.1",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "三弧 · 13 节点",
     "tags": [
       "独立短篇",
@@ -530,11 +530,11 @@
         "path": "manuscript/PLAYER_PACKET.md"
       },
       {
-        "title": "主持本",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/READING_DRAFT.md"
       },
       {
-        "title": "主持手札",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/GM_SCRIPT_AND_HANDOUTS.md"
       },
       {
@@ -549,8 +549,8 @@
     "title": "阿卡账房",
     "subtitle": "围城中的交接",
     "version": "2.0",
-    "players": "4 人＋主持",
-    "mode": "主持＋玩家",
+    "players": "1–4 人",
+    "mode": "无需主持",
     "chapters": "三时段 · 12 节点",
     "tags": [
       "围城",
@@ -575,7 +575,7 @@
         "path": "manuscript/docs/PLAYER_PACKET.md"
       },
       {
-        "title": "主持本",
+        "title": "可选创作资料（含剧情揭示）",
         "path": "manuscript/docs/GM_ACRE_LEDGER.md"
       },
       {

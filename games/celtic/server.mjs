@@ -1,4 +1,5 @@
 import './hub-environment.mjs';
+import {RoomChat} from '../../server/room-chat.mjs';
 import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -94,6 +95,7 @@ export async function createGameServer({engine, seed = 1, port = 18846, host = '
   state.tableMode = mode;
   let seq = 0, hostSeat = null, initialized = false, bootstrapReceipt = null, closed = false, queue = Promise.resolve();
   const seats = new Map(), tokens = new Map(), owners = new Map(), receipts = new Map(), events = [], streams = new Set(), pending = new Map(), folderPlayers = new Map();
+  const chat = new RoomChat({now}), chatRoomId = 'table-' + randomUUID();
   const serial = fn => { const next = queue.then(fn); queue = next.catch(() => {}); return next; };
   const seatView = seat => ({id: seat.id, role: seat.role, name: seat.name, actorIds: [...owners].filter(([, id]) => id === seat.id).map(([id]) => id)});
   const isAdmin = seat => ['host', 'manager'].includes(seat.role);
@@ -396,6 +398,7 @@ export async function createGameServer({engine, seed = 1, port = 18846, host = '
       return {status: 201, body: {...view(hostSeat), seatToken: created.seatToken}};
     }
     const seat = auth(req);
+    if (url.pathname === '/api/hub/chat') return {status: 200, body: chat.send(chatRoomId, {...seat, agent: folderPlayers.has(seat.id)}, body)};
     if (url.pathname === '/api/agent/submit') return {status: 200, body: {...view(seat), ...(await submitProposal(body, seat))}};
     return once(seat, body, url.pathname, async () => {
       if (url.pathname === '/api/folder-player') return createFolderPlayer(seat,body);
@@ -496,6 +499,7 @@ export async function createGameServer({engine, seed = 1, port = 18846, host = '
       if (url.pathname === '/api/health') return send(res, 200, {ok: true, protocolVersion: 1, localOnly: true, tableMode: state.tableMode, initialized, hostCreated: initialized});
       if (url.pathname.startsWith('/api/')) {
         const seat = auth(req);
+        if (url.pathname === '/api/hub/chat') return send(res, 200, chat.read(chatRoomId, {...seat, agent: folderPlayers.has(seat.id)}, {cursor: url.searchParams.get('cursor') ?? url.searchParams.get('after'), limit: url.searchParams.get('limit')}));
         if (url.pathname === '/api/presence') return send(res, 200, presence());
         if (url.pathname === '/api/state') return send(res, 200, view(seat));
         if (url.pathname === '/api/saves') {

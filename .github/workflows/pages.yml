@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - run: npm ci --prefix server/mcp
+      - run: npm run check
+      - run: npm test
+      - run: npm run test:mcp
       - run: node scripts/build-pages.mjs
       - uses: actions/upload-pages-artifact@v4
         with:

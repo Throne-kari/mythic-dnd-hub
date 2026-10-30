@@ -1,5 +1,7 @@
+import {beginBattleCapture, recordBattleEffect, captureBattleTransition, publicBattleReport} from '../../server/combat-ledger.mjs';
 // A small, deterministic d20 ruleset. This is not the complete D&D rules.
 const clone = value => structuredClone(value);
+const LEDGER_PREVIEW = Symbol('ledger-preview');
 const fail = message => { throw new Error(message); };
 const plain = value => value && typeof value === 'object' && !Array.isArray(value) && [Object.prototype,null].includes(Object.getPrototypeOf(value));
 const own = (o, k) => Object.hasOwn(o, k);
@@ -224,7 +226,7 @@ function strike(s,attacker,target,map) {
   const die=roll(s), cover=neighbors(target).some(p=>map.tiles[p.y]?.[p.x]==='c')?2:0;
   const hit=die===20 || (die!==1 && die+(attacker.attack || 0)>=target.ac+cover+(target.defending?2:0));
   const damage=hit?Math.max(1,damageRoll(s,attacker.damage ?? 1)+(die===20?roll(s,6):0)):0;
-  target.hp=Math.max(0,target.hp-damage); log(s,`${attacker.name} 掷 ${die}${attacker.attack>=0?'+':''}${attacker.attack}，${hit?`命中 ${target.name}，造成 ${damage} 伤害`:`未击中 ${target.name}`}。`,'combat');
+  const previousHp=target.hp;target.hp=Math.max(0,target.hp-damage);recordBattleEffect(s,{kind:hit?'damage':'miss',actor:attacker,target,method:'普通攻击',...(hit?{amount:previousHp-target.hp}:{})}); log(s,`${attacker.name} 掷 ${die}${attacker.attack>=0?'+':''}${attacker.attack}，${hit?`命中 ${target.name}，造成 ${damage} 伤害`:`未击中 ${target.name}`}。`,'combat');
 }
 function enemyTurn(s,map) {
   for(const e of s.enemies.filter(e=>e.hp>0)) {
@@ -240,10 +242,12 @@ function enemyTurn(s,map) {
   s.turn++; s.heroes.forEach(h=>{h.defending=false;}); s.activeHeroId=s.heroes.find(h=>h.hp>0)?.id; s.turnUsage={move:0,action:false};
 }
 function resolve(s,campaign,maps) {
-  s.combat=s.enemies.some(e=>e.hp>0);
+  const wasCombat=s.combat;s.combat=s.enemies.some(e=>e.hp>0);
+  if(wasCombat&&!s.combat)recordBattleEffect(s,{kind:'battle-end',result:s.enemies.some(e=>e.status==='withdrawn')?'ended':'victory'});
   if(!s.combat) s.turnUsage={move:0,action:false};
   if(!s.heroes.some(h=>h.hp>0)) {
-    s.heroes.forEach(h=>{h.hp=Math.max(1,Math.ceil(h.maxHp/2));h.defending=false;}); s.world.day+=2; s.world.unrest++; s.resources.grain=Math.max(0,s.resources.grain-2);
+    recordBattleEffect(s,{kind:'battle-end',result:'defeat'});
+    s.heroes.forEach(h=>{const previousHp=h.hp;h.hp=Math.max(1,Math.ceil(h.maxHp/2));h.defending=false;recordBattleEffect(s,{kind:'healing',target:h,actorName:'规则救援',method:'梅莉娅救援',amount:Math.max(0,h.hp-previousHp),...(previousHp<=0?{statusesRemoved:['倒下']}:{})});}); s.world.day+=2; s.world.unrest++; s.resources.grain=Math.max(0,s.resources.grain-2);
     enter(s,mapAt(s,campaign,maps,'agora')); log(s,'队伍全员倒下。梅莉娅把众人带回集市；两日流逝，粮食损失2，城中动荡增加。','system');
   }
   if(s.world.day>=deadline(campaign) && !s.ending) {
@@ -267,12 +271,12 @@ function stageFor(s,campaign,id) {
   if(stageChapter(stage)!==(s.chapter || 1)) fail('等待其他主线完成本章');
   return {arc,progress,stage};
 }
-export function act(state,action,seat,campaign,maps) {
+export function act(state,action,seat,campaign,maps,previewToken) {
   if(!plain(seat) || !['dm','player'].includes(seat.role) || !Array.isArray(seat.heroIds)) fail('席位无效');
   if(!plain(action) || !ACTION_TYPES.includes(action.type)) fail('未知行动');
   keys(action,['type',...fields[action.type]]);
   if(state.ending) fail('故事已经结束');
-  const s=clone(state),map=mapAt(s,campaign,maps);
+  const preview=previewToken===LEDGER_PREVIEW;const {battleReport:ignoredReport,...withoutReport}=state;const s=clone(preview?withoutReport:state),map=mapAt(s,campaign,maps);if(!preview)beginBattleCapture(s);
   if(['mapSave','mapLoad','mapToken','narrate'].includes(action.type) && seat.role!=='dm') fail('仅主持人可执行此游戏主持动作');
   switch(action.type) {
     case 'narrate': {
@@ -293,7 +297,7 @@ export function act(state,action,seat,campaign,maps) {
       const h=owner(s,seat,action.heroId),t=s.heroes.find(h=>h.id===action.targetId) || fail('治疗目标不存在');
       if(t.hp<=0 && [...s.heroes,...s.enemies].some(e=>e.id!==t.id && e.hp>0 && dist(e,t)===0)) fail('倒地队友的位置被占据，需先清空');
       if(dist(h,t)>2 || t.hp>=t.maxHp) fail('治疗目标太远或无需治疗'); cost(s,{medicine:1});spend(s);
-      const aid=s.companions.melia>=2?2:0;t.hp=Math.min(t.maxHp,t.hp+6+aid);log(s,`${h.name} 消耗1药物，为 ${t.name} 恢复${6+aid}生命。${aid?'梅莉娅信任你们，协助包扎+2。':s.companions.melia<=-3?'梅莉娅拒绝协助，由英雄自行包扎。':''}`,'combat');break;
+      const aid=s.companions.melia>=2?2:0,previousHp=t.hp;t.hp=Math.min(t.maxHp,t.hp+6+aid);recordBattleEffect(s,{kind:'healing',actor:h,target:t,method:'药物治疗',amount:t.hp-previousHp});log(s,`${h.name} 消耗1药物，为 ${t.name} 恢复${6+aid}生命。${aid?'梅莉娅信任你们，协助包扎+2。':s.companions.melia<=-3?'梅莉娅拒绝协助，由英雄自行包扎。':''}`,'combat');break;
     }
     case 'parley': {
       const h=owner(s,seat,action.heroId),enemies=s.enemies.filter(e=>e.hp>0);
@@ -301,7 +305,7 @@ export function act(state,action,seat,campaign,maps) {
       if(Math.min(...enemies.map(e=>dist(h,e)))>6) fail('需要在敌人六格内交涉');
       if(!['grain','coin'].includes(action.resource)) fail('交涉只能使用粮食或银币');
       const amount=action.resource==='grain'?2:3;cost(s,{[action.resource]:amount});spend(s);
-      enemies.forEach(e=>{e.hp=0;e.status='withdrawn';});log(s,`${h.name} 支付${amount}${action.resource==='grain'?'粮食':'银币'}完成交涉。敌人撤离，未被杀死；这场战斗结束。`,'combat');break;
+      enemies.forEach(e=>{e.hp=0;e.status='withdrawn';recordBattleEffect(s,{kind:'status',actor:h,target:e,method:'交涉',statusesAdded:['已撤离']});});log(s,`${h.name} 支付${amount}${action.resource==='grain'?'粮食':'银币'}完成交涉。敌人撤离，未被杀死；这场战斗结束。`,'combat');break;
     }
     case 'endTurn': {
       if(!s.combat) fail('当前没有战斗'); owner(s,seat,s.activeHeroId);
@@ -365,12 +369,12 @@ export function act(state,action,seat,campaign,maps) {
       const i=s.tokens.findIndex(x=>x.id===t.id); if(i<0) {if(s.tokens.length>=30) fail('标记已达上限');s.tokens.push(clone(t));} else s.tokens[i]=clone(t);log(s,'主持人更新地图标记。','system');break;
     }
   }
-  resolve(s,campaign,maps);s.revision=state.revision+1;return s;
+  resolve(s,campaign,maps);s.revision=state.revision+1;if(!preview)captureBattleTransition(state,s,action,{actorId:action.heroId || (action.type==='endTurn'?state.activeHeroId:null),targetId:action.targetId});return s;
 }
 export function legalActions(state,seat,campaign,maps) {
   if(state.ending) return [];
   const result=[],map=mapAt(state,campaign,maps),owned=state.heroes.filter(h=>h.hp>0 && (seat.role==='dm' || seat.heroIds.includes(h.id)) && (!state.combat || h.id===state.activeHeroId));
-  const add=action=>{try {act(state,action,seat,campaign,maps);result.push(action);} catch {}};
+  const add=action=>{try {act(state,action,seat,campaign,maps,LEDGER_PREVIEW);result.push(action);} catch {}};
   for(const h of owned) {
     for(const p of neighbors(h)) add({type:'move',heroId:h.id,...p});
     for(const e of state.enemies.filter(e=>e.hp>0)) add({type:'attack',heroId:h.id,targetId:e.id});
@@ -382,7 +386,7 @@ export function legalActions(state,seat,campaign,maps) {
   return result;
 }
 export function view(state,seat,campaign,maps) {
-  const result=clone(state);result.seat=clone(seat);result.legalActions=legalActions(state,seat,campaign,maps);
+  const result=clone(state);result.battleReport=publicBattleReport(state,{privileged:seat.role==='dm'});result.seat=clone(seat);result.legalActions=legalActions(state,seat,campaign,maps);
   result.availableChoices=(campaign.arcs || []).filter(a=>state.arcs[a.id]?.status==='active').map(a=>{
     const st=a.stages.find(st=>st.id===state.arcs[a.id].stage);
     const waiting=stageChapter(st)>(state.chapter || 1);
@@ -393,7 +397,8 @@ export function view(state,seat,campaign,maps) {
 
 // Validate untrusted disk state BEFORE it enters the authoritative room store.
 export function validateState(s,campaign,maps) {
-  keys(s,['version','revision','turn','activeHeroId','mapId','heroes','enemies','resources','world','flags','relations','companions','arcs','log','combat','ending','customMaps','mapStates','tokens','rngState','turnUsage','chapter','chapterHistory']);
+  keys(s,['version','revision','turn','activeHeroId','mapId','heroes','enemies','resources','world','flags','relations','companions','arcs','log','combat','ending','customMaps','mapStates','tokens','rngState','turnUsage','chapter','chapterHistory','battleReport']);
+  if(s.battleReport!==undefined&&(!plain(s.battleReport)||s.battleReport.schema!==1||!Array.isArray(s.battleReport.events)||s.battleReport.events.length>200||!Array.isArray(s.battleReport.summaries)||s.battleReport.summaries.length>16||JSON.stringify(s.battleReport).length>524288))fail('存档结算记录无效');
   if(s.version!==1 || !Number.isSafeInteger(s.revision) || s.revision<0 || !Number.isSafeInteger(s.turn) || s.turn<1 || !Number.isInteger(s.rngState) || s.rngState<0 || s.rngState>0xffffffff) fail('存档版本、修订或随机状态无效');
   const base=normalizeMaps(maps,campaign),known=new Set(base.map(m=>m.id));
   if(!plain(s.customMaps) || Object.keys(s.customMaps).length>12) fail('存档自定义地图无效');

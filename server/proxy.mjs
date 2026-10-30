@@ -65,9 +65,15 @@ export async function handleGame(req, res, { url, processes, root }) {
   const [, id, pathname] = match, prefix = `/play/${id}`;
   processes.game(id);
   if (!pathname) { res.writeHead(308, { Location: prefix + '/' + url.search }); res.end(); return; }
-  if (pathname === '/__hub__/bridge.js') {
-    const script = await fs.readFile(path.join(root, 'server', 'browser-bridge.js'));
-    res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff' }); res.end(script); return;
+  const sharedAssets = {
+    '/__hub__/bridge.js': ['browser-bridge.js', 'text/javascript'],
+    '/__hub__/social-ui.js': ['social-ui.js', 'text/javascript'],
+    '/__hub__/social-ui.css': ['social-ui.css', 'text/css'],
+  };
+  if (Object.hasOwn(sharedAssets, pathname)) {
+    if (!['GET', 'HEAD'].includes(req.method)) throw new HttpError(405, '不支持此请求方式。');
+    const [file, type] = sharedAssets[pathname], asset = await fs.readFile(path.join(root, 'server', file));
+    res.writeHead(200, { 'Content-Type': `${type}; charset=utf-8`, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff' }); res.end(req.method === 'HEAD' ? undefined : asset); return;
   }
   if (pathname === '/api/stop' || pathname.startsWith('/api/manage/')) throw new HttpError(403, '此操作仅在本机作者台提供。');
   requireSameOrigin(req, true);

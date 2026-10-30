@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#191e19"><title>封神 · 岐路 v0.3 · 世路人情</title><link rel="stylesheet" href="style.css"></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#191e19"><title>封神 · 岐路 v0.3 · 世路人情</title><link rel="stylesheet" href="style.css"><style>.hostless-notice{margin:.65rem 0;padding:.6rem .8rem;border:1px solid currentColor;border-radius:.5rem;font-size:.82rem;line-height:1.5;opacity:.92}.hostless-notice p{margin:0}.hostless-notice button{margin-top:.5rem;max-width:100%}</style>
+</head>
 <body class="in-lobby">
 <section id="lobby" class="lobby">
  <div class="lobby-brand"><span class="seal">岐</span><h1>封神<span>·</span>岐路</h1><p>世路人情 · 独立 v0.3 · 六幕十二回</p></div>
  <div class="lobby-content"><div class="entry-grid">
-  <form id="createRoom" class="entry-card"><h2>建立房间</h2><label>房间名<input id="roomName" value="青蒲同行" maxlength="40" required autocomplete="off"></label><label>昵称<input id="hostName" value="主持人" maxlength="30" required autocomplete="nickname"></label><button class="primary wide" type="submit">建立房间 <span>→</span></button></form>
+  <form id="createRoom" class="entry-card"><h2>建立房间</h2><label>房间名<input id="roomName" value="青蒲同行" maxlength="40" required autocomplete="off"></label><label>昵称<input id="hostName" value="同行者" maxlength="30" required autocomplete="nickname"></label><button class="primary wide" type="submit">建立房间 <span>→</span></button></form>
   <form id="joinRoom" class="entry-card"><h2>加入房间</h2><label>邀请链接或邀请码<input id="inviteCode" required autocomplete="off"></label><label>昵称<input id="playerName" required maxlength="30" autocomplete="nickname"></label><button class="wide" type="submit">加入房间 <span>→</span></button></form>
  </div><div id="lobbyError" class="entry-error" role="alert"></div><button id="resumeRoom" class="resume" hidden>继续上次房间 →</button><button id="restoreSeat" class="resume">使用席位凭据</button><div id="savedRooms" class="button-row"></div><div class="entry-party"><span>姬衡 · 执盾武者</span><span>燕归 · 轻足游荡者</span><span>陆青 · 持符医者</span><span>闻溪 · 行旅法师</span></div></div>
 </section>

@@ -6,6 +6,7 @@ import { randomBytes, timingSafeEqual } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import { GameProcesses } from './processes.mjs';
 import { handleGame, handleUpgrade } from './proxy.mjs';
+import { createMcpNativeRequest } from './mcp-native-transport.mjs';
 import { HttpError, json, body, errorResponse, serveStatic, safeFile, requireSameOrigin } from './util.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -119,11 +120,23 @@ export async function startHub({ management = true } = {}) {
   const processes = new GameProcesses({ root, runtimeDir, catalog }), csrfToken = randomBytes(32).toString('base64url');
   const startedAt = Date.now(), publicUrl = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || `http://${['0.0.0.0', '::'].includes(host) ? 'localhost' : host}:${publicPort}`, managerUrl = `http://127.0.0.1:${managerPort}/manage/`;
   const counts = () => ({ total: catalog.length, ready: catalog.filter(game => game.status === 'ready').length, development: catalog.filter(game => game.status === 'development').length });
+  let closing = false, mcpInstance = null, mcpPromise = null;
+  const mcp = () => {
+    if (closing) throw new HttpError(503, '服务正在关闭。');
+    return mcpPromise ||= import('./mcp/index.mjs').then(({createMcpHttpHandler}) => {
+      mcpInstance = createMcpHttpHandler({origin: new URL(publicUrl).origin, nativeRequest: createMcpNativeRequest(processes)});
+      return mcpInstance;
+    }).catch(() => { mcpPromise = null; throw new HttpError(503, 'MCP组件未就绪，请确认已安装server/mcp依赖。'); });
+  };
 
   async function publicRequest(req, res) {
     try {
       const url = new URL(req.url, 'http://hub.local');
+      if (url.pathname.startsWith('/mcp/')) return await (await mcp()).handle(req, res);
       if (url.pathname.startsWith('/play/')) return await handleGame(req, res, { url, processes, root });
+      // Two existing browser rule modules import this pure, data-free helper.
+      // Keep an exact allowlist; the remainder of server/ is never public.
+      if (url.pathname === '/server/combat-ledger.mjs' && ['GET', 'HEAD'].includes(req.method)) return await serveStatic(req, res, path.join(root, 'server'), 'combat-ledger.mjs');
       if (url.pathname === '/api/catalog' && req.method === 'GET') return json(res, 200, { games: catalog.map(game => publicGame(game, processes)), counts: counts(), ephemeralStorage: process.env.HUB_EPHEMERAL_STORAGE === '1' });
       if (url.pathname === '/api/health' && req.method === 'GET') return json(res, 200, { ok: true, games: catalog.length });
       const launch = url.pathname.match(/^\/api\/games\/([a-z0-9-]+)\/launch$/);
@@ -233,10 +246,11 @@ export async function startHub({ management = true } = {}) {
   console.log(`神话 DND 集合：${publicUrl}/`);
   if (manager) console.log(`作者本机工作台：${managerUrl}`);
   console.log(`运行数据：${runtimeDir}`);
-  let closing = false;
   const close = async () => {
     if (closing) return; closing = true;
     server.close(); manager?.close();
+    if (mcpPromise) await mcpPromise.catch(() => {});
+    if (mcpInstance) await mcpInstance.close();
     await processes.close();
     server.closeAllConnections(); manager?.closeAllConnections();
   };

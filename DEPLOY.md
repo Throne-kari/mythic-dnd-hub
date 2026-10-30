@@ -1,6 +1,6 @@
 # 部署万神之书
 
-需要 Node.js 24+；长期保存需要可写的持久化磁盘。项目没有第三方 npm 依赖，不需要 `npm install` 或前端构建。当前 Render 免费部署使用临时磁盘，不能当作长期存档服务。
+需要 Node.js 24+；长期保存需要可写的持久化磁盘。游戏核心没有第三方 npm 依赖，MCP 接口则使用 `server/mcp/package-lock.json` 锁定的官方 SDK。当前 Render 免费部署使用临时磁盘，不能当作长期存档服务。
 
 ## GitHub Pages 与独立联机后端
 
@@ -24,7 +24,7 @@
 ### 当前 Render 免费单服务
 
 - 服务：<https://mythic-dnd-hub.onrender.com/>；源码仓库本项目的 `main`。
-- 类型为 **Web Service / Node / Free**，不是 Static Site。构建命令 `npm run check`；启动命令 `node server.mjs --public-only`。没有 npm 锁文件或第三方依赖，不要使用 `npm ci`。
+- 类型为 **Web Service / Node / Free**，不是 Static Site。现有构建命令 `npm run check`、启动命令 `node server.mjs --public-only`；`precheck` 仅在 Render 构建环境按 MCP 锁文件安装缺失／变更的生产依赖，不在请求或运行时下载。新服务也可显式设置 `npm run build:render`。仓库根没有锁文件，不要在根目录运行 `npm ci`；MCP 使用 `npm ci --prefix server/mcp`。
 - 普通环境变量：`NODE_VERSION=24`、`NODE_ENV=production`、`HOST=0.0.0.0`、`HUB_MANAGER=0`、`HUB_RUNTIME_DIR=/tmp/mythic-dnd-runtime`、`HUB_EPHEMERAL_STORAGE=1`。`PORT` 使用 Render 注入的值（通常为 `10000`），不要写死本机端口。
 - 网关自动识别 `RENDER_EXTERNAL_URL`，邀请链接采用 Render 的 HTTPS 地址；健康接口 `/api/health`。十三款子服务仅监听回环地址，公网只开放网关端口。SSE 禁止缓冲与内容转换，连接中断后由原客户端重连。
 - 免费服务会休眠且文件系统为临时存储：**休眠、重启、部署都会丢失房间与服务端存档**。大厅和十三款游戏均显示此警示。不要把持有本地浏览器令牌等同于已有云端备份。
@@ -45,6 +45,19 @@
 在新建、隔离的验收房间中，用两个独立席位验证创建/加入、一次核心操作的状态同步，以及断线后用原席位重连。测试结果应区分“同一云端的独立协议会话”与“真实两设备跨网络浏览器”；不能互相替代。
 
 北欧和凯尔特目前各为单牌桌服务，第二席位由管理者分配；它们的原席位凭据和当前桌面不会在进程重启后自动恢复。持久盘保留存档文件，但不等于所有游戏都具备自动断点恢复。其余游戏的房间恢复也应在选定云主机上实测后再宣称通过。
+
+### 聊天与结算的验证
+
+```sh
+npm run check
+npm test
+npm ci --prefix server/mcp
+npm run test:mcp
+```
+
+核心聚焦测试使用 Node.js 24 内置功能；MCP 测试另使用锁定的官方客户端 SDK，不调用模型 API。聊天测试在隔离临时目录启动网关，验证十三款协议的双席位、跨房隔离、身份验证、限速、幂等和安全文本。结算测试直接执行真实引擎动作并验证公开投影；界面测试验证会话隔离、抽屉交互及文本渲染。MCP 测试从原网关入口连接十三款真实隔离游戏。DOM 测试不能替代真实浏览器截图或两设备跨网验收，应分别记录。
+
+聊天与结算嵌入各游戏的共享浏览器桥。聊天沿用原席位鉴权，不开放跨站写接口；记录不得包含席位令牌、邀请凭据或隐藏主持材料。聊天室私有 sidecar 位于游戏运行目录的 `.hub-chat/`，已被 Git 和 Docker 忽略；两款单牌桌的聊天随其内存席位生命周期清空。
 
 ## 本机与局域网
 

@@ -1,4 +1,5 @@
 import './hub-environment.mjs';
+import {RoomChat} from '../../server/room-chat.mjs';
 import {networkInfo} from './network.mjs';
 import {mapWorkspace,mapMutation,mapSvg,publicMap} from './cartography.mjs';
 import http from 'node:http';
@@ -11,7 +12,7 @@ import {createGame, apply, reachable, actor, legalActions, log} from './engine.m
 import {makeRoomRequest, callAI, parseRoomResult} from './ai.mjs';
 import {handouts, availableHandouts, publishHandout} from './handouts.mjs';
 import {rawStatBlocks} from './bestiary.mjs';
-import {RoomStore, validateState, projectState, authorizeCommand, requireDm, requireOwner, isDm, isOwner, problem} from './rooms.mjs';
+import {RoomStore, validateState, projectState, authorizeCommand, requireDm, requireOwner, isDm, isOwner, isCooperative, isPrivileged, canControlActor, problem} from './rooms.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url)), pub = path.join(root, 'public'), data = path.join(root, 'data');
 const envFile = path.join(root, '.env');
@@ -23,6 +24,7 @@ const campaign = JSON.parse(fs.readFileSync(path.join(data, 'campaign.json'), 'u
 const mapCatalog=campaign.scenes;
 const directory = path.resolve(process.env.ROOMS_DIR || path.join(data, 'rooms-v3'));
 const store = new RoomStore(directory, campaign, {model: process.env.AI_MODEL, baseUrl: process.env.AI_BASE_URL, protocol: process.env.AI_PROTOCOL});
+const chat = new RoomChat({directory: path.join(directory, '.hub-chat')});
 const requests = new Map();
 const uid = () => randomBytes(18).toString('base64url');
 const hash = value => createHash('sha256').update(value).digest('hex');
@@ -39,7 +41,7 @@ function refresh(room) { store.persist(room); store.publish(room); }
 function aiSeat(room, seat, body) {
   const target = body.seatId ? room.seats.find(s => s.id === body.seatId && !s.disabled) : seat;
   if (!target || (target.id !== seat.id && !isDm(room, seat) && !isOwner(room, seat))) throw problem('不能替这个席位发起 AI 行动。', 403);
-  return {...target, role: room.dmSeatId === target.id || room.ownerId === target.id ? 'dm' : 'player', actors: Object.keys(room.owners).filter(id => room.owners[id] === target.id)};
+  return {...target, role: isPrivileged(room, target) ? 'dm' : 'player', actors: Object.keys(room.owners).filter(id => room.owners[id] === target.id)};
 }
 function buildRequest(room, seat, body, id) {
   const target = aiSeat(room, seat, body);
@@ -126,6 +128,18 @@ const server = http.createServer(async (req, res) => {
     }
     if (url.pathname.startsWith('/api/')) {
       context = auth(req, url); let {room, seat} = context;
+      if (url.pathname === '/api/hub/chat') {
+        try {
+          if (req.method === 'GET') return send(res, 200, chat.read(room.id, seat, {cursor: url.searchParams.get('cursor') ?? url.searchParams.get('after'), limit: url.searchParams.get('limit')}));
+          if (req.method !== 'POST') throw problem('不支持的方法。', 405);
+          const message = await readBody(req);
+          ({room, seat} = auth(req, url));
+          return send(res, 200, chat.send(room.id, seat, message));
+        } catch (error) {
+          // Native game conflicts include a fresh game view; chat must never add it.
+          return send(res, error.status || 500, {ok: false, error: {code: error.code || 'CHAT_ERROR', message: error.status ? error.message : '聊天暂时无法使用。'}});
+        }
+      }
       if (req.method === 'GET') {
         if(url.pathname === '/api/network'){requireOwner(room,seat);send(res,200,networkInfo(port,host));return;}
         if(url.pathname==='/api/maps'){requireDm(room,seat);const w=mapWorkspace(room.state,mapCatalog,url.searchParams.get('scene')||room.state.scene);if(url.searchParams.has('original'))w.originalMap=mapCatalog[w.scene];send(res,200,w);return;}
@@ -142,8 +156,8 @@ const server = http.createServer(async (req, res) => {
         if (url.pathname === '/api/chapter') { requireDm(room, seat); send(res, 200, campaign.chapters[Number(url.searchParams.get('id') || room.state.chapter) - 1] || {}); return; }
         if (url.pathname === '/api/handouts') { requireDm(room,seat); send(res,200,handouts);return; }
         if (url.pathname === '/api/statblock') { requireDm(room,seat);const type=url.searchParams.get('type'),block=Object.hasOwn(rawStatBlocks.blocks,type)?rawStatBlocks.blocks[type]:null;if(!block)throw problem('没有这张原始怪物卡。',404);send(res,200,{...block,source:block.source||rawStatBlocks.source,license:block.license||rawStatBlocks.license,attribution:block.attribution||rawStatBlocks.attribution,referenceOnly:true});return; }
-        if (url.pathname === '/api/save') { requireDm(room, seat); send(res, 200, room.state); return; }
-        if (url.pathname === '/api/slots') { requireDm(room, seat); send(res, 200, [1, 2, 3].map(slot => { const file = slotPath(room, slot); return {slot, exists: fs.existsSync(file), saved: fs.existsSync(file) ? fs.statSync(file).mtime.toISOString() : null}; })); return; }
+        if (url.pathname === '/api/save') { if (isCooperative(room)) requireOwner(room, seat); else requireDm(room, seat); send(res, 200, isCooperative(room) ? projectState(room, seat, campaign) : room.state); return; }
+        if (url.pathname === '/api/slots') { if (isCooperative(room)) requireOwner(room, seat); else requireDm(room, seat); send(res, 200, [1, 2, 3].map(slot => { const file = slotPath(room, slot); return {slot, exists: fs.existsSync(file), saved: fs.existsSync(file) ? fs.statSync(file).mtime.toISOString() : null}; })); return; }
         throw problem('接口不存在。', 404);
       }
       if (req.method !== 'POST') throw problem('不支持的方法。', 405);
@@ -156,21 +170,21 @@ const server = http.createServer(async (req, res) => {
       if (url.pathname === '/api/seat') {
         send(res, 200, mutate(room, seat, b, 'seat-assigned', (r, s) => {
           const target = b.seatId ? r.seats.find(v => v.id === b.seatId && !v.disabled) : s;
-          if (!target) throw problem('席位不存在。'); if (target.id !== s.id) requireDm(r, s);
+          if (!target) throw problem('席位不存在。'); if (target.id !== s.id) { if (isCooperative(r)) requireOwner(r, s); else requireDm(r, s); }
           const a = actor(r.state, b.actor); if (a.side !== 'party') throw problem('这里只能分配队伍角色。');
-          if (r.owners[a.id] && r.owners[a.id] !== s.id && !isDm(r, s) && !isOwner(r, s)) throw problem('这个角色已由另一位朋友控制。', 409, 'CHARACTER_TAKEN');
-          if (b.release) { if (r.owners[a.id] !== s.id) requireDm(r, s); delete r.owners[a.id]; a.controller = 'human'; }
+          if (r.owners[a.id] && r.owners[a.id] !== s.id && !canControlActor(r, s, a.id)) throw problem('这个角色仍由在线同伴控制；离线超过45秒后可接管。', 409, 'CHARACTER_TAKEN');
+          if (b.release) { if (r.owners[a.id] !== s.id && !canControlActor(r, s, a.id)) requireDm(r, s); delete r.owners[a.id]; a.controller = 'human'; }
           else { r.owners[a.id] = target.id; a.controller = target.kind === 'api' ? 'api' : 'human'; }
           return {eventText: b.release ? `${a.name}的席位已释放。` : `${target.name}将控制${a.name}。`};
         }, {history: false})); return;
       }
       if (url.pathname === '/api/seats') {
-        requireOwner(room, seat); let createdToken;
+        requireOwner(room, seat); if (isCooperative(room) && b.role === 'dm') throw problem('合作冒险不分配主持席位。', 403, 'HOSTLESS_ROOM'); let createdToken;
         const value = mutate(room, seat, b, 'seat-created', r => {
           const id = uid(); createdToken = uid();
           const next = {id, name: String(b.name || 'AI 同行').slice(0, 40), kind: ['human', 'workspace', 'api'].includes(b.kind) ? b.kind : 'workspace', role: b.role === 'dm' ? 'dm' : 'player', tokenHash: hash(createdToken), online: false};
           r.seats.push(next); if (b.role === 'dm') r.dmSeatId = id;
-          for (const id of b.actors || []) { if (actor(r.state, id).side !== 'party') throw problem('AI 玩家只能领取队伍角色。'); r.owners[id] = next.id; }
+          for (const id of b.actors || []) { if (actor(r.state, id).side !== 'party') throw problem('AI 玩家只能领取队伍角色。'); if (r.owners[id] && !canControlActor(r, seat, id)) throw problem('不能替换在线同伴控制的角色。',409,'CHARACTER_TAKEN'); r.owners[id] = next.id; }
           return {receipt: {createdSeatId: id}, eventText: `${next.name}的席位已准备。`};
         }, {history: false});
         if (createdToken) value.createdSeatToken = createdToken;
@@ -180,9 +194,9 @@ const server = http.createServer(async (req, res) => {
         requireOwner(room, seat);
         send(res, 200, mutate(room, seat, b, 'room-updated', r => {
           if (typeof b.rename === 'string') r.name = b.rename.trim().slice(0, 60) || r.name;
-          if (typeof b.autoNpc === 'boolean') r.autoNpc = b.autoNpc;
+          if (typeof b.autoNpc === 'boolean') r.autoNpc = isCooperative(r) ? true : b.autoNpc;
           if (b.rotateInvite) r.invite = uid();
-          if (b.dmSeatId) { if (!r.seats.some(s => s.id === b.dmSeatId && !s.disabled)) throw problem('主持席位不存在。'); r.dmSeatId = b.dmSeatId; r.aiPaused = true; }
+          if (b.dmSeatId) { if (isCooperative(r)) throw problem('合作冒险不需要主持席位。', 403, 'HOSTLESS_ROOM'); if (!r.seats.some(s => s.id === b.dmSeatId && !s.disabled)) throw problem('主持席位不存在。'); r.dmSeatId = b.dmSeatId; r.aiPaused = true; }
           if (b.removeSeatId) { if (b.removeSeatId === r.ownerId) throw problem('不能移除房主席位。'); const target = r.seats.find(s => s.id === b.removeSeatId); if (!target) throw problem('席位不存在。'); target.disabled = true; for (const [id, owner] of Object.entries(r.owners)) if (owner === target.id) delete r.owners[id]; if (r.dmSeatId === target.id) r.dmSeatId = r.ownerId; }
         }, {history: false})); return;
       }
@@ -198,7 +212,7 @@ const server = http.createServer(async (req, res) => {
         }, {history: false, bump: false})); return;
       }
       if (['/api/new', '/api/import', '/api/undo', '/api/slot'].includes(url.pathname)) {
-        requireDm(room, seat);
+        if (isCooperative(room)) { if (!(url.pathname === '/api/new' && room.state.partyDefeated)) requireOwner(room, seat); } else requireDm(room, seat);
         send(res, 200, mutate(room, seat, b, url.pathname.slice(5), r => {
           const revision = r.state.revision + 1;
           if (url.pathname === '/api/undo') { if (!r.history.length) throw problem('没有可撤销的行动。'); r.state = r.history.pop(); }
@@ -207,7 +221,7 @@ const server = http.createServer(async (req, res) => {
           if (url.pathname === '/api/slot') { const file = slotPath(r, b.slot); if (b.load) { if (!fs.existsSync(file)) throw problem('这个手动槽还没有存档。'); r.state = validateState(JSON.parse(fs.readFileSync(file, 'utf8')), campaign); } else atomic(file, r.state); }
           r.state.revision = revision; r.pending = null;
           for (const id of Object.keys(r.owners)) if (!r.state.actors.some(a => a.id === id)) delete r.owners[id];
-          return {eventText: url.pathname === '/api/slot' ? `手动槽 ${b.slot} 已${b.load ? '恢复' : '保存'}。` : '主持人已恢复或更新本桌进度。'};
+          return {eventText: url.pathname === '/api/slot' ? `手动槽 ${b.slot} 已${b.load ? '恢复' : '保存'}。` : '本桌进度已恢复或更新。'};
         }, {history: url.pathname !== '/api/undo'})); return;
       }
       if (url.pathname === '/api/ai/request') {
@@ -237,7 +251,7 @@ const server = http.createServer(async (req, res) => {
           if (['pause', 'cancel', 'takeover'].includes(b.action)) { r.aiPaused = true; r.pending = null; r.aiBusy = false; if (r.aiAutomation) r.aiAutomation.enabled = false; }
           else if (b.action === 'resume') { r.aiPaused = false; if (b.seatId && (b.autoApply || b.steps)) { const target = r.seats.find(s => s.id === b.seatId && !s.disabled); if (!target || target.kind !== 'api') throw problem('请选择 API 席位启动自动参与。'); r.aiAutomation = {seatId: target.id, enabled: true, remaining: Math.max(1, Math.min(100, Number(b.steps) || 10)), autoApply: !!b.autoApply, lastRevision: -1, nextAt: 0}; } }
           else throw problem('未知 AI 控制操作。');
-          if (b.action === 'takeover') { const target = b.seatId && r.seats.find(s => s.id === b.seatId); if (target) { for (const [id, owner] of Object.entries(r.owners)) if (owner === target.id) r.owners[id] = seat.id; if (r.dmSeatId === target.id) r.dmSeatId = r.ownerId; } }
+          if (b.action === 'takeover') { const target = b.seatId && r.seats.find(s => s.id === b.seatId); if (target) { for (const [id, owner] of Object.entries(r.owners)) if (owner === target.id) { if (isCooperative(r) && !canControlActor(r, seat, id)) throw problem('在线同伴的角色不能被强制接管。',409,'CHARACTER_TAKEN'); r.owners[id] = seat.id; } if (r.dmSeatId === target.id) r.dmSeatId = r.ownerId; } }
           return {eventText: b.action === 'resume' ? 'AI 已恢复，可继续提交本轮操作。' : 'AI 已暂停；真人可以接管。'};
         }, {history: false});
         if (b.action !== 'resume') requests.get(room.id)?.abort();

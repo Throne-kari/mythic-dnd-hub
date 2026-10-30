@@ -1,4 +1,5 @@
 import './hub-environment.mjs';
+import {RoomChat, chatIdentity} from '../../server/room-chat.mjs';
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -48,6 +49,7 @@ export function startServer(options={}) {
   const belongsToGame=state=>state?.schema===3&&state.gameId===GAME_ID&&state.campaignId===campaign.id;
   fs.mkdirSync(path.join(dataDir,'rooms'),{recursive:true});
   const rooms=new Map(), streams=new Map();
+  const chat=new RoomChat({directory:path.join(dataDir,'.hub-chat')});
   for(const entry of fs.readdirSync(path.join(dataDir,'rooms'),{withFileTypes:true})) {
     if(entry.isFile()&&entry.name.endsWith('.json')&&SAFE.test(entry.name.slice(0,-5))){
       const file=path.join(dataDir,'rooms',entry.name);
@@ -61,7 +63,7 @@ export function startServer(options={}) {
   const auth=(r,req,url)=>{const t=req.headers.authorization?.replace(/^Bearer /,'')||url.searchParams.get('token');const s=r.seats.find(s=>equal(s.token,t));if(!s)throw fail(401,'Seat authentication required');return s;};
   const manager=(r,s)=>{if(!capabilitiesForActor(actorFor(r,s)).canManage)throw fail(403,'Room manager or host required');};
   const visibleMajorNpcs=state=>(campaign.majorNpcs??[]).filter(npc=>!npc.knownFromFlag||state.flags.includes(npc.knownFromFlag)).map(npc=>majorNpcForState(state,npc));
-  const view=(r,s)=>{const actor=actorFor(r,s);return {...publicState(r.state,actor),roomMode:roomMode(r),decisionPolicy:decisionPolicy(r),capabilities:capabilitiesForActor(actor),chapterProgress:getChapterProgress(r.state,campaign),majorNpcs:visibleMajorNpcs(r.state),legalActions:legalActionsForState(r.state,campaign,maps,actor)};};
+  const view=(r,s)=>{const actor=actorFor(r,s);return {...publicState(r.state,actor),seat:{...chatIdentity({...s,agent:r.agents.some(a=>a.id===s.id)}),role:s.role},roomMode:roomMode(r),decisionPolicy:decisionPolicy(r),capabilities:capabilitiesForActor(actor),chapterProgress:getChapterProgress(r.state,campaign),majorNpcs:visibleMajorNpcs(r.state),legalActions:legalActionsForState(r.state,campaign,maps,actor)};};
   const bridgeDir=(r,a)=>path.join(dataDir,'bridge',r.id,a.id);
   function checkedBridgeDir(r,a){
     const levels=[path.join(dataDir,'bridge'),path.join(dataDir,'bridge',r.id),bridgeDir(r,a)];
@@ -141,6 +143,21 @@ export function startServer(options={}) {
           r.seats.push(s);persist(r);return json(res,201,{roomId:r.id,seatId:s.id,token:s.token,role:s.role,characterId:s.characterId,canManage:false,roomMode:roomMode(r),decisionPolicy:decisionPolicy(r),state:view(r,s)});
         }
         const s=auth(r,req,url);
+        if(p[3]==='actions'&&p.length===4){
+          if(req.method!=='GET')throw fail(405,'Method not allowed');
+          const actor=actorFor(r,s),visible=publicState(r.state,actor);
+          // Validate bounded examples on cloned engine results; no state/RNG is committed.
+          const actions=legalActionsForState(visible,campaign,maps,actor).slice(0,128).filter(action=>{
+            try{actionShape(action);applyAction(r.state,action,campaign,maps,actor);return true;}catch{return false;}
+          });
+          return json(res,200,{revision:r.state.revision,actions,movementScope:'Adjacent legal steps are listed; normal move actions also accept rules-valid longer paths.'});
+        }
+        if(p[3]==='hub'&&p[4]==='chat'&&p.length===5){
+          if(req.method==='GET')return json(res,200,chat.read(r.id,s,{cursor:url.searchParams.get('cursor')??url.searchParams.get('after'),limit:url.searchParams.get('limit')}));
+          if(req.method!=='POST')throw fail(405,'Method not allowed');
+          const message=await body(req),current=getRoom(p[2]),seat=auth(current,req,url);
+          return json(res,200,chat.send(current.id,seat,message));
+        }
         if(p[3]==='state'&&req.method==='GET')return json(res,200,view(r,s));
         if(p[3]==='seats'&&req.method==='GET')return json(res,200,{roomMode:roomMode(r),decisionPolicy:decisionPolicy(r),seats:r.seats.map(s=>({id:s.id,name:s.name,role:s.role,characterId:s.characterId,canManage:capabilitiesForActor(actorFor(r,s)).canManage})),agents:r.agents.map(({id,role,characterId})=>({id,role,characterId}))});
         if(p[3]==='events'&&req.method==='GET'){
@@ -167,7 +184,7 @@ export function startServer(options={}) {
       if(url.pathname.startsWith('/api/'))throw fail(404,'Unknown endpoint');
       if(!['GET','HEAD'].includes(req.method))throw fail(405,'Method not allowed');
       let relative=decodeURIComponent(url.pathname).replace(/^\/+/,''),file;
-      if(relative==='engine.mjs')file=path.join(ROOT,'engine.mjs');else if(publicGuides.has(relative))file=path.join(ROOT,relative);else{
+      if(relative==='engine.mjs')file=path.join(ROOT,'engine.mjs');else if(relative==='server/combat-ledger.mjs')file=path.resolve(ROOT,'../../server/combat-ledger.mjs');else if(publicGuides.has(relative))file=path.join(ROOT,relative);else{
         relative||='index.html';const publicRoot=path.join(ROOT,'public');file=path.resolve(publicRoot,relative);
         if(!file.startsWith(publicRoot+path.sep)||relative.includes('\0'))throw fail(403,'Invalid path');
       }

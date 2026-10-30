@@ -6,15 +6,37 @@ import path from 'node:path';
 import {randomBytes, createHash} from 'node:crypto';
 import {createGame, apply, publicState, actor, log, localStep} from './engine.mjs';
 import {publishHandout} from './handouts.mjs';
+import {spells} from './abilities.mjs';
+import {battleSnapshot, beginBattleCapture, recordBattleEffect, captureBattleTransition, publicBattleReport} from '../../server/combat-ledger.mjs';
 
 const secret = () => randomBytes(32).toString('base64url');
 const hash = value => createHash('sha256').update(String(value)).digest('hex');
 const copy = value => structuredClone(value);
+
+// Only authored rules labels are used here; client narration/labels never become combat evidence.
+function battleActionMethod(state, command = {}) {
+  const acting = state.actors?.find(a => a.id === command.actor);
+  if (command.type === 'attack') return acting?.weapons?.[Number(command.option) || 0]?.name || '武器攻击';
+  if (['spell', 'cast'].includes(command.type)) return spells[command.option]?.name || '施法';
+  return ({start:'进入先攻',end:'回合结束',move:'移动',potion:'治疗药水',wind:'回气',stand:'起身',dash:'疾走',disengage:'撤离',dodge:'闪避',rest:'休整',retreat:'撤退',gm:'主持规则调整',feature:'职业或怪物能力',item:'物品使用'})[command.type] || '规则行动';
+}
+
 export const problem = (message, status = 400, code = 'INVALID_REQUEST') => Object.assign(new Error(message), {status, code});
 const pick = (obj, keys) => Object.fromEntries(keys.filter(k => obj[k] !== undefined).map(k => [k, copy(obj[k])]));
-export const isDm = (room, seat) => room.dmSeatId === seat.id;
+export const isCooperative = room => room.mode === 'cooperative';
+export const isDm = (room, seat) => !isCooperative(room) && room.dmSeatId === seat.id;
 export const isOwner = (room, seat) => room.ownerId === seat.id;
-export function requireDm(room, seat) { if (!isDm(room, seat) && !isOwner(room, seat)) throw problem('这项操作需要主持人或房主权限。', 403, 'FORBIDDEN'); }
+export const isPrivileged = (room, seat) => isDm(room, seat) || !isCooperative(room) && isOwner(room, seat);
+export const seatActive = seat => !!seat && !seat.disabled && (seat.online === true || Date.now() - Date.parse(seat.lastSeen || '') < 45000);
+export function canControlActor(room, seat, id) {
+  if (isPrivileged(room, seat)) return true;
+  const unit = room.state.actors.find(a => a.id === id);
+  if (!unit || unit.side !== 'party') return false;
+  const holder = room.owners[id];
+  return holder === seat.id || isCooperative(room) && (!holder || !seatActive(room.seats.find(s => s.id === holder)));
+}
+export const controlledActors = (room, seat) => room.state.actors.filter(a => a.side === 'party' && canControlActor(room, seat, a.id)).map(a => a.id);
+export function requireDm(room, seat) { if (!isPrivileged(room, seat)) throw problem('此入口属于可选主持模式；合作冒险按公开选择与规则自动推进。', 403, 'FORBIDDEN'); }
 export function requireOwner(room, seat) { if (!isOwner(room, seat)) throw problem('这项操作需要房主权限。', 403, 'FORBIDDEN'); }
 const visibleRecord=value=>!!value&&typeof value==='object'&&!value.hidden&&!value.secret&&value.visibility!=='dm';
 const publicFactKeys=pack.publicFacts||Object.keys(pack.initialFacts||{});
@@ -75,9 +97,10 @@ export function validateState(s, campaign) {
 
 export function projectState(room, seat, campaign) {
   const s = publicState(room.state, campaign);
-  if (isDm(room, seat) || isOwner(room, seat)) return s;
+  if (isPrivileged(room, seat)) return {...s, battleReport: publicBattleReport(room.state, {privileged: true})};
   const owned=new Set(Object.keys(room.owners).filter(id=>room.owners[id]===seat.id));
-  const out = pick(s, ['version', 'gameId', 'revision', 'chapter', 'scene', 'journal', 'inventory', 'gold', 'time', 'combat', 'doors', 'created', 'choices', 'current', 'chapters', 'campaignView', 'passages', 'handouts']);
+  const out = pick(s, ['version', 'gameId', 'revision', 'chapter', 'scene', 'journal', 'inventory', 'gold', 'time', 'combat', 'doors', 'created', 'choices', 'current', 'chapters', 'campaignView', 'partyDefeated', 'passages', 'handouts']);
+  out.battleReport = publicBattleReport(room.state, {privileged: false, canViewActor: record => ownsRecord(record, owned)});
   out.log = s.log.filter(l => !['gm', 'ai-note', 'secret', 'dm','debug'].includes(l.kind) && l.visibility !== 'dm'&&!l.secret&&ownsRecord(l,owned)).map(l => ({...pick(l, ['id', 'kind', 'text', 'time','summary']),...(l.summary?{text:l.summary,detailText:l.text}:{})}));
   out.journal = (out.journal || []).filter(j => j.visibility !== 'dm' && !j.secret&&ownsRecord(j,owned)).map(j=>{const chapter=campaign.chapters[(j.sourceChapter||0)-1];const summary=j.summary||(chapter?.sensitive?chapter.descriptionSummary||'敏感场面已略述；规则后果保留。':null);return summary?{...j,text:summary,summary,detailText:j.text}:j;});out.inventory=out.inventory.filter(name=>{const items=Object.values(room.state.campaign?.items||{}).filter(i=>i.name===name);return !items.length||items.some(i=>ownsRecord(i,owned));});
   out.campaignView=publicCampaign(out.campaignView,room,seat);out.choices=out.campaignView.options;
@@ -85,8 +108,9 @@ export function projectState(room, seat, campaign) {
     if (a.side === 'party') return {...pick(a, ['id', 'name', 'side', 'saves', 'languages', 'tools', 'inventory', 'armor', 'shield', 'species', 'size', 'backgroundSkills', 'role', 'source', 'manual', 'class', 'subclass', 'build', 'level', 'race', 'background', 'bio', 'portrait', 'color', 'ac', 'hp', 'maxHp', 'tempHp', 'speed', 'x', 'y', 'weapons', 'attacks', 'abilities', 'skills', 'proficiency', 'saveProficiencies', 'spellDC', 'spellAttack', 'spellAbility', 'spells', 'knownSpells', 'domainSpells', 'cantrips', 'preparedLimit', 'customPrepared', 'customBuild', 'preset', 'climb', 'inspiration', 'initiative', 'initiativeAdv', 'conditions', 'death', 'dead', 'stable', 'prone', 'action', 'bonus', 'move', 'reaction', 'attackLeft', 'slots', 'maxSlots', 'wind', 'maxWind', 'surge', 'maxSurge', 'channel', 'maxChannel', 'arcane', 'maxArcane', 'indomitable', 'maxIndomitable', 'intervention', 'maxIntervention', 'hd', 'maxHd', 'hitDie', 'potions', 'controller', 'features', 'resources', 'magicInitiate', 'maxMagicInitiate', 'ritualSpells', 'savageAttacker', 'spellbook', 'prepared', 'dodge', 'disengaged', 'masteries', 'critical', 'sneakDice', 'uncanny', 'evasion', 'reliable']), ...((room.owners[a.id] === seat.id) ? pick(a, ['effects', 'concentration', 'reactionPolicy', 'exhaustion', 'whelmExhaustion','privateBrief']) : {effects: (a.effects || []).filter(e=>ownsRecord(e,owned)).map(e => pick(e, ['condition', 'spell', 'expiresAt'])), concentration: a.concentration ? {spell: a.concentration.spell} : null})};
     return {...pick(a, ['id', 'name', 'side', 'color', 'x', 'y', 'conditions', 'dead', 'prone']), effects: (a.effects || []).filter(e=>ownsRecord(e,owned)).map(e => pick(e, ['condition', 'spell', 'expiresAt'])), concentration: a.concentration ? {spell: a.concentration.spell} : null, bloodied: a.hp > 0 && a.hp <= a.maxHp / 2, down: a.hp === 0};
   });
-  const visibleIds = new Set(out.actors.map(a => a.id));if(out.combat){out.combat.order=out.combat.order.filter(id=>visibleIds.has(id));out.combat.index=Math.max(0,out.combat.order.indexOf(out.current));delete out.combat.scores;if(!visibleIds.has(out.current))out.current=null;}for(const key of ['dm','secret','secrets','source','notes','dmText','gmNotes'])if(out.campaignView)delete out.campaignView[key];
-  out.areas = (s.areas || []).map(area => ({...pick(area, ['id', 'spell', 'level', 'x', 'y', 'radius', 'expiresAt']), caster: visibleIds.has(area.caster) ? area.caster : null}));
+  out.actors = out.actors.map(a => ({...a, effects: (a.effects || []).filter(e => ownsRecord(e, owned))}));
+  const visibleIds = new Set(out.actors.map(a => a.id));if(out.combat){out.combat.order=out.combat.order.filter(id=>visibleIds.has(id));out.combat.index=visibleIds.has(out.current)?out.combat.order.indexOf(out.current):-1;delete out.combat.scores;if(!visibleIds.has(out.current))out.current=null;}for(const key of ['dm','secret','secrets','source','notes','dmText','gmNotes'])if(out.campaignView)delete out.campaignView[key];
+  out.areas = (s.areas || []).filter(area => !area.hidden && !area.secret && !['owner', 'dm', 'gm'].includes(area.visibility)).map(area => ({...pick(area, ['id', 'spell', 'level', 'x', 'y', 'radius', 'expiresAt']), caster: visibleIds.has(area.caster) ? area.caster : null}));
   // Map geometry is public. Authored GM markers, route solutions and source notes are not.
   out.sceneData = pick(s.sceneData, ['schema_version', 'map_id', 'mapRevision', 'name', 'width_ft', 'height_ft', 'origin', 'grid_ft', 'rooms', 'walls', 'openings', 'features', 'surfaces', 'roofs', 'art', 'image', 'asset']);
   for (const key of ['rooms', 'walls', 'openings', 'features', 'surfaces', 'roofs']) if (out.sceneData[key]) out.sceneData[key] = out.sceneData[key].filter(v => !v.hidden && !v.secret && v.visibility !== 'dm').map(v => pick(v, ['id', 'label', 'name', 'kind', 'x', 'y', 'w', 'h', 'a', 'b', 'state', 'height_ft', 'height_start_ft', 'height_end_ft', 'height_start', 'height_end', 'difficult', 'raises', 'rise_ft', 'floor_ft', 'sill_ft', 'color', 'z', 'water', 'alpha']));
@@ -98,9 +122,9 @@ export function authorizeCommand(room, seat, command) {
   if (!command || typeof command !== 'object' || Array.isArray(command) || typeof command.type !== 'string') throw problem('缺少有效行动。');
   if (seat.kind !== 'human' && room.aiPaused) throw problem('房主已暂停 AI，请恢复后继续。', 403, 'AI_PAUSED');
   const cmd = copy(command);delete cmd._authority;if(cmd.type==='chat'){cmd.text=`${seat.name}：${String(cmd.text||'').slice(0,3000)}`;return cmd;}
-  if (isDm(room, seat) || isOwner(room, seat)) {cmd._authority={privileged:true,ownedActors:room.state.actors.map(a=>a.id)};return cmd;}
+  if (isPrivileged(room, seat)) {cmd._authority={privileged:true,ownedActors:room.state.actors.map(a=>a.id)};return cmd;}
   if (!playerTypes.has(cmd.type)) throw problem('这项行动需要主持权限。', 403, 'FORBIDDEN');
-  const owned = Object.keys(room.owners).filter(id => room.owners[id] === seat.id);
+  const owned = controlledActors(room, seat);
   if (!owned.length) throw problem('请先选择自己的角色。', 403, 'NO_CHARACTER');
   if (!cmd.actor) cmd.actor = owned[0];
   cmd._authority={privileged:false,ownedActors:owned};if(cmd.type==='choice'&&!projectState(room,seat,pack).choices?.some(o=>o.id===cmd.option))throw problem('当前席位不能使用这项私人选择。',403,'PRIVATE_CHOICE');
@@ -156,9 +180,11 @@ export class RoomStore {
     if (!seat) throw problem('席位已离开。', 401);
     return {room, seat};
   }
-  create({name, displayName}) {
+  create({name, displayName, mode}) {
     const token = secret(), id = randomBytes(9).toString('base64url'), seatId = randomBytes(9).toString('base64url');
-    const room = {schema: 2, id, name: String(name || this.campaign.title).trim().slice(0, 60), ownerId: seatId, dmSeatId: seatId, invite: secret(), created: new Date().toISOString(), seq: 0, state: createGame(this.campaign), seats: [{id: seatId, name: String(displayName || '主持人').trim().slice(0, 40), role: 'dm', kind: 'human', tokenHash: hash(token), online: false}], owners: {}, history: [], events: [], receipts: [], pending: null, aiBusy: false, aiPaused: true, autoNpc: true, config: {...this.defaults, key: ''}};
+    const cooperative = mode !== 'hosted';
+    const room = {schema: 2, id, name: String(name || this.campaign.title).trim().slice(0, 60), mode: cooperative ? 'cooperative' : 'hosted', ownerId: seatId, dmSeatId: cooperative ? null : seatId, invite: secret(), created: new Date().toISOString(), seq: 0, state: createGame(this.campaign), seats: [{id: seatId, name: String(displayName || '同行者').trim().slice(0, 40), role: cooperative ? 'player' : 'dm', kind: 'human', tokenHash: hash(token), online: false, lastSeen: new Date().toISOString()}], owners: {}, history: [], events: [], receipts: [], pending: null, aiBusy: false, aiPaused: true, autoNpc: true, config: {...this.defaults, key: ''}};
+    if (cooperative) { const first = room.state.actors.find(a => a.side === 'party'); if (first) room.owners[first.id] = seatId; }
     this.record(room, 'room-created', '房间已建立。', seatId);
     this.persist(room); this.rooms.set(id, room); this.index(room);
     return {room, seat: room.seats[0], token};
@@ -167,7 +193,7 @@ export class RoomStore {
     const room = [...this.rooms.values()].find(r => r.invite === invite);
     if (!room) throw problem('邀请无效或已被房主更换。', 404, 'INVITE_NOT_FOUND');
     const token = secret(), seat = {id: randomBytes(9).toString('base64url'), name: String(displayName || '同行者').trim().slice(0, 40), role: 'player', kind: 'human', tokenHash: hash(token), online: false};
-    if(room.seats.filter(s=>!s.disabled).length>=12)throw problem('房间席位已满（最多12席，建议3–5人）。',409,'ROOM_FULL');const next = copy(room); next.seats.push(seat); this.record(next, 'seat-joined', `${seat.name}加入了房间。`, seat.id);
+    if(room.seats.filter(s=>!s.disabled).length>=12)throw problem('房间席位已满（最多12席，建议3–5人）。',409,'ROOM_FULL');const next = copy(room); next.seats.push(seat); if (isCooperative(next)) { seat.lastSeen = new Date().toISOString(); const free = next.state.actors.find(a => a.side === 'party' && !next.owners[a.id]); if (free) next.owners[free.id] = seat.id; } this.record(next, 'seat-joined', `${seat.name}加入了房间。`, seat.id);
     this.commit(next); return {room: next, seat, token};
   }
   record(room, type, text, seatId, visibility = 'all') {
@@ -187,26 +213,32 @@ export class RoomStore {
     if (revision && body.revision !== room.state.revision) throw problem('局面已更新，已为你取得最新状态；请重新选择这一步。', 409, 'REVISION_CONFLICT');
     const next = copy(room), nextSeat = next.seats.find(s => s.id === seat.id);
     if (history) { next.history.push(copy(room.state)); if (next.history.length > 30) next.history.shift(); }
+    const battleCommand = type === 'command' ? body.command : type === 'ai-applied' ? (room.pending?.result?.command || (room.pending?.result?.actionIndex != null ? room.pending.request.actions[room.pending.result.actionIndex] : null)) : null;
+    const battleBefore = battleCommand ? battleSnapshot(room.state) : null;
+    if (battleCommand) beginBattleCapture(next.state);
     const result = fn(next, nextSeat);
+    if (next.state.partyDefeated && next.state.actors.some(a => a.side === 'party' && a.hp > 0 && !a.dead)) delete next.state.partyDefeated;
     if (bump && next.state.revision === room.state.revision) next.state.revision++;
+    const committedBattleCommand = result?.battleCommand || battleCommand;
+    if (committedBattleCommand) captureBattleTransition(battleBefore, next.state, committedBattleCommand, {requestId: commandId, method: battleActionMethod(room.state, committedBattleCommand)});
     if (next.pending && next.pending.request.revision !== next.state.revision) next.pending.stale = true;
     if (record) this.record(next, type, result?.eventText || `${seat.name}更新了局面。`, seat.id, result?.visibility || 'all');
     next.receipts.push({id: commandId, seatId: seat.id, type, fingerprint, revision: next.state.revision, result: result?.receipt || null});
     if (next.receipts.length > 500) next.receipts.shift();
     this.commit(next); return {room: next, duplicate: false, result: result?.receipt || null};
   }
-  command(room, seat, body) { return this.transact(room, seat, body, 'command', (r, s) => { const command=authorizeCommand(r,s,body.command);if(command.type==='handout'){requireDm(r,s);publishHandout(r.state,command.option);}else apply(r.state,command,this.campaign); }); }
+  command(room, seat, body) { return this.transact(room, seat, body, 'command', (r, s) => { const command=authorizeCommand(r,s,body.command);if(command.type==='handout'){requireDm(r,s);publishHandout(r.state,command.option);}else apply(r.state,command,this.campaign); return {battleCommand: command}; }); }
   view(room, seat) {
-    const privileged = isDm(room, seat) || isOwner(room, seat);
+    const privileged = isPrivileged(room, seat);
     const pending = room.pending && (privileged || room.pending.seatId === seat.id) ? {id: room.pending.id, revision: room.pending.request.revision, role: room.pending.request.role, actor: room.pending.request.actor, seatId: room.pending.seatId, stale: room.pending.stale || room.pending.request.revision !== room.state.revision, error: room.pending.error || null, result: room.pending.result || null, action: room.pending.result?.command || (room.pending.result?.actionIndex != null ? room.pending.request.actions[room.pending.result.actionIndex] : null)} : null;
     const eventKey = room.id + ':' + seat.id, previous = this.seatEventTokens.get(eventKey);
     const eventToken = previous && this.eventTokens.get(previous)?.expires > Date.now() + 60000 ? previous : secret();
     if (eventToken !== previous) { this.eventTokens.set(eventToken, {roomId: room.id, seatId: seat.id, expires: Date.now() + 15 * 60 * 1000}); this.seatEventTokens.set(eventKey, eventToken); }
     if (this.eventTokens.size > 2000) for (const [k, v] of this.eventTokens) if (v.expires < Date.now()) this.eventTokens.delete(k);
-    return {state: projectState(room, seat, this.campaign), room: {id: room.id, name: room.name, ...(isOwner(room, seat) ? {invite: room.invite} : {}), ownerId: room.ownerId, dmSeatId: room.dmSeatId, owners: room.owners, seats: room.seats.filter(s => !s.disabled).map(s => ({...pick(s, ['id', 'name', 'kind', 'online', 'lastSeen', 'presence']), online: !!s.online || Date.now() - Date.parse(s.lastSeen || 0) < 12000, role: room.dmSeatId === s.id ? 'dm' : 'player', actors: Object.keys(room.owners).filter(id => room.owners[id] === s.id)})), autoNpc: room.autoNpc, aiPaused: room.aiPaused, aiAutomation: room.aiAutomation ? pick(room.aiAutomation, ['seatId', 'enabled', 'remaining', 'autoApply']) : null, seq: room.seq}, seat: {id: seat.id, name: seat.name, role: isDm(room, seat) ? 'dm' : 'player', isOwner: isOwner(room, seat), kind: seat.kind, actors: Object.keys(room.owners).filter(id => room.owners[id] === seat.id)}, pending, settings: privileged ? {...pick(room.config, ['model', 'baseUrl', 'protocol']), hasKey: !!room.config.key} : {}, aiBusy: room.aiBusy, eventSeq: room.seq, eventToken};
+    return {state: projectState(room, seat, this.campaign), room: {id: room.id, mode: room.mode || 'hosted', cooperative: isCooperative(room), recoveryAvailable: !!room.state.partyDefeated, name: room.name, ...(isOwner(room, seat) ? {invite: room.invite} : {}), ownerId: room.ownerId, dmSeatId: room.dmSeatId, owners: room.owners, seats: room.seats.filter(s => !s.disabled).map(s => ({...pick(s, ['id', 'name', 'kind', 'online', 'lastSeen', 'presence']), online: !!s.online || Date.now() - Date.parse(s.lastSeen || 0) < 12000, role: room.dmSeatId === s.id ? 'dm' : 'player', actors: Object.keys(room.owners).filter(id => room.owners[id] === s.id)})), autoNpc: room.autoNpc, aiPaused: room.aiPaused, aiAutomation: room.aiAutomation ? pick(room.aiAutomation, ['seatId', 'enabled', 'remaining', 'autoApply']) : null, seq: room.seq}, seat: {id: seat.id, name: seat.name, role: isDm(room, seat) ? 'dm' : 'player', isOwner: isOwner(room, seat), kind: seat.kind, controllableActors: controlledActors(room, seat), actors: Object.keys(room.owners).filter(id => room.owners[id] === seat.id)}, pending, settings: privileged || isOwner(room, seat) ? {...pick(room.config, ['model', 'baseUrl', 'protocol']), hasKey: !!room.config.key} : {}, aiBusy: room.aiBusy, eventSeq: room.seq, eventToken};
   }
   updates(room, seat, since = 0) {
-    const privileged = isDm(room, seat) || isOwner(room, seat);
+    const privileged = isPrivileged(room, seat);
     return {events: room.events.filter(e => e.seq > since && (e.visibility === 'all' || privileged)).map(e => copy(e)), reset: since > room.seq || (since > 0 && since < (room.events[0]?.seq || 1) - 1), ...this.view(room, seat)};
   }
   subscribe(room, seat, response, since) {
@@ -237,14 +269,35 @@ export class RoomStore {
   }
   npcTick(room) {
     if (!room.autoNpc || room.aiBusy || !room.state.combat) return;
+    if (isCooperative(room)) {
+      if (!room.seats.some(seatActive)) return; // An empty room waits; disconnected players do not lose rounds off-screen.
+      const liveParty = room.state.actors.some(v => v.side === 'party' && v.hp > 0 && !v.dead && !v.departed);
+      const activeId = room.state.combat.order[room.state.combat.index], currentActor = room.state.actors.find(v => v.id === activeId);
+      const holder = currentActor && room.seats.find(v => v.id === room.owners[currentActor.id]);
+      if (!liveParty || currentActor?.side === 'party' && !seatActive(holder)) {
+        const next = copy(room), before = battleSnapshot(room.state); beginBattleCapture(next.state);
+        next.history.push(copy(room.state)); if (next.history.length > 30) next.history.shift();
+        if (!liveParty) {
+          recordBattleEffect(next.state, {kind:'battle-end', result:'defeat'}); next.state.combat = null; next.state.partyDefeated = true; next.state.revision++;
+          log(next.state, 'story', '队伍已失去继续交锋的能力，本场交锋结束。伤势和真实后果保留；可处理倒地角色，或重新开始本次冒险。');
+        } else {
+          if (currentActor.hp > 0 && !currentActor.dead && currentActor.action > 0) { try { apply(next.state, {type:'dodge', actor:activeId}, this.campaign); } catch {} }
+          if (next.state.combat?.order[next.state.combat.index] === activeId) apply(next.state, {type:'end', actor:activeId}, this.campaign);
+        }
+        captureBattleTransition(before, next.state, {type:'end', actor:activeId}, {method:!liveParty ? '队伍失去战斗能力' : '未领取或离线队友 · 规则防御'});
+        this.record(next, !liveParty ? 'party-defeat' : 'party-fallback', !liveParty ? '队伍败退，交锋已自动结束。' : `${currentActor.name}由规则托管防御并结束回合；入席者可领取空闲角色。`, 'server');
+        this.commit(next); return;
+      }
+    }
+
     const id = room.state.combat.order[room.state.combat.index], a = room.state.actors.find(v => v.id === id);
     const dm = room.seats.find(s => s.id === room.dmSeatId && !s.disabled);
     const workspaceHosting = dm?.kind === 'workspace' && (dm.online || (dm.presence === 'connected' && Date.now() - Date.parse(dm.lastSeen || 0) < 15000));
     if(a?.side==='neutral'&&a.vital){const next=copy(room);try{next.history.push(copy(room.state));if(next.history.length>30)next.history.shift();apply(next.state,{type:'end',actor:a.id},this.campaign);this.record(next,'npc-death-turn',`${a.name}的濒死回合结束。`,'server',a.hidden||a.visibility==='dm'?'dm':'all');this.commit(next);}catch{next.autoNpc=false;this.commit(next);}return;}
     if (!a || a.side === 'party' || a.side === 'neutral' && !(a.vital&&a.hp===0&&!a.dead&&!a.stable) || (!room.aiPaused && (dm?.kind === 'api' || workspaceHosting))) return;
     const next = copy(room);
-    try { next.history.push(copy(room.state)); if (next.history.length > 30) next.history.shift(); localStep(next.state, this.campaign); this.record(next, 'npc-action', `${a.name}行动。`, 'server',a.hidden||a.visibility==='dm'?'dm':'all'); this.commit(next); }
-    catch { next.autoNpc = false; log(next.state, 'gm', '自动 NPC 行动暂停，请主持人处理当前局面。'); next.state.revision++; this.record(next, 'npc-paused', 'NPC 自动行动已暂停。', 'server'); this.commit(next); }
+    try { next.history.push(copy(room.state)); if (next.history.length > 30) next.history.shift(); beginBattleCapture(next.state); const battleBefore = battleSnapshot(room.state); localStep(next.state, this.campaign); captureBattleTransition(battleBefore, next.state, {type: 'localStep', actor: a.id}, {method: 'NPC行动'}); this.record(next, 'npc-action', `${a.name}行动。`, 'server',a.hidden||a.visibility==='dm'?'dm':'all'); this.commit(next); }
+    catch { next.autoNpc = false; log(next.state, 'rule', '自动 NPC 行动遇到规则限制，当前状态已保存；可选择公开退路或继续合法行动。'); next.state.revision++; this.record(next, 'npc-paused', 'NPC 自动行动已暂停。', 'server'); this.commit(next); }
   }
   close() { for (const timeout of this.presenceTimers.values()) clearTimeout(timeout); for (const set of this.watchers.values()) for (const w of set) w.response.end(); for (const room of this.rooms.values()) this.persist(room); }
 }

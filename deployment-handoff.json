@@ -1,5 +1,5 @@
 {
-  "status": "render-public-qa-passed-final-publication-in-progress",
+  "status": "v2-hostless-chat-combat-mcp-final-verified-awaiting-publication",
   "requestedModel": "GPT-6.1 Sol",
   "requestedReasoning": "xhigh",
   "requestedEnvironment": "cloud",
@@ -11,7 +11,7 @@
     "enabled": true,
     "buildType": "workflow",
     "deployed": true,
-    "lastVerifiedCommit": "24e4c19350d73000bdf7a918c05b9ee7016772a1"
+    "lastVerifiedCommit": "709cc188d05f7547839fe507223bc85ec018fb6e"
   },
   "architecture": "GitHub Pages serves the static library and documentation. All 13 games run behind one independently hosted Node gateway on Render. The current Free deployment uses ephemeral storage: sleep, restart and deploy can discard rooms and saves. It does not depend on the owner computer.",
   "completed": [
@@ -24,14 +24,20 @@
     "13/13 games passed focused two-independent-seat protocol tests on one cloud host: create/join, SSE action synchronization and original-token reconnect. This is not browser, physical-device, cross-network or server-restart acceptance. Test processes stopped and temporary saves deleted.",
     "The initial Render deployment is live; public gateway health and 13-entry catalog returned 200 and the author management endpoint returned 404.",
     "Added opt-in ephemeral-storage warnings for Pages, the gateway lobby and all game pages, plus Render public-origin recognition and SSE no-transform. Local syntax, static artifact and warning show/dismiss checks passed.",
-    "Public HTTPS acceptance against the new unshared Render service passed 13/13 games on source 24e4c193: independent A/B seat credentials, SSE action synchronization and original-token reconnect; 103 requests, 26 SSE streams, all streams closed. Not a physical-device or browser test."
+    "Public HTTPS acceptance against the new unshared Render service passed 13/13 games on source 24e4c193: independent A/B seat credentials, SSE action synchronization and original-token reconnect; 103 requests, 26 SSE streams, all streams closed. Not a physical-device or browser test.",
+    "Embedded same-room public chat, live action reports and end-of-combat summaries implemented for all 13 games. Public cooperative party combat is visible to all room teammates; only credentials, cross-room data and unrevealed DM sources remain protected.",
+    "Final local release checks: 235 source syntax checks, 81 focused tests and 13/13 original independent-seat SSE synchronization/reconnect regressions passed; all test processes and private temporary game data cleaned.",
+    "Shared UI includes desktop/mobile drawers, text-only safe rendering, room-switch/stale-response guards and Shadow DOM hotkey isolation. Actual Chromium launch was blocked by cloud execution restrictions; no screenshot or physical-device QA is claimed.",
+    "Final combined release validation passed: 242 source syntax checks, 107 core tests, 34 official-SDK MCP tests and 13/13 default-player legal-action SSE synchronization/reconnect checks. No model provider was called.",
+    "All new rooms default to hostless cooperative play. Existing explicit/legacy hosted saves remain compatible. RoomStore games automatically assign characters, protect live SSE/recent authenticated players, permit safe idle control and use deterministic guard turns for unclaimed/offline characters while active teammates are present. Empty tables do not run unattended.",
+    "MCP Streamable HTTP is mounted on the original hub with fixed native-seat scope and bounded loopback-only transport. It is not automatic AI fill-in and OAuth-only clients are not supported. Locked MCP production dependencies install during Render build, never per request."
   ],
   "requiredNextSteps": [
-    "Publish the final source once; the resulting Render deploy clears the test-only state. Verify the exact source commit becomes live and both single-table games report initialized=false before sharing.",
-    "Verify the exact-commit Pages Actions deployment, the public deployment.js backend origin, ephemeral-storage warning and linked game entry.",
-    "Distinguish public HTTPS protocol tests from unperformed real-device/browser/cross-network or server-restart persistence tests. Free storage does not provide restart persistence.",
-    "Do not modify the separate pre-existing weilongchengame/banmumo service. Do not create paid resources, upgrade compute plans or configure model API credentials without separate authorization.",
-    "AI providers, agent fill-in, optional MCP and per-game chat are subsequent user requests, not implemented or called as part of the multiplayer deployment."
+    "Publish this verified V2 tree atomically to the existing main branch; preserve repository visibility and Git history. Verify exact-commit CI and Render become live.",
+    "Production may now have real users. Do not initialize or reset existing Norse/Celtic global tables for QA. Verify shared assets and use only fresh isolated test rooms for public chat, PVE combat reports and MCP smoke.",
+    "Actual browser screenshot/physical-device cross-network QA remains unperformed because the cloud browser execution path was blocked. DOM and protocol tests are not those checks.",
+    "OpenAI/Qwen/DeepSeek automatic fill-in still needs secure credential reuse/setup and fee authorization; no API keys or provider calls were added.",
+    "Render Free storage remains ephemeral: sleep/restart/deploy can discard rooms and saves; no paid upgrade or extra persistent service was created."
   ],
   "restrictions": [
     "Preserve all existing game rules, stories, maps and saves.",
@@ -48,6 +54,6 @@
     "computePlan": "free",
     "storage": "ephemeral",
     "firstVerifiedSourceCommit": "24e4c19350d73000bdf7a918c05b9ee7016772a1",
-    "publicationStatus": "awaiting final source deployment and Pages verification"
+    "publicationStatus": "709cc188 live and verified; next chat/combat release awaiting CI and Render"
   }
 }

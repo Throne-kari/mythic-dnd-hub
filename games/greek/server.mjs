@@ -1,4 +1,5 @@
 import './hub-environment.mjs';
+import {RoomChat} from '../../server/room-chat.mjs';
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -69,6 +70,18 @@ export function createServer(options={}) {
   directory(runtimeDir);const roomDir=directory(path.join(runtimeDir,'rooms')),saveDir=directory(path.join(runtimeDir,'saves'));
   const releaseRuntime=acquireRuntime(runtimeDir,options.lockProbe);
   const rooms=new Map(),streams=new Map();
+  const now=options.now || Date.now,presenceTimeoutMs=options.presenceTimeoutMs ?? 45000;
+  const mode=room=>room.mode==='cooperative'?'cooperative':'hosted';
+  const connected=(room,member)=>[...(streams.get(room.id)||[])].some(client=>client.memberId===member.seat.id&&!client.response.destroyed);
+  const active=(room,member)=>connected(room,member)||now()-(member.lastSeen||0)<presenceTimeoutMs;
+  function effectiveSeat(room,member) {
+    if(mode(room)!=='cooperative')return member.seat;
+    const owned=member.seat.heroIds || [];
+    const heroIds=campaign.heroes.filter(hero=>!room.seats.some(other=>other!==member&&other.seat.role==='player'&&other.seat.heroIds.includes(hero.id)&&active(room,other))).map(hero=>hero.id);
+    return {...member.seat,role:'player',heroIds,ownedHeroIds:[...owned],roomMode:'cooperative',canManage:room.ownerId===member.seat.id,sharedControlPolicy:'unclaimed-or-offline',presenceTimeoutMs};
+  }
+  const projected=(room,member)=>view(room.state,effectiveSeat(room,member),campaign,maps);
+  const chat=new RoomChat({directory:path.join(runtimeDir,'.hub-chat')});
   try {for(const name of fs.readdirSync(roomDir).filter(n=>/^[a-f0-9]{24}\.json$/.test(n))) {
     const target=path.join(roomDir,name);if(fs.lstatSync(target).isSymbolicLink()) continue;
     const room=readJSON(target);
@@ -79,7 +92,7 @@ export function createServer(options={}) {
   const persist=room=>atomicJSON(path.join(roomDir,`${room.id}.json`),room);
   function broadcast(room) {
     for(const client of streams.get(room.id) || []) {
-      try {client.response.write(`id: ${room.state.revision}\nevent: state\ndata: ${JSON.stringify(view(room.state,client.seat,campaign,maps))}\n\n`);} catch {client.response.destroy();}
+      try {client.response.write(`id: ${room.state.revision}\nevent: state\ndata: ${JSON.stringify(projected(room,room.seats.find(member=>member.seat.id===client.memberId)))}\n\n`);} catch {client.response.destroy();}
     }
     for(const member of room.seats.filter(s=>s.agent)) {
       try {publishSnapshot({runtimeDir,roomId:room.id,seat:member.seat,state:room.state,campaign,maps});} catch { /* The committed state remains authoritative; the next queue tick retries. */ }
@@ -88,7 +101,7 @@ export function createServer(options={}) {
   function commit(room,next,processed) {
     const changed=next!==room.state;
     const updated={...room,state:next,processed:{...(room.processed || {})}};
-    if(processed) updated.processed[processed.key]=processed.receipt;
+    if(processed) {updated.processed[processed.key]=processed.receipt;const member=room.seats.find(value=>processed.key.startsWith(value.seat.id+':'));if(member)member.lastSeen=now();}
     persist(updated);Object.assign(room,updated);if(changed) broadcast(room);
   }
   function authenticate(req,url,room) {
@@ -96,17 +109,22 @@ export function createServer(options={}) {
     const token=bearer || (url.pathname.endsWith('/events')?url.searchParams.get('token'):null);
     if(!token || token.length>200) error('需要有效房间令牌',401);
     const digest=hash(token),member=room.seats.find(s=>s.tokenHash && s.tokenHash.length===digest.length && timingSafeEqual(Buffer.from(s.tokenHash),Buffer.from(digest)));
-    if(!member) error('房间令牌无效',401);return member;
+    if(!member) error('房间令牌无效',401);member.lastSeen=now();return member;
   }
-  function addSeat(room,{name,heroId,agent=false,dm=false}) {
+  function addSeat(room,{name,heroId,agent=false,dm=false,owner=false}) {
     if(typeof name!=='string' || !name.trim() || name.length>40) error('名字需1至40字');
-    if(!dm && (!campaign.heroes.some(h=>h.id===heroId) || room.seats.some(m=>m.seat.role==='player' && m.seat.heroIds.includes(heroId)))) error('英雄不存在或已被认领',409);
+    if(dm&&mode(room)==='cooperative')error('合作冒险不创建主持席位',403);
+    if(!dm&&!owner&&!campaign.heroes.some(h=>h.id===heroId))error('英雄不存在',409);
+    const holders=!dm&&!owner?room.seats.filter(m=>m.seat.role==='player'&&m.seat.heroIds.includes(heroId)):[];
+    if(holders.some(member=>mode(room)!=='cooperative'||active(room,member)))error('英雄已由在线队员认领；离线后方可接管',409);
     if(room.seats.length>=16) error('房间席位已满');
     const token=agent?null:randomBytes(24).toString('base64url');
-    const seat={id:id(),name:name.trim(),role:dm?'dm':'player',heroIds:dm?campaign.heroes.map(h=>h.id):[heroId]};
-    const member={seat,agent,...(token?{tokenHash:hash(token)}:{})};room.seats.push(member);
-    try {persist(room);} catch(e) {room.seats.pop();throw e;}
-    return {token,seat};
+    const seat={id:id(),name:name.trim(),role:dm?'dm':'player',heroIds:dm?campaign.heroes.map(h=>h.id):owner?[]:[heroId]};
+    const previousOwner=room.ownerId,previousClaims=holders.map(member=>[member,[...member.seat.heroIds]]);
+    for(const member of holders)member.seat.heroIds=member.seat.heroIds.filter(value=>value!==heroId);
+    const member={seat,agent,lastSeen:now(),...(token?{tokenHash:hash(token)}:{})};room.seats.push(member);if(owner)room.ownerId=seat.id;
+    try {persist(room);} catch(e) {room.seats.pop();room.ownerId=previousOwner;for(const [member,heroIds]of previousClaims)member.seat.heroIds=heroIds;throw e;}
+    return {token,seat:agent?seat:effectiveSeat(room,member)};
   }
   async function body(req) {
     const chunks=[];let length=0;
@@ -122,26 +140,33 @@ export function createServer(options={}) {
       if(url.pathname==='/api/health' && method==='GET') return json(res,200,{ok:true,service:'the-unburied-city',title:campaign.title,protocol:1,rooms:rooms.size});
       if(url.pathname==='/api/catalog' && method==='GET') return json(res,200,{campaign,maps});
       if(url.pathname==='/api/rooms' && method==='POST') {
-        const data=await body(req);object(data,['name']);const room={version:1,campaignId:campaign.id,contentVersion:campaign.contentVersion ?? 1,id:id(),state:createGame(campaign,maps),seats:[],processed:{}};
-        const auth=addSeat(room,{name:data.name,dm:true});rooms.set(room.id,room);return json(res,201,{roomId:room.id,...auth,state:view(room.state,auth.seat,campaign,maps)});
+        const data=await body(req);object(data,['name','mode']);if(data.mode!==undefined&&!['cooperative','hosted'].includes(data.mode))error('房间模式无效');const room={version:1,mode:data.mode || 'cooperative',campaignId:campaign.id,contentVersion:campaign.contentVersion ?? 1,id:id(),state:createGame(campaign,maps),seats:[],processed:{}};
+        const auth=addSeat(room,{name:data.name,dm:mode(room)==='hosted',owner:true});rooms.set(room.id,room);return json(res,201,{roomId:room.id,...auth,state:view(room.state,auth.seat,campaign,maps)});
       }
-      const match=url.pathname.match(/^\/api\/rooms\/([a-f0-9]{24})\/(join|state|action|save|load|events|agents)$/);
+      const match=url.pathname.match(/^\/api\/rooms\/([a-f0-9]{24})\/(join|state|action|save|load|events|agents|hub\/chat)$/);
       if(match) {
         const room=rooms.get(match[1]);if(!room) error('房间不存在',404);const route=match[2];
         if(route==='join' && method==='POST') {const data=await body(req);object(data,['name','heroId']);const auth=addSeat(room,data);broadcast(room);return json(res,201,{roomId:room.id,...auth,state:view(room.state,auth.seat,campaign,maps)});}
-        const member=authenticate(req,url,room),seat=seatView(member);
+        const member=authenticate(req,url,room),seat=effectiveSeat(room,member);
+        if(route==='hub/chat'){
+          const sender={...seat,agent:member.agent===true};
+          if(method==='GET')return json(res,200,chat.read(room.id,sender,{cursor:url.searchParams.get('cursor')??url.searchParams.get('after'),limit:url.searchParams.get('limit')}));
+          if(method!=='POST')error('方法不允许',405);
+          const message=await body(req),current=rooms.get(room.id),verified=authenticate(req,url,current);
+          return json(res,200,chat.send(current.id,{...seatView(verified),agent:verified.agent===true},message));
+        }
         if(route==='state' && method==='GET') return json(res,200,{roomId:room.id,seat,state:view(room.state,seat,campaign,maps)});
         if(route==='events' && method==='GET') {
           res.writeHead(200,{'Content-Type':'text/event-stream; charset=utf-8','Cache-Control':'no-cache','Connection':'keep-alive','X-Accel-Buffering':'no'});
-          const clients=streams.get(room.id) || new Set();if(clients.size>=32) {res.end();return;}streams.set(room.id,clients);const client={response:res,seat};clients.add(client);
+          const clients=streams.get(room.id) || new Set();if(clients.size>=32) {res.end();return;}streams.set(room.id,clients);const client={response:res,memberId:member.seat.id,controlKey:JSON.stringify(seat.heroIds)};clients.add(client);
           res.write(`id: ${room.state.revision}\nevent: state\ndata: ${JSON.stringify(view(room.state,seat,campaign,maps))}\n\n`);
-          const heartbeat=setInterval(()=>res.write(': heartbeat\n\n'),15000);heartbeat.unref();req.on('close',()=>{clearInterval(heartbeat);clients.delete(client);});return;
+          const heartbeat=setInterval(()=>{member.lastSeen=now();res.write(': heartbeat\n\n');const current=effectiveSeat(room,member),controlKey=JSON.stringify(current.heroIds);if(controlKey!==client.controlKey){client.controlKey=controlKey;res.write(`id: ${room.state.revision}\nevent: state\ndata: ${JSON.stringify(view(room.state,current,campaign,maps))}\n\n`);}},options.heartbeatInterval ?? 15000);heartbeat.unref();req.on('close',()=>{clearInterval(heartbeat);clients.delete(client);});return;
         }
         if(route==='action' && method==='POST') {
           const data=await body(req);object(data,['revision','action']);if(!Number.isSafeInteger(data.revision) || data.revision!==room.state.revision) error('状态修订冲突，请刷新重试',409);
           const next=act(room.state,data.action,seat,campaign,maps);commit(room,next);return json(res,200,{state:view(room.state,seat,campaign,maps)});
         }
-        if(['save','load','agents'].includes(route) && seat.role!=='dm') error('仅主持人可执行此操作',403);
+        if(['save','load','agents'].includes(route) && seat.role!=='dm' && !(mode(room)==='cooperative'&&(route==='save'||seat.canManage)))error('此操作需要房间管理权限',403);
         if(route==='save' || route==='load') {
           if(method!=='POST') error('方法不允许',405);const data=await body(req);object(data,['slot']);if(!isId(data.slot)) error('存档槽标识无效');
           const folder=directory(path.join(saveDir,room.id)),target=path.join(folder,`${data.slot}.json`);
@@ -158,7 +183,7 @@ export function createServer(options={}) {
         if(route==='agents' && method==='POST') {
           const data=await body(req);object(data,['name','heroId','role']);
           if(data.role!==undefined && !['dm','player'].includes(data.role)) error('智能体角色无效');
-          if(data.role==='dm' && data.heroId!==undefined) error('主持智能体无需heroId');
+          if(data.role==='dm' && data.heroId!==undefined) error('主持智能体无需heroId');if(data.role==='dm'&&mode(room)==='cooperative')error('合作冒险不创建主持席位',403);
           const auth=addSeat(room,{name:data.name,heroId:data.heroId,agent:true,dm:data.role==='dm'});const folder=agentFolder(runtimeDir,room.id,auth.seat.id);
           publishSnapshot({runtimeDir,roomId:room.id,seat:auth.seat,state:room.state,campaign,maps});broadcast(room);return json(res,201,{roomId:room.id,seat:auth.seat,folder});
         }

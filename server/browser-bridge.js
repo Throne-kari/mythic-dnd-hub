@@ -24,6 +24,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const warning = document.createElement('aside'), close = document.createElement('button');
       warning.id = 'mythic-storage-warning'; warning.setAttribute('role', 'note');
+      for (const name of ['keydown', 'keyup', 'keypress']) warning.addEventListener(name, event => event.stopPropagation());
       warning.style.cssText = 'position:fixed;z-index:2147483647;left:12px;right:12px;bottom:12px;margin:0;padding:12px 44px 12px 16px;background:#493b22;color:#fff0cd;border:1px solid #9e7f43;border-radius:8px;font:14px/1.6 system-ui,sans-serif;box-shadow:0 3px 20px #0008;';
       warning.append(document.createTextNode('免费临时联机版：服务空闲后会休眠，首次访问可能需要约一分钟唤醒；休眠、重启或部署会清空房间和存档。请勿用于长期存档。'));
       close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', '关闭临时存档提示');
@@ -39,8 +40,8 @@
       const methods = {
         getItem: key => store.getItem(namespace + String(key)),
         setItem: (key, value) => store.setItem(namespace + String(key), String(value)),
-        removeItem: key => store.removeItem(namespace + String(key)),
-        clear: () => keys().forEach(key => store.removeItem(key)),
+        removeItem: key => { store.removeItem(namespace + String(key)); if (/(?:seat|session)/i.test(String(key))) recordSocial({ phase: 'storage-clear' }); },
+        clear: () => { keys().forEach(key => store.removeItem(key)); recordSocial({ phase: 'storage-clear' }); },
         key: index => keys()[Number(index)]?.slice(namespace.length) ?? null,
       };
       const scoped = new Proxy(methods, {
@@ -56,13 +57,54 @@
   }
 
   const originalFetch = window.fetch.bind(window);
-  window.fetch = (input, init) => {
-    if (input instanceof Request) {
-      const next = remap(input.url);
-      return originalFetch(next === input.url ? input : new Request(next, input), init);
-    }
-    return originalFetch(remap(input), init);
+  let social = null, socialSerial = 0;
+  const socialQueue = [];
+  const recordSocial = event => {
+    if (social) social.observe(event);
+    else { socialQueue.push(event); if (socialQueue.length > 64) socialQueue.shift(); }
   };
+  const socialRequest = (input, init) => {
+    try {
+      const url = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href);
+      if (url.origin !== location.origin || !url.pathname.startsWith(prefix + '/api/')) return null;
+      const path = url.pathname.slice(prefix.length), method = String(init?.method || input?.method || 'GET').toUpperCase();
+      const canonical = method === 'GET' && (path === '/api/state' || /^\/api\/rooms\/[^/]+\/state$/.test(path));
+      const bootstrap = method === 'POST' && (['/api/rooms', '/api/join', '/api/start', '/api/host'].includes(path) || /^\/api\/rooms\/[^/]+\/join$/.test(path));
+      if (!canonical && !bootstrap) return null;
+      const headers = new Headers(init?.headers ?? input?.headers ?? {}), authorization = headers.get('authorization');
+      return { serial: ++socialSerial, path, method, canonical, bootstrap, token: headers.get('x-seat-token') || headers.get('x-game-token') || (/^Bearer\s+/i.test(authorization || '') ? authorization.replace(/^Bearer\s+/i, '') : ''), roomId: headers.get('x-room-id') || '' };
+    } catch { return null; }
+  };
+  window.fetch = (input, init) => {
+    let mapped;
+    if (input instanceof Request) { const next = remap(input.url); mapped = next === input.url ? input : new Request(next, input); }
+    else mapped = remap(input);
+    const request = socialRequest(mapped, init);
+    if (request) recordSocial({ phase: 'request', request });
+    const promise = originalFetch(mapped, init);
+    if (request) promise.then(response => {
+      if (!response.ok) { recordSocial({ phase: 'response', request, ok: false, status: response.status }); return; }
+      if (!/application\/json/i.test(response.headers.get('content-type') || '')) return;
+      void response.clone().json().then(value => {
+        const state = value?.state || value;
+        const visible = { ...(request.bootstrap ? { token: value?.token, seatToken: value?.seatToken } : {}), roomId: value?.roomId, ...(value?.room?.id ? { room: { id: value.room.id } } : {}), seat: value?.seat || state?.seat, state: { battleReport: state?.battleReport } };
+        recordSocial({ phase: 'response', request, ok: true, status: response.status, value: visible });
+      }).catch(() => {});
+    }).catch(() => recordSocial({ phase: 'response', request, ok: false, status: 0 }));
+    return promise;
+  };
+  import(prefix + '/__hub__/social-ui.js').then(({ mountSocialUI }) => {
+    social = mountSocialUI({ gameId: id, prefix, nativeFetch: originalFetch, origin: location.origin });
+    for (const event of socialQueue.splice(0)) social.observe(event);
+  }).catch(() => { console.warn('同桌聊天与结算界面暂未加载，原游戏仍可继续。'); });
+  window.addEventListener('pagehide', event => { if (event.persisted) social?.pause(); else { social?.dispose(); socialQueue.length = 0; } });
+  window.addEventListener('pageshow', event => { if (event.persisted) social?.resume(); });
+  let wasLobby = Boolean(document.body?.classList.contains('in-lobby') || document.getElementById('gameShell')?.hidden);
+  new MutationObserver(() => {
+    const inLobby = Boolean(document.body?.classList.contains('in-lobby') || document.getElementById('gameShell')?.hidden);
+    if (inLobby && !wasLobby) recordSocial({ phase: 'leave' });
+    wasLobby = inLobby;
+  }).observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden', 'class'] });
   const open = XMLHttpRequest.prototype.open;
   XMLHttpRequest.prototype.open = function (method, url, ...rest) { return open.call(this, method, remap(url), ...rest); };
   if (window.EventSource) {
@@ -99,6 +141,7 @@
     }
   }).observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: attributes });
   document.addEventListener('click', event => {
+    if (event.target.closest?.('#returnLobby')) recordSocial({ phase: 'leave' });
     const anchor = event.target.closest?.('a[href]');
     if (anchor) fixElement(anchor);
   }, true);

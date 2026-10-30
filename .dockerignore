@@ -2,6 +2,7 @@
 .github
 .local
 runtime
+**/.hub-chat
 node_modules
 author-sources.local.json
 author-sources.local.json.tmp

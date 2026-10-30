@@ -1,6 +1,6 @@
-# 本地权威房间 API
+# 权威合作房间 API
 
-Node 22+，无 npm 依赖。运行 `npm start`，打开 `http://127.0.0.1:8841`。可用 `PORT=…` 环境变量改变端口；PowerShell 写法 `$env:PORT='8842'; npm start`。普通路径配置 `RUNTIME_DIR` 可隔离运行数据。CLI 始终监听 127.0.0.1。跨设备、公网、代理部署未验证。
+Node 24+，无 npm 依赖。运行 `npm start`，打开 `http://127.0.0.1:8841`。可用 `PORT=…` 环境变量改变端口；PowerShell 写法 `$env:PORT='8842'; npm start`。普通路径配置 `RUNTIME_DIR` 可隔离运行数据。CLI 始终监听 127.0.0.1。合集通过网关提供公开部署入口；直接启动本文件仍只监听本机。
 
 这是受 d20 规则启发的小型原创游戏，不是完整 D&D 2024 实现。四英雄按固定顺序行动；每回合可移动 speed 点并执行一次攻击、防御、治疗或交涉。最后一名英雄结束回合后敌方自动移动/攻击。掷骰、伤害与代价写入游戏日志。伤害支持固定0–50或严格骰串 `1d8+4`（1–4颗，d4/6/8/10/12，至多两位修正）。自然20自动命中并额外d6，自然1失手。
 
@@ -24,17 +24,17 @@ Node 22+，无 npm 依赖。运行 `npm start`，打开 `http://127.0.0.1:8841`�
 |---|---|---|
 | GET `/api/health` | 无 | `{ok,service:'the-unburied-city',title,protocol,rooms}` |
 | GET `/api/catalog` | 无 | `{campaign,maps}` |
-| POST `/api/rooms` | `{name}` | `{roomId,token,seat,state}`，主持席位 |
-| POST `/api/rooms/:id/join` | `{name,heroId}` | 同上，玩家席位；重复认领409 |
+| POST `/api/rooms` | `{name,mode?:'cooperative'\|'hosted'}` | `{roomId,token,seat,state}`，默认合作玩家；hosted仅兼容可选旧模式 |
+| POST `/api/rooms/:id/join` | `{name,heroId}` | 同上，玩家席位；在线重复认领409，确认离线可接管 |
 | GET `/api/rooms/:id/state` | 身份头 | `{roomId,seat,state}` |
 | POST `/api/rooms/:id/action` | `{revision,action}` | `{state}` |
-| POST `/api/rooms/:id/save` | `{slot}` | `{slot,state}`，仅DM |
-| POST `/api/rooms/:id/load` | `{slot}` | 同上，仅DM；新revision永远递增 |
+| POST `/api/rooms/:id/save` | `{slot}` | `{slot,state}`，合作队员或旧模式DM |
+| POST `/api/rooms/:id/load` | `{slot}` | 同上，仅合作房间发起者或旧模式DM；新revision永远递增 |
 | GET `/api/rooms/:id/events?token=…` | 身份 | SSE `event: state`，data为view状态；15秒心跳 |
-| POST `/api/rooms/:id/agents` | `{name,heroId,role?:'player'}` 或 `{name,role:'dm'}` | `{roomId,seat,folder}`，仅DM授权创建、无密钥文件席位 |
-| GET `/api/rooms/:id/agents` | 身份头 | `{agents:[{seat,folder}]}`，仅DM |
+| POST `/api/rooms/:id/agents` | `{name,heroId,role?:'player'}` 或 `{name,role:'dm'}` | `{roomId,seat,folder}`，仅合作房间发起者或旧DM授权创建；合作模式禁止dm角色，无密钥文件席位 |
+| GET `/api/rooms/:id/agents` | 身份头 | `{agents:[{seat,folder}]}`，仅合作房间发起者或旧DM |
 
-错误为 `{error}`；无凭证401，DM权限不足403，修订/认领冲突409，缺失404，非法动作400，超大请求413。请求体最多128KiB，未知字段拒绝。slot仅1–64字母、数字、下划线、连字符。玩家只能操控自己认领的英雄，DM可操控全队、保存/加载、编辑地图；剧情、资源、地图范围与战斗规则对DM同样验证。
+错误为 `{error}`；无凭证401，DM权限不足403，修订/认领冲突409，缺失404，非法动作400，超大请求413。请求体最多128KiB，未知字段拒绝。slot仅1–64字母、数字、下划线、连字符。合作玩家可操作自己的、未认领的或断线45秒确认离线的英雄，不可操作其他在线队员认领的英雄。活跃SSE连接始终保护归属；加入时接管离线英雄会转移原归属。合作`seat.heroIds`是当前有效控制范围，`ownedHeroIds`是明确认领，`canManage`仅控制读档/文件席位管理，不授予DM动作。控权变化会通过SSE在相同revision更新。无mode的旧房间按hosted解释，旧DM仍可操控全队、保存/加载、编辑地图；所有模式均遵守真实剧情、资源、地图和战斗规则。
 
 ## 状态和动作
 
@@ -68,7 +68,7 @@ narrate {text}
 
 运行数据仅 `runtime/`：`rooms/:id.json`含campaignId/contentVersion、席位摘要、当前完整状态、智能体回执记录；`saves/:room/:slot.json`含相同战役/内容版本标识和手动存档。startup/load严格匹配当前campaign.id及contentVersion（未配置默认1），不同版本拒绝并保留原文件；新版使用独立目录，不自动迁移原型存档。每次接受动作、认领与读档均在响应前写同目录临时文件、fsync、rename原子替换。重启恢复同房间、席位身份与状态；`load`也保留席位和智能体去重记录。请备份整个runtime并避免手动编辑运行中JSON。
 
-每个runtime只有一个权威主机：启动以进程内realpath登记及 `.host.lock` 的独占wx创建双重防重入，元数据为 `{version:1,pid,nonce,createdAt}`。正常close/shutdown等连接结束后释放锁；换PORT仍不能重复占用同一runtime，独立房间服务需另设RUNTIME_DIR。异常退出后仅对锁中PID执行 `process.kill(pid,0)`无信号探测，仅明确ESRCH时可回收；EPERM、探测不确定或坏元数据均保留锁并拒绝，需人工确认旧主机停止后处理。不会枚举系统进程、读取命令行或终止其他进程。死锁回收由 `.host.recover.lock` 串行化，恢复中断残留同样保守拒绝；不会以重置存档绕过锁。嵌入测试可注入 `lockProbe(pid)=>'alive'|'dead'|'unknown'`，生产无需此选项。本地服务不提供公网安全承诺。
+每个runtime只有一个权威主机：启动以进程内realpath登记及 `.host.lock` 的独占wx创建双重防重入，元数据为 `{version:1,pid,nonce,createdAt}`。正常close/shutdown等连接结束后释放锁；换PORT仍不能重复占用同一runtime，独立房间服务需另设RUNTIME_DIR。异常退出后仅对锁中PID执行 `process.kill(pid,0)`无信号探测，仅明确ESRCH时可回收；EPERM、探测不确定或坏元数据均保留锁并拒绝，需人工确认旧主机停止后处理。不会枚举系统进程、读取命令行或终止其他进程。死锁回收由 `.host.recover.lock` 串行化，恢复中断残留同样保守拒绝；不会以重置存档绕过锁。嵌入测试可注入 `lockProbe(pid)=>'alive'|'dead'|'unknown'`，生产无需此选项。独立服务不应绕过合集网关直接暴露运行文件或智能体目录。
 
 ```js
 import { createServer } from './server.mjs';
