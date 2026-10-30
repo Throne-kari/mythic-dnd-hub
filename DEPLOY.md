@@ -1,6 +1,6 @@
 # 部署万神之书
 
-需要 Node.js 24+ 与可写的持久化磁盘。项目没有第三方 npm 依赖，不需要 `npm install` 或前端构建。
+需要 Node.js 24+；长期保存需要可写的持久化磁盘。项目没有第三方 npm 依赖，不需要 `npm install` 或前端构建。当前 Render 免费部署使用临时磁盘，不能当作长期存档服务。
 
 ## GitHub Pages 与独立联机后端
 
@@ -9,14 +9,27 @@
 `deployment.json` 保存公开后端源地址，不保存任何密钥。当前为：
 
 ```json
-{ "backendUrl": null }
+{
+  "backendUrl": "https://mythic-dnd-hub.onrender.com",
+  "ephemeralStorage": true
+}
 ```
 
-这表示后端尚未连接；静态书库可以发布，但建房和加入入口会明确显示“待连接”。不要把静态站上线等同于联机服务上线。
+书库中的游戏入口会直接前往上述 Render 服务。`ephemeralStorage:true` 会在 Pages 显示临时存档警示。停用后端时可把 `backendUrl` 改为 `null`，页面会禁用游戏入口并显示“联机尚未启用”；不要把静态站上线等同于联机服务上线。
 
 后端部署成功后，把 `backendUrl` 改为实际 HTTPS 源地址（只含协议、域名和可选端口；不含用户名、密码、子路径、查询串或片段）。执行 `node scripts/build-pages.mjs` 检查静态输出，再提交到 `main`，`.github/workflows/pages.yml` 会发布 `.local/pages/`。仓库 Settings → Pages 的 Source 必须为 **GitHub Actions**。
 
-游戏从书库直接导航到独立后端的 `/play/<游戏ID>/`，使游戏页面、API、席位和 SSE 保持同源，不需要开放跨站写接口。联机服务器必须长期运行，`runtime/` 必须挂载持久盘；不要使用临时隧道或房主电脑作为云端部署的替代。
+游戏从书库直接导航到独立后端的 `/play/<游戏ID>/`，使游戏页面、API、席位和 SSE 保持同源，不需要开放跨站写接口。长期存档版需要给 `runtime/` 挂载持久盘；不要使用临时隧道或房主电脑作为云端部署的替代。
+
+### 当前 Render 免费单服务
+
+- 服务：<https://mythic-dnd-hub.onrender.com/>；源码仓库本项目的 `main`。
+- 类型为 **Web Service / Node / Free**，不是 Static Site。构建命令 `npm run check`；启动命令 `node server.mjs --public-only`。没有 npm 锁文件或第三方依赖，不要使用 `npm ci`。
+- 普通环境变量：`NODE_VERSION=24`、`NODE_ENV=production`、`HOST=0.0.0.0`、`HUB_MANAGER=0`、`HUB_RUNTIME_DIR=/tmp/mythic-dnd-runtime`、`HUB_EPHEMERAL_STORAGE=1`。`PORT` 使用 Render 注入的值（通常为 `10000`），不要写死本机端口。
+- 网关自动识别 `RENDER_EXTERNAL_URL`，邀请链接采用 Render 的 HTTPS 地址；健康接口 `/api/health`。十三款子服务仅监听回环地址，公网只开放网关端口。SSE 禁止缓冲与内容转换，连接中断后由原客户端重连。
+- 免费服务会休眠且文件系统为临时存储：**休眠、重启、部署都会丢失房间与服务端存档**。大厅和十三款游戏均显示此警示。不要把持有本地浏览器令牌等同于已有云端备份。
+- Free 资源有限（当前 0.1 CPU / 512MB RAM）；网关按需启动子进程，但不自动停止已有游戏。不能保证十三款同时多人运行的容量；遇到资源限制应先检查指标，不能自动升级收费方案。
+- [免费限制](https://render.com/docs/free)、[SSE 支持](https://render.com/docs/deploy-go-gin)及[端口规则](https://render.com/docs/web-services#port-binding)以平台现行说明为准。Free 不等于所有用量无限免费，带宽、构建分钟和账户额度也需留意。
 
 ### 云主机配置清单
 

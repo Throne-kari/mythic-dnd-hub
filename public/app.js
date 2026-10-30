@@ -123,13 +123,21 @@ document.querySelector('#global-search').addEventListener('submit', event => { e
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', event => { if (event.key === 'mythic-dnd-hub:recent:v1' && location.hash === '#continue') recentView(); });
 async function initialize() {
+  const storageNotice = () => {
+    if (document.querySelector('#storage-status')) return;
+    const status = document.createElement('p');
+    status.id = 'storage-status'; status.className = 'connection-status'; status.setAttribute('role', 'note');
+    status.textContent = '免费临时联机版：空闲后会休眠，首次访问可能需要约一分钟唤醒；休眠、重启或部署会清空房间和存档。请勿用于长期存档。';
+    main.before(status);
+  };
+  if (window.__MYTHIC_DEPLOYMENT__?.ephemeralStorage) storageNotice();
   if (!backend && !document.querySelector('#connection-status')) {
     const status = document.createElement('p');
     status.id = 'connection-status'; status.className = 'connection-status'; status.setAttribute('role', 'status');
     status.textContent = '联机尚未启用。当前仅提供书库与资料，暂不能创建或加入游戏。';
     main.before(status);
   }
-  try { const data=await request(window.__MYTHIC_DEPLOYMENT__?.catalogUrl || '/api/catalog'); games=Array.isArray(data) ? data : data.games; if (!Array.isArray(games)) throw new Error('书库目录格式有误'); route(); }
+  try { const data=await request(window.__MYTHIC_DEPLOYMENT__?.catalogUrl || '/api/catalog'); games=Array.isArray(data) ? data : data.games; if (!Array.isArray(games)) throw new Error('书库目录格式有误'); if (data.ephemeralStorage) storageNotice(); route(); }
   catch(error) { main.setAttribute('aria-busy','false'); main.innerHTML=`<section class="empty-state"><h1>书库暂时无法打开</h1><p>${esc(error.message)}</p><button class="button gold" id="retry-load">重新连接</button></section>`; document.querySelector('#retry-load').onclick=initialize; }
 }
 initialize();

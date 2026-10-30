@@ -6,9 +6,11 @@
 
 ## 在线书库与联机状态
 
-[GitHub Pages 书库](https://throne-kari.github.io/mythic-dnd-hub/)用于浏览十三部冒险和规则资料。**当前 `deployment.json` 的 `backendUrl` 为 `null`：联机云服务尚未连接，Pages 不提供建房、加入或实时游戏。** 页面会明确显示此状态，不会把玩家引向不存在的游戏接口。
+[GitHub Pages 书库](https://throne-kari.github.io/mythic-dnd-hub/)用于浏览十三部冒险和规则资料，游戏入口连接独立的 [Render 联机服务](https://mythic-dnd-hub.onrender.com/)，不依赖房主电脑持续在线。
 
-联机需要独立的 Node.js 云服务、持久化磁盘和支持 SSE 的 HTTPS 入口，不依赖房主电脑持续在线。后端就绪并通过验收后，将它的 HTTPS 源地址写入 `deployment.json`，发布后的游戏入口会直接前往该后端。具体配置见 [DEPLOY.md](DEPLOY.md)。
+**目前是免费临时联机版，不是永久存档服务。** Render 空闲约十五分钟后会休眠，下一次访问可能需要约一分钟唤醒；休眠、重启或部署会清空房间、席位和服务端存档。请勿把长期战役的唯一存档留在此服务中。浏览器保存的席位凭据不能恢复已丢失的服务端房间。
+
+长期保存需要独立的持久化磁盘或适配的外部存储。`deployment.json` 只保存公开的 HTTPS 后端源地址及临时存档标记，不保存密钥。具体配置和各游戏重启限制见 [DEPLOY.md](DEPLOY.md)。
 
 ## 开始使用
 

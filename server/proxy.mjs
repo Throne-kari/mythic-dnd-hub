@@ -10,12 +10,12 @@ function prefixPath(value, prefix) {
   return value.startsWith('/') && !value.startsWith('//') && value !== prefix && !value.startsWith(prefix + '/') ? prefix + value : value;
 }
 
-export function rewriteText(source, contentType, prefix) {
+export function rewriteText(source, contentType, prefix, ephemeralStorage = false) {
   let output = source;
   if (/html/i.test(contentType)) {
     output = output.replace(/\b(src|href|action|poster)\s*=\s*(["'])(\/[^"']*)\2/gi,
       (all, attribute, quote, value) => `${attribute}=${quote}${prefixPath(value, prefix)}${quote}`);
-    const script = `<script src="${prefix}/__hub__/bridge.js"></script>`;
+    const script = `${ephemeralStorage ? '<meta name="mythic-storage" content="ephemeral">' : ''}<script src="${prefix}/__hub__/bridge.js"></script>`;
     output = /<head(?:\s[^>]*)?>/i.test(output) ? output.replace(/(<head(?:\s[^>]*)?>)/i, `$1${script}`) : script + output;
   }
   if (/css|html/i.test(contentType)) output = output.replace(/url\(\s*(["']?)(\/[^)"']+)\1\s*\)/gi,
@@ -91,11 +91,11 @@ export async function handleGame(req, res, { url, processes, root }) {
           try {
             const info = JSON.parse(text);
             const https = req.socket.encrypted || String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'https';
-            const origin = process.env.PUBLIC_URL || (req.headers.origin || `${https ? 'https' : 'http'}://${req.headers.host}`);
+            const origin = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || (req.headers.origin || `${https ? 'https' : 'http'}://${req.headers.host}`);
             const entryUrl = new URL(prefix, origin).href;
             text = JSON.stringify({ ...info, scope: 'GATEWAY', loopbackOnly: false, addresses: [entryUrl], message: '使用当前游戏地址邀请同行者，房间邀请码由游戏内创建。' });
           } catch {}
-        } else text = rewriteText(text, type, prefix);
+        } else text = rewriteText(text, type, prefix, process.env.HUB_EPHEMERAL_STORAGE === '1');
         const output = Buffer.from(text);
         delete headers['content-encoding']; delete headers.etag; delete headers['content-md5'];
         headers['content-length'] = output.length; headers['cache-control'] = 'no-cache';
@@ -103,7 +103,7 @@ export async function handleGame(req, res, { url, processes, root }) {
       });
       response.on('error', () => errorResponse(res, new HttpError(502, '游戏页面读取中断。')));
     } else {
-      if (type.startsWith('text/event-stream')) { delete headers['content-length']; headers['x-accel-buffering'] = 'no'; headers['cache-control'] = 'no-cache, no-store'; }
+      if (type.startsWith('text/event-stream')) { delete headers['content-length']; headers['x-accel-buffering'] = 'no'; headers['cache-control'] = 'no-cache, no-store, no-transform'; }
       res.writeHead(response.statusCode, headers);
       if (type.startsWith('text/event-stream')) res.flushHeaders();
       response.pipe(res);

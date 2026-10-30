@@ -1,5 +1,5 @@
 {
-  "status": "static-ready-backend-pending",
+  "status": "render-public-qa-passed-final-publication-in-progress",
   "requestedModel": "GPT-6.1 Sol",
   "requestedReasoning": "xhigh",
   "requestedEnvironment": "cloud",
@@ -10,9 +10,10 @@
     "url": "https://throne-kari.github.io/mythic-dnd-hub/",
     "enabled": true,
     "buildType": "workflow",
-    "deployed": false
+    "deployed": true,
+    "lastVerifiedCommit": "24e4c19350d73000bdf7a918c05b9ee7016772a1"
   },
-  "architecture": "GitHub Pages can serve the existing static library and documentation. All 13 games need the Node gateway and persistent server-side storage. Game links navigate to a separately hosted HTTPS backend; Pages alone cannot provide multiplayer.",
+  "architecture": "GitHub Pages serves the static library and documentation. All 13 games run behind one independently hosted Node gateway on Render. The current Free deployment uses ephemeral storage: sleep, restart and deploy can discard rooms and saves. It does not depend on the owner computer.",
   "completed": [
     "Checked all reachable repository history before publication: one commit, 529 unique blobs; no actual credentials, private saves, email, phone, or user-directory matches found. Runtime and local settings are Git-ignored.",
     "Repository public status and Pages workflow configuration verified using GitHub API.",
@@ -21,14 +22,16 @@
     "Added Quick Tunnel state-polling compatibility to 12 clients. Fengshen already had it. Cloudflare Quick Tunnel does not support SSE.",
     "Cloud syntax checks and Pages artifact checks passed: 13 entries, 66 required documents, covers and project subpath assets; invalid backend origins rejected.",
     "13/13 games passed focused two-independent-seat protocol tests on one cloud host: create/join, SSE action synchronization and original-token reconnect. This is not browser, physical-device, cross-network or server-restart acceptance. Test processes stopped and temporary saves deleted.",
-    "Configured explicit backendUrl:null with a prominent static multiplayer-not-enabled banner. Removed the obsolete host-computer-online text. No cloud backend resource or credential was created."
+    "The initial Render deployment is live; public gateway health and 13-entry catalog returned 200 and the author management endpoint returned 404.",
+    "Added opt-in ephemeral-storage warnings for Pages, the gateway lobby and all game pages, plus Render public-origin recognition and SSE no-transform. Local syntax, static artifact and warning show/dismiss checks passed.",
+    "Public HTTPS acceptance against the new unshared Render service passed 13/13 games on source 24e4c193: independent A/B seat credentials, SSE action synchronization and original-token reconnect; 103 requests, 26 SSE streams, all streams closed. Not a physical-device or browser test."
   ],
   "requiredNextSteps": [
-    "Connect an authorized persistent Node hosting account (Railway suggested) and verify its free balance, resource limits and spending controls before resource creation. No paid upgrades, new credentials or expanded access without authorization.",
-    "Deploy the Node gateway with one replica, a writable runtime volume, public HTTPS and SSE; disable the author manager. Verify the exact source commit and persistence on that selected host.",
-    "Set deployment.json backendUrl to the verified HTTPS origin, publish to main and verify exact-commit Actions and the public Pages entry.",
-    "Perform deployed-backend independent-session acceptance and separately identify any browser, true physical-device/cross-network or server-restart tests that remain unrun.",
-    "norse and celtic remain single-table services; original seats and the current table do not automatically restore after process restart. Do not claim restart-transparent multiplayer."
+    "Publish the final source once; the resulting Render deploy clears the test-only state. Verify the exact source commit becomes live and both single-table games report initialized=false before sharing.",
+    "Verify the exact-commit Pages Actions deployment, the public deployment.js backend origin, ephemeral-storage warning and linked game entry.",
+    "Distinguish public HTTPS protocol tests from unperformed real-device/browser/cross-network or server-restart persistence tests. Free storage does not provide restart persistence.",
+    "Do not modify the separate pre-existing weilongchengame/banmumo service. Do not create paid resources, upgrade compute plans or configure model API credentials without separate authorization.",
+    "AI providers, agent fill-in, optional MCP and per-game chat are subsequent user requests, not implemented or called as part of the multiplayer deployment."
   ],
   "restrictions": [
     "Preserve all existing game rules, stories, maps and saves.",
@@ -38,5 +41,13 @@
   "references": [
     "https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/",
     "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages"
-  ]
+  ],
+  "backend": {
+    "provider": "Render",
+    "url": "https://mythic-dnd-hub.onrender.com",
+    "computePlan": "free",
+    "storage": "ephemeral",
+    "firstVerifiedSourceCommit": "24e4c19350d73000bdf7a918c05b9ee7016772a1",
+    "publicationStatus": "awaiting final source deployment and Pages verification"
+  }
 }

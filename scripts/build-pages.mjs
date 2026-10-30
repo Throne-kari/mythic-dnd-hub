@@ -6,6 +6,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const output = path.join(root, '.local', 'pages');
 const deployment = JSON.parse(await fs.readFile(path.join(root, 'deployment.json'), 'utf8'));
 const backend = deployment.backendUrl ? new URL(deployment.backendUrl) : null;
+const ephemeralStorage = deployment.ephemeralStorage === true;
 if (backend && (backend.protocol !== 'https:' || backend.username || backend.password || backend.pathname !== '/' || backend.search || backend.hash)) throw Error('An HTTPS backend origin without credentials, path, query or fragment is required.');
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'catalog.json'), 'utf8'));
 await fs.rm(output, { recursive: true, force: true });
@@ -15,8 +16,8 @@ const index = await fs.readFile(path.join(output, 'index.html'), 'utf8');
 await fs.writeFile(path.join(output, 'index.html'), index
   .replace(/(src|href)="\/(?!\/)/g, '$1="./')
   .replace('<script type="module"', '<script src="./deployment.js"></script>\n  <script type="module"')
-  .replace('  <main ', `${backend ? '' : '  <aside id="connection-status" class="connection-status" role="status"><strong>联机尚未启用。</strong> 当前仅提供书库与资料，暂不能创建或加入游戏。</aside>\n'}  <main `));
-await fs.writeFile(path.join(output, 'deployment.js'), `window.__MYTHIC_DEPLOYMENT__=Object.freeze(${JSON.stringify({ backendUrl: backend?.origin || null, catalogUrl: './catalog.json' })});\n`);
+  .replace('  <main ', `${!backend ? '  <aside id="connection-status" class="connection-status" role="status"><strong>联机尚未启用。</strong> 当前仅提供书库与资料，暂不能创建或加入游戏。</aside>\n' : ephemeralStorage ? '  <aside id="storage-status" class="connection-status" role="note"><strong>免费临时联机版。</strong> 空闲后会休眠，首次访问可能需要约一分钟唤醒；休眠、重启或部署会清空房间和存档，请勿用于长期存档。</aside>\n' : ''}  <main `));
+await fs.writeFile(path.join(output, 'deployment.js'), `window.__MYTHIC_DEPLOYMENT__=Object.freeze(${JSON.stringify({ backendUrl: backend?.origin || null, catalogUrl: './catalog.json', ephemeralStorage })});\n`);
 const keys = ['id','pantheon','title','subtitle','version','status','players','tags','description','cover','chapters','setting','mode','features','contentRating','engine','series','docs'];
 await fs.writeFile(path.join(output, 'catalog.json'), JSON.stringify(catalog.map(game => Object.fromEntries(keys.filter(key => game[key] !== undefined).map(key => [key, game[key]]))), null, 2));
 // Only the catalog's published documents and their static documentation assets are copied.

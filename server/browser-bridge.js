@@ -20,6 +20,18 @@
   };
   Object.defineProperty(window, '__MYTHIC_HUB__', { value: Object.freeze({ id, prefix, home: '/', remap }) });
 
+  if (document.querySelector('meta[name="mythic-storage"][content="ephemeral"]')) {
+    document.addEventListener('DOMContentLoaded', () => {
+      const warning = document.createElement('aside'), close = document.createElement('button');
+      warning.id = 'mythic-storage-warning'; warning.setAttribute('role', 'note');
+      warning.style.cssText = 'position:fixed;z-index:2147483647;left:12px;right:12px;bottom:12px;margin:0;padding:12px 44px 12px 16px;background:#493b22;color:#fff0cd;border:1px solid #9e7f43;border-radius:8px;font:14px/1.6 system-ui,sans-serif;box-shadow:0 3px 20px #0008;';
+      warning.append(document.createTextNode('免费临时联机版：服务空闲后会休眠，首次访问可能需要约一分钟唤醒；休眠、重启或部署会清空房间和存档。请勿用于长期存档。'));
+      close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', '关闭临时存档提示');
+      close.style.cssText = 'position:absolute;right:8px;top:6px;min-width:32px;min-height:32px;border:0;background:transparent;color:inherit;font:24px system-ui;cursor:pointer;';
+      close.addEventListener('click', () => warning.remove()); warning.append(close); document.body.append(warning);
+    }, { once: true });
+  }
+
   for (const name of ['localStorage', 'sessionStorage']) {
     try {
       const store = window[name];

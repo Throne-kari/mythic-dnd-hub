@@ -1,3 +1,4 @@
 {
-  "backendUrl": null
+  "backendUrl": "https://mythic-dnd-hub.onrender.com",
+  "ephemeralStorage": true
 }

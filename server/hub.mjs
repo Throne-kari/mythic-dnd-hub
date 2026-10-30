@@ -117,14 +117,14 @@ export async function startHub({ management = true } = {}) {
   if (!Array.isArray(catalog) || !catalog.length || catalog.some(game => !/^[a-z0-9-]+$/.test(game.id) || !game.directory) || new Set(catalog.map(game => game.id)).size !== catalog.length) throw Error('catalog.json 游戏目录格式无效。');
   await fs.mkdir(runtimeDir, { recursive: true, mode: 0o700 });
   const processes = new GameProcesses({ root, runtimeDir, catalog }), csrfToken = randomBytes(32).toString('base64url');
-  const startedAt = Date.now(), publicUrl = process.env.PUBLIC_URL || `http://${['0.0.0.0', '::'].includes(host) ? 'localhost' : host}:${publicPort}`, managerUrl = `http://127.0.0.1:${managerPort}/manage/`;
+  const startedAt = Date.now(), publicUrl = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || `http://${['0.0.0.0', '::'].includes(host) ? 'localhost' : host}:${publicPort}`, managerUrl = `http://127.0.0.1:${managerPort}/manage/`;
   const counts = () => ({ total: catalog.length, ready: catalog.filter(game => game.status === 'ready').length, development: catalog.filter(game => game.status === 'development').length });
 
   async function publicRequest(req, res) {
     try {
       const url = new URL(req.url, 'http://hub.local');
       if (url.pathname.startsWith('/play/')) return await handleGame(req, res, { url, processes, root });
-      if (url.pathname === '/api/catalog' && req.method === 'GET') return json(res, 200, { games: catalog.map(game => publicGame(game, processes)), counts: counts() });
+      if (url.pathname === '/api/catalog' && req.method === 'GET') return json(res, 200, { games: catalog.map(game => publicGame(game, processes)), counts: counts(), ephemeralStorage: process.env.HUB_EPHEMERAL_STORAGE === '1' });
       if (url.pathname === '/api/health' && req.method === 'GET') return json(res, 200, { ok: true, games: catalog.length });
       const launch = url.pathname.match(/^\/api\/games\/([a-z0-9-]+)\/launch$/);
       if (launch && req.method === 'POST') { requireSameOrigin(req); await body(req); await processes.start(launch[1]); return json(res, 200, { ok: true, url: `/play/${launch[1]}/` }); }
