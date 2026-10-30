@@ -6,9 +6,10 @@ const reader = document.querySelector('#document-reader');
 let games = [], currentPantheon = '全部', hostless = false, query = '', documentRequest = 0;
 const numeral = value => ({0:'零',1:'一',2:'二',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十',11:'十一',12:'十二',13:'十三',14:'十四',15:'十五'}[value] || value);
 const gameById = id => games.find(game => game.id === id);
-const gameHref = game => new URL(`/play/${encodeURIComponent(game.id)}/`, window.__MYTHIC_DEPLOYMENT__?.backendUrl || location.origin).href;
+const backend = window.__MYTHIC_DEPLOYMENT__ ? window.__MYTHIC_DEPLOYMENT__.backendUrl : location.origin;
+const gameHref = game => backend ? new URL(`/play/${encodeURIComponent(game.id)}/`, backend).href : '#connection-status';
 const statusBadge = game => game.status === 'development' ? '<span class="status-badge development">制作中</span>' : '';
-const enterText = game => game.status === 'development' ? '体验开发版' : '进入游戏';
+const enterText = game => !backend ? '联机服务待连接' : game.status === 'development' ? '体验开发版' : '进入游戏';
 const picture = (game, className = '', loading = 'lazy') => `<img class="game-image ${className} art-${esc(game.id)}" src="${coverUrl(game.id)}" alt="" loading="${loading}" decoding="async">`;
 
 function card(game, recent) {
@@ -18,7 +19,7 @@ function card(game, recent) {
       <p class="card-description">${esc(game.description)}</p>
       <div class="card-meta"><span>${icon('people',15)} ${esc(game.players)}</span><span>${esc(game.mode)}</span></div>
       ${recent ? `<div class="recent-time">${icon('clock',14)} ${formatDate(recent.time)} 进入过</div>` : ''}
-      <div class="card-actions"><a href="#game/${esc(game.id)}">查看冒险 ${icon('arrow',16)}</a><a class="card-play" href="${gameHref(game)}" data-play="${esc(game.id)}">${recent ? '继续' : game.status === 'development' ? '体验' : '进入'} ${icon('external',14)}</a></div>
+      <div class="card-actions"><a href="#game/${esc(game.id)}">查看冒险 ${icon('arrow',16)}</a><a class="card-play" href="${gameHref(game)}" data-play="${esc(game.id)}">${!backend ? '待连接' : recent ? '继续' : game.status === 'development' ? '体验' : '进入'} ${icon('external',14)}</a></div>
       ${recent ? `<button class="remove-recent" data-forget="${esc(game.id)}">移除记录</button>` : ''}
     </div>
   </article>`;
@@ -104,6 +105,7 @@ async function openDocument(id, index) {
 
 document.addEventListener('click', event => {
   const play = event.target.closest('[data-play]');
+  if (play && !backend) { event.preventDefault(); document.querySelector('#connection-status')?.scrollIntoView({behavior:'smooth'}); return; }
   if (play) rememberGame(play.dataset.play);
   const pantheon = event.target.closest('[data-pantheon]');
   if (pantheon) { currentPantheon = pantheon.dataset.pantheon; document.querySelectorAll('[data-pantheon]').forEach(button => { const selected = button.dataset.pantheon === currentPantheon; button.classList.toggle('selected',selected); button.setAttribute('aria-pressed',selected); }); refreshCards(); }
@@ -121,6 +123,12 @@ document.querySelector('#global-search').addEventListener('submit', event => { e
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', event => { if (event.key === 'mythic-dnd-hub:recent:v1' && location.hash === '#continue') recentView(); });
 async function initialize() {
+  if (!backend && !document.querySelector('#connection-status')) {
+    const status = document.createElement('p');
+    status.id = 'connection-status'; status.className = 'connection-status'; status.setAttribute('role', 'status');
+    status.textContent = '联机尚未启用。当前仅提供书库与资料，暂不能创建或加入游戏。';
+    main.before(status);
+  }
   try { const data=await request(window.__MYTHIC_DEPLOYMENT__?.catalogUrl || '/api/catalog'); games=Array.isArray(data) ? data : data.games; if (!Array.isArray(games)) throw new Error('书库目录格式有误'); route(); }
   catch(error) { main.setAttribute('aria-busy','false'); main.innerHTML=`<section class="empty-state"><h1>书库暂时无法打开</h1><p>${esc(error.message)}</p><button class="button gold" id="retry-load">重新连接</button></section>`; document.querySelector('#retry-load').onclick=initialize; }
 }

@@ -5,17 +5,18 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const output = path.join(root, '.local', 'pages');
 const deployment = JSON.parse(await fs.readFile(path.join(root, 'deployment.json'), 'utf8'));
-const backend = new URL(deployment.backendUrl);
-if (backend.protocol !== 'https:' || backend.username || backend.password || backend.pathname !== '/') throw Error('An HTTPS backend origin is required.');
+const backend = deployment.backendUrl ? new URL(deployment.backendUrl) : null;
+if (backend && (backend.protocol !== 'https:' || backend.username || backend.password || backend.pathname !== '/' || backend.search || backend.hash)) throw Error('An HTTPS backend origin without credentials, path, query or fragment is required.');
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'catalog.json'), 'utf8'));
+await fs.rm(output, { recursive: true, force: true });
 await fs.mkdir(output, { recursive: true });
 await fs.cp(path.join(root, 'public'), output, { recursive: true });
 const index = await fs.readFile(path.join(output, 'index.html'), 'utf8');
 await fs.writeFile(path.join(output, 'index.html'), index
   .replace(/(src|href)="\/(?!\/)/g, '$1="./')
   .replace('<script type="module"', '<script src="./deployment.js"></script>\n  <script type="module"')
-  .replace('MYTHIC DND</span><a href="#library">', 'MYTHIC DND · 联机服务需房主电脑保持在线</span><a href="#library">'));
-await fs.writeFile(path.join(output, 'deployment.js'), `window.__MYTHIC_DEPLOYMENT__=Object.freeze(${JSON.stringify({ backendUrl: backend.origin, catalogUrl: './catalog.json' })});\n`);
+  .replace('  <main ', `${backend ? '' : '  <aside id="connection-status" class="connection-status" role="status"><strong>联机尚未启用。</strong> 当前仅提供书库与资料，暂不能创建或加入游戏。</aside>\n'}  <main `));
+await fs.writeFile(path.join(output, 'deployment.js'), `window.__MYTHIC_DEPLOYMENT__=Object.freeze(${JSON.stringify({ backendUrl: backend?.origin || null, catalogUrl: './catalog.json' })});\n`);
 const keys = ['id','pantheon','title','subtitle','version','status','players','tags','description','cover','chapters','setting','mode','features','contentRating','engine','series','docs'];
 await fs.writeFile(path.join(output, 'catalog.json'), JSON.stringify(catalog.map(game => Object.fromEntries(keys.filter(key => game[key] !== undefined).map(key => [key, game[key]]))), null, 2));
 // Only the catalog's published documents and their static documentation assets are copied.
@@ -33,4 +34,4 @@ for (const game of catalog) {
   await walk(source);
 }
 await fs.writeFile(path.join(output, '.nojekyll'), '');
-console.log(`Pages artifact: ${output}; ${catalog.length} games; backend ${backend.origin}`);
+console.log(`Pages artifact: ${output}; ${catalog.length} games; backend ${backend?.origin || 'not connected (library and documents only)'}`);

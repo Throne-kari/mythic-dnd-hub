@@ -1,5 +1,5 @@
 {
-  "status": "incomplete-cloud-handoff",
+  "status": "static-ready-backend-pending",
   "requestedModel": "GPT-6.1 Sol",
   "requestedReasoning": "xhigh",
   "requestedEnvironment": "cloud",
@@ -19,16 +19,16 @@
     "Added Pages workflow and static artifact builder without changing visual design.",
     "Adjusted library cover/document paths for project Pages subpath; game links accept a configured backend origin.",
     "Added Quick Tunnel state-polling compatibility to 12 clients. Fengshen already had it. Cloudflare Quick Tunnel does not support SSE.",
-    "Syntax checks and diff whitespace checks passed. No gameplay or multiplayer acceptance has been performed."
+    "Cloud syntax checks and Pages artifact checks passed: 13 entries, 66 required documents, covers and project subpath assets; invalid backend origins rejected.",
+    "13/13 games passed focused two-independent-seat protocol tests on one cloud host: create/join, SSE action synchronization and original-token reconnect. This is not browser, physical-device, cross-network or server-restart acceptance. Test processes stopped and temporary saves deleted.",
+    "Configured explicit backendUrl:null with a prominent static multiplayer-not-enabled banner. Removed the obsolete host-computer-online text. No cloud backend resource or credential was created."
   ],
   "requiredNextSteps": [
-    "Review changes and choose an authorized persistent Node hosting environment with disk storage. Do not purchase services, add subscriptions, create credentials or expand access without additional authorization.",
-    "The task-created local Node process and temporary Cloudflare tunnel were stopped for the move to cloud. No temporary backend URL is currently usable. Do not claim a permanently online backend.",
-    "Create deployment.json containing an HTTPS backendUrl origin. This is deliberately absent until a live backend is available; scripts/build-pages.mjs requires it.",
-    "Run node scripts/build-pages.mjs and inspect the output under .local/pages, including /mythic-dnd-hub/ path behavior, all 13 entries, documentation and assets.",
-    "Perform the user's newly required real multiplayer acceptance with two independent sessions: create/join a room, synchronize a core operation, disconnect/reconnect and confirm retained state. Use isolated fresh acceptance rooms, never existing personal saves. No tokens or invitations in Git/logged tool output. Do not claim cross-device or cross-network tests from two same-machine sessions.",
-    "Update README and DEPLOY with actual hosting setup, storage, uptime and any temporary limitations. Existing deployment prose predates publication.",
-    "Merge the reviewed branch to main only once the backend/config is ready; verify the exact commit's Actions deployment succeeds, then verify the public Pages site and linked live backend. A push or static homepage alone does not complete multiplayer deployment."
+    "Connect an authorized persistent Node hosting account (Railway suggested) and verify its free balance, resource limits and spending controls before resource creation. No paid upgrades, new credentials or expanded access without authorization.",
+    "Deploy the Node gateway with one replica, a writable runtime volume, public HTTPS and SSE; disable the author manager. Verify the exact source commit and persistence on that selected host.",
+    "Set deployment.json backendUrl to the verified HTTPS origin, publish to main and verify exact-commit Actions and the public Pages entry.",
+    "Perform deployed-backend independent-session acceptance and separately identify any browser, true physical-device/cross-network or server-restart tests that remain unrun.",
+    "norse and celtic remain single-table services; original seats and the current table do not automatically restore after process restart. Do not claim restart-transparent multiplayer."
   ],
   "restrictions": [
     "Preserve all existing game rules, stories, maps and saves.",

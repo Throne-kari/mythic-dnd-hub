@@ -889,6 +889,16 @@ button:not(:disabled),a {
   color: var(--gold);
 }
 
+.connection-status {
+  margin: 0;
+  padding: 16px 24px;
+  color: #fff0cd;
+  background: #493b22;
+  border-bottom: 1px solid #9e7f43;
+  text-align: center;
+  line-height: 1.7;
+}
+
 .detail-description {
   font-size: 15px;
   line-height: 1.9;

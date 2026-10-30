@@ -4,6 +4,12 @@
 
 ![万神之书](public/assets/hub-hero.png)
 
+## 在线书库与联机状态
+
+[GitHub Pages 书库](https://throne-kari.github.io/mythic-dnd-hub/)用于浏览十三部冒险和规则资料。**当前 `deployment.json` 的 `backendUrl` 为 `null`：联机云服务尚未连接，Pages 不提供建房、加入或实时游戏。** 页面会明确显示此状态，不会把玩家引向不存在的游戏接口。
+
+联机需要独立的 Node.js 云服务、持久化磁盘和支持 SSE 的 HTTPS 入口，不依赖房主电脑持续在线。后端就绪并通过验收后，将它的 HTTPS 源地址写入 `deployment.json`，发布后的游戏入口会直接前往该后端。具体配置见 [DEPLOY.md](DEPLOY.md)。
+
 ## 开始使用
 
 安装 **Node.js 24 或更新版本**，下载或克隆仓库，在项目目录运行：
@@ -70,7 +76,7 @@ node scripts/import-games.mjs --source-root "../你的原稿目录" --update
 
 ## 自托管
 
-运行方式、Docker 与 HTTPS 反向代理见 [DEPLOY.md](DEPLOY.md)。这是有服务端进程和持久化存档的 Node 应用；GitHub 仓库用于保存源代码，GitHub Pages 不能运行完整游戏服务。
+运行方式、Docker、Pages 与 HTTPS 反向代理见 [DEPLOY.md](DEPLOY.md)。这是有服务端进程和持久化存档的 Node 应用；GitHub Pages 只托管静态书库，不能运行完整游戏服务。
 
 ## 界面与素材
 

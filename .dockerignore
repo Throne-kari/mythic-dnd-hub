@@ -1,5 +1,6 @@
 .git
 .github
+.local
 runtime
 node_modules
 author-sources.local.json
