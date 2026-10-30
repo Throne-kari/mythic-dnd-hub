@@ -51,11 +51,31 @@ export class GameConnection extends EventTarget {
   }
   connectEvents() {
     this.events?.close();
+    if (location.hostname.endsWith('.trycloudflare.com')) { this.pollTunnelState(); return; }
     this.events = new EventSource(`/api/rooms/${encodeURIComponent(this.session.roomId)}/events?token=${encodeURIComponent(this.session.token)}`);
     const receive = event => { try { this.setState(JSON.parse(event.data)); } catch {} };
     this.events.onmessage = receive; this.events.addEventListener('state', receive);
     this.events.onopen = () => this.emit('connection', '已同步');
     this.events.onerror = () => this.emit('connection', '正在重连');
+  }
+  pollTunnelState() {
+    const current = this.session, controller = new AbortController(); let timer;
+    const active = () => !controller.signal.aborted && this.session === current;
+    this.events = { close() { controller.abort(); clearTimeout(timer); } };
+    const poll = async () => {
+      let delay = 2000;
+      try {
+        const response = await fetch(`/api/rooms/${encodeURIComponent(current.roomId)}/state`, {
+          headers: { Authorization: `Bearer ${current.token}` }, cache: 'no-store',
+          signal: AbortSignal.any([controller.signal, AbortSignal.timeout(12000)]),
+        });
+        if (!response.ok) throw Error('同步连接中断');
+        const next = await response.json();
+        if (active()) { this.setState(next); this.emit('connection', '已同步'); }
+      } catch { if (active()) this.emit('connection', '正在重连'); delay = 5000; }
+      if (active()) timer = setTimeout(poll, delay);
+    };
+    void poll();
   }
   async act(action) {
     if (!this.session || !this.state) throw new Error('请先创建或加入房间。');

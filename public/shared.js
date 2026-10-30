@@ -40,11 +40,11 @@ export function safeUrl(value, fallback = '#') {
 }
 
 export function documentUrl(gameId, path) {
-  return `/docs/${encodeURIComponent(gameId)}/${String(path).split('/').map(encodeURIComponent).join('/')}`;
+  return new URL(`./docs/${encodeURIComponent(gameId)}/${String(path).split('/').map(encodeURIComponent).join('/')}`, import.meta.url).href;
 }
 
 export const coverFiles = { fengshen:'fengshen.png', qchina:'fengshen.png', japan:'japan.png', qjapan:'japan.png', india:'india.png', qindia:'india.png', norse:'norse-landscape.png', mesopotamia:'mesopotamia.png', greek:'greek.png', celtic:'celtic.png', aztec:'aztec.png', jaffa:'jaffa.png', acre:'jaffa.png' };
-export function coverUrl(id) { return `/assets/covers/${coverFiles[id] || 'celtic.png'}`; }
+export function coverUrl(id) { return new URL(`./assets/covers/${coverFiles[id] || 'celtic.png'}`, import.meta.url).href; }
 export function shortPantheon(value = '') { return value === '美索不达米亚' ? '两河' : value.replace('神话', ''); }
 export function icon(name, size = 20) {
   const paths = {

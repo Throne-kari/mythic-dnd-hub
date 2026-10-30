@@ -352,7 +352,7 @@ button:not(:disabled),a {
   position: absolute;
   z-index: -2;
   inset: 0;
-  background: #162024 url('/assets/hub-hero.png') center 49%/cover no-repeat;
+  background: #162024 url('./assets/hub-hero.png') center 49%/cover no-repeat;
 }
 
 .library-hero:before {

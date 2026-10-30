@@ -1,0 +1,42 @@
+{
+  "status": "incomplete-cloud-handoff",
+  "requestedModel": "GPT-6.1 Sol",
+  "requestedReasoning": "xhigh",
+  "requestedEnvironment": "cloud",
+  "repository": "Throne-kari/mythic-dnd-hub",
+  "repositoryVisibility": "public",
+  "baseCommit": "15365d1e02eac8406455a2b6e441127de27238a7",
+  "pages": {
+    "url": "https://throne-kari.github.io/mythic-dnd-hub/",
+    "enabled": true,
+    "buildType": "workflow",
+    "deployed": false
+  },
+  "architecture": "GitHub Pages can serve the existing static library and documentation. All 13 games need the Node gateway and persistent server-side storage. Game links navigate to a separately hosted HTTPS backend; Pages alone cannot provide multiplayer.",
+  "completed": [
+    "Checked all reachable repository history before publication: one commit, 529 unique blobs; no actual credentials, private saves, email, phone, or user-directory matches found. Runtime and local settings are Git-ignored.",
+    "Repository public status and Pages workflow configuration verified using GitHub API.",
+    "Added Pages workflow and static artifact builder without changing visual design.",
+    "Adjusted library cover/document paths for project Pages subpath; game links accept a configured backend origin.",
+    "Added Quick Tunnel state-polling compatibility to 12 clients. Fengshen already had it. Cloudflare Quick Tunnel does not support SSE.",
+    "Syntax checks and diff whitespace checks passed. No gameplay or multiplayer acceptance has been performed."
+  ],
+  "requiredNextSteps": [
+    "Review changes and choose an authorized persistent Node hosting environment with disk storage. Do not purchase services, add subscriptions, create credentials or expand access without additional authorization.",
+    "The task-created local Node process and temporary Cloudflare tunnel were stopped for the move to cloud. No temporary backend URL is currently usable. Do not claim a permanently online backend.",
+    "Create deployment.json containing an HTTPS backendUrl origin. This is deliberately absent until a live backend is available; scripts/build-pages.mjs requires it.",
+    "Run node scripts/build-pages.mjs and inspect the output under .local/pages, including /mythic-dnd-hub/ path behavior, all 13 entries, documentation and assets.",
+    "Perform the user's newly required real multiplayer acceptance with two independent sessions: create/join a room, synchronize a core operation, disconnect/reconnect and confirm retained state. Use isolated fresh acceptance rooms, never existing personal saves. No tokens or invitations in Git/logged tool output. Do not claim cross-device or cross-network tests from two same-machine sessions.",
+    "Update README and DEPLOY with actual hosting setup, storage, uptime and any temporary limitations. Existing deployment prose predates publication.",
+    "Merge the reviewed branch to main only once the backend/config is ready; verify the exact commit's Actions deployment succeeds, then verify the public Pages site and linked live backend. A push or static homepage alone does not complete multiplayer deployment."
+  ],
+  "restrictions": [
+    "Preserve all existing game rules, stories, maps and saves.",
+    "No broad gameplay simulation or test framework; the latest user specifically authorized the necessary multiplayer acceptance.",
+    "No unnecessary UI redesign. Existing image-first requirement applies only if adding/redesigning visual UI."
+  ],
+  "references": [
+    "https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages"
+  ]
+}

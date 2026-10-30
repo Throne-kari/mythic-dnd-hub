@@ -6,7 +6,7 @@ const reader = document.querySelector('#document-reader');
 let games = [], currentPantheon = '全部', hostless = false, query = '', documentRequest = 0;
 const numeral = value => ({0:'零',1:'一',2:'二',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十',11:'十一',12:'十二',13:'十三',14:'十四',15:'十五'}[value] || value);
 const gameById = id => games.find(game => game.id === id);
-const gameHref = game => `/play/${encodeURIComponent(game.id)}/`;
+const gameHref = game => new URL(`/play/${encodeURIComponent(game.id)}/`, window.__MYTHIC_DEPLOYMENT__?.backendUrl || location.origin).href;
 const statusBadge = game => game.status === 'development' ? '<span class="status-badge development">制作中</span>' : '';
 const enterText = game => game.status === 'development' ? '体验开发版' : '进入游戏';
 const picture = (game, className = '', loading = 'lazy') => `<img class="game-image ${className} art-${esc(game.id)}" src="${coverUrl(game.id)}" alt="" loading="${loading}" decoding="async">`;
@@ -121,7 +121,7 @@ document.querySelector('#global-search').addEventListener('submit', event => { e
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', event => { if (event.key === 'mythic-dnd-hub:recent:v1' && location.hash === '#continue') recentView(); });
 async function initialize() {
-  try { const data=await request('/api/catalog'); games=Array.isArray(data) ? data : data.games; if (!Array.isArray(games)) throw new Error('书库目录格式有误'); route(); }
+  try { const data=await request(window.__MYTHIC_DEPLOYMENT__?.catalogUrl || '/api/catalog'); games=Array.isArray(data) ? data : data.games; if (!Array.isArray(games)) throw new Error('书库目录格式有误'); route(); }
   catch(error) { main.setAttribute('aria-busy','false'); main.innerHTML=`<section class="empty-state"><h1>书库暂时无法打开</h1><p>${esc(error.message)}</p><button class="button gold" id="retry-load">重新连接</button></section>`; document.querySelector('#retry-load').onclick=initialize; }
 }
 initialize();

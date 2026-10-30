@@ -29,5 +29,19 @@ export class GameApi {
   async createSeat(name,actorIds){const data=await this.mutate('/api/seats',{name,actorIds});this.remember(data.createdSeat,data.seatToken);this.persist();return data;}
   createFolderPlayer(actorId,name){return this.mutate('/api/folder-player',{actorId,...(name?{name}:{})});}
   stopFolderPlayer(seatId){return this.mutate('/api/folder-player/stop',{seatId});}
-  stream(){this.abort?.abort();clearTimeout(this.retry);this.heartbeat();const controller=new AbortController();this.abort=controller;const run=async()=>{try{const response=await fetch(`/api/events?since=${this.seq}`,{headers:{'x-seat-token':this.session.token},signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error('同步连接中断');this.onConnection('online');const reader=response.body.getReader(),decoder=new TextDecoder();let pending='';while(true){const {value,done}=await reader.read();if(done)throw Error('同步连接中断');pending+=decoder.decode(value,{stream:true}).replace(/\r\n/g,'\n');let end;while((end=pending.indexOf('\n\n'))>=0){const block=pending.slice(0,end);pending=pending.slice(end+2);const raw=block.split('\n').filter(l=>l.startsWith('data:')).map(l=>l.slice(5).trimStart()).join('\n');if(raw){const data=JSON.parse(raw);if(!controller.signal.aborted&&data.revision>=this.revision)this.accept(data);}}}}catch(e){if(controller.signal.aborted)return;this.onConnection('reconnecting');this.retry=setTimeout(run,2500);}};void run();}
+  pollTunnelState(controller){
+    const token=this.session.token;
+    const run=async()=>{
+      let delay=2000;
+      try{
+        const response=await fetch('/api/state',{headers:{'x-seat-token':token},cache:'no-store',signal:AbortSignal.any([controller.signal,AbortSignal.timeout(12000)])});
+        if(!response.ok)throw Error('同步连接中断');
+        const data=await response.json();
+        if(!controller.signal.aborted){if((data.revision??data.state?.revision??0)>=this.revision)this.accept(data);this.onConnection('online');}
+      }catch{if(!controller.signal.aborted)this.onConnection('reconnecting');delay=5000;}
+      if(!controller.signal.aborted)this.retry=setTimeout(run,delay);
+    };
+    void run();
+  }
+  stream(){this.abort?.abort();clearTimeout(this.retry);this.heartbeat();const controller=new AbortController();this.abort=controller;if(location.hostname.endsWith('.trycloudflare.com')){this.pollTunnelState(controller);return;}const run=async()=>{try{const response=await fetch(`/api/events?since=${this.seq}`,{headers:{'x-seat-token':this.session.token},signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error('同步连接中断');this.onConnection('online');const reader=response.body.getReader(),decoder=new TextDecoder();let pending='';while(true){const {value,done}=await reader.read();if(done)throw Error('同步连接中断');pending+=decoder.decode(value,{stream:true}).replace(/\r\n/g,'\n');let end;while((end=pending.indexOf('\n\n'))>=0){const block=pending.slice(0,end);pending=pending.slice(end+2);const raw=block.split('\n').filter(l=>l.startsWith('data:')).map(l=>l.slice(5).trimStart()).join('\n');if(raw){const data=JSON.parse(raw);if(!controller.signal.aborted&&data.revision>=this.revision)this.accept(data);}}}}catch(e){if(controller.signal.aborted)return;this.onConnection('reconnecting');this.retry=setTimeout(run,2500);}};void run();}
 }

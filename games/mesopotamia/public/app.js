@@ -41,7 +41,23 @@ const roomUrl=path=>'/api/rooms/'+encodeURIComponent(session.roomId)+'/'+path;
 function storeSession(){const actor=actorForUi(),saved={roomId:session.roomId,seatId:session.seatId,token:session.token,role:actor.role,characterId:actor.characterId,roomMode:actor.roomMode,canManage:canManage()};const key=storageKey+':'+session.roomId+':'+session.seatId;try{sessionStorage.setItem(storageKey,JSON.stringify(saved));localStorage.setItem(key,JSON.stringify(saved));if(canManage())localStorage.setItem(storageKey+':last-manager',key);}catch{toast('浏览器未允许持久存储，本次席位仍可使用。',true);}}
 function setState(next){if(!next||next.schema!==3)return;const prevTurn=state?.combat?.turn,prevPhase=state?.phase;state=next;if(!state.party.some(p=>p.id===selected))selected=state.selectedCharacter??state.party[0]?.id;if(state.combat?.turn!==prevTurn&&state.combat){selected=state.combat.turn;mode='move';}if(state.phase!==prevPhase&&state.phase!=='combat')mode='move';render();}
 async function sync(){if(!session)return;setState(await request(roomUrl('state')));}
-function connectEvents(){stream?.close();stream=new EventSource(roomUrl('events')+'?token='+encodeURIComponent(session.token));stream.addEventListener('state',event=>{try{setState(JSON.parse(event.data));status(true);}catch{status(false,'同步响应异常');}});stream.onopen=()=>status(true);stream.onerror=()=>status(false,'重连中');}
+function pollTunnelState(){
+ const current=session,controller=new AbortController();let timer;
+ const active=()=>!controller.signal.aborted&&session===current;
+ stream={close(){controller.abort();clearTimeout(timer);}};
+ const poll=async()=>{
+  let delay=2000;
+  try{
+   const response=await fetch('/api/rooms/'+encodeURIComponent(current.roomId)+'/state',{headers:{Authorization:'Bearer '+current.token},cache:'no-store',signal:AbortSignal.any([controller.signal,AbortSignal.timeout(12000)])});
+   if(!response.ok)throw Error('同步连接中断');
+   const next=await response.json();
+   if(active()){if(!state||next.revision>=state.revision)setState(next);status(true);}
+  }catch{if(active())status(false,'重连中');delay=5000;}
+  if(active())timer=setTimeout(poll,delay);
+ };
+ void poll();
+}
+function connectEvents(){stream?.close();if(location.hostname.endsWith('.trycloudflare.com')){pollTunnelState();return;}stream=new EventSource(roomUrl('events')+'?token='+encodeURIComponent(session.token));stream.addEventListener('state',event=>{try{setState(JSON.parse(event.data));status(true);}catch{status(false,'同步响应异常');}});stream.onopen=()=>status(true);stream.onerror=()=>status(false,'重连中');}
 async function action(actionData){
  if(!session){toast('请先创建房间或加入一位同行者',true);return false;}if(!may(actionData.type)){toast('当前席位没有这项操作权限',true);return false;}if(busy)return false;
  busy=true;renderControls();
